@@ -1944,6 +1944,7 @@ east_deepwoods_region = {
 deepwoods_portal_region = {
 	areas = {
 		deepwoods_portal_area
+		fae_portal_wasteland_area
 	}
 }
 
