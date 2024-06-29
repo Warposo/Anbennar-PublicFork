@@ -416,40 +416,41 @@ A12_ideas = {
 #Gawed ideas
 A13_ideas = {
 	start = {
-		global_regiment_cost = -0.15
-		global_manpower_modifier = 0.2
-	}
-	bonus = {
-		infantry_power = 0.10
-	}
+        infantry_cost = -0.1
+        army_tradition = 0.5
+    }
+    bonus = {
+        global_trade_goods_size_modifier = 0.1
+    }
 
 	trigger = {
 		tag = A13 #Gawed
 	}
 	free = yes
 
-	A13_peasant_levy = {
-		manpower_recovery_speed = 0.2
-	}
 	A13_the_northern_eagle_looms = {
-		prestige_decay = -0.01
-		land_forcelimit_modifier = 0.2
+        land_morale = 0.15
 	}
-	A13_alenic_outriders = {
-		cavalry_power = 0.1
-		cavalry_flanking = 0.5
+	A13_children_of_the_alen = { 
+    	infantry_power = 0.1
+        shock_damage_received = -0.1
 	}
-	A13_frontier_forts = {
-		fort_maintenance_modifier = -0.2
+	A13_great_lords = { 
+		governing_capacity_modifier = 0.15
 	}
-	A13_children_of_the_alen = {
-		land_morale = 0.1
+	A13_hosts_unceasing = {
+        global_manpower_modifier = 0.20
+    }
+	A13_banishment_or_death = { 
+        yearly_corruption = -0.05
+        global_unrest = -1
 	}
-	A13_rapid_mobilization = {
-		global_regiment_recruit_speed = -0.2
+	A13_the_welyamite_reforms = { 
+        land_forcelimit_modifier = 0.2
 	}
-	A13_alenic_industrialization = {
-		development_cost = -0.10
+	A13_the_magnate_council = { 
+        merchants = 1
+        inflation_reduction = 0.05
 	}
 }
 
@@ -3082,6 +3083,125 @@ Z18_ideas = {
 	}
 	gray_orc_lessons_of_borudan = {
 		build_cost = -0.1
+	}
+}
+
+# Broken Jaw
+Z19_ideas = {
+	start = {
+		army_tradition = 0.5
+		land_forcelimit_modifier = 0.1
+	}
+	bonus = {
+		prestige_decay = -0.01
+	}
+
+	trigger = {
+		tag = Z19
+	}
+	free = yes
+
+	Z19_the_great_betrayal = {
+		global_spy_defence = 0.1
+		defensiveness = 0.1
+	}
+	Z19_wanderers_of_the_north = {
+		global_tax_modifier = 0.1
+		global_unrest = -1
+	}
+	Z19_the_mammoth_charge = { 
+		cavalry_shock = 0.25
+	}
+	gray_orc_kordoukang = {
+		leader_cost = -0.1
+	}
+	gray_orc_inscribing_mistakes = {
+		shock_damage_received = -0.1
+	}
+	gray_orc_learning_the_hard_way = {
+		production_efficiency = 0.1
+	}
+	gray_orc_lessons_of_borudan = {
+		build_cost = -0.1
+	}
+}
+
+#Doombringer
+Z47_ideas = {
+	start = {
+		manpower_in_true_faith_provinces = 0.1
+		infantry_power = 0.1
+	}
+	bonus = {
+		tolerance_own = 2
+	}
+
+	trigger = {
+		tag = Z47
+	}
+	free = yes
+
+	Z47_destined_for_greatness = {
+		province_warscore_cost = -0.1
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+	}
+	Z47_doombringer_shamans = {
+		church_power_modifier = 0.1
+		infantry_shock = 0.15
+	}
+	Z47_harbingers_of_dookan = { 
+		global_missionary_strength = 0.02
+	}
+	gray_orc_kordoukang = {
+		leader_cost = -0.1
+	}
+	gray_orc_inscribing_mistakes = {
+		shock_damage_received = -0.1
+	}
+	gray_orc_learning_the_hard_way = {
+		production_efficiency = 0.1
+	}
+	gray_orc_lessons_of_borudan = {
+		build_cost = -0.1
+	}
+}
+
+Z88_ideas = {
+	start = {
+		improve_relation_modifier = 0.15
+		land_attrition = -0.15
+	}
+	bonus = {
+		morale_damage_received = -0.1
+	}
+	trigger = {
+		tag = Z88
+	}
+	free = yes
+
+	Z88_healing_wings = { #Healing Wings
+		diplomatic_reputation = 1 #basically flying ambulance but for gerudian heroes, valk stuff
+	}
+	Z88_gerudian_frontier = { #The Gerudian Frontier
+		global_colonial_growth = 15 #Live on the border of the frontier, lots of focus on colonising it for themselves
+	}
+	Z88_new_songs_old_songs = { #New Songs, Old Songs
+		tolerance_own = 2 #keep the dragon sleeping, super hard into skaldic faith, friends with skaldskola, harpy tradition of singing readily evolved into adoption of skaldhyrric faith
+	}
+	Z88_roost_of_oils_candles = { #Roost of Oils and Candles
+		production_efficiency = 0.1 #incense roost, make lot of scented oils and candles, from using them to protect wings in the cold
+	}
+	Z88_cold_side_titan = { #Cold Side of the Titan’s Rest
+		hostile_attrition = 1 #Live on the colder side of the Titan’s Rest mountain, blasted with cold winds, people die alot sieging this place
+	}
+	Z88_battle_maidens = { #Battle Maidens of Gerudia
+		infantry_power = 0.1 #famed elite winged warriors of Gerudia, assisted in the slaying of trolls and reclamation of Gerudia
+	}
+	Z88_forges_of_the_skies = { #Forges of the Skies
+		global_regiment_recruit_speed = -0.2 #maintain their own forges across the Titans Rest, most harpies have their own arms and armour made at home, ready to use
 	}
 }
 
@@ -11924,11 +12044,11 @@ H47_ideas = {
 #Qorondulyuz
  J49_ideas = {
 	start = {
-		advisor_cost = -0.1
+		global_autonomy = -0.05
 		global_tax_modifier = 0.1
 	}
 	bonus = {
-		global_unrest = -2
+		all_power_cost = -0.025
 	}
 	trigger = {
 		tag = J49
@@ -11937,7 +12057,8 @@ H47_ideas = {
 
 	J49_loyal_court = {
 		female_advisor_chance = 0.5
-		advisor_pool = 2
+		advisor_pool = 1
+		advisor_cost = -0.1
 	}
 	J49_inhuman_march = {
 		land_attrition = -0.15
@@ -11946,24 +12067,27 @@ H47_ideas = {
 		all_estate_loyalty_equilibrium = 0.05
 	}
 	J49_enemies_death = {
-		drill_decay_modifier = -0.15
+		drill_decay_modifier = -0.25
 	}
 	J49_defend_secrets = {
 		global_spy_defence = 0.2
+		yearly_corruption = -0.1
 	}
 	J49_endless_assault = {
-		reinforce_speed = 0.15
+		reinforce_speed = 0.1
+		recover_army_morale_speed = 0.1
 	}
 	J49_rule_by_one = {
 		max_absolutism = 10
+		possible_policy = 1
 	}
 }
 
 #Sunijalla/Yukaron
  J50_ideas = {
 	start = {
-		army_tradition = 0.5
-		infantry_cost = -0.10
+		army_tradition = 0.75
+		province_warscore_cost = -0.15
 	}
 	bonus = {
 		yearly_army_professionalism = 0.003
@@ -11975,12 +12099,13 @@ H47_ideas = {
 
 	J50_new_crown = {
 		nobles_loyalty_modifier = 0.1
+		global_unrest = -2
 	}
 	J50_modern_governance = {
 		reform_progress_growth = 0.15
 	}
 	J50_regal_courts = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 2
 	}
 	J50_zealous_march = {
 		morale_damage = 0.1
@@ -11989,7 +12114,7 @@ H47_ideas = {
 		prestige = 1
 	}
 	J50_loyal_troops = {
-		recover_army_morale_speed = 0.10
+		war_exhaustion = -0.03
 	}
 	J50_imperial_traders = {
 		merchants = 1
@@ -12011,15 +12136,16 @@ H47_ideas = {
 	free = yes		#will be added at load.
 
 	J51_armadas_home = {
-		navy_tradition = 1
+		global_naval_engagement_modifier = 0.1
 	}
 	J51_yyl_moitsa_lumber = {
 		global_ship_cost = -0.1
 	}
 	J51_merchant_families = {
-		global_trade_power = 0.1
+		global_trade_power = 0.15
 	}
 	J51_cold_north = {
+		navy_tradition = 0.5
 		hostile_attrition = 1
 	}
 	J51_humble_crown = {
@@ -12029,7 +12155,7 @@ H47_ideas = {
 		horde_unity = 1
 	}
 	J51_not_forbidden = {
-		diplomatic_upkeep = 1
+		diplomatic_upkeep = 2
 	}
 	J51_modern_diplomacy = {
 		free_dip_policy = 1
@@ -12043,7 +12169,7 @@ H47_ideas = {
 		idea_cost = -0.1
 	}
 	bonus = {
-		global_own_trade_power = 0.1
+		innovativeness_gain = 0.5
 	}
 	trigger = {
 		tag = J52
@@ -12051,14 +12177,14 @@ H47_ideas = {
 	free = yes		#will be added at load.
 
 	J52_peaceful_frontier = {
-		stability_cost_modifier = -0.15
+		stability_cost_modifier = -0.2
 	}
 	J52_civilize_nuzurbokh = {
-		development_cost = -0.05
+		development_cost = -0.1
 		global_institution_spread = 0.1
 	}
 	J52_workshops_enuuk = {
-		production_efficiency = 0.1
+		production_efficiency = 0.15
 	}
 	J52_longbarrel_cannons = {
 		backrow_artillery_damage = 0.10
@@ -12068,6 +12194,7 @@ H47_ideas = {
 	}
 	J52_banking_systems = {
 		interest = -0.5
+		inflation_reduction = 0.05
 	}
 	J52_new_administration = {
 		free_adm_policy = 1
@@ -12077,11 +12204,11 @@ H47_ideas = {
 #Zabutodsak/Orachav
 J53_ideas = {
 	start = {
-		colonists = 1
+		global_regiment_cost = -0.1
 		shock_damage_received = -0.15
 	}
 	bonus = {
-		land_maintenance_modifier = -0.10
+		reduced_liberty_desire = 10
 	}
 	trigger = {
 		tag = J53
@@ -12100,6 +12227,7 @@ J53_ideas = {
 	}
 	J53_aid_tayoghor = {
 		adventurers_loyalty_modifier = 0.1
+		core_creation = -0.1
 	}
 	J53_well_traveled = {
 		global_supply_limit_modifier = 0.25
@@ -12922,7 +13050,7 @@ J53_ideas = {
 	I97_vine_tearer = {
 		global_unrest = -2
 	}
-	I97_works_sets_you_free = { #Slaves shit
+	I97_work_unto_death = { 
 		global_trade_goods_size_modifier = 0.1
 	}
 	I97_grand_horde = {
@@ -15361,7 +15489,7 @@ U12_ideas = {
 		movement_speed = 0.075
 		leader_land_manuever = 1
 	}
-	U12_enforced_coooperation = {
+	U12_enforced_cooperation = {
 		caravan_power = 0.2
 	}
 	pactseeker_forest_goblin_secrets_of_the_fey = {
@@ -19751,7 +19879,7 @@ F34_ideas = {
 		prestige_from_land = 0.5
 	}
 	bonus = {
-		culture_conversion_cost = -0.15 #removing the goblins
+		culture_conversion_cost = -0.15 
 	}
 
 	trigger = {
@@ -19759,69 +19887,105 @@ F34_ideas = {
 	}
 	free = yes
 
-	F34_an_age_of_sellswords = { #The decade of devastation brought wars and conflicts and with them, mercenaries. During the decisive battle with the goblins, they were the first to retreat when the outcome became clear, preserving their forces. A great number has retreated to the province of Azka-Evran.
+	F34_an_age_of_sellswords = {
 		mercenary_cost = -0.25
 	}
-	F34_withstanding_the_storm = { #The fortress of Evran is one of the most guarded fortresses in Bulwar. Initially only manned by a modest garrison to protect the area from harpy raids, it was increased tenfold to guard the newly discovered gold deposit in the thirteenth century.
+	F34_withstanding_the_storm = {
 		garrison_size = 0.3
 	}
-	F34_deggarions_reforms = { #Deggarion was a bastard born of an affair between King Kaltan III Eletarszuir of Baharkand and the daughter of an Azka-Evran noble sun elf. He was not raised in court like his half brothers and sisters but still got a proper martial education. After reaching adulthood, he quickly rose through the ranks of the army by distinguishing himself during the conquest of Re?uyel and the war with Birsa, earning the nickname ???.
+	F34_deggarions_reforms = { 
 		army_tradition = 0.5
 	}
-	F34_a_careful_use_of_gold = { #The goldmine of Azka-Evran was discovered and is since carefully administered by a human family, the szel-Beliqtura?, who slowly rose to power thanks to their newfound wealth. They managed to keep control of the mine by not making too many waves, by bribing powerful sun elves and by financially supporting the various projects of the former kings of Baharkand.
+	F34_a_careful_use_of_gold = { 
 		inflation_reduction = 0.10
 	}
-	F34_the_marksmen_of_the_eye = { #elite troop of archers assembled by Deggarion. So accurate that their enemies withdraw with many wounds and gouged eyes, giving it their name. Later switched to guns while keeping the same accuracy
-		infantry_fire = 0.15
+	F34_the_marksmen_of_the_eye = {
+		infantry_shock = 0.15
 	}
-	F34_flying_chariots = { #From sun elf ideas : ?Bulwar has always been infamous for its sky platforms, flying chariots, piloted by a mage with two others flinging death from above. They are not only very handy in bombarding compact formations before they reach our troops but also in scouting.?
+	F34_flying_chariots = { 
 		leader_land_manuever = 1
 		shock_damage = 0.05
 	}
-	F34_dawnbringer = { #Jaher?s lance was called Duzindor meaning ?Dawnbringer?. It was said to have the properties of slightly increasing the user's charisma and physical abilities. The lance was broken in half during ? and was later gifted to the akal of Birsartan, who split it between his sons before his death. The oldest, Birsartan II (future King of Birsartanses) received the shaft and the youngest, Eletar (future Akal of Baharkand) received the head. The spearhead was later gifted to Deggarion to reward his achievements on the battlefield
-		leader_land_shock = 1
+	F34_dawnbringer = { 
+		land_morale = 0.1
+	}
+}
+
+#Aqatbahar
+U19_ideas = {
+	start = {
+		province_warscore_cost = -0.15 
+		recover_army_morale_speed = 0.15
+	}
+	bonus = {
+		development_cost = -0.10 
+	}
+
+	trigger = {
+		tag = U19
+	}
+	free = yes
+
+	U19_jewel_north = { 
+		trade_efficiency = 0.1
+	}
+	U19_the_great_library_of_aqatbar = { 
+		technology_cost = -0.05
+	}
+	U19_shipyards_of_bahar = { 
+		global_ship_cost = -0.10
+	}
+	U19_wood_marble = { 
+		build_cost = -0.05
+	}
+	U19_bahari_elephants = { 
+		cavalry_shock = 0.25
+	}
+	U19_a_gulf_of_glass = { 
+		production_efficiency = 0.10
+	}
+	U19_legacy_seamaster = {
+		reform_progress_growth = 0.15
 	}
 }
 
 #Baharkand
-U19_ideas = {
+baharkand_ideas = {
 	start = {
-		province_warscore_cost = -0.15 #wants to retake their lands
-		recover_army_morale_speed = 0.15
+		development_cost = -0.10		 
+		inflation_reduction = 0.10 		
 	}
 	bonus = {
-		development_cost = -0.10 #rebuilding after the decades of devastation
+		infantry_shock = 0.15 			 
 	}
 
 	trigger = {
-		OR = {
-			tag = U19
-			has_country_flag = azka_evran_baharkands_ideas
-		}
+		has_country_flag = azka_evran_baharkands_ideas
 	}
 	free = yes
 
-	U19_humanitys_resourcefulness = { #Irran szel-Bazibar was the former advisor of the Mara? of Zagnabad. After his lord?s death alongside Kaltan during the battle against the goblins, he rallied the survivors to put up a resistance and stop the goblins' advance at Eduz-Wez. After him, other talented humans have filled the gaps left by the dead sun elves nobility and the restored Kingdom of Baharkand made good use of their skills.
-		advisor_cost = -0.1
-	}
-	U19_the_great_library_of_aqatbar = { #The great library is old af and contains the history of Bulwar, with a handful of parchments even dating from the ancient era of god kings.
-		technology_cost = -0.1
-	}
-	U19_shipyards_of_bahar = { #Bahar means forest and is the only one in Bulwar, which is vital for building boats. From the merchant fleets of Re?uyel and Crathanor to the sunshine galleys of Anzabad and even the Phoenix armada of Elizna, every ship in Bulwar has been built in the shipyards of Bahar, or at least with lumber coming from its many forests.
-		global_ship_cost = -0.10
-	}
-	U19_brother_ennemies = { #The Akal of Baharses, Hussaam of Nisabat, submitted to Jaher pretty quickly, allowing him and his descendants to keep ruling the area during the Phoenix Empire times. After Jexis death, they sided with Elizar and got fucked by Birsartanses who vassalized them. Birsa?s king put his brother Eletar on the throne of Baharses, now renamed Baharkand. Relations went south after a generation when they declared independence. (they probably also took the Eletarzuir name then to assert their independence)
+	U19_brother_enemies = { 			
 		diplomatic_reputation = 1
 	}
-	U19_a_baharised_region = { #Under the influence of many powers throughout history, in the second half of the fifteenth century Bahar is more fragmented than ever : sun elf loyalists, bahari separatists, regent court merchants, copper dwarfs and now goblins. This period of turmoil later gave birth to a new word ?Baharisation? that historians commonly use to refer to the fragmentation of an area.
-		num_accepted_cultures = 2
+	U19_the_great_library_of_aqatbar = { 	
+		technology_cost = -0.05
 	}
-	U19_a_gulf_of_glass = { #After lumber and naval supplies, glass is the main production of Baharkand, so much so that the glass factories gave the adjacent sea tile its name.
+	U19_shipyards_of_bahar = { 			
+		global_ship_cost = -0.10
+		galley_power = 0.1
+	}
+	F84_five_sisters = {				
+		global_trade_power = 0.1
+	}
+	U19_a_gulf_of_glass = { 			
 		production_efficiency = 0.10
 	}
-	U19_the_fajabahar_lightshow = {
-		trade_efficiency = 0.05
-		naval_attrition = -0.1
+	F34_flying_chariots = { 			
+		leader_land_manuever = 1
+		shock_damage = 0.05
+	}
+	F34_dawnbringer = { 				
+		land_morale = 0.1
 	}
 }
 
@@ -21117,17 +21281,17 @@ R26_ideas = {
 	R26_an_eye_for_quality = { #khiraspid produces good quality porcelain, potentially even the best
 		prestige = 1
 	}
-	R26_seeing_is_believing = { #some who wander the city at night see glowing eyes in the dark, but they are just paranoid
-		global_spy_defence = 0.2
+	R26_eyes_everywhere = { #home to a major underground shadowmancy guild, providing various services for payment
+		spy_offence = 0.2
 	}
-	R26_centralize_the_guilds = { #we must conquer the other porcelain cities, for the total control of production and trade of it
-		province_warscore_cost = -0.15
+	R26_the_vadatala = { #the shadowmancers in our ranks use dark magics, summoning shadow clones and other horrific illusions.
+		infantry_power = 0.15
 	}
 	R26_lenthy_vacations = { #ministers are known to go on lengthy vacations and never return
 		yearly_corruption = -0.1
 	}
-	R26_river_tolls = { #there are many river tolls across town, irritating to outsiders but otherwise lucrative
-		global_own_trade_power = 0.1
+	R26_moving_shadows = { #shadowmancer ninjas infiltrate enemy forts and cities and sabotage their operations.
+		siege_ability = 0.10
 	}
 	R26_the_white_gate = { #dhujat fort cities are common but khiraspid does it differently
 		defensiveness = 0.15
@@ -21669,47 +21833,43 @@ B62_ideas = {
 
 #Sihrusam Ideas
 F79_ideas = {
-	start = {
-		land_attrition = -0.05
-		cavalry_cost = -0.10
-	}
-	bonus = {
-		caravan_power = 0.1
-	}
+    start = {
+        land_attrition = -0.15 
+        cavalry_cost = -0.15
+    }
+    bonus = {
+        caravan_power = 0.25
+    }
+
 	trigger = {
 		tag = F79
 	}
 	free = yes
 
-	F79_northern_tribe = {
-		yearly_government_power = 0.05
-		governing_capacity_modifier = 0.05
-	}
-	F79_herald_tribe = {
-		manpower_in_true_faith_provinces = 0.05
-		tolerance_own = 1
-	}
-	F79_protector_tribe = {
-		prestige = 0.5
-		legitimacy = 0.5
-		devotion = 0.5
-		republican_tradition = 0.015
-		horde_unity = 0.5
-	}
-	F79_caravan_tribe = {
-		trade_range_modifier = 0.15
-	}
-	F79_hunter_tribe = {
-		movement_speed = 0.15
-		cavalry_flanking = 0.25
-	}
-	F79_dragon_tribe = {
-		land_morale = 0.1
-	}
-	F79_magi_tribe = {
-		same_culture_advisor_cost = -0.15
-		mages_loyalty_modifier = 0.05
-	}
+    F79_northern_tribe = { 
+        land_morale = 0.1
+    }
+    F79_herald_tribe = { 
+        manpower_in_true_faith_provinces = 0.15
+    }
+    F79_protector_tribe = { 
+        prestige = 1
+    }
+    F79_caravan_tribe = { 
+        trade_range_modifier = 0.15
+        center_of_trade_upgrade_cost = -0.1
+    }
+    F79_hunter_tribe = { 
+        movement_speed = 0.1
+        cavalry_flanking = 0.5
+    }
+    F79_dragon_tribe = { 
+        leader_land_shock = 1
+    }
+    F79_magi_tribe = { 
+        same_culture_advisor_cost = -0.15
+        mages_loyalty_modifier = 0.05
+    }
 }
 
 #Hytiranyalen Ideas
@@ -25971,7 +26131,7 @@ S41_ideas = {
 	free = yes
 
 	tanizu_prey_finding_leopard = {
-		mercenary_cost = 0.1
+		mercenary_cost = -0.1
 	}
 	tanizu_age_grades = {
 		leader_land_shock = 1
@@ -26504,7 +26664,7 @@ S71_ideas = {
 	S71_legacy_of_the_lizards = { #the old lizard overlords of the vyzemby showed them the value of a good naval doctrine
 		naval_forcelimit_modifier = 0.25
 	}
-	S71_rise_and_renaissance = { #unity and prosperity makes good catalysts for a booming population and economy. New cities are built and shit.
+	S71_rise_and_renaissance = { #unity and prosperity makes good catalysts for a booming population and economy. New cities are built
 		development_cost = -0.10
 		build_cost = -0.10
 	}
@@ -28048,80 +28208,84 @@ S56_ideas = {
 	}
 }
 
-#Kwizera
+#Inshibonde
 S28_ideas = {
 	start = {
-		morale_damage = 0.10
-		harsh_treatment_cost = -0.25
+		infantry_power = 0.10
+		global_tax_modifier = 0.15
 	}
 	bonus = {
-		fire_damage_received = -0.10
-	}
-	trigger = {
-		tag = S28 #Kwizera
-	}
-	free = yes
-
-	S28_reforms_of_kwizera = {
-		infantry_shock = 0.15
-	}
-	S28_the_snakekiller = {
-		years_of_nationalism = -5
-	}
-	S28_the_gatebreaker = {
 		leader_siege = 1
 	}
-	S28_war_shaman_council = {
-		mil_advisor_cost = -0.125
+	trigger = {
+		tag = S28 #Inshibonde
+	}
+
+	free = yes
+
+	S28_the_seat_of_tyrants = {
+		years_of_nationalism = -5
+	}
+	S28_ravagers_of_the_kazira = {
+		loot_amount = 0.5
+		available_province_loot = 0.2
+	}
+	dakinshi_the_poor_and_the_strong = {
+		general_cost = -0.15
+	}
+	dakinshi_unfiltered_mockery = {
+		power_projection_from_insults = 1
+	}
+	dakinshi_freshly_made_beans_and_weapons = {
+		trade_range_modifier = 0.5
+		inflation_reduction = 0.1
+	}
+	dakinshi_war_druids = {
+		shock_damage = 0.05
 		mages_loyalty_modifier = 0.05
 	}
-	S28_a_land_of_warriors = {
-		manpower_recovery_speed = 0.10
-	}
-	S28_trade_enclosures = {
-		global_own_trade_power = 0.1
-	}
-	S28_dreams_of_a_true_empire = {
-		province_warscore_cost = -0.15
+	dakinshi_dreams_of_a_reborn_empire = {
+		prestige = 1
 	}
 }
 
-#Akaliza
+#Degumwamba
 S29_ideas = {
 	start = {
-		adventurers_loyalty_modifier = 0.1
-		land_morale = 0.10
+		infantry_power = 0.10
+		global_tax_modifier = 0.15
 	}
 	bonus = {
-		monarch_diplomatic_power = 1
+		leader_siege = 1
 	}
 	trigger = {
-		tag = S29 #Akaliza
+		tag = S29 #Degumwamba
 	}
 	free = yes
 
-	S29_flexible_diplomacy = {
-		improve_relation_modifier = 0.2
-	}
-	S29_friends_in_all_places = {
-		advisor_pool = 1
+	S29_a_frog_with_a_state = {
 		advisor_cost = -0.1
-	}
-	S29_heal_the_people_heal_the_land = {
-		war_exhaustion = -0.03
-	}
-	S29_our_corner_of_the_world = {
-		fort_maintenance_modifier = -0.15
 	}
 	S29_runners_lodge = {
 		envoy_travel_time = -0.1
-		movement_speed = 0.1
+		movement_speed = 0.15
 	}
-	S29_harvest_tourney = {
-		prestige_decay = -0.01
+	dakinshi_the_poor_and_the_strong = {
+		general_cost = -0.15
 	}
-	S29_back_to_back = {
-		recover_army_morale_speed = 0.10
+	dakinshi_unfiltered_mockery = {
+		power_projection_from_insults = 1
+	}
+	dakinshi_freshly_made_beans_and_weapons = {
+		trade_range_modifier = 0.5
+		inflation_reduction = 0.1
+	}
+	dakinshi_war_druids = {
+		shock_damage = 0.05
+		mages_loyalty_modifier = 0.05
+	}
+	dakinshi_dreams_of_a_reborn_empire = {
+		prestige = 1
 	}
 }
 
@@ -28964,7 +29128,7 @@ S24_ideas = {
 	}
 	free = yes
 
-	S24_criers_of_the_mengi = { #tellum but in mengi and without the meme shit
+	S24_criers_of_the_mengi = { #tellum but in mengi and without the meme
 		diplomats = 1
 		envoy_travel_time = -0.25
 	}
@@ -29256,50 +29420,47 @@ L10_ideas = {
 	}
 }
 
-#Mwasagore
+#Kaziradoka
 S27_ideas = {
 	start = {
-		global_unrest = -1
-		defensiveness = 0.15
+		infantry_power = 0.10
+		global_tax_modifier = 0.15
 	}
 	bonus = {
-		global_trade_power = 0.1 
+		leader_siege = 1
 	}
 	trigger = {
-		tag = S27 #Mwasagore
+		tag = S27 #Kaziradoka
 	}
 
 	free = yes
 
-	S27_daughter_of_treeteeth = {
-		army_tradition_from_battle = 0.5
-		legitimacy = 0.5
-		republican_tradition = 0.15
-		devotion = 0.5
+	S27_the_golden_city = {
+		global_trade_power = 0.1
 	}
 	S27_the_bakatwa_destroyers = {
-		discipline = 0.05
-		monarch_lifespan = 0.1
+		infantry_shock = 0.15
 	}
-	S27_from_servant_to_master = {		
-		dip_advisor_cost = -0.25
+	dakinshi_the_poor_and_the_strong = {
+		general_cost = -0.15
 	}
-	S27_we_reap_what_we_sow = {
-		development_cost = -0.1
+	dakinshi_unfiltered_mockery = {
+		power_projection_from_insults = 1
 	}
-	S27_trade_with_the_gulf = {
-		merchants = 1
-		trade_range_modifier = 0.2
+	dakinshi_freshly_made_beans_and_weapons = {
+		trade_range_modifier = 0.5
+		inflation_reduction = 0.1
 	}
-	S27_royal_mint = {
-		global_tax_modifier = 0.1
+	dakinshi_war_druids = {
+		shock_damage = 0.05
+		mages_loyalty_modifier = 0.05
 	}
-	S27_trade_in_ideas = {
-		technology_cost = -0.05
+	dakinshi_dreams_of_a_reborn_empire = {
+		prestige = 1
 	}
 }
 
-#Tzus
+#Tsuz
 L89_ideas = {
 	start = {
 		army_tradition = 0.5
@@ -29362,7 +29523,7 @@ L23_ideas = {
 	L23_aro_the_great = { #legendary founding
 		land_morale = 0.10
 	}
-	L23_elemental_public_works = { #elemental are used to build roads n shit
+	L23_elemental_public_works = { #elemental are used to build roads
 		build_cost = -0.1
 	}
 	L23_tributes_of_arms = { #manpower tributes instead of paying taxes
@@ -30496,14 +30657,14 @@ F63_ideas = {
 	F63_raising_a_battlemage = { #If a child shows magical potential, irrespective if they were born a noble or a slave, they're taken in by the state to be raised as an elite battlemage. No two are trained the same, each specializing in different weapons and magic. But they all end up the same- deadly, disciplined, and powerful warriors.
 		leader_land_fire = 1
 	}
-	F63_militarized_capital = { #militarize aramoole proper. Build shit like barracks, forts, academies, training grounds, equipment workshops, mage towers, guards everywhere, dragonne packs, the works.
+	F63_militarized_capital = { #militarize aramoole proper. Build barracks, forts, academies, training grounds, equipment workshops, mage towers, guards everywhere, dragonne packs, the works.
 		global_unrest = -2
 	}
 	F63_tijarikheti_attatan = { #mac and cheese, it's on the food dishes wiki page
 		prestige = 1
 	}
 	
-	F63_a_bronze_eye_watching = { #whenever it seems like we're gonna loose, we win. Not to mention rumors of dragon shit. Hmmmmmm 
+	F63_a_bronze_eye_watching = { #whenever it seems like we're gonna loose, we win. Not to mention rumors of dragon. Hmmmmmm 
 		war_exhaustion = -0.03
 	}
 	F63_great_cannons = { #haha cannons go boom, lore about aakhet sending dudes out to get artillery
@@ -30899,42 +31060,44 @@ Z85_ideas = {
 	}
 }
 
-#Umutukomye
+#Eusiwuni
 S31_ideas = {
 	start = {
-		movement_speed = 0.15
-		loot_amount = 0.5
+		infantry_power = 0.10
+		global_tax_modifier = 0.15
 	}
 	bonus = {
-		diplomatic_annexation_cost = -0.2
+		leader_siege = 1
 	}
 	trigger = {
-		tag = S31 #Umutukomye
+		tag = S31 #Eusiwuni
 	}
 
 	free = yes
 
-	S31_everybody_fights = {
-		army_tradition_decay = -0.01
+	S31_warlords_of_the_north = {
+		siege_ability = 0.1
+		possible_condottieri = 0.5
 	}
-	S31_a_trap_under_every_tree = {		
-		hostile_attrition = 1
+	S31_the_great_three = {
+		same_culture_advisor_cost = -0.1
 	}
-	S31_kwizeras_leopard_warriors = {
-		leader_land_manuever = 1
-		infantry_power = 0.05
+	dakinshi_the_poor_and_the_strong = {
+		general_cost = -0.15
 	}
-	S31_think_on_your_feet = {
-		idea_cost = -0.1
+	dakinshi_unfiltered_mockery = {
+		power_projection_from_insults = 1
 	}
-	S31_the_namingos_right = {
-		inflation_action_cost = -0.15
+	dakinshi_freshly_made_beans_and_weapons = {
+		trade_range_modifier = 0.5
+		inflation_reduction = 0.1
 	}
-	S31_the_warlord_era_reborn = {
-		reduced_liberty_desire = 10
+	dakinshi_war_druids = {
+		shock_damage = 0.05
+		mages_loyalty_modifier = 0.05
 	}
-	S31_watch_the_world_burn = {
-		power_projection_from_insults = 1.0	
+	dakinshi_dreams_of_a_reborn_empire = {
+		prestige = 1
 	}
 }
 
@@ -32294,43 +32457,44 @@ L35_ideas = {
 	}
 }
 
-#Gahigi
+#Gumti
 S32_ideas = {
 	start = {
-		unjustified_demands = -0.2
-		global_autonomy = -0.05
+		infantry_power = 0.10
+		global_tax_modifier = 0.15
 	}
 	bonus = {
-		diplomatic_reputation = 1
+		leader_siege = 1
 	}
 	trigger = {
-		tag = S32 #Gahigi
+		tag = S32 #Gumti
 	}
 
 	free = yes
 
-	S32_gold_wins_wars_not_soldiers = {		
-		infantry_cost = -0.1
+	S32_the_wedge_of_bamaliwuni = {
+		defensiveness = 0.15
 	}
-	S32_always_bet_on_the_winning_side = {
-		reserves_organisation = 0.1
-	}
-	S32_chaos_is_a_ladder = {
+	S32_treasure_troves_of_gumti = {
 		spy_offence = 0.2
-		rival_change_cost = -0.5
+		loot_amount = 0.5
 	}
-	S32_castle_sukowerere = {
-		drill_gain_modifier = 0.5
+	dakinshi_the_poor_and_the_strong = {
+		general_cost = -0.15
 	}
-	S32_the_shongwe_bank = {
-		trade_steering = 0.2
+	dakinshi_unfiltered_mockery = {
+		power_projection_from_insults = 1
 	}
-	S32_animal_companions = {
-		stability_cost_modifier = -0.15
+	dakinshi_freshly_made_beans_and_weapons = {
+		trade_range_modifier = 0.5
+		inflation_reduction = 0.1
 	}
-	S32_war_canoe_raiders = {
-		own_coast_naval_combat_bonus = 1	
-		capture_ship_chance = 0.1
+	dakinshi_war_druids = {
+		shock_damage = 0.05
+		mages_loyalty_modifier = 0.05
+	}
+	dakinshi_dreams_of_a_reborn_empire = {
+		prestige = 1
 	}
 }
 
@@ -33564,11 +33728,11 @@ F62_ideas = {
 #Death Bringing Cobra
 S30_ideas = {
 	start = {
-		spy_offence = 0.25
-		siege_ability = 0.1
+		infantry_power = 0.10
+		global_tax_modifier = 0.15
 	}
 	bonus = {
-		years_of_nationalism = -5
+		leader_siege = 1
 	}
 	trigger = {
 		tag = S30 #Death Bringing Cobra
@@ -33576,31 +33740,31 @@ S30_ideas = {
 
 	free = yes
 
-	S30_death_to_traitors = {
-		discipline = 0.05
-
-	}
-	S30_a_legendary_legacy = {
-			
+	S30_heirs_of_bwa_dakinshi = {
 		legitimacy = 1
-		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
+		republican_tradition = 0.3
 	}
-	S30_the_demons_call = {
-		shock_damage = 0.1
+	S30_the_tainted_lineage = {
+		war_exhaustion = -0.03
 	}
-	S30_binding_the_wounds = {
-		province_warscore_cost = -0.15
+	dakinshi_the_poor_and_the_strong = {
+		general_cost = -0.15
 	}
-	S30_legacy_of_exile = {
-		defensiveness = 0.15
+	dakinshi_unfiltered_mockery = {
+		power_projection_from_insults = 1
 	}
-	S30_surrounded_by_enemies = {
-		global_manpower_modifier= 0.15
+	dakinshi_freshly_made_beans_and_weapons = {
+		trade_range_modifier = 0.5
+		inflation_reduction = 0.1
 	}
-	S30_great_dakinshi = {
-		development_cost = -0.1
+	dakinshi_war_druids = {
+		shock_damage = 0.05
+		mages_loyalty_modifier = 0.05
+	}
+	dakinshi_dreams_of_a_reborn_empire = {
+		prestige = 1
 	}
 }
 
@@ -36301,7 +36465,7 @@ V04_ideas = {
     V04_boiling_beast_art = { # monks turn themselves into kungfu steam boilers, possible oni influence
         infantry_shock = 0.15
     }
-    V04_the_war_unceasing = { # oni and runsuhki have raided each other many times over, to the point where their relationship is a constant  ceremonial war. Diplomats that go into their territory are considered �on campaign�
+    V04_the_war_unceasing = { # oni and runsuhki have raided each other many times over, to the point where their relationship is a constant  ceremonial war. Diplomats that go into their territory are considered �on campaign�
         war_exhaustion = -0.03
     }
     V04_serpents_blood_wine = { # milk, blood and snake wine fermented in sarinaigh caverns (suspiciously close to serpentspine)
@@ -36893,4 +37057,367 @@ F93_ideas = {
 	F93_kryt = {
 		navy_tradition_decay = -0.01
 	} #Killing cubists is good-Gilly
+}
+
+#Hortosare
+B81_ideas = { 
+	start = { 
+        Defensiveness = 0.15
+		Prestige_Decay = -0.01
+	} 
+	 
+	bonus = {
+        hostile_attrition = 1
+	} 
+	 
+	trigger = { 
+		tag = B81 #Hortosare
+	} 
+	free = yes 
+ 
+	B81_deep_keeps = { 
+		garrison_size = 0.1
+		fort_maintenance_modifier = -0.1
+	} 
+	B81_gnoll_hunters = { 
+		adventurers_loyalty_modifier = 0.1
+	} 
+	B81_border_diplomats = { 
+		diplomats = 1
+	} 
+	B81_rebirth_architecture = {
+		build_cost = -0.05
+		build_time = -0.05
+	}
+	B81_the_extent_of_empires = {
+		war_exhaustion = -0.03
+	}
+	B81_the_duke_of_hortosare = {
+		legitimacy = 1
+	}
+	B81_head_held_high = {
+		morale_damage_received = -0.1
+	}
+}
+
+#Petalmasher
+B82_ideas = {
+	start = {
+		land_morale = 0.1
+		land_forcelimit_modifier = 0.2
+	}
+	bonus = {
+		mages_loyalty_modifier = 0.1
+		monstrous_tribes_loyalty_modifier = 0.1
+	}
+
+	trigger = {
+		tag = B82
+	}
+	free = yes
+
+	pactseeker_forest_goblin_with_a_little_help_from_my_friends = {
+		state_maintenance_modifier = -0.2
+	}
+	B82_blooming_sanctuary = {
+		tolerance_own = 2
+	}
+	B82_poisonous_petals = {
+		infantry_shock = 0.1
+	}
+	pactseeker_forest_goblin_for_our_patrons_and_us = {
+		province_warscore_cost = -0.15
+	}
+	B82_leaf_to_gold = {
+		innovativeness_gain = 0.5
+	}
+	B82_flower_and_fey = {
+		production_efficiency = 0.1
+	}
+	pactseeker_forest_goblin_secrets_of_the_fey = {
+		institution_spread_from_true_faith = 0.2
+	}
+}
+
+#Shevhedil
+V09_ideas = { 
+	start = { 
+        manpower_in_own_culture_provinces = 0.15
+		leader_land_manuever = 1
+	} 
+	 
+	bonus = {
+        production_efficiency = 0.1
+	} 
+	 
+	trigger = { 
+		tag = V09 #Shevhedil
+	} 
+	free = yes 
+ 
+	V09_gateway_cartographers = { 
+		land_attrition = -0.15
+	} 
+	V09_bounty_of_dead = { 
+		development_cost = -0.05
+	} 
+	V09_caravan_convoys = { 
+		movement_speed = 0.15
+	} 
+	V09_best_friend = {
+		improve_relation_modifier = 0.2
+	}
+	V09_soulfound_ogres = {
+		shock_damage = 0.10
+	}
+	V09_hearts_and_blood = {
+		trade_efficiency = 0.1
+	}
+	V09_1001_sages = {
+		tolerance_own = 2
+	}
+}
+
+#Katiradiga
+S83_ideas = {
+	start = {
+		infantry_power = 0.10
+		global_tax_modifier = 0.15
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	trigger = {
+		tag = S83 #Katiradiga
+	}
+
+	free = yes
+
+	S83_warlords_of_the_west = {
+		liberty_desire_from_subject_development = -0.25
+	}
+	S83_kuvunika = {
+		garrison_size = 0.2
+	}
+	dakinshi_the_poor_and_the_strong = {
+		general_cost = -0.15
+	}
+	dakinshi_unfiltered_mockery = {
+		power_projection_from_insults = 1
+	}
+	dakinshi_freshly_made_beans_and_weapons = {
+		trade_range_modifier = 0.5
+		inflation_reduction = 0.1
+	}
+	dakinshi_war_druids = {
+		shock_damage = 0.05
+		mages_loyalty_modifier = 0.05
+	}
+	dakinshi_dreams_of_a_reborn_empire = {
+		prestige = 1
+	}
+}
+
+#Svaikzenszel
+M03_ideas = { 
+	start = { 
+        trade_steering = 0.2
+		diplomats = 1
+	} 
+	 
+	bonus = {
+        land_maintenance_modifier = -0.1
+	} 
+	 
+	trigger = { 
+		tag = M03 #Svaikzenszel
+	} 
+	free = yes 
+ 
+	M03_national_bureau_of_fencing = { 
+		improve_relation_modifier = 0.15
+		spy_offence = 0.15
+	} 
+	M03_scamcon = { 
+		leader_land_fire = 1
+		artillery_power = 0.05
+	} 
+	M03_credit_slab = { 
+		global_tax_modifier = 0.2
+	} 
+	M03_the_spider_of_barrier_street = {
+		trade_efficiency = 0.1
+	}
+	M03_nutritional_goop = {
+		global_supply_limit_modifier = 0.25
+		land_morale = 0.1
+	}
+	M03_ood = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	M03_magiverse = {
+		global_unrest = -2
+	}
+}
+
+#Irkan Eparta
+L61_ideas = {
+	start = { 
+        movement_speed = 0.10
+		hostile_attrition = 1
+	} 
+	 
+	bonus = {
+        artillery_power = 0.10
+	} 
+	 
+	trigger = { 
+		tag = L61 #Irkan Eparta
+	} 
+	free = yes 
+	L61_eternal_vigil = { 
+		prestige_decay = -0.01
+	}
+	L61_epartesigs = { 
+		defensiveness = 0.15
+	} 
+	L61_naleni_integration = {
+		tolerance_heathen = 2
+	} 
+	L61_sky_crew = {
+		build_cost = -0.1
+	}
+	L61_edge_of_the_horn = {
+		global_ship_trade_power = 0.20
+	}
+	L61_telekenid_ironworks = {
+		artillery_cost = -0.10
+	}
+	L61_floating_epartesigs = {
+		siege_blockade_progress = 1
+		heavy_ship_power = 0.05
+
+	}
+}
+
+#Chaqway
+G87_ideas = {
+	start = {
+		stability_cost_modifier = -0.15
+		global_trade_power = 0.1
+	}
+	bonus = {
+		war_exhaustion = -0.03
+	}
+	trigger = {
+		tag = G87
+	}
+	free = yes
+	G87_way_apart_from_war = {
+		technology_cost = -0.05
+	}
+	G87_words_to_wings = {
+		land_attrition = -0.15
+	}
+	G87_wherever_the_wind_takes_you = {
+		caravan_power = 0.2
+		trade_steering = 0.1
+	}
+	G87_window_to_the_world = {
+		trade_efficiency = 0.05
+		tolerance_heathen = 1
+	}
+	G87_wings_of_war = {
+		shock_damage_received = -0.1
+	}
+	G87_winds_of_change = {
+		diplomatic_reputation = 1
+	}
+	G87_wandering_upon_the_waves = {
+		leader_naval_manuever = 1
+	}
+}
+
+#Irúasawid
+
+J91_ideas = {
+	start = {
+		global_unrest = -2
+		dip_advisor_cost = -0.25
+	}
+	bonus = {
+		war_exhaustion = -0.03
+	}
+	trigger = {
+		tag = J91
+	}
+	free = yes
+	amadia_the_federation = {
+		production_efficiency = 0.1
+	}
+	J91_welcoming_feast = {
+		diplomatic_reputation = 1
+	}
+	J91_prismatic_defenses = {
+		defensiveness = 0.15
+	}
+	J91_downward_hydrotechnics = {
+		build_cost = -0.1
+	}
+	J91_mines_below = {
+		hostile_attrition = 1
+	}
+	J91_sky_masonry = {
+		trade_efficiency = 0.1
+		envoy_travel_time = -0.25
+	}
+	J91_chuquykuna = {
+		infantry_fire = 0.15
+	}
+}
+
+#Trígica
+
+J92_ideas = {
+	start = {
+		war_exhaustion = -0.03
+		movement_speed = 0.15
+	}
+	
+	bonus = {
+		colonists = 1 
+	}
+	
+	trigger = {
+		tag = J92
+	}
+	free = yes
+	
+	amadia_the_federation = {
+		production_efficiency = 0.1
+	}
+
+	J92_cahplanza = { 
+		army_tradition_decay = -0.01
+	}
+
+	J92_the_three_stones = { 
+		global_autonomy = -0.05
+	}
+
+	J92_first_on_the_field = { 
+		mercenary_cost = -0.15
+	}
+	
+	J92_anti_magic_sentiment = { 
+		shock_damage_received = -0.10	
+	}
+	
+	J92_port_of_carginden = { 
+		trade_efficiency = 0.1
+	}
+
+	J92_river_singing = { 
+		diplomatic_reputation = 1
+	}
 }
