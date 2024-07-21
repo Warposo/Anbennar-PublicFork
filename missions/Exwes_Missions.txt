@@ -2097,6 +2097,7 @@ Exwes_2_missions = {
 			if = {
 				limit = {
 					has_country_flag = exwes_lencori_politics
+					has_country_modifier = exwes_lencori_politics
 				}
 				extend_country_modifier = {
 					name = exwes_lencori_politics
@@ -2115,6 +2116,7 @@ Exwes_2_missions = {
 			if = {
 				limit = {
 					has_country_flag = exwes_weak_lencori_politics
+					has_country_modifier = exwes_weak_lencori_politics
 				}
 				extend_country_modifier = {
 					name = exwes_weak_lencori_politics
@@ -3449,7 +3451,7 @@ Exwes_3_missions = {
 					add_permanent_claim = ROOT
 				}
 			}
-			nimscodd_area = {
+			169 = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -3483,7 +3485,6 @@ Exwes_3_missions = {
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				area = nimscodd_area
 				area = dragonpoint_area
 				area = dragondowns_area
 				area = dragonspine_area
@@ -3631,8 +3632,8 @@ Exwes_3_missions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			nimscodd_area = {
-				owned_by =  ROOT
+			169 = {
+				owned_by = ROOT
 				is_core = ROOT
 			}
 			dragondowns_area = {
@@ -4440,23 +4441,36 @@ Exwes_4_missions = {
 			accepted_culture = visfoot_halfling
 			viswall_area = {
 				type = all
+				NOT = {
+					local_autonomy = 10
+				}
 				country_or_non_sovereign_subject_holds = ROOT
 				num_of_buildings_in_province = 4
+				has_manufactory_trigger = yes
+				development = 30
 			}
 		}
 		effect = {
 			medium_increase_of_halfling_tolerance_effect = yes
-			viswall_area = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-			if = {
-				limit = {
-					has_dlc = "Leviathan"
+			#if = { Will be uncommented if Rainbow Hall monument gets added and will be removed if not.
+			#	limit = {
+			#		has_dlc = "Leviathan"
+			#	}
+			#	custom_tooltip = exwes_unite_viswall_tt
+			#	viswall_area = { #I will figure this out if Rainbow Hall gets added
+			#		add_base_tax = 1
+			#		add_base_production = 1
+			#		add_base_manpower = 1
+			#	}
+			#}
+			#else = {
+				viswall_area = {
+					add_permanent_province_modifier = {
+						name = exwes_the_rainbow_hall
+						duration = -1
+					}
 				}
-				custom_tooltip = exwes_unite_viswall_tt
-			}
+			#}
 		}
 	}
 	##Mission End
