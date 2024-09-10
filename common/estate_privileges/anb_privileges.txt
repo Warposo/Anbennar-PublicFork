@@ -390,6 +390,7 @@ estate_mages_organization_religious = {
 			religion = rinta_seekers
 			religion = sky_domain
 			religion = shadow_pact
+			religion = rune_scribes
 			has_country_flag = updating_isolationism_window
 			has_country_flag = elikhand_magic_khet
 			religion = anzalkatsa
@@ -1783,6 +1784,7 @@ estate_adventurers_heroes_in_the_army = {
 			OR = {
 				has_country_modifier = xia_inviting_wandering_warriors
 				has_country_flag = covenblad_darkness_banished
+				has_reform = heroic_realm_reform
 			}
 		}
 		modifier = {
@@ -2050,7 +2052,10 @@ estate_adventurers_monopoly_of_slaves = {
 		any_owned_province = {
 			trade_goods = slaves
 		}
-		NOT = { has_country_flag = no_longer_monstrous }
+		NOT = {
+			has_country_flag = no_longer_monstrous
+			tag = R38
+		}
 	}
 	can_select = {
 		custom_trigger_tooltip = {
@@ -3650,6 +3655,7 @@ estate_daulophs_monopoly_of_metals = {
 			OR = {
 				trade_goods = iron
 				trade_goods = copper
+				trade_goods = mithril
 			}
 		}
 	}
@@ -3682,9 +3688,10 @@ estate_daulophs_monopoly_of_metals = {
 				OR = {
 					trade_goods = iron
 					trade_goods = copper
+					trade_goods = mithril
 				}
 			}
-			custom_tooltip = MONOPOLY_INCOME_IRON_DESC
+			custom_tooltip = MONOPOLY_INCOME_IRON_AND_COPPER_DESC
 		}
 		custom_tooltip = estate_nobles_monopoly_of_metals_effect_tooltip
 	}
@@ -3694,6 +3701,7 @@ estate_daulophs_monopoly_of_metals = {
 				OR = {
 					trade_goods = iron
 					trade_goods = copper
+					trade_goods = mithril
 				}
 			}
 			add_province_modifier = {
@@ -4679,61 +4687,6 @@ xhazobkult_privilege_organised_sacrifices = {
 	}
 	ai_will_do = {
 		factor = 5
-	}
-}
-
-xhazobkult_privilege_the_weak_serve_the_strong = {
-	icon = privilege_monopoly_of_goods_slaves
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.1
-	loyalty = 0.05
-	land_share = 10
-	is_valid = {
-		religion = xhazobkult
-	}
-	can_select = {
-		NOT = { has_estate_privilege = xhazobkult_privilege_the_weak_serve_the_strong }
-	}
-	can_revoke = {
-		#always
-	}
-	on_granted = {
-		custom_tooltip = xhazobkult_privilege_the_weak_serve_the_strong_tt
-		hidden_effect = {
-			set_country_flag = xhazobkult_privilege_the_weak_serve_the_strong_flag
-			xhazobkult_privilege_the_weak_serve_the_strong_effect = yes
-			every_owned_province = { xhazobkult_set_appropriate_modifier = yes }
-		}
-	}
-	on_revoked = {
-		custom_tooltip = xhazobkult_privilege_the_weak_serve_the_strong_tt
-		hidden_effect = {
-			clr_country_flag = xhazobkult_privilege_the_weak_serve_the_strong_flag
-			xhazobkult_privilege_the_weak_serve_the_strong_effect = yes
-		}
-	}
-	on_invalid = {
-		custom_tooltip = xhazobkult_privilege_the_weak_serve_the_strong_tt
-		hidden_effect = {
-			clr_country_flag = xhazobkult_privilege_the_weak_serve_the_strong_flag
-			xhazobkult_privilege_the_weak_serve_the_strong_effect = yes
-		}
-	}
-	on_revoked_province = {
-		remove_province_modifier = xhazobkult_slave_estate
-	}
-	on_invalid_province = {
-		remove_province_modifier = xhazobkult_slave_estate
-	}
-	penalties = {
-	}
-	benefits = {
-	}
-	mechanics = {
-	}
-	ai_will_do = {
-		factor = 10
 	}
 }
 
@@ -9916,7 +9869,6 @@ estate_burghers_gem_quarrying = {
 			add_province_modifier = {
 				name = H76_gem_quarrying
 				duration = -1
-				hidden = yes
 			}
 		}
 	}
@@ -9959,7 +9911,6 @@ estate_burghers_lucrative_lapidaries = {
 			add_province_modifier = {
 				name = H76_lucrative_lapidaries
 				duration = -1
-				hidden = yes
 			}
 		}
 	}
@@ -10844,7 +10795,7 @@ estate_church_isagumze_warrior_griots = {
 	conditional_modifier = {
 		trigger = { 
 			estate_loyalty = {
-					estate = estate_burghers
+					estate = estate_church
 					loyalty = 30
 			} 		
 		}
@@ -10857,7 +10808,7 @@ estate_church_isagumze_warrior_griots = {
 		trigger = { 
 			NOT = {
 				estate_loyalty = {
-					estate = estate_burghers
+					estate = estate_church
 					loyalty = 30
 				} 		
 			}
@@ -11067,6 +11018,10 @@ estate_nobility_forgotten_city = {
 		}
 	}
 	on_revoked = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 20
+		}
 	}
 	penalties = {
 		diplomatic_reputation = -1
@@ -11425,7 +11380,7 @@ estate_mages_young_tower_of_magic = {
 #Lizardfolk - Mutation Privileges
 
 estate_church_naga_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11476,7 +11431,7 @@ estate_church_naga_mutation = {
 }
 
 estate_church_abundance_of_nagas_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -20
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 4 } }
 	loyalty = 0.1
@@ -11525,7 +11480,7 @@ estate_church_abundance_of_nagas_mutation = {
 }
 
 estate_burghers_ashhana_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11563,7 +11518,7 @@ estate_burghers_ashhana_mutation = {
 }
 
 estate_burghers_zganaga_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
@@ -11601,7 +11556,7 @@ estate_burghers_zganaga_mutation = {
 }
 
 estate_nobility_boaga_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11642,7 +11597,7 @@ estate_nobility_boaga_mutation = {
 }
 
 estate_nobility_trazoskala_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11680,7 +11635,7 @@ estate_nobility_trazoskala_mutation = {
 }
 
 estate_church_khateshala_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11720,7 +11675,7 @@ estate_church_khateshala_mutation = {
 }
 
 estate_burghers_tatashyahyts_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11757,7 +11712,7 @@ estate_burghers_tatashyahyts_mutation = {
 }
 
 estate_burghers_duuma_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
@@ -11794,7 +11749,7 @@ estate_burghers_duuma_mutation = {
 }
 
 estate_nobility_gakhakaya_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11832,7 +11787,7 @@ estate_nobility_gakhakaya_mutation = {
 }
 
 estate_burghers_khtashhana_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11869,7 +11824,7 @@ estate_burghers_khtashhana_mutation = {
 }
 
 estate_burghers_tsyhyra_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11907,7 +11862,7 @@ estate_burghers_tsyhyra_mutation = {
 }
 
 estate_nobility_shanyza_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -11944,7 +11899,7 @@ estate_nobility_shanyza_mutation = {
 }
 
 estate_burghers_thanats_mutation = {
-	icon = privilege_grant_autonomy
+	icon = privilege_lizardfolk_mutation
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = 0.05
@@ -12113,8 +12068,8 @@ estate_nobles_vb_fadhecatlar = {
 	}
 
 	benefits = {
-		yearly_corruption = 0.5
-		reform_progress_growth = 0.25
+		yearly_corruption = 0.2
+		monthly_reform_progress = 0.25
 		tolerance_heathen = 2	
 	}
 
@@ -12147,10 +12102,12 @@ estate_adventurers_heroic_realm = {
 		}
 	}
 	can_select = {
-		OR = {
-			has_country_flag = heroicrealmriceandswords
-			has_country_flag = heroicrealmriceandguns
-			has_country_flag = heroicrealmjustrice
+		hidden_trigger = {
+			OR = {
+				has_country_flag = heroicrealmriceandswords
+				has_country_flag = heroicrealmriceandguns
+				has_country_flag = heroicrealmjustrice
+			}
 		}
 	}
 
@@ -12159,12 +12116,19 @@ estate_adventurers_heroic_realm = {
 	}
 
 	is_valid = {
-		has_reform = heroic_realm_reform
+		hidden_trigger = {
+			OR = {
+				has_country_flag = heroicrealmriceandswords
+				has_country_flag = heroicrealmriceandguns
+				has_country_flag = heroicrealmjustrice
+			}
+		}
 	}
 	penalties = {
 	}
 	benefits = {
 	}
+
 
 	ai_will_do = {
 		factor = 100
@@ -12536,7 +12500,10 @@ estate_nobility_covenblad_black_tree = {
 	influence = 0.05
 	is_valid = { is_or_was_tag = { tag = Z37 } }
 	can_select = {
-		has_country_flag = active_tree
+		custom_trigger_tooltip = { 
+			tooltip = covenblad_active_tree_tt
+			has_country_flag = active_tree
+		}
 	}
 	on_granted = {
 	}
@@ -12760,7 +12727,10 @@ estate_nobility_covenblad_young_dragon = {
 			estate = estate_nobles
 			type = mil
 		}
-		has_country_flag = active_dragon
+		custom_trigger_tooltip = { 
+			tooltip = covenblad_active_dragon_tt
+			has_country_flag = active_dragon
+		}
 	}
 	on_granted = {
 	}
@@ -12826,8 +12796,10 @@ estate_nobility_covenblad_burning_sword = {
 	influence = 0.2
 	loyalty = 0.1
 	can_select = {
-		army_tradition = 30
-		has_country_flag = active_sword
+		custom_trigger_tooltip = { 
+			tooltip = covenblad_active_sword_tt
+			has_country_flag = active_sword
+		}
 	}
 	on_granted = {
 		add_army_tradition = -10
@@ -12865,7 +12837,10 @@ estate_nobility_covenblad_silver_reliquary = {
 		stability_cost_modifier = 0.1
 	}
 	can_select = { 
-		has_country_flag = active_reliquary
+		custom_trigger_tooltip = { 
+			tooltip = covenblad_active_reliquary_tt
+			has_country_flag = active_reliquary
+		}
 	}
 	benefits = {
 		mil_advisor_cost = -0.2
@@ -12902,7 +12877,10 @@ estate_nobility_covenblad_broken_chain = {
 	benefits = {
 	}
 	can_select = {
-		has_country_flag = active_chain
+		custom_trigger_tooltip = { 
+			tooltip = covenblad_active_chain_tt
+			has_country_flag = active_chain
+		}
 	}
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
@@ -12921,3 +12899,318 @@ estate_nobility_covenblad_broken_chain = {
 	}
 }
 
+#Kumarkand
+estate_church_surakels_orthodoxy = {
+	icon = kumarkand_surael_orthodoxy
+	
+	loyalty = -0.2
+    influence = 0.2
+    land_share = 0
+    max_absolutism = -10
+	
+	is_valid = {
+		OR = {
+			tag = F30
+			has_estate_privilege = estate_church_surakels_orthodoxy
+		}
+		NOT = { has_country_flag = estate_church_surakels_orthodoxy_removed }
+	}
+	can_select = {
+		always = no
+	}
+	can_revoke = {
+		custom_trigger_tooltip = {
+			tooltip = F30_revokable_via_decision_tt
+			always = no
+		}
+	}
+	
+	conditional_modifier = {
+		trigger = {
+			religion = old_bulwari_sun_cult
+		}
+		modifier = {
+			tolerance_own = -4
+			tolerance_heretic = 2
+			religious_unity = 0.25
+			global_heretic_missionary_strength = -1
+		}
+	}
+	
+	on_revoked = {
+		set_country_flag = estate_church_union_of_the_churches_removed
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#Kumarkand
+estate_adventurers_rangers = {
+	icon = kumarkand_rangers
+	
+	loyalty = 0.1
+    influence = 0.2
+    land_share = 0
+    max_absolutism = 0
+	
+	is_valid = {
+		has_estate_privilege = estate_adventurers_rangers
+	}
+	
+	can_revoke = { always = no }
+	
+	benefits = {
+		mercenary_cost = -0.05
+		mercenary_manpower = 0.10
+	}
+	
+	conditional_modifier = {    
+        trigger = {
+			mission_completed = F30_rangers_armies
+        }
+        modifier = {
+			adventurers_loyalty_modifier = 0.1
+			adventurers_influence_modifier = 0.05
+			mercenary_cost = -0.05
+			mercenary_manpower = 0.10
+		}
+    }
+	conditional_modifier = {
+        trigger = {
+            mission_completed = F30_rangers_armies
+        }
+        modifier = {
+            is_mercenary_modifier = yes
+            morale_damage_received = -0.05
+        }
+    }
+	
+	conditional_modifier = {    
+        trigger = {
+			mission_completed = F30_conquerors_legion
+        }
+        modifier = {
+			adventurers_influence_modifier = 0.05
+			mercenary_cost = -0.1
+			mercenary_manpower = 0.2
+		}
+    }
+	conditional_modifier = {
+        trigger = {
+            mission_completed = F30_conquerors_legion
+        }
+        modifier = {
+            is_mercenary_modifier = yes
+            morale_damage_received = -0.05
+        }
+    }
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#Karakhanbar
+estate_burghers_karakhanbar_cooperation_with_goblin_cartels = { 
+	icon = privilege_gold_mint 
+	loyalty = 0.05 
+	influence = 0.1 
+	max_absolutism = 0 
+	conditional_modifier = { } 
+	is_valid = { 
+		has_dlc = "Domination" 
+		has_country_flag = karakhanbar_cartels 
+	} 
+	can_select = { 
+	} 
+	on_granted = { 
+		enable_estate_action = { 
+			estate_action = KARAKHANBAR_CARTELS_RECRUIT_MINISTER_BURGHERS 
+		} 
+	} 
+	on_revoked = { 
+		disable_estate_action = { 
+			estate_action = KARAKHANBAR_CARTELS_RECRUIT_MINISTER_BURGHERS 
+		} 
+	} 
+	on_invalid = { 
+		disable_estate_action = { 
+			estate_action = KARAKHANBAR_CARTELS_RECRUIT_MINISTER_BURGHERS 
+		} 
+	} 
+	ai_will_do = { 
+		factor = 0 
+	} 
+}
+
+estate_church_karakhanbar_zealous_feyslayers = {
+	icon = privilege_recruit_inouisitor
+	max_absolutism = 0
+	loyalty = 0.1
+
+	is_valid = {
+		OR = {
+			has_dlc = "Emperor"
+			has_dlc = "Lions of the North"
+		}
+		has_country_flag = karakhanbar_zealous_feyslayers
+	}
+	can_select = {
+		OR = {
+			has_dlc = "Emperor"
+			has_dlc = "Lions of the North"
+		}
+		has_country_flag = karakhanbar_zealous_feyslayers
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	conditional_modifier = {
+		trigger = {
+			any_known_country = {
+				NOT = { religion = root }
+				war_with = root
+			}
+		}
+		modifier = {
+			church_loyalty_modifier = 0.1
+			land_morale = 0.10
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			NOT = {
+				any_known_country = {
+					NOT = { religion = root }
+					OR = {
+						war_with = root
+						truce_with = root
+					}
+				}
+			}
+			NOT = { has_country_modifier = recently_force_converted_protagonist_timer }
+			NOT = { has_country_modifier = recently_annexed_other_religion_timer }
+			NOT = { has_country_flag = improved_expansionist_zealotry }
+			NOT = { has_government_attribute = free_expansionist_zealotry }
+		}
+		modifier = {
+			church_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_noble_monopoly_of_fuel = {
+	icon = privilege_monopoly_of_goods_cloth
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_dlc = "Emperor"
+			has_country_flag = buffed_monopolies
+		}
+		any_owned_province = {
+			trade_goods = tropical_wood
+		}
+		has_country_flag = karakhanbar_monopoly_on_fuel
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				tropical_wood = 1
+			}
+			add_mercantilism = 1
+		}
+		if = {
+			limit = {
+				has_country_flag = karakhanbar_upgrade_of_monopoly
+			}
+			add_years_of_owned_provinces_production_income = {
+				years = 12
+				trigger = {
+					trade_goods = tropical_wood
+				}
+				custom_tooltip = MONOPOLY_INCOME_TROPICAL_WOOD_DESC
+			}
+		}
+		else = {
+			add_years_of_owned_provinces_production_income = {
+				years = 8
+				trigger = {
+					trade_goods = tropical_wood
+				}
+				custom_tooltip = MONOPOLY_INCOME_TROPICAL_WOOD_DESC
+			}
+			custom_tooltip = estate_noble_monopoly_of_fuel_effect_tooltip
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = tropical_wood
+			}
+			add_province_modifier = {
+				name = estate_noble_monopoly_of_fuel_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_noble_monopoly_of_fuel_mod
+			}
+			remove_province_modifier = estate_noble_monopoly_of_fuel_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_noble_monopoly_of_fuel_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_noble_monopoly_of_fuel_mod
+			}
+			remove_province_modifier = estate_noble_monopoly_of_fuel_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_noble_monopoly_of_fuel_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_noble_monopoly_of_fuel_mod
+			}
+			remove_province_modifier = estate_noble_monopoly_of_fuel_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		monthly_karakhanbar_flames_of_the_black_hearth_power = 0.5
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.20 }
+	}
+	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
+		factor = 0
+	}
+}

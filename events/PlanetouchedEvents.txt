@@ -110,6 +110,12 @@ country_event = {
 			factor = 1.25
 			planetouched_low_affinity = yes
 		}
+		modifier = {
+			factor = 0.8
+				has_dlc = "Leviathan"
+				owns = 383
+				383 = { has_great_project = { type = aur_kes_akasik tier = 3 } }
+		}
 	}
 
 	option = {
@@ -157,8 +163,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		#years = 75
-		years = 50 #once we have more stuff interacting with these modifiers we'll go back to 75
+		years = 75
 
 		modifier = {
 			factor = 0.5
@@ -171,6 +176,20 @@ country_event = {
 		modifier = {
 			factor = 1.25
 			planetouched_low_affinity = yes
+		}
+		modifier = {
+			factor = 0.9
+			has_government_attribute = increased_planetouched_commander_chance_high_affinity 
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_saved_name = {
+				key = root_name_male
+				type = advisor
+				scope = ROOT
+			}
 		}
 	}
 
@@ -187,6 +206,7 @@ country_event = {
 				manuever = 5
 				siege = 3
 				trait = planetouched_commander_personality
+				name = root_name_male
 			}
 		}
 		else_if = {
@@ -197,6 +217,7 @@ country_event = {
 				manuever = 5
 				siege = 2
 				trait = planetouched_commander_personality
+				name = root_name_male
 			}
 		}
 		else_if = {
@@ -207,6 +228,7 @@ country_event = {
 				manuever = 4
 				siege = 1
 				trait = planetouched_commander_personality
+				name = root_name_male
 			}
 		}
 		else_if = {
@@ -217,6 +239,7 @@ country_event = {
 				manuever = 3
 				siege = 1
 				trait = planetouched_commander_personality
+				name = root_name_male
 			}
 		}
 		else = {
@@ -226,7 +249,48 @@ country_event = {
 				manuever = 3
 				siege = 1
 				trait = planetouched_commander_personality
+				name = root_name_male
 			}
+		}
+		hidden_effect = { clear_saved_name = root_name_male }
+	}
+}
+
+# Republic Planetouched
+country_event = {
+	id = planetouched.104
+	title = planetouched.104.t
+    desc = planetouched.104.d
+    picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		has_reform = elemental_right_to_rule
+	}
+
+	option = {
+		name = planetouched.104.a
+		random_list = {
+			20 = {
+				set_ruler_random_planetouched_effect = yes 
+				modifier = {
+					factor = 0.3
+					planetouched_low_affinity = yes
+				}
+				modifier = {
+					factor = 2
+					planetouched_high_affinity = yes
+				}
+				modifier = {
+					factor = 1.5
+						has_dlc = "Leviathan"
+						owns = 383
+						383 = { has_great_project = { type = aur_kes_akasik tier = 3 } }
+				}
+			}
+			80 = {}
 		}
 	}
 }

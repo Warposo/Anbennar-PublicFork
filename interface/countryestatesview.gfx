@@ -1364,7 +1364,12 @@ spriteTypes = {
 		name = "privilege_covenblad_broken_chain"
 		texturefile = "gfx/interface/privileges/privilege_covenblad_broken_chain.dds"
 	}
-
+	
+	spriteType = {
+		name = "privilege_lizardfolk_mutation"
+		texturefile = "gfx/interface/privileges/privilege_lizardfolk_mutation.dds"
+	}
+	
 	####
 	#######
 	########
