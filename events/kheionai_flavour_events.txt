@@ -234,6 +234,9 @@ country_event = { #Strange thoughts of a strange man
 			has_terrain = city_terrain
 		}
 		culture_group = kheionai_ruinborn_elf
+		NOT = {
+			has_country_flag = strange_man_happened_1
+		}
 	}
 
 	option = {
