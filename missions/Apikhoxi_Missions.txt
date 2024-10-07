@@ -1,0 +1,378 @@
+apikhoxi_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        tag = G57
+    }
+
+    apikhoxi_show_of_force = {
+		icon = mission_build_up_to_force_limit
+        position = 1
+        trigger = {
+			mil_power = 50
+        }
+        effect = {
+            add_army_tradition = 0.2
+        }
+    }
+
+    apikhoxi_better_a_warrior = {
+		icon = mission_build_up_to_force_limit
+        position = 2
+        required_missions = { apikhoxi_show_of_force }
+        trigger = {
+            army_professionalism = 0.5
+        }
+        effect = {
+			G57 = {
+				country_event = {
+					id = flavor_apikhoxi.1
+					days = 0
+				}
+			}
+        }
+    }
+
+    apikhoxi_the_anger_of_a_calm_people = {
+		icon = mission_build_up_to_force_limit
+        position = 4
+        required_missions = { apikhoxi_time_to_harvest }
+        trigger = {
+            stability = 3
+        }
+        effect = {
+            add_morale_of_armies = 0.1
+        }
+    }
+
+    apikhoxi_brothers_in_exile = {
+		icon = mission_build_up_to_force_limit
+        position = 5
+        required_missions = { apikhoxi_the_anger_of_a_calm_people }
+        trigger = {
+            has_exiled_ruler = yes
+        }
+        effect = {
+            add_yearly_legitimacy = 1
+        }
+    }
+}
+
+apikhoxi_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        tag = G57
+    }
+
+    apikhoxi_calm_and_reasonable_discussion = {
+        icon = "mission_trade"
+        position = 2
+        required_missions = { apikhoxi_show_of_force }
+        trigger = {
+            control_trade_node = "YOUR_TRADE_NODE"
+        }
+        effect = {
+            add_dip_power = 100
+        }
+    }
+    apikhoxi_time_to_harvest = {
+        icon = "mission_farming"
+        position = 3
+        required_missions = {
+                apikhoxi_better_a_warrior
+                apikhoxi_calm_and_reasonable_discussion
+            }
+        trigger = {
+            province_has_resource = grain
+        }
+        effect = {
+            add_production_efficiency = 0.05
+        }
+    }
+
+    apikhoxi_share_the_bounty_of_freedom = {
+        icon = "mission_trade_route"
+        position = 4
+        required_missions = {
+            apikhoxi_time_to_harvest
+        }
+        trigger = {
+            controls_trade_node = yes
+        }
+        effect = {
+            add_merchant = 1
+        }
+    }
+
+    apikhoxi_little_league = {
+        icon = "mission_fish"
+        position = 5
+        required_missions = { ride_the_river_road }
+        trigger = {
+            province_has_resource = fish
+        }
+        effect = {
+            add_fish_production = 0.05
+        }
+    }
+}
+
+apikhoxi_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        tag = G57
+    }
+
+    apikhoxi_chains_for_grains = {
+        icon = "mission_development"
+        position = 1
+        trigger = {
+            province_development = 30
+        }
+        effect = {
+            add_province_development = 3
+        }
+    }
+
+    apikhoxi_mind_our_own_gardens = {
+        icon = "mission_innovation"
+        position = 2
+        required_missions = { apikhoxi_chains_for_grains }
+        trigger = {
+            has_university = yes
+        }
+        effect = {
+            add_admin_tech_cost_modifier = -0.05
+        }
+    }
+
+    apikhoxi_ride_the_river_road = {
+        icon = "mission_fertile"
+        position = 3
+        required_missions = { apikhoxi_down_by_the_river }
+        trigger = {
+            province_production_efficiency = 0.3
+        }
+        effect = {
+            add_production_efficiency = 0.1
+        }
+    }
+
+    apikhoxi_specialty_farms = {
+        icon = "mission_water"
+        position = 4
+        required_missions = {
+            apikhoxi_ride_the_river_road
+            apikhoxi_livestock_of_the_sea
+        }
+        trigger = {
+            has_waterway = yes
+        }
+        effect = {
+            add_naval_forcelimit_modifier = 0.2
+        }
+    }
+
+    apikhoxi_sweet_deal = {
+        icon = "mission_water"
+        position = 5
+        required_missions = { apikhoxi_share_the_bounty_of_freedom }
+        trigger = {
+            has_waterway = yes
+        }
+        effect = {
+            add_naval_forcelimit_modifier = 0.2
+        }
+    }
+
+    apikhoxi_field_of_the_free = {
+        icon = "mission_water"
+        position = 6
+        required_missions = { 
+            apikhoxi_brothers_in_exile
+            apikhoxi_little_league
+            apikhoxi_sweet_deal
+            apikhoxi_no_slaves_among_us
+            apikhoxi_spring_of_a_new_people
+        }
+        trigger = {
+            has_waterway = yes
+        }
+        effect = {
+            add_naval_forcelimit_modifier = 0.2
+        }
+    }
+}
+
+apikhoxi_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        tag = G57
+    }
+
+    apikhoxi_widen_the_door = {
+        icon = "mission_trade"
+        position = 1
+        trigger = {
+            has_trade_goods = sugar
+        }
+        effect = {
+            add_trade_efficiency = 0.05
+        }
+    }
+
+    apikhoxi_down_by_the_river = {
+        icon = "mission_emancipation"
+        position = 2
+        required_missions = {
+            apikhoxi_chains_for_grains
+            apikhoxi_widen_the_door
+        }
+        trigger = {
+            abolish_slavery = yes
+        }
+        effect = {
+            add_global_unrest = -1
+        }
+    }
+
+    apikhoxi_livestock_of_the_sea = {
+        icon = "mission_culture"
+        position = 3
+        required_missions = { apikhoxi_down_by_the_river }
+        trigger = {
+            accept_culture = yes
+        }
+        effect = {
+            add_accepted_culture_threshold = -0.05
+        }
+    }
+
+    apikhoxi_no_slaves_among_us = {
+        icon = "mission_culture"
+        position = 5
+        required_missions = { apikhoxi_share_the_bounty_of_freedom }
+        trigger = {
+            accept_culture = yes
+        }
+        effect = {
+            add_accepted_culture_threshold = -0.05
+        }
+    }
+
+}
+
+apikhoxi_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = {
+        tag = G57
+    }
+
+    apikhoxi_fertile_earth = {
+        icon = "mission_freedom"
+        position = 1
+        trigger = {
+            mil_power = 100
+        }
+        effect = {
+            add_dip_rep = 1
+            add_trust = 20
+        }
+    }
+
+    apikhoxi_fertile_minds = {
+        icon = "mission_field"
+        position = 2
+        required_missions = { 
+            apikhoxi_chains_for_grains
+            apikhoxi_widen_the_door
+            apikhoxi_fertile_earth 
+        }
+        trigger = {
+            own_province_with_fort = yes
+        }
+        effect = {
+            add_fort_defense = 0.1
+        }
+    }
+
+    apikhoxi_fertile_fields = {
+        icon = "mission_feast"
+        position = 3
+        required_missions = {
+            apikhoxi_fertile_minds 
+        }
+        trigger = {
+            own_province_with_high_religious_unity = yes
+        }
+        effect = {
+            add_religious_unity = 0.05
+            add_prestige = 10
+        }
+    }
+
+    apikhoxi_fertile_waters = {
+        icon = "mission_feast"
+        position = 4
+        required_missions = {
+            apikhoxi_fertile_fields
+            apikhoxi_livestock_of_the_sea
+        }
+        trigger = {
+            own_province_with_high_religious_unity = yes
+        }
+        effect = {
+            add_religious_unity = 0.05
+            add_prestige = 10
+        }
+    }
+
+    apikhoxi_spring_of_a_new_people = {
+        icon = "mission_feast"
+        position = 5
+        required_missions = {
+            apikhoxi_specialty_farms
+            apikhoxi_fertile_waters
+        }
+        trigger = {
+            own_province_with_high_religious_unity = yes
+        }
+        effect = {
+            add_religious_unity = 0.05
+            add_prestige = 10
+        }
+    }
+
+    apikhoxi_feast_of_the_devand = {
+        icon = "mission_feast"
+        position = 6
+        required_missions = {
+            apikhoxi_brothers_in_exile
+            apikhoxi_little_league
+            apikhoxi_sweet_deal
+            apikhoxi_no_slaves_among_us
+            apikhoxi_spring_of_a_new_people
+        }
+        trigger = {
+            own_province_with_high_religious_unity = yes
+        }
+        effect = {
+            add_religious_unity = 0.05
+            add_prestige = 10
+        }
+    }
+}
