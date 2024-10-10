@@ -73,7 +73,13 @@ country_decisions = {
 		}
 		allow = {
 			owns_core_province = 840	#North Citadel
-			adm_tech = 7
+			OR = {
+				adm_tech = 7
+				custom_trigger_tooltip = {
+					tooltip = cl_castellyr_early_tt
+					has_country_flag = cl_early_castellyr
+				}
+			}
 			government_rank = 1
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
@@ -133,6 +139,14 @@ country_decisions = {
 					add_halfling_minority_size_effect = yes
 					add_dwarven_minority_size_effect = yes
 				}
+			}
+			else_if = { #New Wanderers
+				limit = {
+					was_tag = B15
+					religion = elikhetist
+					is_religion_enabled = corinite
+				}
+				hidden_effect = { country_event = { id = flavor_elikhand.3 days = 30 } }
 			}
 			
 			#Claims
@@ -535,6 +549,14 @@ country_decisions = {
 					add_halfling_minority_size_effect = yes
 					add_dwarven_minority_size_effect = yes
 				}
+			}
+			else_if = { #New Wanderers
+				limit = {
+					was_tag = B15
+					religion = elikhetist
+					is_religion_enabled = corinite
+				}
+				hidden_effect = { country_event = { id = flavor_elikhand.3 days = 30 } }
 			}
 			
 			#Claims
@@ -975,6 +997,14 @@ country_decisions = {
 					add_dwarven_minority_size_effect = yes
 				}
 			}
+			else_if = { #New Wanderers
+				limit = {
+					was_tag = B15
+					religion = elikhetist
+					is_religion_enabled = corinite
+				}
+				hidden_effect = { country_event = { id = flavor_elikhand.3 days = 30 } }
+			}
 			#Claims
 			whistlevale_area = {
 				limit = {
@@ -1204,7 +1234,7 @@ country_decisions = {
 				province_id = 738	#Gulleton
 				province_id = 739	#Serpentswall
 			}
-			NOT = { dominion_core = yes }
+			NOT = { castanor_dominion_core = yes }
 		}
 		allow = {
 			hidden_trigger = { tag = B32 }
@@ -1212,16 +1242,16 @@ country_decisions = {
 			is_at_war = no
 			adm_tech = 7
 			num_of_cities = 10
-			740 = { dominion_core = yes } #Bal Vroren
-			735 = { dominion_core = yes } #Seawall
-			737 = { dominion_core = yes } #Mammoth Hall
-			738 = { dominion_core = yes } #Gulleton
-			739 = { dominion_core = yes } #Serpentswall
+			740 = { castanor_dominion_core = yes } #Bal Vroren
+			735 = { castanor_dominion_core = yes } #Seawall
+			737 = { castanor_dominion_core = yes } #Mammoth Hall
+			738 = { castanor_dominion_core = yes } #Gulleton
+			739 = { castanor_dominion_core = yes } #Serpentswall
 		}
 		effect = {
-			hidden_effect = { gerudia_superregion = { dominion_release = { tag = Z45 } } }
+			hidden_effect = { gerudia_superregion = { castanor_dominion_release = { tag = Z45 } } }
 			custom_tooltip = vrorenmarch_release_tooltip
-			dominion_creation = { tag = Z45 }
+			castanor_dominion_creation = { tag = Z45 }
 			Z45 = {
 				set_country_flag = feudal_escann_kingdom
 				
