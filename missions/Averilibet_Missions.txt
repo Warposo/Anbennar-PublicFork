@@ -19,7 +19,12 @@ column_1 = {
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			add_country_modifier = {
+				name = S53_opening_ceremonies
+				duration = 3650
+			}
+		} 
 	}
 
 	new_facilities_S53 = {
@@ -34,9 +39,34 @@ column_1 = {
 		trigger = {
 			6666 = { num_of_times_expanded_infrastructure = 1 } 
 			treasury = 200
+			NOT = {
+				has_country_modifier = S53_opening_ceremonies 
+			}
+			owns_all_provinces = {
+				area = tilcakan_area
+			}
 		}
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = S53_setinda_games_nat_averilibet 
+				duration = -1
+			}
+			6666 = {
+				add_province_modifier = {
+					name = S53_setinda_games
+					duration = -1
+				}
+				add_building_construction = {
+					building = fort_15th
+					speed = 0.5
+					cost = 1
+				}
+			}
+			saposon_area = {
+				add_permanent_claim = S53
+			}
+		} 
 	}
 
 	make_it_official_S53 = {
@@ -95,19 +125,43 @@ column_2 = {
 
 		trigger = {
 			NOT = { exists = S54 } 
-			6706 = {
+			6706 = { #layinret
 				owned_by = S53
 				infantry_in_province = S53
 				infantry_in_province = 5
 			}
-			5687 = {
+			5687 = { #reshimer
 				owned_by = S53
 				infantry_in_province = S53
 				infantry_in_province = 5
 			}
 		}
 
-		effect = {  } 
+		effect = {  
+			6706 = {
+				add_base_tax = -2 
+				add_base_production = -1
+				add_devastation = 50
+			}
+			5687 = {
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+				add_devastation = 50
+			}
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount= 10
+			}
+			tilcakan_area = {
+				add_claim = S53
+			}
+			6666 = {
+				add_base_tax = 2
+				add_base_manpower = 1
+				add_base_production = 1
+			}
+		} 
 	}
 
 	cooking_the_books_S53 = {
@@ -133,7 +187,38 @@ column_2 = {
 			has_estate_privilege = estate_nobles_diet_right
 		} 
 
-		effect = {  } 
+		effect = {  
+			define_heir = {
+				dynasty = root
+				name = "Desta"
+				monarch_name = "Desta II"
+				claim = 100
+				adm = 4
+				dip = 6
+				mil = 4 
+				female = yes 
+			}
+			random_list = {
+				34 = {
+					add_heir_personality = leopard_shifter_personality
+				}
+				33 = {
+					add_heir_personality = mongoose_shifter_personality
+				}
+				33 = {
+					add_heir_personality = elephant_shifter_personality
+				}
+			}
+			prestige = -20 
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 10.0
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -20
+			}
+		} 
 	}
 
 	holy_matrimony_S53 = {
@@ -226,7 +311,9 @@ column_3 = {
 
 		} 
 
-		effect = { } 
+		effect = { 
+			country_event = { id = flavor_averilibet.4 }
+		} 
 	}
 
 	give_them_hope_S53 = {
@@ -386,7 +473,19 @@ column_4 = {
 			}	
 		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = S53_some_progress_cleanse_sins_upg  
+			set_country_flag = S53_cleanse_sins_upg_flag
+			add_church_power = -100
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -20
+			}
+		} 
 	}
 
 	like_a_sister_S53 = {
@@ -507,7 +606,38 @@ column_5 = {
 			}
 		  } 
 
-		effect = {  } 
+		effect = {
+			create_alliance = L55
+			create_alliance = S23
+			generic_increase_of_racial_tolerance_effect = { race = harpy large = yes }
+			generic_increase_of_racial_tolerance_effect = { race = gnollish large = yes }
+			add_country_modifier = {
+				name = S53_friends_in_high_places
+				duration = 3650
+			}
+			simple_dynamic_effect = {
+				first_custom_tooltip = S53_help_from_friends_gnolls
+				first_limit = " 
+				S53 = { 
+					has_country_modifier = racial_focus_gnollish
+				}"
+				first_effect = "
+				6666 = {
+					add_gnollish_minority_size_effect = yes
+				}
+				add_historical_friend = S23"
+				second_custom_tooltip = S53_help_from_friends_harpy
+				second_limit = "
+				S53 = { 
+					has_country_modifier = racial_focus_harpy
+				}"
+				second_effect = "
+				6666 = {
+					add_harpy_minority_size_effect = yes
+				}
+				add_historical_friend = L55" 		
+			}
+		} 
 	}
 
 	advice_from_strangers_S53 = {
