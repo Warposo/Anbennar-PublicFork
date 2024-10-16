@@ -13137,3 +13137,40 @@ plutocratic_reform_cant_convert = {
 		factor = 0.75 #generic
 	}
 }
+
+#averilibet t1
+ngwenamasonamingo = {
+	icon = "british_queen"
+	lock_level_when_selected = yes
+	allow_normal_conversion = no
+	maintain_dynasty = yes
+
+	potential = {
+		OR = {
+			was_tag = S53
+			tag = S53
+		}
+		is_revolutionary = no
+	}
+
+	valid_for_nation_designer = yes #change to no later
+	modifiers = {
+		diplomatic_upkeep = 4
+		may_recruit_female_generals = yes 
+		may_recruit_female_generals = 0.25
+		can_fabricate_for_vassals = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		has_harem = yes
+	}
+
+	custom_attributes = {
+	}
+
+	effect = {
+		custom_tooltip = S53_leopardqueendom_march
+		custom_tooltip = S53_leopardqueendom_forcelimit
+	}
+}

@@ -3132,6 +3132,7 @@ on_queen_death = {
 	
 	events = {
 		flavour_covenblad.80 # Covenblad Palatine Arbiter stuff
+		flavor_averilibet.3 #averilibet husband harem 
 	}
 	if = {
 		limit = { has_ruler_modifier = consort_mage_personality_mod }
@@ -3216,6 +3217,7 @@ on_queen_death = {
 		remove_country_modifier = bav_building_wife_church
 	}
 	clr_ruler_flag = marriage_length
+	
 }
 
 # country
@@ -3313,7 +3315,6 @@ on_new_heir = {
 		remove_country_modifier = heir_mage_personality_mod
 	}
 }
-
 # country
 on_weak_heir_claim = {
 	events = {
@@ -5709,6 +5710,7 @@ on_bi_yearly_pulse = {
 		spirits.013 #Another spirits pulse event. It's performant I swear
 		harpy_events.100 #Harpy harem heir selection
 		dakinshi_harem_events.1 #dakinshi harem events
+		flavor_averilibet.1 #averilibet harem
 		bulwar_flavour.11
 		blorc.101 #blorc plunder management
 		diggy.406 #dwarovar-marrhold tunnel maintenance
@@ -11215,6 +11217,12 @@ on_death_has_harem = {
 				}
 			}
 			country_event = { id = dakinshi_harem_events.2 }
+		}
+		else_if ={
+			limit = {
+				has_reform = ngwenamasonamingo
+			}
+			country_event = { id = flavor_averilibet.2 }
 		}
 	}
 }

@@ -938,6 +938,25 @@ personal_union = {
 		}
 		modifier = pu_subject_bonus
 	}
+	#Anbennar
+	#averilibet 
+	modifier_subject = {
+		modifier = march_bonus
+		trigger = {
+			overlord = {
+				has_reform = ngwenamasonamingo
+			}
+		}
+	} 
+
+	modifier_overlord = {
+		modifier = S53_husband_land_force
+		trigger = {
+			overlord = {
+				has_reform = ngwenamasonamingo
+			}
+		}
+	} 
 
 	overlord_opinion_modifier = in_union
 	subject_opinion_modifier = in_union
