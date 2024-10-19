@@ -78,9 +78,33 @@ column_1 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			saposon_area = {
+				owned_by = S53
+				has_province_modifier = autonomy_increased
+			}
+			has_estate_privilege = estate_adventurers_sponsor_sellswords
+			num_of_mercenaries = 15
+		 } 
 
-		effect = {  } 
+		effect = {  
+			set_country_flag = S53_sellsword_upg_flag
+			clear_adventurers_organization_effect = yes
+			set_estate_privilege = estate_adventurers_organization_licensed_adventurers
+			add_country_modifier = {
+				name = S53_promised_hand
+				duration = 7300
+			}
+			kidfan_area = {
+				add_permanent_claim = S53
+			}
+			kadamuu_area = {
+				add_permanent_claim = S53
+			}
+			kirksanlashan_area = {
+				add_permanent_claim = S53
+			}
+		} 
 	}
 
 	watery_detour_S53 = {
@@ -154,7 +178,7 @@ column_2 = {
 				amount= 10
 			}
 			tilcakan_area = {
-				add_claim = S53
+				add_permanent_claim = S53
 			}
 			6666 = {
 				add_base_tax = 2
@@ -209,10 +233,10 @@ column_2 = {
 					add_heir_personality = elephant_shifter_personality
 				}
 			}
-			prestige = -20 
+			add_prestige = -20 
 			change_estate_land_share = {
 				estate = estate_nobles
-				share = 10.0
+				share = -10.0
 			}
 			add_estate_loyalty = {
 				estate = estate_nobles
@@ -357,8 +381,108 @@ column_3 = {
 				}
 			}
 		} 
-
-		effect = { } 
+		
+		effect = {
+			if = {
+				limit = { exists = S33}
+				S33 = {
+					if = {
+						limit =  { is_subject = yes}
+						add_country_modifier = {
+							name = S53_leopards_promise
+							duration = 18250
+						}
+					}
+				}
+			} 
+			if = {
+				limit = { exists = S11}
+				S11 = {
+					if = {
+						limit =  { is_subject = yes}
+						add_country_modifier = {
+							name = S53_leopards_promise
+							duration = 18250
+						}
+					}
+				}
+			} 
+			if = {
+				limit = { exists = S39}
+				S39 = {
+					if = {
+						limit =  { is_subject = yes}
+						add_country_modifier = {
+							name = S53_leopards_promise
+							duration = 18250
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = L82}
+				L82 = {
+					if = {
+						limit =  { is_subject = yes}
+						add_country_modifier = {
+							name = S53_leopards_promise
+							duration = 18250
+						}
+					}
+				}
+			} 
+			if = {
+				limit = { exists = S12}
+				S12 = {
+					if = {
+						limit =  { is_subject = yes}
+						add_country_modifier = {
+							name = S53_leopards_promise
+							duration = 18250
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = S38}
+				S38 = {
+					if = {
+						limit =  { is_subject = yes}
+						add_country_modifier = {
+							name = S53_leopards_promise
+							duration = 18250
+						}
+					}
+				}
+			} 
+			if = {
+				limit = { exists = S42 }
+				S42 = {
+					if = {
+						limit =  { is_subject = yes}
+						add_country_modifier = {
+							name = S53_leopards_promise
+							duration = 18250
+						}
+					}
+				}
+			}
+			add_casus_belli = {
+				target = S83
+				type = cb_liberation
+				months = 600
+			}
+			add_casus_belli = {
+				target = S43
+				type = cb_liberation
+				months = 600
+			}
+			add_casus_belli = {
+				target = S34
+				type = cb_liberation
+				months = 600
+			}   
+		}
 	}
 
 	a_fairer_sex_S53 = {
@@ -479,7 +603,7 @@ column_4 = {
 			add_church_power = -100
 			change_estate_land_share = {
 				estate = estate_church
-				share = 10
+				share = -10
 			}
 			add_estate_loyalty = {
 				estate = estate_church
@@ -609,8 +733,8 @@ column_5 = {
 		effect = {
 			create_alliance = L55
 			create_alliance = S23
-			generic_increase_of_racial_tolerance_effect = { race = harpy large = yes }
-			generic_increase_of_racial_tolerance_effect = { race = gnollish large = yes }
+			generic_increase_of_racial_tolerance_effect = { race = harpy largest = yes }
+			generic_increase_of_racial_tolerance_effect = { race = gnollish largest = yes }
 			add_country_modifier = {
 				name = S53_friends_in_high_places
 				duration = 3650
@@ -625,7 +749,10 @@ column_5 = {
 				6666 = {
 					add_gnollish_minority_size_effect = yes
 				}
-				add_historical_friend = S23"
+				add_historical_friend = S23
+				S23 = {
+					add_historical_friend = S53
+				}"
 				second_custom_tooltip = S53_help_from_friends_harpy
 				second_limit = "
 				S53 = { 
@@ -635,7 +762,10 @@ column_5 = {
 				6666 = {
 					add_harpy_minority_size_effect = yes
 				}
-				add_historical_friend = L55" 		
+				add_historical_friend = L55
+				L55 = {
+					add_historical_friend = S53
+				}" 		
 			}
 		} 
 	}

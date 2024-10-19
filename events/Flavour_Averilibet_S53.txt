@@ -937,3 +937,16 @@ country_event = {
 	}
 }
 
+#children of beast religious action
+country_event = {
+	id = flavor_averilibet.5
+	title = flavor_averilibet.5.t
+	desc = flavor_averilibet.5.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_averilibet.5.a
+		
+	}
+}

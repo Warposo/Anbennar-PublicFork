@@ -365,3 +365,31 @@ naleni_fair_winds_aspect = {
 		}
 	}
 }
+
+#averilibet 
+S53_children_of_beasts_relg_power = {
+	sprite = "GFX_sky_domain_riyitewag_sins"
+	cost = 200
+
+	potential = {
+		Or = { 
+			ROOT = {
+				has_country_flag = S53_children_of_beasts_unlock
+			}
+			overlord = {
+				has_country_flag = S53_children_of_beasts_unlock_subjects
+				has_country_flag = S53_children_of_beasts_unlock
+			}
+		}
+	}
+
+	trigger = {
+		NOT = { has_country_modifier = S53_children_of_beasts_roads_and_waterways }	
+	}
+
+	effect = {
+		country_event = {
+			id = flavor_averilibet.5
+		}
+	}
+}

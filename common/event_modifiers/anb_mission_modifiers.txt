@@ -31501,7 +31501,7 @@ S53_husband_land_force = {
 
 #temp sub mods
 S53_leopards_promise = {
-	reduced_liberty_desire = -75
+	liberty_desire = 75
 }
 
 #perm sub mods
