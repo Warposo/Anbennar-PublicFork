@@ -684,6 +684,10 @@ estate_nobles = {
 		estate_nobility_covenblad_burning_sword
 		estate_nobility_covenblad_silver_reliquary
 		estate_nobility_covenblad_broken_chain
+		#Averilibet
+		estate_nobility_S53_tanizu_tradition_blood
+		estate_nobility_S53_tanizu_tradition_water
+		estate_nobility_S53_tanizu_tradition_covenant
 	}
 
 	agendas = {
