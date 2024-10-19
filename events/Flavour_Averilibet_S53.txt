@@ -945,8 +945,43 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		add_country_modifier = {
+			name = S53_children_of_beasts_roads_and_waterways
+			duration = 3650
+		}
+	}
+
 	option = {
 		name = flavor_averilibet.5.a
-		
+		random_owned_area = {
+			limit = { is_core = ROOT }
+			add_province_modifier = {
+				name = S53_children_of_beasts_roads_and_waterways
+				duration = 1825
+			}
+		}
+	}
+
+	option = {
+		name = flavor_averilibet.5.a
+		random_owned_area = {
+			limit = { is_core = ROOT }
+			add_province_modifier = {
+				name = S53_children_of_beasts_roads_and_waterways
+				duration = 1825
+			}
+		}
+	}
+
+	option = {
+		name = flavor_averilibet.5.a
+		random_owned_area = {
+			limit = { is_core = ROOT }
+			add_province_modifier = {
+				name = S53_children_of_beasts_roads_and_waterways
+				duration = 1825
+			}
+		}
 	}
 }

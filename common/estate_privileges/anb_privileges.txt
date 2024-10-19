@@ -14342,3 +14342,98 @@ estate_mages_warlock_pact_night_coven = {
 		}
 	}
 }
+
+#averilibet 
+estate_nobility_S53_tanizu_tradition_blood = {
+	icon = privilege_mayan_crown
+	influence = 0.10 
+	is_valid = {
+		tag = S53
+		was_tag = S53
+		NOT = {
+			OR = {
+				has_estate_privilege = estate_nobility_S53_tanizu_tradition_water
+				has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant 
+			}
+		}
+	}
+
+	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood }
+	can_select = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood }
+	can_revoke = { always = no }
+
+	penalties = {
+		years_of_nationalism = 5
+		church_loyalty_modifier = -0.1
+	}
+
+	benefits = {
+		global_spy_defence = 0.15
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}
+
+estate_nobility_S53_tanizu_tradition_water = {
+	icon = privilege_mayan_crown
+	influence = 0.05 
+	is_valid = {
+		tag = S53
+		was_tag = S53
+		NOT = {
+			OR = {
+				has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
+				has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant 
+			}
+		}
+	}
+
+	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_water }
+	can_select = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_water }
+	can_revoke = { always = no }
+
+	penalties = {
+		years_of_nationalism = 2.5
+	}
+
+	benefits = {
+		global_spy_defence = 0.10
+		infantry_power = 0.025
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}
+
+estate_nobility_S53_tanizu_tradition_covenant = {
+	icon = privilege_mayan_crown
+	loyalty = 0.05
+	is_valid = {
+		tag = S53
+		was_tag = S53
+		NOT = {
+			OR = {
+				has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
+				has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant 
+			}
+		}
+	}
+
+	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant }
+	can_select = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant }
+	can_revoke = { always = no }
+
+	penalties = {
+		
+	}
+
+	benefits = {
+		global_spy_defence = 0.10
+		infantry_power = 0.05
+		church_loyalty_modifier = 0.05
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}

@@ -13422,10 +13422,6 @@ ngwenamasonamingo = {
 	maintain_dynasty = yes
 
 	potential = {
-		OR = {
-			was_tag = S53
-			tag = S53
-		}
 		is_revolutionary = no
 	}
 

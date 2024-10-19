@@ -700,6 +700,10 @@ estate_nobles = {
 		estate_nobility_covenblad_broken_chain
 
 		estate_nobility_nzeri_standard_bearers #duwarkani
+		#Averilibet
+		estate_nobility_S53_tanizu_tradition_blood
+		estate_nobility_S53_tanizu_tradition_water
+		estate_nobility_S53_tanizu_tradition_covenant
 	}
 
 	agendas = {
