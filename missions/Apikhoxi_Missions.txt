@@ -12,6 +12,8 @@ apikhoxi_1 = {
         position = 1
         trigger = {
 			mil_power = 50
+			has_mil_advisor = yes
+			army_size_percentage = 0.8
         }
         effect = {
             add_army_tradition = 0.2
@@ -21,9 +23,19 @@ apikhoxi_1 = {
     apikhoxi_better_a_warrior = {
 		icon = mission_build_up_to_force_limit
         position = 2
-        required_missions = { apikhoxi_show_of_force }
+        required_missions = { 
+            apikhoxi_show_of_force 
+        }
         trigger = {
-            army_professionalism = 0.5
+            OR = {
+                army_professionalism = 0.5
+                army_tradition = 0.25
+            }
+            manpower_percentage = 0.5
+            2680 = {
+
+            }
+			has_estate_privilege = estate_nobles_levies
         }
         effect = {
 			G57 = {
@@ -72,9 +84,26 @@ apikhoxi_2 = {
     apikhoxi_calm_and_reasonable_discussion = {
         icon = "mission_trade"
         position = 2
-        required_missions = { apikhoxi_show_of_force }
+        required_missions = { 
+            apikhoxi_show_of_force
+            apikhoxi_chains_for_grains
+        }
         trigger = {
-            control_trade_node = "YOUR_TRADE_NODE"
+            OR = {
+                OR = {
+                    advisor = statesman
+                    advisor = diplomat
+                }
+                monthly_dip = 5
+                any_owned_province = {
+                    trade_goods = grain
+                    base_production = 5
+                }
+                any_owned_province = {
+                    trade_goods = livestock
+                    base_production = 5
+                }
+            }
         }
         effect = {
             add_dip_power = 100
@@ -112,7 +141,9 @@ apikhoxi_2 = {
     apikhoxi_little_league = {
         icon = "mission_fish"
         position = 5
-        required_missions = { ride_the_river_road }
+        required_missions = { 
+            apikhoxi_share_the_bounty_of_freedom
+        }
         trigger = {
             province_has_resource = fish
         }
@@ -135,7 +166,9 @@ apikhoxi_3 = {
         icon = "mission_development"
         position = 1
         trigger = {
-            province_development = 30
+			treasury = 125
+			stability = 2
+            
         }
         effect = {
             add_province_development = 3
@@ -147,10 +180,23 @@ apikhoxi_3 = {
         position = 2
         required_missions = { apikhoxi_chains_for_grains }
         trigger = {
-            has_university = yes
+            any_neighbor_country = {
+                primary_culture = mteibhar
+                has_opinion = {
+                    who = ROOT
+                    value = 50
+                }
+                NOT = { war_with = ROOT }
+            }
         }
         effect = {
-            add_admin_tech_cost_modifier = -0.05
+			define_advisor = {
+				type = diplomat
+				skill = 2
+				discount = yes
+				culture = mteibhar
+				religion = ROOT
+			}
         }
     }
 
@@ -297,11 +343,7 @@ apikhoxi_5 = {
     apikhoxi_fertile_minds = {
         icon = "mission_field"
         position = 2
-        required_missions = { 
-            apikhoxi_chains_for_grains
-            apikhoxi_widen_the_door
-            apikhoxi_fertile_earth 
-        }
+        required_missions = { apikhoxi_fertile_earth }
         trigger = {
             own_province_with_fort = yes
         }
@@ -313,9 +355,7 @@ apikhoxi_5 = {
     apikhoxi_fertile_fields = {
         icon = "mission_feast"
         position = 3
-        required_missions = {
-            apikhoxi_fertile_minds 
-        }
+        required_missions = { apikhoxi_fertile_minds }
         trigger = {
             own_province_with_high_religious_unity = yes
         }
@@ -328,10 +368,7 @@ apikhoxi_5 = {
     apikhoxi_fertile_waters = {
         icon = "mission_feast"
         position = 4
-        required_missions = {
-            apikhoxi_fertile_fields
-            apikhoxi_livestock_of_the_sea
-        }
+        required_missions = { apikhoxi_fertile_fields }
         trigger = {
             own_province_with_high_religious_unity = yes
         }
@@ -344,10 +381,7 @@ apikhoxi_5 = {
     apikhoxi_spring_of_a_new_people = {
         icon = "mission_feast"
         position = 5
-        required_missions = {
-            apikhoxi_specialty_farms
-            apikhoxi_fertile_waters
-        }
+        required_missions = { apikhoxi_fertile_waters }
         trigger = {
             own_province_with_high_religious_unity = yes
         }
@@ -360,13 +394,7 @@ apikhoxi_5 = {
     apikhoxi_feast_of_the_devand = {
         icon = "mission_feast"
         position = 6
-        required_missions = {
-            apikhoxi_brothers_in_exile
-            apikhoxi_little_league
-            apikhoxi_sweet_deal
-            apikhoxi_no_slaves_among_us
-            apikhoxi_spring_of_a_new_people
-        }
+        required_missions = { apikhoxi_spring_of_a_new_people }
         trigger = {
             own_province_with_high_religious_unity = yes
         }
