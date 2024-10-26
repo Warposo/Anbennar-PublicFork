@@ -3226,7 +3226,9 @@ on_diplomatic_annex = {
 
 # country
 on_heir_death = {
-	events = {}
+	events = {
+		flavor_duwarkani.4 #Duwarkani failsafe for if starting heir dies
+	}
 	if = { #Delayed because elective heirs doesn't show up immediatly
 		limit = { has_reform = magisterium_reform }
 		country_event = { id = flavor_magisterium.23 days = 3 } #Mage for Non-Vinerick heir
@@ -11326,6 +11328,57 @@ on_province_owner_change = {
 			duration = -1
 		}
 	}
+
+	#Stalbor
+	if = {
+		limit = { owner = { has_country_flag = B47_castonath_patricians_neglected } }
+		trigger_switch = {
+			on_trigger = province_id
+			831 = {
+				add_devastation = 30
+				add_random_development = -2
+				add_province_modifier = {
+					name = B47_castonath_neglected
+					duration = -1
+				}
+				800 = {
+					add_random_development = 1
+				}
+				808 = {
+					add_random_development = 1
+				}
+			}
+			832 = {
+				add_devastation = 30
+				add_random_development = -2
+				add_province_modifier = {
+					name = B47_castonath_neglected
+					duration = -1
+				}
+				800 = {
+					add_random_development = 1
+				}
+				808 = {
+					add_random_development = 1
+				}
+			}
+			833 = {
+				add_devastation = 30
+				add_random_development = -2
+				add_province_modifier = {
+					name = B47_castonath_neglected
+					duration = -1
+				}
+				800 = {
+					add_random_development = 1
+				}
+				808 = {
+					add_random_development = 1
+				}
+			}
+		}
+	}
+
 }
 
 # country 1.35
@@ -12998,6 +13051,19 @@ on_dependency_lost = {
 			NOT = { num_of_subjects = 1 }
 		}
 		remove_country_modifier = avhavubhiya_puppet_master
+	}
+	
+	if = { #Brambleskinner vassal stuff
+		limit = {
+			ROOT = { has_country_modifier = brambleskinner_minting_grant_1 }
+			FROM = { tag = I37 }
+		}
+		I37 = { remove_country_modifier = brambleskinner_minting_debuff }
+		remove_country_modifier = brambleskinner_minting_grant_1
+		add_country_modifier = { 
+			name = brambleskinner_minting_grant_2
+			duration = -1
+		}
 	}
 }
 
@@ -15245,6 +15311,20 @@ on_expanded_infrastructure = {
 		F23_apply_improved_trading_post = yes
 	}
 	owner = { accretive_path_generic_chi_stacking_effect = { amount = 40 } }
+	if = {
+		limit = {
+			FROM = {
+				AND = {
+					has_reform = book_of_stone
+					NOT = {
+						has_country_flag = arturo_meny_open
+					}
+				}
+			}
+			has_province_modifier = arturos_watch_chapter
+		}
+		province_event = { id = flavor_stalbor.2 }
+	}
 }
 
 #ROOT = province that was centralized in

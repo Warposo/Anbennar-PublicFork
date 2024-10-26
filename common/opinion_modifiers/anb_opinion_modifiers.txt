@@ -2677,3 +2677,13 @@ S53_more_enlightened_ruler ={
 	opinion = 100
 	yearly_decay = -5
 }
+
+B47_elven_diplomat = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+B47_vampire_hunter_overreach = {
+	opinion = -100
+	yearly_decay = 2
+}
