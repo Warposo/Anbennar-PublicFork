@@ -31031,3 +31031,11 @@ S53_mezhinda_games_nat_tristrias = {
 	global_unrest = -0.25
 }
 
+S53_marriage_of_many_cooldown = {
+} #dummy modifer
+#dummy modifiers to make missions work
+S53_histo_pu = {
+}
+
+S53_naleni_pu = {
+}

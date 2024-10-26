@@ -946,42 +946,246 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = S53_children_of_beasts_roads_and_waterways
+				duration = 3650
+			}
+			random_owned_area = {
+				limit = { is_core = ROOT }
+				set_province_flag = S53_children_of_beasts_fields_and_farmers_1st_flag
+			}
+			random_owned_area = {
+				limit = { is_core = ROOT }
+				set_province_flag = S53_children_of_beasts_fields_and_farmers_2nd_flag
+			}
+			random_owned_area = {
+				limit = { is_core = ROOT }
+				set_province_flag = S53_children_of_beasts_fields_and_farmers_3rd_flag
+			}
+		}
+	}
+
+	option = {
+		name = flavor_averilibet.5.a
+		every_owned_province = {
+			limit = {
+				has_province_flag = S53_children_of_beasts_fields_and_farmers_1st_flag
+			}
+			add_province_modifier = {
+				name = S53_children_of_beasts_fields_and_farmers
+				duration = 1825
+			}
+		} 	
+	}
+
+	option = {
+		name = flavor_averilibet.5.a
+		every_owned_province = {
+			limit = {
+				has_province_flag = S53_children_of_beasts_fields_and_farmers_2nd_flag
+			}
+			add_province_modifier = {
+				name = S53_children_of_beasts_fields_and_farmers
+				duration = 1825
+			}
+		} 	
+	}
+
+	option = {
+		name = flavor_averilibet.5.a
+		every_owned_province = {
+			limit = {
+				has_province_flag = S53_children_of_beasts_fields_and_farmers_3rd_flag
+			}
+			add_province_modifier = {
+				name = S53_children_of_beasts_fields_and_farmers
+				duration = 1825
+			}
+		} 	
+	}
+
+	after = {
+		every_owned_province = {
+			clr_province_flag = S53_children_of_beasts_fields_and_farmers_1st_flag
+			clr_province_flag = S53_children_of_beasts_fields_and_farmers_2nd_flag
+			clr_province_flag = S53_children_of_beasts_fields_and_farmers_3rd_flag
+		}
+	}
+}
+
+#start event - in tall grass
+country_event = { 
+	id = flavor_averilibet.6
+	title = flavor_averilibet.6.t
+	desc = flavor_averilibet.6.desc
+	picture = NYAU_RITUAL_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = S53
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
+			set_country_flag = S53_battles_won_against_trolls	
+		}
+	}
+
+	option = {
+		name = flavor_averilibet.6.a
+		S54 = {
+			every_owned_province = {
+				add_permanent_claim = S53
+			}
+		} 
+	}
+}
+
+#marriage of many "chain"
+#start evnet given to user of country
+country_event = {
+	id = flavor_averilibet.7
+	title = flavor_averilibet.7.t
+	desc = flavor_averilibet.7.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+	}
+
+	option = {
+		name = flavor_averilibet.7.a
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					government = monarchy
+					NOT = { total_development = ROOT }
+					trust = {
+						who = ROOT
+						value = 70
+					}
+					is_subject = no
+				}
+				country_event = {
+					id = flavor_averilibet.8
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+#reciver reject or deny, ai will always accept as the "requiremnts" are in the relgious action
+country_event = {
+	id = flavor_averilibet.8
+	title = flavor_averilibet.8.t
+	desc = flavor_averilibet.8.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+	}
+
+	option = {
+		name = flavor_averilibet.8.a
+		ai_chance = { factor = 1000 }
 		add_country_modifier = {
-			name = S53_children_of_beasts_roads_and_waterways
-			duration = 3650
+			name = S53_marriage_of_many_the_wedding_of_a_lifetime
+			duration = 1825 
 		}
-	}
-
-	option = {
-		name = flavor_averilibet.5.a
-		random_owned_area = {
-			limit = { is_core = ROOT }
-			add_province_modifier = {
-				name = S53_children_of_beasts_roads_and_waterways
-				duration = 1825
+		set_ruler_flag = S53_marriage_of_many_target_flag
+		every_known_country = {
+			limit = {
+				has_country_flag = S53_marriage_of_many_unlock_flag	
+			}
+			country_event = {
+				id = flavor_averilibet.9
+				days = 1
 			}
 		}
 	}
 
 	option = {
-		name = flavor_averilibet.5.a
-		random_owned_area = {
-			limit = { is_core = ROOT }
-			add_province_modifier = {
-				name = S53_children_of_beasts_roads_and_waterways
-				duration = 1825
+		name = flavor_averilibet.8.b
+	}
+}
+
+#acctual wedding 
+country_event = {
+	id = flavor_averilibet.9
+	title = flavor_averilibet.9.t
+	desc = flavor_averilibet.9.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_averilibet.9.a
+		if = {
+			limit = {
+				any_known_country = {
+					has_ruler_flag = S53_marriage_of_many_target_flag
+				} 
+			}
+			create_marriage = prev
+		}
+		add_country_modifier = {
+			name = S53_marriage_of_many_the_wedding_of_a_lifetime
+			duration = 1825 
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = S53_marriage_of_many_cooldown
+				duration = 7300
+				hidden = yes
 			}
 		}
 	}
+}
+
+#if a subject is using it 
+country_event = {
+	id = flavor_averilibet.10
+	title = flavor_averilibet.10.t
+	desc = flavor_averilibet.10.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes
 
 	option = {
-		name = flavor_averilibet.5.a
-		random_owned_area = {
-			limit = { is_core = ROOT }
-			add_province_modifier = {
-				name = S53_children_of_beasts_roads_and_waterways
+		name = flavor_averilibet.10.a
+		hidden_effect = {
+			add_country_modifier = {
+				name = S53_marriage_of_many_cooldown
+				duration = 7300
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = S53_marriage_of_many_the_wedding_of_a_lifetime
+			duration = 1825 
+		}
+		random_known_country = {
+			limit = {
+				government = monarchy
+				NOT = { total_development = ROOT }
+				trust = {
+					who = ROOT
+					value = 70
+				}
+				is_subject = no
+			}
+			add_country_modifier = {
+				name = S53_marriage_of_many_the_wedding_of_a_lifetime
 				duration = 1825
 			}
 		}
+		
 	}
 }

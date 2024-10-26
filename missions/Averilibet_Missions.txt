@@ -116,9 +116,33 @@ column_1 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			owns_all_provinces = {
+				area = kidfan_area
+				area = kadamuu_area
+				area = kirksanlashan_area
+			}
+			5600 = {
+				is_core = ROOT
+				has_building = barracks
+				num_of_times_expanded_infrastructure = 1
+			}
+		  } 
 
-		effect = {  } 
+		effect = {
+			set_country_flag = S53_rhada_lifters_flag  
+			5600 = {
+				add_lizardfolk_minority_size_effect = yes
+				add_province_modifier = {
+					name = S53_setinda_games
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = S53_setinda_games_nat_yikikakeli
+				duration = -1
+			}
+		} 
 	}
 
 	up_the_ante_S53 = {
@@ -127,9 +151,72 @@ column_1 = {
 		required_missions = { watery_detour_S53 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				check_variable = {
+					which = kulugiashBattlesWon
+					value = 5
+				}
+				NOT = { S70 = { exists = yes} }	
+			}  
+			check_variable = {
+				which = kulugiashBattlesWon
+				value = 5
+			}
+			6666 = {
+				ROOT = {
+					num_of_mercenaries = 1
+				}
+				development = 25 	
+			}
+			5600 = {
+				ROOT = {
+					num_of_mercenaries = 1
+				}
+				num_of_buildings_in_province = 4
+			}
 
-		effect = {  } 
+		} 
+
+		effect = {  
+			6666 = {
+				add_lizardfolk_minority_size_effect = yes
+				add_province_modifier = {
+					name = S53_imbitinda_games
+					duration = -1
+				}
+				hidden_effect = {
+					remove_province_modifier = S53_setinda_games
+				}
+			}
+			5600 = {
+				add_province_modifier = {
+					name = S53_imbitinda_games
+					duration = -1
+				}
+				hidden_effect = {
+					remove_province_modifier = S53_setinda_games
+				}
+			}
+			add_country_modifier = {
+				name = S53_imbitinda_games_nat_averilibet
+				duration = -1
+			}
+			add_country_modifier = {
+				name = S53_imbitinda_games_nat_yikikakeli
+				duration = -1
+			}
+			hidden_effect = {
+				remove_country_modifier = S53_setinda_games_nat_averilibet
+				remove_country_modifier = S53_setinda_games_nat_yikikakeli
+			}
+			pechuketema_area = {
+				add_permanent_claim = ROOT
+			}
+			merekawi_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 }
 column_2 = {
@@ -254,11 +341,58 @@ column_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
-
-		effect = {  } 
+		trigger = { 
+			calc_true_if = {
+				any_known_country = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					is_subject = no
+					guaranteed_by = ROOT
+					alliance_with = ROOT
+					has_country_modifier = S53_leopards_promise
+					trust = {
+						who = ROOT
+						value = 55
+					}
+				}
+				amount = 4
+			}
+		} 
+		
+		effect = {
+			every_known_country = {
+				limit = {	
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					OR = {
+						has_country_modifier = S53_leopards_promise
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = released_in_peace
+						}
+					}
+					is_subject = no
+					guaranteed_by = ROOT
+					alliance_with = ROOT
+					trust = {
+						who = ROOT
+						value = 55
+					}
+				}
+				hidden_effect = {
+					remove_country_modifier = S53_leopards_promise
+				}
+				ROOT = {
+					create_union = PREV
+				}
+			}
+		}
 	}
-
+	 
 	heros_and_husbands_S53 = {
 		icon = mission_invade_kanem
 		position = 6
@@ -268,9 +402,35 @@ column_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_generals = 4
+			estate_territory = {
+				estate = estate_adventurers
+				territory = 10
+			}
+			OR = {
+				has_country_modifier = S53_administrative_husband_lvl2
+				has_country_modifier = S53_diplomatic_husband_lvl2
+				has_country_modifier = S53_military_husband_lvl2
+				has_country_modifier = S53_administrative_husband_lvl3
+				has_country_modifier = S53_diplomatic_husband_lvl3
+				has_country_modifier = S53_military_husband_lvl3
+			}
+			OR = {
+				has_country_modifier = S53_marriage_of_many_cooldown
+				has_country_modifier = S53_marriage_of_many_the_wedding_of_a_lifetime
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			set_country_flag = S53_husbands_in_the_army_flag
+			define_general = {
+				shock = 4
+				fire = 6
+				manuever = 3
+				siege = 3
+			}
+		} 
 	}
 
 	jumping_beasts_S53 = {
@@ -321,7 +481,13 @@ column_3 = {
 				employed_advisor = {
 					type = diplomat
 				}
-				num_of_generals = 1
+				has_leaders = {
+					value = 1
+					type = general
+					include_heir = no
+					include_monarch = no 
+				}
+				
 			}
 			stability = 1
 			estate_loyalty = {
@@ -355,133 +521,62 @@ column_3 = {
 				node = 1339
 				policy = hostile_trading
 			}
-			any_known_country = {
-				OR = {
-					overlord_of = S33
-					overlord_of = S11
-					overlord_of = S39
-					overlord_of = L82
-					overlord_of = S12
-					overlord_of = S38
-					overlord_of = S42
+			calc_true_if = {
+				any_known_country = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					is_subject = yes
+					has_opinion_modifier = {
+						who = from
+						modifier = sent_gift
+					}
+					overlord = {
+						NOT = {
+							army_size = from
+						}
+					}
+					
 				}
-				NOT = {
-					army_size = from
-				}
-			}
-			any_known_country = {
-				OR = {
-					is_subject_of = S83 
-					is_subject_of = S43
-					is_subject_of = S34
-				}
-				has_opinion_modifier = {
-					who = from
-					modifier = sent_gift
-				}
+				amount = 1
 			}
 		} 
 		
 		effect = {
-			if = {
-				limit = { exists = S33}
-				S33 = {
-					if = {
-						limit =  { is_subject = yes}
-						add_country_modifier = {
-							name = S53_leopards_promise
-							duration = 18250
+			every_known_country = {
+				limit = {	
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					is_subject = yes
+				}
+				add_country_modifier = {
+					name = S53_leopards_promise
+					duration = 18250
+				}
+			}
+			set_country_flag = S53_liberation_non_GP_flag
+			every_known_country = {
+				limit = {
+					has_subject_of_type = vassal
+					any_subject_country = {
+						OR = {
+							culture = tanizu
+							culture = cyazizeta_lizardfolk
 						}
 					}
 				}
-			} 
-			if = {
-				limit = { exists = S11}
-				S11 = {
-					if = {
-						limit =  { is_subject = yes}
-						add_country_modifier = {
-							name = S53_leopards_promise
-							duration = 18250
-						}
-					}
-				}
-			} 
-			if = {
-				limit = { exists = S39}
-				S39 = {
-					if = {
-						limit =  { is_subject = yes}
-						add_country_modifier = {
-							name = S53_leopards_promise
-							duration = 18250
-						}
+				set_country_flag = S53_liberation_target_flag
+				ROOT = {
+					add_casus_belli = {
+						type = cb_liberation
+						target = PREV
+						months = 600 
 					}
 				}
 			}
-			if = {
-				limit = { exists = L82}
-				L82 = {
-					if = {
-						limit =  { is_subject = yes}
-						add_country_modifier = {
-							name = S53_leopards_promise
-							duration = 18250
-						}
-					}
-				}
-			} 
-			if = {
-				limit = { exists = S12}
-				S12 = {
-					if = {
-						limit =  { is_subject = yes}
-						add_country_modifier = {
-							name = S53_leopards_promise
-							duration = 18250
-						}
-					}
-				}
-			}
-			if = {
-				limit = { exists = S38}
-				S38 = {
-					if = {
-						limit =  { is_subject = yes}
-						add_country_modifier = {
-							name = S53_leopards_promise
-							duration = 18250
-						}
-					}
-				}
-			} 
-			if = {
-				limit = { exists = S42 }
-				S42 = {
-					if = {
-						limit =  { is_subject = yes}
-						add_country_modifier = {
-							name = S53_leopards_promise
-							duration = 18250
-						}
-					}
-				}
-			}
-			add_casus_belli = {
-				target = S83
-				type = cb_liberation
-				months = 600
-			}
-			add_casus_belli = {
-				target = S43
-				type = cb_liberation
-				months = 600
-			}
-			add_casus_belli = {
-				target = S34
-				type = cb_liberation
-				months = 600
-			}   
 		}
 	}
 
@@ -495,9 +590,79 @@ column_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			government_reform_progress = 100
+			legitimacy = 95
+			OR = {
+				is_female = yes
+				AND = {
+					adm_power = 50
+					dip_power = 50
+					mil_power = 50
+				}
+			}
+			has_consort = yes
+			num_of_generals = 2 
+			cathedral = 3
+			OR = {
+				fort_15th = 3
+				fort_16th = 3
+				fort_17th = 3
+				fort_18th = 3
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			if = {
+				limit = { NOT = { is_female = yes }}
+				add_adm_power = -50
+				add_dip_power = -50
+				add_mil_power = -50
+			}
+			add_government_reform = ngwenamasonamingo
+			set_estate_privilege = estate_nobility_S53_tanizu_tradition_water
+			hidden_effect = {
+				remove_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
+				random_list = {
+					34 = {
+						add_country_modifier = {
+							name = S53_military_husband_lvl1
+							duration = -1
+						}
+					}
+					33 = {
+						add_country_modifier = {
+							name = S53_administrative_husband_lvl1
+							duration = -1
+						}
+					}
+					33 = {
+						add_country_modifier = {
+							name = S53_diplomatic_husband_lvl1
+							duration = -1
+						}
+					}
+				}
+				country_event = {
+					id = flavor_averilibet.3
+				}
+			}
+			if = {
+				limit = { overlord_of = S23 }
+				add_opinion = {
+					who = S23
+					modifier = S53_more_enlightened_ruler
+				}
+			}
+			if = {
+				limit = { overlord_of = L55 }
+				add_opinion = {
+					who = L55
+					modifier = S53_more_enlightened_ruler
+				}
+			}
+			change_government_reform_progress = -100	
+		} 
 	}
 
 	more_the_marryier_S53 = {
@@ -510,9 +675,40 @@ column_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			OR = {
+				has_country_modifier = S53_administrative_husband_lvl2
+				has_country_modifier = S53_diplomatic_husband_lvl2
+				has_country_modifier = S53_military_husband_lvl2
+				has_country_modifier = S53_administrative_husband_lvl3
+				has_country_modifier = S53_diplomatic_husband_lvl3
+				has_country_modifier = S53_military_husband_lvl3
+			}
+			legitimacy = 90 
+			any_known_country = {
+				OR = {
+					ruler_is_ruinborn = yes
+					ruler_is_human = yes
+					culture_group = harpy
+					culture_group = elven
+					culture_group = orcish
+				}	
+				alliance_with = ROOT 
+				NOT = { total_development = ROOT }
+				trust = {
+					who = ROOT
+					value = 70
+				}
+				government = monarchy 
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			country_event = {
+				id = flavor_averilibet.7
+			}
+			set_country_flag = S53_marriage_of_many_unlock_flag
+		} 
 	}
 
 	middling_migration_S53 = {
@@ -618,7 +814,39 @@ column_4 = {
 		required_missions = { some_progress_S53 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			has_spy_network_in = {
+				who = S23 
+				value = 25 
+			}
+			has_spy_network_in = {
+				who = L55  
+				value = 25 
+			}
+			alliance_with = L55
+			alliance_with = S23
+			OR = {
+				any_known_country = {
+					tag = L55
+					capital = {
+						AND = {
+							units_in_province = 10
+							units_in_province = ROOT
+						}
+					}
+				}
+				any_known_country = {
+					tag = S23
+					capital = {
+						AND = {
+							units_in_province = 10
+							units_in_province = ROOT
+						}
+					}
+				}
+			}
+			
+		} 
 
 		effect = {  } 
 	}
@@ -633,8 +861,25 @@ column_4 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
-
+		trigger = {  
+			any_subject_country = {
+				tag = L55
+				NOT = { liberty_desire = 50 }
+				trust = {
+					who = ROOT
+					value = 95
+				}
+			}
+			any_subject_country = {
+				tag = S23
+				NOT = { liberty_desire = 50 }
+				trust = {
+					who = ROOT
+					value = 95
+				}
+			}
+		}
+			
 		effect = {  } 
 	}
 
@@ -644,9 +889,50 @@ column_4 = {
 		required_missions = { like_a_mother_S53 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			werikafan_area = {
+				is_core = ROOT
+			}
+			fetengaben_area = {
+				is_core = ROOT 
+			}
+			5538 = {
+				NOT = { unrest = 1 }
+				infantry_in_province = S53
+				infantry_in_province = 10
+			}
+			6638 = {
+				NOT = { unrest = 1 }
+				infantry_in_province = S53
+				infantry_in_province = 10
+			}
+			treasury = 500
+		} 
 
-		effect = {  } 
+		effect = { 
+			5538 = {
+				change_trade_goods = grain
+				add_base_tax = 1 
+				add_base_manpower = 1
+				add_base_production = 1
+				add_building_construction = {
+					building = farm_estate
+    				speed = 1
+    				cost = 0.5
+				}
+			}
+			6638 = {
+				change_trade_goods = grain
+				add_base_tax = 1 
+				add_base_manpower = 1
+				add_base_production = 1
+				add_building_construction = {
+					building = farm_estate
+    				speed = 1
+    				cost = 0.5
+				}
+			}
+		} 
 	}
 
 	a_procession_of_beasts_S53 = {
@@ -779,11 +1065,34 @@ column_5 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {
-			
+		trigger = {  
+			4963 = {
+				owner = {
+					NOT = { dip_tech = ROOT }
+				}
+			}
+			employed_advisor = {
+				category = DIP
+			} 
+			is_in_deficit = no 
+			trading_policy_in_node = {
+				node = 1366
+				policy = establish_communities
+			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			lupulan_rainforest_region = {
+				discover_country = root
+			}
+			thidinkai_region = {
+				discover_country = root
+			}
+			add_country_modifier = {
+				name = S53_when_in_arawkelin
+				duration = 5475
+			}
+		} 
 	}
 
 	like_a_matriarch_S53 = {
@@ -795,9 +1104,60 @@ column_5 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			owns_all_provinces = {
+				east_sarhal_superregion = {
+					AND = {
+						culture = naleni_harpy
+						development = 10
+					}
+					type = all
+				}	
+			}
+			high_tolerance_harpy_race_trigger = yes
+		} 
 
-		effect = {  } 
+		effect = {  
+			every_core_province = {
+				limit = {
+					OR = { 
+						has_terrain = highlands
+						has_terrain = hills
+						has_terrain = mountain
+					}
+				}
+				add_harpy_minority_size_effect = yes
+			}
+			every_subject_country = {
+				every_core_province = {
+					limit = {
+						OR = { 
+							has_terrain = highlands
+							has_terrain = hills
+							has_terrain = mountain
+						}
+					}
+					add_harpy_minority_size_effect = yes
+				}
+			}
+			melakfan_area = {
+				add_harpy_minority_size_effect = yes
+				add_harpy_minority_size_effect = yes
+			}
+			add_country_modifier = {
+				name = S53_matriarchal_shipwrights
+				duration = 7300
+			}
+			yetmesira_area = {
+				add_permanent_claim = ROOT
+			}
+			pegosi_area = {
+				add_permanent_claim = ROOT
+			}
+			berihrica_area = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 
 	experts_at_this_S53 = {

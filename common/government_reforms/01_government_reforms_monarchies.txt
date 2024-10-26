@@ -13179,9 +13179,10 @@ ngwenamasonamingo = {
 
 	potential = {
 		is_revolutionary = no
+		has_country_flag = S53_leopard_queendom
 	}
 
-	valid_for_nation_designer = yes #change to no later
+	valid_for_nation_designer = no #change to no later
 	modifiers = {
 		diplomatic_upkeep = 4
 		may_recruit_female_generals = yes 
