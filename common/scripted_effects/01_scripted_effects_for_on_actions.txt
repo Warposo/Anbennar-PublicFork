@@ -10332,7 +10332,10 @@ L08_won_battle_count = {
 L08_won_war_count = {
 	if = {
 		limit = { 
-			has_country_flag = kulugiash_wars
+			OR = {
+				has_country_flag = kulugiash_wars
+				has_country_flag = S53_battles_won_against_trolls
+			}
 		}
 		change_variable = {
 			kulugiashWarsWon = 1

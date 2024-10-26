@@ -1875,6 +1875,16 @@ estate_adventurers_heroes_in_the_army = {
 			infantry_power = 0.1
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = S53_husbands_in_the_army_flag
+		}
+		modifier = {
+			yearly_army_professionalism = 0.01
+			adventurers_loyalty_modifier = 0.1
+			general_cost = 0.25
+		}
+	}
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -14345,18 +14355,8 @@ estate_mages_warlock_pact_night_coven = {
 
 #averilibet 
 estate_nobility_S53_tanizu_tradition_blood = {
-	icon = privilege_mayan_crown
+	icon = estate_nobility_privilege_mayan_crown
 	influence = 0.10 
-	is_valid = {
-		tag = S53
-		was_tag = S53
-		NOT = {
-			OR = {
-				has_estate_privilege = estate_nobility_S53_tanizu_tradition_water
-				has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant 
-			}
-		}
-	}
 
 	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood }
 	can_select = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood }
@@ -14376,19 +14376,9 @@ estate_nobility_S53_tanizu_tradition_blood = {
 }
 
 estate_nobility_S53_tanizu_tradition_water = {
-	icon = privilege_mayan_crown
+	icon = estate_nobility_privilege_mayan_crown
 	influence = 0.05 
-	is_valid = {
-		tag = S53
-		was_tag = S53
-		NOT = {
-			OR = {
-				has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
-				has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant 
-			}
-		}
-	}
-
+	
 	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_water }
 	can_select = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_water }
 	can_revoke = { always = no }
@@ -14407,19 +14397,9 @@ estate_nobility_S53_tanizu_tradition_water = {
 }
 
 estate_nobility_S53_tanizu_tradition_covenant = {
-	icon = privilege_mayan_crown
+	icon = estate_nobility_privilege_mayan_crown
 	loyalty = 0.05
-	is_valid = {
-		tag = S53
-		was_tag = S53
-		NOT = {
-			OR = {
-				has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
-				has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant 
-			}
-		}
-	}
-
+	
 	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant }
 	can_select = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant }
 	can_revoke = { always = no }

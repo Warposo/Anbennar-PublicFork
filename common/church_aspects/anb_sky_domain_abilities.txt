@@ -367,6 +367,7 @@ naleni_fair_winds_aspect = {
 }
 
 #averilibet 
+#averilibet-children of beasts 
 S53_children_of_beasts_relg_power = {
 	sprite = "GFX_sky_domain_riyitewag_sins"
 	cost = 200
@@ -393,3 +394,49 @@ S53_children_of_beasts_relg_power = {
 		}
 	}
 }
+
+#averilibet-marriage of many 
+S53_children_of_beasts_relg_power = {
+	sprite = "GFX_sky_domain_riyitewag_sins"
+	cost = 200
+
+	potential = {
+		Or = { 
+			ROOT = {
+				has_country_flag = S53_marriage_of_many_unlock_flag
+			}
+			overlord = {
+				has_country_flag = S53_marriage_of_many_unlock_subjects_flag
+				has_country_flag = S53_marriage_of_many_unlock_flag
+			}
+		}
+	}
+
+	trigger = {
+		any_known_country = {
+			government = monarchy
+			NOT = { total_development = ROOT }
+			trust = {
+				who = ROOT
+				value = 70
+			}
+			is_subject = no
+		}
+		NOT = { has_country_modifier = S53_marriage_of_many_cooldown }	
+	}
+
+	effect = {
+		if = {
+			limit = { ROOT = { is_subject = no } }
+			country_event = {
+				id = flavor_averilibet.7
+			}
+		}
+		else = {
+			country_event = {
+				id = flavor_averilibet.10
+			}
+		}
+	}
+}
+
