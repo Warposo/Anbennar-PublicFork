@@ -2672,6 +2672,12 @@ mb_made_mask_opinion = {
 	opinion = -200
 }
 
+#Maghargma
+I90_happy_ogre = {
+	opinion = 200
+	yearly_decay =1
+}
+
 #averilibet 
 S53_more_enlightened_ruler ={
 	opinion = 100
