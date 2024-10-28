@@ -82,6 +82,7 @@ column_1 = {
 			saposon_area = {
 				owned_by = S53
 				has_province_modifier = autonomy_increased
+				type = all
 			}
 			has_estate_privilege = estate_adventurers_sponsor_sellswords
 			num_of_mercenaries = 15
@@ -118,9 +119,11 @@ column_1 = {
 
 		trigger = {
 			owns_all_provinces = {
-				area = kidfan_area
-				area = kadamuu_area
-				area = kirksanlashan_area
+				AND = {
+					area = kidfan_area
+					area = kadamuu_area
+					area = kirksanlashan_area
+				}
 			}
 			5600 = {
 				is_core = ROOT
@@ -439,9 +442,72 @@ column_2 = {
 		required_missions = { up_the_ante_S53 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			5594 = {
+				num_of_times_expanded_infrastructure = 1
+				is_core = ROOT
+			}
+			6606 = {
+				num_of_times_expanded_infrastructure = 1
+				is_core = ROOT
+				has_great_project = {
+					type = e_arenaginku_adras
+					tier = 1
+				}
+			}
+			high_tolerance_gnollish_race_trigger = yes
+			calc_true_if = {
+				any_core_province = {
+					trade_goods = livestock
+					base_production = 5
+				}
+				amount = 5
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			set_country_flag = S53_gnoll_buffalo_jumpers_flag
+			5594 = {
+				add_province_modifier = {
+					name = S53_imbitinda_games
+					duration = -1
+				}
+				add_lizardfolk_minority_size_effect = yes
+				add_gnollish_minority_size_effect = yes
+			}
+			6606 = {
+				add_province_modifier = {
+					name = S53_imbitinda_games
+					duration = -1
+				}
+				add_lizardfolk_minority_size_effect = yes
+				add_gnollish_minority_size_effect = yes
+			}
+			6666 = {
+				add_province_modifier = {
+					name = S53_mezhinda_games
+					duration = -1
+				}
+				remove_province_modifier = S53_imbitinda_games
+				add_gnollish_minority_size_effect = yes
+			}
+			5600 = {
+				add_gnollish_minority_size_effect = yes
+			}
+			remove_country_modifier = S53_imbitinda_games_nat_averilibet
+			add_country_modifier = {
+				name = S53_mezhinda_games_nat_averilibet
+				duration = -1
+			}
+			add_country_modifier = {
+				name = S53_imbitinda_games_nat_matamot
+				duration = -1
+			}
+			add_country_modifier = {
+				name = S53_imbitinda_games_nat_tristrias
+				duration = -1
+			}
+		} 
 	}
 
 	a_national_league_S53 = {
@@ -720,10 +786,64 @@ column_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			calc_true_if = {
+				all_subject_country = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					development_in_provinces = {
+						value = 1
+					}
+				}
+				amount = 150
+			}
+			all_subject_country = {
+				OR = {
+					culture = tanizu
+					culture = cyazizeta_lizardfolk
+				}
+			}
+			south_denbari = {
+				is_core = ROOT
+				type = all
+			}
+			south_denbari = {
+				num_of_times_improved = 5
+			}
+			has_country_modifier = racial_focus_lizardfolk
+			kidfan_area = {
+				devastation = 0
+				type = all
+			}
+			kirksanlashan_area = {
+				devastation = 0
+				type = all
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			every_core_province = {
+				limit = {
+					area = kidfan_area
+					area = kirksanlashan_area
+					area = saposon_area
+					area = kadamuu_area
+					area = wezingoni_area
+					area = yezelshaff_area
+				}
+				random_list = {
+					25 = { add_base_manpower = 1 }
+					25 = { add_base_production = 1 }
+					25 = { add_base_tax = 1 }
+					25 = { add_lizardfolk_minority_size_effect = yes }
+				}
+			}	
+		}
 	}
+
+	
 
 	sheding_pains_S53 = {
 		icon = mission_hydra
@@ -828,24 +948,23 @@ column_4 = {
 			OR = {
 				any_known_country = {
 					tag = L55
-					capital = {
-						AND = {
-							units_in_province = 10
-							units_in_province = ROOT
+					capital_scope = {
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 10
 						}
 					}
-				}
+				} 
 				any_known_country = {
 					tag = S23
-					capital = {
-						AND = {
-							units_in_province = 10
-							units_in_province = ROOT
+					capital_scope = {
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 10
 						}
 					}
-				}
+				} 
 			}
-			
 		} 
 
 		effect = {  } 
@@ -892,9 +1011,11 @@ column_4 = {
 		trigger = {
 			werikafan_area = {
 				is_core = ROOT
+				type = all
 			}
 			fetengaben_area = {
 				is_core = ROOT 
+				type = all
 			}
 			5538 = {
 				NOT = { unrest = 1 }
@@ -944,9 +1065,47 @@ column_4 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			any_hired_mercenary_company = { 
+				template = merc_leopard_warband
+				location = { 
+					6666 = {
+						units_in_province = 20
+					}
+				}
+			}
+			6118 = {
+				has_great_project = {
+					type = crater_of_the_martyr
+					tier = 1
+				}
+			}
+			OR = {
+				ruler_has_personality = leopard_shifter_personality
+				ruler_has_personality = elephant_shifter_personality
+				ruler_has_personality = mongoose_shifter_personality
+				heir_has_personality = leopard_shifter_personality
+				heir_has_personality = elephant_shifter_personality
+				heir_has_personality = mongoose_shifter_personality
+				consort_has_personality = leopard_shifter_personality
+				consort_has_personality = elephant_shifter_personality
+				consort_has_personality = mongoose_shifter_personality
+			}
+			church_power = 200
+		} 
 
-		effect = {  } 
+		effect = {  
+			melakfan_area = {
+				add_province_modifier = {
+					name = S53_children_of_beasts_fields_and_farmers
+					duration = 1825
+				}
+			}
+			set_country_flag = S53_children_of_beasts_unlock
+			country_event = {
+				id = flavor_averilibet.5
+			}
+		} 
 	}
 
 	spiritual_boundaries_S53 = {
@@ -1105,15 +1264,13 @@ column_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {  
-			owns_all_provinces = {
-				east_sarhal_superregion = {
-					AND = {
-						culture = naleni_harpy
-						development = 10
-					}
-					type = all
-				}	
-			}
+			east_sarhal_superregion = {
+				AND = {
+					culture = naleni_harpy
+					development = 10
+				}
+				owned_by = ROOT
+			}		
 			high_tolerance_harpy_race_trigger = yes
 		} 
 
@@ -1166,8 +1323,69 @@ column_5 = {
 		required_missions = { like_a_matriarch_S53 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			6606 = {
+				is_core = ROOT
+			}
+			yetmesira_area = {
+				is_core = ROOT
+				type = all 
+			}
+			OR = {
+				4955 = {
+					owner = {
+						has_90_opinion_improved_relation = yes
+					}
+				}
+				Y72 = {
+					has_90_opinion_improved_relation = yes
+				}
+			}
+			6637 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+			5536 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			6606 = {
+				add_province_modifier = {
+					name = S53_emerald_celling
+					duration = 10950
+				}
+			}
+			6637 = {
+				add_province_modifier = {
+					name = S53_chien_cuts
+					duration = -1
+				}
+				add_province_modifier = {
+					name = S53_new_tricks
+					duration = 720
+				}
+			}
+			5536 = {
+				add_province_modifier = {
+					name = S53_chien_cuts
+					duration = -1
+				}
+				add_province_modifier = {
+					name = S53_new_tricks
+					duration = 720
+				}
+			}
+			add_trust = {
+				who = PREV
+				value = -10
+			}
+		} 
 	}
 }
