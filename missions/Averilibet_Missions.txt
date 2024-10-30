@@ -765,7 +765,9 @@ column_3 = {
 					who = ROOT
 					value = 70
 				}
-				government = monarchy 
+				prev = {
+					government = monarchy 
+				} 
 			}
 		} 
 
@@ -793,17 +795,13 @@ column_3 = {
 						culture = tanizu
 						culture = cyazizeta_lizardfolk
 					}
-					development_in_provinces = {
-						value = 1
+					prev = {
+						development_in_provinces = {
+							value = 1
+						}
 					}
 				}
 				amount = 150
-			}
-			all_subject_country = {
-				OR = {
-					culture = tanizu
-					culture = cyazizeta_lizardfolk
-				}
 			}
 			south_denbari = {
 				is_core = ROOT
@@ -854,9 +852,52 @@ column_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			has_country_modifier = racial_focus_lizardfolk
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_province_modifier = lizardfolk_majority_coexisting
+						has_province_modifier = lizardfolk_majority_integrated
+						has_province_modifier = lizardfolk_minority_coexisting_large
+						has_province_modifier = lizardfolk_minority_coexisting_small
+						has_province_modifier = lizardfolk_minority_integrated_large
+						has_province_modifier = lizardfolk_minority_integrated_small
+					}
+					owned_by = ROOT
+					development = 9
+				}
+				amount = 10
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = lizardfolk_majority_coexisting
+						has_province_modifier = lizardfolk_majority_integrated
+						has_province_modifier = lizardfolk_minority_coexisting_large
+						has_province_modifier = lizardfolk_minority_integrated_large
+					} 
+				}
+				add_random_development = 1
+			}  
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = lizardfolk_minority_integrated_small
+						has_province_modifier = lizardfolk_minority_coexisting_small
+					}
+				}
+				add_lizardfolk_minority_size_effect = yes
+			}
+			kidfan_area = {
+				add_lizardfolk_minority_size_effect = yes
+			}
+			add_accepted_culture = cyazizeta_lizardfolk
+			generic_increase_of_racial_tolerance_effect = { race = lizardfolk largest = yes }
+		} 
 	}
 
 	till_death_do_us_apart_S53 = {
@@ -1369,7 +1410,7 @@ column_5 = {
 				}
 				add_province_modifier = {
 					name = S53_new_tricks
-					duration = 720
+					duration = 730
 				}
 			}
 			5536 = {
@@ -1379,12 +1420,16 @@ column_5 = {
 				}
 				add_province_modifier = {
 					name = S53_new_tricks
-					duration = 720
+					duration = 730
 				}
 			}
-			add_trust = {
-				who = PREV
-				value = -10
+			4955 = {
+				owner = {
+					add_trust = {
+						who = this
+						value = -10
+					}
+				}
 			}
 		} 
 	}
