@@ -75,9 +75,12 @@ l_english:
  apikhoxi_feast_of_the_devand_desc: "TODO LOC"
 
 #missions and descriptions
-    
+
 #Modifiers
-    
+G57_recruiting_growth:0 "Raise the Phalanxes"
+G57_preparing_the_way:0 "Preparing the Way"
 #Events
 
 #Opinion Modifiers
+#flags
+apikhoxi_liberation:0 "Liberation of the East"

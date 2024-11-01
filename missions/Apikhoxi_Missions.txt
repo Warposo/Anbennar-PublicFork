@@ -16,35 +16,38 @@ apikhoxi_1 = {
 			army_size_percentage = 0.8
         }
         effect = {
-            add_army_tradition = 0.2
+           add_liberty_desire = 50
+            2680 = {
+                add_base_manpower = 1
+            }
+            add_country_modifier = {
+                name = G57_recruiting_growth
+                duration = 3650
+            }
         }
     }
 
     apikhoxi_better_a_warrior = {
 		icon = mission_build_up_to_force_limit
         position = 2
-        required_missions = { 
-            apikhoxi_show_of_force 
+        required_missions = {
+            apikhoxi_show_of_force
         }
         trigger = {
             OR = {
-                army_professionalism = 0.5
+                army_professionalism = 0.10
                 army_tradition = 0.25
             }
             manpower_percentage = 0.5
             2680 = {
-
+                num_free_building_slots = 1
+                NOT = { has_construction = building }
             }
 			has_estate_privilege = estate_nobles_levies
         }
         effect = {
-			G57 = {
-				country_event = {
-					id = flavor_apikhoxi.1
-					days = 0
-				}
-			}
-        }
+			country_event = { id = flavor_apikhoxi.1 }
+		}
     }
 
     apikhoxi_the_anger_of_a_calm_people = {
@@ -52,10 +55,20 @@ apikhoxi_1 = {
         position = 4
         required_missions = { apikhoxi_time_to_harvest }
         trigger = {
-            stability = 3
+            OR = {
+                num_of_galley = 25
+                naval_strength = {
+                    who = G62
+                    value = 1
+                }
+            }
         }
         effect = {
-            add_morale_of_armies = 0.1
+            add_casus_belli = {
+                target = G62
+                type = cb_vassalize_mission
+                months = 300
+            }
         }
     }
 
@@ -64,10 +77,16 @@ apikhoxi_1 = {
         position = 5
         required_missions = { apikhoxi_the_anger_of_a_calm_people }
         trigger = {
-            has_exiled_ruler = yes
+           government_reform_progress = 100
+           trust = { who = G54 value = 80 }
+           estate_loyalty = { estate = estate_mages loyalty = 60 }
+           has_estate_privilege = estate_mages_patronage_of_the_magical_arts
         }
         effect = {
             add_yearly_legitimacy = 1
+            G54 = {
+                country_event = { id = flavor_apikhoxi.2 }
+            }
         }
     }
 }
@@ -84,7 +103,7 @@ apikhoxi_2 = {
     apikhoxi_calm_and_reasonable_discussion = {
         icon = "mission_trade"
         position = 2
-        required_missions = { 
+        required_missions = {
             apikhoxi_show_of_force
             apikhoxi_chains_for_grains
         }
@@ -95,18 +114,18 @@ apikhoxi_2 = {
                     advisor = diplomat
                 }
                 monthly_dip = 5
-                any_owned_province = {
-                    trade_goods = grain
-                    base_production = 5
-                }
-                any_owned_province = {
-                    trade_goods = livestock
-                    base_production = 5
-                }
+            }
+            any_owned_province = {
+                trade_goods = grain
+                base_production = 5
+            }
+            any_owned_province = {
+                trade_goods = livestock
+                base_production = 5
             }
         }
         effect = {
-            add_dip_power = 100
+            country_event = { id = flavor_apikhoxi.3 }
         }
     }
     apikhoxi_time_to_harvest = {
@@ -117,10 +136,29 @@ apikhoxi_2 = {
                 apikhoxi_calm_and_reasonable_discussion
             }
         trigger = {
-            province_has_resource = grain
+            NOT = {
+                has_country_modifier = G57_preparing_the_way
+            }
+            has_opinion_modifier = {
+                who = G50
+                modifier = insulted
+            }
+            OR = {
+                war_with = G50
+                is_subject = no
+            }
         }
         effect = {
-            add_production_efficiency = 0.05
+            if = {
+                limit = {
+                    is_subject = no
+                }
+                add_prestige = 100
+                add_splendor = 20
+            }
+            else = {
+                country_event = { id = flavor_apikhoxi.4 }
+            }
         }
     }
 
@@ -131,7 +169,39 @@ apikhoxi_2 = {
             apikhoxi_time_to_harvest
         }
         trigger = {
-            controls_trade_node = yes
+            2680 = {
+               has_building = coastal_defence
+               has_building = fort_16th
+            }
+            calc_true_if = {
+				all_known_country = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+                    capital_scope = {
+                        region = alecand_region
+                    }
+				}
+				amount = 3
+			}
+            OR = {
+                calc_true_if = {
+    				tag = G54
+                    tag = G55
+                    tag = G58
+                    tag = G53
+                    has_25_opinion_improved_relation = { target = ROOT }
+                    amount = 3
+                }
+                calc_true_if = {
+                    is_supporting_independence_of = G54
+                    is_supporting_independence_of = G55
+                    is_supporting_independence_of = G58
+                    is_supporting_independence_of = G53
+                    amount = 3
+                }
+            }
         }
         effect = {
             add_merchant = 1
@@ -141,7 +211,7 @@ apikhoxi_2 = {
     apikhoxi_little_league = {
         icon = "mission_fish"
         position = 5
-        required_missions = { 
+        required_missions = {
             apikhoxi_share_the_bounty_of_freedom
         }
         trigger = {
@@ -168,7 +238,7 @@ apikhoxi_3 = {
         trigger = {
 			treasury = 125
 			stability = 2
-            
+
         }
         effect = {
             add_province_development = 3
@@ -242,7 +312,7 @@ apikhoxi_3 = {
     apikhoxi_field_of_the_free = {
         icon = "mission_water"
         position = 6
-        required_missions = { 
+        required_missions = {
             apikhoxi_brothers_in_exile
             apikhoxi_little_league
             apikhoxi_sweet_deal
@@ -316,7 +386,6 @@ apikhoxi_4 = {
             add_accepted_culture_threshold = -0.05
         }
     }
-
 }
 
 apikhoxi_5 = {
@@ -327,7 +396,6 @@ apikhoxi_5 = {
     potential = {
         tag = G57
     }
-
     apikhoxi_fertile_earth = {
         icon = "mission_freedom"
         position = 1
@@ -335,8 +403,8 @@ apikhoxi_5 = {
             mil_power = 100
         }
         effect = {
-            add_dip_rep = 1
-            add_trust = 20
+            # add_dip_rep = 1
+            # add_trust = 20
         }
     }
 

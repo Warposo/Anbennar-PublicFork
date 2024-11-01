@@ -1,0 +1,18 @@
+# Establish Iosahar
+cb_apikhoxi_liberation = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		has_country_flag = apikhoxi_liberation
+	}
+
+	prerequisites = {
+		FROM = {
+			capital_scope = {
+				continent = south_america
+			}
+			is_subject = yes
+		}
+	}
+	war_goal = cb_apikhoxi_liberation_wargoal
+}
