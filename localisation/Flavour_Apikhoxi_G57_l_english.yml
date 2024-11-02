@@ -94,3 +94,9 @@ apikhoxi_liberation:0 "Liberation of the East"
 ##wargoals
 cb_apikhoxi_liberation_wargoal:0 "The Liberation of the Devand"
 G57_occupied_provinces_by_dirty_westerners:0 "Occupied by the Westerners"
+
+#state privilege
+estate_nobles_G57_emerald_waters:0 "Land of Emerald Waters"
+estate_nobles_G57_emerald_waters_modifier:0 "Bathe By Emerald Waters"
+estate_nobles_G57_land_golden_ears:0 "Land of Golden Ears"
+estate_nobles_G57_land_golden_ears_modifier:0 "The Most Valuable Gold"

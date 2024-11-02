@@ -276,7 +276,7 @@ country_event = {
 	}
 	option = {
 		name = "flavor_apikhoxi.6b"
-		G64 = {
+		G57 = {
 			add_casus_belli = {
                 target = G55
                 type = cb_vassalize_mission
@@ -294,7 +294,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G55
+			who = G57
 			modifier = insulted
 			months = 120
 		}
@@ -496,7 +496,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G64
+			who = G57
 			modifier = insulted
 			months = 120
 		}
@@ -576,8 +576,8 @@ country_event = {
 #Gonna Eat That
 country_event = {
 	id = flavor_apikhoxi.12
-	title = "flavor_apikhoxi.11.t"
-	desc = "flavor_apikhoxi.11.d"
+	title = "flavor_apikhoxi.12.t"
+	desc = "flavor_apikhoxi.12.d"
 	picture = ""
 
 	is_triggered_only = yes
@@ -585,28 +585,72 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = "flavor_apikhoxi.11.a"
-		every_other_country = {
-			iimit = {
-				has_opinion = {
-					who = ROOT
-					value = 50
-				}
-				capital_scope = {
-					region = alecand_region
-				}
+		name = "flavor_apikhoxi.12.a"
+		2680 = {
+			center_of_trade = 1
+		}
+		unlock_estate_privilege = {
+			estate_privilege = estate_nobles_G57_emerald_waters
+		}
+	}
+}
+
+country_event = {
+	id = flavor_apikhoxi.13
+	title = "flavor_apikhoxi.13.t"
+	desc = "flavor_apikhoxi.13.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.13.a"
+		add_stability = 1
+		every_owned_province = {
+			limit = {
+				trade_goods = slaves
 			}
-			add_national_modifier = {
-				name = G57_bribed
-				duration = 3650
+			if = {
+				limit = { has_port = yes }
+				change_trade_goods = grain
+			}
+			else = { change_trade_goods = unknown }
+		}
+		G57 = {
+			create_subject = {
+				subject_type = autonomous_vassal
+				subject = G53
+			}
+			change_government_reform_progress = -100
+		}
+		ai_chance = { factor = 75 }
+	}
+	option = {
+		name = "flavor_apikhoxi.13.b"
+		G57 = {
+			add_casus_belli = {
+                target = G53
+                type = cb_vassalize_mission
+                months = 300
+			}
+			add_trust = {
+				who = G53
+				value = -20
+				mutual = yes
+			}
+			add_opinion = {
+				who = G53
+				modifier = insulted
+				months = 120
 			}
 		}
-		add_national_modifier = {
-			name = G57_open_door
-			duration = 3650
+		add_opinion = {
+			who = G57
+			modifier = insulted
+			months = 120
 		}
-		apikhoxi_area = {
-			add_permanent_claim = ROOT
-		}
+		ai_chance = { factor = 25 }
 	}
 }
