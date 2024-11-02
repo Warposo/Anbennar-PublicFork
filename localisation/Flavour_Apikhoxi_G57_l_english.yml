@@ -79,8 +79,18 @@ l_english:
 #Modifiers
 G57_recruiting_growth:0 "Raise the Phalanxes"
 G57_preparing_the_way:0 "Preparing the Way"
+G57_new_deal:0 "The New Deal"
+apikhoxi_good_enighbor:0 "Good Neighbor Policy"
+G57_amdrivos:0 "Amdrivos"
+G57_we_love_day:0 "We Love the Kylakas"
+G57_bribed:0 "Bribed"
+G57_upriver_ferries:0 "Upriver Ferries"
 #Events
 
 #Opinion Modifiers
 #flags
 apikhoxi_liberation:0 "Liberation of the East"
+
+##wargoals
+cb_apikhoxi_liberation_wargoal:0 "The Liberation of the Devand"
+G57_occupied_provinces_by_dirty_westerners:0 "Occupied by the Westerners"

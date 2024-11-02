@@ -39,10 +39,10 @@ country_event = {
 		add_government_reform = peasants_republic
 		add_ruler_personality = peasant_revolt_leader_personality
 		2717 = {
-			add_permanent_claim = ROOT
+			add_permanent_claim = G54
 		}
 		2747 = {
-			add_permanent_claim = ROOT
+			add_permanent_claim = G54
 		}
 		2677 = {
 			change_trade_goods = damestear
@@ -57,8 +57,8 @@ country_event = {
 		ai_chance = { factor = 75 }
 	}
 	option = {
-		name = "flavor_apikhoxi.2ba"
-		G64 = {
+		name = "flavor_apikhoxi.2.b"
+		G57 = {
 			add_casus_belli = {
                 target = G54
                 type = cb_vassalize_mission
@@ -142,7 +142,7 @@ country_event = {
 		}
 	}
 }
-## East v West 
+## East v West
 country_event = {
 	id = flavor_apikhoxi.5
 	title = "flavor_apikhoxi.5.t"
@@ -155,7 +155,7 @@ country_event = {
 
 	option = {
 		name = "flavor_apikhoxi.5.a"
-		create_general = { tradition = 50 }
+			set_country_flag = apikhoxi_liberation
 		if = {
 			limit = {
 				OR = {
@@ -208,6 +208,405 @@ country_event = {
 				add_liberty_desire = 50
 			}
 		}
-		set_country_flag = apikhoxi_liberation
+		G54 = {
+			capital_scope = {
+				add_province_modifier = {
+					name = occupied_provinces_by_dirty_westerners
+					duration = -1
+				}
+			}
+		}
+		G55 = {
+			capital_scope = {
+				add_province_modifier = {
+					name = occupied_provinces_by_dirty_westerners
+					duration = -1
+				}
+			}
+		}
+		G58 = {
+			capital_scope = {
+				add_province_modifier = {
+					name = occupied_provinces_by_dirty_westerners
+					duration = -1
+				}
+			}
+		}
+		G53 = {
+			capital_scope = {
+				add_province_modifier = {
+					name = occupied_provinces_by_dirty_westerners
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+## League With Farmers
+country_event = {
+	id = flavor_apikhoxi.6
+	title = "flavor_apikhoxi.6.t"
+	desc = "flavor_apikhoxi.6.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.6.a"
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = 5
+		}
+		2719 = {
+			add_permanent_claim = ROOT
+		}
+		2674 = {
+			center_of_trade = 2
+		}
+		G57 = {
+			create_subject = {
+				subject_type = autonomous_vassal
+				subject = G55
+			}
+		}
+		ai_chance = { factor = 75 }
+	}
+	option = {
+		name = "flavor_apikhoxi.6b"
+		G64 = {
+			add_casus_belli = {
+                target = G55
+                type = cb_vassalize_mission
+                months = 300
+			}
+			add_trust = {
+				who = G55
+				value = -20
+				mutual = yes
+			}
+			add_opinion = {
+				who = G55
+				modifier = insulted
+				months = 120
+			}
+		}
+		add_opinion = {
+			who = G55
+			modifier = insulted
+			months = 120
+		}
+		ai_chance = { factor = 25 }
+	}
+}
+
+##Insinciere Acceptance
+
+country_event = {
+	id = flavor_apikhoxi.7
+	title = "flavor_apikhoxi.7.t"
+	desc = "flavor_apikhoxi.7.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.7.a"
+		add_country_modifier = {
+			name = G57_new_deal
+			duration = 7200
+		}
+		G50 = {
+			add_country_modifier = {
+				name = G57_money
+				duration = 1825
+			}
+		}
+	}
+}
+
+### We love the kylaka day
+country_event = {
+	id = flavor_apikhoxi.8
+	title = "flavor_apikhoxi.8.t"
+	desc = "flavor_apikhoxi.8.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.8.a"
+		if = {
+			limit = {
+				has_center_of_trade_of_level = 2
+			}
+		}
+		else = {
+			add_treasury = -200
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+				num_free_building_slots = 1
+			}
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+			change_trade_goods = sugar
+			add_building_construction = {
+				building = manufactory
+				speed = 1
+				cost = 0
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+				num_free_building_slots = 1
+			}
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+			change_trade_goods = coffee
+			add_building_construction = {
+				building = manufactory
+				speed = 1
+				cost = 0
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+				num_free_building_slots = 1
+			}
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+			change_trade_goods = spices
+			add_building_construction = {
+				building = manufactory
+				speed = 1
+				cost = 0
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+				num_free_building_slots = 1
+			}
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+			change_trade_goods = silk
+			add_building_construction = {
+				building = manufactory
+				speed = 1
+				cost = 0
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+				num_free_building_slots = 1
+			}
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+			change_trade_goods = dyes
+			add_building_construction = {
+				building = manufactory
+				speed = 1
+				cost = 0
+			}
+		}
+		add_country_modifier = {
+			name = G57_we_love_day
+			duration = 3650
+		}
+	}
+}
+
+## Calmer Brothers Offer
+country_event = {
+	id = flavor_apikhoxi.9
+	title = "flavor_apikhoxi.9.t"
+	desc = "flavor_apikhoxi.9.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.9.a"
+		add_government_reform = peasants_republic
+		add_ruler_personality = peasant_revolt_leader_personality
+		2717 = {
+			add_permanent_claim = ROOT
+		}
+		2747 = {
+			add_permanent_claim = ROOT
+		}
+		G57 = {
+			create_subject = {
+				subject_type = autonomous_vassal
+				subject = G58
+			}
+		}
+		ai_chance = { factor = 75 }
+	}
+	option = {
+		name = "flavor_apikhoxi.9.b"
+		G57 = {
+			add_casus_belli = {
+                target = G54
+                type = cb_vassalize_mission
+                months = 300
+			}
+			add_trust = {
+				who = G54
+				value = -20
+				mutual = yes
+			}
+			add_opinion = {
+				who = G54
+				modifier = insulted
+				months = 120
+			}
+		}
+		add_opinion = {
+			who = G64
+			modifier = insulted
+			months = 120
+		}
+		ai_chance = { factor = 25 }
+	}
+}
+
+#Calm and REasonable Discussion
+country_event = {
+	id = flavor_apikhoxi.10
+	title = "flavor_apikhoxi.10.t"
+	desc = "flavor_apikhoxi.10.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.10.a"
+		every_subject_country = {
+			limit = {
+				capital_scope = {
+					continent = south_america
+				}
+			}
+			ROOT = { inherit = PREV }
+		}
+	set_country_flag = apikhoxi_golden_ending
+	add_government_reform = civic_republicanism_government
+	add_power_projection = {
+		type = 25_permanent_power_projection
+		amount = 25
+	}
+	add_stability = 1
+}
+
+
+#Calm and REasonable Discussion
+country_event = {
+	id = flavor_apikhoxi.11
+	title = "flavor_apikhoxi.11.t"
+	desc = "flavor_apikhoxi.11.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.11.a"
+		every_other_country = {
+			iimit = {
+				has_opinion = {
+					who = ROOT
+					value = 50
+				}
+				capital_scope = {
+					region = alecand_region
+				}
+			}
+			add_national_modifier = {
+				name = G57_bribed
+				duration = 3650
+			}
+		}
+		add_national_modifier = {
+			name = G57_open_door
+			duration = 3650
+		}
+		apikhoxi_area = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+#Gonna Eat That
+country_event = {
+	id = flavor_apikhoxi.12
+	title = "flavor_apikhoxi.11.t"
+	desc = "flavor_apikhoxi.11.d"
+	picture = ""
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "flavor_apikhoxi.11.a"
+		every_other_country = {
+			iimit = {
+				has_opinion = {
+					who = ROOT
+					value = 50
+				}
+				capital_scope = {
+					region = alecand_region
+				}
+			}
+			add_national_modifier = {
+				name = G57_bribed
+				duration = 3650
+			}
+		}
+		add_national_modifier = {
+			name = G57_open_door
+			duration = 3650
+		}
+		apikhoxi_area = {
+			add_permanent_claim = ROOT
+		}
 	}
 }

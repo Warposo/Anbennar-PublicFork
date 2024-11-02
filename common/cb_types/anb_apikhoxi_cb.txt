@@ -7,12 +7,21 @@ cb_apikhoxi_liberation = {
 	}
 
 	prerequisites = {
-		FROM = {
-			capital_scope = {
-				continent = south_america
-			}
-			is_subject = yes
-		}
+		# FROM = {
+		# 	capital_scope = {
+		# 		region = alecand_region
+		# 	}
+		# 	num_of_subjects = 1
+		# }
 	}
 	war_goal = cb_apikhoxi_liberation_wargoal
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_become_vassal
+		po_form_personal_union
+		#po_become_tributary_state
+		#po_subjugate_tributary_state
+		po_anb_tributary
+		po_transfer_vassals
+	}
 }

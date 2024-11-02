@@ -50,7 +50,7 @@
 
 fallback_wargoal = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -63,7 +63,7 @@ fallback_wargoal = {
 			po_steer_trade
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -79,17 +79,17 @@ revoke_elector = {
 	type = take_capital
 
 	elector_relation = "revoke_elector"
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.75
-		
+
 		peace_options = {
 			po_revoke_elector
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -105,12 +105,12 @@ revoke_elector = {
 
 take_core_defection = {
 	type = take_core
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			owner = { exists = yes }
 			NOT = { months_since_defection = 12 } # Defected within the last 12 months
@@ -121,7 +121,7 @@ take_core_defection = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -137,7 +137,7 @@ take_core_defection = {
 
 superiority_loan = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
@@ -150,7 +150,7 @@ superiority_loan = {
 			po_steer_trade
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -166,7 +166,7 @@ superiority_loan = {
 
 superiority_spy = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
@@ -178,7 +178,7 @@ superiority_spy = {
 			po_concede_defeat
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -194,12 +194,12 @@ superiority_spy = {
 
 superiority_revolution = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5		
-		
+		peace_cost_factor = 0.5
+
 		# required_treaty_to_take_provinces = {
 			# po_spread_revolution
 		# }
@@ -215,12 +215,12 @@ superiority_revolution = {
 			po_spread_revolution
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5		
-	
+		peace_cost_factor = 0.5
+
 		# required_treaty_to_take_provinces = {
 			# po_dismantle_revolution
 		# }
@@ -236,18 +236,18 @@ superiority_revolution = {
 			po_dismantle_revolution
 		}
 	}
-	
+
 	war_name = SPREAD_REVOLUTION_NAME
 }
 
 superiority_annex_revolution = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1.5
-		peace_cost_factor = 0.25		
-		
+		peace_cost_factor = 0.25
+
 		#required_treaty_to_take_provinces = {
 		#	po_spread_revolution
 		#}
@@ -262,12 +262,12 @@ superiority_annex_revolution = {
 			po_annul_treaties
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1.5
-		peace_cost_factor = 0.25		
-	
+		peace_cost_factor = 0.25
+
 		#required_treaty_to_take_provinces = {
 		#	po_dismantle_revolution
 		#}
@@ -282,18 +282,18 @@ superiority_annex_revolution = {
 			po_annul_treaties
 		}
 	}
-	
+
 	war_name = ANNEX_REVOLUTION_WAR
 }
 
 take_capital_revolution = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5		
-		
+		peace_cost_factor = 0.5
+
 		required_treaty_to_take_provinces = {
 			po_dismantle_revolution
 			po_extinguish_the_revolution
@@ -312,12 +312,12 @@ take_capital_revolution = {
 			po_extinguish_the_revolution
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5		
-	
+		peace_cost_factor = 0.5
+
 		required_treaty_to_take_provinces = {
 			po_spread_revolution
 		}
@@ -338,12 +338,12 @@ take_capital_revolution = {
 
 take_capital_disloyal = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.5
-		
+
 		required_treaty_to_take_provinces = {
 			po_become_vassal
 		}
@@ -353,7 +353,7 @@ take_capital_disloyal = {
 			po_become_vassal
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -369,7 +369,7 @@ take_capital_disloyal = {
 
 take_capital_vassalize = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
@@ -378,13 +378,13 @@ take_capital_vassalize = {
 		required_treaty_to_take_provinces = {
 			po_subjugate_vassal
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_subjugate_vassal
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -405,7 +405,7 @@ defend_country_faith = {
 		allowed_countries = {
 			religion = ROOT
 		}
-		
+
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.75
@@ -420,7 +420,7 @@ defend_country_faith = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -436,17 +436,17 @@ defend_country_faith = {
 
 take_province_hre = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			is_part_of_hre = yes
 			has_province_modifier = unlawful_territory
 		}
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
@@ -454,7 +454,7 @@ take_province_hre = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -470,12 +470,12 @@ take_province_hre = {
 
 defend_country = {
 	type = defend_country
-	
+
 	attacker = {
 		badboy_factor = 0.9
 		prestige_factor = 2
 		peace_cost_factor = 0.70
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
@@ -486,7 +486,7 @@ defend_country = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -502,7 +502,7 @@ defend_country = {
 
 superiority_insult = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
@@ -515,7 +515,7 @@ superiority_insult = {
 			po_humiliate_rival
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -531,7 +531,7 @@ superiority_insult = {
 
 superiority_insult_mutual = {
 	type = superiority
-	
+
 	attacker = 	{
 		badboy_factor = 1
 		prestige_factor = 2
@@ -545,7 +545,7 @@ superiority_insult_mutual = {
 				escann_adventurer_allowed_provinces = yes
 			}
 		}
-		
+
 		allowed_tribal_provinces = {	# Anbennar
 			OR = {
 				NOT = {
@@ -564,7 +564,7 @@ superiority_insult_mutual = {
 			po_humiliate_rival
 		}
 	}
-	
+
 	defender = 	{
 		badboy_factor = 1
 		prestige_factor = 2
@@ -573,22 +573,22 @@ superiority_insult_mutual = {
 		peace_options = {
 			po_revoke_cores
 			po_gold
-			po_concede_defeat	
+			po_concede_defeat
 			po_humiliate_rival
 		}
 	}
-	
+
 	war_name = INSULT_WAR_NAME
 }
 
 take_capital_personal_union = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
-		
+
 		required_treaty_to_take_provinces = {
 			po_form_personal_union
 		}
@@ -598,7 +598,7 @@ take_capital_personal_union = {
 			po_form_personal_union
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -614,7 +614,7 @@ take_capital_personal_union = {
 
 take_capital_hundred_years_war = {
 	type = take_capital
-	
+
 	attacker = 	{
 		badboy_factor = 1
 		prestige_factor = 1
@@ -624,7 +624,7 @@ take_capital_hundred_years_war = {
 			po_form_personal_union
 		}
 	}
-	
+
 	defender = 	{
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -633,33 +633,33 @@ take_capital_hundred_years_war = {
 		allowed_provinces = {
 			is_core = FROM
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_return_cores
 		}
-		
-		prov_desc = ALL_CORES	
+
+		prov_desc = ALL_CORES
 	}
-	
+
 	war_name = HUNDRED_YEARS_WAR_NAME
 }
 
 
 take_capital_fabricated_claims = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1.5
-		
+
 		peace_options = {
 			po_form_personal_union
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -675,17 +675,17 @@ take_capital_fabricated_claims = {
 
 take_capital_conformance = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.75
-		
+
 		peace_options = {
 			po_change_religion
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -701,7 +701,7 @@ take_capital_conformance = {
 
 take_border = {
 	type = take_border
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
@@ -719,7 +719,7 @@ take_border = {
 			po_concede_defeat
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -730,49 +730,49 @@ take_border = {
 		}
 	}
 
-	war_name = BORDER_WAR_NAME	
+	war_name = BORDER_WAR_NAME
 }
 
 defend_capital_independence = {
 	type = defend_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 0.75
-		
+
 		peace_options = {
 			po_concede_defeat
 			po_independence
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
-		}		
-		
+		}
+
 		peace_options = {
 			po_demand_provinces
 		}
 	}
-	
+
 	war_name = INDEPENDENCE_WAR_NAME
 }
 
 take_capital_conquest = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			is_claim = ROOT
 		}
@@ -781,7 +781,7 @@ take_capital_conquest = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -806,15 +806,15 @@ take_core = {
 		allowed_provinces = {
 			is_core = ROOT
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_return_cores
 		}
-		
+
 		prov_desc = ALL_CORES
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -823,21 +823,21 @@ take_core = {
 		allowed_provinces = {
 			is_core = FROM
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_return_cores
 		}
-		
-		prov_desc = ALL_CORES	
+
+		prov_desc = ALL_CORES
 	}
-	
+
 	war_name = CORE_WAR_NAME
 }
 
 take_capital_claim = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1.0
 		prestige_factor = 1
@@ -846,14 +846,14 @@ take_capital_claim = {
 		allowed_provinces = {
 			is_claim = ROOT
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
 
 		prov_desc = ALL_CLAIMS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -869,11 +869,11 @@ take_capital_claim = {
 
 take_claim = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 1.0
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
+		peace_cost_factor = 1.0
 		allowed_provinces = {
 			NOT = {
 				AND = {
@@ -899,11 +899,11 @@ take_claim = {
 		}
 		prov_desc = ALL_CLAIMS
 	}
-	
+
 	defender = {
 		badboy_factor = 1.0
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
+		peace_cost_factor = 1.0
 		allowed_provinces = {
 			OR = {
 				is_claim = FROM
@@ -920,267 +920,267 @@ take_claim = {
 
 take_province_nationalist = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			culture_group = ROOT
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_CGROUP_COUNTRIES
 		prov_desc = ALL_CGROUP_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			culture_group = FROM
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_CGROUP_COUNTRIES
 		prov_desc = ALL_CGROUP_PROVS
 	}
-	
-	war_name = NATION_WAR_NAME	
+
+	war_name = NATION_WAR_NAME
 }
 
 take_capital_imperial = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
-		
+		peace_cost_factor = 0.75
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_COUNTRIES
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
-		
+		peace_cost_factor = 0.75
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_COUNTRIES
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = IMPERIAL_WAR_NAME
 }
 
 take_capital_pirates = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
-		
+		peace_cost_factor = 0.75
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_COUNTRIES
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
-		
+		peace_cost_factor = 0.75
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_COUNTRIES
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = PIRATE_WAR_NAME
 }
 
 take_capital_mayan = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
-		
+		peace_cost_factor = 0.75
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
-		peace_options = {
-			po_demand_provinces
-		}
-		
-		country_desc = ALL_COUNTRIES
-		prov_desc = ALL_PROVS
-	}
-	
-	defender = {
-		badboy_factor = 0.75
-		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
-		
-		allowed_provinces = {
-			always = yes
-		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
 
 		country_desc = ALL_COUNTRIES
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 0.75
+
+
+		allowed_provinces = {
+			always = yes
+		}
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_PROVS
+	}
+
 	war_name = MAYAN_WAR_NAME
 }
 
 take_province_revolutionary = {
 	type = take_province
-	
-	
+
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_GOV_ENEMIES
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_GOV_ENEMIES
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = REVOLUTIONARY_WAR_NAME
 }
 
 take_colony = {
 	type = take_colony
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 0.5
 		peace_cost_factor = 0.25
 		peace_cost_factor_non_allowed_treaty = 1.25
-		
+
 		allowed_provinces = {
 			colony_claim = ROOT
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_ADJ_COLONIES
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
-		peace_cost_factor = 0.5	
-		
+		peace_cost_factor = 0.5
+
 		allowed_provinces = {
 			colony_claim = FROM
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_ADJ_COLONIES
 	}
-	
-	war_name = COLONIAL_WAR_NAME	
+
+	war_name = COLONIAL_WAR_NAME
 }
 
 take_capital_liberation = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1.5
 		prestige_factor = 1
 		peace_cost_factor = 0.25 #Anbennar
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
 			po_return_cores
 		}
-		
+
 		country_desc = ALL_OPPRESSORS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1191,26 +1191,26 @@ take_capital_liberation = {
 		}
 	}
 
-	war_name = LIBERATION_WAR_NAME	
+	war_name = LIBERATION_WAR_NAME
 }
 
 superiority_liberation = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1.5
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
 			po_return_cores
 		}
-		
+
 		country_desc = ALL_OPPRESSORS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1221,146 +1221,146 @@ superiority_liberation = {
 		}
 	}
 
-	war_name = LIBERATION_WAR_NAME	
+	war_name = LIBERATION_WAR_NAME
 }
 
 superiority_world_crusade = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 2
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_change_religion
 			po_release_vassals
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 2
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_release_vassals
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = WORLD_CRUSADE_WAR_NAME	
+	}
+
+	war_name = WORLD_CRUSADE_WAR_NAME
 }
 
 superiority_war_against_heresy = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			po_return_cores
 			po_change_religion
 			# po_raid_churches
 			po_release_vassals
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = NO_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_release_vassals
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = WAR_AGAINST_HERESY_NAME	
+	}
+
+	war_name = WAR_AGAINST_HERESY_NAME
 }
 
 superiority_crusade = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1.25
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1.25
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = CRUSADE_WAR_NAME	
+	}
+
+	war_name = CRUSADE_WAR_NAME
 }
 
 #Cut because the Grand Crusade war doesn't really have any place in the current content, but it could be very useful for the future.
 #Also modders should have the chance to just uncomment it all so they can experience the great 30 Years War like Crusade.
 #superiority_grand_crusade = {
 #	type = superiority
-#	
+#
 #	attacker = {
 #		badboy_factor = 0.5
 #		prestige_factor = 1.5
-#		peace_cost_factor = 1.0	
-#		
+#		peace_cost_factor = 1.0
+#
 #		allowed_provinces = {
 #			OR = {
 #				area = palestine_area
@@ -1370,33 +1370,33 @@ superiority_crusade = {
 #			}
 #		}
 #		allowed_provinces_are_eligible = yes
-#		
+#
 #		peace_options = {
 #			po_demand_provinces
 #		}
-#		
+#
 #		country_desc = ALL_INFIDELS
 #		prov_desc = ALL_EUROPEAN_OR_HOLY_PROVINCES
 #	}
-#	
+#
 #	defender = {
 #		badboy_factor = 0.5
 #		prestige_factor = 1.5
-#		peace_cost_factor = 1.0	
-#		
+#		peace_cost_factor = 1.0
+#
 #		allowed_provinces = {
 #			always = yes
 #		}
-#		
+#
 #		peace_options = {
 #			po_demand_provinces
 #		}
-#		
+#
 #		country_desc = ALL_INFIDELS
 #		prov_desc = ALL_PROVS
-#	}	
-#	
-#	war_name = GRAND_CRUSADE_WAR_NAME	
+#	}
+#
+#	war_name = GRAND_CRUSADE_WAR_NAME
 #}
 #superiority_grand_crusade: "Show these infidel dogs superiority"
 #superiority_grand_crusade_desc: "War goal is to show them superiority by winning battles."
@@ -1406,54 +1406,54 @@ superiority_crusade = {
 
 take_province_religion = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1.25
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			religion_group = ROOT
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_REL_GROUP_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1.25
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			religion_group = FROM
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_REL_GROUP_PROVS
-	}	
-	
-	war_name = RELIGIOUS_WAR_NAME	
+	}
+
+	war_name = RELIGIOUS_WAR_NAME
 }
 
 superiority_heretic = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 2
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_change_religion
 			po_demand_provinces
@@ -1462,7 +1462,7 @@ superiority_heretic = {
 		country_desc = ALL_HERETICS
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1473,22 +1473,22 @@ superiority_heretic = {
 		}
 	}
 
-	war_name = HERETIC_WAR_NAME	
+	war_name = HERETIC_WAR_NAME
 }
 
 take_province_excommunication = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.25
-		peace_cost_factor = 1.0	
+		peace_cost_factor = 1.0
 
 		allowed_provinces = {
-			owner = { 
+			owner = {
 				is_excommunicated = yes
-				#religion = catholic	
-				religion = ravelian	
+				#religion = catholic
+				religion = ravelian
 			}
 			OR = {
 				is_core = ROOT
@@ -1511,7 +1511,7 @@ take_province_excommunication = {
 		}
 		prov_desc = ALL_CORES_AND_CLAIMS_AND_NEIGHBORS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1524,17 +1524,17 @@ take_province_excommunication = {
 		}
 	}
 
-	war_name = EXCOM_WAR_NAME	
+	war_name = EXCOM_WAR_NAME
 }
 
 superiority_trade = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		peace_options = {
 			po_revoke_cores
 			po_gold
@@ -1543,7 +1543,7 @@ superiority_trade = {
 			po_steer_trade
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1554,17 +1554,17 @@ superiority_trade = {
 		}
 	}
 
-	war_name = TRADE_WAR_NAME	
+	war_name = TRADE_WAR_NAME
 }
 
 superiority_trade_mutual = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		peace_options = {
 			po_revoke_cores
 			po_gold
@@ -1573,12 +1573,12 @@ superiority_trade_mutual = {
 			po_steer_trade
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 2
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		peace_options = {
 			po_revoke_cores
 			po_gold
@@ -1587,19 +1587,19 @@ superiority_trade_mutual = {
 			po_steer_trade
 		}
 	}
-	
-	
-	war_name = TRADE_WAR_NAME	
+
+
+	war_name = TRADE_WAR_NAME
 }
 
 take_province_ban = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		allowed_provinces = {
 			is_part_of_hre = yes
 			owner = {
@@ -1617,7 +1617,7 @@ take_province_ban = {
 
 		prov_desc = ALL_HRE_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1628,18 +1628,18 @@ take_province_ban = {
 		}
 	}
 
-	war_name = BAN_WAR_NAME	
-	
+	war_name = BAN_WAR_NAME
+
 }
 
 take_capital_ban = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		allowed_provinces = {
 			is_part_of_hre = yes
 			owner = {
@@ -1657,7 +1657,7 @@ take_capital_ban = {
 
 		prov_desc = ALL_HRE_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1668,22 +1668,22 @@ take_capital_ban = {
 		}
 	}
 
-	war_name = BAN_WAR_INCIDENT_NAME	
-	
+	war_name = BAN_WAR_INCIDENT_NAME
+
 }
 
 superiority_punitive = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.1
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		allowed_provinces = {
 			is_core = ROOT
 		}
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
@@ -1696,7 +1696,7 @@ superiority_punitive = {
 		}
 		prov_desc = ALL_CORES
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1707,21 +1707,21 @@ superiority_punitive = {
 		}
 	}
 
-	war_name = PUNITIVE_WAR_NAME	
+	war_name = PUNITIVE_WAR_NAME
 }
 
 take_capital_punitive = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.1
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		allowed_provinces = {
 			is_core = ROOT
 		}
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
@@ -1734,7 +1734,7 @@ take_capital_punitive = {
 
 		prov_desc = ALL_CORES_AND_CLAIMS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1745,23 +1745,23 @@ take_capital_punitive = {
 		}
 	}
 
-	war_name = PUNITIVE_WAR_NAME	
+	war_name = PUNITIVE_WAR_NAME
 }
 
 superiority_primitives = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1
-		peace_cost_factor = 0.5	
-		
+		peace_cost_factor = 0.5
+
 		allowed_provinces = {
 			owner = {
 				primitives = yes
 			}
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_revoke_cores
@@ -1776,7 +1776,7 @@ superiority_primitives = {
 		country_desc = ALL_PRIMITIVES
 		prov_desc = ALL_PRIMITIVES
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1787,17 +1787,17 @@ superiority_primitives = {
 		}
 	}
 
-	war_name = PRIMITIVE_WAR_NAME	
+	war_name = PRIMITIVE_WAR_NAME
 }
 
 superiority_overseas = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1
-		peace_cost_factor = 0.5	
-		
+		peace_cost_factor = 0.5
+
 		allowed_provinces = {
 			owner = {
 				capital_scope = {
@@ -1816,7 +1816,7 @@ superiority_overseas = {
 				}
 			}
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_revoke_cores
@@ -1825,11 +1825,11 @@ superiority_overseas = {
 			po_return_cores
 			po_gold
 		}
-		
+
 		country_desc = ALL_PRIMITIVES
 		prov_desc = ALL_PRIMITIVES
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -1840,17 +1840,17 @@ superiority_overseas = {
 		}
 	}
 
-	war_name = PRIMITIVE_WAR_NAME	
+	war_name = PRIMITIVE_WAR_NAME
 }
 
 take_capital_throne = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 1.4
-		
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -1865,7 +1865,7 @@ take_capital_throne = {
 		}
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1
@@ -1874,23 +1874,23 @@ take_capital_throne = {
 		allowed_provinces = {
 			is_core = FROM
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
 	}
-	
-	war_name = THRONE_WAR_NAME	
+
+	war_name = THRONE_WAR_NAME
 }
 
 superiority_horde = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -1901,15 +1901,15 @@ superiority_horde = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -1920,22 +1920,22 @@ superiority_horde = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	
-	war_name = PRIMITIVE_WAR_NAME	
+	}
+
+
+	war_name = PRIMITIVE_WAR_NAME
 }
 
 take_province_tribal_feud = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -1946,15 +1946,15 @@ take_province_tribal_feud = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -1965,22 +1965,22 @@ take_province_tribal_feud = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	
-	war_name = PRIMITIVE_WAR_NAME	
+	}
+
+
+	war_name = PRIMITIVE_WAR_NAME
 }
 
 annex_country = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			is_claim = ROOT
 		}
@@ -1988,10 +1988,10 @@ annex_country = {
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		allow_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2007,12 +2007,12 @@ annex_country = {
 
 # annex_country_japan = {
 	# type = take_capital
-	
+
 	# attacker = {
 		# badboy_factor = 0.75
 		# prestige_factor = 1
-		# peace_cost_factor = 1.0	
-		
+		# peace_cost_factor = 1.0
+
 		# allowed_provinces = {
 			# owner = {
 				# OR = {
@@ -2026,10 +2026,10 @@ annex_country = {
 		# peace_options = {
 			# po_demand_provinces
 		# }
-		
+
 		# allow_annex = yes
 	# }
-	
+
 	# defender = {
 		# badboy_factor = 1
 		# prestige_factor = 1
@@ -2045,12 +2045,12 @@ annex_country = {
 
 war_goal_change_government = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			OR = {
 				is_core = ROOT
@@ -2067,7 +2067,7 @@ war_goal_change_government = {
 			po_topple_eunuch #Anbennar
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2083,12 +2083,12 @@ war_goal_change_government = {
 
 war_goal_peasants_change_government = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			OR = {
 				is_core = ROOT
@@ -2104,7 +2104,7 @@ war_goal_peasants_change_government = {
 			force_peasant_republic
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2120,12 +2120,12 @@ war_goal_peasants_change_government = {
 
 war_goal_change_government_mutual = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			OR = {
 				is_core = ROOT
@@ -2141,12 +2141,12 @@ war_goal_change_government_mutual = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.50
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			OR = {
 				is_core = FROM
@@ -2161,34 +2161,34 @@ war_goal_change_government_mutual = {
 			po_change_government
 			po_demand_provinces
 		}
-	}	
-	
+	}
+
 	war_name = CHANGE_GOVERNMENT_WAR_NAME
 }
 
 humiliate = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0
 		prestige_factor = 0
-		peace_cost_factor = 0	
-		
+		peace_cost_factor = 0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_gold
 			po_humiliate
 		}
-		
+
 		deny_annex = yes
 
 		country_desc = ALL_NATIVES
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2199,23 +2199,23 @@ humiliate = {
 		}
 	}
 
-	war_name = HUMILIATE_WAR_NAME	
+	war_name = HUMILIATE_WAR_NAME
 }
 
 humiliate_rotw = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1.25
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		allowed_provinces_are_eligible = yes
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_revoke_cores
@@ -2229,12 +2229,12 @@ humiliate_rotw = {
 			po_humiliate
 			po_humiliate_rival
 		}
-		
+
 		deny_annex = yes
 		country_desc = ALL_COUNTRIES
 		prov_desc = NO_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2245,12 +2245,12 @@ humiliate_rotw = {
 		}
 	}
 
-	war_name = HUMILIATE_ROTW_WAR_NAME	
+	war_name = HUMILIATE_ROTW_WAR_NAME
 }
 
 blockade_ports = {
 	type = blockade_ports
-	
+
 	attacker = {
 		peace_options = {
 			po_gold
@@ -2261,7 +2261,7 @@ blockade_ports = {
 
 		transfer_trade_cost_factor = 0.5
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2275,7 +2275,7 @@ blockade_ports = {
 
 blockade_ports_mutual = {
 	type = blockade_ports
-	
+
 	attacker = {
 		peace_options = {
 			po_gold
@@ -2286,7 +2286,7 @@ blockade_ports_mutual = {
 
 		transfer_trade_cost_factor = 0.5
 	}
-	
+
 	defender = {
 		peace_options = {
 			po_gold
@@ -2303,22 +2303,22 @@ blockade_ports_mutual = {
 
 take_capital_support_rebels = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.5
-		
+
 		peace_options = {
 			po_enforce_rebel_demands
 		}
 	}
-		
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1		
-	
+		peace_cost_factor = 1
+
 		peace_options = {
 			po_demand_provinces
 		}
@@ -2329,12 +2329,12 @@ take_capital_support_rebels = {
 
 superiority_religious_league = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5	
-	
+		peace_cost_factor = 0.5
+
 		peace_options = {
 			po_become_vassal
 			po_demand_provinces
@@ -2347,12 +2347,12 @@ superiority_religious_league = {
 			po_change_hre_religion
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5		
-	
+		peace_cost_factor = 0.5
+
 		peace_options = {
 			po_become_vassal
 			po_demand_provinces
@@ -2365,65 +2365,65 @@ superiority_religious_league = {
 			po_change_hre_religion
 		}
 	}
-	
+
 	war_name = RELIGIOUS_LEAGUE_WAR_NAME
 }
 
 superiority_chinese_unification = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
-			OR = { 
-					region = kheterata_region 
-					region = gol_region 
-					region = khetapera_region 
+			OR = {
+					region = kheterata_region
+					region = gol_region
+					region = khetapera_region
 					region = akasik_region
 					region = west_salahad_region
-				} 
+				}
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		# country_desc = ALL_CGROUP_COUNTRIES
 		# prov_desc = ALL_CHINESE_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
-			OR = { 
-					region = kheterata_region 
-					region = gol_region 
-					region = khetapera_region 
+			OR = {
+					region = kheterata_region
+					region = gol_region
+					region = khetapera_region
 					region = akasik_region
 					region = west_salahad_region
-				} 
+				}
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		# country_desc = ALL_CGROUP_COUNTRIES
 		# prov_desc = ALL_CHINESE_PROVS
 	}
-	
-	war_name = CHINESE_UNIFICATION_WAR_NAME	
+
+	war_name = CHINESE_UNIFICATION_WAR_NAME
 }
 
 take_capital_take_mandate = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1.0
@@ -2437,7 +2437,7 @@ take_capital_take_mandate = {
 		# country_desc = CHINESE_EMPIRE_COUNTRY
 		# prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.0
@@ -2450,13 +2450,13 @@ take_capital_take_mandate = {
 		# country_desc = ALL_COUNTRIES
 		# prov_desc = ALL_PROVS
 	}
-	
+
 	war_name = CELESTIAL_EMPIRE_WAR_NAME
 }
 
 take_capital_force_tributary = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 2
@@ -2465,12 +2465,12 @@ take_capital_force_tributary = {
 		required_treaty_to_take_provinces = {
 			po_subjugate_tributary_state
 		}
-		
+
 		peace_options = {
 			po_subjugate_tributary_state
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2486,7 +2486,7 @@ take_capital_force_tributary = {
 
 take_capital_force_tributary_anb = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 2
@@ -2495,12 +2495,12 @@ take_capital_force_tributary_anb = {
 		required_treaty_to_take_provinces = {
 			po_anb_tributary
 		}
-		
+
 		peace_options = {
 			po_anb_tributary
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2520,7 +2520,7 @@ take_capital_force_join_hre = {
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 0.25
-		
+
 		peace_options = {
 			po_join_empire
 			po_release_annexed
@@ -2543,7 +2543,7 @@ take_capital_reintegrate_into_hre = {
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1
-		
+
 		peace_options = {
 			po_reintegrate_into_hre
 			po_release_annexed
@@ -2562,60 +2562,60 @@ take_capital_reintegrate_into_hre = {
 
 superiority_reichskrieg = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1.0
 		prestige_factor = 0.75
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_guaranteed_join_empire
 			po_release_annexed
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1.25
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-	}	
-	
-	war_name = REICHSKRIEG_WAR_NAME	
+	}
+
+	war_name = REICHSKRIEG_WAR_NAME
 }
 
 # take_capital_vassalize_maj = {
 # 	type = take_capital
-	
+
 # 	attacker = {
 # 		badboy_factor = 0.8
 # 		prestige_factor = 1.5
 # 		peace_cost_factor = 0.8
-		
+
 # 		required_treaty_to_take_provinces = {
 # 			po_subjugate_vassal
 # 			po_subjugate_tributary_state
 # 		}
-		
+
 # 		peace_options = {
 # 			po_demand_provinces
 # 			po_subjugate_vassal
 # 			po_subjugate_tributary_state
 # 		}
 # 	}
-	
+
 # 	defender = {
 # 		badboy_factor = 1
 # 		prestige_factor = 1
@@ -2631,49 +2631,49 @@ superiority_reichskrieg = {
 
 superiority_sword_of_islam = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_change_religion
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_release_vassals
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = SWORD_OF_ISLAM_WAR_NAME	
+	}
+
+	war_name = SWORD_OF_ISLAM_WAR_NAME
 }
 
 force_migration = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1
@@ -2685,7 +2685,7 @@ force_migration = {
 				owned_by = ROOT
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			any_neighbor_province = {
 				tribal_land_of = ROOT
@@ -2704,11 +2704,11 @@ force_migration = {
 			po_humiliate
 			po_gold
 		}
-		
+
 		deny_annex = yes
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1
@@ -2720,7 +2720,7 @@ force_migration = {
 				owned_by = ROOT
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			any_neighbor_province = {
 				tribal_land_of = ROOT
@@ -2732,20 +2732,20 @@ force_migration = {
 			po_humiliate
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = FORCE_MIGRATION_WAR_NAME
 }
 
 take_native_american_land = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
+		peace_cost_factor = 1
 
 		allowed_provinces = {
 			is_capital = no
@@ -2753,7 +2753,7 @@ take_native_american_land = {
 				owned_by = ROOT
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			any_neighbor_province = {
 				tribal_land_of = ROOT
@@ -2765,10 +2765,10 @@ take_native_american_land = {
 			po_force_migration
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1
@@ -2780,7 +2780,7 @@ take_native_american_land = {
 				owned_by = ROOT
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			any_neighbor_province = {
 				tribal_land_of = ROOT
@@ -2791,21 +2791,21 @@ take_native_american_land = {
 			po_demand_provinces
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = TAKE_NATIVE_AMERICAN_LAND_WAR_NAME
 }
 
 push_back_colonizers = {
 	type = superiority
-	
+
 	#Anbennar - stuff for Escann
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
+		peace_cost_factor = 1
 
 		allowed_provinces = {
 			is_capital = no
@@ -2821,7 +2821,7 @@ push_back_colonizers = {
 				}
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			is_capital = no
 			# Only take cities if settled
@@ -2836,7 +2836,7 @@ push_back_colonizers = {
 				}
 			}
 		}
-		
+
 		allowed_provinces_are_eligible = yes
 		deny_annex = yes
 
@@ -2845,11 +2845,11 @@ push_back_colonizers = {
 			po_gold
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
+		peace_cost_factor = 1
 
 		allowed_provinces = {
 			is_capital = no
@@ -2865,7 +2865,7 @@ push_back_colonizers = {
 				}
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			is_capital = no
 			# Only take cities if settled
@@ -2880,7 +2880,7 @@ push_back_colonizers = {
 				}
 			}
 		}
-		
+
 		allowed_provinces_are_eligible = yes
 		deny_annex = yes
 
@@ -2889,19 +2889,19 @@ push_back_colonizers = {
 			po_gold
 		}
 	}
-	
+
 	war_name = PUSH_BACK_COLONIZERS
 }
 
 #Anbennar: we don't have Norway
 # take_capital_norwegian_throne = {
 	# type = take_capital
-	
+
 	# attacker = {
 		# badboy_factor = 1
 		# prestige_factor = 1
 		# peace_cost_factor = 1
-		
+
 		# required_treaty_to_take_provinces = {
 			# po_claim_norwegian_throne
 		# }
@@ -2911,7 +2911,7 @@ push_back_colonizers = {
 			# po_claim_norwegian_throne
 		# }
 	# }
-	
+
 	# defender = {
 		# badboy_factor = 1
 		# prestige_factor = 1
@@ -2927,18 +2927,18 @@ push_back_colonizers = {
 
 war_goal_usurp_electorate = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		allowed_provinces_are_eligible = yes
-		
+
 		peace_options = {
 			po_claim_elector_role
 			po_revoke_cores
@@ -2951,12 +2951,12 @@ war_goal_usurp_electorate = {
 			po_steer_trade
 			po_humiliate
 		}
-		
+
 		deny_annex = yes
 		country_desc = ALL_COUNTRIES
 		prov_desc = NO_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -2973,12 +2973,12 @@ war_goal_usurp_electorate = {
 #Anbennar: we don't have the balkans
 # take_province_balkans = {
 	# type = take_province
-	
+
 	# attacker = {
 		# badboy_factor = 1
 		# prestige_factor = 2
 		# peace_cost_factor = 0.75
-		
+
 		# allowed_provinces = {
 			# region = balkan_region
 		# }
@@ -2991,7 +2991,7 @@ war_goal_usurp_electorate = {
 
 		# prov_desc = ALL_BALKAN_PROVS
 	# }
-	
+
 	# defender = {
 		# badboy_factor = 1
 		# prestige_factor = 1
@@ -3002,18 +3002,18 @@ war_goal_usurp_electorate = {
 		# }
 	# }
 
-	# war_name = BALKAN_UNIFICATION_WAR_NAME	
+	# war_name = BALKAN_UNIFICATION_WAR_NAME
 # }
 
 #Anbennar
 superiority_monster = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1.25
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -3024,15 +3024,15 @@ superiority_monster = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			OR = {
 				NOT = {
@@ -3041,7 +3041,7 @@ superiority_monster = {
 				escann_adventurer_allowed_provinces = yes
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			OR = {
 				NOT = {
@@ -3050,7 +3050,7 @@ superiority_monster = {
 				escann_adventurer_allowed_provinces = yes
 			}
 		}
-		
+
 		allowed_provinces_are_eligible = yes
 
 		peace_options = {
@@ -3060,22 +3060,22 @@ superiority_monster = {
 			po_gold
 			po_destroy_monster
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	
-	war_name = MONSTROUS_WAR_NAME	
+	}
+
+
+	war_name = MONSTROUS_WAR_NAME
 }
 
 superiority_anti_monster = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.25
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -3086,15 +3086,15 @@ superiority_anti_monster = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.25
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -3105,26 +3105,26 @@ superiority_anti_monster = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	
-	war_name = ANTI_MONSTROUS_WAR_NAME	
+	}
+
+
+	war_name = ANTI_MONSTROUS_WAR_NAME
 }
 
 superiority_adventurer_reclaim_escann = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
+		peace_cost_factor = 1
 
 		allowed_provinces = { escann_adventurer_allowed_provinces = yes }
-		
+
 		allowed_tribal_provinces = { escann_adventurer_allowed_provinces = yes }
-		
+
 		allowed_provinces_are_eligible = yes
 		deny_annex = yes
 
@@ -3134,11 +3134,11 @@ superiority_adventurer_reclaim_escann = {
 			po_destroy_monster
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
+		peace_cost_factor = 1
 
 		allowed_provinces = {
 			OR = {
@@ -3148,7 +3148,7 @@ superiority_adventurer_reclaim_escann = {
 				escann_adventurer_allowed_provinces = yes
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			OR = {
 				NOT = {
@@ -3157,7 +3157,7 @@ superiority_adventurer_reclaim_escann = {
 				escann_adventurer_allowed_provinces = yes
 			}
 		}
-		
+
 		allowed_provinces_are_eligible = yes
 		deny_annex = yes
 
@@ -3167,7 +3167,7 @@ superiority_adventurer_reclaim_escann = {
 			po_demand_provinces
 		}
 	}
-	
+
 	war_name = ADVENTURER_CLAIM_ESCANN
 }
 
@@ -3178,15 +3178,15 @@ flight_of_the_eagle_and_dove = {
 		badboy_factor = 0.25
 		prestige_factor = 0
 		peace_cost_factor = 0.35
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_looming_eagle
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
 
@@ -3194,15 +3194,15 @@ flight_of_the_eagle_and_dove = {
 		badboy_factor = 0
 		prestige_factor = 0
 		peace_cost_factor = 0.2
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_looming_eagle
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
 
@@ -3217,15 +3217,15 @@ blooming_of_the_lorentish_rose = {
 		badboy_factor = 0.25
 		prestige_factor = 0
 		peace_cost_factor = 0.35
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_blooming_rose
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
 
@@ -3233,15 +3233,15 @@ blooming_of_the_lorentish_rose = {
 		badboy_factor = 0
 		prestige_factor = 0
 		peace_cost_factor = 0.2
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_blooming_rose
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
 
@@ -3255,32 +3255,32 @@ aldresian_incursion_wg = {
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1.5
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_aldresian_incursion
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
 
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1.25
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
 
@@ -3289,56 +3289,56 @@ aldresian_incursion_wg = {
 
 sardonyx_invasion = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 0
 		peace_cost_factor = 0.35
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_fallen_invasion
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0
 		prestige_factor = 0
 		peace_cost_factor = 0.2
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_fallen_invasion
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = SARDONYX_INVASION_WAR_NAME	
+	}
+
+	war_name = SARDONYX_INVASION_WAR_NAME
 }
 
 humiliate_cyranvar = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.4
-		
+
 		allowed_provinces = {
 			is_core = ROOT
 		}
-		
+
 		allowed_provinces_are_eligible = yes
-		
+
 		peace_options = {
 			po_gold
 			po_humiliate
@@ -3348,21 +3348,21 @@ humiliate_cyranvar = {
 			po_release_annexed
 			po_release_vassals
 		}
-		
+
 		country_desc = ALL_NATIVES
-		
+
 		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.4
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_gold
 			po_humiliate
@@ -3372,22 +3372,22 @@ humiliate_cyranvar = {
 			po_release_annexed
 			po_release_vassals
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
-	war_name = HUMILIATE_WAR_NAME	
+
+	war_name = HUMILIATE_WAR_NAME
 }
 
 
 unify_raj = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1.0
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			owner = {
 				OR = {
@@ -3402,15 +3402,15 @@ unify_raj = {
 		peace_options = {
 			po_demand_provinces
 		}
-	
+
 		allow_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 1.0
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			owner = {
 				OR = {
@@ -3425,21 +3425,21 @@ unify_raj = {
 		peace_options = {
 			po_demand_provinces
 		}
-	
+
 		allow_annex = yes
 	}
-	
+
 	war_name = PRIMITIVE_WAR_NAME
 }
 
 annex_country_one_xia = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			owner = {
 				OR = {
@@ -3453,15 +3453,15 @@ annex_country_one_xia = {
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		allow_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			owner = {
 				OR = {
@@ -3475,65 +3475,65 @@ annex_country_one_xia = {
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		allow_annex = yes
 	}
-	
+
 	war_name = PRIMITIVE_WAR_NAME
 }
 
 superiority_escanni_wars_of_consolidation = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
-		allowed_provinces = {
-			OR = { 
-				province_is_valid_for_escanni_wars = yes
-			}
-		}
-		
-		peace_options = {
-			po_demand_provinces
-		}
-		
-		country_desc = ALL_ESCANNI_COUNTRIES
-		prov_desc = ALL_ESCANNI_PROVS
-	}
-	
-	defender = {
-		badboy_factor = 0.5
-		prestige_factor = 1.5
-		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			OR = {
 				province_is_valid_for_escanni_wars = yes
 			}
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_ESCANNI_COUNTRIES
 		prov_desc = ALL_ESCANNI_PROVS
 	}
-	
-	war_name = ESCANNI_WARS_OF_CONSOLIDATION_WAR_NAME	
+
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1.5
+		peace_cost_factor = 0.5
+
+		allowed_provinces = {
+			OR = {
+				province_is_valid_for_escanni_wars = yes
+			}
+		}
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_ESCANNI_COUNTRIES
+		prov_desc = ALL_ESCANNI_PROVS
+	}
+
+	war_name = ESCANNI_WARS_OF_CONSOLIDATION_WAR_NAME
 }
 
 centaur_horde = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = no
 		}
@@ -3543,15 +3543,15 @@ centaur_horde = {
 			po_centaur_subjugation
 		}
 		deny_annex = yes
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = no
 		}
@@ -3561,17 +3561,17 @@ centaur_horde = {
 			po_centaur_subjugation
 		}
 		deny_annex = yes
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
-	
-	war_name = PRIMITIVE_WAR_NAME	
+
+
+	war_name = PRIMITIVE_WAR_NAME
 }
 
 centaur_lake_subjugation = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.0
@@ -3581,10 +3581,10 @@ centaur_lake_subjugation = {
 			po_centaur_lake_subjugation
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
@@ -3595,17 +3595,17 @@ centaur_lake_subjugation = {
 			po_gold
 		}
 		deny_annex = yes
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
-	
-	war_name = PRIMITIVE_WAR_NAME	
+
+
+	war_name = PRIMITIVE_WAR_NAME
 }
 
 federation_war = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -3620,9 +3620,9 @@ federation_war = {
 			po_gold
 		}
 
-		deny_annex = yes	
+		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -3637,15 +3637,15 @@ federation_war = {
 			po_gold
 		}
 
-		deny_annex = yes	
+		deny_annex = yes
 	}
-	
+
 	war_name = FEDERATION_WAR_NAME
 }
 
 federation_war_gold_island = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -3663,7 +3663,7 @@ federation_war_gold_island = {
 
 		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -3679,101 +3679,101 @@ federation_war_gold_island = {
 			po_humiliate
 		}
 
-		deny_annex = yes	
+		deny_annex = yes
 	}
-	
+
 	war_name = FEDERATION_WAR_GOLD_NAME
 }
 
 federation_religious_war = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_federation_religious_peace
 			po_change_religion
 			po_gold
 		}
-	
+
 		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_federation_religious_peace
 			po_change_religion
 			po_gold
 		}
-	
+
 		deny_annex = yes
 	}
-	
+
 	war_name = FEDERATION_RELIGIOUS_WAR_NAME
 }
 
 federation_religious_war_kalyin = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_federation_religious_peace
 			po_change_religion
 			po_gold
 		}
-	
+
 		deny_annex = yes
-		
-		
+
+
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_federation_religious_peace
 			po_change_religion
 			po_gold
 		}
-	
+
 		deny_annex = yes
 	}
-	
+
 	war_name = FEDERATION_RELIGIOUS_WAR_KALYIN_NAME
 }
 
 federation_splinter_war = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -3788,9 +3788,9 @@ federation_splinter_war = {
 			po_gold
 		}
 
-		deny_annex = yes	
+		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
@@ -3807,7 +3807,7 @@ federation_splinter_war = {
 
 		deny_annex = yes
 	}
-	
+
 	war_name = FEDERATION_SPLINTER_WAR_NAME
 }
 
@@ -3853,114 +3853,114 @@ federation_mage_war = {
 
 centaur_salgae = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.05
 		prestige_factor = 1.0
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_centaur_salgae
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.05
 		prestige_factor = 1.0
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = SALGAE_WAR_NAME	
+	}
+
+	war_name = SALGAE_WAR_NAME
 }
 
 enforce_elder_pact = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0
 		prestige_factor = 1.50
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			po_enforce_elder_pact
 			po_gold
 			po_release_vassals
 			po_concede_defeat
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0
 		prestige_factor = 1.50
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			po_revoke_electorship_elder_pact
 			po_gold
 			po_release_vassals
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = ELDER_PACT_WAR_NAME	
+	}
+
+	war_name = ELDER_PACT_WAR_NAME
 }
 
 usurp_emperorship = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			po_usurp_emperorship
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.1
 		prestige_factor = 1
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			is_core = ROOT
 		}
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
@@ -3970,173 +3970,173 @@ usurp_emperorship = {
 			po_gold
 			po_concede_defeat
 		}
-		
+
 		prov_desc = ALL_CORES
-	}	
-	
-	war_name = USURP_EMPERORSHIP_WAR_NAME	
+	}
+
+	war_name = USURP_EMPERORSHIP_WAR_NAME
 }
 
 wargoal_killing_all_the_centaur = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 2
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_killing_all_the_centaur
 			po_gold
 		}
-	
+
 		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 2
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_gold
 			po_demand_provinces
 		}
 	}
-	
+
 	war_name = KILLING_ALL_THE_CENTAUR_WAR_NAME
 }
 
 conquest_deioderan = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.05
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
-		
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.05
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
-		
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = DEIODERAN_WAR_NAME
 }
 
 adenica_purge_heresy = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 2
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_change_religion
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_HERETICS
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 2
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_HERETICS
 		prov_desc = ALL_PROVS
 	}
-	
-	
-	war_name = HERETIC_WAR_NAME	
+
+
+	war_name = HERETIC_WAR_NAME
 }
 
 phoenix_conquest = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 0.66
 		prestige_factor = 1
 		peace_cost_factor = 0.66
-		
+
 		allowed_provinces = {
 			is_claim = ROOT
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
 		prov_desc = ALL_CLAIMS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.66
 		prestige_factor = 1
 		peace_cost_factor = 0.66
-		
+
 		allowed_provinces = {
 			is_claim = ROOT
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
 		prov_desc = ALL_CLAIMS
 	}
-	
+
 	war_name = CLAIM_WAR_NAME
 }
 
 
 verkal_dromak_teleportation_wargoal = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.0
@@ -4151,7 +4151,7 @@ verkal_dromak_teleportation_wargoal = {
 			po_gold
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.0
@@ -4166,25 +4166,25 @@ verkal_dromak_teleportation_wargoal = {
 			po_gold
 		}
 	}
-	
-	war_name = PRIMITIVE_WAR_NAME	
+
+	war_name = PRIMITIVE_WAR_NAME
 }
 
 take_capital_evil_ruler = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
-			OR = { 
+			OR = {
 				is_core = ROOT
 				is_claim = ROOT
 			}
 		}
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
@@ -4195,18 +4195,18 @@ take_capital_evil_ruler = {
 			po_remove_evil_ruler
 		}
 		prov_desc = ALL_PROVS
-	
+
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_release_vassals
 			po_release_annexed
@@ -4216,16 +4216,16 @@ take_capital_evil_ruler = {
 			po_demand_provinces
 			po_concede_defeat
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	war_name = EVIL_RULER_WAR
 }
 
 rianvisa_wargoal = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0
 		prestige_factor = 0
@@ -4243,8 +4243,8 @@ rianvisa_wargoal = {
 		deny_annex = yes
 		allowed_provinces_are_eligible = yes
 	}
-	
-	
+
+
 	defender = {
 		badboy_factor = 0
 		prestige_factor = 0
@@ -4260,20 +4260,20 @@ rianvisa_wargoal = {
 		}
 
 		deny_annex = yes
-		allowed_provinces_are_eligible = yes		
+		allowed_provinces_are_eligible = yes
 	}
-	
+
 	war_name = RIANVISA_WAR_NAME
 }
 
 superiority_malacnar = {
 	type = superiority
-	
+
 	attacker = 	{
 		badboy_factor = 1
 		prestige_factor = 1.25
 		peace_cost_factor = 0.8
-		
+
 		peace_options = {
 			po_humiliate_rival
 			po_anb_tributary
@@ -4287,7 +4287,7 @@ superiority_malacnar = {
 			po_malacnar_glory
 		}
 	}
-	
+
 	defender = 	{
 		badboy_factor = 1
 		prestige_factor = 1.25
@@ -4304,24 +4304,24 @@ superiority_malacnar = {
 			po_concede_defeat
 		}
 	}
-	
+
 	war_name = MALACNAR_GLORY_NAME
 }
 
 #Wex Electorate Transfer War Goal for Anbennar
 steal_elector = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.75
-		
+
 		peace_options = {
 			po_steal_elector
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -4333,109 +4333,109 @@ steal_elector = {
 	}
 
 	elector_relation = "revoke_elector"
-	
+
 	war_name = STEAL_ELECTOR_WAR_NAME
 }
 
 castanor_human_protection = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
-		
+
+
 		allowed_provinces = {
 			has_any_human_pop_trigger = yes
 		}
 
 		allowed_provinces_are_eligible = yes
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_gold
 		}
-		
+
 		country_desc = ALL_HUMAN_COUNTRIES
 		prov_desc = ALL_HUMAN_PROVINCES
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5	
-		
-		
+		peace_cost_factor = 0.5
+
+
 		allowed_provinces = {
 			is_core = FROM
 		}
-		
+
 		allowed_provinces_are_eligible = yes
 
 		peace_options = {
 			po_demand_provinces
 			po_gold
 		}
-		
+
 		country_desc = ALL_HUMAN_COUNTRIES
 		prov_desc = ALL_HUMAN_PROVINCES
-	}	
-	
+	}
+
 	war_name = FIRST_AND_FINAL_EMPIRE_WAR_NAME
 }
 
 castanor_war_of_succession = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_castanor_succession_war
 		}
-	
+
 		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_castanor_succession_war
 		}
-	
+
 		deny_annex = yes
 	}
-	
+
 	war_name = CASTANOR_SUCCESION_WAR_NAME
 }
 
 #NSC incidents
 nsc_samartal_investigation = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_humiliate_rival
 			po_gold
@@ -4451,16 +4451,16 @@ nsc_samartal_investigation = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_humiliate_rival
 			po_gold
@@ -4475,92 +4475,92 @@ nsc_samartal_investigation = {
 			po_demand_provinces
 		}
 	}
-	
+
 	war_name = SAMARTAL_INVESTIGATION_WAR_NAME
 }
 #
 
 xia_righteous_liberation_wargoal = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1.25
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	war_name = RIGHTEOUS_LIBERATION_WAR_NAME
 }
 
 blue_scarf_rebellion = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1.5
 		peace_cost_factor = 0.35
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0
 		prestige_factor = 0.25
 		peace_cost_factor = 0.1
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
-	war_name = BLUE_SCARF_REBELLION_WAR_NAME	
+
+	war_name = BLUE_SCARF_REBELLION_WAR_NAME
 }
 
 black_invasion = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -4576,7 +4576,7 @@ black_invasion = {
 		}
 
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -4592,55 +4592,55 @@ black_invasion = {
 		}
 
 	}
-	
+
 	war_name = BLACK_INVASION_WAR_NAME
 }
 
 moredhal_infernal_march = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
-		
-		
+
+
 		allowed_provinces = {
 			always = yes
 		}
 
 		allowed_provinces_are_eligible = yes
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_gold
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 1.5
-		peace_cost_factor = 0.5	
-		
-		
+		peace_cost_factor = 0.5
+
+
 		allowed_provinces = {
 			is_core = FROM
 		}
-		
+
 		allowed_provinces_are_eligible = yes
 
 		peace_options = {
 			po_demand_provinces
 			po_gold
 		}
-	}	
-	
+	}
+
 	war_name = MOREDHAL_INFERNAL_MARCH_NAME
 }
 
 farrani_revolt = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -4656,7 +4656,7 @@ farrani_revolt = {
 		}
 
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -4672,13 +4672,13 @@ farrani_revolt = {
 		}
 
 	}
-	
+
 	war_name = FARRANI_REVOLT_WAR_NAME
 }
 
 aw_monster_attack_reparations = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1.25
 		prestige_factor = 1.5
@@ -4715,32 +4715,32 @@ aw_monster_attack_reparations = {
 		}
 
 	}
-	
+
 	war_name = AW_MONSTER_ATTACK_REPARATIONS_NAME
 }
 # Corintar
 wg_depose_bad_corinite = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1.0
 		prestige_factor = 1.0
 		peace_cost_factor = 1.0
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-	
+
 		peace_options = {
 			po_depose_bad_corinite
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1.0
 		prestige_factor = 1.0
 		peace_cost_factor = 1.0
-		
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -4752,26 +4752,26 @@ wg_depose_bad_corinite = {
 #ovdal lodhum
 wg_lodhum_elf_war = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1.0
 		prestige_factor = 1.0
 		peace_cost_factor = 1.0
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-	
+
 		peace_options = {
 			po_lodhum_elf_war
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1.0
 		prestige_factor = 1.0
 		peace_cost_factor = 1.0
-		
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -4782,71 +4782,71 @@ wg_lodhum_elf_war = {
 
 ankash_war = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.05
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
-		
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			ankash_war_peace
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.05
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
-		
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			ankash_war_peace
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = ANKASH_WAR_NAME
 }
 
 old_order_war = {
 	type = take_capital
-	
+
 	attacker = {
 		prestige_factor = 1
-		
-		
+
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			old_order_peace
 		}
-		
+
 	}
-	
+
 	defender = {
 		badboy_factor = 0.05
 		prestige_factor = 1
 		peace_cost_factor = 0.5
-		
-		
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_become_vassal
 			po_demand_provinces
@@ -4857,20 +4857,20 @@ old_order_war = {
 			po_concede_defeat
 			po_annul_treaties
 		}
-		
-	}	
-	
+
+	}
+
 	war_name = OLD_ORDER_NAME
 }
 
 ynnic_subjugation = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
-	
+
 		allowed_provinces = {
 			superregion = ynn_superregion
 		}
@@ -4878,17 +4878,17 @@ ynnic_subjugation = {
 		required_treaty_to_take_provinces = {
 			po_feudal_ynnic_subjugation
 		}
-		
+
 		peace_options = {
 			po_feudal_ynnic_subjugation
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
-	
+
 		allowed_provinces = {
 			superregion = ynn_superregion
 		}
@@ -4897,7 +4897,7 @@ ynnic_subjugation = {
 			po_feudal_ynnic_subjugation
 		}
 	}
-	
+
 	war_name = YNNIC_SUBJUGATION_WAR_NAME
 }
 
@@ -4907,29 +4907,29 @@ war_for_the_mantle_of_baihon_xinh = {
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		peace_options = {
 			po_assert_our_claim_to_the_baihon_xinh
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		peace_options = {
 			po_defend_our_claim_to_the_baihon_xinh
 		}
 	}
-	
+
 	war_name = KHOM_CIVIL_WAR_WAR_NAME
 }
 
 hobgoblin_conquest = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1
@@ -4949,7 +4949,7 @@ hobgoblin_conquest = {
 		}
 		prov_desc = ALL_CLAIMS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -4970,7 +4970,7 @@ hobgoblin_conquest = {
 
 superiority_revolt_of_the_north = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -4980,7 +4980,7 @@ superiority_revolt_of_the_north = {
 		allowed_provinces = { always = no }
 		peace_options = { }
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -5006,7 +5006,7 @@ three_commands_wargoal = {
 		allowed_provinces = { always = no }
 		peace_options = { }
 	}
-	
+
 	defender = {
 		badboy_factor = 0
 		prestige_factor = 1
@@ -5026,8 +5026,8 @@ insubordination_war = {
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1.5
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -5058,34 +5058,12 @@ insubordination_war = {
 
 dominate = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.66
 		prestige_factor = 1.5
-		peace_cost_factor = 0.66	
-		
-		allowed_provinces = {
-			always = yes
-		}
-		peace_options = {
-			po_demand_provinces
-			po_concede_defeat
-			po_release_vassals
-			po_release_annexed
-			po_revoke_cores
-			po_annul_treaties
-			po_humiliate
-			po_humiliate_rival
-		}
-		country_desc = ALL_COUNTRIES
-		prov_desc = ALL_PROVS
-	}
-	
-	defender = {
-		badboy_factor = 0.66
-		prestige_factor = 1.5
-		peace_cost_factor = 0.66	
-		
+		peace_cost_factor = 0.66
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -5103,24 +5081,46 @@ dominate = {
 		prov_desc = ALL_PROVS
 	}
 
-	war_name = DOMINATION_WAR_NAME	
+	defender = {
+		badboy_factor = 0.66
+		prestige_factor = 1.5
+		peace_cost_factor = 0.66
+
+		allowed_provinces = {
+			always = yes
+		}
+		peace_options = {
+			po_demand_provinces
+			po_concede_defeat
+			po_release_vassals
+			po_release_annexed
+			po_revoke_cores
+			po_annul_treaties
+			po_humiliate
+			po_humiliate_rival
+		}
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_PROVS
+	}
+
+	war_name = DOMINATION_WAR_NAME
 }
 
 ameion_civil = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
-		
+
 		peace_options = {
 			po_ameion_civil
 		}
-		
+
 		deny_annex = yes
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -5129,7 +5129,7 @@ ameion_civil = {
 		peace_options = {
 			po_ameion_civil
 		}
-		
+
 		deny_annex = yes
 	}
 
@@ -5137,12 +5137,12 @@ ameion_civil = {
 }
 superiority_hag = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.5
 		prestige_factor = 1.25
-		peace_cost_factor = 0.75	
-		
+		peace_cost_factor = 0.75
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -5153,15 +5153,15 @@ superiority_hag = {
 			po_anb_tributary
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			OR = {
 				is_capital = no
@@ -5181,7 +5181,7 @@ superiority_hag = {
 				}
 			}
 		}
-		
+
 		allowed_tribal_provinces = {
 			OR = {
 				is_capital = no
@@ -5201,7 +5201,7 @@ superiority_hag = {
 				}
 			}
 		}
-		
+
 		allowed_provinces_are_eligible = yes
 
 		peace_options = {
@@ -5211,29 +5211,29 @@ superiority_hag = {
 			po_gold
 			po_destroy_monster
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	
-	war_name = TROLL_WAR_NAME	
+	}
+
+
+	war_name = TROLL_WAR_NAME
 }
 
 # dakinshi_civil = {
 # 	type = take_capital
-	
+
 # 	attacker = {
 # 		badboy_factor = 1
 # 		prestige_factor = 1
 # 		peace_cost_factor = 1
-		
+
 # 		peace_options = {
 # 			po_unite_the_dakinshi
 # 		}
-		
+
 # 		deny_annex = yes
 # 	}
-	
+
 # 	defender = {
 # 		badboy_factor = 1
 # 		prestige_factor = 1
@@ -5242,7 +5242,7 @@ superiority_hag = {
 # 		peace_options = {
 # 			po_unite_the_dakinshi
 # 		}
-		
+
 # 		deny_annex = yes
 # 	}
 
@@ -5252,12 +5252,12 @@ superiority_hag = {
 #Anbennar: get rid of some errors
 #take_capital_eyalet_war = {
 #	type = take_capital
-#	
+#
 #	attacker = {
 #		badboy_factor = 1
 #		prestige_factor = 1
 #		peace_cost_factor = 1
-#		
+#
 #		required_treaty_to_take_provinces = {
 #			po_establish_eyalet
 #		}
@@ -5267,7 +5267,7 @@ superiority_hag = {
 #			po_establish_eyalet
 #		}
 #	}
-#	
+#
 #	defender = {
 #		badboy_factor = 1
 #		prestige_factor = 1
@@ -5283,7 +5283,7 @@ superiority_hag = {
 
 take_capital_ottoman_invasion = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 2
@@ -5293,7 +5293,7 @@ take_capital_ottoman_invasion = {
 			po_demand_provinces
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 2
@@ -5309,11 +5309,11 @@ take_capital_ottoman_invasion = {
 
 war_empire_cb_wgt = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 0.9
 		prestige_factor = 1
-		peace_cost_factor = 0.95	
+		peace_cost_factor = 0.95
 		allowed_provinces = {
 			OR = {
 				is_claim = ROOT
@@ -5326,11 +5326,11 @@ war_empire_cb_wgt = {
 		}
 		prov_desc = ALL_CLAIMS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
-		peace_cost_factor = 0.75	
+		peace_cost_factor = 0.75
 		allowed_provinces = {
 			OR = {
 				is_claim = FROM
@@ -5347,57 +5347,57 @@ war_empire_cb_wgt = {
 
 superiority_spread_the_true_faith = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 2
 		peace_cost_factor = 0.25
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			po_change_religion
 			po_gold
 			po_change_culture
 			po_change_culture_same_culture_group
 		}
-		
+
 		deny_annex = yes
 		country_desc = ALL_INFIDELS
 		prov_desc = NO_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.5
 		prestige_factor = 2
 		peace_cost_factor = 0.5
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 			po_release_vassals
 		}
-		
+
 		country_desc = ALL_INFIDELS
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = WAR_OF_RELIGIOUS_SUPERIORITY_WAR_NAME	
+	}
+
+	war_name = WAR_OF_RELIGIOUS_SUPERIORITY_WAR_NAME
 }
 
 superiority_taychend_glory = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 1.25
 		prestige_factor = 1.25
 		peace_cost_factor = 1
-	
+
 		peace_options = {
 			po_taychend_vassalize
 			po_demand_provinces
@@ -5409,12 +5409,12 @@ superiority_taychend_glory = {
 			po_annul_treaties
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1.25
 		prestige_factor = 1.25
 		peace_cost_factor = 1
-	
+
 		peace_options = {
 			po_taychend_vassalize
 			po_taychend_humiliate
@@ -5426,14 +5426,14 @@ superiority_taychend_glory = {
 			po_annul_treaties
 		}
 	}
-	
+
 	war_name = TAYCHEND_GLORY_WAR_NAME
 }
 
 
 superiority_demonic_invasion = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1.0
@@ -5444,7 +5444,7 @@ superiority_demonic_invasion = {
 			po_gold
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -5465,7 +5465,7 @@ kinstrife_war = {
 		badboy_factor = 0.25
 		prestige_factor = 0.25
 		peace_cost_factor = 0.25
-		
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -5496,12 +5496,12 @@ kinstrife_war = {
 
 annex_country_aakhet = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
-		
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -5517,7 +5517,7 @@ annex_country_aakhet = {
 			po_humiliate_rival
 		}
 	}
-	
+
 	defender = {
 		badboy_factor = 0.75
 		prestige_factor = 1
@@ -5540,92 +5540,92 @@ annex_country_aakhet = {
 
 war_for_kheterata = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0
 		prestige_factor = 0
 		peace_cost_factor = 0.35
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			po_aakheta_uprising
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0
 		prestige_factor = 0
 		peace_cost_factor = 0.2
-		
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_aakheta_uprising
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = WAR_FOR_KHETERATA_WAR_NAME	
+	}
+
+	war_name = WAR_FOR_KHETERATA_WAR_NAME
 }
 
 take_capital_eternal_blossom = {
 	type = take_capital
-	
+
 	attacker = {
 		badboy_factor = 0.8
 		prestige_factor = 1
-		peace_cost_factor = 0.8	
-		
-		
+		peace_cost_factor = 0.8
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_COUNTRIES
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0.8
 		prestige_factor = 1
-		peace_cost_factor = 0.8	
-		
-		
+		peace_cost_factor = 0.8
+
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_demand_provinces
 		}
-		
+
 		country_desc = ALL_COUNTRIES
 		prov_desc = ALL_PROVS
-	}	
-	
+	}
+
 	war_name = ETERNAL_BLOSSOM_WAR_NAME
 }
 
 take_province_rending = {
 	type = take_province
-	
+
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1.5
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			OR = {
 				superregion = rahen_superregion
@@ -5641,15 +5641,15 @@ take_province_rending = {
 			po_gold
 			po_hokuma_war
 		}
-		
+
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1.5
-		peace_cost_factor = 1	
-		
+		peace_cost_factor = 1
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -5659,12 +5659,12 @@ take_province_rending = {
 			po_become_vassal
 			po_gold
 		}
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	
-	war_name = RENDING_WAR_NAME	
+	}
+
+
+	war_name = RENDING_WAR_NAME
 }
 
 talda_khudi_war = {
@@ -5674,7 +5674,7 @@ talda_khudi_war = {
 		badboy_factor = 0.1
 		prestige_factor = 1.5
 		peace_cost_factor = 0.75
-		
+
 		allowed_provinces = {
 			always = yes
 		}
@@ -5697,16 +5697,16 @@ talda_khudi_war = {
 }
 kamrayavals_war_wg = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0
 		prestige_factor = 0
 		peace_cost_factor = 0.35
-		
+
 		allowed_provinces = {
 			always = no
 		}
-		
+
 		peace_options = {
 			po_kamrayakvals_war
 		}
@@ -5716,12 +5716,12 @@ kamrayavals_war_wg = {
 
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 0
 		prestige_factor = 0
 		peace_cost_factor = 0.2
-		
+
 		allowed_provinces = {
 			always = no
 		}
@@ -5731,25 +5731,25 @@ kamrayavals_war_wg = {
 
 		allowed_provinces_are_eligible = yes
 		deny_annex = yes
-		
+
 		prov_desc = ALL_PROVS
-	}	
-	
-	war_name = KAMRAYAKVALS_WAR_WAR_NAME	
+	}
+
+	war_name = KAMRAYAKVALS_WAR_WAR_NAME
 }
 
 war_of_philosophy = {
 	type = superiority
-	
+
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 2
-		peace_cost_factor = 1.0	
-		
+		peace_cost_factor = 1.0
+
 		allowed_provinces = {
 			always = yes
 		}
-		
+
 		peace_options = {
 			po_change_religion
 			po_demand_provinces
@@ -5758,7 +5758,7 @@ war_of_philosophy = {
 		country_desc = ALL_HERETICS
 		prov_desc = ALL_PROVS
 	}
-	
+
 	defender = {
 		badboy_factor = 1
 		prestige_factor = 1
@@ -5770,4 +5770,44 @@ war_of_philosophy = {
 	}
 
 	war_name = PASIRAGHA_PHILOSOPHY_WAR_NAME
+}
+
+cb_apikhoxi_liberation_wargoal = {
+	type = take_province
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			has_province_modifier = occupied_provinces_by_dirty_westerners
+		}
+
+
+		peace_options = {
+			cb_apikhoxi_liberation_wargoal_peace_option
+		}
+	}
+
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			always = yes
+		}
+
+		peace_options = {
+			po_become_vassal
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_gold
+			po_annul_treaties
+		}
+	}
+	war_name = cb_apikhoxi_liberation_wargoal_WAR_NAME
 }

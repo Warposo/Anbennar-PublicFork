@@ -28,7 +28,7 @@ apikhoxi_1 = {
     }
 
     apikhoxi_better_a_warrior = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_armoury
         position = 2
         required_missions = {
             apikhoxi_show_of_force
@@ -51,7 +51,7 @@ apikhoxi_1 = {
     }
 
     apikhoxi_the_anger_of_a_calm_people = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_confrontation
         position = 4
         required_missions = { apikhoxi_time_to_harvest }
         trigger = {
@@ -73,7 +73,7 @@ apikhoxi_1 = {
     }
 
     apikhoxi_brothers_in_exile = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_diplomatic_relation
         position = 5
         required_missions = { apikhoxi_the_anger_of_a_calm_people }
         trigger = {
@@ -101,7 +101,7 @@ apikhoxi_2 = {
     }
 
     apikhoxi_calm_and_reasonable_discussion = {
-        icon = "mission_trade"
+        icon = personal_diplomacy
         position = 2
         required_missions = {
             apikhoxi_show_of_force
@@ -129,7 +129,7 @@ apikhoxi_2 = {
         }
     }
     apikhoxi_time_to_harvest = {
-        icon = "mission_farming"
+        icon = develop_the_south
         position = 3
         required_missions = {
                 apikhoxi_better_a_warrior
@@ -139,9 +139,11 @@ apikhoxi_2 = {
             NOT = {
                 has_country_modifier = G57_preparing_the_way
             }
-            has_opinion_modifier = {
-                who = G50
-                modifier = insulted
+            G50 = {
+                has_opinion_modifier = {
+                    who = ROOT
+                    modifier = insulted
+                }
             }
             OR = {
                 war_with = G50
@@ -163,7 +165,7 @@ apikhoxi_2 = {
     }
 
     apikhoxi_share_the_bounty_of_freedom = {
-        icon = "mission_trade_route"
+        icon = mission_feast
         position = 4
         required_missions = {
             apikhoxi_time_to_harvest
@@ -204,21 +206,31 @@ apikhoxi_2 = {
             }
         }
         effect = {
-            add_merchant = 1
+            country_event = { id = flavor_apikhoxi.5 }
         }
     }
 
     apikhoxi_little_league = {
-        icon = "mission_fish"
+        icon = unite_the_league
         position = 5
         required_missions = {
             apikhoxi_share_the_bounty_of_freedom
         }
         trigger = {
-            province_has_resource = fish
+            has_estate_privilege = estate_nobles_strong_duchies
+            prestige = 50
+            G55 = { ## eneion
+                receives_military_access_from = ROOT
+            }
+            estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 50
+			}
+            army_size = G46
+            navy_size = G47
         }
         effect = {
-            add_fish_production = 0.05
+            G55 = { country_event = { id = flavor_apikhoxi.6 } }
         }
     }
 }
@@ -233,20 +245,23 @@ apikhoxi_3 = {
     }
 
     apikhoxi_chains_for_grains = {
-        icon = "mission_development"
+        icon = chater_the_voc
         position = 1
         trigger = {
 			treasury = 125
 			stability = 2
-
+            has_opinion = {
+                who = G50
+                value = 100
+            }
         }
         effect = {
-            add_province_development = 3
+            country_event = { id = flavor_apikhoxi.7 }
         }
     }
 
     apikhoxi_mind_our_own_gardens = {
-        icon = "mission_innovation"
+        icon = prosperity_for_all
         position = 2
         required_missions = { apikhoxi_chains_for_grains }
         trigger = {
@@ -267,50 +282,175 @@ apikhoxi_3 = {
 				culture = mteibhar
 				religion = ROOT
 			}
+            random_owned_province = {
+                limit = {
+                    any_neighbor_province = {
+                        culture = mteibhar
+                        has_owner_culture = yes
+                    }
+                }
+                add_province_triggered_modifier = add_province_triggered_modifier
+            }
         }
     }
 
     apikhoxi_ride_the_river_road = {
-        icon = "mission_fertile"
+        icon = mission_se_along_the_river
         position = 3
         required_missions = { apikhoxi_down_by_the_river }
         trigger = {
-            province_production_efficiency = 0.3
+            2681 = { #Kheionai
+                trade_share = {
+                    country = ROOT
+                    share = 20
+                }
+            }
+            gold_income = 6
+            num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+                }
+                OR = {
+                    province_id = 2680
+                    province_id = 2695
+                    province_id = 2696
+                    province_id = 2699
+                    province_id = 2702
+                    province_id = 2707
+                }
+            }
         }
         effect = {
             add_production_efficiency = 0.1
+            2680 = {
+                add_province_modifier = {
+                    name = G57_amdrivos
+                    duration = -1
+                }
+                add_prosperity = 20
+            }
+            2695 = {
+                add_province_modifier = {
+                    name = G57_amdrivos
+                    duration = -1
+                }
+            }
+            2696 = {
+                add_province_modifier = {
+                    name = G57_amdrivos
+                    duration = -1
+                }
+                add_prosperity = 20
+            }
+            2699 = {
+                add_province_modifier = {
+                    name = G57_amdrivos
+                    duration = -1
+                }
+                add_prosperity = 20
+            }
+            2702 = {
+                add_province_modifier = {
+                    name = G57_amdrivos
+                    duration = -1
+                }
+                add_prosperity = 20
+            }
+            2707 = {
+                add_province_modifier = {
+                    name = G57_amdrivos
+                    duration = -1
+                }
+                add_prosperity = 20
+            }
         }
     }
 
     apikhoxi_specialty_farms = {
-        icon = "mission_water"
+        icon = mississippi_company
         position = 4
         required_missions = {
             apikhoxi_ride_the_river_road
             apikhoxi_livestock_of_the_sea
         }
         trigger = {
-            has_waterway = yes
+            OR = {
+                has_center_of_trade_of_level = 2
+                treasury = 200
+            }
+            num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+				has_building = farm_estate
+			}
+            2680 = {
+                is_prosperous = yes
+                not = { unrest = 1}
+            }
+            2695 = {
+                is_prosperous = yes
+                not = { unrest = 1}
+            }
+            2696 = {
+                is_prosperous = yes
+                not = { unrest = 1}
+            }
+            2699 = {
+                is_prosperous = yes
+                not = { unrest = 1}
+            }
+            2702 = {
+                is_prosperous = yes
+                not = { unrest = 1}
+            }
+            2707 = {
+                is_prosperous = yes
+                not = { unrest = 1}
+            }
         }
         effect = {
-            add_naval_forcelimit_modifier = 0.2
+            country_event = { id = flavor_apikhoxi.8  }
         }
     }
 
     apikhoxi_sweet_deal = {
-        icon = "mission_water"
+        icon = mission_wine_monopolies
         position = 5
         required_missions = { apikhoxi_share_the_bounty_of_freedom }
         trigger = {
-            has_waterway = yes
+            any_owned_province = {
+                trade_goods = sugar
+                has_manufactory_trigger = yes
+                OR = {
+                    has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+                }
+                base_production = 10
+            }
+            G58 = {
+                has_opinion_modifier = {
+                    who = G50
+                    modifier = sent_gift
+                }
+            }
+            trading_policy_in_node = {
+				node = 2681 #Kheeion
+				policy = improve_inland_routes
+			}
         }
         effect = {
-            add_naval_forcelimit_modifier = 0.2
+            G58 = { country_event = { id = flavor_apikhoxi.9  } }
         }
     }
 
     apikhoxi_field_of_the_free = {
-        icon = "mission_water"
+        icon = mission_che_botanical_exports
         position = 6
         required_missions = {
             apikhoxi_brothers_in_exile
@@ -320,10 +460,25 @@ apikhoxi_3 = {
             apikhoxi_spring_of_a_new_people
         }
         trigger = {
-            has_waterway = yes
+           is_great_power = yes
+            OR = {
+                in_golden_age = yes
+                all_subject_country = {
+                    NOT = { liberty_desire = 1 }
+                }
+            }
+            NOT = { num_of_rebel_armies = 1 }
+            num_of_provinces_owned_or_owned_by_subjects_with = {
+                value = 8
+                has_building = farm_estate
+            }
+            all_owned_province = {
+                NOT = { nationalism = 1 }
+                NOT = { unrest = 1 }
+            }
         }
         effect = {
-            add_naval_forcelimit_modifier = 0.2
+           country_event = { id = flavor_apikhoxi.9  }
         }
     }
 }
@@ -338,45 +493,100 @@ apikhoxi_4 = {
     }
 
     apikhoxi_widen_the_door = {
-        icon = "mission_trade"
+        icon = mission_whisper
         position = 1
         trigger = {
-            has_trade_goods = sugar
+            OR = {
+                has_spy_network_in = {
+                    who = G50
+                    value = 50
+                }
+                AND = {
+                    calc_true_if = {
+                        all_known_country = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 50
+                            }
+                            capital_scope = {
+                                region = alecand_region
+                            }
+                        }
+                        amount = 3
+                    }
+                    has_spy_network_in = {
+                        who = G50
+                        value = 25
+                    }
+                }
+            }
         }
         effect = {
-            add_trade_efficiency = 0.05
+            country_event = { id = flavor_apikhoxi.11}
         }
     }
 
     apikhoxi_down_by_the_river = {
-        icon = "mission_emancipation"
+        icon = mission_pow_just_around_the_riverbend
         position = 2
         required_missions = {
             apikhoxi_chains_for_grains
             apikhoxi_widen_the_door
         }
         trigger = {
-            abolish_slavery = yes
+           has_estate_privilege = estate_burghers_new_world_charter
+            2680 = {
+                transports_in_province = 5
+           }
+           estate_loyalty = { estate = estate_burghers loyalty = 60 }
         }
         effect = {
-            add_global_unrest = -1
+            2695 = {
+              add_permanent_claim = ROOT
+            }
+            2696 = {
+                add_permanent_claim = ROOT
+            }
+            2699 = {
+                add_permanent_claim = ROOT
+            }
+            2702 = {
+                add_permanent_claim = ROOT
+            }
+            2707 = {
+                add_permanent_claim = ROOT
+            }
+            add_country_modifier = {
+                name = G57_upriver_ferries
+                duration = 3650
+            }
         }
     }
 
     apikhoxi_livestock_of_the_sea = {
-        icon = "mission_culture"
+        icon = mission_tree_fishing
         position = 3
         required_missions = { apikhoxi_down_by_the_river }
         trigger = {
-            accept_culture = yes
+            num_of_provinces_owned_or_owned_by_subjects_with = {
+                value = 5
+                has_dock_building_trigger = yes
+                has_trade_building_trigger = yes
+			}
+            apikhoxi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+                is_prosperous = yes
+                development = 12
+            }
         }
         effect = {
-            add_accepted_culture_threshold = -0.05
+            country_event = { id = flavor_apikhoxi.9  }
         }
     }
 
     apikhoxi_no_slaves_among_us = {
-        icon = "mission_culture"
+        icon = mission_torch_fire
         position = 5
         required_missions = { apikhoxi_share_the_bounty_of_freedom }
         trigger = {
@@ -397,7 +607,7 @@ apikhoxi_5 = {
         tag = G57
     }
     apikhoxi_fertile_earth = {
-        icon = "mission_freedom"
+        icon = mission_green_village
         position = 1
         trigger = {
             mil_power = 100
@@ -409,7 +619,7 @@ apikhoxi_5 = {
     }
 
     apikhoxi_fertile_minds = {
-        icon = "mission_field"
+        icon = mission_rice_farming
         position = 2
         required_missions = { apikhoxi_fertile_earth }
         trigger = {
@@ -421,7 +631,7 @@ apikhoxi_5 = {
     }
 
     apikhoxi_fertile_fields = {
-        icon = "mission_feast"
+        icon = mission_big_house
         position = 3
         required_missions = { apikhoxi_fertile_minds }
         trigger = {
@@ -434,7 +644,7 @@ apikhoxi_5 = {
     }
 
     apikhoxi_fertile_waters = {
-        icon = "mission_feast"
+        icon = mission_arabian_sea_trade
         position = 4
         required_missions = { apikhoxi_fertile_fields }
         trigger = {
@@ -447,7 +657,7 @@ apikhoxi_5 = {
     }
 
     apikhoxi_spring_of_a_new_people = {
-        icon = "mission_feast"
+        icon = prosper_in_piedmont
         position = 5
         required_missions = { apikhoxi_fertile_waters }
         trigger = {
@@ -460,7 +670,7 @@ apikhoxi_5 = {
     }
 
     apikhoxi_feast_of_the_devand = {
-        icon = "mission_feast"
+        icon = feast_of_pheasants
         position = 6
         required_missions = { apikhoxi_spring_of_a_new_people }
         trigger = {
