@@ -750,11 +750,23 @@ apikhoxi_5 = {
         position = 5
         required_missions = { apikhoxi_fertile_waters }
         trigger = {
-            own_province_with_high_religious_unity = yes
+            num_of_owned_provinces_with = {
+				value = 5
+				NOT = {
+                    culture = ormabhen
+                    unrest = 1
+                    nationalism = 1
+                }
+            }
+            2703 = {
+                has_courthouse_building_trigger = yes
+            }
+            2680 = {
+                has_courthouse_building_trigger = yes
+            }
         }
         effect = {
-            add_religious_unity = 0.05
-            add_prestige = 10
+            country_event = { id = flavor_apikhoxi.17  }
         }
     }
 
@@ -763,11 +775,35 @@ apikhoxi_5 = {
         position = 6
         required_missions = { apikhoxi_spring_of_a_new_people }
         trigger = {
-            own_province_with_high_religious_unity = yes
+            OR = {
+                in_golden_age = yes
+                AND = {
+                    stability = 3
+                   2681 = {  has_most_province_trade_power = ROOT }
+                }
+            }
+            is_great_power = yes
+            OR = {
+                production_leader = {
+                    trade_goods = grain
+                }
+                production_leader = {
+                    trade_goods = livestock
+                }
+            }
+            OR = {
+                OR = {
+					has_country_modifier = magic_realm_conjuration_magnificent_feast_1
+					has_country_modifier = magic_realm_conjuration_magnificent_feast_2
+					has_country_modifier = magic_realm_conjuration_magnificent_feast_3
+					has_country_modifier = magic_estate_magnificent_feast_1
+					has_country_modifier = magic_estate_magnificent_feast_2
+					has_country_modifier = magic_estate_magnificent_feast_3
+				}
+            }
         }
         effect = {
-            add_religious_unity = 0.05
-            add_prestige = 10
+            country_event = { id = flavor_aphikoxi.19 }
         }
     }
 }

@@ -88,6 +88,8 @@ G57_upriver_ferries:0 "Upriver Ferries"
 G57_school_immigration:0 "The School of Immmigration"
 G57_school_agriculture:0 "School of Agriculture"
 G57_school_aquaculture:0 "School of Aquaculture"
+G57_school_history:0 "School of History "
+
 #Events
 flavor_apikhoxi.1.t:0 "Form the Apikhoxi Guard"
 
@@ -123,6 +125,14 @@ flavor_apikhoxi.13.t:0 "No Quarter to Slavers"
 flavor_apikhoxi.14.t:0 "Cradle of the Waters"
 
 flavor_apikhoxi.15.t:0 "Rebels in the Storm"
+
+flavor_apikhoxi.16.t:0 "Clash in the Cornfield"
+
+flavor_apikhoxi.17.t:0 "Talking Things Out"
+
+flavor_apikhoxi.18.t:0 "Spring in the Devand"
+
+flavor_apikhoxi.19.t:0 "Farmer's Festival in the Devand"
 #Opinion Modifiers
 #flags
 apikhoxi_liberation:0 "Liberation of the East"

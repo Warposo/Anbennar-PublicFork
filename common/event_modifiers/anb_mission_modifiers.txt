@@ -30664,3 +30664,9 @@ G57_school_aquaculture = {
 	local_unrest = -2
 
 }
+
+G57_school_history = {
+	tolerance_own = 1
+	reform_progress_growth = 0.1
+
+}
