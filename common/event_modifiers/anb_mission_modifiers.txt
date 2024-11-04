@@ -30648,3 +30648,19 @@ G57_upriver_ferries  = {
 	envoy_travel_time = -0.33
 	local_colony_cost_modifier = -0.10
 }
+
+G57_school_immigration  = {
+	envoy_travel_time = -0.25
+	local_development_cost = -0.025
+}
+
+G57_school_agriculture = {
+	trade_goods_size = 0.5
+	nobles_loyalty_modifier = 0.05
+	prestige_decay = -0.01
+}
+G57_school_aquaculture = {
+	trade_goods_size_modifier = 0.25
+	local_unrest = -2
+
+}
