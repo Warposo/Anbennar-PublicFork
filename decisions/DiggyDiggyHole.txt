@@ -7,6 +7,7 @@ country_decisions = {
 		potential = {
 			ai = yes
 			capital_scope = { province_group = hold_province }
+			NOT = { dwarovar_orc_culture_primary = yes } 
 		}
 		
 		provinces_to_highlight = {
@@ -445,10 +446,7 @@ country_decisions = {
 					has_province_modifier = advanced_rail
 					has_province_modifier = rocket_rail
 					AND = {
-						OR = {
-							has_terrain = dwarven_hold
-							has_terrain = dwarven_hold_surface
-						}
+						province_group = hold_province
 						NOT = { has_province_modifier = ruined_hold }
 						NOT = { has_province_modifier = infested_hold }
 					}
@@ -475,10 +473,7 @@ country_decisions = {
 						has_province_modifier = advanced_rail
 						has_province_modifier = rocket_rail
 						AND = {
-							OR = {
-								has_terrain = dwarven_hold
-								has_terrain = dwarven_hold_surface
-							}
+							province_group = hold_province
 							NOT = { has_province_modifier = ruined_hold }
 							NOT = { has_province_modifier = infested_hold }
 						}
@@ -505,10 +500,7 @@ country_decisions = {
 								has_province_modifier = advanced_rail
 								has_province_modifier = rocket_rail
 								AND = {
-									OR = {
-										has_terrain = dwarven_hold
-										has_terrain = dwarven_hold_surface
-									}
+									province_group = hold_province
 									NOT = { has_province_modifier = ruined_hold }
 									NOT = { has_province_modifier = infested_hold }
 								}
@@ -555,10 +547,7 @@ country_decisions = {
 					has_province_modifier = advanced_rail
 					has_province_modifier = rocket_rail
 					AND = {
-						OR = {
-							has_terrain = dwarven_hold
-							has_terrain = dwarven_hold_surface
-						}
+						province_group = hold_province
 						NOT = { has_province_modifier = ruined_hold }
 						NOT = { has_province_modifier = infested_hold }
 					}
@@ -584,10 +573,7 @@ country_decisions = {
 						has_province_modifier = advanced_rail
 						has_province_modifier = rocket_rail
 						AND = {
-							OR = {
-								has_terrain = dwarven_hold
-								has_terrain = dwarven_hold_surface
-							}
+							province_group = hold_province
 							NOT = { has_province_modifier = ruined_hold }
 							NOT = { has_province_modifier = infested_hold }
 						}
@@ -613,10 +599,7 @@ country_decisions = {
 								has_province_modifier = advanced_rail
 								has_province_modifier = rocket_rail
 								AND = {
-									OR = {
-										has_terrain = dwarven_hold
-										has_terrain = dwarven_hold_surface
-									}
+									province_group = hold_province
 									NOT = { has_province_modifier = ruined_hold }
 									NOT = { has_province_modifier = infested_hold }
 								}
@@ -1148,10 +1131,7 @@ country_decisions = {
 	ai_dig_cheat = {
 		potential = {
 			capital_scope = {
-				OR = {
-					has_terrain = dwarven_hold
-					has_terrain = dwarven_hold_surface
-				}
+				province_group = hold_province
 			}
 			OR = {
 				adm_power = 950
@@ -1239,6 +1219,7 @@ country_decisions = {
 		potential = {
 			NOT = { has_global_flag = reforged_dwarovkron }
 			capital_scope = { continent = serpentspine }
+			NOT = { has_country_flag = no_more_dwarovkron }
 		}
 		
 		provinces_to_highlight = {
