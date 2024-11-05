@@ -4,7 +4,7 @@ namespace = aakhetist
 #1-19 system stuff
 #20-49 religious abilities
 #50-99 aakhet demands
-#100+ random flavors
+#100+ random flavor
 
 
 
