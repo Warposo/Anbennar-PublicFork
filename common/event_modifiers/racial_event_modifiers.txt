@@ -585,6 +585,19 @@ ogre_tolerance_cruel_management = {
 	local_production_efficiency = 0.40
 	local_unrest = 5
 }
+ogre_tolerance_ogre_giant_ruins = {
+	local_tax_modifier = 0.05
+	yearly_prestige = 0.2
+}
+ogre_tolerance_state_giant_ruins = {
+	local_tax_modifier = 0.05
+	yearly_prestige = 0.2
+}
+ogre_tolerance_herds_market = {
+	province_trade_power_modifier = 0.50
+	local_unrest = 3
+}
+
 
 #hobgoblin
 hobgoblin_migration_cooldown = {}
