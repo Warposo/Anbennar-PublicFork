@@ -5773,20 +5773,14 @@ war_of_philosophy = {
 }
 
 cb_apikhoxi_liberation_wargoal = {
-	type = take_province
+	type = take_capital
 
 	attacker = {
 		badboy_factor = 1
 		prestige_factor = 1
 		peace_cost_factor = 1
-
-		allowed_provinces = {
-			has_province_modifier = occupied_provinces_by_dirty_westerners
-		}
-
-
 		peace_options = {
-			cb_apikhoxi_liberation_wargoal_peace_option
+			apikhoxi_liberation_wargoal_peace_option
 		}
 	}
 

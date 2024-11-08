@@ -139,7 +139,10 @@ apikhoxi_liberation:0 "Liberation of the East"
 
 ##wargoals
 cb_apikhoxi_liberation_wargoal:0 "The Liberation of the Devand"
-G57_occupied_provinces_by_dirty_westerners:0 "Occupied by the Westerners"
+cb_apikhoxi_liberation:0 "To Free the Devand"
+cb_apoikhoxi_liberation_desc:0 "We shall free the Devand"
+cb_apikhoxi_liberation_wargoal_desc:0 "Seize their capitals to break their chains."
+apikhoxi_liberation_wargoal_peace_option:0 "Break the Chains"
 
 #state privilege
 estate_nobles_G57_emerald_waters:0 "Land of Emerald Waters"

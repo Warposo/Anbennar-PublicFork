@@ -153,7 +153,7 @@ country_event = {
 
 	option = {
 		name = "flavor_apikhoxi.5.a"
-			set_country_flag = apikhoxi_liberation
+		set_country_flag = apikhoxi_liberation
 		if = {
 			limit = {
 				OR = {
@@ -869,6 +869,6 @@ country_event = {
 			set_capital = 2073
 		}
 		add_legitimacy = 25
-		add_prestige = 25 
+		add_prestige = 25
 	}
 }
