@@ -1,4 +1,8 @@
 namespace = ogre_tolerance_events
+# 0: event manager
+# 1-8: Tolerance events
+# 9-17: Ogre tolerance/flavor events by GoshGollyDarnit
+#
 # Event organizer for the ogre tolerance events - should be a huge improvement to performance - having 1 overall check for having the minority instead of one for EACH new event that gets added
 country_event = {
 	id = ogre_tolerance_events.0
@@ -975,7 +979,7 @@ country_event = {
 					1 = {
 						define_advisor = {
 							type = quartermaster
-							culture = horned_ogre
+							culture = soulseeker_ogre
 							skill = 3
 							discount = yes
 						}
@@ -1168,5 +1172,527 @@ country_event = {
 			name = ogre_food_riots
 			duration = 1825
 		}
+	}
+}
+
+# Ogre Sprawl Ordered and Grand
+country_event = {
+	id = ogre_tolerance_events.9
+	title = ogre_tolerance_events.9.t
+	desc = ogre_tolerance_events.9.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		NOT = {
+			has_country_modifier = racial_pop_ogre_purge
+			has_country_modifier = racial_pop_ogre_expulsion
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.9.a
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_sprawl
+				duration = 1825
+			}
+			random = {
+				chance = 30
+				add_ogre_minority_size_effect = yes
+			}
+		}
+		small_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.9.b
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_slums
+				duration = 1825
+			}
+		}
+		small_decrease_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.9.c
+		highlight = yes
+		trigger = {
+			ruler_has_personality = architectural_visionary_personality
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_sprawl
+				duration = 3650
+			}
+			random = {
+				chance = 30
+				add_ogre_minority_size_effect = yes
+			}
+			add_random_development = 1
+		}
+		small_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.9.e
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = greedy_personality
+				ruler_has_personality = embezzler_personality
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_compelled_labor
+				duration = 3650
+			}
+		}
+		small_decrease_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.9.f
+		highlight = yes
+		trigger = {
+			OR = {
+				full_idea_group = humanist_ideas
+				full_idea_group = administrative_ideas
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_sprawl
+				duration = 3650
+			}
+			add_ogre_minority_size_effect = yes
+			add_random_development = 1
+		}
+		small_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.9.g
+		highlight = yes
+		trigger = {
+			has_country_modifier = troll_administration
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_sprawl
+				duration = 3650
+			}
+			random = {
+				chance = 30
+				add_ogre_minority_size_effect = yes
+			}
+			add_random_development = 1
+		}
+	}
+}
+
+# Clandestine Guilds Demand Ogre Integration
+country_event = {
+	id = ogre_tolerance_events.10
+	title = ogre_tolerance_events.10.t
+	desc = ogre_tolerance_events.10.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		NOT = {
+			high_tolerance_ogre_race_trigger = yes
+			has_country_modifier = racial_pop_ogre_purge
+			has_country_modifier = racial_pop_ogre_expulsion
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.10.a
+		add_corruption = -2
+		add_country_modifier = {
+			name = ogre_tolerance_thieves_guild
+			duration = 1825
+		}
+		small_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.10.b
+		add_prestige = 10
+		small_decrease_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.10.c
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = well_connected_personality
+				ruler_has_personality = intricate_web_weaver_personality
+				ruler_has_personality = shadow_planetouched_personality
+				full_idea_group = spy_ideas
+				full_idea_group = influence_ideas
+			}
+		}
+		add_corruption = -2
+		add_country_modifier = {
+			name = ogre_tolerance_thieves_guild
+			duration = 3650
+		}
+		small_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.10.d
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = just_personality
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = life_planetouched_personality
+			}
+		}
+		add_corruption = -2
+		add_legitimacy = 10
+		add_country_modifier = {
+			name = ogre_tolerance_thieves_guild_united
+			duration = 1825
+		}
+		large_increase_of_ogre_tolerance_effect = yes
+		# TODO: If purging/expelling ogres, end purge/expulsion
+	}
+}
+
+# Quarry Operation Scrutinized by Ogre
+country_event = {
+	id = ogre_tolerance_events.11
+	title = ogre_tolerance_events.11.t
+	desc = ogre_tolerance_events.11.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		NOT = {
+			has_country_modifier = racial_pop_ogre_purge
+			has_country_modifier = racial_pop_ogre_expulsion
+		}
+	}
+	# If you have a ogre culture province, that's the culture of the advisor
+	# If not, use your religion and with culture determined by subcontinents
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						has_owner_religion = yes
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_religion = yes
+					}
+					save_event_target_as = ogre_advisor_religion
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						culture_group = ogre
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = ogre
+					}
+					save_event_target_as = ogre_advisor_culture_province
+				}
+				set_country_flag = ogre_advisor_culture_set
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.11.a
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_oversight
+				duration = 3650
+			}
+		}
+		small_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.11.b
+	}
+	option = {
+		name = ogre_tolerance_events.11.c
+		highlight = yes
+		trigger = {
+			OR = {
+				full_idea_group = infrastructure_ideas
+				full_idea_group = economic_ideas
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_oversight_2
+				duration = 9125
+			}
+		}
+		large_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.11.e
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = well_connected_personality
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = charismatic_negotiator_personality
+				ruler_has_personality = wind_planetouched_personality
+				ruler_has_personality = water_planetouched_personality
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = ogre_advisor_culture_set
+			}
+			random_list = {
+				1 = {
+					define_advisor = {
+						type = treasurer
+						culture = event_target:ogre_advisor_culture_province
+						religion = event_target:ogre_advisor_culture_province
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = natural_scientist
+						culture = event_target:ogre_advisor_culture_province
+						religion = event_target:ogre_advisor_culture_province
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = artist
+						culture = event_target:ogre_advisor_culture_province
+						religion = event_target:ogre_advisor_culture_province
+						skill = 3
+						discount = yes
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = J47
+			}
+			random_list = {
+				1 = {
+					define_advisor = {
+						type = treasurer
+						culture = bloodtooth_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = natural_scientist
+						culture = bloodtooth_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = artist
+						culture = bloodtooth_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				capital_scope = {
+					superregion = forbidden_lands_superregion
+				}
+			}
+			random_list = {
+				1 = {
+					define_advisor = {
+						type = treasurer
+						culture = fathide_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = natural_scientist
+						culture = fathide_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = artist
+						culture = fathide_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				capital_scope = {
+					OR = {
+						#superregion = gozengun_superregion
+						superregion = vimdatrong_superregion
+						superregion = yanshen_superregion
+					}
+				}
+			}
+			random_list = {
+				1 = {
+					define_advisor = {
+						type = treasurer
+						culture = horned_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = natural_scientist
+						culture = horned_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = artist
+						culture = horned_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				capital_scope = {
+					OR = {
+						superregion = gozengun_superregion
+					}
+				}
+			}
+			random_list = {
+				1 = {
+					define_advisor = {
+						type = treasurer
+						culture = soulseeker_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = natural_scientist
+						culture = soulseeker_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = artist
+						culture = soulseeker_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+			}
+		}
+		else = {
+			random_list = {
+				1 = {
+					define_advisor = {
+						type = treasurer
+						culture = mossmouth_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = natural_scientist
+						culture = mossmouth_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+				1 = {
+					define_advisor = {
+						type = artist
+						culture = mossmouth_ogre
+						religion = event_target:ogre_advisor_religion
+						skill = 3
+						discount = yes
+					}
+				}
+			}
+		}
+		large_increase_of_ogre_tolerance_effect = yes
+	}
+	option = {
+		name = ogre_tolerance_events.11.f
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = cruel_personality
+				ruler_has_personality = malevolent_personality
+				ruler_has_personality = fire_planetouched_personality
+				ruler_has_personality = shadow_planetouched_personality
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = ogre_tolerance_cruel_management
+				duration = 3650
+			}
+			spawn_rebels = {
+				type = peasant_rebels
+				size = 1
+			}
+		}
+		small_increase_of_ogre_tolerance_effect = yes
+	}
+	after = {
+		clr_country_flag = ogre_advisor_culture_set
 	}
 }

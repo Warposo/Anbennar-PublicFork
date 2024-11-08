@@ -2566,6 +2566,32 @@ ruinborn_aelantir_treasures:0 "Treasures of Aelantir"
  ogre_tolerance_events.8.b:0 "Between gluttons and gold-sick fools, I favor the gluttons."
  ogre_tolerance_events.8.c:0 "I missed the part where any of this is my problem."
 
+ ogre_tolerance_events.9.t:0 "Ogre Sprawl Ordered and Grand"
+ ogre_tolerance_events.9.d:0 "Alerted to billowing dust clouds and thunderous bangs clamoring from a slum in [Root.Capital.GetName], [Root.GetName], local guards discovered a district under construction: cleared boulevards wide enough for a dozen pack animals, towering buildings carved with ornate reliefs, and sprawling common grounds, all freshly erected to titanic scale. Before they could wander further, a watchful ogre adorned in yellow and orange sashes stopped and rebuked them for wandering around the district without safety precautions. After some lengthy explanations, the ogre shared their people’s plans: Dissatisfied with their dingy enclave, they have taken matters into their own hands, renovating the slum into a home fit for the scions of giants.\n\nYet even as we marvel at their accomplishment, the sheer scale renders the area hostile for anyone other than giantkin. As they are still mid-renovation, we could require them to adjust pathways and structures for smaller persons, but we can also leave their free beautification project alone, earning the ogres’ respect.\n\nHow should our [Root.Monarch.GetTitle] handle this sprawling development?"
+ ogre_tolerance_events.9.a:0 "As long as they keep paying taxes, leave them be."
+ ogre_tolerance_events.9.b:0 "Mandate they renovate the district for smaller persons."
+ ogre_tolerance_events.9.c:0 "I actually have some improvements in mind."
+ ogre_tolerance_events.9.e:0 "A perfect chance to squeeze these lumbering oafs for their work."
+ ogre_tolerance_events.9.f:0 "Ah, I found their paperwork; let us approve with certain conditions."
+ ogre_tolerance_events.9.g:0 "Can we at least have some recreational areas to use?"
+
+ ogre_tolerance_events.10.t:0 "Clandestine Guilds Demand Ogre Integration"
+ ogre_tolerance_events.10.d:0 "Knock-knock.\n[Root.Monarch.GetTitle] [Root.Monarch.GetName] stirs in [Root.Monarch.GetHerHis] private chamber, suddenly aware of a cloaked figure resting against an ornate cabinet a dagger’s strike away. How did-? The stranger holds up their hand, speaking in a charming yet difficult to identify accent.\n“My [Root.Monarch.GetTitle], there is no need for alarm. I am here only to speak about a plight affecting your most loyal subjects.\n“ You see, the grungy gutters and smoky back rooms complain of only one issue these days: ogre discrimination. They're prime sentry and bouncer material, but the coppers harass, arrest, and even kill them; A crime lord can't even enjoy a perfectly legal dinner without worrying about their ogre bodyguards attracting unwanted attention.\n“And so I have been sent to plead with you, [Root.Monarch.GetTitle] [Root.Monarch.GetName]; please issue a lien for these ogres. In exchange, your loyal scoundrels shall assist in outing the freelancing rats, corrupt pigs, and foreign snakes seeking to undermine this nation’s greatness. \n\n“What say you, my [Root.Monarch.GetTitle]?”"
+ ogre_tolerance_events.10.a:0 "Alright, ogres shall henceforth be-...wait, how did you get in here?"
+ ogre_tolerance_events.10.b:0 "In what world would we agree to this?"
+ ogre_tolerance_events.10.c:0 "Why didn't you bring this up at our last cabal meeting?"
+ ogre_tolerance_events.10.e:0 "By all my authority and means, I will set this wrong to right."
+
+
+ ogre_tolerance_events.11.t:0 "Quarry Operation Scrutinized by Ogre"
+ ogre_tolerance_events.11.d:0 "An angry letter from [Root.GetName] arrives in the capital, bound in bone and large as a blanket. Unfurling the massive missive, an advisor reads aloud:\n\n“To [Root.Owner.GetName]’s mightiest overlord,\nI am scrawling my displeasure about a new quarry near my home. As an ogre, I am a descendant of crafters and builders, yet I cannot help but vomit at the whole affair I’ve seen unfold. These-” The advisor bites their tongue and skips a few choice words. “Which is to say, nearly everything has gone wrong with this nascent operation: discipline, diligence, worker motivation, lack of professionalism, mineral quality, and so much more. It is my hope that you deploy your gnarliest warriors to sack the overseers and right this crooked operation.”\n\nThe advisor sets the letter down, the chamber looking to [Root.Monarch.GetTitle] [Root.Monarch.GetName].\n“How should we handle this heckling ogre, my [Root.Monarch.GetTitle]?”"
+ ogre_tolerance_events.11.a:0 "But is the whip necessary for worker motivation?"
+ ogre_tolerance_events.11.b:0 "Keep it to yourself."
+ ogre_tolerance_events.11.c:0 "Implement these methods for future projects."
+ ogre_tolerance_events.11.e:0 "I know a manager when I see one."
+ ogre_tolerance_events.11.f:0 "Child’s play; let me show you how it’s done."
+
+
  ogre_primary_refugees:0 "A Home to Ogrish People"
  ogre_food_riots:0 "Food Riots"
  desc_ogre_food_riots:0 "Food riots have broken out over grain prices due to ogre appetites"
@@ -2583,6 +2609,16 @@ ruinborn_aelantir_treasures:0 "Treasures of Aelantir"
  desc_ogre_ritual_cannibalism_allowed:0 "The ogres may feast on the dead, for it will make them stronger"
  ogre_draining_the_swamp:0 "Draining the Swamp"
  desc_ogre_draining_the_swamp:0 "By draining the swamp we've found more fertile land to develop on"
+ ogre_tolerance_sprawl:0 "Ogre Sprawl"
+ ogre_tolerance_slums:0 "Renovated Ogre Slums"
+ ogre_tolerance_compelled_labor:0 "Compelled Ogre Labor"
+ ogre_tolerance_thieves_guild:0 "Thieves Guild Informants"
+ ogre_tolerance_thieves_guild_united:0 "Thieves Guild and Ruler Unite for Justice?"
+ ogre_tolerance_oversight:0 "Ogre Oversight"
+ ogre_tolerance_oversight_2:0 "Ogre Oversight"
+ ogre_tolerance_cruel_management:0 "Woefully Cruel Management"
+
+
 
  #Mechanim
  small_increase_in_mechanim_tolerance_tooltip:0 "§GSmall Tolerance Increase§! of §YMechanim§!"
