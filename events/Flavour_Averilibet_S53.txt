@@ -1186,6 +1186,68 @@ country_event = {
 				duration = 1825
 			}
 		}
-		
+	}
+}
+
+country_event = {
+	id = flavor_averilibet.11
+	title = flavor_averilibet.11.t
+	desc = flavor_averilibet.11.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_averilibet.11.a
+		remove_estate_privilege = estate_nobility_S53_tanizu_tradition_water
+		set_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant
+	}
+}
+
+country_event = {
+	id = flavor_averilibet.12
+	title = flavor_averilibet.12.t
+	desc = flavor_averilibet.12.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_averilibet.12.a
+		every_subject_country = {
+			limit = {
+				OR = {
+					culture = tanizu
+					culture = cyazizeta_lizardfolk
+				}
+			}
+			add_country_modifier = {
+				name = S53_leopards_husband
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = flavor_averilibet.12.a
+		every_subject_country = {
+			limit = {
+				OR = {
+					culture = tanizu
+					culture = cyazizeta_lizardfolk
+				}
+			}
+			if = {
+				limit = { tag = S53 }
+				S53 = {
+					inherit = prev
+				}
+			}
+			else = {
+				L65 = {
+					inherit = prev
+				}
+			}
+		}
 	}
 }
