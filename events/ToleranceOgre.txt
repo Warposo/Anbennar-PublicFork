@@ -1,20 +1,21 @@
 namespace = ogre_tolerance_events
-
 # Event organizer for the ogre tolerance events - should be a huge improvement to performance - having 1 overall check for having the minority instead of one for EACH new event that gets added
 country_event = {
 	id = ogre_tolerance_events.0
 	title = race_setup_events.1.d
 	desc = race_setup_events.1.d
 	picture = BORDER_TENSION_eventPicture
-
 	is_triggered_only = yes
 	hidden = yes
-
 	trigger = {
-		fast_owns_num_pops_of_race = { race = ogre amount = 1 }
-		NOT = { has_country_modifier = ogre_administration }
+		fast_owns_num_pops_of_race = {
+			race = ogre
+			amount = 1
+		}
+		NOT = {
+			has_country_modifier = ogre_administration
+		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 		modifier = {
@@ -28,20 +29,24 @@ country_event = {
 	}
 	option = {
 		random_list = {
-			1 = { }
+			1 = {
+			}
 			# ensure there's an empty option first in case none of the others are available
 			# and also because it seems this one might be picked rarely even if the others are available...
-
 			#generic demand autonomy
 			10 = {
 				trigger = {
 					any_owned_province = {
-						NOT = { local_autonomy = 50 }
+						NOT = {
+							local_autonomy = 50
+						}
 						is_capital = no
 						has_ogre_minority_trigger = yes
 					}
 				}
-				country_event = { id = ogre_tolerance_events.1 }
+				country_event = {
+					id = ogre_tolerance_events.1
+				}
 			}
 			#generic tolerance increase
 			10 = {
@@ -53,41 +58,49 @@ country_event = {
 						ruler_has_personality = kind_hearted_personality
 						ruler_has_personality = benevolent_personality
 						has_idea_group = humanist_ideas
-						
 						any_ally = {
 							has_country_modifier = ogre_administration
 						}
 					}
 				}
-				country_event = { id = ogre_tolerance_events.2 }
+				country_event = {
+					id = ogre_tolerance_events.2
+				}
 			}
 			#generic tolerance decrease
 			10 = {
 				trigger = {
 					OR = {
-						NOT = { stability = 0 }
+						NOT = {
+							stability = 0
+						}
 						is_bankrupt = yes
 						inflation = 25
 						AND = {
 							is_at_war = yes
-							NOT = { war_score = 20 }
+							NOT = {
+								war_score = 20
+							}
 						}
 						war_exhaustion = 10
 						ruler_has_personality = cruel_personality
 						ruler_has_personality = malevolent_personality
 						ruler_has_personality = conqueror_personality
-						
 						any_rival_country = {
 							has_country_modifier = ogre_administration
 						}
 					}
 				}
-				country_event = { id = ogre_tolerance_events.3 }
+				country_event = {
+					id = ogre_tolerance_events.3
+				}
 			}
 			#getting into the swamp
 			10 = {
 				trigger = {
-					NOT = { has_country_modifier = ogre_draining_the_swamp }
+					NOT = {
+						has_country_modifier = ogre_draining_the_swamp
+					}
 				}
 				country_event = {
 					id = ogre_tolerance_events.4
@@ -97,9 +110,15 @@ country_event = {
 			10 = {
 				trigger = {
 					OR = {
-						NOT = { has_country_modifier = ogre_monumentality }
-						NOT = { has_country_modifier = ogre_building_accomodations }
-						NOT = { has_country_modifier = giantkin_monumentality }
+						NOT = {
+							has_country_modifier = ogre_monumentality
+						}
+						NOT = {
+							has_country_modifier = ogre_building_accomodations
+						}
+						NOT = {
+							has_country_modifier = giantkin_monumentality
+						}
 					}
 				}
 				modifier = {
@@ -122,14 +141,24 @@ country_event = {
 			10 = {
 				trigger = {
 					OR = {
-						NOT = { has_country_modifier = ogre_ritual_cannibalism_outlawed }
-						NOT = { has_country_modifier = ogre_ritual_cannibalism_restricted }
-						NOT = { has_country_modifier = ogre_ritual_cannibalism_allowed }
+						NOT = {
+							has_country_modifier = ogre_ritual_cannibalism_outlawed
+						}
+						NOT = {
+							has_country_modifier = ogre_ritual_cannibalism_restricted
+						}
+						NOT = {
+							has_country_modifier = ogre_ritual_cannibalism_allowed
+						}
 					}
 				}
 				modifier = {
 					factor = 1.5
-					NOT = { check_variable = { army_tradition = 30 } }
+					NOT = {
+						check_variable = {
+							army_tradition = 30
+						}
+					}
 				}
 				country_event = {
 					id = ogre_tolerance_events.6
@@ -152,7 +181,9 @@ country_event = {
 			#insastiable
 			10 = {
 				trigger = {
-					NOT = { has_country_modifier = ogre_food_riots }
+					NOT = {
+						has_country_modifier = ogre_food_riots
+					}
 					has_estate = estate_burghers
 				}
 				modifier = {
@@ -199,9 +230,7 @@ country_event = {
 	desc = ogre_tolerance_events.1.d
 	picture = DEBATE_REPUBLICAN_eventPicture
 	goto = racial_pop_province_target
-	
 	is_triggered_only = yes
-	
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -216,7 +245,9 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					NOT = { local_autonomy = 50 }
+					NOT = {
+						local_autonomy = 50
+					}
 					is_capital = no
 					has_ogre_minority_trigger = yes
 				}
@@ -224,7 +255,9 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					NOT = { local_autonomy = 50 }
+					NOT = {
+						local_autonomy = 50
+					}
 					is_capital = no
 					has_ogre_minority_trigger = yes
 					development = 10
@@ -233,8 +266,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = {		#Granted!
+	option = {
+		#Granted!
 		name = ogre_tolerance_events.1.a
 		ai_chance = {
 			factor = 50
@@ -243,17 +276,14 @@ country_event = {
 				wants_to_increase_tolerance_ogre = yes
 			}
 		}
-		
 		add_adm_power = -40
-		
 		medium_increase_of_ogre_tolerance_effect = yes
-		
 		event_target:racial_pop_province_target = {
 			add_local_autonomy = 25
 		}
 	}
-	
-	option = {		#Make some concessions
+	option = {
+		#Make some concessions
 		name = ogre_tolerance_events.1.b
 		ai_chance = {
 			factor = 50
@@ -266,16 +296,13 @@ country_event = {
 				average_autonomy = 10
 			}
 		}
-		
 		add_adm_power = -20
-		
 		event_target:racial_pop_province_target = {
 			add_local_autonomy = 10
 		}
-
 	}
-	
-	option = {		#No. Haven't we given them enough?!
+	option = {
+		#No. Haven't we given them enough?!
 		name = ogre_tolerance_events.1.c
 		ai_chance = {
 			factor = 50
@@ -284,14 +311,14 @@ country_event = {
 				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
-		
 		medium_decrease_of_ogre_tolerance_effect = yes
-		
 	}
-	
-	option = {		#Special: Make empty promises
+	option = {
+		#Special: Make empty promises
 		name = ogre_tolerance_events.1.e
-		trigger = { ruler_has_personality = charismatic_negotiator_personality }
+		trigger = {
+			ruler_has_personality = charismatic_negotiator_personality
+		}
 		highlight = yes
 		ai_chance = {
 			factor = 100
@@ -304,18 +331,13 @@ country_event = {
 				average_autonomy = 10
 			}
 		}
-		
 		add_dip_power = -10
-		
 		small_increase_of_ogre_tolerance_effect = yes
-		
 		event_target:racial_pop_province_target = {
 			add_local_autonomy = 1
 		}
-		
 	}
 }
-
 
 #Tolerance Increase
 country_event = {
@@ -323,15 +345,12 @@ country_event = {
 	title = ogre_tolerance_events.2.t
 	desc = ogre_tolerance_events.2.d
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
 	is_triggered_only = yes
-	
 	mean_time_to_happen = {
 		days = 1
 	}
 	immediate = {
 		hidden_effect = {
-		
 			random_list = {
 				75 = {
 					set_country_flag = racial_pop_small_increase
@@ -342,25 +361,24 @@ country_event = {
 			}
 		}
 	}
-	
-	option = {		#Good for them
+	option = {
+		#Good for them
 		name = ogre_tolerance_events.2.a
 		ai_chance = {
 			factor = 50
 		}
-		
 		trigger_switch = {
 			on_trigger = has_country_flag
-			racial_pop_small_increase = { small_increase_of_ogre_tolerance_effect = yes }
-			racial_pop_medium_increase = { medium_increase_of_ogre_tolerance_effect = yes }
+			racial_pop_small_increase = {
+				small_increase_of_ogre_tolerance_effect = yes
+			}
+			racial_pop_medium_increase = {
+				medium_increase_of_ogre_tolerance_effect = yes
+			}
 		}
-		
 		clear_racial_pop_tolerance_chance_flags = yes
-		
 	}
-	
 }
-
 
 #Tolerance Decrease
 country_event = {
@@ -368,15 +386,12 @@ country_event = {
 	title = ogre_tolerance_events.3.t
 	desc = ogre_tolerance_events.3.d
 	picture = BAD_WITH_MONARCH_eventPicture
-	
 	is_triggered_only = yes
-	
 	mean_time_to_happen = {
 		days = 1
 	}
 	immediate = {
 		hidden_effect = {
-		
 			random_list = {
 				75 = {
 					set_country_flag = racial_pop_small_decrease
@@ -387,23 +402,23 @@ country_event = {
 			}
 		}
 	}
-	
-	option = {		#That's unfortunate
+	option = {
+		#That's unfortunate
 		name = ogre_tolerance_events.3.a
 		ai_chance = {
 			factor = 50
 		}
-		
 		trigger_switch = {
 			on_trigger = has_country_flag
-			racial_pop_small_decrease = { small_decrease_of_ogre_tolerance_effect = yes }
-			racial_pop_medium_decrease = { medium_decrease_of_ogre_tolerance_effect = yes }
+			racial_pop_small_decrease = {
+				small_decrease_of_ogre_tolerance_effect = yes
+			}
+			racial_pop_medium_decrease = {
+				medium_decrease_of_ogre_tolerance_effect = yes
+			}
 		}
-		
 		clear_racial_pop_tolerance_chance_flags = yes
-		
 	}
-	
 }
 
 #into the swamp
@@ -412,11 +427,9 @@ country_event = {
 	title = ogre_tolerance_events.4.t
 	desc = ogre_tolerance_events.4.d
 	picture = COLONIZATION_eventPicture
-	
 	is_triggered_only = yes
-		
 	#settle it over a pint
-	option = {	
+	option = {
 		name = ogre_tolerance_events.4.a
 		ai_chance = {
 			factor = 50
@@ -429,7 +442,6 @@ country_event = {
 		add_dip_power = -20
 		medium_increase_of_ogre_tolerance_effect = yes
 	}
-	
 	#some may die but a sacrifice im willing to make
 	option = {
 		name = ogre_tolerance_events.4.b
@@ -462,11 +474,9 @@ country_event = {
 	title = ogre_tolerance_events.5.t
 	desc = ogre_tolerance_events.5.desc
 	picture = CITY_DEVELOPMENT_eventPicture
-	
 	is_triggered_only = yes
-		
 	#building big doesn't go out of style
-	option = {	
+	option = {
 		name = ogre_tolerance_events.5.a
 		ai_chance = {
 			factor = 50
@@ -485,7 +495,6 @@ country_event = {
 		add_legitimacy = 10
 		largest_increase_of_ogre_tolerance_effect = yes
 	}
-	
 	#lets stay conservative
 	option = {
 		name = ogre_tolerance_events.5.b
@@ -498,7 +507,6 @@ country_event = {
 		}
 		medium_increase_of_ogre_tolerance_effect = yes
 	}
-	
 	#no thanks small doors only
 	option = {
 		name = ogre_tolerance_events.5.c
@@ -511,7 +519,6 @@ country_event = {
 		}
 		medium_decrease_of_ogre_tolerance_effect = yes
 	}
-	
 	#our leader is great at building
 	option = {
 		name = ogre_tolerance_events.5.d
@@ -540,11 +547,9 @@ country_event = {
 	title = ogre_tolerance_events.6.t
 	desc = ogre_tolerance_events.6.desc
 	picture = LAND_MILITARY_eventPicture
-	
 	is_triggered_only = yes
-		
 	#our ogres need to eat
-	option = {	
+	option = {
 		name = ogre_tolerance_events.6.a
 		ai_chance = {
 			factor = 50
@@ -560,7 +565,6 @@ country_event = {
 		}
 		medium_increase_of_ogre_tolerance_effect = yes
 	}
-	
 	#discrete rituals
 	option = {
 		name = ogre_tolerance_events.6.b
@@ -573,7 +577,6 @@ country_event = {
 		}
 		small_decrease_of_ogre_tolerance_effect = yes
 	}
-	
 	#people aren't food!
 	option = {
 		name = ogre_tolerance_events.6.c
@@ -590,7 +593,6 @@ country_event = {
 		}
 		medium_decrease_of_ogre_tolerance_effect = yes
 	}
-	
 	#these corpses are recruits not food
 	option = {
 		name = ogre_tolerance_events.6.d
@@ -616,9 +618,7 @@ country_event = {
 	title = ogre_tolerance_events.7.t
 	desc = ogre_tolerance_events.7.d
 	picture = ADVISOR_eventPicture
-	
 	is_triggered_only = yes
-
 	# If you have a ogre culture province, that's the one the advisor comes from
 	immediate = {
 		hidden_effect = {
@@ -629,14 +629,15 @@ country_event = {
 					}
 				}
 				random_owned_province = {
-					limit = { culture_group = ogre }
+					limit = {
+						culture_group = ogre
+					}
 					save_event_target_as = ogre_advisor_culture_province
 				}
 				set_country_flag = ogre_advisor_culture_set
 			}
 		}
 	}
-
 	# Recruit the ogre
 	option = {
 		name = ogre_tolerance_events.7.a
@@ -653,9 +654,13 @@ country_event = {
 		}
 		small_increase_of_ogre_tolerance_effect = yes
 		if = {
-			limit = { has_country_flag = ogre_advisor_culture_set }
+			limit = {
+				has_country_flag = ogre_advisor_culture_set
+			}
 			if = {
-				limit = { monthly_income = 50 }
+				limit = {
+					monthly_income = 50
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
@@ -663,7 +668,6 @@ country_event = {
 							culture = event_target:ogre_advisor_culture_province
 							religion = event_target:ogre_advisor_culture_province
 							skill = 3
-							
 							discount = yes
 						}
 					}
@@ -673,21 +677,22 @@ country_event = {
 							culture = event_target:ogre_advisor_culture_province
 							religion = event_target:ogre_advisor_culture_province
 							skill = 3
-							
 							discount = yes
 						}
 					}
 				}
 			}
 			else_if = {
-				limit = { monthly_income = 25 }
+				limit = {
+					monthly_income = 25
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = event_target:ogre_advisor_culture_province
 							religion = event_target:ogre_advisor_culture_province
-							skill = 2							
+							skill = 2
 							discount = yes
 						}
 					}
@@ -696,7 +701,7 @@ country_event = {
 							type = quartermaster
 							culture = event_target:ogre_advisor_culture_province
 							religion = event_target:ogre_advisor_culture_province
-							skill = 2							
+							skill = 2
 							discount = yes
 						}
 					}
@@ -718,7 +723,7 @@ country_event = {
 							type = quartermaster
 							culture = event_target:ogre_advisor_culture_province
 							religion = event_target:ogre_advisor_culture_province
-							skill = 1							
+							skill = 1
 							discount = yes
 						}
 					}
@@ -726,18 +731,19 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				tag = J47
 			}
 			if = {
-				limit = { monthly_income = 50 }
+				limit = {
+					monthly_income = 50
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = bloodtooth_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
@@ -746,21 +752,21 @@ country_event = {
 							type = quartermaster
 							culture = bloodtooth_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
 				}
 			}
 			else_if = {
-				limit = { monthly_income = 25 }
+				limit = {
+					monthly_income = 25
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = bloodtooth_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -781,7 +787,6 @@ country_event = {
 							type = artist
 							culture = bloodtooth_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -797,20 +802,21 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				capital_scope = {
 					superregion = forbidden_lands_superregion
-				} 
+				}
 			}
 			if = {
-				limit = { monthly_income = 50 }
+				limit = {
+					monthly_income = 50
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = fathide_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
@@ -819,21 +825,21 @@ country_event = {
 							type = quartermaster
 							culture = fathide_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
 				}
 			}
 			else_if = {
-				limit = { monthly_income = 25 }
+				limit = {
+					monthly_income = 25
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = fathide_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -842,7 +848,6 @@ country_event = {
 							type = quartermaster
 							culture = fathide_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -855,7 +860,6 @@ country_event = {
 							type = artist
 							culture = fathide_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -864,7 +868,6 @@ country_event = {
 							type = quartermaster
 							culture = fathide_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -872,7 +875,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				capital_scope = {
 					OR = {
 						#superregion = gozengun_superregion
@@ -882,14 +885,15 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { monthly_income = 50 }
+				limit = {
+					monthly_income = 50
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = horned_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
@@ -898,21 +902,21 @@ country_event = {
 							type = quartermaster
 							culture = horned_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
 				}
 			}
 			else_if = {
-				limit = { monthly_income = 25 }
+				limit = {
+					monthly_income = 25
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = horned_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -921,7 +925,6 @@ country_event = {
 							type = quartermaster
 							culture = horned_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -934,7 +937,6 @@ country_event = {
 							type = artist
 							culture = horned_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -943,7 +945,6 @@ country_event = {
 							type = quartermaster
 							culture = horned_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -951,7 +952,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				capital_scope = {
 					OR = {
 						superregion = gozengun_superregion
@@ -959,14 +960,15 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { monthly_income = 50 }
+				limit = {
+					monthly_income = 50
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = soulseeker_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
@@ -975,21 +977,21 @@ country_event = {
 							type = quartermaster
 							culture = horned_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
 				}
 			}
 			else_if = {
-				limit = { monthly_income = 25 }
+				limit = {
+					monthly_income = 25
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = soulseeker_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -998,7 +1000,6 @@ country_event = {
 							type = quartermaster
 							culture = soulseeker_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -1011,7 +1012,6 @@ country_event = {
 							type = artist
 							culture = soulseeker_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -1020,7 +1020,6 @@ country_event = {
 							type = quartermaster
 							culture = soulseeker_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -1029,14 +1028,15 @@ country_event = {
 		}
 		else = {
 			if = {
-				limit = { monthly_income = 50 }
+				limit = {
+					monthly_income = 50
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = mossmouth_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
@@ -1045,21 +1045,21 @@ country_event = {
 							type = quartermaster
 							culture = mossmouth_ogre
 							skill = 3
-							
 							discount = yes
 						}
 					}
 				}
 			}
 			else_if = {
-				limit = { monthly_income = 25 }
+				limit = {
+					monthly_income = 25
+				}
 				random_list = {
 					1 = {
 						define_advisor = {
 							type = artist
 							culture = mossmouth_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -1068,7 +1068,6 @@ country_event = {
 							type = quartermaster
 							culture = mossmouth_ogre
 							skill = 2
-							
 							discount = yes
 						}
 					}
@@ -1081,7 +1080,6 @@ country_event = {
 							type = artist
 							culture = mossmouth_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -1090,7 +1088,6 @@ country_event = {
 							type = quartermaster
 							culture = mossmouth_ogre
 							skill = 1
-							
 							discount = yes
 						}
 					}
@@ -1098,7 +1095,6 @@ country_event = {
 			}
 		}
 	}
-
 	# A true exemplar of their race
 	option = {
 		name = ogre_tolerance_events.7.b
@@ -1111,7 +1107,6 @@ country_event = {
 		}
 		medium_increase_of_ogre_tolerance_effect = yes
 	}
-
 	# We dun give a shit
 	option = {
 		name = ogre_tolerance_events.7.c
@@ -1124,7 +1119,6 @@ country_event = {
 		}
 		small_decrease_of_ogre_tolerance_effect = yes
 	}
-
 	after = {
 		clr_country_flag = ogre_advisor_culture_set
 	}
@@ -1136,13 +1130,9 @@ country_event = {
 	title = ogre_tolerance_events.8.t
 	desc = ogre_tolerance_events.8.d
 	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
-	
-	
-	
 	is_triggered_only = yes
-		
 	# subsidize the vulnerable
-	option = {	
+	option = {
 		name = ogre_tolerance_events.8.a
 		ai_chance = {
 			factor = 50
@@ -1154,7 +1144,6 @@ country_event = {
 		add_years_of_income = -0.25
 		small_increase_of_ogre_tolerance_effect = yes
 	}
-	
 	#i like the ogres more
 	option = {
 		name = ogre_tolerance_events.8.b
@@ -1164,7 +1153,6 @@ country_event = {
 		reduce_estate_burghers_loyalty_effect = yes
 		small_increase_of_ogre_tolerance_effect = yes
 	}
-	
 	#not my problem, sorry ogres
 	option = {
 		name = ogre_tolerance_events.8.c
