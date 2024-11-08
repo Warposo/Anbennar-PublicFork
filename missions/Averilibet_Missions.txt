@@ -344,26 +344,43 @@ column_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			calc_true_if = {
-				any_known_country = {
-					OR = {
-						culture = tanizu
-						culture = cyazizeta_lizardfolk
+		trigger = {
+			OR = {
+				calc_true_if = {
+					any_known_country = {
+						OR = {
+							culture = tanizu
+							culture = cyazizeta_lizardfolk
+						}
+						is_subject = no
+						guaranteed_by = ROOT
+						alliance_with = ROOT
+						has_country_modifier = S53_leopards_promise
+						trust = {
+							who = ROOT
+							value = 55
+						}
 					}
-					is_subject = no
-					guaranteed_by = ROOT
-					alliance_with = ROOT
-					has_country_modifier = S53_leopards_promise
-					trust = {
-						who = ROOT
-						value = 55
-					}
+					amount = 4
 				}
-				amount = 4
-			}
+				calc_true_if = {
+					any_known_country = {
+						OR = {
+							culture = tanizu
+							culture = cyazizeta_lizardfolk
+						}
+						is_subject = no
+						guaranteed_by = ROOT
+						alliance_with = ROOT
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = released_in_peace
+						}
+					}
+					amount = 6
+				}
+			} 
 		} 
-		
 		effect = {
 			every_known_country = {
 				limit = {	
@@ -516,9 +533,83 @@ column_2 = {
 		required_missions = { jumping_beasts_S53 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				num_of_times_expanded_infrastructure = 2
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				OR = {
+					has_building = regimental_camp
+					has_building = conscription_center
+				}
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+				is_core = root
+				has_province_modifier = S53_imbitinda_games
+				value = 3
+			}
+			6606 = {
+				has_great_project = {
+					type = e_arenaginku_adras
+					tier = 2
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			every_core_province = {
+				Limit = {
+					num_of_times_expanded_infrastructure = 2
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					OR = {
+						has_building = regimental_camp
+						has_building = conscription_center
+					}
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					is_core = root
+					has_province_modifier = S53_imbitinda_games
+				}
+				remove_province_modifier = S53_imbitinda_games
+				add_province_modifier = {
+					name = S53_mezhinda_games
+					duration = -1
+				}
+				add_building_construction = {
+					building = ramparts
+					speed = 0.90
+					cost = 0
+				}
+			}
+			remove_country_modifier = S53_imbitinda_games_nat_matamot
+			remove_country_modifier = S53_imbitinda_games_nat_yikikakeli
+			remove_country_modifier = S53_imbitinda_games_nat_tristrias
+			add_country_modifier = {
+				name = S53_mezhinda_games_nat_matamot
+				duration = -1
+			}
+			add_country_modifier = {
+				name = S53_mezhinda_games_nat_yikikakeli
+				duration = -1
+			}
+			add_country_modifier = {
+				name = S53_mezhinda_games_nat_tristrias
+				duration = -1
+			}
+		} 
 	}
 }
 column_3 = {
@@ -790,18 +881,16 @@ column_3 = {
 
 		trigger = { 
 			calc_true_if = {
-				all_subject_country = {
+				amount = 4
+				any_subject_country = {
 					OR = {
 						culture = tanizu
 						culture = cyazizeta_lizardfolk
 					}
-					prev = {
-						development_in_provinces = {
-							value = 1
-						}
-					}
+					development_in_provinces = {
+						value = 35
+					}	
 				}
-				amount = 150
 			}
 			south_denbari = {
 				is_core = ROOT
@@ -1158,9 +1247,75 @@ column_4 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			ishyamtumu_region = {
+				owned_by_subject_of = ROOT
+				type = all
+			}
+			any_subject_country = {
+				overlord = { tag = ROOT }
+				OR = {
+					culture = tanizu
+					culture = cyazizeta_lizardfolk
+				}
+				religion = sky_domain
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				owned_by_subject_of = ROOT
+				OR = {
+					has_building = cathedral
+					has_building = temple
+				}
+				region = ishyamtumu_region
+			}
+		} 
 
-		effect = {  } 
+		effect = {  
+			add_ruler_personality = peasant_revolt_leader_personality
+			every_subject_country = {
+				limit = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					overlord = { tag = ROOT }
+				}
+				sut_ra_thon_area = {
+					add_permanent_claim = prev
+				} 
+				yok_ra_shaga_area = {
+					add_permanent_claim = prev
+				}
+				tiki_ra_shaga_area = {
+					add_permanent_claim = prev
+				}
+				tiki_shalazar_area = {
+					add_permanent_claim = prev
+				}
+				add_adm_power = 50
+				add_mil_power = 50
+				add_dip_power = 50
+			}
+			set_country_flag = S53_marriage_of_many_unlock_subjects_flag
+			set_country_flag = S53_children_of_beasts_unlock_subjects_flag
+			add_adm_power = 50
+			add_mil_power = 50
+			add_dip_power = 50
+			every_subject_country = {
+				limit = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					overlord = { tag = ROOT }
+				}
+				add_country_modifier = {
+					name = S53_understanding_amilak
+					duration = -1
+				}
+			}
+		} 
 	}
 
 	the_real_deal_S53 = {
@@ -1172,7 +1327,34 @@ column_4 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			south_denbari = {
+				nationalism = 0
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				num_of_units_in_province = {
+					who = ROOT
+					amount = 2
+				}
+				devastation = 0
+				type = all
+			}
+			calc_true_if = {
+				amount = 4
+				any_subject_country = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					development_in_provinces = {
+						value = 100
+					}
+					 NOT = { liberty_desire = 33 } 	
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -1304,14 +1486,13 @@ column_5 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  
-			east_sarhal_superregion = {
-				AND = {
-					culture = naleni_harpy
-					development = 10
-				}
-				owned_by = ROOT
-			}		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 4
+				superregion = east_sarhal_superregion
+				culture = naleni_harpy
+				development = 10
+			}
 			high_tolerance_harpy_race_trigger = yes
 		} 
 

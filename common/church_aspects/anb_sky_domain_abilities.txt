@@ -378,7 +378,7 @@ S53_children_of_beasts_relg_power = {
 				has_country_flag = S53_children_of_beasts_unlock
 			}
 			overlord = {
-				has_country_flag = S53_children_of_beasts_unlock_subjects
+				has_country_flag = S53_children_of_beasts_unlock_subjects_flag
 				has_country_flag = S53_children_of_beasts_unlock
 			}
 		}
