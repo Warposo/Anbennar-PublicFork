@@ -1,0 +1,8 @@
+ogre_tolerance_giants_region_available = {
+	AND = {
+		region = $region$_region
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_$region$
+		}
+	}
+}

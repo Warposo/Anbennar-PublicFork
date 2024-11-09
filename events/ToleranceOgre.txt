@@ -1190,10 +1190,21 @@ country_event = {
 			has_country_modifier = racial_pop_ogre_purge
 			has_country_modifier = racial_pop_ogre_expulsion
 		}
+		any_owned_province = {
+			has_ogre_minority_trigger = yes
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_ogre_minority_trigger = yes
+			}
+			save_event_target_as = ogre_tolerance_target
+		}
 	}
 	option = {
 		name = ogre_tolerance_events.9.a
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_sprawl
 				duration = 1825
@@ -1207,7 +1218,7 @@ country_event = {
 	}
 	option = {
 		name = ogre_tolerance_events.9.b
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_slums
 				duration = 1825
@@ -1221,7 +1232,7 @@ country_event = {
 		trigger = {
 			ruler_has_personality = architectural_visionary_personality
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_sprawl
 				duration = 3650
@@ -1243,7 +1254,7 @@ country_event = {
 				ruler_has_personality = embezzler_personality
 			}
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_compelled_labor
 				duration = 3650
@@ -1260,7 +1271,7 @@ country_event = {
 				full_idea_group = administrative_ideas
 			}
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_sprawl
 				duration = 3650
@@ -1276,7 +1287,7 @@ country_event = {
 		trigger = {
 			has_country_modifier = troll_administration
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_sprawl
 				duration = 3650
@@ -1303,6 +1314,17 @@ country_event = {
 	trigger = {
 		NOT = {
 			high_tolerance_ogre_race_trigger = yes
+		}
+		any_owned_province = {
+			has_ogre_minority_trigger = yes
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_ogre_minority_trigger = yes
+			}
+			save_event_target_as = ogre_tolerance_target
 		}
 	}
 	option = {
@@ -1375,6 +1397,17 @@ country_event = {
 			has_country_modifier = racial_pop_ogre_purge
 			has_country_modifier = racial_pop_ogre_expulsion
 		}
+		any_owned_province = {
+			has_ogre_minority_trigger = yes
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_ogre_minority_trigger = yes
+			}
+			save_event_target_as = ogre_tolerance_target
+		}
 	}
 	# If you have a ogre culture province, that's the culture of the advisor
 	# If not, use your religion and with culture determined by subcontinents
@@ -1411,7 +1444,7 @@ country_event = {
 	}
 	option = {
 		name = ogre_tolerance_events.11.a
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_oversight
 				duration = 3650
@@ -1431,7 +1464,7 @@ country_event = {
 				full_idea_group = economic_ideas
 			}
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_oversight_2
 				duration = 9125
@@ -1522,7 +1555,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				capital_scope = {
+				event_target:ogre_tolerance_target = {
 					superregion = forbidden_lands_superregion
 				}
 			}
@@ -1558,7 +1591,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				capital_scope = {
+				event_target:ogre_tolerance_target = {
 					OR = {
 						#superregion = gozengun_superregion
 						superregion = vimdatrong_superregion
@@ -1598,7 +1631,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				capital_scope = {
+				event_target:ogre_tolerance_target = {
 					OR = {
 						superregion = gozengun_superregion
 					}
@@ -1678,7 +1711,7 @@ country_event = {
 				ruler_has_personality = shadow_planetouched_personality
 			}
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_cruel_management
 				duration = 3650
@@ -1707,16 +1740,35 @@ country_event = {
 	}
 	trigger = {
 		has_estate = estate_adventurers
-		#TODO
 		any_owned_province = {
 			has_ogre_minority_trigger = yes
 			OR = {
-				AND = {
-					region = northern_pass_region
-					NOT = {
-						has_global_flag = ogre_tolerance_giants_northern_pass
-					}
-				}
+				ogre_tolerance_giants_region_available = { region = northern_pass }
+				ogre_tolerance_giants_region_available = { region = gerudian_frontier }
+				ogre_tolerance_giants_region_available = { region = dalr }
+				ogre_tolerance_giants_region_available = { region = olavlund }
+				ogre_tolerance_giants_region_available = { region = alenic_reach }
+				ogre_tolerance_giants_region_available = { region = yyl_moista }
+				ogre_tolerance_giants_region_available = { region = ogre_valley }
+				ogre_tolerance_giants_region_available = { region = west_forbidden_plains }
+				ogre_tolerance_giants_region_available = { region = serpent_gift }
+				ogre_tolerance_giants_region_available = { region = east_forbidden_plains }
+				ogre_tolerance_giants_region_available = { region = south_yarikhoi }
+				ogre_tolerance_giants_region_available = { region = north_yarikhoi }
+				ogre_tolerance_giants_region_available = { region = nuzurbokh }
+				ogre_tolerance_giants_region_available = { region = moduk }
+				ogre_tolerance_giants_region_available = { region = khaashalg }
+				ogre_tolerance_giants_region_available = { region = nomsyulhan }
+				ogre_tolerance_giants_region_available = { region = shuvuushudi }
+				ogre_tolerance_giants_region_available = { region = odheongu }
+				ogre_tolerance_giants_region_available = { region = north_yanshen }
+				ogre_tolerance_giants_region_available = { region = yanshen_coast }
+				ogre_tolerance_giants_region_available = { region = upper_yanshen }
+				ogre_tolerance_giants_region_available = { region = demon_hills }
+				ogre_tolerance_giants_region_available = { region = shamakhad }
+				ogre_tolerance_giants_region_available = { region = dhujat }
+				ogre_tolerance_giants_region_available = { region = rahen_coast }
+				ogre_tolerance_giants_region_available = { region = rakhadesh }
 			}
 		}
 	}
@@ -1753,12 +1805,15 @@ country_event = {
 					ogre_tolerance_giants_region_available = { region = rakhadesh }
 				}
 			}
-			save_event_target_as = ogre_tolerance_giants_target
+			save_event_target_as = ogre_tolerance_target
 		}
+	}
+	after = {
+		ogre_tolerance_giants_happened = yes
 	}
 	option = {
 		name = ogre_tolerance_events.12.a
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_ogre_giant_ruins
 				duration = -1
@@ -1807,7 +1862,7 @@ country_event = {
 				ruler_has_personality = water_planetouched_personality
 			}
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_state_giant_ruins
 				duration = -1
@@ -1830,11 +1885,37 @@ country_event = {
 		days = 1
 	}
 	trigger = {
-		#TODO
+		NOT = {
+			has_country_modifier = racial_pop_ogre_purge
+			has_country_modifier = racial_pop_ogre_expulsion
+		}
+		OR = {
+			medium_tolerance_ogre_race_trigger = yes
+			high_tolerance_ogre_race_trigger = yes
+		}
+		any_owned_province = {
+			has_ogre_minority_trigger = yes
+			OR = {
+				trade_goods = wool
+				trade_goods = livestock
+			}
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_ogre_minority_trigger = yes
+				OR = {
+					trade_goods = wool
+					trade_goods = livestock
+				}
+			}
+			save_event_target_as = ogre_tolerance_target
+		}
 	}
 	option = {
 		name = ogre_tolerance_events.13.a
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_herds_market
 				duration = 1825
@@ -1856,7 +1937,7 @@ country_event = {
 				ruler_has_personality = life_planetouched_personality
 			}
 		}
-		capital_scope = {
+		event_target:ogre_tolerance_target = {
 			add_province_modifier = {
 				name = ogre_tolerance_herds_market
 				duration = 7300

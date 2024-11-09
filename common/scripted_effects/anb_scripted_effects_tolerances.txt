@@ -1,0 +1,94 @@
+ogre_tolerance_giants_happened = {
+	event_target:ogre_tolerance_target = {
+		if = {
+			limit = {
+				region = northern_pass_region
+			}
+			set_global_flag = ogre_tolerance_giants_northern_pass
+		}
+		if = {
+			limit = {
+				region = gerudian_frontier_region
+			}
+			set_global_flag = ogre_tolerance_giants_gerudian_frontier
+		}
+		if = {
+			limit = {
+				region = olavlund_region
+			}
+			set_global_flag = ogre_tolerance_giants_olavlund
+		}
+		if = {
+			limit = {
+				region = yyl_moista_region
+			}
+			set_global_flag = ogre_tolerance_giants_yyl_moista
+		}
+		if = {
+			limit = {
+				region = west_forbidden_plains_region
+			}
+			set_global_flag = ogre_tolerance_giants_west_forbidden_plains
+		}
+		if = {
+			limit = {
+				region = east_forbidden_plains_region
+			}
+			set_global_flag = ogre_tolerance_giants_east_forbidden_plains
+		}
+		if = {
+			limit = {
+				region = north_yarikhoi_region
+			}
+			set_global_flag = ogre_tolerance_giants_north_yarikhoi
+		}
+		if = {
+			limit = {
+				region = moduk_region
+			}
+			set_global_flag = ogre_tolerance_giants_moduk
+		}
+		if = {
+			limit = {
+				region = nomsyulhan_region
+			}
+			set_global_flag = ogre_tolerance_giants_nomsyulhan
+		}
+		if = {
+			limit = {
+				region = shuvuushudi_region
+			}
+			set_global_flag = ogre_tolerance_giants_shuvuushudi
+		}
+		if = {
+			limit = {
+				region = north_yanshen_region
+			}
+			set_global_flag = ogre_tolerance_giants_north_yanshen
+		}
+		if = {
+			limit = {
+				region = upper_yanshen_region
+			}
+			set_global_flag = ogre_tolerance_giants_upper_yanshen
+		}
+		if = {
+			limit = {
+				region = shamakhad_region
+			}
+			set_global_flag = ogre_tolerance_giants_shamakhad
+		}
+		if = {
+			limit = {
+				region = rahen_coast_region
+			}
+			set_global_flag = ogre_tolerance_giants_rahen_coast
+		}
+		if = {
+			limit = {
+				region = rakhadesh_region
+			}
+			set_global_flag = ogre_tolerance_giants_rakhadesh
+		}
+	}
+}
