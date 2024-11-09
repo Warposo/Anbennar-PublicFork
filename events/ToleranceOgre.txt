@@ -1180,7 +1180,7 @@ country_event = {
 	id = ogre_tolerance_events.9
 	title = ogre_tolerance_events.9.t
 	desc = ogre_tolerance_events.9.d
-	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	picture = FAR_AND_WIDE_eventPicture
 	is_triggered_only = yes
 	mean_time_to_happen = {
 		days = 1
@@ -1295,7 +1295,7 @@ country_event = {
 	id = ogre_tolerance_events.10
 	title = ogre_tolerance_events.10.t
 	desc = ogre_tolerance_events.10.d
-	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	picture = ASSASSINATION_eventPicture
 	is_triggered_only = yes
 	mean_time_to_happen = {
 		days = 1
@@ -1303,8 +1303,6 @@ country_event = {
 	trigger = {
 		NOT = {
 			high_tolerance_ogre_race_trigger = yes
-			has_country_modifier = racial_pop_ogre_purge
-			has_country_modifier = racial_pop_ogre_expulsion
 		}
 	}
 	option = {
@@ -1367,7 +1365,7 @@ country_event = {
 	id = ogre_tolerance_events.11
 	title = ogre_tolerance_events.11.t
 	desc = ogre_tolerance_events.11.d
-	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	picture = DIVERSE_COURT_eventPicture
 	is_triggered_only = yes
 	mean_time_to_happen = {
 		days = 1
@@ -1702,13 +1700,61 @@ country_event = {
 	id = ogre_tolerance_events.12
 	title = ogre_tolerance_events.12.t
 	desc = ogre_tolerance_events.12.d
-	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	picture = GENIE_RUINS_eventPicture
 	is_triggered_only = yes
 	mean_time_to_happen = {
 		days = 1
 	}
 	trigger = {
+		has_estate = estate_adventurers
 		#TODO
+		any_owned_province = {
+			has_ogre_minority_trigger = yes
+			OR = {
+				AND = {
+					region = northern_pass_region
+					NOT = {
+						has_global_flag = ogre_tolerance_giants_northern_pass
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_ogre_minority_trigger = yes
+				OR = {
+					ogre_tolerance_giants_region_available = { region = northern_pass }
+					ogre_tolerance_giants_region_available = { region = gerudian_frontier }
+					ogre_tolerance_giants_region_available = { region = dalr }
+					ogre_tolerance_giants_region_available = { region = olavlund }
+					ogre_tolerance_giants_region_available = { region = alenic_reach }
+					ogre_tolerance_giants_region_available = { region = yyl_moista }
+					ogre_tolerance_giants_region_available = { region = ogre_valley }
+					ogre_tolerance_giants_region_available = { region = west_forbidden_plains }
+					ogre_tolerance_giants_region_available = { region = serpent_gift }
+					ogre_tolerance_giants_region_available = { region = east_forbidden_plains }
+					ogre_tolerance_giants_region_available = { region = south_yarikhoi }
+					ogre_tolerance_giants_region_available = { region = north_yarikhoi }
+					ogre_tolerance_giants_region_available = { region = nuzurbokh }
+					ogre_tolerance_giants_region_available = { region = moduk }
+					ogre_tolerance_giants_region_available = { region = khaashalg }
+					ogre_tolerance_giants_region_available = { region = nomsyulhan }
+					ogre_tolerance_giants_region_available = { region = shuvuushudi }
+					ogre_tolerance_giants_region_available = { region = odheongu }
+					ogre_tolerance_giants_region_available = { region = north_yanshen }
+					ogre_tolerance_giants_region_available = { region = yanshen_coast }
+					ogre_tolerance_giants_region_available = { region = upper_yanshen }
+					ogre_tolerance_giants_region_available = { region = demon_hills }
+					ogre_tolerance_giants_region_available = { region = shamakhad }
+					ogre_tolerance_giants_region_available = { region = dhujat }
+					ogre_tolerance_giants_region_available = { region = rahen_coast }
+					ogre_tolerance_giants_region_available = { region = rakhadesh }
+				}
+			}
+			save_event_target_as = ogre_tolerance_giants_target
+		}
 	}
 	option = {
 		name = ogre_tolerance_events.12.a
@@ -1778,7 +1824,7 @@ country_event = {
 	id = ogre_tolerance_events.13
 	title = ogre_tolerance_events.13.t
 	desc = ogre_tolerance_events.13.d
-	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	picture = GOBLINS_AND_SPIDER_eventPicture
 	is_triggered_only = yes
 	mean_time_to_happen = {
 		days = 1
