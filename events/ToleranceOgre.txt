@@ -1,7 +1,9 @@
 namespace = ogre_tolerance_events
-# 0: event manager
+# 0: event manager for non-ogre nations
 # 1-8: Tolerance events
-# 9-17: Ogre tolerance/flavor events by GoshGollyDarnit
+# 9-13: Ogre tolerance events by GoshGollyDarnit
+# 100: event manager for ogre nations
+# 101-109: Ogre flavor for ogre nations by GoshGollyDarnit
 #
 # Event organizer for the ogre tolerance events - should be a huge improvement to performance - having 1 overall check for having the minority instead of one for EACH new event that gets added
 country_event = {
@@ -1190,8 +1192,9 @@ country_event = {
 			has_country_modifier = racial_pop_ogre_purge
 			has_country_modifier = racial_pop_ogre_expulsion
 		}
-		any_owned_province = {
-			has_ogre_minority_trigger = yes
+		fast_owns_num_pops_of_race = {
+			race = ogre
+			amount = 1
 		}
 	}
 	immediate = {
@@ -1315,8 +1318,9 @@ country_event = {
 		NOT = {
 			high_tolerance_ogre_race_trigger = yes
 		}
-		any_owned_province = {
-			has_ogre_minority_trigger = yes
+		fast_owns_num_pops_of_race = {
+			race = ogre
+			amount = 1
 		}
 	}
 	immediate = {
@@ -1397,8 +1401,9 @@ country_event = {
 			has_country_modifier = racial_pop_ogre_purge
 			has_country_modifier = racial_pop_ogre_expulsion
 		}
-		any_owned_province = {
-			has_ogre_minority_trigger = yes
+		fast_owns_num_pops_of_race = {
+			race = ogre
+			amount = 1
 		}
 	}
 	immediate = {
@@ -1743,32 +1748,84 @@ country_event = {
 		any_owned_province = {
 			has_ogre_minority_trigger = yes
 			OR = {
-				ogre_tolerance_giants_region_available = { region = northern_pass }
-				ogre_tolerance_giants_region_available = { region = gerudian_frontier }
-				ogre_tolerance_giants_region_available = { region = dalr }
-				ogre_tolerance_giants_region_available = { region = olavlund }
-				ogre_tolerance_giants_region_available = { region = alenic_reach }
-				ogre_tolerance_giants_region_available = { region = yyl_moista }
-				ogre_tolerance_giants_region_available = { region = ogre_valley }
-				ogre_tolerance_giants_region_available = { region = west_forbidden_plains }
-				ogre_tolerance_giants_region_available = { region = serpent_gift }
-				ogre_tolerance_giants_region_available = { region = east_forbidden_plains }
-				ogre_tolerance_giants_region_available = { region = south_yarikhoi }
-				ogre_tolerance_giants_region_available = { region = north_yarikhoi }
-				ogre_tolerance_giants_region_available = { region = nuzurbokh }
-				ogre_tolerance_giants_region_available = { region = moduk }
-				ogre_tolerance_giants_region_available = { region = khaashalg }
-				ogre_tolerance_giants_region_available = { region = nomsyulhan }
-				ogre_tolerance_giants_region_available = { region = shuvuushudi }
-				ogre_tolerance_giants_region_available = { region = odheongu }
-				ogre_tolerance_giants_region_available = { region = north_yanshen }
-				ogre_tolerance_giants_region_available = { region = yanshen_coast }
-				ogre_tolerance_giants_region_available = { region = upper_yanshen }
-				ogre_tolerance_giants_region_available = { region = demon_hills }
-				ogre_tolerance_giants_region_available = { region = shamakhad }
-				ogre_tolerance_giants_region_available = { region = dhujat }
-				ogre_tolerance_giants_region_available = { region = rahen_coast }
-				ogre_tolerance_giants_region_available = { region = rakhadesh }
+				ogre_tolerance_giants_region_available = {
+					region = northern_pass
+				}
+				ogre_tolerance_giants_region_available = {
+					region = gerudian_frontier
+				}
+				ogre_tolerance_giants_region_available = {
+					region = dalr
+				}
+				ogre_tolerance_giants_region_available = {
+					region = olavlund
+				}
+				ogre_tolerance_giants_region_available = {
+					region = alenic_reach
+				}
+				ogre_tolerance_giants_region_available = {
+					region = yyl_moista
+				}
+				ogre_tolerance_giants_region_available = {
+					region = ogre_valley
+				}
+				ogre_tolerance_giants_region_available = {
+					region = west_forbidden_plains
+				}
+				ogre_tolerance_giants_region_available = {
+					region = serpent_gift
+				}
+				ogre_tolerance_giants_region_available = {
+					region = east_forbidden_plains
+				}
+				ogre_tolerance_giants_region_available = {
+					region = south_yarikhoi
+				}
+				ogre_tolerance_giants_region_available = {
+					region = north_yarikhoi
+				}
+				ogre_tolerance_giants_region_available = {
+					region = nuzurbokh
+				}
+				ogre_tolerance_giants_region_available = {
+					region = moduk
+				}
+				ogre_tolerance_giants_region_available = {
+					region = khaashalg
+				}
+				ogre_tolerance_giants_region_available = {
+					region = nomsyulhan
+				}
+				ogre_tolerance_giants_region_available = {
+					region = shuvuushudi
+				}
+				ogre_tolerance_giants_region_available = {
+					region = odheongu
+				}
+				ogre_tolerance_giants_region_available = {
+					region = north_yanshen
+				}
+				ogre_tolerance_giants_region_available = {
+					region = yanshen_coast
+				}
+				ogre_tolerance_giants_region_available = {
+					region = upper_yanshen
+				}
+				ogre_tolerance_giants_region_available = {
+					region = demon_hills
+				}
+				ogre_tolerance_giants_region_available = {
+					region = shamakhad
+				}
+				ogre_tolerance_giants_region_available = {
+					region = dhujat
+				}
+				ogre_tolerance_giants_region_available = {
+					region = rahen_coast
+				}
+				ogre_tolerance_giants_region_available = {
+					region = rakhadesh
+				}
 			}
 		}
 	}
@@ -1777,32 +1834,84 @@ country_event = {
 			limit = {
 				has_ogre_minority_trigger = yes
 				OR = {
-					ogre_tolerance_giants_region_available = { region = northern_pass }
-					ogre_tolerance_giants_region_available = { region = gerudian_frontier }
-					ogre_tolerance_giants_region_available = { region = dalr }
-					ogre_tolerance_giants_region_available = { region = olavlund }
-					ogre_tolerance_giants_region_available = { region = alenic_reach }
-					ogre_tolerance_giants_region_available = { region = yyl_moista }
-					ogre_tolerance_giants_region_available = { region = ogre_valley }
-					ogre_tolerance_giants_region_available = { region = west_forbidden_plains }
-					ogre_tolerance_giants_region_available = { region = serpent_gift }
-					ogre_tolerance_giants_region_available = { region = east_forbidden_plains }
-					ogre_tolerance_giants_region_available = { region = south_yarikhoi }
-					ogre_tolerance_giants_region_available = { region = north_yarikhoi }
-					ogre_tolerance_giants_region_available = { region = nuzurbokh }
-					ogre_tolerance_giants_region_available = { region = moduk }
-					ogre_tolerance_giants_region_available = { region = khaashalg }
-					ogre_tolerance_giants_region_available = { region = nomsyulhan }
-					ogre_tolerance_giants_region_available = { region = shuvuushudi }
-					ogre_tolerance_giants_region_available = { region = odheongu }
-					ogre_tolerance_giants_region_available = { region = north_yanshen }
-					ogre_tolerance_giants_region_available = { region = yanshen_coast }
-					ogre_tolerance_giants_region_available = { region = upper_yanshen }
-					ogre_tolerance_giants_region_available = { region = demon_hills }
-					ogre_tolerance_giants_region_available = { region = shamakhad }
-					ogre_tolerance_giants_region_available = { region = dhujat }
-					ogre_tolerance_giants_region_available = { region = rahen_coast }
-					ogre_tolerance_giants_region_available = { region = rakhadesh }
+					ogre_tolerance_giants_region_available = {
+						region = northern_pass
+					}
+					ogre_tolerance_giants_region_available = {
+						region = gerudian_frontier
+					}
+					ogre_tolerance_giants_region_available = {
+						region = dalr
+					}
+					ogre_tolerance_giants_region_available = {
+						region = olavlund
+					}
+					ogre_tolerance_giants_region_available = {
+						region = alenic_reach
+					}
+					ogre_tolerance_giants_region_available = {
+						region = yyl_moista
+					}
+					ogre_tolerance_giants_region_available = {
+						region = ogre_valley
+					}
+					ogre_tolerance_giants_region_available = {
+						region = west_forbidden_plains
+					}
+					ogre_tolerance_giants_region_available = {
+						region = serpent_gift
+					}
+					ogre_tolerance_giants_region_available = {
+						region = east_forbidden_plains
+					}
+					ogre_tolerance_giants_region_available = {
+						region = south_yarikhoi
+					}
+					ogre_tolerance_giants_region_available = {
+						region = north_yarikhoi
+					}
+					ogre_tolerance_giants_region_available = {
+						region = nuzurbokh
+					}
+					ogre_tolerance_giants_region_available = {
+						region = moduk
+					}
+					ogre_tolerance_giants_region_available = {
+						region = khaashalg
+					}
+					ogre_tolerance_giants_region_available = {
+						region = nomsyulhan
+					}
+					ogre_tolerance_giants_region_available = {
+						region = shuvuushudi
+					}
+					ogre_tolerance_giants_region_available = {
+						region = odheongu
+					}
+					ogre_tolerance_giants_region_available = {
+						region = north_yanshen
+					}
+					ogre_tolerance_giants_region_available = {
+						region = yanshen_coast
+					}
+					ogre_tolerance_giants_region_available = {
+						region = upper_yanshen
+					}
+					ogre_tolerance_giants_region_available = {
+						region = demon_hills
+					}
+					ogre_tolerance_giants_region_available = {
+						region = shamakhad
+					}
+					ogre_tolerance_giants_region_available = {
+						region = dhujat
+					}
+					ogre_tolerance_giants_region_available = {
+						region = rahen_coast
+					}
+					ogre_tolerance_giants_region_available = {
+						region = rakhadesh
+					}
 				}
 			}
 			save_event_target_as = ogre_tolerance_target
@@ -1952,5 +2061,505 @@ country_event = {
 			}
 		}
 		large_decrease_of_ogre_tolerance_effect = yes
+	}
+}
+
+# Cannon Run
+country_event = {
+	id = ogre_tolerance_events.14
+	title = ogre_tolerance_events.14.t
+	desc = ogre_tolerance_events.14.d
+	picture = GOBLINS_AND_SPIDER_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		mil_tech = 7
+		fast_owns_num_pops_of_race = {
+			race = ogre
+			amount = 1
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_ogre_minority_trigger = yes
+			}
+			save_event_target_as = ogre_tolerance_target
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.14.a
+		add_country_modifier = {
+			name = ogre_tolerance_cannon_run
+			duration = 3650
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.14.b
+		add_mil_power = -25
+		event_target:ogre_tolerance_target = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 1
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.14.c
+		highlight = yes
+		trigger = {
+			OR = {
+				full_idea_group = quantity_ideas
+				full_idea_group = offensive_ideas
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.14.e
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = careful_personality
+				ruler_has_personality = secretive_personality
+				ruler_has_personality = midas_touched_personality
+				ruler_has_personality = fierce_negotiator_personality
+				ruler_has_personality = wind_planetouched_personality
+				ruler_has_personality = shadow_planetouched_personality
+			}
+		}
+		#TODO: 6 months of tax income
+	}
+	option = {
+		name = ogre_tolerance_events.14.f
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = tactical_genius_personality
+				ruler_has_personality = strict_personality
+				ruler_has_personality = fire_planetouched_personality
+				ruler_has_personality = earth_planetouched_personality
+			}
+		}
+		add_mil_power = 25
+	}
+}
+
+###########
+# Flavor events for ogre nations
+# TODO: event manager
+# Building Costs Run Tall
+country_event = {
+	id = ogre_tolerance_events.101
+	title = ogre_tolerance_events.101.t
+	desc = ogre_tolerance_events.101.d
+	picture = GOBLINS_AND_SPIDER_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		NOT = {
+			full_idea_group = infrastructure_ideas
+		}
+		NOT = {
+			ruler_has_personality = architectural_visionary_personality
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.101.a
+		add_adm_power = -50
+		complex_dynamic_effect = {
+			first_custom_tooltip = ogre_tolerance_events.101.a_tt
+			first_limit = "religion = feast_of_the_gods"
+			first_effect = "add_doom = -5"
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.101.b
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_tall
+			duration = 3650
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.101.c
+		highlight = yes
+		trigger = {
+			religion = devouring_path
+		}
+		add_mil_power = -50
+		add_corruption = -2
+	}
+	option = {
+		name = ogre_tolerance_events.101.e
+		highlight = yes
+		trigger = {
+			religion = sudomegi
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_tall_sudomegi
+			duration = 3650
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.101.f
+		highlight = yes
+		trigger = {
+			OR = {
+				religion = feast_of_the_gods
+				religion = reformed_feast_of_the_gods
+			}
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_tall_fotg
+			duration = 3650
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.101.g
+		highlight = yes
+		trigger = {
+			any_owned_province = {
+				trade_goods = slaves
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.101.h
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = secretive_personality
+				ruler_has_personality = embezzler_personality
+				ruler_has_personality = greedy_personality
+				ruler_has_personality = shadow_planetouched_personality
+			}
+		}
+		add_years_of_income = 0.5
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_tall_fraud
+			duration = 7300
+		}
+	}
+}
+
+# Building Costs Run Small
+country_event = {
+	id = ogre_tolerance_events.102
+	title = ogre_tolerance_events.102.t
+	desc = ogre_tolerance_events.102.d
+	picture = GOBLINS_AND_SPIDER_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		NOT = {
+			religion = feast_of_the_gods
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.102.a
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_small
+			duration = 3650
+		}
+		random = {
+			chance = 25
+			add_stability = 1
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.102.b
+		add_corruption = 2
+		add_adm_power = 50
+		if = {
+			limit = {
+				NOT = {
+					development = 150
+				}
+			}
+			add_treasury = 50
+		}
+		else_if = {
+			limit = {
+				development = 150
+				NOT = {
+					development = 300
+				}
+			}
+			add_treasury = 100
+		}
+		else_if = {
+			limit = {
+				development = 300
+				NOT = {
+					development = 500
+				}
+			}
+			add_treasury = 200
+		}
+		else_if = {
+			limit = {
+				development = 500
+				NOT = {
+					development = 700
+				}
+			}
+			add_treasury = 300
+		}
+		else_if = {
+			limit = {
+				development = 700
+			}
+			add_treasury = 400
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.102.c
+		highlight = yes
+		trigger = {
+			religion = devouring_path
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_small_dp
+			duration = 3650
+		}
+		add_adm_power = 50
+		if = {
+			limit = {
+				NOT = {
+					development = 150
+				}
+			}
+			add_treasury = 50
+		}
+		else_if = {
+			limit = {
+				development = 150
+				NOT = {
+					development = 300
+				}
+			}
+			add_treasury = 100
+		}
+		else_if = {
+			limit = {
+				development = 300
+				NOT = {
+					development = 500
+				}
+			}
+			add_treasury = 200
+		}
+		else_if = {
+			limit = {
+				development = 500
+				NOT = {
+					development = 700
+				}
+			}
+			add_treasury = 300
+		}
+		else_if = {
+			limit = {
+				development = 700
+			}
+			add_treasury = 400
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.102.e
+		highlight = yes
+		trigger = {
+			religion = sudomegi
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_small_sudomegi
+			duration = 3650
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.102.f
+		highlight = yes
+		trigger = {
+			religion = reformed_feast_of_the_gods
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_costs_running_small_reformed_fotg
+			duration = 3650
+		}
+		random = {
+			chance = 50
+			add_stability = 1
+		}
+		add_legitimacy = 10
+	}
+}
+
+# A Fistful of Coin
+country_event = {
+	id = ogre_tolerance_events.103
+	title = ogre_tolerance_events.103.t
+	desc = ogre_tolerance_events.103.d
+	picture = GOBLINS_AND_SPIDER_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		# Has a non-ogre minority
+		OR = {
+			fast_owns_num_pops_of_race = {
+				race = centaur
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = dwarven
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = elven
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = gnollish
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = gnomish
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = goblin
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = halfling
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = harpy
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = harimari
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = hobgoblin
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = human
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = kobold
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = lizardfolk
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = mechanim
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = orcish
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = ruinborn
+				amount = 1
+			}
+			fast_owns_num_pops_of_race = {
+				race = troll
+				amount = 1
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.103.a
+		add_country_modifier = {
+			name = ogre_tolerance_fair_contracts
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_adventurers
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_monstrous_tribes
+			loyalty = -10
+		}
+		decrease_monstrous_1 = yes
+	}
+	option = {
+		name = ogre_tolerance_events.103.b
+		add_country_modifier = {
+			name = ogre_tolerance_abused_contracts
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_adventurers
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_monstrous_tribes
+			loyalty = 10
+		}
+		increase_monstrous_1 = yes
+	}
+	option = {
+		name = ogre_tolerance_events.103.c
+		highlight = yes
+		trigger = {
+			OR = {
+				full_idea_group = humanist_ideas
+				ruler_has_personality = just_personality
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = pious_personality
+				ruler_has_personality = incorruptible_personality
+				ruler_has_personality = life_planetouched_personality
+			}
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_pious_contracts
+			duration = 3650
+		}
+		add_estate_loyalty = {
+			estate = estate_adventurers
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_monstrous_tribes
+			loyalty = -10
+		}
+		add_prestige = 15
+		increase_monstrous_3 = yes
+	}
+	option = {
+		name = ogre_tolerance_events.103.e
+		highlight = yes
+		trigger = {
+			OR = {
+				full_idea_group = spy_ideas
+				ruler_has_personality = secretive_personality
+				ruler_has_personality = intricate_web_weaver_personality
+				ruler_has_personality = charismatic_negotiator_personality
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = shadow_planetouched_personality
+			}
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_spy_contracts
+			duration = 5475
+		}
+		add_years_of_income = 1
 	}
 }

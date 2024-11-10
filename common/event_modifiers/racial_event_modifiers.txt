@@ -597,8 +597,58 @@ ogre_tolerance_herds_market = {
 	province_trade_power_modifier = 0.50
 	local_unrest = 3
 }
-
-
+ogre_tolerance_costs_running_tall = {
+	build_cost = 0.10
+}
+ogre_tolerance_costs_running_tall_sudomegi = {
+	build_cost = 0.10
+	idea_cost = -0.10
+}
+ogre_tolerance_costs_running_tall_fotg = {
+	build_cost = 0.10
+	yearly_legitimacy = 0.2
+	yearly_prestige = 1.2
+}
+ogre_tolerance_costs_running_tall_fraud = {
+	build_cost = 0.10
+	idea_cost = -0.10
+}
+ogre_tolerance_costs_running_small = {
+	build_cost = -0.10
+}
+ogre_tolerance_costs_running_small_dp = {
+	all_estate_loyalty_equilibrium = 0.05
+}
+ogre_tolerance_costs_running_small_sudomegi = {
+	build_cost = -0.10
+	yearly_legitimacy = 0.2
+}
+ogre_tolerance_costs_running_small_reformed_fotg = {
+	build_cost = -0.10
+	global_unrest = -3
+}
+ogre_tolerance_cannon_run = {
+	artillery_cost = 0.20
+}
+ogre_tolerance_fair_contracts = {
+	merc_maintenance_modifier = 0.05
+	mercenary_discipline = 0.025
+	mercenary_cost = 0.05
+}
+ogre_tolerance_abused_contracts = {
+	mercenary_discipline = -0.025
+	merc_maintenance_modifier = -0.05
+}
+ogre_tolerance_pious_contracts = {
+	diplomatic_reputation = 1
+	mercenary_discipline = 0.05
+	merc_maintenance_modifier = 0.10
+	mercenary_cost = 0.10
+}
+ogre_tolerance_spy_contracts = {
+	mercenary_discipline = -0.05
+	merc_maintenance_modifier = -0.10
+}
 #hobgoblin
 hobgoblin_migration_cooldown = {}
 
