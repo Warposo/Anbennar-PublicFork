@@ -2642,6 +2642,24 @@ ruinborn_aelantir_treasures:0 "Treasures of Aelantir"
  ogre_tolerance_events.103.c:0 "An opportunity for a new just precedent."
  ogre_tolerance_events.103.e:0 "Fickle tidings make swollen coffers."
 
+ ogre_tolerance_events.104.t:0 "Feasting Hall Festivity Risks the Hunger"
+ ogre_tolerance_events.104.d:0 "Party-going ogres across the nation are shivering with excitement over an upcoming festival in [Root.GetName]. Centered on a massive feasting hall capable of hosting entire clans with room to spare, the gathering is sure to delight with mirth, merriment, and morsels, yet as attendance threatens to break records, we know better: a hungry ogre is a deadly ogre.\nAs we assess the festival’s preparations, too many attendees and too few supplies could turn a wonderful celebration into all-consuming chaos in more ways than one! Even the whole region could face disaster before the devourers stop their rampage!\nAlthough it might be expensive, we should spare some funds to ensure that the festival is well-stocked. How should we proceed?"
+ ogre_tolerance_events.104.a:0 "Six dozen more party crates. Now!"
+ ogre_tolerance_events.104.b:0 "The current preparations are adequate."
+ ogre_tolerance_events.104.c:0 "Some choice souls should satiate our needs."
+ ogre_tolerance_events.104.e:0 "I know not, I feel naught, I am apart from the “I” of hunger..."
+ ogre_tolerance_events.104.f:0 "Gather some local stooges for our appetizer."
+ ogre_tolerance_events.104.g:0 "Fetch my ledger and abacus; I will oversee the festival’s stock myself."
+
+ ogre_tolerance_events.105.t:0 "An Ogre Mage Seeks Damestear"
+ ogre_tolerance_events.105.d:0 "“I am glad you beckoned to destiny’s gnawing call.”\nAn enigmatic ogre speaks surrounded by guards in the capital hall, their body wreathed in cloth stitched with foreboding runes of power. Reaching to their head, the figure lowers their cowl, revealing damestear-blue skin and blinding eyes that surges with magic: an ogre mage. Grinning, they bow deeply, their gaze affixed to [Root.Monarch.GetTitle] [Root.Monarch.GetName].\n“I come here before you as a loyal servant. Hark; I can stand tall as a giant among spellcasters if given the chance! All I require is ample damestear to complete my ritual and sate my hunger.”\nThe pride and folly of mages on full display, the room gasps and seethes, yet the ogre mage continues.\n“Should my ritual prove successful, I shall rise above lowly cantrips and meager spells. Yes, I shall bend the world to m-...your will, my [Root.Monarch.GetTitle]. All I require is your trust and aid.”\nIt takes a daring (or reckless) soul to demand a king’s weight in damestear. Advisors whisper into the [Root.Monarch.GetTitle]’s ear. There is no guarantee that such a ritual will succeed, or that the mage will not abscond given the chance; not to mention the upset damestear suppliers having their allotment confiscated for this endeavor. Yet a powerful mage can turn the tide of battles, and supporting mages, even an upstart one such as this, could prove popular among spellcasters.\nHow does [Root.Monarch.GetTitle] [Root.Monarch.GetName] respond to this audacious ogre mage?"
+ ogre_tolerance_events.105.a:0 "They shall gorge upon their precious damestear."
+ ogre_tolerance_events.105.b:0 "If you were truly so powerful, you’d have gotten it yourself."
+ ogre_tolerance_events.105.c:0 "Test both body and spirit; if they survive, they may prove useful."
+ ogre_tolerance_events.105.e:0 "To plug the hunger with magic is not wisdom."
+ ogre_tolerance_events.105.f:0 "Stuff their gullet with damestear and see what happens."
+ ogre_tolerance_events.105.g:0 "T’ch; we have channels for this."
+
 
  ogre_primary_refugees:0 "A Home to Ogrish People"
  ogre_food_riots:0 "Food Riots"
@@ -2682,6 +2700,16 @@ ruinborn_aelantir_treasures:0 "Treasures of Aelantir"
  ogre_tolerance_abused_contracts:0 "Abused Mercenary Contracts"
  ogre_tolerance_pious_contracts:0 "A Handful for All"
  ogre_tolerance_spy_contracts:0 "Bamboozled Mercenaries"
+ ogre_tolerance_satiated_celebrations:0 "Satiated Celebrations"
+ ogre_tolerance_soulful_festivities_province:0 "Soulful Festivities"
+ ogre_tolerance_soulful_festivities_country:0 "Soulful Festivities"
+ ogre_tolerance_events_mage_tested:0 "Ogre Mage Tested Body and Soul"
+ ogre_tolerance_events_mage_faltered:0 "Ogre Mage Faltered"
+ ogre_tolerance_events_mage_force_feeding:0 "Ogre Mage Force-feeding Successful"
+ ogre_tolerance_events_mage_spills:0 "Ogre Mage Spills Bigger than Spells"
+ ogre_tolerance_events_mage_passed:0 "Ogre Mage Passed Tests"
+ ogre_tolerance_events_mage_flunked:0 "Ogre Mage Flunked Out"
+
 
 
  #Mechanim

@@ -1382,7 +1382,12 @@ country_event = {
 			duration = 1825
 		}
 		large_increase_of_ogre_tolerance_effect = yes
-		# TODO: If purging/expelling ogres, end purge/expulsion
+		generic_end_purge = {
+			race = ogre
+		}
+		generic_end_expulsion = {
+			race = ogre
+		}
 	}
 }
 
@@ -1806,7 +1811,7 @@ country_event = {
 					region = north_yanshen
 				}
 				ogre_tolerance_giants_region_available = {
-					region = yanshen_coast
+					region = lower_yanshen
 				}
 				ogre_tolerance_giants_region_available = {
 					region = upper_yanshen
@@ -2170,8 +2175,9 @@ country_event = {
 	option = {
 		name = ogre_tolerance_events.101.a
 		add_adm_power = -50
+		custom_tooltip = linebreak_tt
 		complex_dynamic_effect = {
-			first_custom_tooltip = ogre_tolerance_events.101.a_tt
+			first_custom_tooltip = fotg_unreformed_tt
 			first_limit = "religion = feast_of_the_gods"
 			first_effect = "add_doom = -5"
 		}
@@ -2530,7 +2536,7 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = ogre_tolerance_pious_contracts
-			duration = 3650
+			duration = 5475
 		}
 		add_estate_loyalty = {
 			estate = estate_adventurers
@@ -2561,5 +2567,346 @@ country_event = {
 			duration = 5475
 		}
 		add_years_of_income = 1
+	}
+}
+
+# A Fistful of Coin
+country_event = {
+	id = ogre_tolerance_events.104
+	title = ogre_tolerance_events.104.t
+	desc = ogre_tolerance_events.104.d
+	picture = GOBLINS_AND_SPIDER_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_ogre_minority_trigger = yes
+				has_ogre_majority_trigger = yes
+			}
+			all_province_in_state = {
+				is_state_core = ROOT
+			}
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					has_ogre_minority_trigger = yes
+					has_ogre_majority_trigger = yes
+				}
+				all_province_in_state = {
+					is_state_core = ROOT
+				}
+			}
+			save_event_target_as = ogre_tolerance_target
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.104.a
+		add_treasury = -50
+		add_prestige = 15
+		event_target:ogre_tolerance_target = {
+			every_province_in_state = {
+				add_province_modifier = {
+					name = ogre_tolerance_satiated_celebrations
+					duration = 1825
+				}
+			}
+		}
+		custom_tooltip = linebreak_tt
+		complex_dynamic_effect = {
+			first_custom_tooltip = fotg_unreformed_tt
+			first_limit = "religion = feast_of_the_gods"
+			first_effect = "add_doom = -5"
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.104.b
+		random = {
+			chance = 50
+			event_target:ogre_tolerance_target = {
+				add_devastation = 20
+			}
+		}
+		event_target:ogre_tolerance_target = {
+			every_province_in_state = {
+				random = {
+					chance = 20
+					add_devastation = 10
+				}
+			}
+		}
+		random = {
+			chance = 25
+			add_stability = -1
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.104.c
+		highlight = yes
+		trigger = {
+			religion = devouring_path
+		}
+		event_target:ogre_tolerance_target = {
+			every_province_in_state = {
+				add_province_modifier = {
+					name = ogre_tolerance_soulful_festivities_province
+					duration = 1825
+				}
+			}
+		}
+		add_country_modifier = {
+			name = ogre_tolerance_soulful_festivities_country
+			duration = 1825
+		}
+		random = {
+			chance = 25
+			event_target:ogre_tolerance_target = {
+				add_devastation = 10
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.104.e
+		highlight = yes
+		trigger = {
+			religion = sudomegi
+		}
+		event_target:ogre_tolerance_target = {
+			every_province_in_state = {
+				add_province_modifier = {
+					name = ogre_tolerance_solidarity_hunger
+					duration = 1825
+				}
+				random = {
+					chance = 20
+					spawn_rebels = {
+						type = peasant_rebels
+						size = 1
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.104.f
+		highlight = yes
+		trigger = {
+			OR = {
+				religion = feast_of_the_gods
+				religion = reformed_feast_of_the_gods
+			}
+		}
+		event_target:ogre_tolerance_target = {
+			every_province_in_state = {
+				random = {
+					chance = 20
+					add_random_development = -1
+				}
+				add_province_modifier = {
+					name = ogre_tolerance_satiated_celebrations
+					duration = 1825
+				}
+			}
+		}
+		custom_tooltip = linebreak_tt
+		complex_dynamic_effect = {
+			first_custom_tooltip = fotg_unreformed_tt
+			first_limit = "religion = feast_of_the_gods"
+			first_effect = "add_doom = -15"
+			secund_custom_tooptip = fotg_reformed_tt
+			second_limit = "religion = reformed_feast_of_the_gods"
+			second_effect = "add_prestige = 25"
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.104.g
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = well_connected_personality
+				ruler_has_personality = well_adviced_personality
+				ruler_has_personality = midas_touched_personality
+				ruler_has_personality = entrepreneur_personality
+			}
+		}
+		add_prestige = 15
+		event_target:ogre_tolerance_target = {
+			every_province_in_state = {
+				add_province_modifier = {
+					name = ogre_tolerance_satiated_celebrations
+					duration = 1825
+				}
+			}
+		}
+		custom_tooltip = linebreak_tt
+		complex_dynamic_effect = {
+			first_custom_tooltip = fotg_unreformed_tt
+			first_limit = "religion = feast_of_the_gods"
+			first_effect = "add_doom = -5"
+		}
+	}
+}
+
+# An Ogre Mage Seeks Damestear
+country_event = {
+	id = ogre_tolerance_events.105
+	title = ogre_tolerance_events.105.t
+	desc = ogre_tolerance_events.105.d
+	picture = GOBLINS_AND_SPIDER_eventPicture
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_ogre_minority_trigger = yes
+				has_ogre_majority_trigger = yes
+			}
+			all_province_in_state = {
+				is_state_core = ROOT
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.105.a
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = ogre_tolerance_mage_feed
+			duration = 3650
+		}
+		if = {
+			limit = {
+				NOT = {
+					estate_influence = {
+						estate = estate_mages
+						influence = 33
+					}
+				}
+			}
+			random = {
+				chance = 30
+				create_war_wizard_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				estate_influence = {
+					estate = estate_mages
+					influence = 33
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_mages
+						influence = 66
+					}
+				}
+			}
+			random = {
+				chance = 65
+				create_war_wizard_effect = yes
+			}
+		}
+		else = {
+			create_war_wizard_effect = yes
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.105.b
+	}
+	option = {
+		name = ogre_tolerance_events.105.c
+		highlight = yes
+		trigger = {
+			religion = devouring_path
+		}
+		random_list = {
+			70 = {
+				add_country_modifier = {
+					name = ogre_tolerance_events_mage_tested
+					duration = 3650
+				}
+				create_war_wizard_effect = yes
+			}
+			30 = {
+				add_country_modifier = {
+					name = ogre_tolerance_events_mage_faltered
+					duration = 3650
+				}
+				add_dip_power = 50
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.105.e
+		highlight = yes
+		trigger = {
+			religion = sudomegi
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+	}
+	option = {
+		name = ogre_tolerance_events.105.f
+		highlight = yes
+		trigger = {
+			OR = {
+				religion = feast_of_the_gods
+				religion = reformed_feast_of_the_gods
+			}
+		}
+		#TODO: lose 6 months of trade income
+		random_list = {
+			50 = {
+				create_war_wizard_effect = yes
+				add_country_modifier = {
+					name = ogre_tolerance_events_mage_force_feeding
+					duration = 3650
+				}
+			}
+			50 = {
+				add_country_modifier = {
+					name = ogre_tolerance_events_mage_spills
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = ogre_tolerance_events.105.g
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = mage_personality
+				ruler_has_personality = fire_planetouched_personality
+				ruler_has_personality = water_planetouched_personality
+				ruler_has_personality = earth_planetouched_personality
+				ruler_has_personality = wind_planetouched_personality
+				ruler_has_personality = shadow_planetouched_personality
+				ruler_has_personality = life_planetouched_personality
+				has_reform = magical_elite_reform
+			}
+		}
+		random_list = {
+			50 = {
+				create_war_wizard_effect = yes
+				add_country_modifier = {
+					name = ogre_tolerance_events_mage_passed
+					duration = 3650
+				}
+			}
+			50 = {
+				add_prestige = -10
+				add_country_modifier = {
+					name = ogre_tolerance_events_mage_flunked
+					duration = 3650
+				}
+			}
+		}
 	}
 }
