@@ -1727,7 +1727,7 @@ country_event = {
 				duration = 3650
 			}
 			spawn_rebels = {
-				type = peasant_rebels
+				type = anti_tax_rebels
 				size = 1
 			}
 		}
@@ -2685,7 +2685,7 @@ country_event = {
 				random = {
 					chance = 20
 					spawn_rebels = {
-						type = peasant_rebels
+						type = anti_tax_rebels
 						size = 1
 					}
 				}
