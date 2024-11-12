@@ -160,8 +160,6 @@ country_event = {
 		add_heir_personality = elephant_shifter_personality
 	}
 
-
-
 	#third choice
 	option = {	 
 		name = dakinshi_harem_events.1.k
@@ -946,6 +944,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		add_yearly_manpower = -1
 		hidden_effect = {
 			add_country_modifier = {
 				name = S53_children_of_beasts_roads_and_waterways
@@ -1099,7 +1098,7 @@ country_event = {
 			name = S53_marriage_of_many_the_wedding_of_a_lifetime
 			duration = 1825 
 		}
-		set_ruler_flag = S53_marriage_of_many_target_flag
+		set_country_flag = S53_marriage_of_many_target_flag
 		every_known_country = {
 			limit = {
 				has_country_flag = S53_marriage_of_many_unlock_flag	
@@ -1130,7 +1129,7 @@ country_event = {
 		if = {
 			limit = {
 				any_known_country = {
-					has_ruler_flag = S53_marriage_of_many_target_flag
+					has_country_flag = S53_marriage_of_many_target_flag
 				} 
 			}
 			create_marriage = prev
@@ -1189,6 +1188,7 @@ country_event = {
 	}
 }
 
+#migration event
 country_event = {
 	id = flavor_averilibet.11
 	title = flavor_averilibet.11.t
@@ -1204,6 +1204,7 @@ country_event = {
 	}
 }
 
+#capstone event
 country_event = {
 	id = flavor_averilibet.12
 	title = flavor_averilibet.12.t
@@ -1229,7 +1230,7 @@ country_event = {
 	}
 
 	option = {
-		name = flavor_averilibet.12.a
+		name = flavor_averilibet.12.b
 		every_subject_country = {
 			limit = {
 				OR = {
@@ -1238,7 +1239,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { tag = S53 }
+				limit = { ROOT = { tag = S53 } }
 				S53 = {
 					inherit = prev
 				}
@@ -1248,6 +1249,176 @@ country_event = {
 					inherit = prev
 				}
 			}
+		}
+	}
+}
+
+#histo/naleni union events
+country_event = {
+	id = flavor_averilibet.13
+	title = flavor_averilibet.13.t
+	desc = flavor_averilibet.13.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = { 
+		name = flavor_averilibet.13.a
+		if = {
+			limit = {
+				L55 = {
+					capital_scope = {
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 10
+						}
+					}
+					has_opinion_modifier = {
+						who = ROOT 
+						modifier = historical_friend 
+					}
+				}
+			}
+			break_alliance = S23
+			break_marriage = S23
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				target = S23
+			}
+			create_union = L55
+			S23 = {
+				set_country_flag = S53_histonaleni_after_subjicate_event_flag
+			}
+		}
+		else = {
+			break_alliance = L55
+			break_marriage = L55
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				target = L55
+			}
+			create_union = S23
+			L55 = {
+				set_country_flag = S53_histonaleni_after_subjicate_event_flag
+			}
+		}
+	}
+}
+
+#on getting both histo and nalen event
+country_event = {
+	id = flavor_averilibet.14
+	title = flavor_averilibet.14.t
+	desc = flavor_averilibet.14.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_averilibet.14.a
+		add_country_modifier = {
+			name = S53_a_man_in_every_city
+			duration = 5475
+		}
+		add_treasury = 500
+	}
+}
+
+#aver integrates of histo/nalen
+country_event = {
+	id = flavor_averilibet.15
+	title = flavor_averilibet.15.t
+	desc = flavor_averilibet.15.desc
+	picture = NYAU_RITUAL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				werikafan_area = {
+					owned_by = ROOT
+					type = all
+				}
+				fetengaben_area = {
+					owned_by = ROOT
+					type = all
+				}
+			}
+			hidden_effect = {
+				set_variable = { which = totalnalenDev value = 0 }
+				L55 = {
+					ROOT = {
+						export_to_variable = { which = tempVassalDev value = total_development who = PREV }
+						change_variable = { which = totalnalenDev which = tempVassalDev }
+					}
+				}
+				while = { limit = { check_variable = { which = totalnalenDev value = 1 } }
+					add_dip_power = -1
+					change_variable = { which = totalnalenDev value = -1 }
+				}
+				L55 = {
+					every_core_province = {
+						add_territorial_core = ROOT
+						cede_province = ROOT
+					}
+				}
+				set_variable = { which = totalhistoDev value = 0 }
+				S23 = {
+					ROOT = {
+						export_to_variable = { which = tempVassalDev value = total_development who = PREV }
+						change_variable = { which = totalhistoDev which = tempVassalDev }
+					}
+				}
+				while = { limit = { check_variable = { which = totalhistoDev value = 1 } }
+					add_dip_power = -1
+					change_variable = { which = totalhistoDev value = -1 }
+				}
+				S23 = {
+					every_core_province = {
+						add_territorial_core = ROOT
+						cede_province = ROOT
+					}
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				set_variable = { which = totalnalenDev value = 0 }
+				L55 = {
+					ROOT = {
+						export_to_variable = { which = tempVassalDev value = total_development who = PREV }
+						change_variable = { which = totalnalenDev which = tempVassalDev }
+					}
+				}
+				while = { limit = { check_variable = { which = totalnalenDev value = 1 } }
+					add_dip_power = -2
+					change_variable = { which = totalnalenDev value = -1 }
+				}
+				L55 = {
+					every_core_province = {
+						add_territorial_core = ROOT
+						cede_province = ROOT
+					}
+				}
+				set_variable = { which = totalhistoDev value = 0 }
+				S23 = {
+					ROOT = {
+						export_to_variable = { which = tempVassalDev value = total_development who = PREV }
+						change_variable = { which = totalhistoDev which = tempVassalDev }
+					}
+				}
+				while = { limit = { check_variable = { which = totalhistoDev value = 1 } }
+					add_dip_power = -2
+					change_variable = { which = totalhistoDev value = -1 }
+				}
+				S23 = {
+					every_core_province = {
+						add_territorial_core = ROOT
+						cede_province = ROOT
+					}
+				}
+			}	
 		}
 	}
 }

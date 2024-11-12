@@ -1022,6 +1022,9 @@ column_3 = {
 				name = S53_leopards_wisdom
 				duration = -1
 			}
+			country_event = {
+				id = flavor_averilibet.12
+			}
 		} 
 	}
 }
@@ -1106,6 +1109,10 @@ column_4 = {
 							amount = 10
 						}
 					}
+					has_opinion_modifier = {
+						who = ROOT 
+						modifier = historical_friend 
+					}
 				} 
 				any_known_country = {
 					tag = S23
@@ -1115,11 +1122,19 @@ column_4 = {
 							amount = 10
 						}
 					}
+					has_opinion_modifier = {
+						who = ROOT 
+						modifier = historical_friend 
+					}
 				} 
 			}
 		} 
 
-		effect = {  } 
+		effect = {  
+			country_event = {
+				id = flavor_averilibet.13
+			}
+		} 
 	}
 
 	like_a_mother_S53 = {

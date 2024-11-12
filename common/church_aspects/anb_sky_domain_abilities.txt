@@ -386,6 +386,7 @@ S53_children_of_beasts_relg_power = {
 
 	trigger = {
 		NOT = { has_country_modifier = S53_children_of_beasts_roads_and_waterways }	
+		years_of_manpower = 1
 	}
 
 	effect = {

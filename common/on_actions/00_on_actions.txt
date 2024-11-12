@@ -1667,7 +1667,24 @@ on_war_won = {
 		}
 	}
 	
-	
+	#averilibet subjecation aginst histo/naleni way 
+	if = {
+		limit = {
+			FROM = { 
+				has_country_flag = S53_histonaleni_after_subjicate_event_flag 
+				is_subject = yes 
+			}
+			OR = {
+				tag = S53 
+				tag = L65
+			}
+		}
+		country_event = {
+			id = flavor_averilibet.14
+			days = 1
+		}
+		FROM = { clr_country_flag = S53_histonaleni_after_subjicate_event_flag }
+	}
 
 
 	update_artifice_points = yes #needs to be last
@@ -16534,6 +16551,18 @@ on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accept
 }
 
 on_royal_marriage_broken = { #ROOT - Original marriage creator, FROM - Marriage accepter
+#averilibet marriage of many
+	if = {
+		limit = {
+			has_country_flag = S53_marriage_of_many_unlock_flag
+			FROM = { has_country_flag = S53_marriage_of_many_target_flag }
+		}
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			target = FROM
+		}
+		FROM = { clr_country_flag = S53_marriage_of_many_target_flag }
+	}
 }
 
 on_alliance_created = { #ROOT - Alliance sender, FROM - Alliance accepter
