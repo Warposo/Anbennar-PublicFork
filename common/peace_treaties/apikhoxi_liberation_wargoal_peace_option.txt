@@ -40,10 +40,10 @@ apikhoxi_liberation_wargoal_peace_option = {
 		OR = {
 			has_country_flag = apikhoxi_liberation
 		}
-		capital_scope = { region = devand_region }
-		#FROM = {	#commented out to allow you to steal Iosahar if the overlord isn't defending them
-		#	NOT = { is_subject_of_type = ynnic_iosahar }
-		#}
+
+		FROM = {	#commented out to allow you to steal Iosahar if the overlord isn't defending them
+			capital_scope = { region = devand_region }
+		}
 	}
 	is_allowed = { # Defaults to equivalent of "always = yes"
 	}

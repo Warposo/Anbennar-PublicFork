@@ -1,4 +1,4 @@
-namespace = G57_events
+namespace = flavor_apikhoxi
 
 #Form the Guard
 country_event = {
@@ -342,7 +342,12 @@ country_event = {
 		name = "flavor_apikhoxi.8.a"
 		if = {
 			limit = {
-				has_center_of_trade_of_level = 2
+				2680 = {
+					not = { province_has_center_of_trade_of_level = 1 }
+				}
+			}
+			2680 = {
+				center_of_trade = 1
 			}
 		}
 		else = {
@@ -361,7 +366,7 @@ country_event = {
 			add_base_tax = 1
 			change_trade_goods = sugar
 			add_building_construction = {
-				building = manufactory
+				building = plantations
 				speed = 1
 				cost = 0
 			}
@@ -379,7 +384,7 @@ country_event = {
 			add_base_tax = 1
 			change_trade_goods = coffee
 			add_building_construction = {
-				building = manufactory
+				building = plantations
 				speed = 1
 				cost = 0
 			}
@@ -397,7 +402,7 @@ country_event = {
 			add_base_tax = 1
 			change_trade_goods = spices
 			add_building_construction = {
-				building = manufactory
+				building = tradecompany
 				speed = 1
 				cost = 0
 			}
@@ -415,7 +420,7 @@ country_event = {
 			add_base_tax = 1
 			change_trade_goods = silk
 			add_building_construction = {
-				building = manufactory
+				building = textile
 				speed = 1
 				cost = 0
 			}
@@ -433,7 +438,7 @@ country_event = {
 			add_base_tax = 1
 			change_trade_goods = dyes
 			add_building_construction = {
-				building = manufactory
+				building = textile
 				speed = 1
 				cost = 0
 			}
@@ -547,7 +552,7 @@ country_event = {
 
 	option = {
 		name = "flavor_apikhoxi.11.a"
-		every_other_country = {
+		all_country	= {
 			iimit = {
 				has_opinion = {
 					who = ROOT
@@ -558,11 +563,11 @@ country_event = {
 				}
 			}
 			add_national_modifier = {
-				name = G57_bribed
+				name = add_country_modifier
 				duration = 3650
 			}
 		}
-		add_national_modifier = {
+		add_country_modifier = {
 			name = G57_open_door
 			duration = 3650
 		}
@@ -585,8 +590,20 @@ country_event = {
 
 	option = {
 		name = "flavor_apikhoxi.12.a"
-		2680 = {
-			center_of_trade = 1
+		if = {
+			limit = {
+				2680 = {
+					not = { province_has_center_of_trade_of_level = 1 }
+				}
+			}
+			2680 = {
+				center_of_trade = 1
+			}
+		}
+		else = {
+			2680 = {
+				add_center_of_trade_level = 1
+			}
 		}
 		unlock_estate_privilege = {
 			estate_privilege = estate_nobles_G57_emerald_waters
@@ -673,7 +690,11 @@ country_event = {
 				duration = -1
 			}
 			change_trade_goods = fish
-			add_building = manufactory
+			add_building_construction = {
+				building = wharf
+				speed = 1
+				cost = 0
+			}
 			center_of_trade = 1
 		}
 	}
@@ -832,10 +853,10 @@ country_event = {
 			limit = {
 				region = devand_region
 				NOT = {
-					culture = ormabhen
+					culture = ROOT
 				}
 			}
-			change_culture = ormabhen
+			change_culture = ROOT
 		}
 	}
 }
@@ -843,8 +864,8 @@ country_event = {
 #Farmer's Festival
 country_event = {
 	id = flavor_apikhoxi.19
-	title = "flavor_apikhoxi.19.t"
-	desc = "flavor_apikhoxi.19.d"
+	title = flavor_apikhoxi.19.t
+	desc = flavor_apikhoxi.19.d
 	picture = ""
 
 	is_triggered_only = yes
@@ -852,7 +873,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = "flavor_apikhoxi.19.a"
+		name = flavor_apikhoxi.19.a
 		if = {
 			limit = {
 				NOT = {
@@ -866,8 +887,9 @@ country_event = {
 			}
 		}
 		else = {
-			set_capital = 2073
+			add_years_of_income = 0.2
 		}
+		set_capital = 2703
 		add_legitimacy = 25
 		add_prestige = 25
 	}

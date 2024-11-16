@@ -7,7 +7,7 @@ cb_apikhoxi_liberation = {
 	}
 
 	prerequisites = {
-		from = {
+		FROM = {
 			OR = {
 				tag = G53 #Empkeios
 				tag = G58 #Keyolion

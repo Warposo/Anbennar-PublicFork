@@ -6494,7 +6494,7 @@ apikhoxi_good_enighbor = {
 			}
 		}
 	}
-	colonist = 1
+	colonists = 1
 	native_assimilation = 0.25
 
 

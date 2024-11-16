@@ -115,8 +115,6 @@ flavor_apikhoxi.10.t:0 "Land of Peaceful Fields"
 flavor_apikhoxi.11.t:0 "Opening the Door"
 
 
-flavor_apikhoxi.12.t:0 "No Quarter to Slavers"
-
 flavor_apikhoxi.12.t:0 "You Gonna Eat That?"
 
 flavor_apikhoxi.13.t:0 "No Quarter to Slavers"
@@ -133,6 +131,8 @@ flavor_apikhoxi.17.t:0 "Talking Things Out"
 flavor_apikhoxi.18.t:0 "Spring in the Devand"
 
 flavor_apikhoxi.19.t:0 "Farmer's Festival in the Devand"
+flavor_apikhoxi.19.d:0 "$MONARCH$ poured himself another glass of retsina, savoring the smoky flavour. It was a delicious way to wash down the fried dough balls, dusted with sugar from Empkeios. With a smile, he passed a plate of the balls to young child behind him, who stared wide eye at the food. This was for them, after all. \n\nThe construction of the Devand's new capital was a salute to all its peoples. Slow-cooked board from the Mhteibar, fresh fruits from the Besolaki. Fragrant coffee at the start of the feast, to show that the Devand, too, commanded the new learning from Cannor. The tables groaned under a banquest open to all. At this the tables of the Apikhoxi there was neither lord nor slave, soldier nor farmer. Instead, a feast for where any may eat their fill. \n\nMore struggles would come, of course. But the Devand would face all those struggles with open arms and open hearths.  \n\nMock the sons of slaves and serfs if you wish, but if more of us valued food and cheer and song above hoarded gold, it would be a merrier world."
+flavor_apikhoxi.19.a:0 "I'll have what they're having."
 #Opinion Modifiers
 #flags
 apikhoxi_liberation:0 "Liberation of the East"
@@ -140,7 +140,7 @@ apikhoxi_liberation:0 "Liberation of the East"
 ##wargoals
 cb_apikhoxi_liberation_wargoal:0 "The Liberation of the Devand"
 cb_apikhoxi_liberation:0 "To Free the Devand"
-cb_apoikhoxi_liberation_desc:0 "We shall free the Devand"
+cb_apikhoxi_liberation_desc:0 "We shall free the Devand"
 cb_apikhoxi_liberation_wargoal_desc:0 "Seize their capitals to break their chains."
 apikhoxi_liberation_wargoal_peace_option:0 "Break the Chains"
 
@@ -149,3 +149,4 @@ estate_nobles_G57_emerald_waters:0 "Land of Emerald Waters"
 estate_nobles_G57_emerald_waters_modifier:0 "Bathe By Emerald Waters"
 estate_nobles_G57_land_golden_ears:0 "Land of Golden Ears"
 estate_nobles_G57_land_golden_ears_modifier:0 "The Most Valuable Gold"
+unlock_privilege_estate_nobles_G57_land_golden_ears_tt:0 "Unlock the Land of Golden Ears"
