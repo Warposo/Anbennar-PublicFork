@@ -842,7 +842,7 @@ country_event = {
 		trigger = {
 			has_consort_flag = S53_leopardhusband
 		}
-		add_legitimacy = -15
+		add_legitimacy = -20
 		hidden_effect = {
 			if = {
 				limit = { has_country_modifier = S53_military_husband_lvl1}
@@ -1227,6 +1227,10 @@ country_event = {
 				duration = -1
 			}
 		}
+		add_country_modifier = {
+			name = S53_leopards_wisdom
+			duration = -1
+		}
 	}
 
 	option = {
@@ -1238,18 +1242,14 @@ country_event = {
 					culture = cyazizeta_lizardfolk
 				}
 			}
-			if = {
-				limit = { ROOT = { tag = S53 } }
-				S53 = {
-					inherit = prev
-				}
-			}
-			else = {
-				L65 = {
-					inherit = prev
-				}
+			ROOT = {
+				inherit = prev
 			}
 		}
+		add_country_modifier = {
+			name = S53_leopards_wisdom
+			duration = -1
+		}	
 	}
 }
 
@@ -1286,6 +1286,9 @@ country_event = {
 				target = S23
 			}
 			create_union = L55
+			L55 = {
+
+			}
 			S23 = {
 				set_country_flag = S53_histonaleni_after_subjicate_event_flag
 			}

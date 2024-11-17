@@ -14670,8 +14670,38 @@ estate_nobility_S53_tanizu_tradition_covenant = {
 	can_select = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant }
 	can_revoke = { always = no }
 
+	on_granted = {
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				religion = beast_memory
+			}
+			add_province_modifier = { name = S53_beastial_wisdom duration = -1 }
+		}
+	}
+	on_revoked = {
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = S53_beastial_wisdom
+			}
+			remove_province_modifier = S53_beastial_wisdom
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = S53_beastial_wisdom
+			}
+			remove_province_modifier = S53_beastial_wisdom
+		}
+	}
+
 	penalties = {
-		
 	}
 
 	benefits = {

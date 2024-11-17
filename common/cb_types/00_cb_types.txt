@@ -882,8 +882,7 @@ cb_liberation = {
 				}
 			}
 			FROM = {
-				has_country_flag = S53_liberation_target_flag
-				has_subject_of_type = vassal 
+				has_country_flag = S53_liberation_target_flag 
 			}
 		}
 		

@@ -13486,6 +13486,7 @@ ngwenamasonamingo = {
 
 	potential = {
 		is_revolutionary = no
+		mission_completed = a_fairer_sex_S53
 	}
 
 	valid_for_nation_designer = yes #change to no later

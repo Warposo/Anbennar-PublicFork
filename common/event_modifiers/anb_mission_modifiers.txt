@@ -32159,7 +32159,6 @@ gushuokguan_political_unrest_3 = {
 S53_opening_ceremonies = {
 	mercenary_cost = -0.20
 	mercenary_manpower = 0.25
-	global_tax_income = 6.00 
 }
 
 S53_promised_hand = {
@@ -32196,6 +32195,7 @@ S53_cleanse_sins_of_riyitewag_forgiven_shifters = {
 S53_children_of_beasts_roads_and_waterways = {
 	movement_speed = 0.10
 	global_supply_limit_modifier = 0.20
+	global_trade_power = 0.10
 }
 
 S53_marriage_of_many_the_wedding_of_a_lifetime = {
@@ -32264,6 +32264,11 @@ S53_imbitinda_games = {
 S53_mezhinda_games = {
 	local_tax_modifier = 0.50
 	local_manpower_modifier = -1
+}
+
+S53_beastial_wisdom = {
+	local_religious_unity_contribution = -1 
+	local_tolerance_of_heretics = 3
 }
 
 #perm mods
