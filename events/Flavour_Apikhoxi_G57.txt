@@ -273,7 +273,7 @@ country_event = {
 		ai_chance = { factor = 75 }
 	}
 	option = {
-		name = "flavor_apikhoxi.6b"
+		name = "flavor_apikhoxi.6.b"
 		G57 = {
 			add_casus_belli = {
                 target = G55

@@ -92,43 +92,80 @@ G57_school_history:0 "School of History "
 
 #Events
 flavor_apikhoxi.1.t:0 "Form the Apikhoxi Guard"
-
+flavor_apikhoxi.1.d:0 "TODO"
+flavor_apikhoxi.1.a:0 "send dudes"
 
 flavor_apikhoxi.2.t:0 "Our Calmer Brothers Have an Offer"
+flavor_apikhoxi.2.d:0 "TODO"
+flavor_apikhoxi.2.a:0 "Yah"
+flavor_apikhoxi.2.b:0 "Nah"
 
 flavor_apikhoxi.3.t:0 "Changing the Deal"
+flavor_apikhoxi.3.d:0 "TODO"
+flavor_apikhoxi.3.a:0 "TODO"
 
 flavor_apikhoxi.4.t:0 "Outgrown Our Shackles"
+flavor_apikhoxi.4.d:0 "TODO"
+flavor_apikhoxi.4.a:0 "TODO"
 
 flavor_apikhoxi.5.t:0 "East Versus West"
+flavor_apikhoxi.5.d:0 "TODO"
+flavor_apikhoxi.5.a:0 "TODO"
 
 flavor_apikhoxi.6.t:0 "In League With the Farmers"
+flavor_apikhoxi.6.d:0 "TODO"
+flavor_apikhoxi.6.a:0 "Yah"
+flavor_apikhoxi.6.b:0 "Nah"
 
 flavor_apikhoxi.7.t:0 "Insincere Acceptance"
+flavor_apikhoxi.7.d:0 "TODO"
+flavor_apikhoxi.7.a:0 "TODO"
 
 flavor_apikhoxi.8.t:0 "We Love the Kylaka Day!"
+flavor_apikhoxi.8.d:0 "TODO"
+flavor_apikhoxi.8.a:0 "TODO"
 
 flavor_apikhoxi.9.t:0 "A Sweet Proposition"
+flavor_apikhoxi.9.d:0 "TODO"
+flavor_apikhoxi.9.a:0 "Yah"
+flavor_apikhoxi.9.b:0 "Nah"
 
 flavor_apikhoxi.10.t:0 "Land of Peaceful Fields"
+flavor_apikhoxi.10.d:0 "TODO"
+flavor_apikhoxi.10.a:0 "TODO"
 
 flavor_apikhoxi.11.t:0 "Opening the Door"
-
+flavor_apikhoxi.11.d:0 "TODO"
+flavor_apikhoxi.11.a:0 "TODO"
 
 flavor_apikhoxi.12.t:0 "You Gonna Eat That?"
+flavor_apikhoxi.12.d:0 "TODO"
+flavor_apikhoxi.12.a:0 "TODO"
 
 flavor_apikhoxi.13.t:0 "No Quarter to Slavers"
-
+flavor_apikhoxi.13.d:0 "TODO"
+flavor_apikhoxi.13.a:0 "Yah"
+flavor_apikhoxi.13.b:0 "Nah"
 
 flavor_apikhoxi.14.t:0 "Cradle of the Waters"
+flavor_apikhoxi.14.d:0 "TODO"
+flavor_apikhoxi.14.a:0 "TODO"
 
 flavor_apikhoxi.15.t:0 "Rebels in the Storm"
+flavor_apikhoxi.15.d:0 "TODO"
+flavor_apikhoxi.15.a:0 "TODO"
 
 flavor_apikhoxi.16.t:0 "Clash in the Cornfield"
+flavor_apikhoxi.16.d:0 "TODO"
+flavor_apikhoxi.16.a:0 "TODO"
 
 flavor_apikhoxi.17.t:0 "Talking Things Out"
+flavor_apikhoxi.17.d:0 "TODO"
+flavor_apikhoxi.17.a:0 "TODO"
 
 flavor_apikhoxi.18.t:0 "Spring in the Devand"
+flavor_apikhoxi.18.d:0 "TODO"
+flavor_apikhoxi.18.a:0 "TODO"
 
 flavor_apikhoxi.19.t:0 "Farmer's Festival in the Devand"
 flavor_apikhoxi.19.d:0 "$MONARCH$ poured himself another glass of retsina, savoring the smoky flavour. It was a delicious way to wash down the fried dough balls, dusted with sugar from Empkeios. With a smile, he passed a plate of the balls to young child behind him, who stared wide eye at the food. This was for them, after all. \n\nThe construction of the Devand's new capital was a salute to all its peoples. Slow-cooked board from the Mhteibar, fresh fruits from the Besolaki. Fragrant coffee at the start of the feast, to show that the Devand, too, commanded the new learning from Cannor. The tables groaned under a banquest open to all. At this the tables of the Apikhoxi there was neither lord nor slave, soldier nor farmer. Instead, a feast for where any may eat their fill. \n\nMore struggles would come, of course. But the Devand would face all those struggles with open arms and open hearths.  \n\nMock the sons of slaves and serfs if you wish, but if more of us valued food and cheer and song above hoarded gold, it would be a merrier world."
