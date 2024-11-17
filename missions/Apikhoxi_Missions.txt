@@ -781,6 +781,7 @@ apikhoxi_4 = {
 		required_missions = {
 			apikhoxi_chains_for_grains
 			apikhoxi_widen_the_door
+			apikhoxi_fertile_earth
 		}
 		trigger = {
 		   has_estate_privilege = estate_burghers_new_world_charter
@@ -815,7 +816,10 @@ apikhoxi_4 = {
 	apikhoxi_livestock_of_the_sea = {
 		icon = mission_tree_fishing
 		position = 3
-		required_missions = { apikhoxi_down_by_the_river }
+		required_missions = { 
+			apikhoxi_down_by_the_river
+			apikhoxi_fertile_minds
+		}
 		provinces_to_highlight = {
 			area = apikhoxi_area
 			not = { development = 12 }
@@ -959,7 +963,9 @@ apikhoxi_5 = {
 	apikhoxi_fertile_minds = {
 		icon = mission_rice_farming
 		position = 2
-		required_missions = { apikhoxi_fertile_earth }
+		required_missions = { 
+			apikhoxi_fertile_earth
+		}
 		provinces_to_highlight= {
 			or = {
 				and = {
@@ -1011,7 +1017,9 @@ apikhoxi_5 = {
 	apikhoxi_fertile_fields = {
 		icon = mission_big_house
 		position = 3
-		required_missions = { apikhoxi_fertile_minds }
+		required_missions = {
+			apikhoxi_fertile_minds
+		}
 		provinces_to_highlight = {
 			OR = {
 				2695 = {
@@ -1089,7 +1097,10 @@ apikhoxi_5 = {
 	apikhoxi_fertile_waters = {
 		icon = mission_arabian_sea_trade
 		position = 4
-		required_missions = { apikhoxi_fertile_fields }
+		required_missions = {
+			apikhoxi_fertile_fields
+			apikhoxi_livestock_of_the_sea
+		}
 		provinces_to_highlight = {
 			province_id = 2703
 			NOT = {
@@ -1116,7 +1127,10 @@ apikhoxi_5 = {
 	apikhoxi_spring_of_a_new_people = {
 		icon = prosper_in_piedmont
 		position = 5
-		required_missions = { apikhoxi_fertile_waters }
+		required_missions = {
+			apikhoxi_fertile_waters
+			apikhoxi_specialty_farms
+		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
