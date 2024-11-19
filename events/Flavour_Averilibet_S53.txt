@@ -1030,7 +1030,11 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
-			set_country_flag = S53_battles_won_against_trolls	
+			set_country_flag = S53_battles_won_against_trolls
+			set_variable = {
+				which = kulugiashBattlesWon
+				value = 0
+			}
 		}
 	}
 
@@ -1273,10 +1277,7 @@ country_event = {
 							amount = 10
 						}
 					}
-					has_opinion_modifier = {
-						who = ROOT 
-						modifier = historical_friend 
-					}
+					has_country_flag = S53_union
 				}
 			}
 			break_alliance = S23
@@ -1287,7 +1288,8 @@ country_event = {
 			}
 			create_union = L55
 			L55 = {
-
+				change_government = monarchy
+				add_government_reform = mengi_kingdom_reform
 			}
 			S23 = {
 				set_country_flag = S53_histonaleni_after_subjicate_event_flag
@@ -1324,6 +1326,19 @@ country_event = {
 			duration = 5475
 		}
 		add_treasury = 500
+		hidden_effect = {
+			if = {
+				limit = {   
+					L55 = {
+						is_subject = yes
+					}
+				}
+				L55 = {
+					change_government = monarchy
+					add_government_reform = mengi_kingdom_reform
+				}
+			}
+		}
 	}
 }
 

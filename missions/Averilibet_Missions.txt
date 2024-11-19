@@ -76,7 +76,7 @@ column_1 = {
 			new_facilities_S53
 			cooking_the_books_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { area = saposon_area } 
 
 		trigger = {
 			saposon_area = {
@@ -296,6 +296,7 @@ column_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
+			has_global_modifier_value = { which = nobles_loyalty_modifier value = 0.40}
 			OR = { 
 				num_of_royal_marriages = 3
 				any_known_country = {
@@ -319,7 +320,7 @@ column_2 = {
 				monarch_name = "Desta II"
 				claim = 100
 				adm = 4
-				dip = 6
+				dip = 4
 				mil = 4 
 				female = yes 
 			}
@@ -340,7 +341,7 @@ column_2 = {
 			add_prestige = -20 
 			change_estate_land_share = {
 				estate = estate_nobles
-				share = -10.0
+				share = -5.0
 			}
 			add_estate_loyalty = {
 				estate = estate_nobles
@@ -359,43 +360,39 @@ column_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = S53_holy_matrimony_tooltip
-				OR = {
-					calc_true_if = {
-						any_known_country = {
-							OR = {
-								culture = tanizu
-								culture = cyazizeta_lizardfolk
-							}
-							is_subject = no
-							guaranteed_by = ROOT
-							alliance_with = ROOT
-							has_country_modifier = S53_leopards_promise
-							trust = {
-								who = ROOT
-								value = 55
-							}
+			OR = {
+				calc_true_if = {
+					all_known_country = {
+						OR = {
+							culture = tanizu
+							culture = cyazizeta_lizardfolk
 						}
-						amount = 4
-					}
-					calc_true_if = {
-						any_known_country = {
-							OR = {
-								culture = tanizu
-								culture = cyazizeta_lizardfolk
-							}
-							is_subject = no
-							guaranteed_by = ROOT
-							trust = {
-								who = ROOT
-								value = 55
-							}
+						guaranteed_by = ROOT
+						alliance_with = ROOT
+						has_country_modifier = S53_leopards_promise
+						trust = {
+							who = ROOT
+							value = 55
 						}
-						amount = 6
 					}
-				} 
-			}
+					amount = 3
+				}
+				calc_true_if = {
+					all_known_country = {
+						OR = {
+							culture = tanizu
+							culture = cyazizeta_lizardfolk
+						}
+						guaranteed_by = ROOT
+						trust = {
+							who = ROOT
+							value = 55
+						}
+					}
+						amount = 5
+				}
+			} 
+			
 		} 
 		effect = {
 			custom_tooltip = S53_holy_matrimony_effect_tooltip
@@ -405,13 +402,6 @@ column_2 = {
 						OR = {
 							culture = tanizu
 							culture = cyazizeta_lizardfolk
-						}
-						NOT = {
-							OR = {
-								tag = S83
-								tag = S43
-								tag = S34
-							}
 						}
 						is_subject = no
 						guaranteed_by = ROOT
@@ -429,10 +419,8 @@ column_2 = {
 					ishyamtumu_region = {
 						add_permanent_claim = PREV
 					}
-					PREV = {
-						change_government_to_monarchy = yes
-						add_government_reform = mengi_kingdom_reform
-					}
+					change_government_to_monarchy = yes
+					add_government_reform = mengi_kingdom_reform
 				}
 			}
 		}
@@ -596,54 +584,41 @@ column_2 = {
 
 		effect = { 
 			custom_tooltip = S53_a_national_league_effect_tooltip
-			hidden_effect = {
-				set_country_flag = S53_izenwez_league_players_flag
-				every_core_province = {
-					Limit = {
-						num_of_times_expanded_infrastructure = 2
-						OR = {
-							has_building = fort_15th
-							has_building = fort_16th
-							has_building = fort_17th
-							has_building = fort_18th
-						}
-						OR = {
-							has_building = regimental_camp
-							has_building = conscription_center
-						}
-						OR = {
-							has_building = barracks
-							has_building = training_fields
-						}
-						is_core = root
-						has_province_modifier = S53_imbitinda_games
-					}
-					remove_province_modifier = S53_imbitinda_games
-					add_province_modifier = {
-						name = S53_mezhinda_games
-						duration = -1
-					}
-					add_building_construction = {
-						building = ramparts
-						speed = 0.90
-						cost = 0
-					}
+			set_country_flag = S53_izenwez_league_players_flag
+			every_core_province = {
+				Limit = {
+					num_of_times_expanded_infrastructure = 2
+					has_province_modifier = S53_imbitinda_games
 				}
+				hidden_effect = {
+					remove_province_modifier = S53_imbitinda_games
+				}
+				add_province_modifier = {
+					name = S53_mezhinda_games
+					duration = -1
+				}
+				add_building_construction = {
+					building = ramparts
+					speed = 0.90
+					cost = 0
+				}
+			}
+			hidden_effect = {
 				remove_country_modifier = S53_imbitinda_games_nat_matamot
 				remove_country_modifier = S53_imbitinda_games_nat_yikikakeli
 				remove_country_modifier = S53_imbitinda_games_nat_tristrias
-				add_country_modifier = {
-					name = S53_mezhinda_games_nat_matamot
-					duration = -1
-				}
-				add_country_modifier = {
-					name = S53_mezhinda_games_nat_yikikakeli
-					duration = -1
-				}
-				add_country_modifier = {
-					name = S53_mezhinda_games_nat_tristrias
-					duration = -1
-				}
+			}
+			add_country_modifier = {
+				name = S53_mezhinda_games_nat_matamot
+				duration = -1
+			}
+			add_country_modifier = {
+				name = S53_mezhinda_games_nat_yikikakeli
+				duration = -1
+			}
+			add_country_modifier = {
+				name = S53_mezhinda_games_nat_tristrias
+				duration = -1
 			}
 		} 
 	}
@@ -675,7 +650,7 @@ column_3 = {
 					type = diplomat
 				}
 				has_leaders = {
-					value = 1
+					value = 2
 					type = general
 					include_heir = no
 					include_monarch = no 
@@ -758,11 +733,18 @@ column_3 = {
 			set_country_flag = S53_liberation_non_GP_flag
 			every_known_country = {
 				limit = {
-					has_subject_of_type = vassal
-					any_subject_country = {
-						OR = {
-							culture = tanizu
-							culture = cyazizeta_lizardfolk
+					OR = {
+						any_subject_country = {
+							OR = {
+								culture = tanizu
+								culture = cyazizeta_lizardfolk
+							}
+						}
+						AND = {
+							any_owned_province = {
+								region = ishyamtumu_region
+							}
+							is_subject = no
 						}
 					}
 				}
@@ -771,7 +753,7 @@ column_3 = {
 					add_casus_belli = {
 						type = cb_liberation
 						target = PREV
-						months = 420
+						months = -1
 					}
 				}
 			}
@@ -801,7 +783,7 @@ column_3 = {
 			}
 			has_consort = yes
 			num_of_generals = 2 
-			cathedral = 3
+			cathedral = 1
 			OR = {
 				fort_15th = 3
 				fort_16th = 3
@@ -1118,7 +1100,7 @@ column_4 = {
 			add_church_power = -100
 			change_estate_land_share = {
 				estate = estate_church
-				share = -10
+				share = -5
 			}
 			add_estate_loyalty = {
 				estate = estate_church
@@ -1146,33 +1128,18 @@ column_4 = {
 			alliance_with = S23
 			custom_trigger_tooltip = {
 				tooltip = S53_like_a_sister_tooltip
-				OR = {
-					any_known_country = {
+				any_known_country = {
+					OR = {
 						tag = L55
-						capital_scope = {
-							num_of_units_in_province = {
-								who = ROOT
-								amount = 10
-							}
-						}
-						has_opinion_modifier = {
-							who = ROOT 
-							modifier = historical_friend 
-						}
-					} 
-					any_known_country = {
 						tag = S23
-						capital_scope = {
-							num_of_units_in_province = {
-								who = ROOT
-								amount = 10
-							}
+					}
+					capital_scope = {
+						num_of_units_in_province = {
+							who = S53
+							amount = 10
 						}
-						has_opinion_modifier = {
-							who = ROOT 
-							modifier = historical_friend 
-						}
-					} 
+					}
+					has_country_flag = S53_union
 				}
 			}
 		} 
@@ -1202,7 +1169,7 @@ column_4 = {
 					NOT = { liberty_desire = 50 }
 					trust = {
 						who = ROOT
-						value = 95
+						value = 75
 					}
 				}
 				any_subject_country = {
@@ -1210,7 +1177,7 @@ column_4 = {
 					NOT = { liberty_desire = 50 }
 					trust = {
 						who = ROOT
-						value = 95
+						value = 75
 					}
 				}
 			}
@@ -1575,6 +1542,7 @@ column_5 = {
 				add_historical_friend = S23
 				S23 = {
 					add_historical_friend = S53
+					set_country_flag = S53_union
 				}"
 				second_custom_tooltip = S53_help_from_friends_harpy_tooltip
 				second_limit = "
@@ -1588,6 +1556,7 @@ column_5 = {
 				add_historical_friend = L55
 				L55 = {
 					add_historical_friend = S53
+					set_country_flag = S53_union
 				}" 		
 			}
 		} 

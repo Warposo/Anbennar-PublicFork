@@ -882,7 +882,9 @@ cb_liberation = {
 				}
 			}
 			FROM = {
-				has_country_flag = S53_liberation_target_flag 
+				any_owned_province = {
+					region = ishyamtumu_region
+				}
 			}
 		}
 		

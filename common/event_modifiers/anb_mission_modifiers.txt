@@ -32837,6 +32837,7 @@ S53_imbitinda_games = {
 S53_mezhinda_games = {
 	local_tax_modifier = 0.50
 	local_manpower_modifier = -1
+	allowed_num_of_manufactories = 1
 }
 
 S53_beastial_wisdom = {

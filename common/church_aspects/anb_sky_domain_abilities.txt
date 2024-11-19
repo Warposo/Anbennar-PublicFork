@@ -368,7 +368,7 @@ naleni_fair_winds_aspect = {
 
 #averilibet 
 #averilibet-children of beasts 
-S53_children_of_beasts_relg_power = {
+S53_children_of_beasts_aspect = {
 	sprite = "GFX_sky_domain_riyitewag_sins"
 	cost = 200
 
@@ -397,8 +397,8 @@ S53_children_of_beasts_relg_power = {
 }
 
 #averilibet-marriage of many 
-S53_children_of_beasts_relg_power = {
-	sprite = "GFX_sky_domain_riyitewag_sins"
+S53_marriage_of_many_aspect = {
+	sprite = "GFX_marry_local_suitor_icon"
 	cost = 200
 
 	potential = {

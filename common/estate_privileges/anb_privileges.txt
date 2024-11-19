@@ -14669,7 +14669,7 @@ estate_church_supreme_imperial_cult = {
 
 #averilibet 
 estate_nobility_S53_tanizu_tradition_blood = {
-	icon = estate_nobility_privilege_mayan_crown
+	icon = kumarkand_rangers
 	influence = 0.10 
 
 	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_blood }
@@ -14690,7 +14690,7 @@ estate_nobility_S53_tanizu_tradition_blood = {
 }
 
 estate_nobility_S53_tanizu_tradition_water = {
-	icon = estate_nobility_privilege_mayan_crown
+	icon = kumarkand_rangers
 	influence = 0.05 
 	
 	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_water }
@@ -14711,7 +14711,7 @@ estate_nobility_S53_tanizu_tradition_water = {
 }
 
 estate_nobility_S53_tanizu_tradition_covenant = {
-	icon = estate_nobility_privilege_mayan_crown
+	icon = kumarkand_rangers
 	loyalty = 0.05
 	
 	is_valid = { has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant }
@@ -14756,6 +14756,7 @@ estate_nobility_S53_tanizu_tradition_covenant = {
 		global_spy_defence = 0.10
 		infantry_power = 0.05
 		church_loyalty_modifier = 0.05
+		nobles_privilege_slots = 1
 	}
 	ai_will_do = {
 		factor = 1000
