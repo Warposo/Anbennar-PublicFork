@@ -1446,7 +1446,7 @@ wyvernheart_column_4 = {
 	potential = { tag = B39 } 
 
 	legacy_of_the_wvyern = {
-		icon = je_maintiendrai
+		icon = mission_verne_flag
 		position = 1
 		provinces_to_highlight = {  } 
 
