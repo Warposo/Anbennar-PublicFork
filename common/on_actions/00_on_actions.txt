@@ -2037,7 +2037,13 @@ on_battle_won_country = {
 
 		100 = aw_zombies.100
 	}
-	L08_won_battle_count = yes
+
+	if = {
+		Limit = {
+			ROOT = { has_country_flag = kulugiash_battles} 
+		}
+		L08_won_battle_count = yes
+	}
 
 	#averibilet battles agianst trolls won
 	if = {
@@ -3165,8 +3171,24 @@ on_monarch_death = {
 		country_event = { id = flavour_themarenn.97 }
 	}
 
+	#averilibet marriage of many
+	if = {
+		limit = {
+			has_country_flag = S53_marriage_of_many_target_flag 
+		}
+		every_known_country = {
+			limit = {
+				has_country_flag = S53_marriage_of_many_unlock_flag
+			}
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				target = ROOT
+				months = 120 
+			}
+		}
+		clr_country_flag = S53_marriage_of_many_target_flag 
+	}
 	anb_scripted_effects_for_ruler_death = yes
-	
 }
 
 # country 
@@ -10804,7 +10826,7 @@ on_death_has_harem = {
 		}
 		else_if ={
 			limit = {
-				has_reform = ngwenamasonamingo
+				has_reform = ngwenamasonamingo_reform
 			}
 			country_event = { id = flavor_averilibet.2 }
 		}
@@ -16917,18 +16939,6 @@ on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accept
 }
 
 on_royal_marriage_broken = { #ROOT - Original marriage creator, FROM - Marriage accepter
-#averilibet marriage of many
-	if = {
-		limit = {
-			has_country_flag = S53_marriage_of_many_unlock_flag
-			FROM = { has_country_flag = S53_marriage_of_many_target_flag }
-		}
-		add_casus_belli = {
-			type = cb_restore_personal_union
-			target = FROM
-		}
-		FROM = { clr_country_flag = S53_marriage_of_many_target_flag }
-	}
 }
 
 on_alliance_created = { #ROOT - Alliance sender, FROM - Alliance accepter

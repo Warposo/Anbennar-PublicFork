@@ -422,6 +422,7 @@ S53_marriage_of_many_aspect = {
 				value = 70
 			}
 			is_subject = no
+			NOT = {total_development = 350}
 		}
 		NOT = { has_country_modifier = S53_marriage_of_many_cooldown }	
 	}

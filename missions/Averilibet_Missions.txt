@@ -14,8 +14,10 @@ column_1 = {
 			employed_advisor = { category = MIL } 
 			6666 = {
 				base_manpower = 5
-				is_capital = yes
-				ROOT = { num_of_mercenaries = 1 } 
+				is_capital = yes 
+			}
+			any_hired_mercenary_company = {
+				location = { province_id = 6666 }
 			}
 		}
 
@@ -34,10 +36,19 @@ column_1 = {
 			just_a_game_S53
 			a_final_raid_S53
 		}
-		provinces_to_highlight = { province_id = 6666 } 
+		provinces_to_highlight = {
+			area = tilcakan_area
+		} 
 
 		trigger = {
-			6666 = { num_of_times_expanded_infrastructure = 1 } 
+			if = {
+				limit = { NOT = {has_dlc = "Leviathan"}}
+				6666 = { development = 15 } 
+			}
+			if = {
+				limit = { has_dlc = "Leviathan"}
+				6666 = { num_of_times_expanded_infrastructure = 1 }
+			}
 			treasury = 200
 			NOT = {
 				has_country_modifier = S53_opening_ceremonies 
@@ -76,12 +87,18 @@ column_1 = {
 			new_facilities_S53
 			cooking_the_books_S53
 		}
-		provinces_to_highlight = { area = saposon_area } 
+		provinces_to_highlight = { 
+			area = saposon_area 
+			
+		} 
 
 		trigger = {
 			saposon_area = {
 				owned_by = S53
-				has_province_modifier = autonomy_increased
+				OR = {
+					has_province_modifier = autonomy_increased
+					local_autonomy = 90
+				}
 				type = all
 			}
 			has_estate_privilege = estate_adventurers_sponsor_sellswords
@@ -116,9 +133,12 @@ column_1 = {
 		position = 5
 		required_missions = {
 			make_it_official_S53
-			holy_matrimony_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = kidfan_area
+			area = kadamuu_area
+			area = kirksanlashan_area
+		} 
 
 		trigger = {
 			kidfan_area = {
@@ -133,10 +153,21 @@ column_1 = {
 				owned_by = ROOT
 				type = all
 			}
-			5600 = {
-				is_core = ROOT
-				has_building = barracks
-				num_of_times_expanded_infrastructure = 1
+			if = {
+				limit = { NOT = {has_dlc = "Leviathan"}}
+				5600 = {
+					is_core = ROOT
+					has_building = barracks 
+					development = 15 
+				} 
+			}
+			if = {
+				limit = {has_dlc = "Leviathan"}
+				5600 = {
+					is_core = ROOT
+					has_building = barracks 
+					num_of_times_expanded_infrastructure = 1
+				} 
 			}
 		} 
 
@@ -161,7 +192,10 @@ column_1 = {
 		icon = mission_cannons_firing
 		position = 6
 		required_missions = { watery_detour_S53 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 6666
+			province_id = 5600
+		} 
 
 		trigger = {
 			custom_trigger_tooltip = {
@@ -175,18 +209,17 @@ column_1 = {
 				}  
 			}  
 			6666 = {
-				ROOT = {
-					num_of_mercenaries = 1
-				}
 				development = 25 	
 			}
 			5600 = {
-				ROOT = {
-					num_of_mercenaries = 1
-				}
 				num_of_buildings_in_province = 4
 			}
-
+			any_hired_mercenary_company = {
+				location = { province_id = 6666 }
+			}
+			any_hired_mercenary_company = {
+				location = { province_id = 5600 }
+			}
 		} 
 
 		effect = {  
@@ -474,20 +507,45 @@ column_2 = {
 		icon = mission_hill_gnoll_auxilaries
 		position = 7
 		required_missions = { up_the_ante_S53 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 5594 
+			province_id = 6606
+		} 
 
-		trigger = {  
-			5594 = {
-				num_of_times_expanded_infrastructure = 1
-				is_core = ROOT
-			}
-			6606 = {
-				num_of_times_expanded_infrastructure = 1
-				is_core = ROOT
-				has_great_project = {
-					type = e_arenaginku_adras
-					tier = 1
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Leviathan"
+					}
 				}
+				5594 = {
+					development = 15
+					is_core = ROOT
+				}
+				6606 = {
+					development = 15
+					is_core = ROOT
+				}
+				treasury = 500
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				5594 = {
+					num_of_times_expanded_infrastructure = 1
+					is_core = ROOT
+				}
+				6606 = {
+					num_of_times_expanded_infrastructure = 1
+					is_core = ROOT
+					has_great_project = {
+						type = e_arenaginku_adras
+						tier = 1
+					}
+				}
+				
 			}
 			high_tolerance_gnollish_race_trigger = yes
 			calc_true_if = {
@@ -544,6 +602,10 @@ column_2 = {
 				name = S53_imbitinda_games_nat_tristrias
 				duration = -1
 			}
+			if = {
+				limit = { NOT = { has_dlc = "Leviathan" } }
+				add_treasury = -500
+			}
 		} 
 	}
 
@@ -551,43 +613,81 @@ column_2 = {
 		icon = per_create_the_ghulams
 		position = 8
 		required_missions = { jumping_beasts_S53 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  
-			num_of_owned_provinces_with = {
-				num_of_times_expanded_infrastructure = 2
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
-				OR = {
-					has_building = regimental_camp
-					has_building = conscription_center
-				}
-				OR = {
-					has_building = barracks
-					has_building = training_fields
-				}
-				is_core = root
-				has_province_modifier = S53_imbitinda_games
-				value = 3
-			}
-			6606 = {
-				has_great_project = {
-					type = e_arenaginku_adras
-					tier = 2
-				}
-			}
+		provinces_to_highlight = {  
+			province_id = 6606 
+			province_id = 5600 
+			province_id = 5594 
 		} 
 
-		effect = { 
+		trigger = { 
+			if = {
+				limit = {NOT = { has_dlc = "Leviathan" } }
+				num_of_owned_provinces_with = {
+					development = 30
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					OR = {
+						has_building = regimental_camp
+						has_building = conscription_center
+					}
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					is_core = root
+					has_province_modifier = S53_imbitinda_games
+					value = 3
+				}
+				treasury = 1500 
+			}
+			if = {
+				limit = { has_dlc = "Leviathan" } 
+				num_of_owned_provinces_with = {
+					num_of_times_expanded_infrastructure = 2
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					OR = {
+						has_building = regimental_camp
+						has_building = conscription_center
+					}
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					is_core = root
+					has_province_modifier = S53_imbitinda_games
+					value = 3
+				}
+				6606 = {
+					has_great_project = {
+						type = e_arenaginku_adras
+						tier = 2
+					}
+				}
+			} 
+		} 
+
+		effect = {
+			if = {
+				limit = {NOT = { has_dlc = "Leviathan" } }
+				add_treasury = -1500 
+			} 
 			custom_tooltip = S53_a_national_league_effect_tooltip
 			set_country_flag = S53_izenwez_league_players_flag
 			every_core_province = {
 				Limit = {
-					num_of_times_expanded_infrastructure = 2
+					OR = {
+						num_of_times_expanded_infrastructure = 2
+						development = 30
+					}
 					has_province_modifier = S53_imbitinda_games
 				}
 				hidden_effect = {
@@ -670,7 +770,10 @@ column_3 = {
 		} 
 
 		effect = { 
-			country_event = { id = flavor_averilibet.4 }
+			country_event = { 
+				id = flavor_averilibet.4 
+				days = 1
+			}
 		} 
 	}
 
@@ -691,24 +794,38 @@ column_3 = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = S53_give_them_hope_tooltip
-				calc_true_if = {
-					any_known_country = {
-						OR = {
-							culture = tanizu
-							culture = cyazizeta_lizardfolk
-						}
-						is_subject = yes
-						has_opinion_modifier = {
-							who = from
-							modifier = sent_gift
-						}
-						overlord = {
-							NOT = {
-								army_size = from
+				OR = {
+					calc_true_if = {
+						any_known_country = {
+							OR = {
+								culture = tanizu
+								culture = cyazizeta_lizardfolk
+							}
+							is_subject = yes
+							has_opinion_modifier = {
+								who = from
+								modifier = sent_gift
+							}
+							overlord = {
+								NOT = {
+									army_size = from
+								}
 							}
 						}
+						amount = 1
 					}
-					amount = 1
+					AND = {
+						any_known_country = {
+							OR = {
+								culture = tanizu
+								culture = cyazizeta_lizardfolk
+							}
+							NOT = {
+								is_subject = yes
+							}
+						}
+						is_year = 1460
+					}
 				}
 			}
 		} 
@@ -748,7 +865,6 @@ column_3 = {
 						}
 					}
 				}
-				set_country_flag = S53_liberation_target_flag
 				ROOT = {
 					add_casus_belli = {
 						type = cb_liberation
@@ -799,7 +915,7 @@ column_3 = {
 				add_dip_power = -50
 				add_mil_power = -50
 			}
-			add_government_reform = ngwenamasonamingo
+			add_government_reform = ngwenamasonamingo_reform
 			set_estate_privilege = estate_nobility_S53_tanizu_tradition_water
 			hidden_effect = {
 				remove_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
@@ -823,8 +939,10 @@ column_3 = {
 						}
 					}
 				}
+				set_consort_flag = S53_leopardhusband
 				country_event = {
 					id = flavor_averilibet.3
+					days = 7
 				}
 			}
 			if = {
@@ -876,7 +994,7 @@ column_3 = {
 						culture_group = orcish
 					}	
 					alliance_with = ROOT 
-					NOT = { total_development = ROOT }
+					NOT = { total_development = 350 }
 					trust = {
 						who = ROOT
 						value = 70
@@ -891,6 +1009,7 @@ column_3 = {
 		effect = {  
 			country_event = {
 				id = flavor_averilibet.7
+				days = 1
 			}
 			set_country_flag = S53_marriage_of_many_unlock_flag
 		} 
@@ -903,18 +1022,20 @@ column_3 = {
 			more_the_marryier_S53
 			an_injustice_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_group = south_denbari
+		} 
 
 		trigger = { 
 			calc_true_if = {
-				amount = 4
-				any_subject_country = {
+				amount = 3
+				all_subject_country = {
 					OR = {
 						culture = tanizu
 						culture = cyazizeta_lizardfolk
 					}
 					development_in_provinces = {
-						value = 35
+						value = 50
 					}	
 				}
 			}
@@ -1027,19 +1148,16 @@ column_3 = {
 
 		trigger = {  
 			has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant
-			calc_true_if = {
-				amount = 4
-				any_subject_country = {
-					OR = {
-						culture = tanizu
-						culture = cyazizeta_lizardfolk
-					}
-					trust = {
-						who = ROOT
-						value = 100
-					}	
+			all_subject_country = {
+				OR = {
+					culture = tanizu
+					culture = cyazizeta_lizardfolk
 				}
-			}
+				trust = {
+					who = ROOT
+					value = 95
+				}	
+			}	
 			all_subject_country = {
 				NOT = { liberty_desire = 0}
 			} 
@@ -1065,7 +1183,9 @@ column_4 = {
 			a_special_guest_S53
 			help_from_friends_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 6118
+		} 
 
 		trigger = {
 			custom_trigger_tooltip = {
@@ -1147,6 +1267,7 @@ column_4 = {
 		effect = {  
 			country_event = {
 				id = flavor_averilibet.13
+				days = 1
 			}
 		} 
 	}
@@ -1155,29 +1276,65 @@ column_4 = {
 		icon = mission_reign_of_women
 		position = 4
 		required_missions = {
-			a_fairer_sex_S53
 			like_a_sister_S53
-			advice_from_strangers_S53
 		}
 		provinces_to_highlight = {  } 
 
 		trigger = {  
 			custom_trigger_tooltip = {
 				tooltip = S53_like_a_mother_tooltip
-				any_subject_country = {
-					tag = L55
-					NOT = { liberty_desire = 50 }
-					trust = {
-						who = ROOT
-						value = 75
+				OR = {
+					AND = {
+						any_subject_country = {
+							tag = L55
+							NOT = { liberty_desire = 50 }
+							trust = {
+								who = ROOT
+								value = 75
+							}
+						}
+						any_subject_country = {
+							tag = S23
+							NOT = { liberty_desire = 50 }
+							trust = {
+								who = ROOT
+								value = 75
+							}
+						}
 					}
-				}
-				any_subject_country = {
-					tag = S23
-					NOT = { liberty_desire = 50 }
-					trust = {
-						who = ROOT
-						value = 75
+					AND = {
+						any_subject_country = {
+							tag = L55
+							NOT = { liberty_desire = 50 }
+							trust = {
+								who = ROOT
+								value = 75
+							}
+						}
+						S23 = {
+							exists = no
+						}
+					}
+					AND = {
+						any_subject_country = {
+							tag = S23
+							NOT = { liberty_desire = 50 }
+							trust = {
+								who = ROOT
+								value = 75
+							}
+						}
+						L55 = {
+							exists = no
+						}
+					}
+					AND = {
+						L55 = {
+							exists = no
+						}
+						S23 = {
+							exists = no
+						}
 					}
 				}
 			}
@@ -1186,6 +1343,7 @@ column_4 = {
 		effect = {  
 			country_event = {
 				id = flavor_averilibet.15
+				days = 1
 			}
 		} 
 	}
@@ -1194,7 +1352,10 @@ column_4 = {
 		icon = mission_african_trade_post
 		position = 5
 		required_missions = { like_a_mother_S53 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = werikafan_area
+			area = fetengaben_area
+		} 
 
 		trigger = {
 			werikafan_area = {
@@ -1251,21 +1412,30 @@ column_4 = {
 			an_injustice_S53
 			like_a_matriarch_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 6118
+		} 
 
 		trigger = {
 			any_hired_mercenary_company = { 
 				template = merc_leopard_warband
 				location = { 
-					6666 = {
-						units_in_province = 20
-					}
+				 province_id = 6118 
 				}
 			}
-			6118 = {
-				has_great_project = {
-					type = crater_of_the_martyr
-					tier = 1
+			If = {
+				limit = { NOT = { has_dlc = "Leviathan" } }
+				6118 = {
+					development = 20
+				}
+			}
+			If = {
+				limit = { has_dlc = "Leviathan" } 
+				6118 = {
+					has_great_project = {
+						type = crater_of_the_martyr
+						tier = 1
+					}
 				}
 			}
 			OR = {
@@ -1303,7 +1473,9 @@ column_4 = {
 			middling_migration_S53
 			a_procession_of_beasts_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			region = ishyamtumu_region
+		} 
 
 		trigger = { 
 			ishyamtumu_region = {
@@ -1380,7 +1552,9 @@ column_4 = {
 			spiritual_boundaries_S53
 			sheding_pains_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_group = south_denbari
+		} 
 
 		trigger = {  
 			south_denbari = {
@@ -1397,16 +1571,16 @@ column_4 = {
 				type = all
 			}
 			calc_true_if = {
-				amount = 4
+				amount = 3
 				any_subject_country = {
 					OR = {
 						culture = tanizu
 						culture = cyazizeta_lizardfolk
 					}
 					development_in_provinces = {
-						value = 100
+						value = 125
 					}
-					 NOT = { liberty_desire = 33 } 	
+					NOT = { liberty_desire = 50 } 	
 				}
 			}
 		} 
@@ -1518,7 +1692,7 @@ column_5 = {
 				has_country_modifier = racial_focus_gnollish
 				has_country_modifier = racial_focus_harpy
 			}
-		  } 
+		} 
 
 		effect = {
 			create_alliance = L55
@@ -1569,7 +1743,9 @@ column_5 = {
 			help_from_friends_S53
 			some_progress_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			province_id = 4963
+		} 
 
 		trigger = { 
 			custom_trigger_tooltip = {
@@ -1673,7 +1849,11 @@ column_5 = {
 		icon = mission_asian_trader
 		position = 6
 		required_missions = { like_a_matriarch_S53 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			area = yetmesira_area
+			province_id = 6606 
+			province_id = 4955
+		} 
 
 		trigger = {
 			6606 = {

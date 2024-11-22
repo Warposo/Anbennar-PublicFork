@@ -32876,7 +32876,7 @@ S53_diplomatic_husband_lvl1 = {
 
 S53_diplomatic_husband_lvl2 = {
 	dip_advisor_cost = -0.2
-	improve_relation_modifier = -0.1
+	improve_relation_modifier = 0.1
 	monthly_favor_modifier = 0.1
 }
 

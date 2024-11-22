@@ -4359,7 +4359,11 @@ mengi_kingdom_reform = {
 	potential = {
 		OR = {
 			culture_group = mengi
-			have_had_reform = mengi_kingdom_reform 
+			have_had_reform = mengi_kingdom_reform
+			has_unlocked_government_reform = {
+				government_reform = ngwenamasonamingo_reform
+			}
+			has_reform = ngwenamasonamingo_reform
 		}
 	}
 	ai = {
@@ -13477,22 +13481,28 @@ floodborn_council_reform_always_mage = {
 }
 
 #averilibet t1
-ngwenamasonamingo = {
+ngwenamasonamingo_reform = {
 	icon = "british_queen"
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
 	maintain_dynasty = yes
 
 	potential = {
+		OR = {
+			has_unlocked_government_reform = {
+				government_reform = ngwenamasonamingo_reform
+			}
+			has_reform = ngwenamasonamingo_reform
+		}
 		is_revolutionary = no
 		mission_completed = a_fairer_sex_S53
 	}
 
 	valid_for_nation_designer = yes #change to no later
 	modifiers = {
-		diplomatic_upkeep = 4
+		diplomatic_upkeep = 3
 		may_recruit_female_generals = yes 
-		may_recruit_female_generals = 0.25
+		female_advisor_chance = 0.25
 		can_fabricate_for_vassals = yes
 	}
 

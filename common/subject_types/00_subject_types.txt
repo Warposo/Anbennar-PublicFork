@@ -942,7 +942,7 @@ personal_union = {
 		modifier = march_bonus
 		trigger = {
 			overlord = {
-				has_reform = ngwenamasonamingo
+				has_reform = ngwenamasonamingo_reform
 			}
 		}
 	} 
@@ -951,7 +951,7 @@ personal_union = {
 		modifier = S53_husband_land_force
 		trigger = {
 			overlord = {
-				has_reform = ngwenamasonamingo
+				has_reform = ngwenamasonamingo_reform
 			}
 		}
 	} 

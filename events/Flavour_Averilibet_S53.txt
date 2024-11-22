@@ -13,7 +13,7 @@ country_event = {
 		ruler_age = 30
 		has_heir = no
 		has_government_attribute = heir
-		has_reform = ngwenamasonamingo
+		has_reform = ngwenamasonamingo_reform
 	}
 	
 	desc = {
@@ -248,7 +248,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-        has_reform = ngwenamasonamingo
+        has_reform = ngwenamasonamingo_reform
 	}
 
 	immediate = {
@@ -277,7 +277,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_reform = ngwenamasonamingo
+		has_reform = ngwenamasonamingo_reform
 	}
 	
 	immediate = {
@@ -1066,13 +1066,11 @@ country_event = {
 		hidden_effect = {
 			random_known_country = {
 				limit = {
-					government = monarchy
-					NOT = { total_development = ROOT }
 					trust = {
 						who = ROOT
 						value = 70
 					}
-					is_subject = no
+					NOT = {total_development = 350}
 				}
 				country_event = {
 					id = flavor_averilibet.8
@@ -1268,43 +1266,45 @@ country_event = {
 
 	option = { 
 		name = flavor_averilibet.13.a
-		if = {
-			limit = {
-				L55 = {
-					capital_scope = {
-						num_of_units_in_province = {
-							who = ROOT
-							amount = 10
+		hidden_effect = {
+			if = {
+				limit = {
+					L55 = {
+						capital_scope = {
+							num_of_units_in_province = {
+								who = ROOT
+								amount = 10
+							}
 						}
+						has_country_flag = S53_union
 					}
-					has_country_flag = S53_union
+				}
+				break_alliance = S23
+				break_marriage = S23
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = S23
+				}
+				create_union = L55
+				L55 = {
+					change_government = monarchy
+					add_government_reform = mengi_kingdom_reform
+				}
+				S23 = {
+					set_country_flag = S53_histonaleni_after_subjicate_event_flag
 				}
 			}
-			break_alliance = S23
-			break_marriage = S23
-			add_casus_belli = {
-				type = cb_restore_personal_union
-				target = S23
-			}
-			create_union = L55
-			L55 = {
-				change_government = monarchy
-				add_government_reform = mengi_kingdom_reform
-			}
-			S23 = {
-				set_country_flag = S53_histonaleni_after_subjicate_event_flag
-			}
-		}
-		else = {
-			break_alliance = L55
-			break_marriage = L55
-			add_casus_belli = {
-				type = cb_restore_personal_union
-				target = L55
-			}
-			create_union = S23
-			L55 = {
-				set_country_flag = S53_histonaleni_after_subjicate_event_flag
+			else = {
+				break_alliance = L55
+				break_marriage = L55
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = L55
+				}
+				create_union = S23
+				L55 = {
+					set_country_flag = S53_histonaleni_after_subjicate_event_flag
+				}
 			}
 		}
 	}
@@ -1376,8 +1376,8 @@ country_event = {
 					change_variable = { which = totalnalenDev value = -1 }
 				}
 				L55 = {
-					every_core_province = {
-						add_territorial_core = ROOT
+					every_owned_province = {
+						add_core = ROOT
 						cede_province = ROOT
 					}
 				}
@@ -1393,8 +1393,8 @@ country_event = {
 					change_variable = { which = totalhistoDev value = -1 }
 				}
 				S23 = {
-					every_core_province = {
-						add_territorial_core = ROOT
+					every_owned_province = {
+						add_core = ROOT
 						cede_province = ROOT
 					}
 				}
@@ -1414,8 +1414,8 @@ country_event = {
 					change_variable = { which = totalnalenDev value = -1 }
 				}
 				L55 = {
-					every_core_province = {
-						add_territorial_core = ROOT
+					every_owned_province = {
+						add_core = ROOT
 						cede_province = ROOT
 					}
 				}
@@ -1431,8 +1431,8 @@ country_event = {
 					change_variable = { which = totalhistoDev value = -1 }
 				}
 				S23 = {
-					every_core_province = {
-						add_territorial_core = ROOT
+					every_owned_province = {
+						add_core = ROOT
 						cede_province = ROOT
 					}
 				}

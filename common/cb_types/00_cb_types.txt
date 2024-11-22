@@ -885,6 +885,7 @@ cb_liberation = {
 				any_owned_province = {
 					region = ishyamtumu_region
 				}
+				is_subject = no
 			}
 		}
 		
