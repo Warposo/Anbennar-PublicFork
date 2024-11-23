@@ -3634,12 +3634,8 @@ estate_nobles_G57_land_golden_ears = {
 	}
 	can_select = {
 		OR = {
-			any_owned_province = {
-				OR = {
-					trade_goods = livestock
-					trade_goods = grain
-				}
-			}
+			livestock = 1
+			grain = 1
 		}
 	}
 	on_granted = {
