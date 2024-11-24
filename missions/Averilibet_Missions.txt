@@ -59,12 +59,8 @@ column_1 = {
 		}
 
 		effect = {
-			add_country_modifier = {
-				name = S53_setinda_games_nat_averilibet 
-				duration = -1
-			}
 			6666 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_setinda_games
 					duration = -1
 				}
@@ -176,14 +172,10 @@ column_1 = {
 			set_country_flag = S53_rhada_lifters_flag  
 			5600 = {
 				add_lizardfolk_minority_size_effect = yes
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_setinda_games
 					duration = -1
 				}
-			}
-			add_country_modifier = {
-				name = S53_setinda_games_nat_yikikakeli
-				duration = -1
 			}
 		} 
 	}
@@ -225,7 +217,7 @@ column_1 = {
 		effect = {  
 			6666 = {
 				add_lizardfolk_minority_size_effect = yes
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_imbitinda_games
 					duration = -1
 				}
@@ -234,25 +226,13 @@ column_1 = {
 				}
 			}
 			5600 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_imbitinda_games
 					duration = -1
 				}
 				hidden_effect = {
 					remove_province_modifier = S53_setinda_games
 				}
-			}
-			add_country_modifier = {
-				name = S53_imbitinda_games_nat_averilibet
-				duration = -1
-			}
-			add_country_modifier = {
-				name = S53_imbitinda_games_nat_yikikakeli
-				duration = -1
-			}
-			hidden_effect = {
-				remove_country_modifier = S53_setinda_games_nat_averilibet
-				remove_country_modifier = S53_setinda_games_nat_yikikakeli
 			}
 			pechuketema_area = {
 				add_permanent_claim = ROOT
@@ -561,7 +541,7 @@ column_2 = {
 			custom_tooltip = S53_jumping_beasts_effect_tooltip
 			set_country_flag = S53_gnoll_buffalo_jumpers_flag
 			5594 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_imbitinda_games
 					duration = -1
 				}
@@ -569,7 +549,7 @@ column_2 = {
 				add_gnollish_minority_size_effect = yes
 			}
 			6606 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_imbitinda_games
 					duration = -1
 				}
@@ -577,7 +557,7 @@ column_2 = {
 				add_gnollish_minority_size_effect = yes
 			}
 			6666 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_mezhinda_games
 					duration = -1
 				}
@@ -586,21 +566,6 @@ column_2 = {
 			}
 			5600 = {
 				add_gnollish_minority_size_effect = yes
-			}
-			hidden_effect = {
-				remove_country_modifier = S53_imbitinda_games_nat_averilibet
-			}
-			add_country_modifier = {
-				name = S53_mezhinda_games_nat_averilibet
-				duration = -1
-			}
-			add_country_modifier = {
-				name = S53_imbitinda_games_nat_matamot
-				duration = -1
-			}
-			add_country_modifier = {
-				name = S53_imbitinda_games_nat_tristrias
-				duration = -1
 			}
 			if = {
 				limit = { NOT = { has_dlc = "Leviathan" } }
@@ -690,10 +655,7 @@ column_2 = {
 					}
 					has_province_modifier = S53_imbitinda_games
 				}
-				hidden_effect = {
-					remove_province_modifier = S53_imbitinda_games
-				}
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_mezhinda_games
 					duration = -1
 				}
@@ -702,23 +664,9 @@ column_2 = {
 					speed = 0.90
 					cost = 0
 				}
-			}
-			hidden_effect = {
-				remove_country_modifier = S53_imbitinda_games_nat_matamot
-				remove_country_modifier = S53_imbitinda_games_nat_yikikakeli
-				remove_country_modifier = S53_imbitinda_games_nat_tristrias
-			}
-			add_country_modifier = {
-				name = S53_mezhinda_games_nat_matamot
-				duration = -1
-			}
-			add_country_modifier = {
-				name = S53_mezhinda_games_nat_yikikakeli
-				duration = -1
-			}
-			add_country_modifier = {
-				name = S53_mezhinda_games_nat_tristrias
-				duration = -1
+				hidden_effect = {
+					remove_province_modifier = S53_imbitinda_games
+				}
 			}
 		} 
 	}
@@ -1898,7 +1846,7 @@ column_5 = {
 				}
 			}
 			6637 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_chien_cuts
 					duration = -1
 				}
@@ -1908,7 +1856,7 @@ column_5 = {
 				}
 			}
 			5536 = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = S53_chien_cuts
 					duration = -1
 				}
