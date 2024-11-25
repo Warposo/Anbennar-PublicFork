@@ -36,8 +36,10 @@ apikhoxi_1 = {
 		provinces_to_highlight = {
 			province_id = 2680
 			NOT = {
-				num_free_building_slots = 1
-				has_construction = building
+				AND = {
+					num_free_building_slots = 1
+					NOT = { has_construction = building }
+				}
 			}
 		}
 		trigger = {
@@ -62,9 +64,35 @@ apikhoxi_1 = {
 		position = 4
 		required_missions = { apikhoxi_time_to_harvest }
 		trigger = {
-			OR = {
-				num_of_galley = 25
-				naval_strength = {
+			AND = {
+				G62 = {
+					NOT = {
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+							AND = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = warned
+								}
+							}
+						}
+					}
+				}
+				OR = {
+					num_of_galley = 25
+					naval_strength = {
+						who = G62
+						value = 1
+					}
+				}
+				military_strength = {
 					who = G62
 					value = 1
 				}
@@ -95,7 +123,7 @@ apikhoxi_1 = {
 	apikhoxi_brothers_in_exile = {
 		icon = mission_diplomatic_relation
 		position = 5
-		required_missions = { apikhoxi_the_anger_of_a_calm_people }
+		required_missions = { apikhoxi_share_the_bounty_of_freedom }
 		trigger = {
 		   	OR = {
 				and = {
@@ -106,13 +134,13 @@ apikhoxi_1 = {
 		   			estate_loyalty = { estate = estate_mages loyalty = 60 }
 		   			has_estate_privilege = estate_mages_patronage_of_the_magical_arts
 				}
-				G54 = { is_subject_of = G57 }
+				G54 = { is_subject_of = ROOT }
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					G54 = { is_subject_of = G57 }
+					G54 = { is_subject_of = ROOT }
 				}
 				inherit = G54
 			}
@@ -172,6 +200,7 @@ apikhoxi_2 = {
 			country_event = { id = flavor_apikhoxi.3 }
 		}
 	}
+
 	apikhoxi_time_to_harvest = {
 		icon = develop_the_south
 		position = 3
@@ -240,9 +269,21 @@ apikhoxi_2 = {
 					is_capital = yes
 					owner = {
 						NOT = {
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = scornfully_insulted
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+								AND = {
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = warned
+									}
+								}
 							}
 						}
 					}
@@ -257,7 +298,7 @@ apikhoxi_2 = {
 							has_building = barracks
 							has_building = regimental_camp
 						}
-				 	}
+					}
 					owned_by = ROOT
 				}
 			}
@@ -275,9 +316,21 @@ apikhoxi_2 = {
 			}
 			calc_true_if = {
 				all_known_country = {
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = scornfully_insulted
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+						AND = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = warned
+							}
+						}
 					}
 					capital_scope = {
 						region = alecand_region
@@ -530,114 +583,6 @@ apikhoxi_3 = {
 		}
 	}
 
-	apikhoxi_specialty_farms = {
-		icon = mississippi_company
-		position = 4
-		required_missions = {
-			apikhoxi_ride_the_river_road
-			apikhoxi_livestock_of_the_sea
-		}
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 2674
-					NOT = { province_has_center_of_trade_of_level = 2 }
-				}
-				AND = {
-					province_id = 2680
-					NOT = { province_has_center_of_trade_of_level = 2 }
-				}
-				AND  = {
-					province_id = 2680
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-				}
-				AND  = {
-					province_id = 2695
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-
-				}
-				AND  = {
-					province_id = 2696
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-
-				}
-				AND  = {
-					province_id = 2699
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-				}
-				AND = {
-					owned_by = root
-					OR = {
-						trade_goods = grains
-						trade_goods = livestock
-						trade_goods = sugar
-						trade_goods = tobacco
-						trade_goods = cotton
-					}
-					OR = {
-						NOT = { has_building = farm_estate }
-						NOT = { has_building = plantations }
-						NOT = { has_building = trade_company }
-					}
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				2674 = {
-					province_has_center_of_trade_of_level = 2
-				}
-				2680 = {
-					province_has_center_of_trade_of_level = 2
-				}
-				treasury = 200
-			}
-			num_of_owned_provinces_with = {
-				value = 5
-				OR = {
-					has_building = plantations
-					has_building = farm_estate
-					has_building = tradecompany
-				}
-			}
-			2680 = {
-				is_prosperous = yes
-				NOT = { unrest = 1}
-			}
-			2695 = {
-				is_prosperous = yes
-				NOT = { unrest = 1}
-			}
-			2696 = {
-				is_prosperous = yes
-				NOT = { unrest = 1}
-			}
-			2699 = {
-				is_prosperous = yes
-				NOT = { unrest = 1}
-			}
-			2702 = {
-				is_prosperous = yes
-				NOT = { unrest = 1}
-			}
-		}
-		effect = {
-			country_event = { id = flavor_apikhoxi.8  }
-		}
-	}
-
 	apikhoxi_sweet_deal = {
 		icon = mission_wine_monopolies
 		position = 5
@@ -842,6 +787,114 @@ apikhoxi_4 = {
 		}
 	}
 
+	apikhoxi_specialty_farms = {
+		icon = mississippi_company
+		position = 4
+		required_missions = {
+			apikhoxi_ride_the_river_road
+			apikhoxi_livestock_of_the_sea
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 2674
+					NOT = { province_has_center_of_trade_of_level = 2 }
+				}
+				AND = {
+					province_id = 2680
+					NOT = { province_has_center_of_trade_of_level = 2 }
+				}
+				AND  = {
+					province_id = 2680
+					NOT = {
+						is_prosperous = yes
+					}
+					unrest = 1
+				}
+				AND  = {
+					province_id = 2695
+					NOT = {
+						is_prosperous = yes
+					}
+					unrest = 1
+
+				}
+				AND  = {
+					province_id = 2696
+					NOT = {
+						is_prosperous = yes
+					}
+					unrest = 1
+
+				}
+				AND  = {
+					province_id = 2699
+					NOT = {
+						is_prosperous = yes
+					}
+					unrest = 1
+				}
+				AND = {
+					owned_by = root
+					OR = {
+						trade_goods = grains
+						trade_goods = livestock
+						trade_goods = sugar
+						trade_goods = tobacco
+						trade_goods = cotton
+					}
+					OR = {
+						NOT = { has_building = farm_estate }
+						NOT = { has_building = plantations }
+						NOT = { has_building = trade_company }
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				2674 = {
+					province_has_center_of_trade_of_level = 2
+				}
+				2680 = {
+					province_has_center_of_trade_of_level = 2
+				}
+				treasury = 200
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					has_building = plantations
+					has_building = farm_estate
+					has_building = tradecompany
+				}
+			}
+			2680 = {
+				is_prosperous = yes
+				NOT = { unrest = 1}
+			}
+			2695 = {
+				is_prosperous = yes
+				NOT = { unrest = 1}
+			}
+			2696 = {
+				is_prosperous = yes
+				NOT = { unrest = 1}
+			}
+			2699 = {
+				is_prosperous = yes
+				NOT = { unrest = 1}
+			}
+			2702 = {
+				is_prosperous = yes
+				NOT = { unrest = 1}
+			}
+		}
+		effect = {
+			country_event = { id = flavor_apikhoxi.8  }
+		}
+	}
+
 	apikhoxi_no_slaves_among_us = {
 		icon = mission_torch_fire
 		position = 5
@@ -852,14 +905,26 @@ apikhoxi_4 = {
 					exists = G53
 				}
 				G53 = {
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = scornfully_insulted
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+						AND = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = warned
+							}
+						}
 					}
 				}
 				trade_embargoing = G53
 				army_size = G53
-			navy_size = G53
+				navy_size = G53
 			}
 
 
