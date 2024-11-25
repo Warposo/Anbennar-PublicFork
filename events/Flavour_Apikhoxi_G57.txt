@@ -154,6 +154,41 @@ country_event = {
 	option = {
 		name = "flavor_apikhoxi.5.a"
 		set_country_flag = apikhoxi_liberation
+		add_casus_belli = {
+			target = G53
+			type = cb_apikhoxi_liberation
+			months = 1200
+		}
+		add_casus_belli = {
+			target = G54
+			type = cb_apikhoxi_liberation
+			months = 1200
+		}
+		add_casus_belli = {
+			target = G55
+			type = cb_apikhoxi_liberation
+			months = 1200
+		}
+		add_casus_belli = {
+			target = G56
+			type = cb_apikhoxi_liberation
+			months = 1200
+		}
+		add_casus_belli = {
+			target = G58
+			type = cb_apikhoxi_liberation
+			months = 1200
+		}
+		add_casus_belli = {
+			target = G59
+			type = cb_apikhoxi_liberation
+			months = 1200
+		}
+		add_casus_belli = {
+			target = G62
+			type = cb_apikhoxi_liberation
+			months = 1200
+		}
 		if = {
 			limit = {
 				OR = {
