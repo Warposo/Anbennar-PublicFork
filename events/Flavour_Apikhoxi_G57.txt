@@ -327,7 +327,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G57
+			who = ROOT
 			modifier = insulted
 			months = 120
 		}
@@ -534,7 +534,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G57
+			who = ROOT
 			modifier = insulted
 			months = 120
 		}
@@ -587,7 +587,7 @@ country_event = {
 
 	option = {
 		name = "flavor_apikhoxi.11.a"
-		all_country	= {
+		all_known_country	= {
 			iimit = {
 				has_opinion = {
 					who = ROOT
@@ -698,7 +698,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G57
+			who = ROOT
 			modifier = insulted
 			months = 120
 		}

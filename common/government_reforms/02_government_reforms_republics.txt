@@ -6851,7 +6851,7 @@ state_council_reform = {
 #Anbennar
 
 #Tier 1
-hgcgh = {
+roilsard_elective = {
 	icon = "protectorate_parliament_reform"
 	allow_normal_conversion = no
 
