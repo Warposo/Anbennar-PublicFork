@@ -112,7 +112,9 @@ grain = {
 		}
 		modifier = {
 			factor = 2 # mission reward for Apikhoxi
-			has_country_flag = 	estate_nobles_G57_land_golden_ears_flag
+			owner = {
+				has_country_flag = estate_nobles_G57_land_golden_ears_flag
+			}
 		}
 	}
 }
@@ -1991,7 +1993,9 @@ livestock = {
 		}
 		modifier = {
 			factor = 2 # ranchland
-			has_country_flag = 	estate_nobles_G57_land_golden_ears_flag
+			owner = {
+				has_country_flag = estate_nobles_G57_land_golden_ears_flag
+			}
 		}
 
 

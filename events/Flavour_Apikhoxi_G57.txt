@@ -292,7 +292,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G57
+			who = ROOT
 			modifier = insulted
 			months = 120
 		}
@@ -499,7 +499,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G57
+			who = ROOT
 			modifier = insulted
 			months = 120
 		}
@@ -663,7 +663,7 @@ country_event = {
 			}
 		}
 		add_opinion = {
-			who = G57
+			who = ROOT
 			modifier = insulted
 			months = 120
 		}

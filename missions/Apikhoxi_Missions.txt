@@ -101,7 +101,7 @@ apikhoxi_1 = {
 				and = {
 					government_reform_progress = 100
 		   			G54 = {
-						trust = { who = G57 value = 80 }
+						trust = { who = ROOT value = 80 }
 		   			}
 		   			estate_loyalty = { estate = estate_mages loyalty = 60 }
 		   			has_estate_privilege = estate_mages_patronage_of_the_magical_arts
@@ -190,7 +190,10 @@ apikhoxi_2 = {
 				G50 = {
 					has_opinion_modifier = {
 						who = ROOT
-						modifier = insulted
+						OR = {
+							modifier = insulted
+							modifier = scornfully_insulted
+						}
 					}
 				}
 			   AND = {
@@ -611,23 +614,23 @@ apikhoxi_3 = {
 			}
 			2680 = {
 				is_prosperous = yes
-				not = { unrest = 1}
+				NOT = { unrest = 1}
 			}
 			2695 = {
 				is_prosperous = yes
-				not = { unrest = 1}
+				NOT = { unrest = 1}
 			}
 			2696 = {
 				is_prosperous = yes
-				not = { unrest = 1}
+				NOT = { unrest = 1}
 			}
 			2699 = {
 				is_prosperous = yes
-				not = { unrest = 1}
+				NOT = { unrest = 1}
 			}
 			2702 = {
 				is_prosperous = yes
-				not = { unrest = 1}
+				NOT = { unrest = 1}
 			}
 		}
 		effect = {
@@ -654,11 +657,7 @@ apikhoxi_3 = {
 			any_owned_province = {
 				trade_goods = sugar
 				has_manufactory_trigger = yes
-				OR = {
-					has_building = marketplace
-					has_building = trade_depot
-					has_building = stock_exchange
-				}
+				has_trade_building_trigger = yes
 				base_production = 10
 			}
 			if = {
@@ -667,7 +666,7 @@ apikhoxi_3 = {
 				}
 				G58 = {
 					has_opinion_modifier = {
-						who = G57
+						who = ROOT
 						modifier = sent_gift
 					}
 				}
@@ -822,8 +821,8 @@ apikhoxi_4 = {
 		}
 		provinces_to_highlight = {
 			area = apikhoxi_area
-			not = { development = 12 }
-			not = { is_prosperous = yes }
+			NOT = { development = 12 }
+			NOT = { is_prosperous = yes }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
@@ -897,18 +896,18 @@ apikhoxi_5 = {
 		position = 1
 		provinces_to_highlight = {
 			OR = {
-				AND ={
+				AND = {
 					province_id = 2695
 					NOT = { num_of_times_improved = 1 }
 				}
-				AND ={
+				AND = {
 					province_id = 2698
 					NOT = { num_of_times_improved = 1 }
 				}
-			}
-			AND ={
-				province_id = 2680
-				NOT = { num_of_times_improved = 2 }
+				AND = {
+					province_id = 2680
+					NOT = { num_of_times_improved = 2 }
+				}
 			}
 		}
 		trigger = {
@@ -978,7 +977,7 @@ apikhoxi_5 = {
 						trade_goods = livestock
 					}
 					NOT = {
-						base_production = 16
+						development = 6
 					}
 		 		}
 			}
@@ -995,7 +994,7 @@ apikhoxi_5 = {
 					trade_goods = grain
 					trade_goods = livestock
 				}
-				base_production = 6
+				development = 6
 			}
 		}
 		effect = {
@@ -1134,10 +1133,10 @@ apikhoxi_5 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
-				NOT = {
-					culture = ormabhen
-					unrest = 1
-					nationalism = 1
+				AND = {
+					NOT = { culture = ROOT }
+					unrest = 0
+					nationalism = 0
 				}
 			}
 			2703 = {
@@ -1182,14 +1181,12 @@ apikhoxi_5 = {
 				}
 			}
 			OR = {
-				OR = {
-					has_country_modifier = magic_realm_conjuration_magnificent_feast_1
-					has_country_modifier = magic_realm_conjuration_magnificent_feast_2
-					has_country_modifier = magic_realm_conjuration_magnificent_feast_3
-					has_country_modifier = magic_estate_magnificent_feast_1
-					has_country_modifier = magic_estate_magnificent_feast_2
-					has_country_modifier = magic_estate_magnificent_feast_3
-				}
+				has_country_modifier = magic_realm_conjuration_magnificent_feast_1
+				has_country_modifier = magic_realm_conjuration_magnificent_feast_2
+				has_country_modifier = magic_realm_conjuration_magnificent_feast_3
+				has_country_modifier = magic_estate_magnificent_feast_1
+				has_country_modifier = magic_estate_magnificent_feast_2
+				has_country_modifier = magic_estate_magnificent_feast_3
 			}
 		}
 		effect = {
