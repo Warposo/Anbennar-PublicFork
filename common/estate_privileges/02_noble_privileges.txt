@@ -263,8 +263,8 @@ estate_nobles_nobility_primacy = {
 	}
 	conditional_modifier = {
 		trigger = { has_reform = empower_magnate_council }
-		modifier = { 
-			nobles_loyalty_modifier = -0.05 
+		modifier = {
+			nobles_loyalty_modifier = -0.05
 			max_absolutism = 5
 		}
 	}
@@ -3607,14 +3607,14 @@ estate_nobles_G57_emerald_waters = {
 				}
 			}
 		}
-		on_revoked = {
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						has_province_modifier = estate_nobles_G57_emerald_waters_modifier
-					}
-					remove_province_modifier = estate_nobles_G57_emerald_waters_modifier
+	}
+	on_revoked = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_nobles_G57_emerald_waters_modifier
 				}
+				remove_province_modifier = estate_nobles_G57_emerald_waters_modifier
 			}
 		}
 		penalties = {

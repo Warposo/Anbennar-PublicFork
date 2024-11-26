@@ -10150,7 +10150,7 @@ A31_adeans_loyal = {
 A31_corins_loyal = {
 	global_missionary_strength = 0.02
 	land_morale = 0.10
-	prestige_decay = -0.005	
+	prestige_decay = -0.005
 }
 
 A31_elven_merchants_south = {
@@ -29878,7 +29878,7 @@ L37_scarred_ruler = {
 	morale_damage = 0.10
 }
 L37_death_exception = {
-	
+
 }
 L37_cult_stronghold = {
 	local_autonomy = 0.10
@@ -31077,6 +31077,7 @@ G57_amdrivos = {
 	local_development_cost = -0.05
 	trade_goods_size = 0.1
 }
+
 
 G57_we_love_day = {
 	global_unrest = -2
@@ -32319,7 +32320,7 @@ J84_woodcutter_warlord_camp = {
 J84_ashen_born_shipyard = {
 	local_ship_cost = -0.2
 	local_ship_repair = 0.5
-	
+
 }
 
 J84_sanguosynthesis_1 = {
