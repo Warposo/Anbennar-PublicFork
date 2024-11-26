@@ -195,6 +195,13 @@ apikhoxi_2 = {
 				trade_goods = livestock
 				base_production = 5
 			}
+			2680 = {
+				num_of_units_in_province = {
+					who = ROOT
+					amount = 15
+					type = infantry
+				}
+			}
 		}
 		effect = {
 			country_event = { id = flavor_apikhoxi.3 }
@@ -400,7 +407,7 @@ apikhoxi_2 = {
 				loyalty = 50
 			}
 			army_size = G46
-			navy_size = G47
+			navy_size = G46
 		}
 		effect = {
 			G55 = { country_event = { id = flavor_apikhoxi.6 } }
@@ -480,40 +487,15 @@ apikhoxi_3 = {
 					}
 				}
 				AND = {
-					province_id = 2680
-					NOT = {
-						has_production_building_trigger = yes
+					OR = {
+						province_id = 2680
+						province_id = 2695
+						province_id = 2696
+						province_id = 2699
+						province_id = 2702
+						province_id = 2703
 					}
-				}
-				AND  = {
-					province_id = 2695
-					NOT = {
-						has_production_building_trigger = yes
-					}
-				}
-				AND  = {
-					province_id = 2696
-					NOT = {
-						has_production_building_trigger = yes
-					}
-				}
-				AND  = {
-					province_id = 2699
-					NOT = {
-						has_production_building_trigger = yes
-					}
-				}
-				AND  = {
-					province_id = 2702
-					NOT = {
-						has_production_building_trigger = yes
-					}
-				}
-				AND  = {
-					province_id = 2703
-					NOT = {
-						has_production_building_trigger = yes
-					}
+					NOT = { has_production_building_trigger = yes }
 				}
 			}
 		}
@@ -551,6 +533,7 @@ apikhoxi_3 = {
 					name = G57_amdrivos
 					duration = -1
 				}
+				add_prosperity = 20
 			}
 			2696 = {
 				add_province_modifier = {
@@ -797,67 +780,45 @@ apikhoxi_4 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 2674
+					owned_by = ROOT
+					province_has_center_of_trade_of_level = 1
 					NOT = { province_has_center_of_trade_of_level = 2 }
 				}
 				AND = {
-					province_id = 2680
-					NOT = { province_has_center_of_trade_of_level = 2 }
-				}
-				AND  = {
-					province_id = 2680
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-				}
-				AND  = {
-					province_id = 2695
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-
-				}
-				AND  = {
-					province_id = 2696
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-
-				}
-				AND  = {
-					province_id = 2699
-					NOT = {
-						is_prosperous = yes
-					}
-					unrest = 1
-				}
-				AND = {
-					owned_by = root
 					OR = {
-						trade_goods = grains
-						trade_goods = livestock
-						trade_goods = sugar
-						trade_goods = tobacco
-						trade_goods = cotton
+						province_id = 2680
+						province_id = 2695
+						province_id = 2696
+						province_id = 2699
+						province_id = 2702
 					}
-					OR = {
-						NOT = { has_building = farm_estate }
-						NOT = { has_building = plantations }
-						NOT = { has_building = trade_company }
+					NOT = {
+						is_prosperous = yes
 					}
+					unrest = 1
 				}
+                AND = {
+                    owned_by = root
+                    OR = {
+                        trade_goods = grains
+                        trade_goods = livestock
+                        trade_goods = sugar
+                        trade_goods = tobacco
+                        trade_goods = cotton
+                    }
+                    NOT = { has_building = farm_estate }
+                    NOT = { has_building = plantations }
+                    NOT = { has_building = trade_company }
+                }
 			}
 		}
 		trigger = {
 			OR = {
-				2674 = {
-					province_has_center_of_trade_of_level = 2
-				}
-				2680 = {
-					province_has_center_of_trade_of_level = 2
+				any_owned_province = {
+					OR = {
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
+					}
 				}
 				treasury = 200
 			}
@@ -925,6 +886,13 @@ apikhoxi_4 = {
 				trade_embargoing = G53
 				army_size = G53
 				navy_size = G53
+				1712 = {
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 30
+						type = galley
+					}
+				}
 			}
 
 
@@ -1031,8 +999,8 @@ apikhoxi_5 = {
 			apikhoxi_fertile_earth
 		}
 		provinces_to_highlight= {
-			or = {
-				and = {
+			OR = {
+				AND = {
 					province_id = 2680
 					NOT = { has_building_tag_trigger = yes }
 				}
@@ -1050,15 +1018,16 @@ apikhoxi_5 = {
 		trigger = {
 			2680 = {
 				has_tax_building_trigger = yes
+				has_courthouse_building_trigger = yes
 			}
 			estate_loyalty = { estate = estate_church loyalty = 50 }
 			num_of_owned_provinces_with = {
-				value = 3
-				has_production_building_trigger = yes
 				OR = {
 					trade_goods = grain
 					trade_goods = livestock
 				}
+				value = 3
+				has_production_building_trigger = yes
 				development = 6
 			}
 		}
@@ -1086,39 +1055,18 @@ apikhoxi_5 = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				2695 = {
+				AND = {
+					province_id = 2695
+					province_id = 2696
+					province_id = 2699
+					province_id = 2702
+					province_id = 2680
 					NOT = {
-						num_of_times_improved = 3
-						has_trade_building_trigger = yes
-						has_tax_building_trigger = yes
-					}
-				}
-				2696 = {
-					NOT = {
-						num_of_times_improved = 3
-						has_trade_building_trigger = yes
-						has_tax_building_trigger = yes
-					}
-				}
-				2699 = {
-					NOT = {
-						num_of_times_improved = 3
-						has_trade_building_trigger = yes
-						has_tax_building_trigger = yes
-					}
-				}
-				2702 = {
-					NOT = {
-						num_of_times_improved = 3
-						has_trade_building_trigger = yes
-						has_tax_building_trigger = yes
-					}
-				}
-				2680 = {
-					NOT = {
-						num_of_times_improved = 3
-						has_trade_building_trigger = yes
-						has_tax_building_trigger = yes
+						AND = {
+							num_of_times_improved = 3
+							has_trade_building_trigger = yes
+							has_tax_building_trigger = yes
+						}
 					}
 				}
 			}
