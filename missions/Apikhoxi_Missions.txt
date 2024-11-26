@@ -818,9 +818,7 @@ apikhoxi_4 = {
 		trigger = {
 			OR = {
 				any_owned_province = {
-					OR = {
-						province_has_center_of_trade_of_level = 2
-					}
+					province_has_center_of_trade_of_level = 2
 				}
 				treasury = 200
 			}
@@ -1004,7 +1002,7 @@ apikhoxi_5 = {
 			OR = {
 				AND = {
 					province_id = 2680
-					NOT = { has_building_tag_trigger = yes }
+					NOT = { has_production_building_trigger = yes }
 				}
 				AND = {
 					OR = {
@@ -1148,10 +1146,12 @@ apikhoxi_5 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
-				AND = {
-					NOT = { culture = ROOT }
-					unrest > 0
-					nationalism > 0
+				NOT = {
+					AND = {
+						culture = ROOT
+						unrest = 0.01
+						nationalism = 1
+					}
 				}
 			}
 			2703 = {
