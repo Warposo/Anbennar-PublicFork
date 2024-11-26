@@ -746,7 +746,7 @@ apikhoxi_4 = {
 	apikhoxi_livestock_of_the_sea = {
 		icon = mission_tree_fishing
 		position = 3
-		required_missions = { 
+		required_missions = {
 			apikhoxi_down_by_the_river
 			apikhoxi_fertile_minds
 		}
@@ -803,7 +803,7 @@ apikhoxi_4 = {
                 AND = {
                     owned_by = root
                     OR = {
-                        trade_goods = grains
+                        trade_goods = grain
                         trade_goods = livestock
                         trade_goods = sugar
                         trade_goods = tobacco
@@ -995,7 +995,7 @@ apikhoxi_5 = {
 	apikhoxi_fertile_minds = {
 		icon = mission_rice_farming
 		position = 2
-		required_missions = { 
+		required_missions = {
 			apikhoxi_fertile_earth
 		}
 		provinces_to_highlight= {

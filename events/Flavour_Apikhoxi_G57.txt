@@ -587,7 +587,7 @@ country_event = {
 
 	option = {
 		name = "flavor_apikhoxi.11.a"
-		all_known_country	= {
+		every_known_country	= {
 			iimit = {
 				has_opinion = {
 					who = ROOT
