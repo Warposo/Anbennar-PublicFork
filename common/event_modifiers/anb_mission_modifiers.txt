@@ -32966,18 +32966,25 @@ S53_setinda_games = {
 	local_tax_modifier = 0.15
 	local_manpower_modifier = -0.25
 	local_unrest = -0.5
+	mercenary_manpower = 0.05
 }
 
 S53_imbitinda_games = {
 	local_tax_modifier = 0.30
 	local_manpower_modifier = -0.5
 	local_unrest = -1
+	mercenary_manpower = 0.1
+	merc_maintenance_modifier = -0.05
 }
 
 S53_mezhinda_games = {
 	local_tax_modifier = 0.50
 	local_manpower_modifier = -1
 	allowed_num_of_manufactories = 1
+	mercenary_manpower = 0.15
+	merc_maintenance_modifier = -0.075
+	mercenary_discipline = 0.0125
+	global_unrest = -0.25
 }
 
 S53_beastial_wisdom = {
@@ -33044,67 +33051,5 @@ S53_administrative_husband_lvl3 = {
 	global_trade_goods_size_modifier = 0.025
 }
 
-S53_setinda_games_nat_averilibet = {
-	mercenary_manpower = 0.05
-}
-
-S53_setinda_games_nat_yikikakeli = {
-	mercenary_manpower = 0.05
-}
-
-S53_imbitinda_games_nat_averilibet = {
-	mercenary_manpower = 0.1
-	merc_maintenance_modifier = -0.05
-}
-
-S53_imbitinda_games_nat_yikikakeli = {
-	mercenary_manpower = 0.1
-	merc_maintenance_modifier = -0.05
-}
-
-S53_imbitinda_games_nat_matamot = {
-	mercenary_manpower = 0.1
-	merc_maintenance_modifier = -0.05
-}
-
-S53_imbitinda_games_nat_tristrias = {
-	mercenary_manpower = 0.1
-	merc_maintenance_modifier = -0.05
-}
-
-S53_mezhinda_games_nat_averilibet = {
-	mercenary_manpower = 0.15
-	merc_maintenance_modifier = -0.075
-	mercenary_discipline = 0.0125
-	global_unrest = -0.25
-}
-
-S53_mezhinda_games_nat_yikikakeli = {
-	mercenary_manpower = 0.15
-	merc_maintenance_modifier = -0.075
-	mercenary_discipline = 0.0125
-	global_unrest = -0.25
-}
-
-S53_mezhinda_games_nat_matamot = {
-	mercenary_manpower = 0.15
-	merc_maintenance_modifier = -0.075
-	mercenary_discipline = 0.0125
-	global_unrest = -0.25
-}
-
-S53_mezhinda_games_nat_tristrias = {
-	mercenary_manpower = 0.15
-	merc_maintenance_modifier = -0.075
-	mercenary_discipline = 0.0125
-	global_unrest = -0.25
-}
-
 S53_marriage_of_many_cooldown = {
 } #dummy modifer
-#dummy modifiers to make missions work
-S53_histo_pu = {
-}
-
-S53_naleni_pu = {
-}
