@@ -1146,13 +1146,9 @@ apikhoxi_5 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
-				NOT = {
-					AND = {
-						culture = ROOT
-						unrest = 0.01
-						nationalism = 1
-					}
-				}
+				NOT = { culture = ROOT }
+				NOT = { unrest = 0.01 }
+				NOT = { nationalism = 1 }
 			}
 			2703 = {
 				has_courthouse_building_trigger = yes
