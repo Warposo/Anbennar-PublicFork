@@ -213,6 +213,7 @@ missions_yes = {
 				tag = A95 #Themarenn
 				tag = G74 #Gophira
 				tag = G57 #Apikhoxi
+				tag = Y17 #Gushuokguan
 
 				AND = {
 					capital_scope = {
