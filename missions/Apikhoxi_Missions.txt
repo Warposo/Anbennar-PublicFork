@@ -701,7 +701,7 @@ apikhoxi_4 = {
 			}
 		}
 		effect = {
-			country_event = { id = flavor_apikhoxi.11}
+			country_event = { id = flavor_apikhoxi.11 }
 		}
 	}
 
@@ -832,23 +832,23 @@ apikhoxi_4 = {
 			}
 			2680 = {
 				is_prosperous = yes
-				NOT = { unrest = 1}
+				NOT = { unrest = 1 }
 			}
 			2695 = {
 				is_prosperous = yes
-				NOT = { unrest = 1}
+				NOT = { unrest = 1 }
 			}
 			2696 = {
 				is_prosperous = yes
-				NOT = { unrest = 1}
+				NOT = { unrest = 1 }
 			}
 			2699 = {
 				is_prosperous = yes
-				NOT = { unrest = 1}
+				NOT = { unrest = 1 }
 			}
 			2702 = {
 				is_prosperous = yes
-				NOT = { unrest = 1}
+				NOT = { unrest = 1 }
 			}
 		}
 		effect = {
