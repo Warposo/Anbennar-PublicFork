@@ -3594,11 +3594,11 @@ estate_nobles_G57_emerald_waters = {
 				limit = {
 					OR = {
 						has_port = yes
-					province_id = 2695
-                    province_id = 2696
-                    province_id = 2699
-                    province_id = 2702
-                    province_id = 2707
+						province_id = 2695
+						province_id = 2696
+						province_id = 2699
+						province_id = 2702
+						province_id = 2707
 					}
 				}
 				add_province_modifier = {

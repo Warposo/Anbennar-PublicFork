@@ -224,10 +224,13 @@ apikhoxi_2 = {
 			}
 			OR = {
 				G50 = {
-					has_opinion_modifier = {
-						who = ROOT
-						OR = {
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
 							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
 							modifier = scornfully_insulted
 						}
 					}
@@ -817,7 +820,6 @@ apikhoxi_4 = {
 				any_owned_province = {
 					OR = {
 						province_has_center_of_trade_of_level = 2
-						province_has_center_of_trade_of_level = 3
 					}
 				}
 				treasury = 200
@@ -1148,8 +1150,8 @@ apikhoxi_5 = {
 				value = 5
 				AND = {
 					NOT = { culture = ROOT }
-					unrest = 0
-					nationalism = 0
+					unrest > 0
+					nationalism > 0
 				}
 			}
 			2703 = {
