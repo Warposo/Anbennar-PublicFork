@@ -517,7 +517,7 @@ estate_nobles_G57_emerald_waters_modifier = {
 	supply_limit_modifier = 0.10
 	province_trade_power_value = 2.5
 }
-estate_nobles_G57_emerald_waters_modifier = {
+estate_nobles_G57_land_golden_ears_modifier = {
 	local_governing_cost = -0.10
 	trade_goods_size_modifier = 0.1
 	province_trade_power_value = 2.5
