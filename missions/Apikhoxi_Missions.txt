@@ -468,10 +468,9 @@ apikhoxi_3 = {
 				culture = mteibhar
 				religion = ROOT
 			}
-			2680 = {
-				add_province_triggered_modifier = apikhoxi_good_enighbor
-			}
+			add_country_modifier = { name = apikhoxi_good_enighbor duration = -1 }
 		}
+		custom_tooltip = mind_our_gardens_tt
 	}
 
 	apikhoxi_ride_the_river_road = {
@@ -803,15 +802,15 @@ apikhoxi_4 = {
                 AND = {
                     owned_by = root
                     OR = {
-                        trade_goods = grain
-                        trade_goods = livestock
-                        trade_goods = sugar
-                        trade_goods = tobacco
-                        trade_goods = cotton
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = sugar
+						trade_goods = tobacco
+						trade_goods = cotton
                     }
                     NOT = { has_building = farm_estate }
                     NOT = { has_building = plantations }
-                    NOT = { has_building = trade_company }
+                    NOT = { has_building = tradecompany }
                 }
 			}
 		}
@@ -1201,7 +1200,7 @@ apikhoxi_5 = {
 			}
 		}
 		effect = {
-			country_event = { id = flavor_aphikoxi.19 }
+			country_event = { id = flavor_apikhoxi.19 }
 		}
 	}
 }

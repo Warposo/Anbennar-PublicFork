@@ -3617,10 +3617,6 @@ estate_nobles_G57_emerald_waters = {
 				remove_province_modifier = estate_nobles_G57_emerald_waters_modifier
 			}
 		}
-		penalties = {
-		}
-		benefits = {
-		}
 	}
 }
 estate_nobles_G57_land_golden_ears = {
@@ -3665,10 +3661,6 @@ estate_nobles_G57_land_golden_ears = {
 				remove_province_modifier = estate_nobles_G57_land_golden_ears_modifier
 			}
 			clr_country_flag = estate_nobles_G57_land_golden_ears_flag
-		}
-		penalties = {
-		}
-		benefits = {
 		}
 	}
 }

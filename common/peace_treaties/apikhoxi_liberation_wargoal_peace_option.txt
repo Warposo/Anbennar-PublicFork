@@ -36,12 +36,9 @@ apikhoxi_liberation_wargoal_peace_option = {
 	is_make_subject = yes # This will make the treaty mutually exclusive with other treaties that makes the giver a subject, or that explicitly frees the giver from their current overlord.
 	requires_is_allowed = no # If set to "yes", treaty will only be visible when explicitly allowed by casus belli. If not, it will be available but cost diplomatic power.
 
-	is_visible = { # Defaults to equivalent of "always = yes"
-		OR = {
-			has_country_flag = apikhoxi_liberation
-		}
-
-		FROM = {	#commented out to allow you to steal Iosahar if the overlord isn't defending them
+	is_visible = { 
+		has_country_flag = apikhoxi_liberation
+		FROM = {	
 			capital_scope = { region = devand_region }
 		}
 	}

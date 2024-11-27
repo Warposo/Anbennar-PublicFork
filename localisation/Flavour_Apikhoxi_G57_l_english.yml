@@ -31,6 +31,7 @@ l_english:
 
  apikhoxi_mind_our_own_gardens_title: "Mind Our Own Gardens"
  apikhoxi_mind_our_own_gardens_desc: "The valleys have their guardians, and the plains have their farmers - each tending to their own sacred spaces. We shall respect the Mteibhar's ancient covenant with their valley spirits, just as they respect our connection to the open fields. Good civilization means knowing where your garden ends and your neighbor's begins."
+mind_our_gardens_tt:0 "\nIfyou should conquer a Mteibhari province, or change a province to Mteibhari culture, you will lose this!"
 
  apikhoxi_ride_the_river_road_title: "Ride the River Road"
  apikhoxi_ride_the_river_road_desc: "The Xiktheam shall become more than just water - it shall be the great road that binds our homesteads together. Our barges and riverboats will connect every farm along its banks, carrying crops, goods, and ruinborn swiftly through our heartlands. By developing river stations along its course, we will transform this mighty waterway into the bustling artery feeding every field in the nation."
@@ -88,7 +89,8 @@ G57_upriver_ferries:0 "Upriver Ferries"
 G57_school_immigration:0 "The School of Immmigration"
 G57_school_agriculture:0 "School of Agriculture"
 G57_school_aquaculture:0 "School of Aquaculture"
-G57_school_history:0 "School of History "
+G57_school_history:0 "School of History"
+G57_open_door:0 "An Open Door"
 
 #Events
 flavor_apikhoxi.1.t:0 "Form the Apikhoxi Guard"

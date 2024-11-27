@@ -31059,9 +31059,11 @@ G57_preparing_the_way = {
 	land_forcelimit_modifier = 0.10
 	spy_offence = 0.10
 }
-G57_occupied_provinces_by_dirty_westerners = {
-
+apikhoxi_good_enighbor = {
+	colonists = 1
+	native_assimilation = 0.25
 }
+
 
 G57_new_deal = {
 	global_unrest = 5

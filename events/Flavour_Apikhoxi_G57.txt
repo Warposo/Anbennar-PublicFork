@@ -241,38 +241,6 @@ country_event = {
 				add_liberty_desire = 50
 			}
 		}
-		G54 = {
-			capital_scope = {
-				add_province_modifier = {
-					name = occupied_provinces_by_dirty_westerners
-					duration = -1
-				}
-			}
-		}
-		G55 = {
-			capital_scope = {
-				add_province_modifier = {
-					name = occupied_provinces_by_dirty_westerners
-					duration = -1
-				}
-			}
-		}
-		G58 = {
-			capital_scope = {
-				add_province_modifier = {
-					name = occupied_provinces_by_dirty_westerners
-					duration = -1
-				}
-			}
-		}
-		G53 = {
-			capital_scope = {
-				add_province_modifier = {
-					name = occupied_provinces_by_dirty_westerners
-					duration = -1
-				}
-			}
-		}
 	}
 }
 
@@ -588,7 +556,7 @@ country_event = {
 	option = {
 		name = "flavor_apikhoxi.11.a"
 		every_known_country	= {
-			iimit = {
+			limit = {
 				has_opinion = {
 					who = ROOT
 					value = 50
@@ -596,10 +564,18 @@ country_event = {
 				capital_scope = {
 					region = alecand_region
 				}
+				NOT = {
+					tag = G50
+				}
 			}
-			add_national_modifier = {
-				name = add_country_modifier
+			add_country_modifier = {
+				name = G57_bribed
 				duration = 3650
+			}
+			add_opinion = {
+				who = G50
+				modifier = insulted
+				months = 120
 			}
 		}
 		add_country_modifier = {
@@ -898,7 +874,7 @@ country_event = {
 
 #Farmer's Festival
 country_event = {
-	id = flavor_apikhoxi.19
+	id = flavor_apikhoxi.19 
 	title = flavor_apikhoxi.19.t
 	desc = flavor_apikhoxi.19.d
 	picture = ""
