@@ -14,9 +14,21 @@ ogre_tolerance_giants_happened = {
 		}
 		if = {
 			limit = {
+				region = dalr_region
+			}
+			set_global_flag = ogre_tolerance_giants_dalr
+		}
+		if = {
+			limit = {
 				region = olavlund_region
 			}
 			set_global_flag = ogre_tolerance_giants_olavlund
+		}
+		if = {
+			limit = {
+				region = alenic_reach_region
+			}
+			set_global_flag = ogre_tolerance_giants_alenic_reach
 		}
 		if = {
 			limit = {
@@ -26,9 +38,21 @@ ogre_tolerance_giants_happened = {
 		}
 		if = {
 			limit = {
+				region = ogre_valley_region
+			}
+			set_global_flag = ogre_tolerance_giants_ogre_valley
+		}
+		if = {
+			limit = {
 				region = west_forbidden_plains_region
 			}
 			set_global_flag = ogre_tolerance_giants_west_forbidden_plains
+		}
+		if = {
+			limit = {
+				region = serpent_gift_region
+			}
+			set_global_flag = ogre_tolerance_giants_serpent_gift
 		}
 		if = {
 			limit = {
@@ -38,9 +62,21 @@ ogre_tolerance_giants_happened = {
 		}
 		if = {
 			limit = {
+				region = south_yarikhoi_region
+			}
+			set_global_flag = ogre_tolerance_giants_south_yarikhoi
+		}
+		if = {
+			limit = {
 				region = north_yarikhoi_region
 			}
 			set_global_flag = ogre_tolerance_giants_north_yarikhoi
+		}
+		if = {
+			limit = {
+				region = nuzurbokh_region
+			}
+			set_global_flag = ogre_tolerance_giants_nuzurbokh
 		}
 		if = {
 			limit = {
@@ -50,9 +86,21 @@ ogre_tolerance_giants_happened = {
 		}
 		if = {
 			limit = {
+				region = khaashalg_region
+			}
+			set_global_flag = ogre_tolerance_giants_khaashalg
+		}
+		if = {
+			limit = {
 				region = nomsyulhan_region
 			}
 			set_global_flag = ogre_tolerance_giants_nomsyulhan
+		}
+		if = {
+			limit = {
+				region = odheongu_region
+			}
+			set_global_flag = ogre_tolerance_giants_odheongu
 		}
 		if = {
 			limit = {
@@ -68,15 +116,33 @@ ogre_tolerance_giants_happened = {
 		}
 		if = {
 			limit = {
+				region = lower_yanshen_region
+			}
+			set_global_flag = ogre_tolerance_giants_lower_yanshen
+		}
+		if = {
+			limit = {
 				region = upper_yanshen_region
 			}
 			set_global_flag = ogre_tolerance_giants_upper_yanshen
 		}
 		if = {
 			limit = {
+				region = demon_hills_region
+			}
+			set_global_flag = ogre_tolerance_giants_demon_hills
+		}
+		if = {
+			limit = {
 				region = shamakhad_region
 			}
 			set_global_flag = ogre_tolerance_giants_shamakhad
+		}
+		if = {
+			limit = {
+				region = dhujat_region
+			}
+			set_global_flag = ogre_tolerance_giants_dhujat
 		}
 		if = {
 			limit = {
