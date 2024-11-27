@@ -704,6 +704,7 @@ estate_nobles = {
 		estate_nobles_G57_land_golden_ears
 
 		estate_nobility_nzeri_standard_bearers #duwarkani
+		estate_nobles_mengi_partners #Vandipha
 	}
 
 	agendas = {
