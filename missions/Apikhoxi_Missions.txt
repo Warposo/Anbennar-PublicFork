@@ -469,8 +469,8 @@ apikhoxi_3 = {
 				religion = ROOT
 			}
 			add_country_modifier = { name = apikhoxi_good_enighbor duration = -1 }
+			custom_tooltip = mind_our_gardens_tt
 		}
-		custom_tooltip = mind_our_gardens_tt
 	}
 
 	apikhoxi_ride_the_river_road = {
