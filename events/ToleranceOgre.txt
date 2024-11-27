@@ -2688,6 +2688,58 @@ country_event = {
 					id = ogre_tolerance_events.108
 				}
 			}
+			#An Irresistible Offer
+			10 = {
+				trigger = {
+					has_dlc = "El Dorado"
+					religion = feast_of_the_gods
+					feast_of_the_gods_3_reforms_passed = no
+					has_consort_regency = no
+					has_regency = no
+					NOT = {
+						has_ruler_modifier = feast_gods_resisting_the_hunger
+					}
+					NOT = {
+						has_ruler_modifier = feast_gods_voracious_ruler
+					}
+				}
+				country_event = {
+					id = feast_gods_events.0
+				}
+			}
+			#Ravenous Ogre Causes Havoc in $PROVINCENAME$
+			10 = {
+				trigger = {
+					has_dlc = "El Dorado"
+					religion = feast_of_the_gods
+					doom = 70
+					NOT = {
+						has_country_modifier = feast_gods_hopeful_populace
+					}
+				}
+				country_event = {
+					id = feast_gods_events.1
+				}
+			}
+			#The Hunger for Battle
+			10 = {
+				trigger = {
+					has_dlc = "El Dorado"
+					religion = feast_of_the_gods
+					has_country_modifier = ogre_military
+					feast_of_the_gods_2_reforms_passed = yes
+					is_at_war = no
+					NOT = {
+						has_country_modifier = feast_gods_ravenous_soldiers
+					}
+					NOT = {
+						has_country_modifier = feast_gods_sponsored_ogre_terrorizers
+					}
+				}
+				country_event = {
+					id = feast_gods_events.2
+				}
+			}
 		}
 	}
 }
