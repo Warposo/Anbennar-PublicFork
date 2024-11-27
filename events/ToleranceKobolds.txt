@@ -4143,15 +4143,15 @@ country_event = {
 		ai_chance = {
 			factor = 3
 			modifier = {
-				factor = 3
+				factor = 0.5
 				wants_to_increase_tolerance_kobold = yes
 			}
 			modifier = {
-				factor = 2
+				factor = 0.5
 				wants_to_maintain_tolerance_kobold = yes
 			}
 			modifier = {
-				factor = 0.5
+				factor = 3
 				wants_to_decrease_tolerance_kobold = yes
 			}
 		}
