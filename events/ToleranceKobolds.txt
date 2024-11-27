@@ -300,7 +300,7 @@ country_event = {
 					id = kobold_tolerance_events.12
 				}
 			}
-			# The Kobolds’ Project
+			# The Koboldsï¿½ Project
 			10 = {
 				trigger = {
 					any_owned_province = {
@@ -487,6 +487,21 @@ country_event = {
 				country_event = {
 					id = kobold_tolerance_events.19
 				}
+			}
+			30 = {
+				trigger = {
+					ai = no
+					OR = {
+						has_country_modifier = just_lost_war_timer
+						average_unrest = 10
+						is_bankrupt = yes
+					}
+						NOT = { stability = 0 }
+					NOT = { high_tolerance_kobold_race_trigger = yes }
+					is_not_purging_or_expelling_any_race_trigger = yes
+				}
+				set_country_flag = propflag_kobold
+				country_event = { id = tolerance_generic.1 }
 			}
 			# Mining Trivu
 			10 = {
@@ -2328,7 +2343,7 @@ country_event = {
 	}
 }
 	
-# The Kobolds’ Project
+# The Koboldsï¿½ Project
 country_event = {
 	id = kobold_tolerance_events.13
 	title = kobold_tolerance_events.13.t
@@ -2775,7 +2790,7 @@ country_event = {
 			define_advisor = {
 				type = artist
 				culture = goldscale_kobold
-				religion = righteous_path
+				religion = accretive_path
 				skill = 3
 			
 				discount = yes
@@ -2787,7 +2802,7 @@ country_event = {
 			define_advisor = {
 				type = artist
 				culture = goldscale_kobold
-				religion = righteous_path
+				religion = accretive_path
 				skill = 2
 			
 				discount = yes
@@ -2797,7 +2812,7 @@ country_event = {
 			define_advisor = {
 				type = artist
 				culture = goldscale_kobold
-				religion = righteous_path
+				religion = accretive_path
 				skill = 1
 			
 				discount = yes
