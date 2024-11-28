@@ -2689,7 +2689,7 @@ country_event = {
 				}
 			}
 			#An Irresistible Offer
-			10 = {
+			15 = {
 				trigger = {
 					has_dlc = "El Dorado"
 					religion = feast_of_the_gods
@@ -2708,7 +2708,7 @@ country_event = {
 				}
 			}
 			#Ravenous Ogre Causes Havoc in $PROVINCENAME$
-			10 = {
+			15 = {
 				trigger = {
 					has_dlc = "El Dorado"
 					religion = feast_of_the_gods
@@ -2722,7 +2722,7 @@ country_event = {
 				}
 			}
 			#The Hunger for Battle
-			10 = {
+			15 = {
 				trigger = {
 					has_dlc = "El Dorado"
 					religion = feast_of_the_gods
