@@ -423,7 +423,7 @@ country_event = {
 	is_triggered_only = yes 
     hidden = yes
 
-    option = [
+    option = {
         name = haraf_events.14.a
         tilsikabahn_area = {
 			type = all
@@ -460,5 +460,39 @@ country_event = {
 				duration = -1
 			}
 		}
-    ]
+    }
+}
+
+country_event = {
+    id = haraf_events.15
+    title = haraf_events.15.t 
+	desc = haraf_events.15.d
+	picture = ELECTION_REPUBLICAN_eventPicture 
+ 
+	is_triggered_only = yes 
+    hidden = yes
+
+    option = {
+        name = haraf_events.15.a
+        tilsikabahn_area = {
+			type = all
+			remove_province_modifier = tunnels_of_renewal_modifier
+		}
+		eekinahi_area = {
+			type = all
+			remove_province_modifier = tunnels_of_renewal_modifier
+		}
+		auvultadih_area = {
+			type = all
+			remove_province_modifier = tunnels_of_renewal_modifier
+		}
+		naftlachilar_area = {
+			type = all
+			remove_province_modifier = tunnels_of_renewal_modifier
+		}
+		manguchtec_area = {
+			type = all
+			remove_province_modifier = tunnels_of_renewal_modifier
+		}
+    }
 }
