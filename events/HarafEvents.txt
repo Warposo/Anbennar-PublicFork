@@ -415,7 +415,7 @@ country_event = {
 }
 
 country_event = {
-    haraf_events.14
+    id = haraf_events.14
     title = haraf_events.14.t 
 	desc = haraf_events.14.d
 	picture = ELECTION_REPUBLICAN_eventPicture 
