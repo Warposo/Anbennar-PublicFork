@@ -3478,8 +3478,10 @@ tunnels_of_renewal = {
 	type = monument
 
 	build_trigger = {
-		capital_scope = {
-			continent = north_america
+		owner = {
+			capital_scope = {
+				continent = north_america
+			}
 		}
 	}
 
@@ -3490,14 +3492,18 @@ tunnels_of_renewal = {
 	}
 
 	can_use_modifiers_trigger = {
-		capital_scope = {
-			continent = north_america
+		owner = {
+			capital_scope = {
+				continent = north_america
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		capital_scope = {
-			continent = north_america
+		owner = {
+			capital_scope = {
+				continent = north_america
+			}
 		}
 	}
 
@@ -3573,6 +3579,9 @@ tunnels_of_renewal = {
 
 		
 		area_modifier = {
+			local_development_cost = -0.1
+    		local_production_efficiency = 0.1
+    		supply_limit_modifier = 0.25
 		}
 
 
@@ -3583,6 +3592,39 @@ tunnels_of_renewal = {
 
 		
 		on_upgraded = {
+			custom_tooltip = tunnels_of_renewal_t2_tt
+			hidden_effect = {
+				tilsikabahn_area = {
+					add_permanent_province_modifier = {
+						name = tunnels_of_renewal_modifier
+						duration = -1
+					}
+				}
+				eekinahi_area = {
+					add_permanent_province_modifier = {
+						name = tunnels_of_renewal_modifier
+						duration = -1
+					}
+				}
+				auvultadih_area = {
+					add_permanent_province_modifier = {
+						name = tunnels_of_renewal_modifier
+						duration = -1
+					}
+				}
+				naftlachilar_area = {
+					add_permanent_province_modifier = {
+						name = tunnels_of_renewal_modifier
+						duration = -1
+					}
+				}
+				manguchtec_area = {
+					add_permanent_province_modifier = {
+						name = tunnels_of_renewal_modifier
+						duration = -1
+					}
+				}
+			}
 		}
 	}
 
@@ -3619,6 +3661,23 @@ tunnels_of_renewal = {
 		}
 		
 		on_upgraded = {
+			hidden_effect = {
+				tilsikabahn_area = {
+					remove_province_modifier = tunnels_of_renewal_modifier
+				}
+				eekinahi_area = {
+					remove_province_modifier = tunnels_of_renewal_modifier
+				}
+				auvultadih_area = {
+					remove_province_modifier = tunnels_of_renewal_modifier
+				}
+				naftlachilar_area = {
+					remove_province_modifier = tunnels_of_renewal_modifier
+				}
+				manguchtec_area = {
+					remove_province_modifier = tunnels_of_renewal_modifier
+				}
+			}
 		}
 	}
 }
