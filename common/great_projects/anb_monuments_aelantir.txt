@@ -3592,38 +3592,8 @@ tunnels_of_renewal = {
 
 		
 		on_upgraded = {
-			custom_tooltip = tunnels_of_renewal_t2_tt
-			hidden_effect = {
-				tilsikabahn_area = {
-					add_permanent_province_modifier = {
-						name = tunnels_of_renewal_modifier
-						duration = -1
-					}
-				}
-				eekinahi_area = {
-					add_permanent_province_modifier = {
-						name = tunnels_of_renewal_modifier
-						duration = -1
-					}
-				}
-				auvultadih_area = {
-					add_permanent_province_modifier = {
-						name = tunnels_of_renewal_modifier
-						duration = -1
-					}
-				}
-				naftlachilar_area = {
-					add_permanent_province_modifier = {
-						name = tunnels_of_renewal_modifier
-						duration = -1
-					}
-				}
-				manguchtec_area = {
-					add_permanent_province_modifier = {
-						name = tunnels_of_renewal_modifier
-						duration = -1
-					}
-				}
+			country_event = {
+				id = haraf_events.14
 			}
 		}
 	}
@@ -3663,18 +3633,23 @@ tunnels_of_renewal = {
 		on_upgraded = {
 			hidden_effect = {
 				tilsikabahn_area = {
+					type = all
 					remove_province_modifier = tunnels_of_renewal_modifier
 				}
 				eekinahi_area = {
+					type = all
 					remove_province_modifier = tunnels_of_renewal_modifier
 				}
 				auvultadih_area = {
+					type = all
 					remove_province_modifier = tunnels_of_renewal_modifier
 				}
 				naftlachilar_area = {
+					type = all
 					remove_province_modifier = tunnels_of_renewal_modifier
 				}
 				manguchtec_area = {
+					type = all
 					remove_province_modifier = tunnels_of_renewal_modifier
 				}
 			}

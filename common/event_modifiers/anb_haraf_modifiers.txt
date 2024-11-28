@@ -24,7 +24,7 @@ last_fragment_of_kosuilhil = {
 }
 buried_pathways = {
     local_friendly_movement_speed = 0.15
-    hostile_attrition = 1
+    local_hostile_attrition = 1
 }
 tunnels_of_renewal_modifier = {
     local_development_cost = -0.1
