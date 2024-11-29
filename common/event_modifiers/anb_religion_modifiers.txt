@@ -2641,6 +2641,7 @@ dvp_temple_devcost = {
 }
 origin_of_the_devouring_path = {
 	reverse_relation_with_same_religion = 50
+<<<<<<< HEAD
 	}
 
 #HP Flavour
@@ -2668,3 +2669,6 @@ HP_meditation_on_simrals_mirror = {
 HP_meditation_on_the_kamalkundal = {
 	siege_ability = 0.10
 }
+=======
+	}
+>>>>>>> JayBean/new-master
