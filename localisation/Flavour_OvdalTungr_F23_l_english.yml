@@ -832,7 +832,7 @@
  
  # Government Reforms
  F23_the_port_hold:0 "The Port Hold"
- F23_the_port_hold_desc:0 "By rewriting our laws to better suit the needs of the Utjohdihr and promise protections and rights for their trading outposts, we will lay the foundations for the Uthojdihr to prosper and further their ability to wield their mercentile influence in centers of trade brought under their control."
+ F23_the_port_hold_desc:0 "By rewriting our laws to better suit the needs of the Utjohdihr and promise protections and rights for their trading outposts, we will lay the foundations for the Uthojdihr to prosper and further their ability to wield their mercantile influence in centers of trade brought under their control."
  F23_the_port_hold_tt_1:0 "§YSpecial Government Mechanic:§!"
  F23_the_port_hold_tt_2:0 "This will also happen in other owned centers of trade and estuaries with at least one level of expanded infrastructure. Furthermore, such provinces will have a dwarven minority added when expanding infrastructure, if not already present.\n"
  F23_trading_post_oversight:0 "Trading Post Oversight"
