@@ -322,7 +322,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_great_project_tunnels_of_renewal"
-		texturefile = "gfx//interface//great_projects//great_project_falun_copper_mine.dds"
+		texturefile = "gfx//interface//great_projects//great_project_walls_benin.dds"
 	}
 	##KOK
 	
