@@ -902,7 +902,7 @@ country_event = {
 		clear_saved_name = harimari_name
 		clear_saved_name = gnollish_name
 		country_event = {
-			id = flavor_averilibet.3
+			id = flavor_averilibet.22
 			days = 3650
 		}
 	}
@@ -944,7 +944,6 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		add_yearly_manpower = -1
 		hidden_effect = {
 			add_country_modifier = {
 				name = S53_children_of_beasts_roads_and_waterways
@@ -962,6 +961,7 @@ country_event = {
 				limit = { is_core = ROOT }
 				set_province_flag = S53_children_of_beasts_fields_and_farmers_3rd_flag
 			}
+			add_yearly_manpower = -1
 		}
 	}
 
@@ -1032,7 +1032,7 @@ country_event = {
 			set_estate_privilege = estate_nobility_S53_tanizu_tradition_blood
 			set_country_flag = S53_battles_won_against_trolls
 			set_variable = {
-				which = kulugiashBattlesWon
+				which = trollBattlesWon
 				value = 0
 			}
 		}
@@ -1101,7 +1101,7 @@ country_event = {
 			duration = 1825 
 		}
 		set_country_flag = S53_marriage_of_many_target_flag
-		every_known_country = {
+		random_known_country = {
 			limit = {
 				has_country_flag = S53_marriage_of_many_unlock_flag	
 			}
@@ -1113,6 +1113,7 @@ country_event = {
 	}
 
 	option = {
+		ai_chance = { factor = 0}
 		name = flavor_averilibet.8.b
 	}
 }
@@ -1128,13 +1129,19 @@ country_event = {
 
 	option = {
 		name = flavor_averilibet.9.a
-		if = {
+		random_known_country = {
 			limit = {
-				any_known_country = {
-					has_country_flag = S53_marriage_of_many_target_flag
-				} 
+				has_country_flag = S53_marriage_of_many_target_flag
 			}
-			create_marriage = prev
+			add_opinion = {
+				who = PREV
+				modifier = S53_ceremonial_marriage
+			}
+			reverse_add_opinion = {
+				who = PREV
+				modifier = S53_ceremonial_marriage
+			}
+
 		}
 		add_country_modifier = {
 			name = S53_marriage_of_many_the_wedding_of_a_lifetime
@@ -1440,3 +1447,26 @@ country_event = {
 		}
 	}
 }
+
+#hidden non crash event 
+country_event = {
+	id = flavor_averilibet.22
+	title = flavor_averilibet.22.t
+	desc = flavor_averilibet.22.desc
+	picture = SWORD_OF_OSMAN_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = flavor_averilibet.3
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1000
+		}
+	}
+}
+

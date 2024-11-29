@@ -373,10 +373,8 @@ S53_children_of_beasts_aspect = {
 	cost = 200
 
 	potential = {
-		Or = { 
-			ROOT = {
-				has_country_flag = S53_children_of_beasts_unlock
-			}
+		OR = { 
+			has_country_flag = S53_children_of_beasts_unlock
 			overlord = {
 				has_country_flag = S53_children_of_beasts_unlock_subjects_flag
 				has_country_flag = S53_children_of_beasts_unlock

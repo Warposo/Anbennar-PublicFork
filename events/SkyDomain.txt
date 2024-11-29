@@ -235,7 +235,7 @@ country_event = {
 	}
 	
 	option = {
-		trigger = { NOT = {has_country_flag = S53_cleanse_sins_upg_flag}}
+		trigger = { NOT = { has_country_flag = S53_cleanse_sins_upg_flag } }
 		name = sky_domain.4.a
 
 		custom_tooltip = riyitewag_sins_cleansed_20_year_wait_effect_tt

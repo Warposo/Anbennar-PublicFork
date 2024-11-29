@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
 
 #missions 
 
@@ -168,6 +168,8 @@ l_english:
  S53_mezhinda_games_nat_yikikakeli:0 "Mezhinda Games"
  S53_mezhinda_games_nat_matamot:0 "Mezhinda Games"
  S53_mezhinda_games_nat_tristrias:0 "Mezhinda Games"
+ S53_more_enlightened_ruler:0 "More Enlightened Ruler"
+ S53_ceremonial_marriage:0 "Ceremonial Marriage"
 
 #events 
  flavor_averilibet.1.1.t:0 "Choose An Heir"
@@ -236,5 +238,4 @@ l_english:
  ngwenamasonamingo_reform_desc:0 "The Leopard Queendom is a monarchal mix of Tanizu and Mengi practices. Ruled by powerful Queens and their faithful harem of Husbands from all corners of East Sarhal."
  S53_leopardqueendom_march:0 "§YPersonal Unions§! recive §YMarch§! bonuses."
  S53_leopardqueendom_forcelimit:0 "Recive §G+5 Land Force Limit§! per §YPersonal Union§!"
-
  south_denbari:0 "South Denbari"

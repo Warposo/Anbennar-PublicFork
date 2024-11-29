@@ -10698,22 +10698,12 @@ on_scorch_earth_effect = {
 		remove_province_modifier = karakhanbar_feyinfused_grove
 	}
 }
+
 L08_won_battle_count = {
 	if = {
 		limit = { 
 			has_country_flag = kulugiash_battles
-			NOT = { has_country_flag = S53_battles_won_against_trolls }
-		}
-		change_variable = {
-			kulugiashBattlesWon = 1
-		}
-	}
-	else_if = {
-		limit = { 
-			has_country_flag = S53_battles_won_against_trolls
-			S70 = {
-				is_at_war = yes
-			}
+			
 		}
 		change_variable = {
 			kulugiashBattlesWon = 1
@@ -10724,13 +10714,24 @@ L08_won_battle_count = {
 L08_won_war_count = {
 	if = {
 		limit = { 
-			OR = {
-				has_country_flag = kulugiash_wars
-				has_country_flag = S53_battles_won_against_trolls
-			}
+			has_country_flag = kulugiash_wars
 		}
 		change_variable = {
 			kulugiashWarsWon = 1
+		}
+	}
+}
+ 
+S53_won_battle_against_trolls = {
+	if = {
+		limit = { 
+			has_country_flag = S53_battles_won_against_trolls
+			S70 = {
+				is_at_war = yes
+			}
+		}
+		change_variable = {
+			trollBattlesWon = 1
 		}
 	}
 }

@@ -3781,7 +3781,7 @@ isobelin_reform_names = {
 
 	trigger = {
 		tag = G91
-		has_ruler = "Isobel sí­l Isobelin"
+		has_ruler = "Isobel sÃ­Â­l Isobelin"
 		has_reform = isobelin_government_reform_city_of_the_esteemed_widow
 	}
 }
@@ -4319,8 +4319,6 @@ ngwenamasonamingo_reform = {
 
 	trigger = {
 		government = monarchy
-		has_unlocked_government_reform = {
-			government_reform = ngwenamasonamingo_reform
-		}
+		has_reform = ngwenamasonamingo_reform
 	}
 }

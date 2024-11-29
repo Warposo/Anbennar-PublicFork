@@ -2702,9 +2702,13 @@ I90_happy_ogre = {
 }
 
 #averilibet 
-S53_more_enlightened_ruler ={
+S53_more_enlightened_ruler = {
 	opinion = 100
 	yearly_decay = -5
+}
+
+S53_ceremonial_marriage = {
+	opinion = 25
 }
 
 B47_elven_diplomat = {

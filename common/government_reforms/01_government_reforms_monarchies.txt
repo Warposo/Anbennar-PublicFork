@@ -4360,12 +4360,9 @@ mengi_kingdom_reform = {
 		OR = {
 			culture_group = mengi
 			have_had_reform = mengi_kingdom_reform
-			has_unlocked_government_reform = {
-				government_reform = ngwenamasonamingo_reform
-			}
-			has_reform = ngwenamasonamingo_reform
 		}
 	}
+	
 	ai = {
 		factor = 0.5 #generic
 	}
@@ -13181,7 +13178,6 @@ naleni_thalassocracy_reform = {
 			was_tag = L55
 		}
 		is_revolutionary = no
-		has_country_flag = S53_leopard_queendom
 	}
 	lock_level_when_selected = yes
 	legacy_equivalent = ottoman_government_legacy
@@ -13205,44 +13201,6 @@ naleni_thalassocracy_reform = {
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		has_harem = yes
-	}
-}
-
-
-
-
-
-#averilibet t1
-ngwenamasonamingo = {
-	icon = "british_queen"
-	lock_level_when_selected = yes
-	allow_normal_conversion = no
-	maintain_dynasty = yes
-
-	potential = {
-		is_revolutionary = no
-		has_country_flag = S53_leopard_queendom
-	}
-
-	valid_for_nation_designer = no #change to no later
-	modifiers = {
-		diplomatic_upkeep = 4
-		may_recruit_female_generals = yes 
-		may_recruit_female_generals = 0.25
-		can_fabricate_for_vassals = yes
-	}
-
-	conditional = {
-		allow = { has_dlc = "Rights of Man" }
-		has_harem = yes
-	}
-
-	custom_attributes = {
-	}
-
-	effect = {
-		custom_tooltip = S53_leopardqueendom_march
-		custom_tooltip = S53_leopardqueendom_forcelimit
 	}
 }
 
@@ -13580,17 +13538,11 @@ ngwenamasonamingo_reform = {
 	maintain_dynasty = yes
 
 	potential = {
-		OR = {
-			has_unlocked_government_reform = {
-				government_reform = ngwenamasonamingo_reform
-			}
-			has_reform = ngwenamasonamingo_reform
-		}
 		is_revolutionary = no
 		mission_completed = a_fairer_sex_S53
 	}
 
-	valid_for_nation_designer = yes #change to no later
+	valid_for_nation_designer = no #change to no later
 	modifiers = {
 		diplomatic_upkeep = 3
 		may_recruit_female_generals = yes 
