@@ -702,6 +702,8 @@ estate_nobles = {
 
 		estate_nobility_nzeri_standard_bearers #duwarkani
 		estate_nobles_mengi_partners #Vandipha
+		estate_nobles_rosande_noble_slaveowners #Rosande
+		estate_nobles_rosande_competent_slaveowners #Rosande
 	}
 
 	agendas = {

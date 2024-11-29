@@ -1,0 +1,171 @@
+
+country_decisions = {
+	establish_plantation_decision = {
+		potential = {
+			tag = Z35
+			mission_completed = rosande_knightly_slave_hunters
+		}
+		provinces_to_highlight = {
+			any_owned_province = {
+				NOT = {
+					area_for_scope_province = {
+						has_province_modifier = Z35_orcish_workforce
+						has_province_modifier = Z35_grand_orcish_workforce 
+					}
+				}
+				OR = {
+					has_province_modifier = orcish_minority_oppressed_small
+					has_province_modifier = orcish_minority_oppressed_large
+					has_province_modifier = orcish_majority_oppressed
+					has_province_modifier = orcish_minority_coexisting_small
+					has_province_modifier = orcish_minority_coexisting_large
+					has_province_modifier = orcish_majority_coexisting
+					has_province_modifier = orcish_minority_integrated_small
+					has_province_modifier = orcish_minority_integrated_large
+					has_province_modifier = orcish_majority_integrated
+					
+				}
+				NOT = {
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 10
+					}
+				}
+			}
+		}
+		allow = {
+			treasury = 100
+			mil_power = 50
+			custom_trigger_tooltip = {
+				tooltip = rosande_plantation.tt
+				any_owned_province = {
+					area_for_scope_province = {
+						NOT = {
+							has_province_modifier = Z35_orcish_workforce
+							has_province_modifier = Z35_grand_orcish_workforce 
+						}
+					}
+					OR = {
+						has_province_modifier = orcish_minority_oppressed_small
+						has_province_modifier = orcish_minority_oppressed_large
+						has_province_modifier = orcish_majority_oppressed
+						has_province_modifier = orcish_minority_coexisting_small
+						has_province_modifier = orcish_minority_coexisting_large
+						has_province_modifier = orcish_majority_coexisting
+						has_province_modifier = orcish_minority_integrated_small
+						has_province_modifier = orcish_minority_integrated_large
+						has_province_modifier = orcish_majority_integrated
+						
+					}
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 10
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = rosande_plantation.tt.2
+				NOT = {
+					has_country_flag = 	rosande_surga_rebellion
+				}
+			}
+		}
+		effect = {
+			add_treasury = -100
+			add_mil_power = -50
+			If = {
+				limit = { mission_completed = rosande_harsh_control }
+				random_owned_province = {
+					limit = {
+						area_for_scope_province = {
+							NOT = {
+								has_province_modifier = Z35_grand_orcish_workforce 
+							}
+						}
+						OR = {
+							has_province_modifier = orcish_minority_oppressed_small
+							has_province_modifier = orcish_minority_oppressed_large
+							has_province_modifier = orcish_majority_oppressed
+							has_province_modifier = orcish_minority_coexisting_small
+							has_province_modifier = orcish_minority_coexisting_large
+							has_province_modifier = orcish_majority_coexisting
+							has_province_modifier = orcish_minority_integrated_small
+							has_province_modifier = orcish_minority_integrated_large
+							has_province_modifier = orcish_majority_integrated
+						}
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 10
+						}
+					}
+					add_province_modifier = {
+						name = Z35_grand_orcish_workforce 
+						duration = -1
+					} 
+					change_trade_goods = wine
+					if = {
+						limit = {
+							has_orcish_majority_trigger = yes
+						}
+						change_culture = ROOT
+						change_religion = ROOT
+						kill_units = {
+							who = owner
+							amount = 5
+						}
+					}
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						area_for_scope_province = {
+							NOT = {
+								has_province_modifier = Z35_orcish_workforce
+							}
+						}
+						OR = {
+							has_province_modifier = orcish_minority_oppressed_small
+							has_province_modifier = orcish_minority_oppressed_large
+							has_province_modifier = orcish_majority_oppressed
+							has_province_modifier = orcish_minority_coexisting_small
+							has_province_modifier = orcish_minority_coexisting_large
+							has_province_modifier = orcish_majority_coexisting
+							has_province_modifier = orcish_minority_integrated_small
+							has_province_modifier = orcish_minority_integrated_large
+							has_province_modifier = orcish_majority_integrated
+						}
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 10
+						}
+					}
+					add_province_modifier = {
+						name = Z35_orcish_workforce 
+						duration = -1
+					} 
+					change_trade_goods = wine
+					custom_tooltip = rosande_decision.tt.3
+					hidden_effect = {
+						if = {
+							limit = {
+								has_orcish_majority_trigger = yes
+							}
+							change_culture = ROOT
+							change_religion = ROOT
+							kill_units = {
+								who = owner
+								amount = 5
+							}
+						}
+					}
+
+				}
+			}	
+			large_decrease_of_orcish_tolerance_effect = yes
+		}
+	}
+}
+
+
+

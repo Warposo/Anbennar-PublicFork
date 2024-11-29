@@ -130,7 +130,10 @@ country_decisions ={
 		}
 		
 		allow = {
-			dip_tech = 20
+			if = {
+				limit = { NOT = { has_country_flag = castanor_unlock_grand_bazaar_early } }
+				dip_tech = 20
+			}
 			castonath_area = {
 				type = all
 				owned_by = ROOT
