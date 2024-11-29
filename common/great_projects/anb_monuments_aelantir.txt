@@ -3592,7 +3592,7 @@ tunnels_of_renewal = {
 
 		
 		on_upgraded = {
-			tooltip = tunnels_of_renewal_t2_tt
+			custom_tooltip = tunnels_of_renewal_t2_tt
 			hidden_effect = {
 				owner = {
 					country_event = {
