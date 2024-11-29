@@ -1,0 +1,1289 @@
+##BranchStart 0
+h35_branch_1 = {
+
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = H35
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	
+	H35_lights_in_shadow = {
+		icon = mission_women_prayer
+		required_missions {
+			H35_banks_of_corynn
+		}
+		position = 2
+		provinces_to_highlight = {
+			area = corinsfield_area
+			NOT = { base_manpower = 5 }
+		}
+		trigger = {
+			total_development = 50
+			corinsfield_area = {
+				type = all
+				owned_by = ROOT
+				base_manpower = 5
+			}
+			capital_scope = {
+				AND = {
+					has_fort_building_trigger = yes
+					has_manpower_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			corinsfield_area = { type = all add_random_development = 2 }
+			if = {
+				limit = {
+					NOT = {
+						capital_scope = { has_building = conscription_center }
+					}
+				}
+				capital_scope = { add_building = conscription_center }
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						capital_scope = { has_building = regimental_camp } 
+					}
+					capital_scope = { remove_building = regimental_camp }
+				}
+			}
+			else = {
+				capital_scope = { add_random_development = 2 }
+			}
+		}
+	}
+	
+	H35_beginning_sentries = {
+		icon = mission_build_up_to_force_limit
+		required_missions {
+			H35_lights_in_shadow
+		}
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			#veykodan raiders event
+			has_mil_advisor_3 = yes
+			army_tradition = 20
+			land_forcelimit = 30
+		}
+		effect = {
+			add_country_modifier = { name = H35_red_sentries duration = -1 }
+		}
+	}
+	
+	H35_organizing_leadership = {
+		icon = mission_swedish_peasantry
+		required_missions {
+			H35_beginning_sentries
+		}
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_professionalism = 0.2
+			army_size_percentage = 0.9
+			AND = {
+				has_government_power = {
+					type = MIL
+					value = 7
+				}
+				has_government_power = {
+					type = ADM
+					value = 7
+				}
+				has_government_power = {
+					type = DIP
+					value = 7
+				}
+			}
+			AND = {
+				has_dip_advisor_2 = yes
+				has_adm_advisor_2 = yes
+				has_mil_advisor_2 = yes
+			}
+		}
+		effect = {
+			add_country_modifier = { name = H35_established_leadership duration = 9125 }
+		}
+	}
+	
+	H35_land_redistribution = {
+		icon = mission_dual_diplomacy
+		required_missions {
+			H35_further_farmlands
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				region = sarda_region
+				region = veykoda_region
+			}
+			has_terrain = farmlands
+			NOT = { AND = { base_production = 6 has_production_building_trigger = yes } }
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = h35_farmlands_dev
+				adbrabohvi_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
+				hor_velenynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
+				ynncytr_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
+				arverynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
+				hradapolere_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
+				ynnluka_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
+			}
+			custom_trigger_tooltip = { tooltip = h35_adbrabohvi_area adbrabohvi_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
+			custom_trigger_tooltip = { tooltip = h35_hor_velenynn_area hor_velenynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
+			custom_trigger_tooltip = { tooltip = h35_ynncytr_area ynncytr_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
+			custom_trigger_tooltip = { tooltip = h35_arverynn_area arverynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
+			custom_trigger_tooltip = { tooltip = h35_hradapolere_area hradapolere_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
+			custom_trigger_tooltip = { tooltip = h35_ynnluka_area ynnluka_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
+			
+		}
+		effect = {
+			all_owned_province = {
+				OR = {
+					region = sarda_region
+					region = veykoda_region
+				}
+				has_has_terrain = farmlands
+				add_human_minority_size_effect = yes
+				add_random_development = 2
+			}
+			medium_decrease_of_ruinborn_tolerance_effect = yes
+		}
+	}
+	
+	H35_breadbasket_of_aelantir = {
+		icon = mission_pol_breadbasket_europe
+		required_missions {
+			H35_land_redistribution H35_dams_and_dome
+		}
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					superregion = ynn_superregion
+					country_or_non_sovereign_subject_holds = ROOT
+					trade_goods = grain
+					NOT = { has_seat_in_parliament = yes }
+				}
+				AND = {
+					region = sarda_region
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { has_manufactory_trigger = yes }
+				}
+				AND = {
+					region = veykoda_region
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { has_manufactory_trigger = yes }
+				}
+			}
+		}
+		trigger = {
+			veykoda_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				has_manufactory_trigger = yes
+			}
+			sarda_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				has_manufactory_trigger = yes
+			}
+			calc_true_if = {
+				amount = 10
+				custom_trigger_tooltip = {
+					tooltip = h35_ynn_25dev
+					any_owned_province = {
+						superregion = ynn_superregion
+						AND = {
+							trade_goods = grain
+							has_seat_in_parliament = yes
+							development = 25
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { name = H35_breadbasket duration = -1 }
+		}
+	}
+	
+	##
+	
+}
+##BranchEnd 0
+##BranchStart 1
+h35_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = H35
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	
+	H35_banks_of_corynn = {
+		icon = mission_green_village
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			province_id = 2807
+		}
+		trigger = {
+			owns_core_province = 2807
+			corinsfield_area = { type = all country_or_non_sovereign_subject_holds = ROOT is_city = yes }
+			native_policy = native_policy_hostile
+		}
+		effect = {
+			if = {
+				limit = {
+					2807 = { is_capital = no }
+				}
+				set_capital = 2807
+			}
+			2807 = { change_trade_goods = dyes }
+			atarylnn_area = { add_permanent_claim = ROOT }
+			aryamer_area = { add_permanent_claim = ROOT }
+			country_event = { id = flavour_corinsfield.1 }
+		}
+	}
+	
+	H35_securing_veykoda = {
+		icon = mission_ghost_town
+		required_missions {
+			H35_banks_of_corynn
+		}
+		position = 2
+		provinces_to_highlight = {
+			region = veykoda_region
+			is_capital = yes
+			NOT = { province_id = 2807 }
+		}
+		trigger = {
+			has_government_power = {
+				type = MIL
+				value = 7
+			}
+			army_size_percentage = 0.9
+			all_known_country = {
+				capital_scope = { region = veykoda_region }
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = -50
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				}
+			}
+		}
+		effect = {
+			veykoda_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	H35_raising_defenses = {
+		icon = mission_magnificent_castle
+		required_missions {
+			H35_beginning_sentries H35_maleficar_sympathizers
+		}
+		position = 4
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				AND = {
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					OR = {
+						has_building = soldier_households
+						has_building = ramparts
+					}
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 3
+				any_owned_province = {
+					region = veykoda_region
+					has_fort_building_trigger = yes
+					NOT = { is_capital = yes }
+				}
+			}
+			capital_scope = { has_fort_building_trigger = yes }
+			calc_true_if = {
+				amount = 3
+				any_owned_province = {
+					has_manpower_building_trigger = yes
+				}
+			}
+			calc_true_if = {
+				amount = 3
+				any_owned_province = {
+					OR = {
+						has_building = ramparts
+						has_building = soldier_households
+					}
+				}
+			}
+		}
+		effect = {
+			2807 = {
+				add_permanent_province_modifier = { name = h35_raising_defenses duration = -1 }
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						region = veykoda_region
+						has_fort_building_trigger = yes
+					}
+					add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						region = veykoda_region
+						has_fort_building_trigger = yes 
+						NOT = { has_province_modifier = h35_raising_defense }
+					}
+					add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						region = veykoda_region
+						has_fort_building_trigger = yes 
+						NOT = { has_province_modifier = h35_raising_defense }
+					}
+					add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
+				}
+			}
+		}
+	}
+	
+	H35_safe_at_last = {
+		icon = mission_peasantry
+		required_missions {
+			H35_organizing_leadership H35_raising_defenses H35_anti_mage_weaponry
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = veykoda_region
+			NOT = {
+				AND = {
+					religion = corinite
+					NOT = { devastation = 1 }
+				}
+			}
+			NOT = {
+				OR = {
+					culture = corinsfielder
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		trigger = {
+			veykoda_region = {
+				type = all
+				owned_by = ROOT
+				religion = corinite
+				NOT = { devastation = 0 }
+				culture = corinsfielder
+			}
+		}
+		effect = {
+			country_event = { id = flavour_corinsfield.2 }
+			add_country_modifier = { name = h35_new_home duration = -1 }
+			hidden_effect = {
+				country_event = {
+					id = flavour_corinsfield.26
+					days = 200
+					random = 200
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_corisnfield.29
+					days = 200
+					random = 200
+				}
+			}
+		}
+	}
+	
+	H35_further_farmlands = {
+		icon = mission_ynnic_knights
+		required_missions {
+			H35_safe_at_last
+		}
+		position = 6
+		provinces_to_highlight = {
+			region = veykoda_region
+			NOT = {
+				AND = {
+					has_tax_building_trigger = yes
+					development = 20
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 12
+				veykoda_region = { 
+					owned_by = ROOT
+					has_tax_building_trigger = yes
+					development = 20
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				set_saved_name = {
+					key = ichabod_general
+					type = simple
+					name = "Ichabod Roose"
+				}
+			}
+			country_event = { id = flavour_corinsfield.3 }
+			adbrabohvi_area = { add_permanent_claim = ROOT }
+			hor_velenynn_area = { add_permanent_claim = ROOT }
+			ynncytr_area = { add_permanent_claim = ROOT }
+			arverynn_area = { add_permanent_claim = ROOT }
+			hradapolere_area = { add_permanent_claim = ROOT }
+			ynnluka_area = { add_permanent_claim = ROOT }
+			remove_country_modifier = H35_new_home
+		}
+	}
+	
+	H35_dams_and_dome = {
+		icon = mission_burning_castle
+		required_missions {
+			H35_further_farmlands
+		}
+		position = 7
+		provinces_to_highlight = {
+			province_id = 1142
+			province_id = 1133
+			province_id = 1138
+			province_id = 1165
+		}
+		trigger = {
+			AND = {
+				1142 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_precursor_dome_stanyrhrada tier = 1} }
+				1133 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_dam_adbrabohvi tier = 1} }
+				1138 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_dam_vels_bacar tier = 1} }
+				1165 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_dam_bosancovac tier = 1} }
+			}
+		}
+		effect = {
+			country_event = { id = flavour_corinsfield.4 }
+		}
+	}
+
+	H35_crimson_cathedral = {
+		icon = mission_saint_basils_cathedral
+		required_missions {
+			H35_dams_and_dome
+		}
+		position = 7
+		provinces_to_highlight = {
+			is_capital = yes
+		}
+		trigger = {
+			has_global_modifier_value = {
+				which = build_cost
+				value = 0.35
+			}
+			has_global_modifier_value = {
+				which = development_cost
+				value = 0.25
+			}
+			max_manpower = 150
+		}
+		effect = {
+			country_event = { id = flavour_corinsfield.35 }
+		}
+	}
+	
+	##
+	
+}
+##BranchEnd 1
+##BranchStart 2
+h35_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = H35
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	
+	H35_settlement_surveys = {
+		icon = mission_tree_fishing
+		required_missions {
+			H35_banks_of_corynn
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			has_discovered = 1164
+			has_discovered = 1165
+			has_discovered = 2837
+			has_discovered = 2811
+			has_discovered = 1140
+			has_discovered = 1141
+			has_discovered = 2841
+			H55 = { capital_scope = { has_discovered = ROOT } }
+			G94 = { capital_scope = { has_discovered = ROOT } }
+			H57 = { capital_scope = { has_discovered = ROOT } }
+			calc_true_if = {
+				amount = 4
+				any_owned_province = {
+					region = veykoda_region
+					NOT = { area = corinsfield_area }
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			sarda_region = {
+				discover_country = ROOT
+			}
+			veykoda_region = {
+				discover_country = ROOT
+			}
+			capital_scope = {
+				if = {
+					limit = {
+						NOT = {
+							trade_goods = gold
+						}
+					}
+					change_trade_goods = diamonds 
+				}
+			}
+			random_owned_province = {
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								is_capital = yes
+								trade_goods = iron
+								trade_goods = cloth
+								trade_goods = copper
+								trade_goods = gold
+								trade_goods = tobacco
+								trade_goods = grain
+							} 
+						}
+					}
+					change_trade_goods = iron
+				}
+		 	}
+			random_owned_province = {
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								is_capital = yes
+								trade_goods = iron
+								trade_goods = cloth
+								trade_goods = copper
+								trade_goods = gold
+								trade_goods = tobacco
+								trade_goods = grain
+							} 
+						}
+					}
+					change_trade_goods = grain
+				}
+		 	}
+			random_owned_province = {
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								is_capital = yes
+								trade_goods = iron
+								trade_goods = cloth
+								trade_goods = copper
+								trade_goods = gold
+								trade_goods = tobacco
+								trade_goods = grain
+							} 
+						}
+					}
+					change_trade_goods = grain
+				}
+		 	}
+		}
+	}
+	
+	H35_maleficar_sympathizers = {
+		icon = mission_gone_with_the_old
+		required_missions {
+			H35_settlement_surveys H35_securing_veykoda
+		}
+		position = 3
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			veykoda_region = {
+				type = all
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { OR = { culture = havoric culture = new_havoric } } 
+				}	
+			}
+			NOT = { accepted_culture = stone_dwarf accepted_culture = steel_dwarf accepted_culture = redfoot_halfling accepted_culture = pipefoot_halfling }
+			all_owned_province = {
+				region = veykoda_region
+				OR = {
+					NOT = { local_autonomy = 10 }
+					has_province_modifier = autonomy_decreased
+				}
+			}
+		}
+		effect = {
+			all_owned_province = {
+				if = {
+					limit = {
+						region = veykoda_region
+						region = sarda_region
+						NOT = { has_human_minority_trigger = yes }
+					}
+					add_human_minority_size_effect = yes
+					small_decrease_of_dwarven_tolerance_effect = yes
+					small_decrease_of_halfling_tolerance_effect = yes
+				}
+			}
+			if = { limit = { devotion = 50 } add_devotion = 50 }
+			else_if = { limit = { devotion = 60 } add_devotion = 40 add_prestige = 10 }
+			else_if = { limit = { devotion = 70 } add_devotion = 30 add_prestige = 20 }
+			else_if = { limit = { devotion = 80 } add_devotion = 20 add_prestige = 30 }
+			else_if = { limit = { devotion = 90 } add_devotion = 10 add_prestige = 40 }
+			else_if = { limit = { devotion = 100 } add_prestige = 50 }
+		}
+	}
+	
+	H35_anti_mage_weaponry = {
+		icon = spa_reform_tercios
+		required_missions {
+			H35_maleficar_sympathizers
+		}
+		position = 4
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			has_mil_advisor_2 = yes
+			has_adm_advisor_2 = yes
+			OR = { 
+				artillery_fraction = 0.5 
+				num_of_artillery = 15
+			}
+			calc_true_if = {
+				amount = 8
+				any_owned_province = { has_production_building_trigger = yes }
+			}
+			calc_true_if = {
+				amount = 3
+				any_owned_province = {
+					OR = {
+						trade_goods = iron
+						trade_goods = copper
+					}
+					base_production = 7
+				}
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+			add_splendor = 200
+			add_country_modifier = { name = h35_magebane duration = -1 }
+			hidden_effect = {
+				country_event = {
+					id = flavour_corisnfield.28
+					days = 200
+					random = 200
+				}
+			}
+		}
+	}
+	
+	H35_ban_sex = { #cultural crackdown
+		icon = mission_luther_theses
+		required_missions {
+			H35_further_farmlands
+		}
+		position = 7
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 8
+				any_owned_province = {
+					region = sarda_region
+					culture = sarda
+				}
+			}
+			calc_true_if = {
+				amount = 10
+				any_province = {
+					region = sarda_region
+					infantry_in_province = 5
+				}
+			}
+			OR = {
+				inquisitor = 3
+				army_reformer = 3
+				mil_power = 100
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = { army_reformer = 3 inquisitor = 3 }	
+					}
+				}
+				add_mil_power = -100
+			}
+			country_event = { id = flavour_corinsfield.6 }
+			hidden_effect = {
+				country_event = {
+					id = flavour_corinsfield.27
+					days = 200
+					random = 200
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_corinsfield.30
+					days = 600
+				}
+			}
+		}
+	}
+	
+	H35_safety_from_sin = {
+		icon = mission_new_dawn
+		required_missions {
+			H35_corin_country H35_ban_sex H35_breadbasket_of_aelantir
+		}
+		position = 9
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			development_in_provinces = {
+				OR = {
+					region = sarda_region
+					region = veykoda_region
+				}
+				owned_by = ROOT
+				value = 750
+			}
+			sarda_region = { type = all all_owned_province = { religion = corinite } }
+			veykoda_region = { type = all religion = corinite }
+			veykoda_region = { type = all is_prosperous = yes }
+			NOT = { average_unrest = 0 }
+			all_neighbor_country = {
+				AND = {
+					NOT = { army_size = ROOT }
+					NOT = { has_estate = estate_mages }
+				}
+			}
+			has_estate_privilege = estate_church_one_faith_one_culture
+		}
+		effect = {
+			country_event = { id = flavour_corinsfield.9 days = 180 }
+			set_country_flag = h35_upstanding_society
+			custom_tooltip = h35_upstanding_society.tt
+		}
+	}
+	
+	##
+}
+##BranchEnd 2
+##BranchStart 3
+h35_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = H35
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	
+	H35_father_and_daughter = {
+		icon = mission_forest_pilgrim
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			capital_scope = { has_tax_building_trigger = yes }
+			corinsfield_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			stability = 1
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = h35_godwin.tt
+					AND = {
+						has_ruler = "Godwin"
+						dynasty = "of Escerton"
+					}
+				}
+				dip = 3
+			}
+		}
+		effect = {
+			country_event = { id = flavour_corinsfield.10 }
+			define_advisor = {
+				type = treasurer
+				name = "Father Dostan"
+				skill = 2
+				culture = Corinsfielder
+				religion = corinite
+				cost_multiplier = 0.5
+			}
+		}
+	}
+	
+	H35_first_mage_trials = {
+		icon = mission_burning_witch
+		required_missions {
+			H35_piety_of_masses H35_father_and_daughter
+		}
+		position = 4
+		provinces_to_highlight = {
+			area = corinsfield_area
+		}
+		trigger = {
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 3
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			estate_influence = {
+				estate = estate_church
+				influence = 60
+			}
+			OR = {
+				inquisitor = 2
+				theologian = 2
+				adm = 100
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = h35_godwin.tt
+					AND = {
+						has_ruler = "Godwin"
+						dynasty = "of Escerton"
+					}
+				}
+				dip = 3
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							inquisitor = 2
+							theologian = 2
+						}
+					}
+				}
+				add_adm_power = -100
+			}
+			add_country_modifier = { name = h35_purged_mages duration = -1 }
+			country_event = { id = flavour_corinsfield.11 }
+		}
+	}
+	
+	H35_honoring_father = {
+		icon = mission_moon_moon
+		required_missions {
+			H35_first_mage_trials
+		}
+		position = 5
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+
+			custom_trigger_tooltip = {
+				tooltip = h35_godwin.tt
+				NOT = {
+					AND = {
+						has_ruler = "Godwin"
+						dynasty = "of Escerton"
+					}
+				}
+			}
+			stability = 2
+			NOT = { average_unrest = 0 }
+		}
+		effect = {
+			corinsfield_area = {
+				type = all
+				add_prosperity = 100
+			}
+			country_event = { id = flavour_corinsfield.12 }
+		}
+	}
+	
+	H35_liturgical_literacy = {
+		icon = mission_corin
+		required_missions {
+			H35_blessed_book
+		}
+		position = 7
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				AND = {
+					has_tax_building_trigger = yes
+					has_courthouse_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				has_adm_advisor_3 = yes
+				ruler_has_personality = scholar_personality
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			calc_true_if = {
+				amount = 6
+				any_owned_province = {
+					AND = {
+						has_tax_building_trigger = yes
+						has_courthouse_building_trigger = yes
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = { NOT = { has_building = university } }
+				}
+				capital_scope = { add_building = university }
+			}
+			else = { capital_scope = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 1 } }
+			if = {
+				limit = { NOT = { adm = 6 } }
+				change_adm = 1
+			}
+			else = { add_adm_power = 100 }
+		}
+	}
+	
+	H35_common_corin_education = {
+		icon = take_the_bishoprics
+		required_missions {
+			H35_liturgical_literacy
+		}
+		position = 8
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 6
+				any_owned_province = {
+					has_building = university
+				}
+			}
+			calc_true_if = {
+				amount = 6
+				any_owned_province = {
+					has_building = state_house
+				}
+			}
+			OR = {
+				innovativeness = 20
+				OR = {
+					has_mil_advisor_4 = yes
+					has_adm_advisor_4 = yes
+					has_dip_advisor_4 = yes
+				}
+			}
+			
+		}
+		effect = {
+			#lvl 3 reform
+			add_country_modifier = {
+				name = h35_common_corin_education
+				duration = -1
+			}
+		}
+	}
+	
+	
+}
+h35_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = H35
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	
+	H35_corinspoppy_compact = {
+		icon = mission_settlers_north_america
+		required_missions {
+			H35_father_and_daughter
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			capital_scope = { AND = { development = 18 has_production_building_trigger = yes has_courthouse_building_trigger = yes } }
+			stability = 2
+			has_adm_advisor_2 = yes
+		}
+		effect = {
+			2807 = { rename_capital = "Poppyspring" }
+		}
+	}
+	
+	H35_piety_of_masses = {
+		icon = mission_hands_praying
+		required_missions {
+			H35_corinspoppy_compact
+		}
+		position = 3
+		provinces_to_highlight = {
+			area = corinsfield_area
+		}
+		trigger = {
+			all_owned_province = {
+				area = corinsfield_area
+				has_building = temple
+			}
+			devotion = 80
+			custom_trigger_tooltip = {
+				tooltip = h35_piety_confusing
+				karma = -20
+				NOT = { karma = 20 }
+			}
+		}
+		effect = {
+			set_country_flag = h35_goodmen
+			custom_tooltip = h35_goodmen.tt
+		}
+	}
+	
+	H35_in_proper_company = {
+		icon = mission_pray_light
+		required_missions {
+			H35_piety_of_masses
+			H35_first_mage_trials
+		}
+		position = 5
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			has_estate_privilege = estate_church_one_faith_one_culture
+			treasury = 200
+			#has_estate_privilege = estate_church_goodmen_raisings
+		}
+		effect = {
+			add_treasury = -200
+			if = {
+				limit = { 2807 = { NOT = { has_building = cathedral } } }
+				2807 = { add_building = cathedral }
+			}
+			else = { add_base_tax = 2 }
+			corinsfield_area = {
+				type = all
+				add_base_tax = 2
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_corinsfield.23
+					days = 200
+					random = 200
+				}
+			}
+		}
+	}
+	
+	H35_blessed_book = {
+		icon = mission_dark_book
+		required_missions {
+			H35_in_proper_company
+			H35_honoring_father
+		}
+		position = 6
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			has_institution = printing_press
+			devotion = 90
+			estate_influence = {
+				estate = estate_church
+				influence = 75
+			}
+		}
+		effect = {
+			country_event = { id = flavour_corinsfield.13 }
+			hidden_effect = {
+				set_variable = {
+					which = h35_blessed_book 
+					value = 0 #100s are for TTF, 10s for manpower, and 1s for recover morale speed
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_corinsfield.24
+					days = 200
+					random = 200
+				}
+			}
+		}
+	}
+	
+	H35_father_godwin = {
+		icon = mission_priest_church
+		required_missions {
+			H35_blessed_book
+		}
+		position = 7
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			#low paranoia
+			power_projection = 50
+			calc_true_if = {
+				amount = 15
+				any_owned_province = {
+					has_seat_in_parliament = yes
+				}
+			}
+			OR = {
+				inquisitor = 3
+				has_global_modifier_value = {
+					modifier = missionary_strength
+					value = 0.07
+				}
+				adm_power = 100
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							inquisitor = 3
+							has_global_modifier_value = {
+								modifier = missionary_strength
+								value = 0.07
+							}
+						}
+					}
+				}
+				add_adm_power = -100
+			}
+		}
+	}
+	
+	H35_corin_country = {
+		icon = mission_pray_light
+		required_missions {
+			H35_father_godwin
+		}
+		position = 8
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			all_neighbor_country = { 
+				NOT = {
+					has_estate = estate_mages
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = h35_corins_crusaders
+				duration = -1
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_corinsfield.25
+					days = 200
+					random = 200
+				}
+			}
+		}
+	}
+	
+	##
+	
+}
+##BranchEnd 4
