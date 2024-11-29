@@ -43132,6 +43132,57 @@ S87_ideas = {
 	}
 }
 
+#Rijalsahil
+S88_ideas = {
+	start = {
+		legitimacy = 1 
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.30 
+		build_cost = -0.1 
+	}
+	
+	bonus = {
+		naval_forcelimit_modifier = 0.20
+	}
+	
+	trigger = {
+		tag = S88 #Rijalsahil
+	}
+	free = yes
+	
+	S87_reviving_the_old_ways = { 
+		reform_progress_growth = 0.15
+	}
+	
+	S88_help_from_the_depths = { 
+		diplomatic_reputation = 1
+	}
+	
+	S88_galaa_the_biyodamu = { 
+		global_sailors_modifier = 0.20
+		recover_navy_morale_speed = 0.05
+	}
+	
+	S88_bolts_of_inspiration = { 
+		idea_cost = -0.1
+	}
+	
+	S88_boling_rocks = { 
+		land_attrition = -0.1
+		naval_attrition = -0.1
+	}
+	
+	S88_people_from_beyond_the_ocean = { 
+		trade_range_modifier = 0.5
+		global_ship_trade_power = 0.10 
+	}
+	
+	S87_killing_qeyikul = { 
+		discipline = 0.05
+	}
+}
+
 #Khezkhagak 
 V03_ideas = { 
 	start = { 
