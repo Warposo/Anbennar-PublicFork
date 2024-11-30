@@ -233,6 +233,7 @@
  flavor_rosande.35.t:0 "Orcish Ambushes" #This event and the below are the same, just different pulses
  flavor_rosande.35.d:0 "Behind every tangled copse of trees, an ambush, behind every verdant ridge, a trap. Our courageous forces have their work cut out for them. Even those parts of this ancient forest we thought securely in our hands are prone to rise up in rebellion as soon as we turn our backs. \n\nWhile the orcs dwelling in the Deepwoods cannot dream of matching the might of our rose knights, they are certainly determined to make us bleed in their obstinate refusal to accept their destiny beneath our boots. But no matter how many contemptible tricks they’ll attempt to delay our advance, we shall not be deterred!"
  flavor_rosande.35.a:0 "The brazen insolence of these savages!"
+ flavor_rosande.35.b:0 "The brazen insolence of these savages! (Hide this event)"
 
  flavor_rosande.36.t:0 "Orcish Ambushes" #This event and the above are the same, just different pulses
  flavor_rosande.36.d:0 "Behind every tangled copse of trees, an ambush, behind every verdant ridge, a trap. Our courageous forces have their work cut out for them. Even those parts of this ancient forest we thought securely in our hands are prone to rise up in rebellion as soon as we turn our backs. \n\nWhile the orcs dwelling in the Deepwoods cannot dream of matching the might of our rose knights, they are certainly determined to make us bleed in their obstinate refusal to accept their destiny beneath our boots. But no matter how many contemptible tricks they’ll attempt to delay our advance, we shall not be deterred!"
@@ -241,6 +242,7 @@
  flavor_rosande.37.t:0 "Out of the Woods"
  flavor_rosande.37.d:0 "With the fighting spirit of the Deepwoods orcs finally broken, it is now time to use their ferocity for more productive purposes. Slave caravans have assembled in the groves under our control and begun their long march towards our heartland with its insatiable hunger for new slave labor. \n\nOnce outside the cover of the trees that have sheltered them far too long from retribution, they will learn what true role in life destiny has decreed for them as penance for the crimes committed by their ancestors. It is truly fortuitous that our need for orcish slaves is almost as great as their need for atonement."
  flavor_rosande.37.a:0 "Let’s see to it they quickly learn to accept their proper place!"
+ flavor_rosande.37.a:0 "Let’s see to it they quickly learn to accept their proper place! (Hide this)"
 
  flavor_rosande.38.t:0 "A Fork in the Path"
  flavor_rosande.38.d:0 "Surga, her family and a dozen other orcs were chained to the floorboards of a cart rumbling along the dirt road to the nearest river port along the Alen, having been sold to Vertesker slave traders by their former master only days ago. Theirs was not the only cart in the convoy, five other carts had joined them on their journey to their uncertain future. The day had been long and Surga was thirsty, hoping against hope that their new owners remembered to give them some water while they waited for the river ferry. Their destination lay on the other river side, and the ferry was the only way for miles to get the carts across. \n\nSuddenly a commotion broke out, with the slavers frantically waving to the ferry that had just brought the cart before theirs to the other shore and was on its way back. Turning her head, she saw a dust cloud approaching their convoy. Soon the sound of galloping horses could be heard and the mercenaries hired by the slavers assumed a defensive position. A patrol of knights charged into the ranks of the mercenaries and soon a desperate struggle ensued. Her cart was rolling onto the planks of the ferry as the last mercenary fell to the blow of a saber. The slavers rushed to the seeming security of the ferry, abandoning the remaining carts. They knights rushed towards the ferry and just as it disembarked, Surga’s arm was grabbed and the chain linking her to the cart and her parents was cleaved with a decisive stroke. Futilely reaching for her parents, desperate Surga could do nothing but slowly watch them disappear into the river fog. \n\nIt would be the last time she would see them but her mother’s cries still echoed in her mind. For years she would dream up scenarios in her mind, ‘What if the cart got onto the ferry just a bit faster’, ‘what if the knights were fast enough to catch her parent’s cart’, on and on in circles, but with each day resignation gnawed at the fringes of her hopes until one day only the weary acceptance that she would never see her parents again was left."
@@ -261,6 +263,15 @@
  flavor_rosande.42.t:0 "Massive Orcish Population"
  flavor_rosande.42.d:0 "Its pretty massive ngl"
  flavor_rosande.42.a:0 "Yey"
+
+ flavor_rosande.43.t:0 "Out of the Woods"
+ flavor_rosande.43.d:0 "You're not supposed to see this"
+ flavor_rosande.43.a:0 "aaa"
+
+ flavor_rosande.44.t:0 "Orcish Ambush"
+ flavor_rosande.44.d:0 "You're not supposed to see this"
+ flavor_rosande.44.a:0 "aaa"
+
 
  #Modifiers
  Z35_low_orc_population:0 "Low Orcish Poplation"
@@ -344,7 +355,7 @@
  rosande_half_breeds.tt.2:0 "As the half-Orcs §Gassisted§! us during §RSurga's rebellion§!:"
  rosande_harsh_control.tt:0 "The §YOrcish Workforce§! modifier is §Gupgraded§! to the §Y Grand Orcish Workforce§! modifier, granting an additional: \n§G+0.25 Local goods produced§! \n§G+5% Production effeciency§! \nThis affects all §Ycurrent§! and §Yfuture§! plantations"
  rosande_knights_steed.tt.2:0 "Every owned province in the §YTaran Plains area§! gains §G1§! £icon_production_in_text£ and §G1§! £icon_manpower_in_text£"
- rosande_above_flames.tt:0 "The §YSupermacy over the Crown§! nobility privilege no longer reduces §Gmax absolutism§!"
+ rosande_above_flames.tt:0 "The §YSupermacy over the Crown§! nobility privilege no longer reduces §GMaximum Absolutism§!"
  rosande_overflowing.tt:0 "Every owned province currently producing §Rslaves§! will have its trade good changed to §Gwine§! and gets an §GOrcish Workforce§!"
  rosande_plantation.tt:0 "Any owned province with an §ROrcish minority§! or §Rmajority§! has §Y10 regiments§! present. This does §RNOT§! include provinces in a state which already has an §GOrcish Workforce§!"
  rosande_plantation.tt.2:0 "The Orcs are obedient"
@@ -354,3 +365,6 @@
  rosande_competent_slaveowners.tt:0 "The §YNoble Slaveowners§! nobility privilege will be replaced with §YCompetent Slaveowners§!, costing no maximum §Gabsolutism§!, granting §G5%§! extra loyalty equilbrium and increasing the §Gdevelopment cost§! reduction"
  rosande_noble_slaver.tt:0 "§YNoble Slaveowners§! will be granted to the §YNobility§! granting §G-5%§! development cost to provinces with an §GOrcish Workforce§! and a §YFarm Estate§!"
  rosande_friends_in_forest.tt:0 "§ROrcish ambushes§! will happen less often!"
+ rosande_4_ic.tt:0 "§Y4§! owned provinces will be converted to §YInfernal Court§!"
+ rosande_hide_out_of_woods.tt:0 "§YThis event will be hidden from now on. This decision is§! §Rpermanen§t!"
+ rosande_unprofitable_trade.tt:0 "An event regarding the §Yslave trade§! has fired."

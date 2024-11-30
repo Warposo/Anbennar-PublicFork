@@ -14838,7 +14838,10 @@ estate_nobles_rosande_competent_slaveowners = {
 	on_granted = {
 		every_owned_province = {
 			limit = {
-				has_province_modifier = Z35_orcish_workforce
+				OR = {
+					has_province_modifier = Z35_orcish_workforce
+					has_province_modifier = Z35_grand_orcish_workforce
+				}
 				has_building = farm_estate
 			}
 			add_province_modifier = {

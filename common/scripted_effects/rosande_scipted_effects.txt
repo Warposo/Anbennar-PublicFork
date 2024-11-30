@@ -1,0 +1,140 @@
+
+rosande_add_workforce_effect = {
+	if = {
+		limit = { 
+			has_building = farm_estate 
+			ROOT = {
+				has_estate_privilege = estate_nobles_rosande_noble_slaveowners 
+				NOT = { mission_completed = rosande_harsh_control }
+			}
+		}
+		add_province_modifier = {
+			name = Z35_orcish_workforce
+			duration = -1
+		}
+		add_province_modifier = {
+			name = Z35_noble_slaveowners
+			duration = -1
+		}
+		change_trade_goods = wine
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estate 
+			ROOT = {
+				has_estate_privilege = estate_nobles_rosande_competent_slaveowners 
+				NOT = { mission_completed = rosande_harsh_control }
+			}
+		}
+		add_province_modifier = {
+			name = Z35_orcish_workforce
+			duration = -1
+		}
+		add_province_modifier = {
+			name = Z35_noble_slaveowners_2
+			duration = -1
+		}
+		change_trade_goods = wine
+	}
+	else_if = {
+		limit = {
+			has_building = farm_estate 
+			ROOT = {
+				has_estate_privilege = estate_nobles_rosande_competent_slaveowners 
+				mission_completed = rosande_harsh_control 
+			}
+		}
+		add_province_modifier = {
+			name = Z35_grand_orcish_workforce
+			duration = -1
+		}
+		add_province_modifier = {
+			name = Z35_noble_slaveowners_2
+			duration = -1
+		}
+		change_trade_goods = wine
+	}
+	else_if = {
+		limit = {
+			NOT = { has_building = farm_estate }
+			ROOT = { NOT = { mission_completed = rosande_harsh_control } }
+		}
+		add_province_modifier = {
+			name = Z35_orcish_workforce
+			duration = -1
+		}
+		change_trade_goods = wine
+	}
+	else = {
+		add_province_modifier = {
+			name = Z35_grand_orcish_workforce
+			duration = -1
+		}
+		change_trade_goods = wine
+	}
+}
+
+rosande_beautiful_dream_effect = {
+	if = {
+		limit = { has_province_modifier = Z35_a_beautiful_dream_1 }
+		remove_province_modifier = Z35_a_beautiful_dream_1 
+		add_province_modifier = {
+			name = Z35_a_beautiful_dream_2
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = { has_province_modifier = Z35_a_beautiful_dream_2 }
+		remove_province_modifier = Z35_a_beautiful_dream_2
+		add_province_modifier = {
+			name = Z35_a_beautiful_dream_3
+			duration = -1
+		}
+	}
+	else = {
+		remove_province_modifier = Z35_a_beautiful_dream_3
+		add_province_modifier = {
+			name = Z35_a_beautiful_dream_4
+			duration = -1
+		}
+	}
+}
+
+rosande_orc_population_effect = {
+	if = {
+		limit = {
+			has_country_modifier = Z35_low_orc_population 
+			OR = {
+				has_country_modifier = Z35_medium_orc_population
+				has_country_modifier = Z35_large_orc_population
+				has_country_modifier = Z35_massive_orc_population
+			}
+		}
+		remove_country_modifier = Z35_low_orc_population
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = Z35_medium_orc_population 
+			OR = {
+				has_country_modifier = Z35_low_orc_population
+				has_country_modifier = Z35_large_orc_population
+				has_country_modifier = Z35_massive_orc_population
+			}
+		}
+		remove_country_modifier = Z35_medium_orc_population
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = Z35_large_orc_population 
+			OR = {
+				has_country_modifier = Z35_low_orc_population
+				has_country_modifier = Z35_large_orc_population
+				has_country_modifier = Z35_massive_orc_population
+			}
+		}
+		remove_country_modifier = Z35_large_orc_population
+	}
+	else = {
+		remove_country_modifier = Z35_massive_orc_population
+	}
+}

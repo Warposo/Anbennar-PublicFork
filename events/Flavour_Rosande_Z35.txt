@@ -93,9 +93,7 @@ country_event = { #Looking to Bright Futures
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.2.a
@@ -138,9 +136,7 @@ country_event = { #A Noble Slaver
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.3.a
@@ -180,9 +176,7 @@ country_event = { #Infernal Gluttony
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.4.a
@@ -192,15 +186,18 @@ country_event = { #Infernal Gluttony
 			name = Z35_ease_of_gluttony
 			duration = 3650
 		}
-		for = {
-			amount = 5
-			effect = "
-			random_owned_province = {
-				change_religion = infernal_court
-			}"
+		custom_tooltip = rosande_4_ic.tt
+		hidden_effect = {
+			for = {
+				amount = 5
+				effect = "
+				random_owned_province = {
+					change_religion = infernal_court
+				}"
+			}
 		}
 		capital_scope = {
-			 change_religion = infernal_court 
+			change_religion = infernal_court 
 		}
 	}
 	option = {
@@ -217,9 +214,7 @@ country_event = { #Sour Taste
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.5.a
@@ -268,8 +263,8 @@ country_event = { #Sour Taste
 			}
 			216 = {
 				owner = {
-					add_casus_belli = {
-						target = PREV
+					reverse_add_casus_belli = {
+						target = ROOT
 						type = cb_vassalize_mission
 						months = 420 
 					}
@@ -301,9 +296,7 @@ country_event = { #Unprofitable Trade
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 	
 	option = {
 		name = flavor_rosande.6.a
@@ -324,9 +317,7 @@ country_event = { #Jousting with The Griffin Lords
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.7.a
@@ -338,51 +329,22 @@ country_event = { #Jousting with The Griffin Lords
 			}
 		}
 		897 = {
+			rosande_add_workforce_effect = yes
 			change_trade_goods = iron
-			add_province_modifier = {
-				name = Z35_orcish_workforce
-				duration = -1
-			}
 			add_orcish_minority_size_effect = yes
 		}
 		895 = {
+			rosande_add_workforce_effect = yes
 			change_trade_goods = iron
-			add_province_modifier = {
-				name = Z35_orcish_workforce
-				duration = -1
-			}
 			add_orcish_minority_size_effect = yes
 		}
 		896 = {
-			add_province_modifier = {
-				name = Z35_orcish_workforce
-				duration = -1
-			}
+			rosande_add_workforce_effect = yes
+			change_trade_goods = iron
 			add_orcish_minority_size_effect = yes
 		}
-		if = {
-			limit = {
-				827 = {	has_province_modifier = Z35_a_beautiful_dream_1 }
-			}
-			827 = { #Ionntras
-				remove_province_modifier = Z35_a_beautiful_dream_1
-				add_province_modifier = {
-					name = Z35_a_beautiful_dream_2
-					duration = -1
-				}
-			}
-		}
-		if = {
-			limit = {
-				827 = {	has_province_modifier = Z35_a_beautiful_dream_2	}
-			}
-			827 = { #Ionntras
-				remove_province_modifier = Z35_a_beautiful_dream_2
-				add_province_modifier = {
-					name = Z35_a_beautiful_dream_3
-					duration = -1
-				}
-			}
+		827 = { #Ionntras
+		 	rosande_beautiful_dream_effect = yes
 		}
 		define_advisor = {
 			type = natural_scientist
@@ -414,9 +376,7 @@ country_event = { #Eclipsing The Old
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.8.a
@@ -452,9 +412,7 @@ country_event = { #Modern Problems
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.9.a
@@ -485,9 +443,7 @@ country_event = { #To Build Something New
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.12.a
@@ -517,45 +473,51 @@ country_event = { #To Build Something New
 			}
 		}
 		add_treasury = 1000
-		832 = {
-			if = {
-				limit = {
-					has_orcish_majority_trigger = yes
+		if = {
+			limit = {
+				832 = {
+					culture_is_orcish = yes
 				}
+			}
+			832 = {
 				change_culture = rosanda
 				change_religion = ROOT
 			}
-		}
-		833 = {
-			if = {
-				limit = {
-					has_orcish_majority_trigger = yes
+			random_owned_province = {
+				limit = { 
+					NOT = { 
+						province_id = 832 
+						province_id = 833
+						province_id = 831
+					}
 				}
+				rosande_add_workforce_effect = yes
+			}
+		}
+		if = {
+			limit = {
+				833 = {
+					culture_is_orcish = yes
+				}
+			}
+			833 = {
 				change_culture = rosanda
 				change_religion = ROOT
+			}
+			random_owned_province = {
+				limit = { 
+					NOT = {
+						province_id = 832 
+						province_id = 833
+						province_id = 831
+					}
+				}
+				rosande_add_workforce_effect = yes
 			}
 		}
 		add_mil_power = -150
-		if = {
-			limit = {
-				827 = {	has_province_modifier = Z35_a_beautiful_dream_1 }
-			}
-			827 = { #Ionntras
-				remove_province_modifier = Z35_a_beautiful_dream_1
-				add_province_modifier = {
-					name = Z35_a_beautiful_dream_2
-					duration = -1
-				}
-			}
-		}
-		else = {
-			827 = { #Ionntras
-				remove_province_modifier = Z35_a_beautiful_dream_2
-				add_province_modifier = {
-					name = Z35_a_beautiful_dream_3
-					duration = -1
-				}
-			}
+		827 = {
+			rosande_beautiful_dream_effect = yes
 		}
 		trialmount_area = {
 			add_permanent_claim = ROOT
@@ -572,9 +534,7 @@ country_event = { #The Greatest to Fall
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.13.a
@@ -600,9 +560,7 @@ country_event = { #The Never-Ending Ball
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.14.a
@@ -622,9 +580,7 @@ country_event = { #Hangover
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = {
 		name = flavor_rosande.15.a
@@ -634,13 +590,20 @@ country_event = { #Hangover
 		
 		custom_tooltip = rosande_competent_slaveowners.tt
 		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = Z35_noble_slaveowners
+				}
+				remove_province_modifier = Z35_noble_slaveowners
+			}
+		}
+		hidden_effect = {
 			remove_estate_privilege = estate_nobles_rosande_noble_slaveowners
 			set_estate_privilege = estate_nobles_rosande_competent_slaveowners
 		}
 		set_country_flag = unlocked_estate_rosande_slaveowners_2
 		
 		deepwoods_mountain_grove = {
-			type = all
 			add_permanent_claim = ROOT
 		}
 		set_country_flag = rosande_part_3
@@ -657,9 +620,7 @@ country_event = { #The Good Ones
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.16.a
@@ -682,9 +643,7 @@ country_event = { #No Different
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.17.a
@@ -724,9 +683,7 @@ country_event = { #Entering the Verdant Veil
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.18.a
@@ -736,15 +693,12 @@ country_event = { #Entering the Verdant Veil
 			duration = 5475
 		}
 		deepwoods_hunter_grove = {
-			type = all
 			add_permanent_claim = ROOT
 		}
 		deepwoods_thorn_grove = {
-			type = all
 			add_permanent_claim = ROOT
 		}
 		deepwoods_lake_grove = {
-			type = all
 			add_permanent_claim = ROOT
 		}
 		custom_tooltip = rosande_ambush.tt
@@ -761,20 +715,14 @@ country_event = { #Friends in the Forest
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.19.a
 
 		add_accepted_culture = wood_elf
 		827 = { #Ionntras
-			remove_province_modifier = Z35_a_beautiful_dream_3
-			add_province_modifier = {
-				name = Z35_a_beautiful_dream_4
-				duration = -1
-			}
+			rosande_beautiful_dream_effect = yes
 		}
 		for = {
 			custom_tooltip = rosande_deepwood_mills.tt
@@ -804,10 +752,7 @@ country_event = { #Friends in the Forest
 			limit = {
 				num_of_provinces_owned_or_owned_by_subjects_with = {
 					value = 15
-					OR = {
-						has_building = workshop
-						has_building = counting_house
-					}
+					has_production_building_trigger = yes
 				}
 			}
 			819 = {
@@ -822,7 +767,7 @@ country_event = { #Friends in the Forest
 		set_country_flag = rosande_less_ambush
 		hidden_effect = {
 			country_event = {
-				id = flavor_rosande.17
+				id = flavor_rosande.20
 				days = 730
 			}
 		}
@@ -838,9 +783,7 @@ country_event = { #Final Touches
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.20.a
@@ -865,9 +808,7 @@ country_event = { #The Crown of Crimson Gleam
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.21.a
@@ -902,9 +843,7 @@ country_event = { #The Ashen Bloom
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.22.a
@@ -948,9 +887,7 @@ country_event = { #A Fork in the Path
 
 	is_triggered_only = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 	
 	option = {
 		name = flavor_rosande.38.a
@@ -977,9 +914,7 @@ country_event = { #A Starlit Night
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.23.a
@@ -995,9 +930,7 @@ country_event = { #Rotten Manors
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.24.a
@@ -1021,9 +954,7 @@ country_event = { #Surga's Speech
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.25.a
@@ -1047,9 +978,7 @@ country_event = { #Surga's Rebellion
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.26.a
@@ -1145,9 +1074,7 @@ country_event = { #A Tragic Night
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.27.a
@@ -1189,9 +1116,8 @@ country_event = { #Half orcs revolt
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
+
 	option = { 
 		name = flavor_rosande.28.a
 
@@ -1233,9 +1159,7 @@ country_event = { #Half orcs Assist
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.29.a
@@ -1267,9 +1191,7 @@ country_event = { #The Rósanda Hero
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.30.a
@@ -1304,9 +1226,7 @@ country_event = { #Head On
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		tag = Z35
-	}
+	trigger = {}
 
 	option = { 
 		name = flavor_rosande.31.a
@@ -1386,11 +1306,9 @@ country_event = { #Fading Lights
 	desc = flavor_rosande.32.d
 	picture = BATTLE_eventPicture
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	trigger = {
-		tag = Z35
 		has_country_flag = rosande_head_on
 		NOT = { num_of_rebel_controlled_provinces = 1}
 		NOT = { num_of_rebel_armies = 1}
@@ -1415,7 +1333,7 @@ country_event = { #Fading Lights
 		name = flavor_rosande.32.a
 
 		add_army_tradition = 10
-		add_ruler_personality = last_knight_personality
+		add_ruler_personality = bold_fighter_personality
 		add_stability = 3
 		for = {
 			custom_tooltip = rosande_lose_orcs.tt
@@ -1448,7 +1366,10 @@ country_event = { #Royal Corvée
 	is_triggered_only = yes
 
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
 		mission_completed = rosande_grape_corvee	
 	}
 
@@ -1495,8 +1416,12 @@ country_event = { #The Price of Progress
 	is_triggered_only = yes
 
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
 		mission_completed = rosande_rattling_chains
+		NOT = { has_country_flag = rosande_dwindling_stop }
 	}
 
 	immediate = {
@@ -1504,16 +1429,10 @@ country_event = { #The Price of Progress
 			random_owned_province = {
 				limit = {
 					NOT = { 
-						OR = {
-							has_province_modifier = Z35_orcish_workforce
-							has_province_modifier = Z35_grand_orcish_workforce
-						}
+						has_province_modifier = Z35_orcish_workforce
+						has_province_modifier = Z35_grand_orcish_workforce
 					}
-					OR = {
-						has_orcish_minority_trigger = yes
-						has_large_orcish_minority_trigger = yes
-						has_orcish_majority_trigger = yes
-					}
+					fast_has_pop_of_race = { race = orcish }
 				}
 				save_event_target_as = province_to_lose_orc_pop
 			}
@@ -1545,7 +1464,7 @@ country_event = { #The Price of Progress
 	}
 }
 
-country_event = { #Deepwoods orc ambush (1 year)
+country_event = { #Deepwoods orc ambush 
 	id = flavor_rosande.35
 	title = flavor_rosande.35.t
 	desc = flavor_rosande.35.d
@@ -1554,9 +1473,14 @@ country_event = { #Deepwoods orc ambush (1 year)
 	is_triggered_only = yes
 
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
+		has_country_flag = rosande_ambush 
 		has_country_flag = rosande_deepwoods_ambush
-		NOT = { has_country_flag = rosande_less_ambush }
+		has_country_flag = rosande_less_ambush 
+		NOT = { has_country_flag = rosande_resistance_stop }
 	}
 
 	option = {
@@ -1567,10 +1491,9 @@ country_event = { #Deepwoods orc ambush (1 year)
 				OR = {
 					region = west_deepwoods_region
 					region = east_deepwoods_region
-					has_orcish_majority_trigger = yes
-					has_orcish_minority_trigger = yes
-					NOT = { has_province_flag = rosande_deepwoods_immune }
 				}
+				fast_has_pop_of_race = { race = orcish }
+				NOT = { has_province_flag = rosande_deepwoods_immune }
 			}
 			spawn_rebels = {
 				type = nationalist_rebels
@@ -1579,34 +1502,17 @@ country_event = { #Deepwoods orc ambush (1 year)
 			}
 		}
 	}
-}
-
-country_event = { #Deepwoods orc ambush (2 year)
-	id = flavor_rosande.36
-	title = flavor_rosande.36.t
-	desc = flavor_rosande.36.d
-	picture = SOLDIERS_FREEZING_eventPicture
-
-	is_triggered_only = yes
-
-	trigger = {
-		tag = Z35
-		has_country_flag = rosande_deepwoods_ambush
-		has_country_flag = rosande_less_ambush
-	}
-
 	option = {
-		name = flavor_rosande.36.a
+		name = flavor_rosande.35.b
 
 		random_owned_province = {
 			limit = {
 				OR = {
 					region = west_deepwoods_region
 					region = east_deepwoods_region
-					has_orcish_majority_trigger = yes
-					has_orcish_minority_trigger = yes
-					NOT = { has_province_flag = rosande_deepwoods_immune }
 				}
+				fast_has_pop_of_race = { race = orcish }
+				NOT = { has_province_flag = rosande_deepwoods_immune }
 			}
 			spawn_rebels = {
 				type = nationalist_rebels
@@ -1614,6 +1520,8 @@ country_event = { #Deepwoods orc ambush (2 year)
 				religion = bulgu_orazan
 			}
 		}
+		custom_tooltip = rosande_hide_out_of_woods.tt
+		set_country_flag = rosande_ambush_hide
 	}
 }
 
@@ -1637,7 +1545,18 @@ country_event = { #Out of the Woods
 	is_triggered_only = yes
 
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
+		NOT = { has_country_flag = rosande_out_of_the_woods }
+		any_owned_province = {
+			OR = {
+				region = west_deepwoods_region
+				region = east_deepwoods_region
+			}
+			fast_has_pop_of_race = { race = orcish }
+		}
 		has_country_flag = rosande_out_of_the_woods
 	}
 
@@ -1649,8 +1568,7 @@ country_event = { #Out of the Woods
 				OR = {
 					region = west_deepwoods_region
 					region = east_deepwoods_region
-					has_orcish_majority_trigger = yes
-					has_orcish_minority_trigger = yes
+					fast_has_pop_of_race = { race = orcish }
 				}
 			}
 			if = {
@@ -1685,13 +1603,64 @@ country_event = { #Out of the Woods
 					area = whistlevale_area
 				}
 				NOT = {
-					has_orcish_majority_trigger = yes
-					has_orcish_minority_trigger = yes
+					fast_has_pop_of_race = { race = orcish }
 				}
 			}
 			add_orcish_minority_size_effect = yes
 			add_random_development = 1
 		}
+	}
+	option = {
+		name = flavor_rosande.37.b
+		
+		random_owned_province = {
+			limit = {
+				OR = {
+					region = west_deepwoods_region
+					region = east_deepwoods_region
+					fast_has_pop_of_race = { race = orcish }
+				}
+			}
+			if = {
+				limit = {
+					has_orcish_majority_trigger = yes
+					NOT = { has_province_flag = rosande_deepwoods_immune }
+				}
+				change_culture = wood_elf
+				remove_orcish_minority_size_effect = yes
+				for = {
+					amount = 4
+					effect = "remove_random_development = yes"
+				}
+				add_devastation = 50
+			}
+			else = {
+				remove_orcish_minority_size_effect = yes
+				for = {
+					amount = 4
+					effect = "remove_random_development = yes"
+				}
+				add_devastation = 50
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					region = west_castanor_region
+					region = south_castanor_region
+					region = inner_castanor_region
+					area = cursewood_area
+					area = whistlevale_area
+				}
+				NOT = {
+					fast_has_pop_of_race = { race = orcish }
+				}
+			}
+			add_orcish_minority_size_effect = yes
+			add_random_development = 1
+		}
+		set_country_flag = rosande_hide_out_of_woods
+		custom_tooltip = rosande_hide_out_of_woods.tt
 	}
 }
 
@@ -1702,8 +1671,13 @@ country_event = { #Low population
 	desc = flavor_rosande.39.d
 	picture = COLONIZATION_eventPicture
 
+	is_triggered_only = yes
+
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
 		NOT = { has_country_modifier = Z35_low_orc_population }
 		NOT = { 
 			num_of_owned_provinces_with = {
@@ -1714,8 +1688,7 @@ country_event = { #Low population
 					region = inner_castanor_region
 				}
 				OR = {
-					has_orcish_majority_trigger = yes
-					has_orcish_minority_trigger = yes
+					fast_has_pop_of_race = { race = orcish }
 				}
 			}
 		}
@@ -1727,6 +1700,7 @@ country_event = { #Low population
 			name = Z35_low_orc_population
 			duration = -1
 		}
+		rosande_orc_population_effect = yes
 	}
 }
 
@@ -1736,9 +1710,18 @@ country_event = { #Medium population
 	desc = flavor_rosande.40.d
 	picture = COLONIZATION_eventPicture
 
+	is_triggered_only = yes
+
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
 		NOT = { has_country_modifier = Z35_medium_orc_population }
+		fast_owns_num_pops_of_race = {
+			race = orcish
+			amount = 25
+		}
 		NOT = {
 			num_of_owned_provinces_with = {
 				value = 35
@@ -1747,10 +1730,7 @@ country_event = { #Medium population
 					region = west_castanor_region
 					region = inner_castanor_region
 				}
-				OR = {
-					has_orcish_majority_trigger = yes
-					has_orcish_minority_trigger = yes
-				}
+				fast_has_pop_of_race = { race = orcish }
 			}
 		}
 		num_of_owned_provinces_with = {
@@ -1760,10 +1740,7 @@ country_event = { #Medium population
 				region = west_castanor_region
 				region = inner_castanor_region
 			}
-			OR = {
-				has_orcish_majority_trigger = yes
-				has_orcish_minority_trigger = yes
-			}
+			fast_has_pop_of_race = { race = orcish }
 		}
 	}
 
@@ -1773,6 +1750,7 @@ country_event = { #Medium population
 			name = Z35_medium_orc_population
 			duration = -1
 		}
+		rosande_orc_population_effect = yes
 	}
 }
 
@@ -1782,9 +1760,18 @@ country_event = { #Large population
 	desc = flavor_rosande.41.d
 	picture = COLONIZATION_eventPicture
 
+	is_triggered_only = yes
+
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
 		NOT = { has_country_modifier = Z35_large_orc_population }
+		fast_owns_num_pops_of_race = {
+			race = orcish
+			amount = 35
+		}
 		NOT = {
 			num_of_owned_provinces_with = {
 				OR = {
@@ -1793,10 +1780,7 @@ country_event = { #Large population
 					region = inner_castanor_region
 				}
 				value = 50
-				OR = {
-					has_orcish_majority_trigger = yes
-					has_orcish_minority_trigger = yes
-				}
+				fast_has_pop_of_race = { race = orcish }
 			}
 		}
 		num_of_owned_provinces_with = {
@@ -1806,10 +1790,7 @@ country_event = { #Large population
 				region = west_castanor_region
 				region = inner_castanor_region
 			}
-			OR = {
-				has_orcish_majority_trigger = yes
-				has_orcish_minority_trigger = yes
-			}
+			fast_has_pop_of_race = { race = orcish }
 		}
 	}
 
@@ -1819,6 +1800,7 @@ country_event = { #Large population
 			name = Z35_large_orc_population																																																																																																											_orc_population
 			duration = -1
 		}
+		rosande_orc_population_effect = yes
 	}
 }
 
@@ -1828,9 +1810,18 @@ country_event = { #Massive population
 	desc = flavor_rosande.42.d
 	picture = COLONIZATION_eventPicture
 
+	is_triggered_only = yes
+
 	trigger = {
-		tag = Z35
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
 		NOT = { has_country_modifier = Z35_massive_orc_population }
+		fast_owns_num_pops_of_race = {
+			race = orcish
+			amount = 50
+		}
 		num_of_owned_provinces_with = {
 			value = 50
 			OR = {
@@ -1838,10 +1829,7 @@ country_event = { #Massive population
 				region = west_castanor_region
 				region = inner_castanor_region
 			}
-			OR = {
-				has_orcish_majority_trigger = yes
-				has_orcish_minority_trigger = yes
-			}
+			fast_has_pop_of_race = { race = orcish }
 		}
 	}
 
@@ -1851,5 +1839,135 @@ country_event = { #Massive population
 			name = Z35_massive_orc_population																																																																																																											_orc_population
 			duration = -1
 		}
+		rosande_orc_population_effect = yes
 	}
 }	
+
+country_event = { #Out of the Woods (Hidden)
+	id = flavor_rosande.43
+	title = flavor_rosande.43.t
+	desc = flavor_rosande.43.d
+	picture = {
+		trigger = {
+			NOT = { has_dlc = "Origins" }
+		}
+		picture = FARMING_eventPicture
+	}
+	picture = {
+		trigger = {
+			has_dlc = "Origins"
+		}
+		picture = AFRICAN_CARAVAN_eventPicture
+	}
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
+		has_country_flag = rosande_hide_out_of_woods
+		any_owned_province = {
+			OR = {
+				region = west_deepwoods_region
+				region = east_deepwoods_region
+			}
+			fast_has_pop_of_race = { race = orcish }
+		}
+		has_country_flag = rosande_out_of_the_woods
+	}
+
+	option = {
+		name = flavor_rosande.43.a 
+		
+		random_owned_province = {
+			limit = {
+				OR = {
+					region = west_deepwoods_region
+					region = east_deepwoods_region
+					fast_has_pop_of_race = { race = orcish }
+				}
+			}
+			if = {
+				limit = {
+					has_orcish_majority_trigger = yes
+					NOT = { has_province_flag = rosande_deepwoods_immune }
+				}
+				change_culture = wood_elf
+				remove_orcish_minority_size_effect = yes
+				for = {
+					amount = 4
+					effect = "remove_random_development = yes"
+				}
+				add_devastation = 50
+			}
+			else = {
+				remove_orcish_minority_size_effect = yes
+				for = {
+					amount = 4
+					effect = "remove_random_development = yes"
+				}
+				add_devastation = 50
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					region = west_castanor_region
+					region = south_castanor_region
+					region = inner_castanor_region
+					area = cursewood_area
+					area = whistlevale_area
+				}
+				NOT = {
+					fast_has_pop_of_race = { race = orcish }
+				}
+			}
+			add_orcish_minority_size_effect = yes
+			add_random_development = 1
+		}
+	}
+}
+
+country_event = { #Deepwoods orc ambush (1 year, hidden)
+	id = flavor_rosande.44
+	title = flavor_rosande.44.t
+	desc = flavor_rosande.44.d
+	picture = SOLDIERS_FREEZING_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = Z35
+			was_tag = Z35
+		}
+		has_country_flag = rosande_ambush_hide
+		has_country_flag = rosande_deepwoods_ambush
+		NOT = { has_country_flag = rosande_less_ambush }
+		NOT = { has_country_flag = rosande_resistance_stop }
+	}
+
+	option = {
+		name = flavor_rosande.44.a
+
+		random_owned_province = {
+			limit = {
+				OR = {
+					region = west_deepwoods_region
+					region = east_deepwoods_region
+					fast_has_pop_of_race = { race = orcish }
+					NOT = { has_province_flag = rosande_deepwoods_immune }
+				}
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3
+				religion = bulgu_orazan
+			}
+		}
+	}
+}

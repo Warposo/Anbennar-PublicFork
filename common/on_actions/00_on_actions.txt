@@ -5805,7 +5805,10 @@ on_yearly_pulse = {
 		yangcheng.11		#Yangcheng Debates
 		flavour_ovdal_tungr.1001 # Has some yearly checks for Ovdal TÃ»ngr.
 		gushuokguan_event.101 #Gushuokguan Condotierri Counter
-		flavor_rosande.35 #Orc ambushes 
+		flavor_rosande.39 #Orc population check
+		flavor_rosande.40 #Orc population check
+		flavor_rosande.41 #Orc population check
+		flavor_rosande.42 #Orc population check
 	}
 	if = {
 		limit = { tag = R62 }
@@ -5877,6 +5880,42 @@ on_yearly_pulse = {
 		subtract_variable = {
 			which = G56_independence_movement_variable
 			value = 1
+		}
+	}
+
+	if = {
+		limit = { tag = Z35 } 
+		
+		if = {
+		    limit = { 
+				has_country_flag = rosande_less_ambush
+				NOT = { has_country_flag = rosande_ambush_hide }
+			}
+			random = {
+				chance = 50
+				country_event = { id = flavor_rosande.35 }
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = rosande_ambush_hide
+				has_country_flag = rosande_less_ambush
+			}
+			random = {
+				chance = 50
+				country_event = { id = flavor_rosande.44 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = rosande_ambush_hide 
+			}
+			country_event = {
+				id = flavor_rosande.44
+			}
+		}
+		else = {
+			country_event = { id = flavor_rosande.35 }
 		}
 	}
 
@@ -6140,7 +6179,6 @@ on_bi_yearly_pulse = {
 		flavour_ordstun.99 #arg-ordstun roughness manager
 		rahen.99 #Suhanic Reformation event manager
 		yanszin.0 #Yanszin pulses
-		flavor_rosande.36 #Orc ambushes 
 	}
 	if = { limit = { ruler_can_revive = yes } save_ruler_stats = yes }
 	if = { limit = { capital = 4411 has_government_attribute = is_raja } country_event = { id = rahenraj.2000 days = 365 } }
@@ -7785,7 +7823,8 @@ on_thri_yearly_pulse_2 = {
 		#Mulen institution spread
 		flavour_mulen.26
 
-		flavor_rosande.34 #Rosande moving orcs
+		flavor_rosande.37 #Rosande moving orcs
+		flavor_rosande.43 #Rosande moving orcs (hidden)
 	}
 
 	random_events = {
@@ -9591,14 +9630,9 @@ on_five_year_pulse = {
 		seinathil.15 #Notestock sucks
 		
 		kheionai_flavour.1 # kimanis revolt, triggers post 1470
-<<<<<<< Updated upstream
 		flavour_vandipha.20 #Vandipha Slave Selling Handler
-=======
-
 		flavor_rosande.33 #Grape Corvée
 		flavor_rosande.37 #Dwindling Orc Population
-
->>>>>>> Stashed changes
 	}
 
 	#Shadowmoon handler
