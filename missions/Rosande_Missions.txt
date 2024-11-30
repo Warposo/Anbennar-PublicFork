@@ -474,7 +474,8 @@ rosande_2_missions = {
 			}
 		}
 
-		trigger = {
+		custom_trigger_tooltip = {
+			tooltip = rosande_magic_feast.tt
 			OR = {
 				has_country_modifier = magic_estate_magnificent_feast_3
 				has_country_modifier = magic_estate_magnificent_feast_2
@@ -1306,9 +1307,12 @@ rosande_3_missions = {
 		}
 
 		trigger = {
-			OR = {
-				has_country_modifier = magic_estate_magnificent_feast_3
-				has_country_modifier = magic_estate_magnificent_feast_2
+			custom_trigger_tooltip = {
+				tooltip = rosande_magic_feast.tt
+				OR = {
+					has_country_modifier = magic_estate_magnificent_feast_3
+					has_country_modifier = magic_estate_magnificent_feast_2
+				}
 			}
 			estate_loyalty = {
 				estate = estate_nobles
