@@ -1937,7 +1937,7 @@ e_arenaginku_adras = {
 		owner = {
 			OR = {
 				culture_group = mengi
-				culture = naleni_harpy
+				primary_culture = naleni_harpy
 			}
 		}
 		OR ={
@@ -1956,7 +1956,7 @@ e_arenaginku_adras = {
 		owner = {
 			OR = {
 				culture_group = mengi
-				culture = naleni_harpy
+				primary_culture = naleni_harpy
 			}
 		}
 		OR ={
@@ -1970,7 +1970,7 @@ e_arenaginku_adras = {
 		owner = {
 			OR = {
 				culture_group = mengi
-				culture = naleni_harpy
+				primary_culture = naleni_harpy
 			}
 		}
 		OR ={
