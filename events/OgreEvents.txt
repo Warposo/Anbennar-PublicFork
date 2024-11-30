@@ -1,11 +1,11 @@
 ###########
 # Flavor events for ogre nations
-# 100: event manager for ogre nations
-# 101-109: Ogre flavor for ogre nations by GoshGollyDarnit
+# 0: event manager for ogre nations
+# 1-8: Ogre flavor for ogre nations by GoshGollyDarnit
 #
 # Event manager:
 country_event = {
-	id = ogre_tolerance_events.100
+	id = ogre_flavour_events.0
 	title = race_setup_events.1.d
 	desc = race_setup_events.1.d
 	picture = BORDER_TENSION_eventPicture
@@ -44,7 +44,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = ogre_tolerance_events.101
+					id = ogre_flavour_events.1
 				}
 			}
 			#Building Costs Run Small
@@ -55,7 +55,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = ogre_tolerance_events.102
+					id = ogre_flavour_events.2
 				}
 			}
 			#A Fistful of Coin
@@ -134,7 +134,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = ogre_tolerance_events.103
+					id = ogre_flavour_events.3
 				}
 			}
 			#Feasting Hall Festivity Risks the Hunger
@@ -151,7 +151,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = ogre_tolerance_events.104
+					id = ogre_flavour_events.4
 				}
 			}
 			#An Ogre Mage Seeks Damestear
@@ -168,7 +168,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = ogre_tolerance_events.105
+					id = ogre_flavour_events.5
 				}
 			}
 			#Giant Ruins Discovered
@@ -179,7 +179,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = ogre_tolerance_events.106
+					id = ogre_flavour_events.6
 				}
 			}
 			#Tiny Tools for Tinier Tools
@@ -187,7 +187,7 @@ country_event = {
 				trigger = {
 				}
 				country_event = {
-					id = ogre_tolerance_events.107
+					id = ogre_flavour_events.7
 				}
 			}
 			#A Contemporary Ordering
@@ -276,7 +276,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = ogre_tolerance_events.108
+					id = ogre_flavour_events.8
 				}
 			}
 			#An Irresistible Offer
@@ -337,9 +337,9 @@ country_event = {
 
 # Building Costs Run Tall
 country_event = {
-	id = ogre_tolerance_events.101
-	title = ogre_tolerance_events.101.t
-	desc = ogre_tolerance_events.101.d
+	id = ogre_flavour_events.1
+	title = ogre_flavour_events.1.t
+	desc = ogre_flavour_events.1.d
 	picture = ONI_FORTRESS_eventPicture
 	is_triggered_only = yes
 	trigger = {
@@ -351,7 +351,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.101.a
+		name = ogre_flavour_events.1.a
 		add_adm_power = -50
 		custom_tooltip = linebreak_tt
 		complex_dynamic_effect = {
@@ -361,14 +361,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.101.b
+		name = ogre_flavour_events.1.b
 		add_country_modifier = {
 			name = ogre_tolerance_costs_running_tall
 			duration = 3650
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.101.c
+		name = ogre_flavour_events.1.c
 		highlight = yes
 		trigger = {
 			religion = devouring_path
@@ -377,7 +377,7 @@ country_event = {
 		add_corruption = -2
 	}
 	option = {
-		name = ogre_tolerance_events.101.e
+		name = ogre_flavour_events.1.e
 		highlight = yes
 		trigger = {
 			religion = sudomegi
@@ -388,7 +388,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.101.f
+		name = ogre_flavour_events.1.f
 		highlight = yes
 		trigger = {
 			OR = {
@@ -402,7 +402,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.101.g
+		name = ogre_flavour_events.1.g
 		highlight = yes
 		trigger = {
 			any_owned_province = {
@@ -411,7 +411,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.101.h
+		name = ogre_flavour_events.1.h
 		highlight = yes
 		trigger = {
 			OR = {
@@ -431,9 +431,9 @@ country_event = {
 
 # Building Costs Run Small
 country_event = {
-	id = ogre_tolerance_events.102
-	title = ogre_tolerance_events.102.t
-	desc = ogre_tolerance_events.102.d
+	id = ogre_flavour_events.2
+	title = ogre_flavour_events.2.t
+	desc = ogre_flavour_events.2.d
 	picture = ONI_FORTRESS_eventPicture
 	is_triggered_only = yes
 	trigger = {
@@ -442,7 +442,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.102.a
+		name = ogre_flavour_events.2.a
 		add_country_modifier = {
 			name = ogre_tolerance_costs_running_small
 			duration = 3650
@@ -453,7 +453,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.102.b
+		name = ogre_flavour_events.2.b
 		add_corruption = 2
 		add_adm_power = 50
 		if = {
@@ -499,7 +499,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.102.c
+		name = ogre_flavour_events.2.c
 		highlight = yes
 		trigger = {
 			religion = devouring_path
@@ -552,7 +552,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.102.e
+		name = ogre_flavour_events.2.e
 		highlight = yes
 		trigger = {
 			religion = sudomegi
@@ -564,7 +564,7 @@ country_event = {
 		add_stability = 1
 	}
 	option = {
-		name = ogre_tolerance_events.102.f
+		name = ogre_flavour_events.2.f
 		highlight = yes
 		trigger = {
 			religion = reformed_feast_of_the_gods
@@ -583,9 +583,9 @@ country_event = {
 
 # A Fistful of Coin
 country_event = {
-	id = ogre_tolerance_events.103
-	title = ogre_tolerance_events.103.t
-	desc = ogre_tolerance_events.103.d
+	id = ogre_flavour_events.3
+	title = ogre_flavour_events.3.t
+	desc = ogre_flavour_events.3.d
 	picture = PIETY_eventPicture
 	is_triggered_only = yes
 	trigger = {
@@ -662,7 +662,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.103.a
+		name = ogre_flavour_events.3.a
 		add_country_modifier = {
 			name = ogre_tolerance_fair_contracts
 			duration = 5475
@@ -678,7 +678,7 @@ country_event = {
 		decrease_monstrous_1 = yes
 	}
 	option = {
-		name = ogre_tolerance_events.103.b
+		name = ogre_flavour_events.3.b
 		add_country_modifier = {
 			name = ogre_tolerance_abused_contracts
 			duration = 5475
@@ -694,7 +694,7 @@ country_event = {
 		increase_monstrous_1 = yes
 	}
 	option = {
-		name = ogre_tolerance_events.103.c
+		name = ogre_flavour_events.3.c
 		highlight = yes
 		trigger = {
 			OR = {
@@ -723,7 +723,7 @@ country_event = {
 		increase_monstrous_3 = yes
 	}
 	option = {
-		name = ogre_tolerance_events.103.e
+		name = ogre_flavour_events.3.e
 		highlight = yes
 		trigger = {
 			OR = {
@@ -745,9 +745,9 @@ country_event = {
 
 # Feasting Hall Festivity Risks the Hunger
 country_event = {
-	id = ogre_tolerance_events.104
-	title = ogre_tolerance_events.104.t
-	desc = ogre_tolerance_events.104.d
+	id = ogre_flavour_events.4
+	title = ogre_flavour_events.4.t
+	desc = ogre_flavour_events.4.d
 	picture = FEAST_eventPicture
 	is_triggered_only = yes
 	trigger = {
@@ -776,7 +776,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.104.a
+		name = ogre_flavour_events.4.a
 		add_treasury = -50
 		add_prestige = 15
 		event_target:ogre_tolerance_target = {
@@ -795,7 +795,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.104.b
+		name = ogre_flavour_events.4.b
 		random = {
 			chance = 50
 			event_target:ogre_tolerance_target = {
@@ -816,7 +816,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.104.c
+		name = ogre_flavour_events.4.c
 		highlight = yes
 		trigger = {
 			religion = devouring_path
@@ -841,7 +841,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.104.e
+		name = ogre_flavour_events.4.e
 		highlight = yes
 		trigger = {
 			religion = sudomegi
@@ -863,7 +863,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.104.f
+		name = ogre_flavour_events.4.f
 		highlight = yes
 		trigger = {
 			OR = {
@@ -894,7 +894,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.104.g
+		name = ogre_flavour_events.4.g
 		highlight = yes
 		trigger = {
 			OR = {
@@ -924,9 +924,9 @@ country_event = {
 
 # An Ogre Mage Seeks Damestear
 country_event = {
-	id = ogre_tolerance_events.105
-	title = ogre_tolerance_events.105.t
-	desc = ogre_tolerance_events.105.d
+	id = ogre_flavour_events.5
+	title = ogre_flavour_events.5.t
+	desc = ogre_flavour_events.5.d
 	picture = ONI_HUMANS_eventPicture
 	is_triggered_only = yes
 	trigger = {
@@ -941,7 +941,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.105.a
+		name = ogre_flavour_events.5.a
 		add_years_of_income = -0.5
 		add_country_modifier = {
 			name = ogre_tolerance_mage_feed
@@ -984,10 +984,10 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.105.b
+		name = ogre_flavour_events.5.b
 	}
 	option = {
-		name = ogre_tolerance_events.105.c
+		name = ogre_flavour_events.5.c
 		highlight = yes
 		trigger = {
 			religion = devouring_path
@@ -1010,7 +1010,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.105.e
+		name = ogre_flavour_events.5.e
 		highlight = yes
 		trigger = {
 			religion = sudomegi
@@ -1019,7 +1019,7 @@ country_event = {
 		add_dip_power = 100
 	}
 	option = {
-		name = ogre_tolerance_events.105.f
+		name = ogre_flavour_events.5.f
 		highlight = yes
 		trigger = {
 			OR = {
@@ -1045,7 +1045,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.105.g
+		name = ogre_flavour_events.5.g
 		highlight = yes
 		trigger = {
 			OR = {
@@ -1080,9 +1080,9 @@ country_event = {
 
 # Giant Ruins Discovered
 country_event = {
-	id = ogre_tolerance_events.106
-	title = ogre_tolerance_events.106.t
-	desc = ogre_tolerance_events.106.d
+	id = ogre_flavour_events.6
+	title = ogre_flavour_events.6.t
+	desc = ogre_flavour_events.6.d
 	picture = GENIE_RUINS_eventPicture
 	is_triggered_only = yes
 	trigger = {
@@ -1102,7 +1102,7 @@ country_event = {
 		ogre_tolerance_giants_happened = yes
 	}
 	option = {
-		name = ogre_tolerance_events.106.a
+		name = ogre_flavour_events.6.a
 		add_treasury = -150
 		add_prestige = 50
 		add_legitimacy = 20
@@ -1114,11 +1114,11 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.106.b
+		name = ogre_flavour_events.6.b
 		add_treasury = 300
 	}
 	option = {
-		name = ogre_tolerance_events.106.c
+		name = ogre_flavour_events.6.c
 		highlight = yes
 		trigger = {
 			government_rank = 3
@@ -1141,15 +1141,15 @@ country_event = {
 
 # Tiny Tools for Tinier Tools
 country_event = {
-	id = ogre_tolerance_events.107
-	title = ogre_tolerance_events.107.t
-	desc = ogre_tolerance_events.107.d
+	id = ogre_flavour_events.7
+	title = ogre_flavour_events.7.t
+	desc = ogre_flavour_events.7.d
 	picture = ADVISOR_eventPicture
 	is_triggered_only = yes
 	trigger = {
 	}
 	option = {
-		name = ogre_tolerance_events.107.a
+		name = ogre_flavour_events.7.a
 		if = {
 			limit = {
 				NOT = {
@@ -1200,14 +1200,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.107.b
+		name = ogre_flavour_events.7.b
 		add_country_modifier = {
 			name = ogre_tolerance_non_ogre_tools
 			duration = 7300
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.107.c
+		name = ogre_flavour_events.7.c
 		highlight = yes
 		trigger = {
 			has_estate = estate_burghers
@@ -1260,7 +1260,7 @@ country_event = {
 		add_mercantilism = 2
 	}
 	option = {
-		name = ogre_tolerance_events.107.e
+		name = ogre_flavour_events.7.e
 		highlight = yes
 		trigger = {
 			any_owned_province = {
@@ -1281,7 +1281,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.107.f
+		name = ogre_flavour_events.7.f
 		highlight = yes
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
@@ -1309,9 +1309,9 @@ country_event = {
 
 # A Contemporary Ordering
 country_event = {
-	id = ogre_tolerance_events.108
-	title = ogre_tolerance_events.108.t
-	desc = ogre_tolerance_events.108.d
+	id = ogre_flavour_events.8
+	title = ogre_flavour_events.8.t
+	desc = ogre_flavour_events.8.d
 	picture = DIVERSE_COURT_eventPicture
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1398,7 +1398,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ogre_tolerance_events.108.a
+		name = ogre_flavour_events.8.a
 		add_stability = 2
 		add_adm_power = 100
 		add_dip_power = 100
@@ -1411,7 +1411,7 @@ country_event = {
 		increase_monstrous_3 = yes
 	}
 	option = {
-		name = ogre_tolerance_events.108.b
+		name = ogre_flavour_events.8.b
 		add_stability = 2
 		add_adm_power = 100
 		add_dip_power = 100
@@ -1424,7 +1424,7 @@ country_event = {
 		decrease_monstrous_3 = yes
 	}
 	option = {
-		name = ogre_tolerance_events.108.c
+		name = ogre_flavour_events.8.c
 		highlight = yes
 		trigger = {
 			religion = devouring_path
@@ -1441,7 +1441,7 @@ country_event = {
 		increase_monstrous_3 = yes
 	}
 	option = {
-		name = ogre_tolerance_events.108.e
+		name = ogre_flavour_events.8.e
 		highlight = yes
 		trigger = {
 			religion = sudomegi
@@ -1458,7 +1458,7 @@ country_event = {
 		decrease_monstrous_3 = yes
 	}
 	option = {
-		name = ogre_tolerance_events.108.f
+		name = ogre_flavour_events.8.f
 		highlight = yes
 		trigger = {
 			OR = {
