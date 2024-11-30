@@ -866,29 +866,25 @@ cb_liberation = {
 		}
  	}
 	prerequisites = {
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						tag = J33
-						has_country_flag = J33_liberation_GP
-						FROM = {
-							OR = {
-								is_great_power = yes
-								government_rank = 3
-							}
-						}	
+		OR = {
+			AND = {
+				tag = J33
+				has_country_flag = J33_liberation_GP
+				FROM = {
+					OR = {
+						is_great_power = yes
+						government_rank = 3
 					}
-					AND = {
-						tag = S53
-						has_country_flag = S53_liberation_non_GP_flag
-						FROM = {
-							any_owned_province = {
-								region = ishyamtumu_region
-							}
-							is_subject = no
-						}
+				}	
+			}
+			AND = {
+				tag = S53
+				has_country_flag = S53_liberation_non_GP_flag
+				FROM = {
+					any_owned_province = {
+						region = ishyamtumu_region
 					}
+					is_subject = no
 				}
 			}
 		}

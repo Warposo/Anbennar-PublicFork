@@ -13177,13 +13177,10 @@ naleni_thalassocracy_reform = {
 			tag = L55
 			was_tag = L55
 		}
-		is_revolutionary = no
 	}
 	lock_level_when_selected = yes
 	legacy_equivalent = ottoman_government_legacy
 	
-
-	valid_for_nation_designer = no #change to no later
 	modifiers = {
 		block_introduce_heir = yes
 		naval_forcelimit_modifier = 0.5

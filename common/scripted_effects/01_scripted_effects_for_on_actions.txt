@@ -10726,9 +10726,6 @@ S53_won_battle_against_trolls = {
 	if = {
 		limit = { 
 			has_country_flag = S53_battles_won_against_trolls
-			S70 = {
-				is_at_war = yes
-			}
 		}
 		change_variable = {
 			trollBattlesWon = 1
