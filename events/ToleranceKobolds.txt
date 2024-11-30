@@ -507,19 +507,11 @@ country_event = {
 			10 = {
 				trigger = {
 					any_owned_province = {
-						OR = {
-							AND = {
-								continent = asia
-								NOT = { superregion = forbidden_lands_superregion }
-							}
-							AND = {
-								superregion = east_sarhal_superregion
-								NOT = { region = yezel_mora_region }
-							}
-							continent = europe
-							continent = north_america
-							continent = south_america
-						}	
+						fast_has_pop_of_race = { race = kobold }
+						NOT = {
+							continent = serpentspine
+							continent = oceania
+						}
 						OR = {
 							trade_goods = iron
 							trade_goods = copper
@@ -527,10 +519,6 @@ country_event = {
 							trade_goods = coal
 							trade_goods = mithril
 							trade_goods = damestear
-						}
-						OR = {
-							has_kobold_minority_trigger = yes 
-							has_kobold_majority_trigger = yes
 						}
 							NOT = { has_province_modifier = kobold_mining_trivu }
 						}
@@ -547,28 +535,14 @@ country_event = {
 			10 = {
 				trigger = { 
 					any_owned_province = {
-						OR = {
-							AND = {
-								continent = asia
-								NOT = { superregion = forbidden_lands_superregion }
-							}
-							AND = {
-								superregion = east_sarhal_superregion
-								NOT = { region = yezel_mora_region }
-							}
-							continent = europe
-							continent = north_america
-							continent = south_america
+						fast_has_pop_of_race = { race = kobold }
+						NOT = {
+							continent = serpentspine
+							continent = oceania
 						}	
 						OR = {
 							has_kobold_majority_trigger = yes
 							has_kobold_large_minority_trigger = yes
-						}
-					}
-					any_owned_province = {
-						AND = {
-							has_kobold_majority_trigger = no
-							has_kobold_large_minority_trigger = no
 						}
 					}
 				}
@@ -580,18 +554,9 @@ country_event = {
 			10 = {
 				trigger = {
 					any_owned_province = {
-						OR = {
-							AND = {
-								continent = asia
-								NOT = { superregion = forbidden_lands_superregion }
-							}
-							AND = {
-								superregion = east_sarhal_superregion
-								NOT = { region = yezel_mora_region }
-							}
-							continent = europe
-							continent = north_america
-							continent = south_america
+						NOT = {
+							continent = serpentspine
+							continent = oceania
 						}
 						has_kobold_majority_trigger = yes
 					}
@@ -604,18 +569,9 @@ country_event = {
 			10 = {
 				trigger = {
 					any_owned_province = {
-						OR = {
-							AND = {
-								continent = asia
-								NOT = { superregion = forbidden_lands_superregion }
-							}
-							AND = {
-								superregion = east_sarhal_superregion
-								NOT = { region = yezel_mora_region }
-							}
-							continent = europe
-							continent = north_america
-							continent = south_america
+						NOT = {
+							continent = serpentspine
+							continent = oceania
 						}
 					}
 					any_known_country = {
@@ -635,22 +591,10 @@ country_event = {
 			10 = {
 				trigger = {
 					any_owned_province = {
-						OR = {
-							AND = {
-								continent = asia
-								NOT = { superregion = forbidden_lands_superregion }
-							}
-							AND = {
-								superregion = east_sarhal_superregion
-								NOT = { region = yezel_mora_region }
-							}
-							continent = europe
-							continent = north_america
-							continent = south_america
-						}
-						OR = {
-							has_kobold_majority_trigger = yes
-							has_kobold_minority_trigger = yes
+						fast_has_pop_of_race = { race = kobold }
+						NOT = {
+							continent = serpentspine
+							continent = oceania
 						}
 						OR = {
 							has_terrain = forest
@@ -2669,15 +2613,9 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = { 
-						AND = {
-							continent = asia
-							NOT = { superregion = forbidden_lands_superregion }
-						}
-						AND = {
-							superregion = east_sarhal_superregion
-							NOT = { region = yezel_mora_region }
-						}
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
 					has_kobold_minority_trigger = yes
 					NOT = { has_province_modifier = industrious_kobolds }
@@ -3372,18 +3310,10 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						AND = {
-							continent = asia
-							NOT = { superregion = forbidden_lands_superregion }
-						}
-						AND = {
-							superregion = east_sarhal_superregion
-							NOT = { region = yezel_mora_region }
-						}
-						continent = europe
-						continent = north_america
-						continent = south_america
+					fast_has_pop_of_race = { race = kobold }
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
 					OR = {
 						trade_goods = iron
@@ -3398,90 +3328,66 @@ country_event = {
 					has_kobold_majority_trigger = yes
 					}
 					NOT = { has_province_modifier = kobold_mining_trivu }
+				}
+				save_event_target_as = kobold_mining_trivu_province
 			}
-			save_event_target_as = kobold_mining_trivu_province
-		}
-		random_owned_province = {
-			limit = {
-				OR = {
-					AND = {
-						continent = asia
-						NOT = { superregion = forbidden_lands_superregion }
+			random_owned_province = {
+				limit = {
+					fast_has_pop_of_race = { race = kobold }
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
-					AND = {
-						superregion = east_sarhal_superregion
-						NOT = { region = yezel_mora_region }
+					OR = {
+						trade_goods = iron
+						trade_goods = copper
+						trade_goods = gold
+						trade_goods = coal
+						trade_goods = mithril
+						trade_goods = damestear
 					}
-					continent = europe
-					continent = north_america
-					continent = south_america
+					has_kobold_majority_trigger = no
 				}
-				OR = {
-					trade_goods = iron
-					trade_goods = copper
-					trade_goods = gold
-					trade_goods = coal
-					trade_goods = mithril
-					trade_goods = damestear
-				}
-				has_kobold_majority_trigger = no
+				save_event_target_as = destination_province_1
 			}
-			save_event_target_as = destination_province_1
-		}
-		random_owned_province = {
-			limit = {
-				OR = {
-					AND = {
-						continent = asia
-						NOT = { superregion = forbidden_lands_superregion }
+			random_owned_province = {
+				limit = {
+					fast_has_pop_of_race = {race = kobold}
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
-					AND = {
-						superregion = east_sarhal_superregion
-						NOT = { region = yezel_mora_region }
+					OR = {
+						trade_goods = iron
+						trade_goods = copper
+						trade_goods = gold
+						trade_goods = coal
+						trade_goods = mithril
+						trade_goods = damestear
 					}
-					continent = europe
-					continent = north_america
-					continent = south_america
+					has_kobold_majority_trigger = no
 				}
-				OR = {
-					trade_goods = iron
-					trade_goods = copper
-					trade_goods = gold
-					trade_goods = coal
-					trade_goods = mithril
-					trade_goods = damestear
-				}
-				has_kobold_majority_trigger = no
+				save_event_target_as = destination_province_2
 			}
-			save_event_target_as = destination_province_2
-		}
-		random_owned_province = {
-			limit = {
-				OR = {
-					AND = {
-						continent = asia
-						NOT = { superregion = forbidden_lands_superregion }
+			random_owned_province = {
+				limit = {
+					fast_has_pop_of_race = { race = kobold }
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
-					AND = {
-						superregion = east_sarhal_superregion
-						NOT = { region = yezel_mora_region }
+					OR = {
+						trade_goods = iron
+						trade_goods = copper
+						trade_goods = gold
+						trade_goods = coal
+						trade_goods = mithril
+						trade_goods = damestear
 					}
-					continent = europe
-					continent = north_america
-					continent = south_america
+					has_kobold_majority_trigger = no
 				}
-				OR = {
-					trade_goods = iron
-					trade_goods = copper
-					trade_goods = gold
-					trade_goods = coal
-					trade_goods = mithril
-					trade_goods = damestear
-				}
-				has_kobold_majority_trigger = no
+				save_event_target_as = destination_province_3
 			}
-			save_event_target_as = destination_province_3
-		}
 		}
 	}
 
@@ -3512,7 +3418,7 @@ country_event = {
 
 	#Expand their practices to other mines
 	option = {
-		limit = {
+		trigger = {
 			has_saved_event_target = destination_province_1
 		}
 		name = kobold_tolerance_events.20.b
@@ -3584,18 +3490,10 @@ country_event = {
 		hidden_effect = { 
 			random_owned_province = { 
 				limit = {
-					OR = {
-						AND = {
-							continent = asia
-							NOT = { superregion = forbidden_lands_superregion }
-						}
-						AND = {
-							superregion = east_sarhal_superregion
-							NOT = { region = yezel_mora_region }
-						}
-						continent = europe
-						continent = north_america
-						continent = south_america
+					fast_has_pop_of_race = { race = kobold }
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
 					OR = { 
 						has_kobold_majority_trigger = yes
@@ -3606,23 +3504,12 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					OR = {
-						AND = {
-							continent = asia
-							NOT = { superregion = forbidden_lands_superregion }
-						}
-						AND = {
-							superregion = east_sarhal_superregion
-							NOT = { region = yezel_mora_region }
-						}
-						continent = europe
-						continent = north_america
-						continent = south_america
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
-					OR = { 
-						has_kobold_majority_trigger = no
-						has_kobold_large_minority_trigger = no
-						has_kobold_minority_trigger = no
+					NOT = { 
+						fast_has_pop_of_race = { race = kobold }
 					}
 				}
 				save_event_target_as = destination_province
@@ -3731,20 +3618,10 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						AND = {
-							continent = asia
-							NOT = { superregion = forbidden_lands_superregion }
-						}
-						AND = {
-							superregion = east_sarhal_superregion
-							NOT = { region = yezel_mora_region }
-						}
-						OR = {
-							continent = europe
-							continent = north_america
-							continent = south_america
-						}
+					fast_has_pop_of_race = { race = kobold }
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
 					has_kobold_majority_trigger = yes
 				}
@@ -3887,7 +3764,6 @@ country_event = {
 			}
 		}
 	}
-
 }
 
 #Troubadour Trivu
@@ -3911,18 +3787,9 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						AND = {
-							continent = asia
-							NOT = { superregion = forbidden_lands_superregion }
-						}
-						AND = {
-							superregion = east_sarhal_superregion
-							NOT = { region = yezel_mora_region }
-						}
-						continent = europe
-						continent = north_america
-						continent = south_america
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
 					has_kobold_majority_trigger = no
 					NOT = { has_province_modifier = troubadour_trivu }
@@ -4050,24 +3917,10 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						AND = {
-							continent = asia
-							NOT = { superregion = forbidden_lands_superregion }
-						}
-						AND = {
-							superregion = east_sarhal_superregion
-							NOT = { region = yezel_mora_region }
-						}
-						OR = {
-							continent = europe
-							continent = north_america
-							continent = south_america
-						}
-					}
-					OR = {
-						has_kobold_majority_trigger = yes
-						has_kobold_minority_trigger = yes
+					fast_has_pop_of_race = { race = kobold }
+					NOT = {
+						continent = serpentspine
+						continent = oceania
 					}
 					OR = {
 						has_terrain = forest
