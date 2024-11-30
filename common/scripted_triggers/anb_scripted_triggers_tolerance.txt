@@ -6,3 +6,86 @@ ogre_tolerance_giants_region_available = {
 		}
 	}
 }
+
+ogre_tolerance_has_any_region_available = {
+	OR = {
+		ogre_tolerance_giants_region_available = {
+			region = northern_pass
+		}
+		ogre_tolerance_giants_region_available = {
+			region = gerudian_frontier
+		}
+		ogre_tolerance_giants_region_available = {
+			region = dalr
+		}
+		ogre_tolerance_giants_region_available = {
+			region = olavlund
+		}
+		ogre_tolerance_giants_region_available = {
+			region = alenic_reach
+		}
+		ogre_tolerance_giants_region_available = {
+			region = yyl_moista
+		}
+		ogre_tolerance_giants_region_available = {
+			region = ogre_valley
+		}
+		ogre_tolerance_giants_region_available = {
+			region = west_forbidden_plains
+		}
+		ogre_tolerance_giants_region_available = {
+			region = serpent_gift
+		}
+		ogre_tolerance_giants_region_available = {
+			region = east_forbidden_plains
+		}
+		ogre_tolerance_giants_region_available = {
+			region = south_yarikhoi
+		}
+		ogre_tolerance_giants_region_available = {
+			region = north_yarikhoi
+		}
+		ogre_tolerance_giants_region_available = {
+			region = nuzurbokh
+		}
+		ogre_tolerance_giants_region_available = {
+			region = moduk
+		}
+		ogre_tolerance_giants_region_available = {
+			region = khaashalg
+		}
+		ogre_tolerance_giants_region_available = {
+			region = nomsyulhan
+		}
+		ogre_tolerance_giants_region_available = {
+			region = shuvuushudi
+		}
+		ogre_tolerance_giants_region_available = {
+			region = odheongu
+		}
+		ogre_tolerance_giants_region_available = {
+			region = north_yanshen
+		}
+		ogre_tolerance_giants_region_available = {
+			region = lower_yanshen
+		}
+		ogre_tolerance_giants_region_available = {
+			region = upper_yanshen
+		}
+		ogre_tolerance_giants_region_available = {
+			region = demon_hills
+		}
+		ogre_tolerance_giants_region_available = {
+			region = shamakhad
+		}
+		ogre_tolerance_giants_region_available = {
+			region = dhujat
+		}
+		ogre_tolerance_giants_region_available = {
+			region = rahen_coast
+		}
+		ogre_tolerance_giants_region_available = {
+			region = rakhadesh
+		}
+	}
+}
