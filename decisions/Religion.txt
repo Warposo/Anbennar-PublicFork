@@ -1846,7 +1846,7 @@ country_decisions = {
 
 	found_the_nam_labeda = {
 		potential = {
-			NOT = { has_ruler_modifier = HP_nam_labeda }
+			NOT = { has_country_modifier = HP_nam_labeda }
 			religion_group = raheni
 		}
 		allow = {
