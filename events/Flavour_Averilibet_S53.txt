@@ -277,7 +277,6 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_reform = ngwenamasonamingo_reform
 	}
 	
 	immediate = {

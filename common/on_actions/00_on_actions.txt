@@ -10140,6 +10140,20 @@ on_five_year_pulse_2 = {
 }
 
 on_five_year_pulse_3 = {
+	#averilibet husbands
+	if = {
+		limit = { has_reform = ngwenamasonamingo_reform }
+		if = {
+			limit = { NOT = { has_country_flag = averilibet_skip_a_pulse } }
+			set_country_flag = averilibet_skip_a_pulse
+		}
+		else = {
+			country_event ={
+				id = flavor_averilibet.3
+			}
+			clr_country_flag = averilibet_skip_a_pulse
+		}
+	}
 	country_event = { id = merfolk_events.9 }
 	if = {
 		limit = {

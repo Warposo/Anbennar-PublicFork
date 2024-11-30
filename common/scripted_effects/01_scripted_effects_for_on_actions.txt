@@ -10703,7 +10703,6 @@ L08_won_battle_count = {
 	if = {
 		limit = { 
 			has_country_flag = kulugiash_battles
-			
 		}
 		change_variable = {
 			kulugiashBattlesWon = 1
@@ -10723,12 +10722,7 @@ L08_won_war_count = {
 }
  
 S53_won_battle_against_trolls = {
-	if = {
-		limit = { 
-			has_country_flag = S53_battles_won_against_trolls
-		}
-		change_variable = {
-			trollBattlesWon = 1
-		}
-	}
+	change_variable = {
+		trollBattlesWon = 1
+	}	
 }

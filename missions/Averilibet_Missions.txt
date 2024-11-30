@@ -9,12 +9,11 @@ column_1 = {
 		icon = mission_invade_mali
 		position = 1
 		provinces_to_highlight = {
-			6666 = {
-				NOT = {
-					AND = {
-						base_manpower = 5
-						is_capital = yes 
-					}
+			province_id = 6666
+			NOT = {
+				AND = {
+					base_manpower = 5
+					is_capital = yes 
 				}
 			}
 		} 
@@ -46,10 +45,8 @@ column_1 = {
 			a_final_raid_S53
 		}
 		provinces_to_highlight = {
-			tilcakan_area = {
-				NOT = { owned_by = ROOT }
-				type = all
-			}
+			area = tilcakan_area 
+			NOT = { owned_by = ROOT }
 		} 
 
 		trigger = {
@@ -96,18 +93,16 @@ column_1 = {
 			cooking_the_books_S53
 		}
 		provinces_to_highlight = { 
-			saposon_area = {
-				type = all
-				NOT = {
-					AND = {
-						owned_by = ROOT
-						OR = {
-							has_province_modifier = autonomy_increased
-							local_autonomy = 90
-						}
-					}	
-				}
-			}
+			area = saposon_area 
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_province_modifier = autonomy_increased
+						local_autonomy = 90
+					}
+				}	
+			}	
 		} 
 
 		trigger = {
@@ -154,19 +149,11 @@ column_1 = {
 		}
 		provinces_to_highlight = { 
 			OR = {
-				kidfan_area = {
-					NOT = { owned_by = ROOT }
-					type = all
-				}
-				kadamuu_area = {
-					NOT = { owned_by = ROOT }
-					type = all
-				}
-				kirksanlashan_area = {
-					NOT = { owned_by = ROOT }
-					type = all
-				}
-			} 
+				area = kidfan_area 
+				area = kadamuu_area 
+				area = kirksanlashan_area 
+			}
+			NOT = { owned_by = ROOT } 
 		} 
 
 		trigger = {
@@ -183,19 +170,18 @@ column_1 = {
 				type = all
 			}
 			if = {
-				limit = { NOT = {has_dlc = "Leviathan"}}
-				5600 = {
-					is_core = ROOT
-					has_building = barracks 
-					development = 15 
-				} 
-			}
-			if = {
 				limit = {has_dlc = "Leviathan"}
 				5600 = {
 					is_core = ROOT
 					has_building = barracks 
 					num_of_times_expanded_infrastructure = 1
+				} 
+			}
+			else = {
+				5600 = {
+					is_core = ROOT
+					has_building = barracks 
+					development = 15 
 				} 
 			}
 		} 
@@ -823,7 +809,12 @@ column_3 = {
 		icon = mission_conquer_kannauj
 		position = 2
 		required_missions = { a_special_guest_S53 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				province_id = 5600
+				province_id = 1339
+			}
+		} 
 
 		trigger = {  
 			trading_policy_in_node = {
@@ -844,12 +835,12 @@ column_3 = {
 						}
 						is_subject = yes
 						has_opinion_modifier = {
-							who = from
+							who = ROOT
 							modifier = sent_gift
 						}
 						overlord = {
 							NOT = {
-								army_size = from
+								army_size = ROOT 
 							}
 						}
 					}
@@ -1057,27 +1048,21 @@ column_3 = {
 			an_injustice_S53
 		}
 		provinces_to_highlight = {  
-			south_denbari = {
-				NOT = {
-					is_core = ROOT
-				}
-				type = all
-			}
+			province_group = south_denbari
+			is_core = ROOT
 		} 
 
 		trigger = { 
 			calc_true_if = {
 				amount = 3
-				NOT = {
-					any_subject_country = {
-						OR = {
-							culture = tanizu
-							culture = cyazizeta_lizardfolk
-						}
-						NOT = {
-							development_in_provinces = {
-								value = 50
-							}
+				any_subject_country = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					NOT = {
+						development_in_provinces = {
+							value = 50
 						}
 					}
 				}
@@ -1109,7 +1094,7 @@ column_3 = {
 				every_core_province = {
 					limit = {
 						province_group = south_denbari
-						is_core = ROOT
+						owned_by = ROOT
 					}
 					random_list = {
 						25 = { add_base_manpower = 1 }
@@ -1336,7 +1321,7 @@ column_4 = {
 						}
 					}
 				}
-				L23 = {
+				S23 = {
 					OR = {
 						exists = no
 						AND = {
@@ -1366,39 +1351,33 @@ column_4 = {
 		required_missions = { like_a_mother_S53 } 
 		provinces_to_highlight = {
 			OR = {
-				werikafan_area = {
-					NOT = { is_core = ROOT }
-					type = all
+				area = werikafan_area 
+				area = fetengaben_area 
+				5538 = {
+					NOT = {
+						AND = {
+							NOT = { unrest = 1 }
+							num_of_units_in_province = {
+								type = infantry
+								amount = 10 
+								who = ROOT 
+							}
+						}
+					}
 				}
-				fetengaben_area = {
-					NOT = { is_core = ROOT }
-					type = all
+				6638 = {
+					NOT = {
+						AND = {
+							NOT = { unrest = 1 }
+							num_of_units_in_province = {
+								type = infantry
+								amount = 10 
+								who = ROOT 
+							}
+						}
+					}
 				}
 			}  
-			5538 = {
-				NOT = {
-					AND = {
-						NOT = { unrest = 1 }
-						num_of_units_in_province = {
-							type = infantry
-							amount = 10 
-							who = ROOT 
-						}
-					}
-				}
-			}
-			6638 = {
-				NOT = {
-					AND = {
-						NOT = { unrest = 1 }
-						num_of_units_in_province = {
-							type = infantry
-							amount = 10 
-							who = ROOT 
-						}
-					}
-				}
-			}
 		} 
 
 		trigger = {
@@ -1532,11 +1511,9 @@ column_4 = {
 			middling_migration_S53
 			a_procession_of_beasts_S53
 		}
-		provinces_to_highlight = {  
-			ishyamtumu_region = {
-				NOT = { owned_by_subject_of = ROOT }
-				type = all
-			}
+		provinces_to_highlight = {
+			region = ishyamtumu_region  
+			NOT = { owned_by_subject_of = ROOT }	
 		} 
 
 		trigger = { 
@@ -1610,20 +1587,18 @@ column_4 = {
 			sheding_pains_S53
 		}
 		provinces_to_highlight = {  
-			south_denbari = {
-				NOT = {
-					AND = {
-						NOT = { nationalism = 1 }
-						has_tax_building_trigger = yes
-						num_of_units_in_province = {
-							who = ROOT
-							amount = 2
-						}
-						NOT = { devastation = 1 } 
+			province_group = south_denbari 
+			NOT = {
+				AND = {
+					NOT = { nationalism = 1 }
+					has_tax_building_trigger = yes
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 2
 					}
+						NOT = { devastation = 1 } 
 				}
-				type = all 
-			}
+			}	
 		} 
 
 		trigger = {  
@@ -1916,23 +1891,27 @@ column_5 = {
 		required_missions = { like_a_matriarch_S53 } 
 		provinces_to_highlight = {  
 			OR = {
-				yetmesira_area = {
-					NOT = { is_core = ROOT }
-					type = all 
-				}
-				6606 = {
+				AND  ={
+					area = yetmesira_area
 					NOT = { is_core = ROOT }
 				}
-				province_id = 4955
-				6637 = {
-					NOT = {
-						has_production_building_trigger = yes
+				AND = {
+					province_id = 6606 
+					NOT = { is_core = ROOT }
+				}
+				AND = {
+					province_id = 4955
+					owner = {
+						NOT = { has_90_opinion_improved_relation = { target = ROOT } }
 					}
 				}
-				5536 = {
-					NOT = {
-						has_production_building_trigger = yes
-					}
+				AND = {
+					province_id = 6637
+					NOT = { has_production_building_trigger = yes }
+				}
+				AND = {
+					province_id = 5536
+					NOT = { has_production_building_trigger = yes }
 				}
 			}
 		} 
