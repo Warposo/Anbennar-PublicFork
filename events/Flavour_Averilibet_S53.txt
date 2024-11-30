@@ -277,6 +277,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		has_reform  = ngwenamasonamingo_reform
 	}
 	
 	immediate = {
@@ -900,10 +901,7 @@ country_event = {
 		clear_saved_name = tanizu_name
 		clear_saved_name = harimari_name
 		clear_saved_name = gnollish_name
-		country_event = {
-			id = flavor_averilibet.22
-			days = 3650
-		}
+	
 	}
 }
 
@@ -1446,26 +1444,3 @@ country_event = {
 		}
 	}
 }
-
-#hidden non crash event 
-country_event = {
-	id = flavor_averilibet.22
-	title = flavor_averilibet.22.t
-	desc = flavor_averilibet.22.desc
-	picture = SWORD_OF_OSMAN_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-
-	immediate = {
-		country_event = {
-			id = flavor_averilibet.3
-		}
-	}
-
-	option = {
-		ai_chance = {
-			factor = 1000
-		}
-	}
-}
-

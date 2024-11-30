@@ -205,10 +205,12 @@ column_1 = {
 		required_missions = { watery_detour_S53 } 
 		provinces_to_highlight = {  
 			OR = {
-				6666 = {
+				AND = {
+					province_id = 6666
 					NOT = { development = 25  }
 				}
-				5600 = {
+				AND = {
+					province_id = 5600
 					NOT = { num_of_buildings_in_province = 4 }
 				}
 			}
@@ -280,7 +282,8 @@ column_2 = {
 		position = 1
 		provinces_to_highlight = {
 			OR = {
-				6706 = { 
+				AND = {
+					province_id = 6706 
 					NOT = {
 						AND = {
 							owned_by = ROOT
@@ -292,7 +295,8 @@ column_2 = {
 						}
 					}
 				}
-				5687 = { 
+				AND = {
+					province_id = 5687
 					NOT = {
 						AND = {
 							owned_by = ROOT
@@ -544,7 +548,8 @@ column_2 = {
 		required_missions = { up_the_ante_S53 } 
 		provinces_to_highlight = {
 			OR = {
-				5594 = {
+				AND = {
+					province_id = 5594
 					NOT = {
 						AND = { 
 							development = 15
@@ -552,7 +557,8 @@ column_2 = {
 						}
 					}
 				}
-				6606 = {
+				AND = {
+					province_id = 6606
 					NOT = {
 						AND = { 
 							development = 15
@@ -580,10 +586,7 @@ column_2 = {
 				}
 				treasury = 500
 			}
-			if = {
-				limit = {
-					has_dlc = "Leviathan"
-				}
+			else = {
 				5594 = {
 					num_of_times_expanded_infrastructure = 1
 					is_core = ROOT
@@ -650,10 +653,14 @@ column_2 = {
 		required_missions = { jumping_beasts_S53 } 
 		provinces_to_highlight = {
 			OR = {
-				6606 = {
+				AND = {
+					province_id = 6606
 					NOT = {
 						AND = {
-							num_of_times_expanded_infrastructure = 2
+							OR = {
+								development = 30
+								num_of_times_expanded_infrastructure = 2
+							}
 							has_forcelimit_building_trigger = yes
 							has_fort_building_trigger = yes
 							has_manpower_building_trigger = yes
@@ -661,10 +668,14 @@ column_2 = {
 						}
 					}
 				}
-				5600 = {
+				AND = {
+					province_id = 5600
 					NOT = {
 						AND = {
-							num_of_times_expanded_infrastructure = 2
+							OR = {
+								development = 30
+								num_of_times_expanded_infrastructure = 2
+							}
 							has_forcelimit_building_trigger = yes
 							has_fort_building_trigger = yes
 							has_manpower_building_trigger = yes
@@ -672,10 +683,14 @@ column_2 = {
 						}
 					}
 				}
-				5594 = {
+				AND = {
+					province_id = 5594
 					NOT = {
 						AND = {
-							num_of_times_expanded_infrastructure = 2
+							OR = {
+								development = 30
+								num_of_times_expanded_infrastructure = 2
+							}
 							has_forcelimit_building_trigger = yes
 							has_fort_building_trigger = yes
 							has_manpower_building_trigger = yes
@@ -1202,15 +1217,14 @@ column_4 = {
 			help_from_friends_S53
 		}
 		provinces_to_highlight = {  
-			6118 = {
-				NOT = {
-					AND = {
-						has_tax_building_trigger = yes
-						NOT = {
-							unrest = 0
-						}
-						is_core = root
+			province_id = 6118
+			NOT = {
+				AND = {
+					has_tax_building_trigger = yes
+					NOT = {
+						unrest = 0
 					}
+					is_core = root
 				}
 			}
 		} 
@@ -1352,8 +1366,9 @@ column_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = werikafan_area 
-				area = fetengaben_area 
-				5538 = {
+				area = fetengaben_area
+				AND = {
+					province_id = 5538
 					NOT = {
 						AND = {
 							NOT = { unrest = 1 }
@@ -1365,7 +1380,8 @@ column_4 = {
 						}
 					}
 				}
-				6638 = {
+				AND = {
+					province_id = 6638
 					NOT = {
 						AND = {
 							NOT = { unrest = 1 }
@@ -1376,7 +1392,7 @@ column_4 = {
 							}
 						}
 					}
-				}
+				}  
 			}  
 		} 
 
@@ -1442,7 +1458,8 @@ column_4 = {
 			like_a_matriarch_S53
 		}
 		provinces_to_highlight = {  
-			6118 = {
+			AND = {
+				province_id = 6118
 				NOT = {
 					OR = {
 						has_great_project = {
