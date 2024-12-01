@@ -3197,15 +3197,15 @@ country_event = { #Technocracy Election
 				ai = no 
 				OR = {
 					AND = {
-						has_country_flag = brillite_ruler
+						has_ruler_flag = brillite_ruler
 						faction_in_power = tec_brilliance
 					}
 					AND = {
-						has_country_flag = technomancy_ruler
+						has_ruler_flag = technomancy_ruler
 						faction_in_power = tec_technomancy
 					}
 					AND = {
-						has_country_flag = mechanists_ruler
+						has_ruler_flag = mechanists_ruler
 						faction_in_power = tec_mechanists
 					}
 				}
