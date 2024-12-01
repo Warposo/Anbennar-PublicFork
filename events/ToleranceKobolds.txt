@@ -554,11 +554,11 @@ country_event = {
 			10 = {
 				trigger = {
 					any_owned_province = {
+						culture_is_kobold = yes
 						NOT = {
 							continent = serpentspine
 							continent = oceania
 						}
-						has_kobold_majority_trigger = yes
 					}
 				}
 				country_event = {
@@ -568,12 +568,6 @@ country_event = {
 			#Troubadour Trivu
 			10 = {
 				trigger = {
-					any_owned_province = {
-						NOT = {
-							continent = serpentspine
-							continent = oceania
-						}
-					}
 					any_known_country = {
 						OR = {
 							medium_tolerance_kobold_race_trigger = yes
@@ -581,6 +575,12 @@ country_event = {
 						}
 						has_institution = renaissance
 						monstrous_government = no
+					}
+					any_owned_province = {
+						NOT = {
+							continent = serpentspine
+							continent = oceania
+						}
 					}
 				}
 				country_event = {
@@ -592,15 +592,17 @@ country_event = {
 				trigger = {
 					any_owned_province = {
 						fast_has_pop_of_race = { race = kobold }
-						NOT = {
-							continent = serpentspine
-							continent = oceania
-						}
 						OR = {
 							has_terrain = forest
 							has_terrain = woods
 							has_terrain = ancient_forest
 						}
+						NOT = {
+							continent = serpentspine
+							continent = oceania
+						}
+						NOT = { has_province_modifier = firefly_farm }
+						NOT = { has_province_modifier = firefly_farm_taxbreak }
 					}
 				}
 				country_event = {
@@ -2613,9 +2615,15 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					NOT = {
-						continent = serpentspine
-						continent = oceania
+					OR = {
+						AND = {
+							continent = asia
+							NOT = { superregion = forbidden_lands_superregion }
+						}
+						AND = {
+							superregion = east_sarhal_superregion
+							NOT = { region = yezel_mora_region }
+						}
 					}
 					has_kobold_minority_trigger = yes
 					NOT = { has_province_modifier = industrious_kobolds }
@@ -3323,10 +3331,6 @@ country_event = {
 						trade_goods = mithril
 						trade_goods = damestear
 					}
-					OR = {
-					has_kobold_minority_trigger = yes 
-					has_kobold_majority_trigger = yes
-					}
 					NOT = { has_province_modifier = kobold_mining_trivu }
 				}
 				save_event_target_as = kobold_mining_trivu_province
@@ -3352,7 +3356,7 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					fast_has_pop_of_race = {race = kobold}
+					culture_is_kobold = no
 					NOT = {
 						continent = serpentspine
 						continent = oceania
@@ -3365,13 +3369,18 @@ country_event = {
 						trade_goods = mithril
 						trade_goods = damestear
 					}
-					has_kobold_majority_trigger = no
+					NOT = {
+						AND = {
+							has_saved_event_target = destination_province_1
+							province_id = event_target:destination_province_1
+						}
+					}
 				}
 				save_event_target_as = destination_province_2
 			}
 			random_owned_province = {
 				limit = {
-					fast_has_pop_of_race = { race = kobold }
+					culture_is_kobold = no
 					NOT = {
 						continent = serpentspine
 						continent = oceania
@@ -3384,7 +3393,16 @@ country_event = {
 						trade_goods = mithril
 						trade_goods = damestear
 					}
-					has_kobold_majority_trigger = no
+					NOT = {
+						AND = {
+							has_saved_event_target = destination_province_1
+							province_id = event_target:destination_province_1
+						}
+						AND = {
+							has_saved_event_target = destination_province_2
+							province_id = event_target:destination_province_2
+						}
+					}
 				}
 				save_event_target_as = destination_province_3
 			}
@@ -3442,18 +3460,24 @@ country_event = {
 				duration = 3650
 			}
 		}
-		event_target:destination_province_2 = {
-			add_kobold_minority_size_effect = yes
-			add_province_modifier = { 
-				name = kobold_mining_trivu
-				duration = 3650
+		if = {
+			limit = { has_saved_event_target = destination_province_2 }
+			event_target:destination_province_2 = {
+				add_kobold_minority_size_effect = yes
+				add_province_modifier = { 
+					name = kobold_mining_trivu
+					duration = 3650
+				}
 			}
 		}
-		event_target:destination_province_3 = {
-			add_kobold_minority_size_effect = yes
-			add_province_modifier = { 
-				name = kobold_mining_trivu
-				duration = 3650
+		if = {
+			limit = { has_saved_event_target = destination_province_3 }
+			event_target:destination_province_3 = {
+				add_kobold_minority_size_effect = yes
+				add_province_modifier = { 
+					name = kobold_mining_trivu
+					duration = 3650
+				}
 			}
 		}
 	}
@@ -3775,14 +3799,6 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		any_known_country = {
-			medium_tolerance_kobold_race_trigger = yes
-			monstrous_government = no
-			has_institution = renaissance
-		}
-	}
-
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -3899,10 +3915,15 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:target_province = {	
-				OR = {
-					continent = europe
-					continent = north_america
-					continent = south_america
+				NOT = {
+					AND = {
+						continent = asia
+						NOT = { superregion = forbidden_lands_superregion }
+					}
+					AND = {
+						superregion = east_sarhal_superregion
+						NOT = { region = yezel_mora_region }
+					}
 				}
 			}
 		}
