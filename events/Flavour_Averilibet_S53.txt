@@ -901,7 +901,6 @@ country_event = {
 		clear_saved_name = tanizu_name
 		clear_saved_name = harimari_name
 		clear_saved_name = gnollish_name
-	
 	}
 }
 

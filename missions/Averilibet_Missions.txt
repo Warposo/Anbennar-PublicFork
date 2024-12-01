@@ -281,35 +281,21 @@ column_2 = {
 		icon = mission_raid_on_iceland
 		position = 1
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 6706 
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							num_of_units_in_province = {
-								amount = 5
-								type = infantry
-								who = ROOT
-							}
-						}
-					}
-				}
-				AND = {
-					province_id = 5687
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							num_of_units_in_province = {
-								amount = 5
-								type = infantry
-								who = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
+            OR = {
+                province_id = 6706
+                province_id = 5687
+            }
+            NOT = {
+                AND = {
+                    owned_by = ROOT
+                    num_of_units_in_province = {
+                        amount = 5
+                        type = infantry
+                        who = ROOT
+                    }
+                }
+            }
+        }
 
 		trigger = {
 			NOT = { exists = S54 } 
@@ -427,7 +413,24 @@ column_2 = {
 			cooking_the_books_S53
 			a_fairer_sex_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			owner = {
+				OR = {
+					culture = tanizu
+					culture = cyazizeta_lizardfolk
+				}
+				is_subject = no
+				NOT = {
+					AND = {
+						guaranteed_by = ROOT
+						trust = {
+							who = ROOT
+							value = 55
+						}
+					}
+			   }
+			}
+		} 
 
 		trigger = {
 			OR = {
@@ -652,53 +655,19 @@ column_2 = {
 		position = 8
 		required_missions = { jumping_beasts_S53 } 
 		provinces_to_highlight = {
-			OR = {
+			has_province_modifier = S53_imbitinda_games
+			NOT = {
 				AND = {
-					province_id = 6606
-					NOT = {
-						AND = {
-							OR = {
-								development = 30
-								num_of_times_expanded_infrastructure = 2
-							}
-							has_forcelimit_building_trigger = yes
-							has_fort_building_trigger = yes
-							has_manpower_building_trigger = yes
-							is_core = root
-						}
+					OR = {
+						development = 30
+						num_of_times_expanded_infrastructure = 2
 					}
+					has_forcelimit_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_manpower_building_trigger = yes
+					is_core = root
 				}
-				AND = {
-					province_id = 5600
-					NOT = {
-						AND = {
-							OR = {
-								development = 30
-								num_of_times_expanded_infrastructure = 2
-							}
-							has_forcelimit_building_trigger = yes
-							has_fort_building_trigger = yes
-							has_manpower_building_trigger = yes
-							is_core = root
-						}
-					}
-				}
-				AND = {
-					province_id = 5594
-					NOT = {
-						AND = {
-							OR = {
-								development = 30
-								num_of_times_expanded_infrastructure = 2
-							}
-							has_forcelimit_building_trigger = yes
-							has_fort_building_trigger = yes
-							has_manpower_building_trigger = yes
-							is_core = root
-						}
-					}
-				}
-			}  
+			}
 		} 
 
 		trigger = { 
@@ -824,12 +793,18 @@ column_3 = {
 		icon = mission_conquer_kannauj
 		position = 2
 		required_missions = { a_special_guest_S53 } 
-		provinces_to_highlight = {  
+		provinces_to_highlight = {
 			OR = {
 				province_id = 5600
 				province_id = 1339
+				owner = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+				}
 			}
-		} 
+		}
 
 		trigger = {  
 			trading_policy_in_node = {
@@ -1014,7 +989,28 @@ column_3 = {
 			a_fairer_sex_S53
 			like_a_mother_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owner = {
+				OR = {
+					culture_is_elven = yes
+					culture_is_ruinborn = yes
+					culture_is_human = yes
+					culture_is_harpy = yes
+					culture_is_orcish = yes
+				}
+				NOT = { total_development = 350 }
+				government = monarchy
+				NOT = {
+					AND = {
+						alliance_with = ROOT
+						trust = {
+							who = ROOT
+							value = 70
+						}
+					}
+				}
+			}
+		} 
 
 		trigger = { 
 			legitimacy = 90
@@ -1062,23 +1058,39 @@ column_3 = {
 			more_the_marryier_S53
 			an_injustice_S53
 		}
-		provinces_to_highlight = {  
-			province_group = south_denbari
-			is_core = ROOT
-		} 
-
-		trigger = { 
-			calc_true_if = {
-				amount = 3
-				any_subject_country = {
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_group = south_denbari
+					NOT = { is_core = ROOT }
+				}
+				AND = {
+					OR = {
+						area = kidfan_area
+						area = kirksanlashan_area
+					}
+					devastation = 1
+				}
+				owner = {
 					OR = {
 						culture = tanizu
 						culture = cyazizeta_lizardfolk
 					}
-					NOT = {
-						development_in_provinces = {
-							value = 50
-						}
+					NOT = { development_in_provinces = { value = 50 } }
+				}
+			}
+		}
+
+		trigger = { 
+			calc_true_if = {
+				amount = 3
+				all_subject_country = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					development_in_provinces = {
+						value = 50
 					}
 				}
 			}
@@ -1130,21 +1142,23 @@ column_3 = {
 			heros_and_husbands_S53
 			middling_migration_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			fast_has_pop_of_race = { race = lizardfolk }
+			NOT = {
+				development = 9
+			}
+		} 
 
 		trigger = {  
 			has_country_modifier = racial_focus_lizardfolk
-			custom_trigger_tooltip = {
-				tooltip = S53_shedding_pains_tooltip
-				OR = {
-					high_tolerance_lizardfolk_race_trigger = yes
-					medium_tolerance_lizardfolk_race_trigger = yes
-				}
-				num_of_owned_provinces_with = {
-					value = 10
-					fast_has_pop_of_race = { race = lizardfolk }
-					development = 9
-				}
+			OR = {
+				high_tolerance_lizardfolk_race_trigger = yes
+				medium_tolerance_lizardfolk_race_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				fast_has_pop_of_race = { race = lizardfolk }
+				development = 9
 			}
 		} 
 
@@ -1173,7 +1187,27 @@ column_3 = {
 			the_real_deal_S53
 			a_national_league_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			OR = {
+				owner = {
+					OR = {
+						culture = tanizu
+						culture = cyazizeta_lizardfolk
+					}
+					is_subject_of = ROOT
+					NOT = {
+						trust = {
+							who = ROOT
+							value = 95
+						}
+					}
+				}
+				owner = {
+					is_subject_of = ROOT
+					NOT = { liberty_desire = 1 }
+				}
+			}
+		}
 
 		trigger = {  
 			has_estate_privilege = estate_nobility_S53_tanizu_tradition_covenant
@@ -1192,7 +1226,7 @@ column_3 = {
 				}
 			}
 			all_subject_country = {
-				NOT = { liberty_desire = 0}
+				NOT = { liberty_desire = 1 }
 			} 
 		}
 		effect = { 
@@ -1364,37 +1398,32 @@ column_4 = {
 		position = 5
 		required_missions = { like_a_mother_S53 } 
 		provinces_to_highlight = {
-			OR = {
-				area = werikafan_area 
-				area = fetengaben_area
-				AND = {
-					province_id = 5538
-					NOT = {
-						AND = {
-							NOT = { unrest = 1 }
-							num_of_units_in_province = {
-								type = infantry
-								amount = 10 
-								who = ROOT 
-							}
-						}
-					}
-				}
-				AND = {
-					province_id = 6638
-					NOT = {
-						AND = {
-							NOT = { unrest = 1 }
-							num_of_units_in_province = {
-								type = infantry
-								amount = 10 
-								who = ROOT 
-							}
-						}
-					}
-				}  
-			}  
-		} 
+            OR = {
+                AND = {
+                    OR = {
+                        area = werikafan_area 
+                        area = fetengaben_area
+                    }
+                    NOT = { is_core = ROOT }
+                }
+                AND = {
+                    OR = {
+                        province_id = 5538
+                        province_id = 6638
+                    }
+                    NOT = {
+                        AND = {
+                            NOT = { unrest = 1 }
+                            num_of_units_in_province = {
+                                type = infantry
+                                amount = 10 
+                                who = ROOT 
+                            }
+                        }
+                    }
+                }
+            }  
+        }
 
 		trigger = {
 			werikafan_area = {
@@ -1604,16 +1633,32 @@ column_4 = {
 			sheding_pains_S53
 		}
 		provinces_to_highlight = {  
-			province_group = south_denbari 
-			NOT = {
+			OR = {
 				AND = {
-					NOT = { nationalism = 1 }
-					has_tax_building_trigger = yes
-					num_of_units_in_province = {
-						who = ROOT
-						amount = 2
+					province_group = south_denbari 
+					NOT = {
+						AND = {
+							NOT = { nationalism = 1 }
+							has_tax_building_trigger = yes
+							num_of_units_in_province = {
+								who = ROOT
+								amount = 2
+							}
+							NOT = { devastation = 1 } 
+						}
 					}
-						NOT = { devastation = 1 } 
+				}
+				AND = {
+					owner = {
+						OR = {
+							culture = tanizu
+							culture = cyazizeta_lizardfolk
+						}
+						development_in_provinces = {
+							value = 125
+						}
+						NOT = { liberty_desire = 50 } 	
+					}
 				}
 			}	
 		} 
@@ -1801,7 +1846,10 @@ column_5 = {
 			some_progress_S53
 		}
 		provinces_to_highlight = {  
-			province_id = 4963
+			OR = {
+				province_id = 1366
+				province_id = 4963
+			}
 		} 
 
 		trigger = { 
@@ -1844,7 +1892,16 @@ column_5 = {
 			like_a_mother_S53
 			advice_from_strangers_S53
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {  
+			superregion = east_sarhal_superregion
+			culture = naleni_harpy
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					development = 10 
+				}
+			}
+		} 
 
 		trigger = {
 			num_of_owned_provinces_with = {
