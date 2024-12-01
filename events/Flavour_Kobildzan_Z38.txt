@@ -1919,7 +1919,7 @@ country_event = { #Biocompatibility Event
 	}
 }
 
-country_event = { #Elkaesal Stirs, Gerudia Awakens
+country_event = { #Gerudia Wakes
 	id = flavour_kobildzan.26
 	title = flavour_kobildzan.26.t
 	desc = flavour_kobildzan.26.d
