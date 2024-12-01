@@ -2,6 +2,7 @@
 # Flavor events for ogre nations
 # 0: event manager for ogre nations
 # 1-8: Ogre flavor for ogre nations by GoshGollyDarnit
+# 10-13: Feast of the Gods flavor events by bruhh
 #
 # Event manager:
 country_event = {
@@ -17,17 +18,6 @@ country_event = {
 			amount = 1
 		}
 		has_country_modifier = ogre_administration
-	}
-	mean_time_to_happen = {
-		days = 1
-		modifier = {
-			factor = 10
-			has_country_modifier = racial_focus_ogre
-		}
-		modifier = {
-			factor = 1.5
-			has_government_attribute = more_migration_and_tolerance
-		}
 	}
 	option = {
 		random_list = {
@@ -141,9 +131,8 @@ country_event = {
 			5 = {
 				trigger = {
 					any_owned_province = {
-						OR = {
-							has_ogre_minority_trigger = yes
-							has_ogre_majority_trigger = yes
+						fast_has_pop_of_race = {
+							race = ogre
 						}
 						all_province_in_state = {
 							is_state_core = ROOT
@@ -158,9 +147,8 @@ country_event = {
 			5 = {
 				trigger = {
 					any_owned_province = {
-						OR = {
-							has_ogre_minority_trigger = yes
-							has_ogre_majority_trigger = yes
+						fast_has_pop_of_race = {
+							race = ogre
 						}
 						all_province_in_state = {
 							is_state_core = ROOT
@@ -295,7 +283,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = feast_gods_events.0
+					id = feast_gods_events.10
 				}
 			}
 			#Ravenous Ogre Causes Havoc in $PROVINCENAME$
@@ -309,7 +297,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = feast_gods_events.1
+					id = feast_gods_events.11
 				}
 			}
 			#The Hunger for Battle
@@ -328,7 +316,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = feast_gods_events.2
+					id = feast_gods_events.12
 				}
 			}
 		}
@@ -342,14 +330,6 @@ country_event = {
 	desc = ogre_flavour_events.1.d
 	picture = ONI_FORTRESS_eventPicture
 	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			full_idea_group = infrastructure_ideas
-		}
-		NOT = {
-			ruler_has_personality = architectural_visionary_personality
-		}
-	}
 	option = {
 		name = ogre_flavour_events.1.a
 		add_adm_power = -50
@@ -363,7 +343,7 @@ country_event = {
 	option = {
 		name = ogre_flavour_events.1.b
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_tall
+			name = ogre_flavour_costs_running_tall
 			duration = 3650
 		}
 	}
@@ -383,7 +363,7 @@ country_event = {
 			religion = sudomegi
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_tall_sudomegi
+			name = ogre_flavour_costs_running_tall_sudomegi
 			duration = 3650
 		}
 	}
@@ -397,7 +377,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_tall_fotg
+			name = ogre_flavour_costs_running_tall_fotg
 			duration = 3650
 		}
 	}
@@ -423,7 +403,7 @@ country_event = {
 		}
 		add_years_of_income = 0.5
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_tall_fraud
+			name = ogre_flavour_costs_running_tall_fraud
 			duration = 7300
 		}
 	}
@@ -436,15 +416,10 @@ country_event = {
 	desc = ogre_flavour_events.2.d
 	picture = ONI_FORTRESS_eventPicture
 	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			religion = feast_of_the_gods
-		}
-	}
 	option = {
 		name = ogre_flavour_events.2.a
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_small
+			name = ogre_flavour_costs_running_small
 			duration = 3650
 		}
 		random = {
@@ -505,7 +480,7 @@ country_event = {
 			religion = devouring_path
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_small_dp
+			name = ogre_flavour_costs_running_small_dp
 			duration = 3650
 		}
 		add_adm_power = 50
@@ -558,7 +533,7 @@ country_event = {
 			religion = sudomegi
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_small_sudomegi
+			name = ogre_flavour_costs_running_small_sudomegi
 			duration = 3650
 		}
 		add_stability = 1
@@ -570,7 +545,7 @@ country_event = {
 			religion = reformed_feast_of_the_gods
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_costs_running_small_reformed_fotg
+			name = ogre_flavour_costs_running_small_reformed_fotg
 			duration = 3650
 		}
 		random = {
@@ -588,83 +563,10 @@ country_event = {
 	desc = ogre_flavour_events.3.d
 	picture = PIETY_eventPicture
 	is_triggered_only = yes
-	trigger = {
-		# Has a non-ogre minority
-		OR = {
-			fast_owns_num_pops_of_race = {
-				race = centaur
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = dwarven
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = elven
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = gnollish
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = gnomish
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = goblin
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = halfling
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = harpy
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = harimari
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = hobgoblin
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = human
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = kobold
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = lizardfolk
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = mechanim
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = orcish
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = ruinborn
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = troll
-				amount = 1
-			}
-		}
-	}
 	option = {
 		name = ogre_flavour_events.3.a
 		add_country_modifier = {
-			name = ogre_tolerance_fair_contracts
+			name = ogre_flavour_fair_contracts
 			duration = 5475
 		}
 		add_estate_loyalty = {
@@ -680,7 +582,7 @@ country_event = {
 	option = {
 		name = ogre_flavour_events.3.b
 		add_country_modifier = {
-			name = ogre_tolerance_abused_contracts
+			name = ogre_flavour_abused_contracts
 			duration = 5475
 		}
 		add_estate_loyalty = {
@@ -708,7 +610,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_pious_contracts
+			name = ogre_flavour_pious_contracts
 			duration = 5475
 		}
 		add_estate_loyalty = {
@@ -736,7 +638,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_spy_contracts
+			name = ogre_flavour_spy_contracts
 			duration = 5475
 		}
 		add_years_of_income = 1
@@ -750,23 +652,11 @@ country_event = {
 	desc = ogre_flavour_events.4.d
 	picture = FEAST_eventPicture
 	is_triggered_only = yes
-	trigger = {
-		any_owned_province = {
-			OR = {
-				has_ogre_minority_trigger = yes
-				has_ogre_majority_trigger = yes
-			}
-			all_province_in_state = {
-				is_state_core = ROOT
-			}
-		}
-	}
 	immediate = {
 		random_owned_province = {
 			limit = {
-				OR = {
-					has_ogre_minority_trigger = yes
-					has_ogre_majority_trigger = yes
+				fast_has_pop_of_race = {
+					race = ogre
 				}
 				all_province_in_state = {
 					is_state_core = ROOT
@@ -782,7 +672,7 @@ country_event = {
 		event_target:ogre_tolerance_target = {
 			every_province_in_state = {
 				add_province_modifier = {
-					name = ogre_tolerance_satiated_celebrations
+					name = ogre_flavour_satiated_celebrations
 					duration = 1825
 				}
 			}
@@ -824,13 +714,13 @@ country_event = {
 		event_target:ogre_tolerance_target = {
 			every_province_in_state = {
 				add_province_modifier = {
-					name = ogre_tolerance_soulful_festivities_province
+					name = ogre_flavour_soulful_festivities_province
 					duration = 1825
 				}
 			}
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_soulful_festivities_country
+			name = ogre_flavour_soulful_festivities_country
 			duration = 1825
 		}
 		random = {
@@ -849,7 +739,7 @@ country_event = {
 		event_target:ogre_tolerance_target = {
 			every_province_in_state = {
 				add_province_modifier = {
-					name = ogre_tolerance_solidarity_hunger
+					name = ogre_flavour_solidarity_hunger
 					duration = 1825
 				}
 				random = {
@@ -878,7 +768,7 @@ country_event = {
 					add_random_development = -1
 				}
 				add_province_modifier = {
-					name = ogre_tolerance_satiated_celebrations
+					name = ogre_flavour_satiated_celebrations
 					duration = 1825
 				}
 			}
@@ -908,7 +798,7 @@ country_event = {
 		event_target:ogre_tolerance_target = {
 			every_province_in_state = {
 				add_province_modifier = {
-					name = ogre_tolerance_satiated_celebrations
+					name = ogre_flavour_satiated_celebrations
 					duration = 1825
 				}
 			}
@@ -929,22 +819,11 @@ country_event = {
 	desc = ogre_flavour_events.5.d
 	picture = ONI_HUMANS_eventPicture
 	is_triggered_only = yes
-	trigger = {
-		any_owned_province = {
-			OR = {
-				has_ogre_minority_trigger = yes
-				has_ogre_majority_trigger = yes
-			}
-			all_province_in_state = {
-				is_state_core = ROOT
-			}
-		}
-	}
 	option = {
 		name = ogre_flavour_events.5.a
 		add_years_of_income = -0.5
 		add_country_modifier = {
-			name = ogre_tolerance_mage_feed
+			name = ogre_flavour_mage_feed
 			duration = 3650
 		}
 		if = {
@@ -995,14 +874,14 @@ country_event = {
 		random_list = {
 			70 = {
 				add_country_modifier = {
-					name = ogre_tolerance_events_mage_tested
+					name = ogre_flavour_events_mage_tested
 					duration = 3650
 				}
 				create_war_wizard_effect = yes
 			}
 			30 = {
 				add_country_modifier = {
-					name = ogre_tolerance_events_mage_faltered
+					name = ogre_flavour_events_mage_faltered
 					duration = 3650
 				}
 				add_dip_power = 50
@@ -1032,13 +911,13 @@ country_event = {
 			50 = {
 				create_war_wizard_effect = yes
 				add_country_modifier = {
-					name = ogre_tolerance_events_mage_force_feeding
+					name = ogre_flavour_events_mage_force_feeding
 					duration = 3650
 				}
 			}
 			50 = {
 				add_country_modifier = {
-					name = ogre_tolerance_events_mage_spills
+					name = ogre_flavour_events_mage_spills
 					duration = 3650
 				}
 			}
@@ -1063,14 +942,14 @@ country_event = {
 			50 = {
 				create_war_wizard_effect = yes
 				add_country_modifier = {
-					name = ogre_tolerance_events_mage_passed
+					name = ogre_flavour_events_mage_passed
 					duration = 3650
 				}
 			}
 			50 = {
 				add_prestige = -10
 				add_country_modifier = {
-					name = ogre_tolerance_events_mage_flunked
+					name = ogre_flavour_events_mage_flunked
 					duration = 3650
 				}
 			}
@@ -1085,11 +964,6 @@ country_event = {
 	desc = ogre_flavour_events.6.d
 	picture = GENIE_RUINS_eventPicture
 	is_triggered_only = yes
-	trigger = {
-		any_owned_province = {
-			ogre_tolerance_has_any_region_available = yes
-		}
-	}
 	immediate = {
 		random_owned_province = {
 			limit = {
@@ -1108,7 +982,7 @@ country_event = {
 		add_legitimacy = 20
 		event_target:ogre_tolerance_target = {
 			add_permanent_province_modifier = {
-				name = ogre_tolerance_giant_ruins
+				name = ogre_flavour_giant_ruins
 				duration = -1
 			}
 		}
@@ -1128,12 +1002,12 @@ country_event = {
 		add_legitimacy = 20
 		event_target:ogre_tolerance_target = {
 			add_permanent_province_modifier = {
-				name = ogre_tolerance_giant_ruins
+				name = ogre_flavour_giant_ruins
 				duration = -1
 			}
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_giants_rule
+			name = ogre_flavour_giants_rule
 			duration = 9125
 		}
 	}
@@ -1146,8 +1020,6 @@ country_event = {
 	desc = ogre_flavour_events.7.d
 	picture = ADVISOR_eventPicture
 	is_triggered_only = yes
-	trigger = {
-	}
 	option = {
 		name = ogre_flavour_events.7.a
 		if = {
@@ -1195,14 +1067,14 @@ country_event = {
 		add_dip_power = 75
 		add_mil_power = 75
 		add_country_modifier = {
-			name = ogre_tolerance_ogre_tools
+			name = ogre_flavour_ogre_tools
 			duration = 7300
 		}
 	}
 	option = {
 		name = ogre_flavour_events.7.b
 		add_country_modifier = {
-			name = ogre_tolerance_non_ogre_tools
+			name = ogre_flavour_non_ogre_tools
 			duration = 7300
 		}
 	}
@@ -1254,7 +1126,7 @@ country_event = {
 			add_treasury = -125
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_import_ogre_tools
+			name = ogre_flavour_import_ogre_tools
 			duration = 7300
 		}
 		add_mercantilism = 2
@@ -1276,7 +1148,7 @@ country_event = {
 		add_dip_power = 75
 		add_mil_power = 75
 		add_country_modifier = {
-			name = ogre_tolerance_ogre_tools
+			name = ogre_flavour_ogre_tools
 			duration = 7300
 		}
 	}
@@ -1301,7 +1173,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = ogre_tolerance_import_ogre_tools
+			name = ogre_flavour_import_ogre_tools
 			duration = 7300
 		}
 	}
@@ -1315,88 +1187,6 @@ country_event = {
 	picture = DIVERSE_COURT_eventPicture
 	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = {
-		government_rank = 2
-		OR = {
-			num_of_different_cultures_in_court = 2
-			full_idea_group = humanist_ideas
-			full_idea_group = religious_ideas
-		}
-		OR = {
-			fast_owns_num_pops_of_race = {
-				race = centaur
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = dwarven
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = elven
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = gnollish
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = gnomish
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = goblin
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = half_elven
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = half_orcish
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = halfling
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = harimari
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = harpy
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = human
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = hobgoblin
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = kobold
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = lizardfolk
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = orcish
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = ruinborn
-				amount = 1
-			}
-			fast_owns_num_pops_of_race = {
-				race = troll
-				amount = 1
-			}
-		}
-	}
 	option = {
 		name = ogre_flavour_events.8.a
 		add_stability = 2
@@ -1405,7 +1195,7 @@ country_event = {
 		add_mil_power = 100
 		add_legitimacy = 15
 		add_country_modifier = {
-			name = ogre_tolerance_ogre_order
+			name = ogre_flavour_ogre_order
 			duration = 18250
 		}
 		increase_monstrous_3 = yes
@@ -1418,7 +1208,7 @@ country_event = {
 		add_mil_power = 100
 		add_prestige = 30
 		add_country_modifier = {
-			name = ogre_tolerance_place_small_folk
+			name = ogre_flavour_place_small_folk
 			duration = 18250
 		}
 		decrease_monstrous_3 = yes
@@ -1435,7 +1225,7 @@ country_event = {
 		add_mil_power = 100
 		add_legitimacy = 15
 		add_country_modifier = {
-			name = ogre_tolerance_chi_stratification
+			name = ogre_flavour_chi_stratification
 			duration = 18250
 		}
 		increase_monstrous_3 = yes
@@ -1452,7 +1242,7 @@ country_event = {
 		add_mil_power = 100
 		add_prestige = 30
 		add_country_modifier = {
-			name = ogre_tolerance_discipline_within
+			name = ogre_flavour_discipline_within
 			duration = 18250
 		}
 		decrease_monstrous_3 = yes
@@ -1472,9 +1262,191 @@ country_event = {
 		add_mil_power = 100
 		add_legitimacy = 15
 		add_country_modifier = {
-			name = ogre_tolerance_hunger_reigns
+			name = ogre_flavour_hunger_reigns
 			duration = 18250
 		}
 		increase_monstrous_3 = yes
+	}
+}
+
+####
+#An Irresistible Offer
+country_event = {
+	id = feast_gods_events.10
+	title = feast_gods_events.10.t
+	desc = feast_gods_events.10.d
+	picture = BURGHER_ESTATE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = feast_gods_events.10.a
+		ai_chance = {
+			factor = 1
+		}
+		add_legitimacy = -10
+		add_ruler_modifier = {
+			name = feast_gods_resisting_the_hunger
+			duration = 7300
+		}
+	}
+	option = {
+		name = feast_gods_events.10.b
+		ai_chance = {
+			factor = 1
+		}
+		add_legitimacy = 10
+		add_stability = 1
+		add_ruler_modifier = {
+			name = feast_gods_voracious_ruler
+			duration = 7300
+		}
+	}
+	option = {
+		name = feast_gods_events.10.c
+		ai_chance = {
+			factor = 2
+		}
+		highlight = yes
+		trigger = {
+			ruler_has_personality = drunkard_personality
+		}
+		add_legitimacy = 10
+		add_doom = 5
+	}
+	option = {
+		name = feast_gods_events.10.d
+		ai_chance = {
+			factor = 5
+		}
+		highlight = yes
+		trigger = {
+			ruler_has_personality = careful_personality
+		}
+		add_ruler_modifier = {
+			name = feast_gods_resisting_the_hunger
+			duration = 7300
+		}
+	}
+}
+
+#Ravenous Ogre Causes Havoc in $PROVINCENAME$
+country_event = {
+	id = feast_gods_events.11
+	title = feast_gods_events.11.t
+	desc = feast_gods_events.11.d
+	picture = VILLAGE_BURNING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = feast_gods_events.11.a
+		ai_chance = {
+			factor = 1
+		}
+		add_doom = 10
+		random_owned_province = {
+			add_province_modifier = {
+				name = feast_gods_hungry_populace
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = feast_gods_events.11.b
+		ai_chance = {
+			factor = 1
+		}
+		add_years_of_income = -0.9
+		add_adm_power = -50
+		add_doom = -20
+	}
+	option = {
+		name = feast_gods_events.11.b
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = charismatic_negotiator_personality
+				ruler_has_personality = righteous_personality
+			}
+		}
+		add_country_modifier = {
+			name = feast_gods_hopeful_populace
+			duration = 3650
+		}
+	}
+}
+
+#The Hunger for Battle
+country_event = {
+	id = feast_gods_events.12
+	title = feast_gods_events.12.t
+	desc = feast_gods_events.12.d
+	picture = BORDER_TENSION_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = feast_gods_war_declared
+	}
+	option = {
+		name = feast_gods_events.12.a
+		ai_chance = {
+			factor = 1
+		}
+		add_doom = 5
+	}
+	option = {
+		name = feast_gods_events.12.b
+		ai_chance = {
+			factor = 1
+		}
+		add_country_modifier = {
+			name = feast_gods_ravenous_soldiers
+			duration = 3650
+		}
+		custom_tooltip = feast_gods_the_hunger_for_battle
+		hidden_effect = {
+			set_country_flag = feast_gods_need_to_declare_war
+			country_event = {
+				id = feast_gods_events.13
+				days = 3650
+			}
+		}
+	}
+	option = {
+		name = feast_gods_events.12.c
+		ai_chance = {
+			factor = 5
+		}
+		highlight = yes
+		trigger = {
+			ruler_has_personality = cruel_personality
+		}
+		add_country_modifier = {
+			name = feast_gods_sponsored_ogre_terrorizers
+			duration = 3650
+		}
+	}
+}
+
+#Crazed Soldiers Attack!
+country_event = {
+	id = feast_gods_events.13
+	title = feast_gods_events.13.t
+	desc = feast_gods_events.13.d
+	picture = CIVIL_WAR_eventPicture
+	trigger = {
+		has_dlc = "El Dorado"
+		religion = feast_of_the_gods
+		has_country_flag = feast_gods_need_to_declare_war
+	}
+	is_triggered_only = yes
+	option = {
+		name = feast_gods_events.13.a
+		ai_chance = {
+			factor = 1
+		}
+		add_doom = 5
+		capital_scope = {
+			pretender_rebels = 2
+		}
 	}
 }
