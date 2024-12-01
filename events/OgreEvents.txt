@@ -1,4 +1,4 @@
-###########
+namespace = ogre_flavour_events
 # Flavor events for ogre nations
 # 0: event manager for ogre nations
 # 1-8: Ogre flavor for ogre nations by GoshGollyDarnit
@@ -283,7 +283,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = feast_gods_events.10
+					id = ogre_flavour_events.10
 				}
 			}
 			#Ravenous Ogre Causes Havoc in $PROVINCENAME$
@@ -297,7 +297,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = feast_gods_events.11
+					id = ogre_flavour_events.11
 				}
 			}
 			#The Hunger for Battle
@@ -316,7 +316,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = feast_gods_events.12
+					id = ogre_flavour_events.12
 				}
 			}
 		}
@@ -778,7 +778,7 @@ country_event = {
 			first_custom_tooltip = fotg_unreformed_tt
 			first_limit = "religion = feast_of_the_gods"
 			first_effect = "add_doom = -15"
-			secund_custom_tooptip = fotg_reformed_tt
+			second_custom_tooltip = fotg_reformed_tt
 			second_limit = "religion = reformed_feast_of_the_gods"
 			second_effect = "add_prestige = 25"
 		}
@@ -819,6 +819,11 @@ country_event = {
 	desc = ogre_flavour_events.5.d
 	picture = ONI_HUMANS_eventPicture
 	is_triggered_only = yes
+	immediate = {
+		prepare_months_of_trade_income = {
+			months = 6
+		}
+	}
 	option = {
 		name = ogre_flavour_events.5.a
 		add_years_of_income = -0.5
@@ -906,7 +911,9 @@ country_event = {
 				religion = reformed_feast_of_the_gods
 			}
 		}
-		#TODO: lose 6 months of trade income
+		add_prepared_months_of_trade_income = {
+			sign = -
+		}
 		random_list = {
 			50 = {
 				create_war_wizard_effect = yes
@@ -1272,13 +1279,13 @@ country_event = {
 ####
 #An Irresistible Offer
 country_event = {
-	id = feast_gods_events.10
-	title = feast_gods_events.10.t
-	desc = feast_gods_events.10.d
+	id = ogre_flavour_events.10
+	title = ogre_flavour_events.10.t
+	desc = ogre_flavour_events.10.d
 	picture = BURGHER_ESTATE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = feast_gods_events.10.a
+		name = ogre_flavour_events.10.a
 		ai_chance = {
 			factor = 1
 		}
@@ -1289,7 +1296,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = feast_gods_events.10.b
+		name = ogre_flavour_events.10.b
 		ai_chance = {
 			factor = 1
 		}
@@ -1301,7 +1308,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = feast_gods_events.10.c
+		name = ogre_flavour_events.10.c
 		ai_chance = {
 			factor = 2
 		}
@@ -1313,7 +1320,7 @@ country_event = {
 		add_doom = 5
 	}
 	option = {
-		name = feast_gods_events.10.d
+		name = ogre_flavour_events.10.d
 		ai_chance = {
 			factor = 5
 		}
@@ -1330,13 +1337,13 @@ country_event = {
 
 #Ravenous Ogre Causes Havoc in $PROVINCENAME$
 country_event = {
-	id = feast_gods_events.11
-	title = feast_gods_events.11.t
-	desc = feast_gods_events.11.d
+	id = ogre_flavour_events.11
+	title = ogre_flavour_events.11.t
+	desc = ogre_flavour_events.11.d
 	picture = VILLAGE_BURNING_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = feast_gods_events.11.a
+		name = ogre_flavour_events.11.a
 		ai_chance = {
 			factor = 1
 		}
@@ -1349,7 +1356,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = feast_gods_events.11.b
+		name = ogre_flavour_events.11.b
 		ai_chance = {
 			factor = 1
 		}
@@ -1358,7 +1365,7 @@ country_event = {
 		add_doom = -20
 	}
 	option = {
-		name = feast_gods_events.11.b
+		name = ogre_flavour_events.11.b
 		ai_chance = {
 			factor = 1
 		}
@@ -1378,23 +1385,23 @@ country_event = {
 
 #The Hunger for Battle
 country_event = {
-	id = feast_gods_events.12
-	title = feast_gods_events.12.t
-	desc = feast_gods_events.12.d
+	id = ogre_flavour_events.12
+	title = ogre_flavour_events.12.t
+	desc = ogre_flavour_events.12.d
 	picture = BORDER_TENSION_eventPicture
 	is_triggered_only = yes
 	immediate = {
 		clr_country_flag = feast_gods_war_declared
 	}
 	option = {
-		name = feast_gods_events.12.a
+		name = ogre_flavour_events.12.a
 		ai_chance = {
 			factor = 1
 		}
 		add_doom = 5
 	}
 	option = {
-		name = feast_gods_events.12.b
+		name = ogre_flavour_events.12.b
 		ai_chance = {
 			factor = 1
 		}
@@ -1406,13 +1413,13 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = feast_gods_need_to_declare_war
 			country_event = {
-				id = feast_gods_events.13
+				id = ogre_flavour_events.13
 				days = 3650
 			}
 		}
 	}
 	option = {
-		name = feast_gods_events.12.c
+		name = ogre_flavour_events.12.c
 		ai_chance = {
 			factor = 5
 		}
@@ -1429,9 +1436,9 @@ country_event = {
 
 #Crazed Soldiers Attack!
 country_event = {
-	id = feast_gods_events.13
-	title = feast_gods_events.13.t
-	desc = feast_gods_events.13.d
+	id = ogre_flavour_events.13
+	title = ogre_flavour_events.13.t
+	desc = ogre_flavour_events.13.d
 	picture = CIVIL_WAR_eventPicture
 	trigger = {
 		has_dlc = "El Dorado"
@@ -1440,7 +1447,7 @@ country_event = {
 	}
 	is_triggered_only = yes
 	option = {
-		name = feast_gods_events.13.a
+		name = ogre_flavour_events.13.a
 		ai_chance = {
 			factor = 1
 		}

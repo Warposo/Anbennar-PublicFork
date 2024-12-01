@@ -268,10 +268,7 @@ country_event = {
 			3 = {
 				trigger = {
 					has_estate = estate_adventurers
-					any_owned_province = {
-						has_ogre_minority_trigger = yes
-						ogre_tolerance_has_any_region_available = yes
-					}
+					ogre_tolerance_has_any_region_available = yes
 				}
 				country_event = {
 					id = ogre_tolerance_events.12
@@ -1603,7 +1600,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_saved_event_taget = ogre_advisor_culture_province
+				has_saved_event_target = ogre_advisor_culture_province
 			}
 			random_list = {
 				1 = {
@@ -2067,6 +2064,9 @@ country_event = {
 			}
 			save_event_target_as = ogre_tolerance_target
 		}
+		prepare_months_of_tax_income = {
+			months = 6
+		}
 	}
 	option = {
 		name = ogre_tolerance_events.14.a
@@ -2120,7 +2120,9 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		#TODO: 6 months of tax income
+		add_prepared_months_of_tax_income = {
+			sign = +
+		}
 	}
 	option = {
 		name = ogre_tolerance_events.14.f

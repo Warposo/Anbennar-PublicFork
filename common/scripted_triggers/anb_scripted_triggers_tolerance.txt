@@ -1,8 +1,13 @@
 ogre_tolerance_giants_region_available = {
 	AND = {
-		region = $region$_region
 		NOT = {
 			has_global_flag = ogre_tolerance_giants_$region$
+		}
+		any_owned_province = {
+			region = $region$_region
+			fast_has_pop_of_race = {
+				race = ogre
+			}
 		}
 	}
 }
