@@ -3633,7 +3633,15 @@ country_event = { #Gold aspect 2
 			SLOT = 2
 			UPGRADE = upgraded
 		}
-		4976 = { add_core = Y85 }
+		hidden_effect = { #so that it gets released correctly
+			if = { 
+				limit = { subject_owns = 4976 }
+				4976 = { cede_province = ROOT }
+			}
+		}
+		4976 = {
+			add_core = Y85 
+		}
 		if = {
 			limit = { NOT = { exists = Y85 } }
 			release_with_religion_and_culture = { tag = Y85 religion = accretive_path culture = goldscale_kobold }
