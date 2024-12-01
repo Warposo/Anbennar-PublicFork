@@ -1869,6 +1869,7 @@ country_decisions = {
 			NOT = { has_ruler_modifier = HP_rule_mendab }
 			religion = high_philosophy
 			ruler_religion = high_philosophy
+			adm = 3
 		}
 		allow = {
 			adm = 3
@@ -1895,6 +1896,7 @@ country_decisions = {
 			NOT = { has_ruler_modifier = HP_convoke_idisarindat }
 			religion = high_philosophy
 			ruler_religion = high_philosophy
+			dip = 3
 		}
 		allow = {
 			dip = 3
@@ -1921,6 +1923,7 @@ country_decisions = {
 			NOT = { has_ruler_modifier = HP_proclaim_anjitaranga }
 			religion = high_philosophy
 			ruler_religion = high_philosophy
+			mil = 3
 		}
 		allow = {
 			mil = 3
@@ -1947,6 +1950,7 @@ country_decisions = {
 			NOT = { has_ruler_modifier = HP_reorganise_chalanevaala }
 			religion = high_philosophy
 			ruler_religion = high_philosophy
+			adm = 5
 		}
 		allow = {
 			adm = 5
@@ -1972,6 +1976,7 @@ country_decisions = {
 			NOT = { has_ruler_modifier = HP_meditation_on_simrals_mirror }
 			religion = high_philosophy
 			ruler_religion = high_philosophy
+			dip = 5
 		}
 		allow = {
 			dip = 5
@@ -1998,6 +2003,7 @@ country_decisions = {
 			NOT = { has_ruler_modifier = HP_meditation_on_the_kamalkundal }
 			religion = high_philosophy
 			ruler_religion = high_philosophy
+			mil = 5
 		}
 		allow = {
 			mil = 5
