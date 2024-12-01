@@ -462,13 +462,10 @@ country_event = {
 		change_personal_deity = adean
 		if = {
 			limit = { has_government_attribute = follower_of_many_gods }
-			if = {
-				limit = { has_government_attribute = follower_of_many_gods }
-				improve_relations_with_deity_followers = { deity = adean } 
-				hidden_effect = {
-					improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
-					improve_relations_with_deity_followers = { deity = adean_upgraded_war }
-				}
+			improve_relations_with_deity_followers = { deity = adean } 
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
+				improve_relations_with_deity_followers = { deity = adean_upgraded_war }
 			}
 		}
 	}

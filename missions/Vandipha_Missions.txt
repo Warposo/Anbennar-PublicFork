@@ -1749,7 +1749,7 @@ vandipha_4 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			great_power_rank = 6
+			NOT = { great_power_rank = 5 }
 			prestige = 50
 			1361 = {
 				trade_share = {
