@@ -751,8 +751,12 @@ apikhoxi_4 = {
 		}
 		provinces_to_highlight = {
 			area = apikhoxi_area
-			NOT = { development = 12 }
-			NOT = { is_prosperous = yes }
+			NOT = {
+				AND = {
+					is_prosperous = yes
+					development = 12
+				}
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
@@ -799,19 +803,19 @@ apikhoxi_4 = {
 					}
 					unrest = 1
 				}
-                AND = {
-                    owned_by = root
-                    OR = {
+				AND = {
+					owned_by = ROOT
+					OR = {
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = sugar
 						trade_goods = tobacco
 						trade_goods = cotton
-                    }
-                    NOT = { has_building = farm_estate }
-                    NOT = { has_building = plantations }
-                    NOT = { has_building = tradecompany }
-                }
+					}
+					NOT = { has_building = farm_estate }
+					NOT = { has_building = plantations }
+					NOT = { has_building = tradecompany }
+				}
 			}
 		}
 		trigger = {
@@ -851,7 +855,7 @@ apikhoxi_4 = {
 			}
 		}
 		effect = {
-			country_event = { id = flavor_apikhoxi.8  }
+			country_event = { id = flavor_apikhoxi.8 }
 		}
 	}
 
@@ -1115,10 +1119,12 @@ apikhoxi_5 = {
 		provinces_to_highlight = {
 			province_id = 2703
 			NOT = {
-				is_core = ROOT
-				num_of_times_improved = 5
-				has_production_building_trigger = yes
-				has_courthouse_building_trigger = yes
+				AND = {
+					is_core = ROOT
+					num_of_times_improved = 5
+					has_production_building_trigger = yes
+					has_courthouse_building_trigger = yes
+				}
 			}
 		}
 		trigger = {
