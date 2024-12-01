@@ -1954,7 +1954,7 @@ rosande_5_missions = {
 				remove_country_modifier = Z35_knights_rosande
 				add_country_modifier = {
 					name = Z35_knights_rosande
-					duration = -1
+					duration = 7300
 				}
 			}
 		}
