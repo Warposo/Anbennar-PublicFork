@@ -72,6 +72,15 @@ country_decisions = {
 						}
 					}
 					rosande_add_workforce_effect = yes
+					if = {
+						limit = { culture_is_orcish = yes }
+						change_culture = ROOT
+						change_religion = ROOT
+						kill_units = {
+							who = owner
+							amount = 5
+						}
+					}
 				}
 			}
 		}

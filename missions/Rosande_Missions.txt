@@ -1921,8 +1921,13 @@ rosande_5_missions = {
 		trigger = {
 			819 = { #Stewards Hold
 				development = 20
-				has_production_building_trigger = yes
-				has_manufactory_trigger = yes
+				OR = {
+					AND = {
+						has_production_building_trigger = yes
+						has_manufactory_trigger = yes
+					}
+					trade_goods = gold
+				}
 			}
 			OR = {
 				num_of_cavalry = 16

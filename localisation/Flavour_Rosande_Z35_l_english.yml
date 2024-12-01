@@ -235,10 +235,6 @@
  flavor_rosande.35.a:0 "The brazen insolence of these savages!"
  flavor_rosande.35.b:0 "The brazen insolence of these savages! (Hide this event)"
 
- flavor_rosande.36.t:0 "Orcish Ambushes" #This event and the above are the same, just different pulses
- flavor_rosande.36.d:0 "Behind every tangled copse of trees, an ambush, behind every verdant ridge, a trap. Our courageous forces have their work cut out for them. Even those parts of this ancient forest we thought securely in our hands are prone to rise up in rebellion as soon as we turn our backs. \n\nWhile the orcs dwelling in the Deepwoods cannot dream of matching the might of our rose knights, they are certainly determined to make us bleed in their obstinate refusal to accept their destiny beneath our boots. But no matter how many contemptible tricks they’ll attempt to delay our advance, we shall not be deterred!"
- flavor_rosande.35.a:0 "The brazen insolence of these savages!"
-
  flavor_rosande.37.t:0 "Out of the Woods"
  flavor_rosande.37.d:0 "With the fighting spirit of the Deepwoods orcs finally broken, it is now time to use their ferocity for more productive purposes. Slave caravans have assembled in the groves under our control and begun their long march towards our heartland with its insatiable hunger for new slave labor. \n\nOnce outside the cover of the trees that have sheltered them far too long from retribution, they will learn what true role in life destiny has decreed for them as penance for the crimes committed by their ancestors. It is truly fortuitous that our need for orcish slaves is almost as great as their need for atonement."
  flavor_rosande.37.a:0 "Let’s see to it they quickly learn to accept their proper place!"
@@ -248,20 +244,20 @@
  flavor_rosande.38.d:0 "Surga, her family and a dozen other orcs were chained to the floorboards of a cart rumbling along the dirt road to the nearest river port along the Alen, having been sold to Vertesker slave traders by their former master only days ago. Theirs was not the only cart in the convoy, five other carts had joined them on their journey to their uncertain future. The day had been long and Surga was thirsty, hoping against hope that their new owners remembered to give them some water while they waited for the river ferry. Their destination lay on the other river side, and the ferry was the only way for miles to get the carts across. \n\nSuddenly a commotion broke out, with the slavers frantically waving to the ferry that had just brought the cart before theirs to the other shore and was on its way back. Turning her head, she saw a dust cloud approaching their convoy. Soon the sound of galloping horses could be heard and the mercenaries hired by the slavers assumed a defensive position. A patrol of knights charged into the ranks of the mercenaries and soon a desperate struggle ensued. Her cart was rolling onto the planks of the ferry as the last mercenary fell to the blow of a saber. The slavers rushed to the seeming security of the ferry, abandoning the remaining carts. They knights rushed towards the ferry and just as it disembarked, Surga’s arm was grabbed and the chain linking her to the cart and her parents was cleaved with a decisive stroke. Futilely reaching for her parents, desperate Surga could do nothing but slowly watch them disappear into the river fog. \n\nIt would be the last time she would see them but her mother’s cries still echoed in her mind. For years she would dream up scenarios in her mind, ‘What if the cart got onto the ferry just a bit faster’, ‘what if the knights were fast enough to catch her parent’s cart’, on and on in circles, but with each day resignation gnawed at the fringes of her hopes until one day only the weary acceptance that she would never see her parents again was left."
  flavor_rosande.38.a:0 "In the end, why would you need family if you are property?"
 
- flavor_rosande.39.t:0 "Small Orcish Population"
- flavor_rosande.39.d:0 "Its kinda small ngl"
- flavor_rosande.39.a:0 "AAAAA"
+ flavor_rosande.39.t:0 "An Empty Vineyard"
+ flavor_rosande.39.d:0 "The fields lie vacant as the owner of the plantation drops his empty cup to the floor. Only a few Orcs could be heard toiling away in the vineyard, where he could hear the distant sound of the whip. The Orc was likely exhausted due to the extra work required of them to fulfill this year’s quota, and no one was there to replace them due to the scarcity of Orcish stock on the auctions. Disgruntled, the noble audibly cursed the crown for causing all of his struggles, grabbing his whip and leaving the empty dining-table in his wake. After all, he had to make use of the little he had."
+ flavor_rosande.39.a:0 "He hoped that the plantation would be full of life one day."
 
  flavor_rosande.40.t:0 "Medium-sized Orcish Population"
- flavor_rosande.40.d:0 "Its kinda average ngl"
- flavor_rosande.40.a:0 "AAAAA"
+ flavor_rosande.40.d:0 "The plantation owner drained the last of his wine, his gaze sweeping over the sprawling fields where orcs labored under the weight of their burdens. The sounds of toil—the grunts of effort and the occasional crack of a whip were disturbingly sparse these days. His estate felt desolate, and it gnawed at him as much as the wine's acrid aftertaste. \n\nHe savored the final bite of cheese, unwilling to waste even a crumb. The rations for his dwindling workforce had to be carefully managed; after all, the scarcity of the orcs meant that they needed much strength to perform their duties. As he leaned back in his chair, his thoughts turned bitter. Though the current state of affairs might have been worse, he silently cursed his liege for the empty slave auctions."
+ flavor_rosande.40.a:0 "He was hopeful that one day, the auctions would be brimming with Orcs."
 
- flavor_rosande.41.t:0 "Large Orcish Population"
- flavor_rosande.41.d:0 "Its kinda big ngl"
- flavor_rosande.41.a:0 "aaaa?"
+ flavor_rosande.41.t:0 "A Resounding Vineyard"
+ flavor_rosande.41.d:0 "The plantation-owner allowed himself a slight smile as he overlooked his estate. Through the efforts of Rósanda knights, enough greenskins had been brought under their boots that the auctions were teeming with the yelling of owners and reserves of greenskins. While the strongest had gone to wealthier families, he was content with the ones he had managed to get a hold of. While they weren’t exactly used to the hard toil expected of their kind just yet, he was sure that a few cracks of the whip would get them into shape soon enough. His plantation, though still far from its potential, was a source of quiet pride. He turned from the balcony and made his way to the dining table, laden with the remnants of a hearty feast."
+ flavor_rosande.41.a:0 "Perhaps the orcs would toil in every single corner of his estate one day.?"
 
  flavor_rosande.42.t:0 "Massive Orcish Population"
- flavor_rosande.42.d:0 "Its pretty massive ngl"
+ flavor_rosande.42.d:0 "The resounding lashes of whips silenced the singing of the morning-birds as the owner woke from his slumber. Walking through the halls he could hear the increasing volume of the grunts of his Orcish workers toiling in the yard, and when he arrived at the balcony he was pleased to see that his slaves were working dexterously throughout his grand estate. Perhaps he would be generous and let them off a little early today. \n\nThe scent of delicious foods filled the room as he looked to his table, crowded with the finest of nourishments you could find throughout Cannor. As he sat down to eat, he praised his liege for their efforts, happy to be their vassal."
  flavor_rosande.42.a:0 "Yey"
 
  flavor_rosande.43.t:0 "Out of the Woods"

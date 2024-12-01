@@ -480,7 +480,7 @@ country_event = { #To Build Something New
 				}
 			}
 			832 = {
-				change_culture = rosanda
+				change_culture = ROOT
 				change_religion = ROOT
 			}
 			random_owned_province = {
