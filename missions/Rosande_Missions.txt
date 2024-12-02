@@ -474,11 +474,13 @@ rosande_2_missions = {
 			}
 		}
 
-		custom_trigger_tooltip = {
-			tooltip = rosande_magic_feast.tt
-			OR = {
-				has_country_modifier = magic_estate_magnificent_feast_3
-				has_country_modifier = magic_estate_magnificent_feast_2
+		trigger = {}
+			custom_trigger_tooltip = {
+				tooltip = rosande_magic_feast_tt
+				OR = {
+					has_country_modifier = magic_estate_magnificent_feast_3
+					has_country_modifier = magic_estate_magnificent_feast_2
+				}
 			}
 			treasury = 250
 			custom_trigger_tooltip = {
@@ -1308,7 +1310,7 @@ rosande_3_missions = {
 
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = rosande_magic_feast.tt
+				tooltip = rosande_magic_feast_tt
 				OR = {
 					has_country_modifier = magic_estate_magnificent_feast_3
 					has_country_modifier = magic_estate_magnificent_feast_2
@@ -1868,7 +1870,7 @@ rosande_4_2_missions = {
 				has_province_modifier = Z35_grand_orcish_workforce
 				OR = {
 					local_autonomy = 20
-					NOT = { has_province_modfier = autonomy_decreased }
+					NOT = { has_province_modifier = autonomy_decreased }
 				}
 			}
 		}
@@ -1885,7 +1887,7 @@ rosande_4_2_missions = {
 				OR = {
 					NOT = { has_province_modifier = Z35_grand_orcish_workforce }
 					NOT = { local_autonomy = 20 }
-					has_province_modfier = autonomy_decreased                   
+					has_province_modifier = autonomy_decreased                   
 				}
 			}
 			is_in_deficit = no

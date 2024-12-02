@@ -2621,7 +2621,7 @@ farm_estate = {
 		if = {
 			limit = { 
 				FROM = { has_estate_privilege = estate_nobles_rosande_noble_slaveowners } 
-				has_province_modfier = Z35_orcish_workforce
+				has_province_modifier = Z35_orcish_workforce
 			}
 			add_province_modifier = {
 				name = Z35_noble_slaveowners
@@ -2632,8 +2632,8 @@ farm_estate = {
 			limit = {
 				FROM = { has_estate_privilege = estate_nobles_rosande_competent_slaveowners } 
 				OR = {
-					has_province_modfier = Z35_orcish_workforce
-					has_province_modfier = Z35_grand_orcish_workforce
+					has_province_modifier = Z35_orcish_workforce
+					has_province_modifier = Z35_grand_orcish_workforce
 				}
 			}
 			add_province_modifier = {
@@ -2679,7 +2679,7 @@ farm_estate = {
 		if = {
 			limit = { 
 				FROM = { has_estate_privilege = estate_nobles_rosande_noble_slaveowners } 
-				has_province_modfier = Z35_orcish_workforce
+				has_province_modifier = Z35_orcish_workforce
 			}
 			remove_province_modifier = Z35_noble_slaveowners
 		}
@@ -2687,8 +2687,8 @@ farm_estate = {
 			limit = {
 				FROM = { has_estate_privilege = estate_nobles_rosande_competent_slaveowners } 
 				OR = {
-					has_province_modfier = Z35_orcish_workforce
-					has_province_modfier = Z35_grand_orcish_workforce
+					has_province_modifier = Z35_orcish_workforce
+					has_province_modifier = Z35_grand_orcish_workforce
 				}
 			}
 			remove_province_modifier = Z35_noble_slaveowners_2

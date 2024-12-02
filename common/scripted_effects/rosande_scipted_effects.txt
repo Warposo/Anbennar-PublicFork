@@ -128,7 +128,7 @@ rosande_orc_population_effect = {
 			has_country_modifier = Z35_large_orc_population 
 			OR = {
 				has_country_modifier = Z35_low_orc_population
-				has_country_modifier = Z35_large_orc_population
+				has_country_modifier = Z35_medium_orc_population
 				has_country_modifier = Z35_massive_orc_population
 			}
 		}
