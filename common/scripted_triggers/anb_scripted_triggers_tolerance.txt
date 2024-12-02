@@ -1,96 +1,95 @@
-ogre_tolerance_giants_region_available = {
-	AND = {
-		NOT = {
-			has_global_flag = ogre_tolerance_giants_$region$
-		}
-		any_owned_province = {
-			region = $region$_region
-			fast_has_pop_of_race = {
-				race = ogre
-			}
-		}
-	}
-}
-
+# ogre_tolerance_giants_region_available = {
+# 	AND = {
+# 		NOT = {
+# 			has_global_flag = ogre_tolerance_giants_$region$
+# 		}
+# 		any_owned_province = {
+# 			region = $region$_region
+# 			fast_has_pop_of_race = {
+# 				race = ogre
+# 			}
+# 		}
+# 	}
+# }
 ogre_tolerance_has_any_region_available = {
 	OR = {
-		ogre_tolerance_giants_region_available = {
-			region = northern_pass
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_northern_pass
 		}
-		ogre_tolerance_giants_region_available = {
-			region = gerudian_frontier
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_gerudian_frontier
 		}
-		ogre_tolerance_giants_region_available = {
-			region = dalr
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_dalr
 		}
-		ogre_tolerance_giants_region_available = {
-			region = olavlund
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_olavlund
 		}
-		ogre_tolerance_giants_region_available = {
-			region = alenic_reach
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_alenic_reach
 		}
-		ogre_tolerance_giants_region_available = {
-			region = yyl_moista
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_yyl_moista
 		}
-		ogre_tolerance_giants_region_available = {
-			region = ogre_valley
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_ogre_valley
 		}
-		ogre_tolerance_giants_region_available = {
-			region = west_forbidden_plains
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_west_forbidden_plains
 		}
-		ogre_tolerance_giants_region_available = {
-			region = serpent_gift
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_serpent_gift
 		}
-		ogre_tolerance_giants_region_available = {
-			region = east_forbidden_plains
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_east_forbidden_plains
 		}
-		ogre_tolerance_giants_region_available = {
-			region = south_yarikhoi
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_south_yarikhoi
 		}
-		ogre_tolerance_giants_region_available = {
-			region = north_yarikhoi
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_north_yarikhoi
 		}
-		ogre_tolerance_giants_region_available = {
-			region = nuzurbokh
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_nuzurbokh
 		}
-		ogre_tolerance_giants_region_available = {
-			region = moduk
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_moduk
 		}
-		ogre_tolerance_giants_region_available = {
-			region = khaashalg
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_khaashalg
 		}
-		ogre_tolerance_giants_region_available = {
-			region = nomsyulhan
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_nomsyulhan
 		}
-		ogre_tolerance_giants_region_available = {
-			region = shuvuushudi
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_shuvuushudi
 		}
-		ogre_tolerance_giants_region_available = {
-			region = odheongu
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_odheongu
 		}
-		ogre_tolerance_giants_region_available = {
-			region = north_yanshen
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_north_yanshen
 		}
-		ogre_tolerance_giants_region_available = {
-			region = lower_yanshen
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_lower_yanshen
 		}
-		ogre_tolerance_giants_region_available = {
-			region = upper_yanshen
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_upper_yanshen
 		}
-		ogre_tolerance_giants_region_available = {
-			region = demon_hills
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_demon_hills
 		}
-		ogre_tolerance_giants_region_available = {
-			region = shamakhad
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_shamakhad
 		}
-		ogre_tolerance_giants_region_available = {
-			region = dhujat
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_dhujat
 		}
-		ogre_tolerance_giants_region_available = {
-			region = rahen_coast
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_rahen_coast
 		}
-		ogre_tolerance_giants_region_available = {
-			region = rakhadesh
+		NOT = {
+			has_global_flag = ogre_tolerance_giants_rakhadesh
 		}
 	}
 }

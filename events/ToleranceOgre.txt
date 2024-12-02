@@ -270,8 +270,8 @@ country_event = {
 					has_estate = estate_adventurers
 					ogre_tolerance_has_any_region_available = yes
 				}
-				country_event = {
-					id = ogre_tolerance_events.12
+				ogre_tolerance_giants_all_regions = {
+					event = ogre_tolerance_events.12
 				}
 			}
 			# Dire Herds Cause Commotion at Market
@@ -1855,44 +1855,32 @@ country_event = {
 }
 
 # Heritage of Fallen Giants
-country_event = {
+province_event = {
 	id = ogre_tolerance_events.12
 	title = ogre_tolerance_events.12.t
 	desc = ogre_tolerance_events.12.d
 	picture = GENIE_RUINS_eventPicture
 	is_triggered_only = yes
-	immediate = {
-		random_owned_province = {
-			limit = {
-				has_ogre_minority_trigger = yes
-				ogre_tolerance_has_any_region_available = yes
-			}
-			save_event_target_as = ogre_tolerance_target
-		}
-	}
-	after = {
-		ogre_tolerance_giants_happened = yes
-	}
 	option = {
 		name = ogre_tolerance_events.12.a
-		event_target:ogre_tolerance_target = {
-			add_province_modifier = {
-				name = ogre_tolerance_ogre_giant_ruins
-				duration = -1
+		add_province_modifier = {
+			name = ogre_tolerance_ogre_giant_ruins
+			duration = -1
+		}
+		add_ogre_minority_size_effect = yes
+		owner = {
+			add_estate_loyalty_modifier = {
+				estate = estate_adventurers
+				desc = ogre_tolerance_events.12.a_tt_LOY
+				loyalty = -10
 			}
-			add_ogre_minority_size_effect = yes
+			add_estate_influence_modifier = {
+				estate = estate_adventurers
+				desc = ogre_tolerance_events.12.a_tt
+				influence = -10
+			}
+			large_increase_of_ogre_tolerance_effect = yes
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_adventurers
-			desc = ogre_tolerance_events.12.a_tt_LOY
-			loyalty = -10
-		}
-		add_estate_influence_modifier = {
-			estate = estate_adventurers
-			desc = ogre_tolerance_events.12.a_tt
-			influence = -10
-		}
-		large_increase_of_ogre_tolerance_effect = yes
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -1903,8 +1891,10 @@ country_event = {
 	}
 	option = {
 		name = ogre_tolerance_events.12.b
-		add_treasury = 50
-		small_increase_of_ogre_tolerance_effect = yes
+		owner = {
+			add_treasury = 50
+			small_increase_of_ogre_tolerance_effect = yes
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -1915,18 +1905,20 @@ country_event = {
 	}
 	option = {
 		name = ogre_tolerance_events.12.c
-		add_treasury = 150
-		add_estate_loyalty_modifier = {
-			estate = estate_adventurers
-			desc = ogre_tolerance_events.12.c_tt_LOY
-			loyalty = 10
+		owner = {
+			add_treasury = 150
+			add_estate_loyalty_modifier = {
+				estate = estate_adventurers
+				desc = ogre_tolerance_events.12.c_tt_LOY
+				loyalty = 10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_adventurers
+				desc = ogre_tolerance_events.12.c_tt
+				influence = 10
+			}
+			small_decrease_of_ogre_tolerance_effect = yes
 		}
-		add_estate_influence_modifier = {
-			estate = estate_adventurers
-			desc = ogre_tolerance_events.12.c_tt
-			influence = 10
-		}
-		small_decrease_of_ogre_tolerance_effect = yes
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -1939,21 +1931,23 @@ country_event = {
 		name = ogre_tolerance_events.12.e
 		highlight = yes
 		trigger = {
-			OR = {
-				ruler_has_personality = charismatic_negotiator_personality
-				ruler_has_personality = silver_tongue_personality
-				ruler_has_personality = water_planetouched_personality
+			owner = {
+				OR = {
+					ruler_has_personality = charismatic_negotiator_personality
+					ruler_has_personality = silver_tongue_personality
+					ruler_has_personality = water_planetouched_personality
+				}
 			}
 		}
-		event_target:ogre_tolerance_target = {
-			add_province_modifier = {
-				name = ogre_tolerance_state_giant_ruins
-				duration = -1
-			}
-			add_ogre_minority_size_effect = yes
+		add_province_modifier = {
+			name = ogre_tolerance_state_giant_ruins
+			duration = -1
 		}
-		add_treasury = 50
-		small_increase_of_ogre_tolerance_effect = yes
+		add_ogre_minority_size_effect = yes
+		owner = {
+			add_treasury = 50
+			small_increase_of_ogre_tolerance_effect = yes
+		}
 		ai_chance = {
 			factor = 100
 			modifier = {

@@ -1,160 +1,142 @@
-ogre_tolerance_giants_happened = {
-	event_target:ogre_tolerance_target = {
-		if = {
-			limit = {
-				region = northern_pass_region
+ogre_tolerance_giants_region = {
+	if = {
+		limit = {
+			AND = {
+				has_country_flag = ogre_tolerance_looking_for_province
+				NOT = {
+					has_global_flag = ogre_tolerance_giants_$region$
+				}
 			}
-			set_global_flag = ogre_tolerance_giants_northern_pass
 		}
-		if = {
+		random_province = {
 			limit = {
-				region = gerudian_frontier_region
+				region = $region$_region
 			}
-			set_global_flag = ogre_tolerance_giants_gerudian_frontier
-		}
-		if = {
-			limit = {
-				region = dalr_region
+			if = {
+				limit = {
+					owned_by = ROOT
+					fast_has_pop_of_race = {
+						race = ogre
+					}
+				}
+				province_event = {
+					id = $event$
+				}
+				owner = {
+					set_global_flag = ogre_tolerance_giants_$region$
+					clr_country_flag = ogre_tolerance_looking_for_province
+				}
 			}
-			set_global_flag = ogre_tolerance_giants_dalr
-		}
-		if = {
-			limit = {
-				region = olavlund_region
-			}
-			set_global_flag = ogre_tolerance_giants_olavlund
-		}
-		if = {
-			limit = {
-				region = alenic_reach_region
-			}
-			set_global_flag = ogre_tolerance_giants_alenic_reach
-		}
-		if = {
-			limit = {
-				region = yyl_moista_region
-			}
-			set_global_flag = ogre_tolerance_giants_yyl_moista
-		}
-		if = {
-			limit = {
-				region = ogre_valley_region
-			}
-			set_global_flag = ogre_tolerance_giants_ogre_valley
-		}
-		if = {
-			limit = {
-				region = west_forbidden_plains_region
-			}
-			set_global_flag = ogre_tolerance_giants_west_forbidden_plains
-		}
-		if = {
-			limit = {
-				region = serpent_gift_region
-			}
-			set_global_flag = ogre_tolerance_giants_serpent_gift
-		}
-		if = {
-			limit = {
-				region = east_forbidden_plains_region
-			}
-			set_global_flag = ogre_tolerance_giants_east_forbidden_plains
-		}
-		if = {
-			limit = {
-				region = south_yarikhoi_region
-			}
-			set_global_flag = ogre_tolerance_giants_south_yarikhoi
-		}
-		if = {
-			limit = {
-				region = north_yarikhoi_region
-			}
-			set_global_flag = ogre_tolerance_giants_north_yarikhoi
-		}
-		if = {
-			limit = {
-				region = nuzurbokh_region
-			}
-			set_global_flag = ogre_tolerance_giants_nuzurbokh
-		}
-		if = {
-			limit = {
-				region = moduk_region
-			}
-			set_global_flag = ogre_tolerance_giants_moduk
-		}
-		if = {
-			limit = {
-				region = khaashalg_region
-			}
-			set_global_flag = ogre_tolerance_giants_khaashalg
-		}
-		if = {
-			limit = {
-				region = nomsyulhan_region
-			}
-			set_global_flag = ogre_tolerance_giants_nomsyulhan
-		}
-		if = {
-			limit = {
-				region = odheongu_region
-			}
-			set_global_flag = ogre_tolerance_giants_odheongu
-		}
-		if = {
-			limit = {
-				region = shuvuushudi_region
-			}
-			set_global_flag = ogre_tolerance_giants_shuvuushudi
-		}
-		if = {
-			limit = {
-				region = north_yanshen_region
-			}
-			set_global_flag = ogre_tolerance_giants_north_yanshen
-		}
-		if = {
-			limit = {
-				region = lower_yanshen_region
-			}
-			set_global_flag = ogre_tolerance_giants_lower_yanshen
-		}
-		if = {
-			limit = {
-				region = upper_yanshen_region
-			}
-			set_global_flag = ogre_tolerance_giants_upper_yanshen
-		}
-		if = {
-			limit = {
-				region = demon_hills_region
-			}
-			set_global_flag = ogre_tolerance_giants_demon_hills
-		}
-		if = {
-			limit = {
-				region = shamakhad_region
-			}
-			set_global_flag = ogre_tolerance_giants_shamakhad
-		}
-		if = {
-			limit = {
-				region = dhujat_region
-			}
-			set_global_flag = ogre_tolerance_giants_dhujat
-		}
-		if = {
-			limit = {
-				region = rahen_coast_region
-			}
-			set_global_flag = ogre_tolerance_giants_rahen_coast
-		}
-		if = {
-			limit = {
-				region = rakhadesh_region
-			}
-			set_global_flag = ogre_tolerance_giants_rakhadesh
 		}
 	}
+}
+
+ogre_tolerance_giants_all_regions = {
+	# keep looking for one province per region until we find one
+	set_country_flag = ogre_tolerance_looking_for_province
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = northern_pass
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = gerudian_frontier
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = dalr
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = olavlund
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = alenic_reach
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = yyl_moista
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = ogre_valley
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = west_forbidden_plains
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = serpent_gift
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = east_forbidden_plains
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = south_yarikhoi
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = north_yarikhoi
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = nuzurbokh
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = moduk
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = khaashalg
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = nomsyulhan
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = shuvuushudi
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = odheongu
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = north_yanshen
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = lower_yanshen
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = upper_yanshen
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = demon_hills
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = shamakhad
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = dhujat
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = rahen_coast
+	}
+	ogre_tolerance_giants_region = {
+		event = $event$
+		region = rakhadesh
+	}
+	clr_country_flag = ogre_tolerance_looking_for_province
 }
