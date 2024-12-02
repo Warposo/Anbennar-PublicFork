@@ -5884,7 +5884,9 @@ on_yearly_pulse = {
 	}
 
 	if = {
-		limit = { tag = Z35 } 
+		limit = { 
+			tag = Z35 
+			NOT = { has_country_flag = rosande_resistance_stop } 
 		
 		if = {
 		    limit = { 

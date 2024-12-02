@@ -7,13 +7,15 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			AND = {
+				fast_has_pop_of_race = { race = orcish }
 				NOT = {
 					area_for_scope_province = {
-						has_province_modifier = Z35_orcish_workforce
-						has_province_modifier = Z35_grand_orcish_workforce 
+						OR = {
+							has_province_modifier = Z35_orcish_workforce
+							has_province_modifier = Z35_grand_orcish_workforce 
+						}
 					}
 				}
-				fast_has_pop_of_race = { race = orcish }
 				NOT = {
 					num_of_units_in_province = {
 						who = ROOT
@@ -55,34 +57,33 @@ country_decisions = {
 		effect = {
 			add_treasury = -100
 			add_mil_power = -50
-			If = {
-				limit = { mission_completed = rosande_harsh_control }
-				random_owned_province = {
-					limit = {
-						area_for_scope_province = {
-							NOT = {
-								has_province_modifier = Z35_grand_orcish_workforce 
-								has_province_modifier = Z35_orcish_workforce
-							}
-						}
-						fast_has_pop_of_race = { race = orcish }
-						num_of_units_in_province = {
-							who = ROOT
-							amount = 10
+			random_owned_province = {
+				limit = {
+					fast_has_pop_of_race = { race = orcish }
+					area_for_scope_province = {
+						OR = {
+							has_province_modifier = Z35_orcish_workforce
+                            has_province_modifier = Z35_grand_orcish_workforce
 						}
 					}
-					rosande_add_workforce_effect = yes
-					if = {
-						limit = { culture_is_orcish = yes }
-						change_culture = ROOT
-						change_religion = ROOT
-						kill_units = {
-							who = owner
-							amount = 5
-						}
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 10
 					}
 				}
+				rosande_add_workforce_effect = yes
+				if = {
+					limit = { culture_is_orcish = yes }
+					change_culture = ROOT
+					change_religion = ROOT
+					kill_units = {
+						who = owner
+						amount = 5
+					}
+				}
+				change_trade_goods = wine
 			}
+			large_decrease_of_orcish_tolerance_effect = yes
 		}
 	}
 }

@@ -202,9 +202,12 @@ rosande_1_missions = {
 					}
 				}
 			}
-			216 = {
-				owner = {
-					NOT = { liberty_desire = 50 }
+			if = {
+				limit = { subject_owns = 216 }
+				216 = {
+					owner = {
+						NOT = { liberty_desire = 50 }
+					}
 				}
 			}
 			451 = {
@@ -477,7 +480,7 @@ rosande_2_missions = {
 			}
 		}
 
-		trigger = {}
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = rosande_magic_feast_tt
 				OR = {
@@ -525,7 +528,7 @@ rosande_2_missions = {
 		}
 	}
 
-	rosande_no_orc_shall_leave= { #No orc shall leave
+	rosande_no_orc_shall_leave = { #No orc shall leave
 		icon = mission_orc_chillin
 		position = 6
 		required_missions = {
@@ -534,26 +537,26 @@ rosande_2_missions = {
 		}
 		provinces_to_highlight = {
             OR = {
-				area = merescker_area
-                area = nortmerewood_area
-                area = upcreek_area
-                area = verteben_area
-				area = valefort_area
-				area = taran_plains_area 
 				AND = {
-					province_id = 764  #Upcreek
-					NOT = {	province_has_current_tech_fort_trigger = yes }
+					OR = {
+						area = merescker_area
+						area = nortmerewood_area
+						area = upcreek_area
+						area = verteben_area
+						area = valefort_area
+						area = taran_plains_area 
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT}
 				}
 				AND = {
-					province_id = 772 #Banwick
-					NOT = { province_has_current_tech_fort_trigger = yes }
-				}
-				AND = {
-					province_id = 780 #Valefort
+					OR = {
+						province_id = 724 #Upcreek
+						province_id = 772 #Banwick
+						province_id = 780 #Valefort
+					}
 					NOT = { province_has_current_tech_fort_trigger = yes }
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT}
 		}
 		
 		trigger = {
@@ -656,6 +659,7 @@ rosande_2_missions = {
 			OR = {
 				AND = {
 					region = west_castanor_region
+					owned_by = ROOT
 					NOT = {
 						has_building = soldier_households
 					}
@@ -667,7 +671,6 @@ rosande_2_missions = {
 					}
 				}
 			}
-			country_or_non_sovereign_subject_holds = ROOT
 		}
 
 		trigger = {
@@ -812,10 +815,19 @@ rosande_2_2_missions = {
 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 827 #Ionntras
+				AND = {
+					province_id = 827 #Ionntras
+					NOT = {
+						AND = {
+							development = 30
+							num_of_buildings_in_province = 6
+							num_of_times_expanded_infrastructure = 3
+						}
+					}
+				}
 				area = humacvord_area
-				is_prosperous = no
 			}
+			is_prosperous = no
 		}
 
 		trigger = {
@@ -902,12 +914,17 @@ rosande_3_missions = {
 
 		provinces_to_highlight = {
 			OR = {
-            	area = oudeben_area
-                area = clovenwood_area
-                area = banesfork_area
-				area = themin_area
 				AND = {
-					area = blademarch_area
+					OR = {
+						area = oudeben_area
+               	 		area = clovenwood_area
+               	 		area = banesfork_area
+						area = themin_area
+					}
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					OR = { area = blademarch_area }
 					NOT = {
 						AND = {
 							has_production_building_trigger = yes
@@ -916,7 +933,6 @@ rosande_3_missions = {
 					}
 				}
 			}
-			NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
@@ -1054,14 +1070,14 @@ rosande_3_missions = {
 				change_trade_goods = wine
 				if = {
 					limit = { has_orcish_majority_trigger = yes }
-				add_culture_construction = {
-					speed = 0.5
-					cost = 0
+					add_culture_construction = {
+						speed = 0.5
+						cost = 0
+					}
+					change_religion = ROOT
+					add_orcish_minority_size_effect = yes
+					add_orcish_minority_size_effect = yes
 				}
-				change_religion = ROOT
-				}
-				add_orcish_minority_size_effect = yes
-				add_orcish_minority_size_effect = yes
 			}
 			add_manpower = -15
 			hidden_effect = {

@@ -14819,6 +14819,7 @@ estate_nobles_mengi_partners = {
 	}
 }
 
+#Rosande
 estate_nobles_rosande_competent_slaveowners = {
 	icon = privilege_serf
 
