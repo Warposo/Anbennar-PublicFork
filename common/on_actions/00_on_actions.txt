@@ -9536,6 +9536,11 @@ on_five_year_pulse = {
 		1000 = 0
 	}
 
+	# racial admin flavour events
+	random_events = {
+		1000 = ogre_flavour_events.0 # Ogre
+	}
+
 	events = {
 		#seven_cities_events.1000 #Clearing of Seven Cities Hunt when goal is no longer possible
 		# fragments.2000	#Already done in the four years pulse
@@ -10314,12 +10319,6 @@ on_five_year_pulse_3 = {
 		200 = mengi_flavor_events.7 #bad deal event chain (more common as requires loans, and negstab/income)
 		50 = mengi_flavor_events.10 #play event chain
 	}
-
-	random_events = {
-		# ogre + fotg flavor event manager
-		1000 = ogre_flavour_events.0
-	}
-
 }
 
 on_five_year_pulse_4 = {
