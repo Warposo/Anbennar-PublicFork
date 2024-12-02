@@ -1861,7 +1861,7 @@ R38_Post_Suhan_3_a_suhans = {
 					}
 					calc_true_if = {
 						amount = 11
-						all_known_country = {
+						owner = {
 							capital_scope = { superregion = rahen_superregion }
 							NOT = { religion = suhans_praxis }
 						}

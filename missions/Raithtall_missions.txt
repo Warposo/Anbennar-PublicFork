@@ -1440,7 +1440,7 @@ raithtall_4 = {
 						NOT = { has_province_flag = raithtall_snecboth_boost }
 					}
 					if = {
-						limit = { is_statists_in_power = yes }
+						limit = { owner = { is_statists_in_power = yes } }
 						if = {
 							limit = { is_prosperous = yes }
 							ROOT = { add_treasury = 20 }
