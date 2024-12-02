@@ -357,7 +357,13 @@
  summer_kraken_3:0 "Friendly sea monster"
  summer_kraken_3_desc:0 "Friendly sea monster"
  
- built_embassy_tt: "We have built a fey embassy in our capital."
+ built_embassy_tt:0 "We have built a fey embassy in our capital."
+
+ has_any_fey_spring_aspect_tt:0 "Has any Spring fey influencer"
+ has_any_fey_summer_aspect_tt:0 "Has any Summer fey influencer"
+ has_any_fey_autumn_aspect_tt:0 "Has any Autumn fey influencer"
+ has_any_fey_winter_aspect_tt:0 "Has any Winter fey influencer"
+ has_any_fey_eordellon_aspect_tt:0 "Has any Eordellon fey influencer"
  
  eordellon.4.generic.one.tt:0 "Has §Y50§!¤\n--------------------------------------------------------------\nOnce we have the funds we can do the following:"
  eordellon.4.embassytt:0 "Start the embassy construction event chain"
