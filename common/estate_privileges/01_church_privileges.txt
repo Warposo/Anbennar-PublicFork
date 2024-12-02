@@ -35,6 +35,13 @@ estate_church_land_rights = {
 			max_absolutism = 5
 		}
 	}
+	conditional_modifier = {
+		trigger = { has_country_flag = h35_clergy_land_bonus }
+		modifier = { 
+			governing_capacity = 100
+			regiment_recruit_speed = -0.1
+		}
+	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
 	#	modifier = { monthly_ottoman_decadence = 0.02 }

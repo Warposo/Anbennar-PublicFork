@@ -147,15 +147,19 @@ h35_branch_1 = {
 			
 		}
 		effect = {
-			all_owned_province = {
-				OR = {
-					region = sarda_region
-					region = veykoda_region
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = sarda_region
+						region = veykoda_region
+					}
+					has_terrain = farmlands
 				}
-				has_has_terrain = farmlands
 				add_human_minority_size_effect = yes
 				add_random_development = 2
 			}
+			custom_tooltip = h35_clergy_land_bonus
+			set_country_flag = h35_clergy_land_bonus
 			medium_decrease_of_ruinborn_tolerance_effect = yes
 		}
 	}
@@ -273,28 +277,35 @@ h35_branch_2 = {
 			NOT = { province_id = 2807 }
 		}
 		trigger = {
-			has_government_power = {
-				type = MIL
-				value = 7
-			}
+			monthly_mil = 7
 			army_size_percentage = 0.9
-			all_known_country = {
-				capital_scope = { region = veykoda_region }
-				OR = {
-					has_opinion = {
-						who = ROOT
-						value = -50
+			OR = {
+				all_known_country = {
+					capital_scope = { region = veykoda_region }
+					OR = {
+						has_opinion = {
+							who = ROOT
+							value = -50
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
 					}
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = insulted
-					}
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = scornfully_insulted
+				}
+				NOT = {
+					any_known_country = {
+						capital_scope = {
+							region = veykoda_region
+						}
 					}
 				}
 			}
+			
 		}
 		effect = {
 			veykoda_region = {
@@ -473,13 +484,6 @@ h35_branch_2 = {
 			}
 		}
 		effect = {
-			hidden_effect = {
-				set_saved_name = {
-					key = ichabod_general
-					type = simple
-					name = "Ichabod Roose"
-				}
-			}
 			country_event = { id = flavour_corinsfield.3 }
 			adbrabohvi_area = { add_permanent_claim = ROOT }
 			hor_velenynn_area = { add_permanent_claim = ROOT }
@@ -488,6 +492,8 @@ h35_branch_2 = {
 			hradapolere_area = { add_permanent_claim = ROOT }
 			ynnluka_area = { add_permanent_claim = ROOT }
 			remove_country_modifier = H35_new_home
+			set_country_flag = h35_ynnic_trial
+			custom_tooltip = ynnic_trials.tt
 		}
 	}
 	
@@ -513,6 +519,8 @@ h35_branch_2 = {
 		}
 		effect = {
 			country_event = { id = flavour_corinsfield.4 }
+			set_country_flag = h35_veykodan_trial
+			custom_tooltip = veykodan_trials.tt
 		}
 	}
 
@@ -544,8 +552,6 @@ h35_branch_2 = {
 	##
 	
 }
-##BranchEnd 1
-##BranchStart 2
 h35_branch_3 = {
 	slot = 3
 	generic = no
@@ -574,13 +580,12 @@ h35_branch_3 = {
 			has_discovered = 1140
 			has_discovered = 1141
 			has_discovered = 2841
-			H55 = { capital_scope = { has_discovered = ROOT } }
-			G94 = { capital_scope = { has_discovered = ROOT } }
-			H57 = { capital_scope = { has_discovered = ROOT } }
+			H55 = { OR = { exists = no capital_scope = { has_discovered = ROOT } } }
+			G94 = { OR = { exists = no capital_scope = { has_discovered = ROOT } } }
+			H57 = { OR = { exists = no capital_scope = { has_discovered = ROOT } } }
 			calc_true_if = {
 				amount = 4
-				any_owned_province = {
-					region = veykoda_region
+				veykoda_region = {
 					NOT = { area = corinsfield_area }
 					owned_by = ROOT
 				}
@@ -678,11 +683,24 @@ h35_branch_3 = {
 				}	
 			}
 			NOT = { accepted_culture = stone_dwarf accepted_culture = steel_dwarf accepted_culture = redfoot_halfling accepted_culture = pipefoot_halfling }
-			all_owned_province = {
-				region = veykoda_region
-				OR = {
-					NOT = { local_autonomy = 10 }
-					has_province_modifier = autonomy_decreased
+			custom_trigger_tooltip = {
+				tooltip = h35_veykoda_autonomy
+				all_owned_province = {
+					OR = {
+						AND = {
+							region = veykoda_region
+							AND = {
+								owned_by = ROOT
+								OR = {
+									NOT = { local_autonomy = 10 }
+									has_province_modifier = autonomy_decreased
+								}
+							}
+						}
+						NOT = {
+							region = veykoda_region
+						}
+					}
 				}
 			}
 		}
@@ -871,18 +889,26 @@ h35_branch_4 = {
 			##PROVINCESHIGHLIGHTCODE
 		}
 		trigger = {
-			capital_scope = { has_tax_building_trigger = yes }
-			corinsfield_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
-			stability = 1
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = h35_godwin.tt
-					AND = {
-						has_ruler = "Godwin"
-						dynasty = "of Escerton"
-					}
+			if = {
+				limit = {
+					ai = no
 				}
-				dip = 3
+				capital_scope = { has_tax_building_trigger = yes }
+				corinsfield_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+				stability = 1
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = h35_godwin.tt
+						AND = {
+							has_ruler = "Godwin"
+							dynasty = "of Escerton"
+						}
+					}
+					dip = 3
+				}
+			}
+			else = {
+				always = yes
 			}
 		}
 		effect = {
@@ -891,9 +917,18 @@ h35_branch_4 = {
 				type = treasurer
 				name = "Father Dostan"
 				skill = 2
-				culture = Corinsfielder
+				culture = corinsfielder
 				religion = corinite
 				cost_multiplier = 0.5
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_country_modifier = {
+					name = h35_ai_only
+					duration = -1
+				}
 			}
 		}
 	}
@@ -923,7 +958,7 @@ h35_branch_4 = {
 			OR = {
 				inquisitor = 2
 				theologian = 2
-				adm = 100
+				adm_power = 100
 			}
 			OR = {
 				custom_trigger_tooltip = {
@@ -948,7 +983,7 @@ h35_branch_4 = {
 				}
 				add_adm_power = -100
 			}
-			add_country_modifier = { name = h35_purged_mages duration = -1 }
+			add_country_modifier = { name = h35_purged_mages duration = 7300 }
 			country_event = { id = flavour_corinsfield.11 }
 		}
 	}
@@ -977,11 +1012,10 @@ h35_branch_4 = {
 			NOT = { average_unrest = 0 }
 		}
 		effect = {
-			corinsfield_area = {
-				type = all
-				add_prosperity = 100
-			}
+			corinsfield_area = { add_prosperity = 100 }
 			country_event = { id = flavour_corinsfield.12 }
+			custom_tooltip = h35_witch_trial_influence
+			set_country_flag = h35_unlock_influence
 		}
 	}
 	
@@ -1068,11 +1102,8 @@ h35_branch_4 = {
 			
 		}
 		effect = {
-			#lvl 3 reform
-			add_country_modifier = {
-				name = h35_common_corin_education
-				duration = -1
-			}
+			set_country_flag = h35_unlocked_blessed_theocracy
+			add_government_reform = blessed_literacy_reform
 		}
 	}
 	
@@ -1105,6 +1136,14 @@ h35_branch_5 = {
 		}
 		effect = {
 			2807 = { rename_capital = "Poppyspring" }
+			capital_scope = {
+				add_province_modifier = {
+					name = h35_poppycompact
+					duration = -1
+				}
+			}
+			add_government_reform = peasant_councils_reform
+			set_country_flag = h35_unlock_peasant_councils
 		}
 	}
 	
@@ -1118,8 +1157,8 @@ h35_branch_5 = {
 			area = corinsfield_area
 		}
 		trigger = {
-			all_owned_province = {
-				area = corinsfield_area
+			corinsfield_area = {
+				type = all
 				has_building = temple
 			}
 			devotion = 80
@@ -1132,6 +1171,8 @@ h35_branch_5 = {
 		effect = {
 			set_country_flag = h35_goodmen
 			custom_tooltip = h35_goodmen.tt
+			set_country_flag = h35_settler_trial
+			custom_tooltip = settler_trials.tt
 		}
 	}
 	
@@ -1228,8 +1269,9 @@ h35_branch_5 = {
 			OR = {
 				inquisitor = 3
 				has_global_modifier_value = {
-					modifier = missionary_strength
+					which = global_missionary_strength
 					value = 0.07
+					extra_shortcut = yes
 				}
 				adm_power = 100
 			}
@@ -1241,7 +1283,7 @@ h35_branch_5 = {
 						OR = {
 							inquisitor = 3
 							has_global_modifier_value = {
-								modifier = missionary_strength
+								which = global_missionary_strength
 								value = 0.07
 							}
 						}
@@ -1249,6 +1291,8 @@ h35_branch_5 = {
 				}
 				add_adm_power = -100
 			}
+			set_country_flag = h35_ban_mages_treaty
+			custom_tooltip = h35_unlock_ban_mage 
 		}
 	}
 	

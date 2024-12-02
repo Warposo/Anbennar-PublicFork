@@ -2857,3 +2857,12 @@ L62_offer_rejected = {
 	opinion = -25
 	yearly_decay = 1
 }
+#h35 corinsfield
+H35_melted_the_dome = {
+	opinion = -80
+	yearly_decay = 1
+}
+H35_respected_burial = {
+	opinion = 35
+	yearly_decay = 1
+}

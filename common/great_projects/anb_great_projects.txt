@@ -4801,14 +4801,7 @@ H35_gp_crimson_cathedral = { #cathedral of crimson grace
 	type = monument
 
 	build_trigger = {
-		owner = {
-			OR = {
-				was_tag = H35
-				tag = H35
-			}
-			religion = corinite
-		}
-		religion = corinite
+		has_province_flag = h35_crimson_cathedral
 	}
 
 	on_built = {
@@ -4818,7 +4811,15 @@ H35_gp_crimson_cathedral = { #cathedral of crimson grace
 	}
 
 	can_use_modifiers_trigger = {
-		
+		owner = {
+			OR = {
+				was_tag = H35
+				tag = H35
+				culture = corinsfielder
+			}
+			religion = corinite
+		}
+		religion = corinite
 	}
 
 	can_upgrade_trigger = {

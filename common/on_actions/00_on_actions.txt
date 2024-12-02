@@ -2416,6 +2416,39 @@ on_siege_won_country = {
 			}
 		}
 	}
+	#corinsfield
+	if = { 
+		limit = {
+			tag = H35
+			1133 = {
+				controlled_by = H35
+				NOT = { has_province_flag = h35_1133_sacked }
+			}
+			capital_scope = {
+				has_province_modifier = h35_istranar_refugees
+			}
+		}
+		country_event = { id = flavour_corinsfield.33 }
+		1133 = {
+			set_province_flag = h35_1133_sacked
+		}
+	}
+	if = {
+		limit = {
+			tag = H35
+			H35 = {
+				capital_scope = {
+					NOT = {
+						has_province_modifier = h35_istranar_refugees
+					}
+				}
+			}
+			1133 = {
+				controlled_by = H35
+				NOT = { has_province_flag = h35_1133_sacked }
+			}
+		}
+	}
 }
 
 # country
@@ -3061,6 +3094,18 @@ on_monarch_death = {
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = H35
+				was_tag = H35
+			}
+			has_government_reform = peasants_theocracy_reform
+		}
+		country_event = {
+			id = flavour_corinsfield.90
+		}
 	}
 
 	if = {
@@ -11770,6 +11815,12 @@ on_parliament_seat_given = {
 		}
 		add_province_modifier = { name = hold_has_parliament duration = -1 }
 	}
+	if = {
+		limit = {
+			has_government_reform = peasant_councils_refrom
+		}
+		add_province_modifier = { name = h35_building_from_parliament duration = -1 }
+	}
 }
 
 #province 1.35
@@ -15675,6 +15726,7 @@ on_institution_embracement = {
 			has_institution = manufactories
 			NOT = {
 				has_country_flag = artificery_unlocked
+				tag = H35 #corinsfield
 			}
 			OR = {
 				NOT = { religion = bulwari_sun_cult }
@@ -15683,6 +15735,15 @@ on_institution_embracement = {
 		}
 		country_event = {
 			id = anbennar_setup.19
+		}
+	}
+	if = { #Artificery start corinsfield
+		limit = {
+			has_institution = manufactories
+			tag = H35
+		}
+		country_event = {
+			id = flavour_corinsfield.79
 		}
 	}
 	if = { #Anbennar - isobelin events

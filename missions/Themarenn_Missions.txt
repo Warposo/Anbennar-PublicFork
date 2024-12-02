@@ -599,12 +599,25 @@ a95_river_parties = {
 		}
 
 		trigger = {
-			hehaine_river_group = {
-				owned_by = ROOT
-				type = all
-				NOT = { devastation = 1 }
-				grown_by_development = 8
-			}
+			custom_trigger_tooltip = {
+				tooltip = A95_hehaine_stuff.tt
+				hehaine_river_group = {
+					owned_by = ROOT
+					type = all
+					NOT = { devastation = 1 }
+					grown_by_development = 8
+				}
+			} #268 270 253 356 353 352 351 261 350
+			custom_trigger_tooltip = { tooltip = hh268.tt 268 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh270.tt 270 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh263.tt 263 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh356.tt 356 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh353.tt 353 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh352.tt 352 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh351.tt 351 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh261.tt 261 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh350.tt 350 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			
 			stability = 3
 			high_tolerance_elven_race_trigger = yes
 		}
@@ -1360,8 +1373,8 @@ a95_heretics = {
 				limit = {
 					266 = { owned_by = ROOT }
 				}
-				266 = { cede_province = A44 }
-				add_truce_with = A44
+				266 = { cede_province = B92 }
+				add_truce_with = B92
 			}
 			country_event = { id = flavour_themarenn.16 }
 			custom_tooltip = a95_expose_villains.c1
@@ -1561,29 +1574,32 @@ a95_imperial_council = {
 
 		trigger = {
 			stability = 1
-			OR = {
-				calc_true_if = {
-					custom_trigger_tooltip = {
-						tooltip = a95_moonbois.tt
-						all_known_country = {
-							capital_scope = { region = esmaria_region }
-							has_country_flag = lilac_wars_moon_party
-							OR = {
-								has_opinion = {
-									who = ROOT
-									value = 75
+			custom_trigger_tooltip = {
+				tooltip = A95_calm_after.tt
+				OR = {
+					calc_true_if = {
+						custom_trigger_tooltip = {
+							tooltip = a95_moonbois.tt
+							all_known_country = {
+								capital_scope = { region = esmaria_region }
+								has_country_flag = lilac_wars_moon_party
+								OR = {
+									has_opinion = {
+										who = ROOT
+										value = 75
+									}
+									any_ally = { tag = ROOT }
 								}
-								any_ally = { tag = ROOT }
 							}
 						}
+						amount = 5
 					}
-					amount = 5
-				}
-				NOT = {
-					calc_true_if = {
-						amount = 2
-						all_known_country = {
-							capital_scope = { region = esmaria_region }
+					NOT = {
+						calc_true_if = {
+							amount = 2
+							all_known_country = {
+								capital_scope = { region = esmaria_region }
+							}
 						}
 					}
 				}

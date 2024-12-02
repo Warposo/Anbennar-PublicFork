@@ -689,6 +689,8 @@ country_event = { # The Right of Succession
 	option = {
 		name = flavour_themarenn.14.b
 		add_legitimacy = 100
+		add_splendor = 800
+		add_stability = 1
 	}
 }
 
@@ -776,7 +778,13 @@ country_event = { #Demands of Subjugation
 
 	option = {
 		name = flavour_themarenn.17.a
-		ai_chance = { factor = 75 }
+		ai_chance = { 
+			factor = 99
+			modifier = {
+				factor = 0
+				A95 = { is_rival = A35 }
+			}
+		}
 		A95 = { 
 			add_casus_belli = {
 			type = cb_vassalize_mission
@@ -788,10 +796,10 @@ country_event = { #Demands of Subjugation
 	option = {
 		name = flavour_themarenn.17.b
 		ai_chance = { 
-			factor = 25
+			factor = 1
 			modifier = {
 				factor = 100
-				A95 = { is_rival = yes }
+				A95 = { is_rival = A35 }
 			}
 		}
 		A95 = { vassalize = ROOT }
@@ -1338,7 +1346,7 @@ country_event = { #phase 2 challenge twins
 		highlight = yes
 
 		trigger = {
-			ruler_has_personality = embezzler
+			ruler_has_personality = embezzler_personality
 		}
 		add_corruption = 2
 		add_inflation = 3
@@ -2106,14 +2114,15 @@ country_event = {
 	desc = flavour_themarenn.52.d
 	picture = SWEDEN_LEAGUE_WAR_eventPicture
 	trigger = {
-		tag = A95
+		OR = {
+			tag = A95
+			was_tag = A95
+		}
 		is_year = 1525
 		religion = regent_court
-		or = {
-			europe = {
-				any_province = {
-					is_reformation_center = yes
-				}
+		europe = {
+			any_province = {
+				is_reformation_center = yes
 			}
 		}
 	}
@@ -2124,10 +2133,21 @@ country_event = {
 	option = {
 		name = flavour_themarenn.52.a
 		define_ruler = {
+			name = "Casetin"
+			dynasty = "síl Themarenn"
 			adm = 5
 			dip = 4
 			mil = 6
 		}
+		add_ruler_modifier = {
+			name = A95_pro_adean
+			duration = -1
+		}
+		set_country_flag = a95_casetin
+	}
+	option = {
+		name = flavour_themarenn.52.b
+		add_stability_or_adm_power = yes
 	}
 }
 country_event = { #Emperor Casetin sil Themarenn and the corinite war
@@ -2135,6 +2155,7 @@ country_event = { #Emperor Casetin sil Themarenn and the corinite war
 	title = flavour_themarenn.53.t
 	desc = flavour_themarenn.53.d
 	picture = SWEDEN_LEAGUE_WAR_eventPicture
+	fire_only_once = yes
 	trigger = {
 		tag = A95
 		hre_leagues_enabled = yes
@@ -2145,17 +2166,122 @@ country_event = { #Emperor Casetin sil Themarenn and the corinite war
 			in_league = corinite
 		}
 	}
-	fire_only_once = yes
 	mean_time_to_happen = { months = 1 }
 	option = {		# to war!
 		name = flavour_themarenn.53.a
 		join_league = regent_court
 		add_ruler_modifier = {
 			name = a95_lion_of_esmaria
+			duration = -1
+		}
+		add_ruler_modifier = {
+			name = a95_lion_of_esmaria_marines
+			duration = -1
 		}
 		convert_ruler_to_general = yes
+		set_country_flag = a95_casetin2
 	}
 	option = { #nah
 		name = flavour_themarenn.53.b
+		if = {
+			limit = { has_ruler = "Casetin síl Themarenn" }
+			custom_tooltip = A95_casetin_abdicate
+			hidden_effect = {
+			kill_ruler = yes
+			}
+		}
+		
+	}
+}
+country_event = {
+	id = flavour_themarenn.54
+	title = flavour_themarenn.54.t
+	desc = flavour_themarenn.54.d
+	fire_only_once = yes
+	picture = SWEDEN_LEAGUE_WAR_eventPicture
+
+	trigger = {
+		OR = {
+			tag = A95
+			was_tag = A95
+		}
+		is_in_league_war = yes
+		Or = {
+			267 = {
+				has_ruler_leader_from = ROOT
+				unit_in_battle = yes
+			}
+			267 = {
+				any_neighbor_province = {
+					has_ruler_leader_from = ROOT
+					unit_in_battle = yes
+				}
+			}
+		}
+		has_country_flag = a95_casetin2
+		has_country_flag = a95_casetin	
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		add_country_modifier = {
+			name = A95_indebtment
+			duration = 3650
+		}
+		set_country_flag = A95_death_of_casetin
+		clr_country_flag = a95_casetin2
+		clr_country_flag = a95_casetin
+	}
+
+	option = {
+		name = flavour_themarenn.54.a
+		kill_ruler = yes
+	}
+}
+
+country_event = {
+	id = flavour_themarenn.55
+	title = flavour_themarenn.55.t
+	desc = flavour_themarenn.55.d
+	fire_only_once = yes
+	picture = SWEDEN_LEAGUE_WAR_eventPicture
+
+	trigger = {
+		OR = {
+			tag = A95
+			was_tag = A95
+		}
+		has_country_flag = a95_casetin
+		is_in_league_war = no
+		hre_leagues_enabled = no
+		NOT = {
+			has_country_flag = A95_death_of_casetin
+		}
+		has_country_flag = a95_casetin2
+		has_country_flag = a95_casetin
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		add_country_modifier = {
+			name = A95_war_cost
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = A95_courage
+			duration = 18250
+		}
+		remove_country_modifier = A95_lion_of_esmaria_marines
+		remove_country_modifier = a95_lion_of_esmaria
+		clr_country_flag = a95_casetin2
+		clr_country_flag = a95_casetin
+	}
+
+	option = {
+		name = flavour_themarenn.55.a
 	}
 }

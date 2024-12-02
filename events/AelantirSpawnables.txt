@@ -1154,6 +1154,12 @@ province_event = {
 			adventurer_spawnable_starting_bonus = { tag = H35 }
 			switch_tag = H35
 		}
+		H35 = {
+			country_event = {
+				id = flavour_corinsfield.87
+				days = 10
+			}
+		}
 	}
 	
 	after = { 

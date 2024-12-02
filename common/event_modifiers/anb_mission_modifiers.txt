@@ -32962,3 +32962,37 @@ raithtall_winter_quelled = {
 raithtall_golden_dream_mod = {
 	monthly_splendor = 1
 }
+#more themarenn
+A95_war_cost = {
+	manpower_recovery_speed = -0.2
+	sailors_recovery_speed = -0.2
+	inflation_action_cost = 0.2
+	production_efficiency = -0.2
+	trade_efficiency = -0.1
+}
+A95_indebtment = {
+	interest = 1
+	trade_efficiency = -0.2
+	production_efficiency = -0.2
+	inflation_action_cost = 1.5
+}
+A95_courage = {
+	artillery_fire = 0.25
+	land_morale = 0.05
+}
+a95_lion_of_esmaria = {
+	artillery_fire = 1
+	artillery_cost = -0.25
+	tolerance_own = 3
+	inflation_reduction = 1
+}
+A95_lion_of_esmaria_marines = {
+	discipline = 0.05
+	is_marine_modifier = yes
+}
+A95_pro_adean = {
+	reasons_to_elect = 50
+	land_forcelimit = 0.15
+	global_heretic_missionary_strength = 0.02
+	local_tolerance_of_heretics = -4
+}
