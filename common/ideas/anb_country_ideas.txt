@@ -43671,3 +43671,47 @@ U45_ideas = {
 		trade_efficiency = 0.1
 	}
 }
+#Wattoi
+S86_ideas = {
+	start = {
+		production_efficiency = 0.1
+		global_prov_trade_power_modifier = 0.1
+	}
+	
+	bonus = {
+		recover_army_morale_speed = 0.10
+	}
+	
+	trigger = {
+		tag = S86 #Wattoi
+	}
+	free = yes
+	
+	S86_reviving_the_old_ways = { 
+		reform_progress_growth = 0.15
+	}
+	
+	S86_ardimyas_errant_sons_and_daughters = { 
+		tolerance_heathen = 2
+	}
+	
+	S86_safety_in_the_crimsons_shade = { 
+		stability_cost_modifier = -0.15
+	}
+	
+	S86_out_of_the_shadow_of_ages_past = { 
+		build_time = -0.15
+	}
+	
+	S86_foremost_among_the_qayneen = { 
+		leader_land_manuever = 1
+	}
+	
+	S86_the_lions_bargain = { 
+		mil_tech_cost_modifier = -0.1
+	}
+	
+	S86_killing_qeyikul = { 
+		discipline = 0.05
+	}
+}
