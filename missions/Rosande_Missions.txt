@@ -178,7 +178,10 @@ rosande_1_missions = {
 			}
 			num_of_owned_provinces_with = {
 				value = 8
-				has_province_modifier = Z35_orcish_workforce
+				OR = {
+					has_province_modifier = Z35_orcish_workforce
+					has_province_modifier = Z35_grand_orcish_workforce
+				}
 				has_building = farm_estate
 			}
 			OR = {
