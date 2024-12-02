@@ -14884,13 +14884,16 @@ estate_nobility_S53_tanizu_tradition_covenant = {
 	on_granted = {
 	}
 	on_granted_province = {
-		if = {
-			limit = {
-				religion = beast_memory
-			}
-			add_province_modifier = { name = S53_beastial_wisdom duration = -1 }
-		}
-	}
+        if = {
+            limit = {
+                religion = beast_memory
+            }
+            add_province_modifier = { name = S53_beastial_wisdom duration = -1 }
+        }
+        else = {
+            remove_province_modifier = S53_beastial_wisdom
+        }
+    }
 	on_revoked = {
 	}
 	on_revoked_province = {

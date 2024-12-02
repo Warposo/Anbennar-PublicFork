@@ -3194,11 +3194,11 @@ on_monarch_death = {
 			}
 		}
 		remove_opinion = {
-			who = prev
+			who = ROOT 
 			modifier = S53_ceremonial_marriage
 		}
 		reverse_remove_opinion = {
-			who = prev
+			who = ROOT 
 			modifier = S53_ceremonial_marriage
 		}
 		clr_country_flag = S53_marriage_of_many_target_flag 

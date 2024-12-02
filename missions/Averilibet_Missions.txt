@@ -1146,6 +1146,7 @@ column_3 = {
 			fast_has_pop_of_race = { race = lizardfolk }
 			NOT = {
 				development = 9
+				owned_by = ROOT
 			}
 		} 
 
@@ -1204,7 +1205,7 @@ column_3 = {
 				}
 				owner = {
 					is_subject_of = ROOT
-					NOT = { liberty_desire = 1 }
+					liberty_desire = 1 
 				}
 			}
 		}
@@ -1654,10 +1655,12 @@ column_4 = {
 							culture = tanizu
 							culture = cyazizeta_lizardfolk
 						}
-						development_in_provinces = {
-							value = 125
-						}
-						NOT = { liberty_desire = 50 } 	
+						NOT = {
+							liberty_desire = 50 
+							development_in_provinces = {
+								value = 125
+							}
+						} 	
 					}
 				}
 			}	
