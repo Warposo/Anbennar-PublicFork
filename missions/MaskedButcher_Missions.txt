@@ -1093,9 +1093,9 @@ maskedbutcher_missions_2d = {
 				area = zagnabad_area
 				area = aqatbahar_area
 				area = medbahar_area
-				area = south_overmarch_area
-				area = east_overmarch_area
-				area = west_overmarch_area
+				area = oudmarck_area
+				area = tencmarck_area
+				area = lencmarck_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1115,16 +1115,16 @@ maskedbutcher_missions_2d = {
 					owned_by = ROOT
 				}
 			}
-			east_overmarch_area = {
+			tencmarck_area = {
 				type = all
 				owned_by = ROOT
 			}
 			OR = {
-				south_overmarch_area = {
+				oudmarck_area = {
 					type = all
 					owned_by = ROOT
 				}
-				west_overmarch_area = {
+				lencmarck_area = {
 					type = all
 					owned_by = ROOT
 				}
@@ -1398,9 +1398,9 @@ maskedbutcher_missions_3d = {
 			zagnabad_area = { add_permanent_claim = ROOT }
 			aqatbahar_area = { add_permanent_claim = ROOT }
 			medbahar_area = { add_permanent_claim = ROOT }
-			east_overmarch_area = { add_permanent_claim = ROOT }
-			west_overmarch_area = { add_permanent_claim = ROOT }
-			south_overmarch_area = { add_permanent_claim = ROOT }
+			tencmarck_area = { add_permanent_claim = ROOT }
+			lencmarck_area = { add_permanent_claim = ROOT }
+			oudmarck_area = { add_permanent_claim = ROOT }
 		}
 	}
 
@@ -1460,7 +1460,7 @@ maskedbutcher_missions_3d = {
 				owned_by = ROOT
 			}
 			OR = {
-				has_idea = claim_fabrication
+				spy_ideas = 1
 				spymaster = 4
 			}
 			any_known_country = {
@@ -1666,6 +1666,7 @@ maskedbutcher_missions_3d = {
 						set_province_flag = swamp_ogre_reserve_flag
 					}
 				}
+				hidden_effect = { northern_pass_region = { set_province_flag = mb_do_not_highlight_flg } }
 				custom_tooltip = hill_ogre_de_tt
 				set_country_flag = hill_ogre_de_flg
 			}
@@ -2289,6 +2290,12 @@ maskedbutcher_missions_2e = {
 						who = ROOT
 						amount = 25
 					}
+					all_neighbor_province = {
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 10
+						}
+					}
 				}
 				num_of_owned_provinces_with = {
 					value = 3
@@ -2296,6 +2303,12 @@ maskedbutcher_missions_2e = {
 					num_of_units_in_province = {
 						who = ROOT
 						amount = 25
+					}
+					all_neighbor_province = {
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 10
+						}
 					}
 				}
 			}
@@ -2357,6 +2370,7 @@ maskedbutcher_missions_3e = {
 		position = 14
 
 		trigger = {
+			NOT = { has_spawned_rebels = final_hopefuls_rebels }
 			custom_trigger_tooltip = {
 				tooltip = centaur_crafted_tt
 				has_country_flag = centaur_mask_2
@@ -2483,37 +2497,40 @@ maskedbutcher_missions_4e = {
 		provinces_to_highlight = {
 			owned_by = ROOT
 			OR = {
-				religion = irdaeos_worship
-				religion = feast_of_the_gods
+				AND = {
+					superregion = forbidden_lands_superregion
+					NOT = { religion = ROOT }
+				}
+				has_province_modifier = mb_ap_world_eaters
 			}
 		}
 
 		trigger = {
-			all_owned_province = {
-				NOT = {
-					religion = irdaeos_worship
-					religion = feast_of_the_gods
+			num_of_owned_provinces_with = {
+				value = 65
+				superregion = forbidden_lands_superregion
+				religion = ROOT
+			}
+			any_owned_province = {
+				has_province_modifier = mb_ap_world_eaters
+				num_of_units_in_province = {
+					who = ROOT
+					amount = 25
+				}
+				all_neighbor_province = {
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 10
+					}
 				}
 			}
 		}
 
 		effect = {
 			set_country_flag = world_eaters_dead
-			set_country_flag = hope_dawn_done
 			random_owned_province = {
 				limit = { has_province_modifier = mb_ap_world_eaters }
 				remove_province_triggered_modifier = mb_ap_world_eaters
-			}
-			random_owned_province = {
-				limit = { has_province_modifier = mb_ap_roaming_heroes }
-				remove_province_triggered_modifier = mb_ap_roaming_heroes
-			}
-			every_owned_province = {
-				limit = { has_province_modifier = mb_fomented_flames }
-				add_province_modifier = {
-					name = mb_dampened_dreams
-					duration = -1
-				}
 			}
 			every_owned_province = {
 				limit = { OR = { region = ogre_valley_region region = serpents_vale_region region = northern_pass_region region = yyl_moista_region } }
