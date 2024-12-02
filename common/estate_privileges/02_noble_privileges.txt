@@ -3575,16 +3575,14 @@ estate_nobles_G57_emerald_waters = {
 		has_unlocked_estate_privilege = { estate_privilege = estate_nobles_G57_emerald_waters }
 	}
 	can_select = {
-		OR = {
-			any_owned_province = {
-				OR = {
-					has_port = yes
-					province_id = 2695
-                    province_id = 2696
-                    province_id = 2699
-                    province_id = 2702
-                    province_id = 2707
-				}
+		any_owned_province = {
+			OR = {
+				has_port = yes
+				province_id = 2695
+				province_id = 2696
+				province_id = 2699
+				province_id = 2702
+				province_id = 2707
 			}
 		}
 	}
