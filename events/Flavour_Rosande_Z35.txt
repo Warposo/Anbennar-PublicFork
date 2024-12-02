@@ -1836,7 +1836,7 @@ country_event = { #Massive population
 	option = {
 		name = flavor_rosande.42.a
 		add_country_modifier = {
-			name = Z35_massive_orc_population																																																																																																											_orc_population
+			name = Z35_massive_orc_population
 			duration = -1
 		}
 		rosande_orc_population_effect = yes
