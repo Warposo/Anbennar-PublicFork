@@ -2886,7 +2886,6 @@ country_event = {
 					}
 					has_country_flag = balris_begun
 				}
-				NOT = { has_country_flag = balris_begun }
 			}
 		}
 		if = {
