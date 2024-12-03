@@ -13622,13 +13622,13 @@ on_dependency_lost = {
 	
 	if = { #Brambleskinner vassal stuff
 		limit = {
-			ROOT = { has_country_modifier = brambleskinner_minting_grant_1 }
+			ROOT = { has_country_modifier = brambleskinner_minters_cartel_1 }
 			FROM = { tag = I37 }
 		}
 		I37 = { remove_country_modifier = brambleskinner_minting_debuff }
-		remove_country_modifier = brambleskinner_minting_grant_1
+		remove_country_modifier = brambleskinner_minters_cartel_1
 		add_country_modifier = { 
-			name = brambleskinner_minting_grant_2
+			name = brambleskinner_minters_cartel_2
 			duration = -1
 		}
 	}
