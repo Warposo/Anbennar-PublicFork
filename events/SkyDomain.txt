@@ -265,12 +265,12 @@ country_event = {
 			estate = estate_adventurers
 		}
 	}
-
+	#averilibet
 	option = {
 		trigger = {
 			has_country_flag = S53_cleanse_sins_upg_flag
 		}
-		name = S53_cleanse_sins_upg
+		name = S53_cleanse_sins_upg_tooltip
 
 		custom_tooltip = riyitewag_sins_cleansed_20_year_wait_effect_tt
 		hidden_effect = {

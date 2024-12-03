@@ -47,7 +47,7 @@
  more_the_marryier_S53_desc:0 "We lived for so long within Mengi lands that we adopted many of their traditions and ceremonies. But as we return towards our past Tanizu lands it´s perhaps time to shift our marriage ceremonies back to our Tanizu rites. Unlike Mengi, our Royal marriages allow us to marry people who are married to others, connecting us like the rites of the Beast Memory. A marriage of spirits, in a way forging a bond. Such ceremonies are more primal but elegant in their simplicity, strengthening our grip within the political landscape."
 
  middling_migration_S53_title:0 "Middling Migration"
- middling_migration_S53_desc:0 "It has been over three centuries since we moved from our ancient Tanizu homeland to the heart of Mengi. A long and dangerous migration, it ended with the king of Layinret greeting us with open arms only to set his soldiers upon our people. But with our ferocity and power of shifting, we beat them and settled in the north of Layinret´s lands. Now that we have married plenty of Tanizu tribes into our family we can let these tribes settle into more prospering lands. But not all at once. We shall simply let a trickle of Tanizu subjects into our Kingdom, as we don't wish to repeat the same suffering from the past."
+ middling_migration_S53_desc:0 "It has been over three centuries since we moved from our ancient Tanizu homeland to the heart of Madriamilak. A long and dangerous migration, it ended with the king of Layinret greeting us with open arms only to set his soldiers upon our people. But with our ferocity and power of shifting, we beat them and settled in the north of Layinret´s lands. Now that we have married plenty of Tanizu tribes into our family we can let these tribes settle into more prospering lands. But not all at once. We shall simply let a trickle of Tanizu subjects into our Kingdom, as we don't wish to repeat the same suffering from the past."
 
  sheding_pains_S53_title:0 "Shedding Pains"
  sheding_pains_S53_desc:0 "We had fond memories of our lizard brethren when we used to live in the jungles of Tanizuland. But over time and our great migration, these memories faded away, leaving only our oldest noble families remembering these mighty warriors. But as of recently with the new migrations, more of their free warriors or Riyitewag are within our lands, and our people and peasantry see them not as people but as something more monstrous. We should build up our Lizardfolk communities and encourage our fellow men to learn from them like we did in the past, surely they will be seen not as a curiosity but as a member of our family."
@@ -181,7 +181,7 @@
  flavor_averilibet.3.c:0 "The Wisest."
  flavor_averilibet.3.d:0 "This one still serves me faithfully."
  flavor_averilibet.4.t:0 "A Breach of Tradition"
- flavor_averilibet.4.desc:0 "To do, but it doesnt go as well as you hoped."
+ flavor_averilibet.4.desc:0 "[Root.Monarch.GetName] spent countless nights deciding how to bring a clergyperson into the ceremony. The first few ideas were to disguise them as an aid and perhaps even a far family member of the nobility. Perhaps even a trader who brings new goods to perform the secret Tanizu ceremonies that the nobility do before returning to square one and simply disguises the clergyperson as one of their royal guards, bringing one or two more guards should not be an issue. And indeed it was not, tho it did not last long as the clergyperson was clueless, disgusted to see such animalistic performance of the nobility being practiced but also charmed by its primal beauty. The nobility noticing the constant questions from the “guardsman” warranted a quick removal of their helmet, revealing the clergymen being a preacher of Amilak. The oldest and staunchest of the nobles were disheartened by such covert action of [Root.Monarch.GetName], even by telling their honest intentions. The ceremony was halted and [Root.Monarch.GetName] and clergyperson quickly sent away. Tho the day after a few of the nobles, mainly younger ones align their views with [Root.Monarch.GetName], agreeing that it would be wiser to open the Tanizu traditions to more people instead of just the nobility itself."
  flavor_averilibet.5.t:0 "Children of Beasts."
  flavor_averilibet.5.desc:0 "To do,this will be a very sligh Star Trek refernce."
  flavor_averilibet.6.t:0 "In Tall Grass"
@@ -199,21 +199,21 @@
  flavor_averilibet.10.desc:0 "In this game your nation has endedup as a personal union of Averilibet then got Sky Domain Relgion."
  flavor_averilibet.10.a:0 "I guess more power to you but this will not work as well if your not Averilibet."
  flavor_averilibet.11.t:0 "A Memory of Fear"
- flavor_averilibet.11.desc:0 "To do, talk about how this larger amount of Tanizu/lizardfolk would have been met with widespread bloodshed but via your reforms you have managed to make alot less spill."
- flavor_averilibet.11.a:0 "This is todo also."
+ flavor_averilibet.11.desc:0 "Our original migration of 1104 was anything but easy. Our old home in Tanizuland was ruthless not to mention other Tanizu tribes, all trying to survive such a dangerous and harsh environment forcing us to migrate to the homes for calmer and more prospering lands. As we migrated we followed the wisdom of our shamans and the wisdom of the Three Great Beasts. But even that was not enough, new diseases came along, and our people got lost in the new lands, fighting raids and bandits and in some rare cases soldiers from other kingdoms. But we kept moving on, guided by one goal of a new home. Along our travels, we heard the Mengi priests talking about Amilak, a singular being guiding and helping their people. At first, we dismissed but we kept losing valuable people. Soon that stern district and dislike of Mengi worship started to change. Some within our nobility and even priesthood saw that Amilak might be what the Three Great Beasts were before. One unified being, the Sky-Headed beast. Our traditions and faith were denied by the locals and we knew that we could not survive alone in these new lands and soon. Our traditions started to merge with the local Mengi faith and soon after that, some of the priests saw that our faith was not so strange and heretical after all. After all, both faiths had one being, one creator. It did not take too long after that, by following the sky, we landed in our new and yet foreign home."
+ flavor_averilibet.11.a:0 "We are truely home."
  flavor_averilibet.12.t:0 "The Rule of the Leopard"
- flavor_averilibet.12.desc:0 "To do, something something capstone."
+ flavor_averilibet.12.desc:0 "We have returned to our home in Tanizland"
  flavor_averilibet.12.a:0 "Give Tanizu PUs mil bonuses."
  flavor_averilibet.12.b:0 "Integrate Your Tanizu PUs for free."
  flavor_averilibet.13.t:0 "Forced Adoption"
- flavor_averilibet.13.desc:0 "To do. Something Soomething they will learn to love you."
+ flavor_averilibet.13.desc:0 "The people from outside our Kingdom can easily see that we are the strongest and wisest between our Kingdom, The Matriarchy of Naleni, and the Queendom of Hisost Yamok. But our two sisters, as much as we love them, keep doing their things without much further thought or control of their kingdoms. So much potential and resources wasted. Now it is time to march our troops toward their Capitals and see if our sisters will be loyal to us, to see that we are the eldest sister. No, that we are their mother and that we will guide and protect them, unruly daughters shall be punished accordingly for fooling around."
  flavor_averilibet.13.a:0 "Now for the other daughter."
  flavor_averilibet.14.t:0 "Step Children"
- flavor_averilibet.14.desc:0 "To do, Something Something We have both now."
- flavor_averilibet.14.a:0 "To do, they will love us."
+ flavor_averilibet.14.desc:0 "Our show of force was perhaps to rash, but it had to be done. There was no need to prolong such matters. As much as we love our two… daughters, they are simply not the wisest with their actions of leading a kingdom in this big and dangerous world. And they soon shall see that we do this only for their best, only with us watching them closely this time. The matters of leading a state and people are something that should be done properly and with care. I am sure they will understand that with us being their mother figure in this case."
+ flavor_averilibet.14.a:0 "They will love us."
  flavor_averilibet.15.t:0"Tough Love"
- flavor_averilibet.15.desc:0 "To do, new children have been bad."
- flavor_averilibet.15.a:0 "I may not have brng you into this world, but I will take you out."
+ flavor_averilibet.15.desc:0 "We might been harsh with the previous show of strength and war with Naleni and Hisost Yamok. But it had to be done, a swift and precise punishment to make them listen. Followed by taking care of any wounds or scars that were left on those who did not listen. After that, they obeyed our commands and actions, which we rewarded back in various ways and celebrated our achievements together. Such is the life of a mother, balancing their daughters with discipline and guidance so that we all have a brother future."
+ flavor_averilibet.15.a:0 "I may not have brung you into this world, but I will take you out."
 
 #estate privleges 
  estate_nobility_S53_tanizu_tradition_blood: "Tanizu Traditions - §RBlood§!" 
@@ -223,11 +223,12 @@
  estate_nobility_S53_tanizu_tradition_covenant: "Tanizu Traditions - §GCovenant§!"
  estate_nobility_S53_tanizu_tradition_covenant_desc: "Now the Mengi people understand the paractices and ceremonies of the Tanizu. In Madriamilak now no one fears the practices we follow as all understand what they mean. This new covenant has been forged only via the strength of our Queens and shall last for all of time."
 
-#relgious actions 
+#relgious actions
+ S53_cleanse_sins_upg_tooltip:0 "May Shifters and Riyitewag find forgiveness."
  S53_children_of_beasts_aspect:0 "Children of Beasts"
- S53_children_of_beasts_aspect_desc:0 "Call the various shifters from your queendom to fight their real enemy. Gives development cost reduction, build cost and time to "
+ S53_children_of_beasts_aspect_desc:0 "Call the various shifters from your queendom to fight their real enemy, the land itself.\n\nGives development cost reduction, build cost and time to build in your choice of three different areas for five years, and for ten years gives a movement speed, supply limit and global trade buff, has a cool down of 10 years."
  S53_marriage_of_many_aspect:0 "Marriage of Many"
- S53_marriage_of_many_aspect_desc:0 "Our Tanizu has taught us the closest of allies is a member of your family. So why not add another husband to increase the stregnth of our queendom both theologically and diplomaticly."
+ S53_marriage_of_many_aspect_desc:0 "Our Tanizu has taught us the closest of allies is a member of your family. So why not add another husband to increase the strength of our queendom both theologically and diplomaticly.\n\nAny nation regaurdless of race or religion will become ceremonialy married to you,if they have less then 350 development and 70 trust with you, you will both gain a buff to prestige legitimacy and splendor gain for 5 years, after the death of that nations ruler you will gain a restore union c "
 
 #gov tool tips 
  FIRST_HUSBAND:0 "First Husband"
