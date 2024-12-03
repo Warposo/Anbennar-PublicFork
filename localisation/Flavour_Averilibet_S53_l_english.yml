@@ -1,93 +1,92 @@
 ﻿l_english:
 
 #missions 
-
  just_a_game_S53_title:0 "Just A Game"
- just_a_game_S53_desc:0 ""
+ just_a_game_S53_desc:0 "It has been but a few generations since Menzhi Desta established the Holiday Tournaments within our country, which evolved naturally over time into one of our national prides. Menzhi Merima II, sees the potential for something greater for these tournaments. As the first step, we suggest improving the conditions in our capital and inviting mercenaries from across the land, along with some experienced advisors. A grand ceremony shall soon follow."
 
  new_facilities_S53_title:0 "New Facilities"
- new_facilities_S53_desc:0 ""
+ new_facilities_S53_desc:0 "With our capital expanding, clearing space for more buildings, we can invest further funding into our holiday tournaments, setting aside a   more permanent venue within our capital. And with the Mercenaries returning to their homes, we shall attract plenty of foreign potential and income to our lands."
 
  make_it_official_S53_title:0 "Make It Official"
- make_it_official_S53_desc:0 ""
+ make_it_official_S53_desc:0 "With our recent successful tournaments, which have attracted plenty of mercenaries and Riyitewag, it is high time for us to formalise such groups. No longer can just anyone become an adventurer; instead, they have to get a license along with some token privileges by following our laws. Paid or earned, more experienced people get a chance to become our husbands."
 
  watery_detour_S53_title:0 "Watery Detour"
- watery_detour_S53_desc:0 ""
+ watery_detour_S53_desc:0 "As our nation expands, we have found another location suitable for games around and within Yikikakeli. Our advisors suggest that we set up another Setinda Games in the province, with a focus on water events, like swimming, catching exotic and dangerous water creatures with and without tools, and various diving sports. It would attract lizardfolk mercenaries, furthering the potential of exceptional mercenaries and potential husbands and connections."
 
  up_the_ante_S53_title:0 "Up The Ante"
- up_the_ante_S53_desc:0 ""
+ up_the_ante_S53_desc:0 "With our tournaments and games flourishing within the capital and other important cities, we have attracted a considerable number of Riyitewag, mercenaries, and sportsmen from across Sarhal. We are now resolved to send these brave souls to confront the Hags and Trolls within the Shadow Swamp. We are sure those who return will bring plenty of new experiences and some troll slaves, and perhaps develop new games based on and around fighting trolls. After all, trolls are remarkable for their regeneration, allowing them to survive and recover from what we assume are fatal injuries."
 
  a_final_raid_S53_title:0 "A Final Raid"
- a_final_raid_S53_desc:0 ""
+ a_final_raid_S53_desc:0 "Several centuries ago, while our people were still roaming, we raided and sacked the city of Layintret. It was an obstacle in our path that granted us many riches. With the city’s fall we soon came across land that was perfect for settling in. We took the land from Layintret. Since then the people of that city have seen us as mortal enemies. Our great deeds have outshone Layintret time and time again, in spite of their attempts to destroy us. Now it is time to put this joke to rest; it is time to march south and finally absorb the city and its lands."
 
  cooking_the_books_S53_title:0 "Cooking The Books"
- cooking_the_books_S53_desc:0 ""
+ cooking_the_books_S53_desc:0 "With the little unrest thanks to Menzhi Merima´s plan during the ceremony, the nobility is very cautious about future initiatives from Merima and the ruling blood. But like most estates, they seek power to keep their valuable positions. By allowing them to call their own diets and marry the nobility of other states, we will soften their resistance to future projects. Their blood will not be as pure as in the past, but as long we push our culture and ceremonies the nobility will be open to further concessions."
 
  holy_matrimony_S53_title:0 "Holy Matrimony"
- holy_matrimony_S53_desc:0 ""
+ holy_matrimony_S53_desc:0 "Although we managed to prop up the smaller Tanizu states with our guidance, they are still lacking the power to stand on their own legs. Instead of helping them from afar, how about we invite them into our house as husbands instead of allies? Under our house they will rise to riches and wealth of which they could only dream  in the past."
 
  heros_and_husbands_S53_title:0 "Heros And Husbands"
- heros_and_husbands_S53_desc:0 ""
+ heros_and_husbands_S53_desc:0 "The success of the Setinda Games has brought not only  fighters but also various greater men into our service. The rewards from such games go quite a long way to retaining such heroes; nonetheless, they continue to press that they should be compensated for risking their lives in such tournaments. Perhaps it is time to open up harem marriage rights to these heroes and champions, binding to us  the best leaders and fighters for our armed forces."
 
  jumping_beasts_S53_title:0 "Jumping Beasts"
- jumping_beasts_S53_desc:0 ""
+ jumping_beasts_S53_desc:0 "Games featuring animals within Sentidad games and national tournaments have been a perennial favorite among many people and the peasantry. But as our nobility has become more and more versed in our Tanizu traditions, especially those that do not come from our kingdom, it becomes harder to justify such games. Even the most gentle ones, like catching exotic fish or horse riding are seen with stern dislike from our Nobility, and if we let's say ban such games, it would be a massive setback to many sportsmen and free warriors who come to our land. We suggest encouraging the various gnolls that live or stalk within our lands to do a new sport. Jumping Beast. Which would endanger only the jumper and leave the animal unharmed, that should be enough to appease everyone, and perhaps lead to an even more ambitious set of games via taking The Emerald Hall."
 
  a_national_league_S53_title:0 "A National League"
- a_national_league_S53_desc:0 ""
+ a_national_league_S53_desc:0 "With the new games and tournaments that we set are now almost reaching the same fame as those when Zenidir ruled these lands. All that is left is to restore his favorite stadium and the recreation of the various Izenwez leagues within it. Some are still played to this day, but only in low numbers. The most famous player in these leagues was someone named Kamniel who managed to soar through the air like a divine being."
 
  a_special_guest_S53_title:0 "A Special Guest"
- a_special_guest_S53_desc:0 ""
+ a_special_guest_S53_desc:0 "[Root.Monarch.GetName] plans to bring a clergyman of higher status to one of the hidden Tanizu ceremonies our nobles have conducted behind locked doors for ages. [Root.Monarch.GetName] hopes that with a such a gesture, the two groups will unify. Alas, such ceremonies are not for those of faint heart. Let´s hope it ends well."
 
  give_them_hope_S53_title:0 "Give Them Hope"
- give_them_hope_S53_desc:0 ""
+ give_them_hope_S53_desc:0 "Our nobility still maintains many stories and memories of our ancestors and our past Tanizu culture. Merima planned to open up these stories of our proud culture to the greater Mengi world. Instead of lecturing the greater powers, perhaps it would be wise to inspire the smaller Tanizu states about how we managed to rise up in the past. And unlike in the past, there will be a helping hand waiting for them."
 
  a_fairer_sex_S53_title:0 "A Fairer Sex"
- a_fairer_sex_S53_desc:0 ""
+ a_fairer_sex_S53_desc:0 "Averilibet has been ruled by female Menzhis ever since its inception, but this rule has never been formalized. And so, after years of building relationships and implementing various plans between the nobility and the clergy, it´s time to pronounce it formally. With this decree,  husbands and wives will stand on equal ground.This will allow our Menzhi to focus on the kingdom and external issues, while her harem of husbands and subjects deal with the internal affairs of their states."
 
  more_the_marryier_S53_title:0 "More The Marryier"
- more_the_marryier_S53_desc:0 ""
+ more_the_marryier_S53_desc:0 "We lived for so long within Mengi lands that we adopted many of their traditions and ceremonies. But as we return towards our past Tanizu lands it´s perhaps time to shift our marriage ceremonies back to our Tanizu rites. Unlike Mengi, our Royal marriages allow us to marry people who are married to others, connecting us like the rites of the Beast Memory. A marriage of spirits, in a way forging a bond. Such ceremonies are more primal but elegant in their simplicity, strengthening our grip within the political landscape."
 
  middling_migration_S53_title:0 "Middling Migration"
- middling_migration_S53_desc:0 ""
+ middling_migration_S53_desc:0 "It has been over three centuries since we moved from our ancient Tanizu homeland to the heart of Mengi. A long and dangerous migration, it ended with the king of Layinret greeting us with open arms only to set his soldiers upon our people. But with our ferocity and power of shifting, we beat them and settled in the north of Layinret´s lands. Now that we have married plenty of Tanizu tribes into our family we can let these tribes settle into more prospering lands. But not all at once. We shall simply let a trickle of Tanizu subjects into our Kingdom, as we don't wish to repeat the same suffering from the past."
 
  sheding_pains_S53_title:0 "Shedding Pains"
- sheding_pains_S53_desc:0 ""
+ sheding_pains_S53_desc:0 "We had fond memories of our lizard brethren when we used to live in the jungles of Tanizuland. But over time and our great migration, these memories faded away, leaving only our oldest noble families remembering these mighty warriors. But as of recently with the new migrations, more of their free warriors or Riyitewag are within our lands, and our people and peasantry see them not as people but as something more monstrous. We should build up our Lizardfolk communities and encourage our fellow men to learn from them like we did in the past, surely they will be seen not as a curiosity but as a member of our family."
 
  till_death_do_us_apart_S53_title:0 "Till Death Do Us Apart"
- till_death_do_us_apart_S53_desc:0 ""
+ till_death_do_us_apart_S53_desc:0 "It has been done. Our ancestor land is firmly within our hands, our harem is filled with rulers who rule whole nations and are fiercely loyal to our Kingdom. We managed to merge our Tanizu traditions with the Mengi culture, harmonizing our two cultures into something more and mightier. Our people are prospering, our lands safe, our tournaments known across Halann. Now shall we integrate our subjects into our nation or shall we continue leading a harem of subjects across Sarhal?"
 
  some_progress_S53_title:0 "Some Progress "
- some_progress_S53_desc:0 ""
+ some_progress_S53_desc:0 "As our state grows, we see more free warriors amid our lands, many of whom pledge their allegiance to the clergy or to our Tanizu nobility. Those who join the nobility are swayed into “the act of transforming” themselves into a mighty beast, something that the clergy and their warriors are heavily against, believing that such acts are of dark or hag origins. These beast warriors would be a waste not to use and instead, we should coax the clergy into granting their assent. A heavy bag of coins here, shifting some land there. In time,  most of the clergy will forgive the sin of “shifting”."
 
  like_a_sister_S53_title:0 "Like A Sister"
- like_a_sister_S53_desc:0 ""
+ like_a_sister_S53_desc:0 "It is always helpful to have sisters that we can trust, but it´s even better to have sisters that we can control and order around. And as such, after so much time has passed, let us show our sisters that we are the best ones to lead; after all, we are the strongest and wisest, perfectly fit to be the eldest sister, no?"
 
  like_a_mother_S53_title:0 "Like A Mother"
- like_a_mother_S53_desc:0 ""
+ like_a_mother_S53_desc:0 "With both of our sisters firmly under our control, it is time to lead and teach them. Like [Root.Monarch.GetName]’s mother taught her when she was young: sometimes, the best way to do something is on your own. It would be best to bring the two sisters directly into our fold, especially now that they recognize us as the “eldest sister”."
 
  an_injustice_S53_title:0 "An Injustice"
- an_injustice_S53_desc:0 ""
+ an_injustice_S53_desc:0 "While we believe the practice of slavery is justified (if heavily regulated, of course) we cannot let those who trade in Tanizu slaves continue to operate. They are our people, and as such shall be freed from such chains. We shall take over the cities of Mertgeban and Dodchiberra, tear down their buildings and use what's useful for something more appropriate."
 
  a_procession_of_beasts_S53_title:0 "A Procession Of Beasts"
- a_procession_of_beasts_S53_desc:0 ""
+ a_procession_of_beasts_S53_desc:0 "With the nobility and clergy now operating in tandem together, after coaxing their hands and working for decades to ease our Tanizu beliefs into the Sky Domain of the clergy. Our old beliefs and shifting abilities are no longer a sin in the eyes of the priests within our lands, but the peasantry sees it differently. It’s a strange foreign power. Some hush that it’s influenced by the hags, that shifting is a dark power but these rumors are all false. We shall show these people that shifters and our nobility and their beliefs pose no dangers and instead that such powers and beliefs are for the good and help our country to prosper."
 
  spiritual_boundaries_S53_title:0 "Spiritual Boundaries"
- spiritual_boundaries_S53_desc:0 ""
+ spiritual_boundaries_S53_desc:0 "If we are to let more of the Tanizu into our land, we need them to understand what we have seen, the glory of our lord Amilak. As we migrated into Mengi land, the wisdom of the Three Great Beasts helped us during the migration, but Amilak not only guided us but accepted us and our traditions within these Mengi lands. Let's show the glory of Amilak within the Tanizuland. Not via force, but compassion. Let´s do that by setting up new churches and charities within the heart of Tanizuland."
 
  the_real_deal_S53_title:0 "The Real Deal"
- the_real_deal_S53_desc:0 ""
+ the_real_deal_S53_desc:0 "The time is now. The lizardfolk now live in Amilak´s Kingdom without fear of persecution and the Tanizu that have arrived still practice their tradition which are now interwoven with our Sky Domain faith. Though the last migration into our land was more measured, we will now let any tribe cross into our kingdom. We should still prepare as even with all this preparation, such mass migrations will shed some blood along it´s way, most likely for those weak and injured. We pray for the best."
 
  help_from_friends_S53_title:0 "Help From Friends"
- help_from_friends_S53_desc:0 ""
+ help_from_friends_S53_desc:0 "Averilibett has been ruled by Menzhis  ever since we settled in Melakfan and as such, the nobles and clergy prefer that our allies are also ruled by powerful females. Some propose Hisos Yamok, a land where Gnolls and humans work hand in hand, and a daring few  even propose  to ally ourselves with the Naleny Harpies. Keep your allies close and your enemies closer, no? This way we carve the political landscape in our favor."
 
  advice_from_strangers_S53_title:0 "Advice From Strangers"
- advice_from_strangers_S53_desc:0 ""
+ advice_from_strangers_S53_desc:0 "We have already made connections with fellow female states in East Sarhal, but there are fleeting rumors about another Queendom up in the North across the seas. A few traders come from these regions; if we want to learn more it would be wise to instruct our traders to be less competitive and more friendly. What´s the loss of some trade in return for more knowledge and potential allies?"
 
  like_a_matriarch_S53_title:0 "Like A Matriarch"
- like_a_matriarch_S53_desc:0 ""
+ like_a_matriarch_S53_desc:0 "We have successfully ingratiated ourselves with our harpy sisters, showing them that we are not only the eldest sister but also in a way their mother. Now it´s time to show them that we are their Matriarch as well. We shall help develop new roosts within our harpy sisters’ lands and perhaps, in return, they will see that it’s safe to spread their wings within our land and fly. With their mastery of the waves, they will help us to travel the seas and guide our boats."
 
  experts_at_this_S53_title:0 "Experts At This"
- experts_at_this_S53_desc:0 ""
+ experts_at_this_S53_desc:0 "We have known the Queendom to the North, Chien Birhung for decades. Their gems and jewelry have been popular among our nobility, exotic merchants, and even the Queen herself! Their techniques are considered superior to our own within the markets, if we were able to convince some of these jewelers from the north to settle in our country, we can surely convince them to share their techniques and produce new jewelry in our style and help us to rebuild the Emerald Hall."
 
 #mission triggers
  S53_help_from_friends_tooltip:0 "§Y[L55.GetName]§! @[L55.GetTag] and §Y[S23.GetName]§! @[S23.GetTag] either have §Y50 improved relations§! with you or §Ydo not exist.§!"
@@ -226,7 +225,7 @@
 
 #relgious actions 
  S53_children_of_beasts_aspect:0 "Children of Beasts"
- S53_children_of_beasts_aspect_desc:0 "Call the various shifters from your queendom to fight their real enemy."
+ S53_children_of_beasts_aspect_desc:0 "Call the various shifters from your queendom to fight their real enemy. Gives development cost reduction, build cost and time to "
  S53_marriage_of_many_aspect:0 "Marriage of Many"
  S53_marriage_of_many_aspect_desc:0 "Our Tanizu has taught us the closest of allies is a member of your family. So why not add another husband to increase the stregnth of our queendom both theologically and diplomaticly."
 

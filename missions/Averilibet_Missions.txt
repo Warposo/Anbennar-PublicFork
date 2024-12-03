@@ -1144,9 +1144,9 @@ column_3 = {
 		}
 		provinces_to_highlight = {  
 			fast_has_pop_of_race = { race = lizardfolk }
+			owned_by = ROOT
 			NOT = {
 				development = 9
-				owned_by = ROOT
 			}
 		} 
 
@@ -1656,9 +1656,11 @@ column_4 = {
 							culture = cyazizeta_lizardfolk
 						}
 						NOT = {
-							liberty_desire = 50 
-							development_in_provinces = {
-								value = 125
+							AND = {
+								liberty_desire = 50 
+								development_in_provinces = {
+									value = 125
+								}
 							}
 						} 	
 					}
