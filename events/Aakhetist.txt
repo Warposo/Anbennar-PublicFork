@@ -612,8 +612,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {  religion = aakhetist }
 
-	option = {
-		name = aakhetist.29.a
+	immediate = {
 		random_neighbor_country = {
 			limit = {
 				NOT = {
@@ -633,6 +632,13 @@ country_event = {
 					NOT = { total_development = 200 }
 				}
 			}
+			save_event_target_as = event_country
+		}
+	}
+
+	option = {
+		name = aakhetist.29.a
+		event_target:event_country = {
 			reverse_add_casus_belli = { type = cb_vassalize_mission target = ROOT months = 60 }
 		}
 	}
