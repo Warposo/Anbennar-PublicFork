@@ -264,16 +264,6 @@ country_event = {
 					id = ogre_tolerance_events.11
 				}
 			}
-			# Heritage of Fallen Giants
-			3 = {
-				trigger = {
-					has_estate = estate_adventurers
-					ogre_tolerance_has_any_region_available = yes
-				}
-				ogre_tolerance_giants_all_regions = {
-					event = ogre_tolerance_events.12
-				}
-			}
 			# Dire Herds Cause Commotion at Market
 			10 = {
 				trigger = {
@@ -1861,6 +1851,11 @@ province_event = {
 	desc = ogre_tolerance_events.12.d
 	picture = GENIE_RUINS_eventPicture
 	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		has_country_modifier = ogre_administration
+		has_discovered = ROOT
+	}
 	option = {
 		name = ogre_tolerance_events.12.a
 		add_province_modifier = {
@@ -2132,6 +2127,101 @@ country_event = {
 		add_mil_power = 25
 		ai_chance = {
 			factor = 100
+		}
+	}
+}
+
+# Handler for ogre_tolerance_events.12 and ogre_flavour_events.6
+country_event = {
+	id = ogre_tolerance_events.100
+	title = ogre_tolerance_events.100.t
+	desc = ogre_tolerance_events.100.d
+	picture = GOBLIN_GUNNER_event_picture
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		owns = 5037		#Maghargma
+		ogre_tolerance_has_any_region_available = yes
+	}
+	option = {
+		name = ogre_tolerance_events.100.a
+		ogre_tolerance_giants_region = {
+			region = northern_pass
+		}
+		ogre_tolerance_giants_region = {
+			region = gerudian_frontier
+		}
+		ogre_tolerance_giants_region = {
+			region = dalr
+		}
+		ogre_tolerance_giants_region = {
+			region = olavlund
+		}
+		ogre_tolerance_giants_region = {
+			region = alenic_reach
+		}
+		ogre_tolerance_giants_region = {
+			region = yyl_moista
+		}
+		ogre_tolerance_giants_region = {
+			region = ogre_valley
+		}
+		ogre_tolerance_giants_region = {
+			region = west_forbidden_plains
+		}
+		ogre_tolerance_giants_region = {
+			region = serpent_gift
+		}
+		ogre_tolerance_giants_region = {
+			region = east_forbidden_plains
+		}
+		ogre_tolerance_giants_region = {
+			region = south_yarikhoi
+		}
+		ogre_tolerance_giants_region = {
+			region = north_yarikhoi
+		}
+		ogre_tolerance_giants_region = {
+			region = nuzurbokh
+		}
+		ogre_tolerance_giants_region = {
+			region = moduk
+		}
+		ogre_tolerance_giants_region = {
+			region = khaashalg
+		}
+		ogre_tolerance_giants_region = {
+			region = nomsyulhan
+		}
+		ogre_tolerance_giants_region = {
+			region = shuvuushudi
+		}
+		ogre_tolerance_giants_region = {
+			region = odheongu
+		}
+		ogre_tolerance_giants_region = {
+			region = north_yanshen
+		}
+		ogre_tolerance_giants_region = {
+			region = lower_yanshen
+		}
+		ogre_tolerance_giants_region = {
+			region = upper_yanshen
+		}
+		ogre_tolerance_giants_region = {
+			region = demon_hills
+		}
+		ogre_tolerance_giants_region = {
+			region = shamakhad
+		}
+		ogre_tolerance_giants_region = {
+			region = dhujat
+		}
+		ogre_tolerance_giants_region = {
+			region = rahen_coast
+		}
+		ogre_tolerance_giants_region = {
+			region = rakhadesh
 		}
 	}
 }

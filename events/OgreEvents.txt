@@ -159,15 +159,6 @@ country_event = {
 					id = ogre_flavour_events.5
 				}
 			}
-			#Giant Ruins Discovered
-			3 = {
-				trigger = {
-					ogre_tolerance_has_any_region_available = yes
-				}
-				ogre_tolerance_giants_all_regions = {
-					event = ogre_flavour_events.6
-				}
-			}
 			#Tiny Tools for Tinier Tools
 			10 = {
 				trigger = {
@@ -969,6 +960,10 @@ province_event = {
 	desc = ogre_flavour_events.6.d
 	picture = GENIE_RUINS_eventPicture
 	is_triggered_only = yes
+	major_trigger = {
+		has_country_modifier = ogre_administration
+		has_discovered = ROOT
+	}
 	option = {
 		name = ogre_flavour_events.6.a
 		owner = {
