@@ -3192,14 +3192,14 @@ on_monarch_death = {
 				target = ROOT
 				months = 120 
 			}
-		}
-		remove_opinion = {
-			who = ROOT 
-			modifier = S53_ceremonial_marriage
-		}
-		reverse_remove_opinion = {
-			who = ROOT 
-			modifier = S53_ceremonial_marriage
+			remove_opinion = {
+				who = ROOT 
+				modifier = S53_ceremonial_marriage
+			}
+			reverse_remove_opinion = {
+				who = ROOT 
+				modifier = S53_ceremonial_marriage
+			}
 		}
 		clr_country_flag = S53_marriage_of_many_target_flag 
 	}
