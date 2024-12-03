@@ -1184,6 +1184,7 @@ rosande_3_missions = {
 				}
 				add_orcish_minority_size_effect = yes
 				add_orcish_minority_size_effect = yes
+				change_trade_goods = wine
 				add_devastation = 80
 			}
 			808 = { #Vernham
@@ -1193,6 +1194,7 @@ rosande_3_missions = {
 				}
 				add_orcish_minority_size_effect = yes
 				add_orcish_minority_size_effect = yes
+				change_trade_goods = wine
 				add_devastation = 80
 			}
 			add_ruler_personality = careful_personality

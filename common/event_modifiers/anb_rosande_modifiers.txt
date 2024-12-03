@@ -144,7 +144,7 @@ Z35_low_orc_population = {
 	land_maintenance_modifier = 0.20
 	nobles_loyalty_modifier = -0.1
 	legitimacy = -2
-	trade_goods_size_modifier = -0.15
+	global_trade_goods_size_modifier= -0.15
 	advisor_cost = 0.15
 }
 
@@ -152,7 +152,7 @@ Z35_medium_orc_population = {
 	land_maintenance_modifier = 0.10
 	nobles_loyalty_modifier = -0.05
 	legitimacy = -1
-	trade_goods_size_modifier = -0.05
+	global_trade_goods_size_modifier = -0.05
 	advisor_cost = 0.1
 }
 
@@ -160,7 +160,7 @@ Z35_large_orc_population = {
 	land_maintenance_modifier = -0.10
 	nobles_loyalty_modifier = 0.05
 	legitimacy = 1
-	trade_goods_size_modifier = 0.05
+	global_trade_goods_size_modifier = 0.05
 	advisor_cost = -0.05
 }
 
@@ -168,6 +168,6 @@ Z35_massive_orc_population = {
 	land_maintenance_modifier = -0.15
 	nobles_loyalty_modifier = 0.1
 	legitimacy = 2
-	trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.1
 	advisor_cost = -0.1
 }
