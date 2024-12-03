@@ -43687,7 +43687,7 @@ S86_ideas = {
 	}
 	free = yes
 	
-	S86_reviving_the_old_ways = { 
+	S87_reviving_the_old_ways = { 
 		reform_progress_growth = 0.15
 	}
 	
@@ -43711,7 +43711,7 @@ S86_ideas = {
 		mil_tech_cost_modifier = -0.1
 	}
 	
-	S86_killing_qeyikul = { 
+	S87_killing_qeyikul = { 
 		discipline = 0.05
 	}
 }
