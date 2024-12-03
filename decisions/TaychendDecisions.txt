@@ -779,7 +779,7 @@ country_decisions = {
 					is_ruler_commanding_unit = yes
 					custom_trigger_tooltip = {
 						tooltip = J84_mihaela_is_ruler_tt
-						has_country_flag = J84_is_mihaela_flag
+						ROOT = { has_country_flag = J84_is_mihaela_flag }
 					}
 				}
 				location = { 

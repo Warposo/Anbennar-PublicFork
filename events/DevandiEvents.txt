@@ -179,12 +179,14 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			every_owned_province = { #To show province name in the loc
-				random_neighbor_province = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						owner = { NOT = { is_subject_of = ROOT } } 
+			random_owned_province = { #To show province name in the loc
+				limit = {
+					any_neighbor_province = {
+						NOT = { country_or_subject_holds = ROOT }
 					}
+				}
+				random_neighbor_province = {
+					limit = { NOT = { country_or_subject_holds = ROOT } }
 					save_event_target_as = askaeorg_raid_target
 				}
 			}
