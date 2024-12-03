@@ -1661,6 +1661,7 @@ country_event = { #Low population
 			name = Z35_low_orc_population
 			duration = -1
 		}
+		custom_tooltip = rosande_population_tt.1
 	}
 }
 
@@ -1715,6 +1716,7 @@ country_event = { #Medium population
 			name = Z35_medium_orc_population
 			duration = -1
 		}
+		custom_tooltip = rosande_population_tt.2
 	}
 }
 
@@ -1769,6 +1771,7 @@ country_event = { #Large population
 			name = Z35_large_orc_population
 			duration = -1
 		}
+		custom_tooltip = rosande_population_tt.3
 	}
 }
 
