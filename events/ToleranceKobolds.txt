@@ -495,8 +495,8 @@ country_event = {
 						has_country_modifier = just_lost_war_timer
 						average_unrest = 10
 						is_bankrupt = yes
-					}
 						NOT = { stability = 0 }
+					}	
 					NOT = { high_tolerance_kobold_race_trigger = yes }
 					is_not_purging_or_expelling_any_race_trigger = yes
 				}
@@ -581,6 +581,8 @@ country_event = {
 							continent = serpentspine
 							continent = oceania
 						}
+						has_kobold_majority_trigger = no
+						NOT = { has_province_modifier = troubadour_trivu }
 					}
 				}
 				country_event = {
@@ -3337,7 +3339,7 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					fast_has_pop_of_race = { race = kobold }
+					culture_is_kobold = no
 					NOT = {
 						continent = serpentspine
 						continent = oceania
@@ -3350,7 +3352,6 @@ country_event = {
 						trade_goods = mithril
 						trade_goods = damestear
 					}
-					has_kobold_majority_trigger = no
 				}
 				save_event_target_as = destination_province_1
 			}
@@ -3642,12 +3643,11 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					fast_has_pop_of_race = { race = kobold }
+					culture_is_kobold = yes
 					NOT = {
 						continent = serpentspine
 						continent = oceania
 					}
-					has_kobold_majority_trigger = yes
 				}
 				save_event_target_as = target_province
 			}
