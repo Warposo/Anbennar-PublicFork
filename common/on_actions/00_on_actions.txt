@@ -5887,7 +5887,7 @@ on_yearly_pulse = {
 		limit = { 
 			tag = Z35 
 			NOT = { has_country_flag = rosande_resistance_stop } 
-		
+		}
 		if = {
 		    limit = { 
 				has_country_flag = rosande_less_ambush
