@@ -1391,6 +1391,7 @@ column_4 = {
 				id = flavor_averilibet.15
 				days = 1
 			}
+			custom_tooltip = S53_like_a_mother_event_insight_tooltip
 		} 
 	}
 
