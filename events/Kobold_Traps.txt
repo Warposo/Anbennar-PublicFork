@@ -1555,8 +1555,8 @@ province_event = { # Clan Conflicts
 				hidden_effect = {
 					REB = {
 						change_variable = { dragon_cult_hoard = 100 }
-						upgrade_kobold_hoard = yes
 					}
+					upgrade_kobold_hoard = yes
 				}
 			}
 			else = {
@@ -1639,8 +1639,8 @@ province_event = { # Clan Conflicts
 				hidden_effect = {
 					REB = {
 						change_variable = { dragon_cult_hoard = 100 }
-						upgrade_kobold_hoard = yes
 					}
+					upgrade_kobold_hoard = yes
 				}
 			}
 			else = {
@@ -1723,8 +1723,8 @@ province_event = { # Refugee Pilgrims
 				hidden_effect = {
 					REB = {
 						change_variable = { dragon_cult_hoard = 100 }
-						upgrade_kobold_hoard = yes
 					}
+					upgrade_kobold_hoard = yes
 				}
 			}
 			else = {

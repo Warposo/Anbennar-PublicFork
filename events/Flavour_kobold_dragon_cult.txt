@@ -528,8 +528,8 @@ country_event = {
 						which = dragon_cult_hoard 
 						which = dev2add 
 					} 
-					upgrade_kobold_hoard = yes 
 				} 
+				upgrade_kobold_hoard = yes 
 				change_variable = {
 					which = kdc_festivals_held
 					value = 1
@@ -2946,8 +2946,8 @@ country_event = {
 		hidden_effect = {
 			REB = {
 				change_variable = { dragon_cult_hoard = 250 }
-				upgrade_kobold_hoard = yes
 			}
+			upgrade_kobold_hoard = yes
 		}
 		hidden_effect = { country_event = { id = flavour_kobold_dragon_cult.27 } }
 	}
@@ -2964,8 +2964,8 @@ country_event = {
 		hidden_effect = {
 			REB = {
 				change_variable = { dragon_cult_hoard = 500 }
-				upgrade_kobold_hoard = yes
 			}
+			upgrade_kobold_hoard = yes
 		}
 		hidden_effect = { country_event = { id = flavour_kobold_dragon_cult.27 } }
 	}
@@ -2982,8 +2982,8 @@ country_event = {
 		hidden_effect = {
 			REB = {
 				change_variable = { dragon_cult_hoard = 1000 }
-				upgrade_kobold_hoard = yes
 			}
+			upgrade_kobold_hoard = yes
 		}
 		hidden_effect = { country_event = { id = flavour_kobold_dragon_cult.27 } }
 	}
@@ -2998,8 +2998,8 @@ country_event = {
 		hidden_effect = {
 			REB = {
 				change_variable = { dragon_cult_hoard = 2000 }
-				upgrade_kobold_hoard = yes
 			}
+			upgrade_kobold_hoard = yes
 		}
 		hidden_effect = { country_event = { id = flavour_kobold_dragon_cult.27 } }
 	}
@@ -3015,8 +3015,8 @@ country_event = {
 		hidden_effect = {
 			REB = {
 				change_variable = { dragon_cult_hoard = 4000 }
-				upgrade_kobold_hoard = yes
 			}
+			upgrade_kobold_hoard = yes
 		}
 		hidden_effect = { country_event = { id = flavour_kobold_dragon_cult.27 } }
 	}
@@ -3034,8 +3034,8 @@ country_event = {
 		hidden_effect = {
 			REB = {
 				change_variable = { dragon_cult_hoard = 8000 }
-				upgrade_kobold_hoard = yes
 			}
+			upgrade_kobold_hoard = yes
 		}
 		hidden_effect = { country_event = { id = flavour_kobold_dragon_cult.27 } }
 	}
@@ -3491,8 +3491,8 @@ country_event = { #Bronze aspect 3
 						which = dragon_cult_hoard
 						value = 0.75
 					}
-					upgrade_kobold_hoard = yes
 				}
+				upgrade_kobold_hoard = yes
 			} 
 		}
 	}

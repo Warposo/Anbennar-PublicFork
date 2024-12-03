@@ -509,8 +509,8 @@ country_event = { #The Dragon's Roar
 					which = dragon_cult_hoard
 					value = 0
 				}
-				upgrade_kobold_hoard = yes 
 			}
+			upgrade_kobold_hoard = yes 
 			189 = {
 				add_base_tax = -9
 				add_base_production = -9
@@ -1405,8 +1405,8 @@ country_event = { #The Prodigal Father
 					which = dragon_cult_hoard 
 					value = 500 
 				} 		
-				upgrade_kobold_hoard = yes	
 			}
+			upgrade_kobold_hoard = yes	
 		}
 		
 		187 = {

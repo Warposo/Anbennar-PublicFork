@@ -2917,8 +2917,8 @@ kob_2_c = {
 						which = dragon_cult_hoard 
 						which = dev2add 
 					} 
-					upgrade_kobold_hoard = yes 
 				} 
+				upgrade_kobold_hoard = yes 
 				every_owned_province = {
 					remove_province_modifier = Z38_a_new_ashen_skies
 				}
