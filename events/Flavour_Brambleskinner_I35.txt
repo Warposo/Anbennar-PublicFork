@@ -684,11 +684,13 @@ country_event = { #A Successful Front
 	desc = {
 		trigger = {
 			NOT = {
-				any_known_country = {
-					culture = wood_elf
-					war_with = ROOT
+				AND = {
+					any_known_country = {
+						culture = wood_elf
+						war_with = ROOT
+					}
+					war_score = 100
 				}
-				war_score = 100
 			}
 		}
 		desc = flavor_brambleskinner.12.d_2
