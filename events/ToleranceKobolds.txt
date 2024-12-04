@@ -2291,7 +2291,7 @@ country_event = {
 	}
 }
 	
-# The Kobolds� Project
+# The Kobolds' Project
 country_event = {
 	id = kobold_tolerance_events.13
 	title = kobold_tolerance_events.13.t
@@ -3866,7 +3866,7 @@ country_event = {
 		capital_scope = {
 			add_kobold_minority_size_effect = yes 
 		}
-		add_stability = 1
+		add_stability_or_adm_power = yes
 	}
 
 	#They can't even play woodwinds!
