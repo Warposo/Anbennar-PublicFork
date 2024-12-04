@@ -2857,3 +2857,8 @@ L62_offer_rejected = {
 	opinion = -25
 	yearly_decay = 1
 }
+
+heeds_deity_advice = {
+	opinion = 25
+	yearly_decay = 2.5
+}

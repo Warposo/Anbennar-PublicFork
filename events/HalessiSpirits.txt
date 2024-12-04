@@ -11614,6 +11614,7 @@ province_event = {	#Temple Corrupted
 									has_province_modifier = corrupted_temple_complex
 								}
 							}
+							change_variable = { which = devouring_path_flavor_counter value = 1 }
 							country_event = { id = spirits.614 days = 365 }
 						}
 					}
@@ -11686,10 +11687,13 @@ province_event = {	#Temple Corrupted
 								}
 							}
 							country_event = { id = spirits.611 days = 365 }
-							hidden_effect = { change_variable = { which = devouring_path_flavor_counter value = 1 } }
+							change_variable = { which = devouring_path_flavor_counter value = 1 }
 						}
 					}
-					else = { country_event = { id = spirits.610 days = 365 } }
+					else = {
+						change_variable = { which = devouring_path_flavor_counter value = 1 }
+						country_event = { id = spirits.610 days = 365 }
+					}
 				}
 
 				every_known_country = {
@@ -11857,8 +11861,6 @@ country_event = { #The Miseducation of the Demon Hills
 
 	is_triggered_only = yes
 
-	immediate = { hidden_effect = { change_variable = { which = devouring_path_flavor_counter value = 1 } } }
-
 	option = {
 		name = spirits.610.a
 		ai_chance = { factor = 1 }
@@ -11875,12 +11877,7 @@ country_event = { #Memories From the Attic
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			change_variable = { which = devouring_path_flavor_counter value = 1 }
-			country_event = { id = spirits.612 days = 365 }
-		}
-	}
+	immediate = { hidden_effect = { country_event = { id = spirits.612 days = 365 } } }
 
 	option = {
 		name = spirits.611.a
@@ -11971,8 +11968,6 @@ country_event = { #Arrival Imminent
 	picture = ONI_HUMANS_eventPicture
 
 	is_triggered_only = yes
-
-	immediate = { hidden_effect = { change_variable = { which = devouring_path_flavor_counter value = 1 } } }
 
 	option = {
 		name = spirits.614.a
