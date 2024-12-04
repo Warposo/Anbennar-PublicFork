@@ -2868,6 +2868,10 @@ L62_offer_rejected = {
 	yearly_decay = 1
 }
 
+heeds_deity_advice = {
+	opinion = 25
+	yearly_decay = 2.5
+}
 
 #averilibet 
 S53_more_enlightened_ruler ={
