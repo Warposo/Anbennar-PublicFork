@@ -14912,7 +14912,7 @@ estate_nobles_rosande_noble_slaveowners = {
 		}
 	}
 	is_valid = {
-		has_country_flag = unlocked_estaterosande_slaveowners
+		has_country_flag = unlocked_estate_rosande_slaveowners
 		NOT = { has_country_flag =  unlocked_estate_rosande_slaveowners_2 }
 	}
 	benefits = {
