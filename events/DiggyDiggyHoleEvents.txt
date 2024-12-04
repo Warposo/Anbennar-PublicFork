@@ -10083,6 +10083,7 @@ country_event = {
 			continent = serpentspine
 			base_production = 5
 			NOT = {
+				province_id = 2978
 				trade_goods = gold
 				trade_goods = mithril
 				province_group = hold_province
