@@ -929,15 +929,12 @@ country_event = {
 					}
 				}
 			}
-			hidden_effect = {
-				265 = {
-					add_province_modifier = {
-						name = giberd_damestear_port_low
-						duration = -1
-					}
+			265 = {
+				add_province_modifier = {
+					name = giberd_damestear_port_low
+					duration = -1
 				}
 			}
-			mission_reward_artifice_points_3 = yes
 		}
 	}
 	option = {
@@ -950,15 +947,8 @@ country_event = {
 					has_province_modifier = giberd_damestear_port_low
 				}
 			}
-			remove_province_modifier = giberd_damestear_port_low
-			hidden_effect = {
-				hidden_effect = {
-					change_variable = {
-						which = StaticArtificePoints
-						value = -3
-					}
-				}
-				update_artifice_points = yes
+			265 = {
+				remove_province_modifier = giberd_damestear_port_low
 			}
 		}
 	}
