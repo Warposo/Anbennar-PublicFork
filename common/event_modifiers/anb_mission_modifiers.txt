@@ -23178,13 +23178,13 @@ newshire_experimental_lands = {
 	local_unrest = 4
 }
 newshire_transmuted_lands = {
-	trade_goods_size = 0.25
+	trade_goods_size_modifier = 0.25
 	local_unrest = 1
 }
 newshire_headquarters = {
 	mages_influence_modifier = 0.05
 	local_unrest = 1
-	trade_goods_size = 0.25
+	trade_goods_size_modifier = 0.25
 }
 newshire_sunblessing = {
 	local_monthly_devastation = -0.2
@@ -23215,7 +23215,7 @@ newshire_lighthouse = {
 	local_unrest = -2
 }
 newshire_vivomantic_mastery = {
-	trade_goods_size = 0.25
+	trade_goods_size_modifier = 0.25
 	global_manpower_modifier = 0.01
 	land_forcelimit_modifier = 0.01
 	manpower_recovery_speed = 0.01
