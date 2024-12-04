@@ -3116,7 +3116,7 @@ province_event = {
 				}
 			}
 		}
-		add_church_power = 20
+		owner = { add_church_power = 20 }
 	}
 }
 

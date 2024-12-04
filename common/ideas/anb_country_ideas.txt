@@ -411,7 +411,7 @@ A12_ideas = {
         development_cost = -0.1
     }
 	A12_legacy_of_the_beefoots = { # The cutthroat Beefoot halfling's culture gives them a reputation in EoA for both trade and admin
-        num_of_accepted_cultures = 1
+        num_accepted_cultures = 1
         yearly_corruption = -0.1
     }
 }
