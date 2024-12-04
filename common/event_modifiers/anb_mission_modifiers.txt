@@ -32888,7 +32888,7 @@ raithtall_rightful_protectors = {
 }
 
 raithtall_sworn_fealty = {
-	liberty_desire = -0.2
+	liberty_desire = -20
 }
 
 raithtall_cleansing_rot = {
@@ -32908,7 +32908,7 @@ raithtall_disciplined = {
 
 raithtall_crusader_zeal = {
 	manpower_recovery_speed = 0.2
-	warscore_cost_vs_other_religion = 0.15
+	warscore_cost_vs_other_religion = -0.15
 }
 
 raithtall_crusader_vigilance = {
