@@ -5,7 +5,7 @@ rosande_add_workforce_effect = {
 			ROOT = { mission_completed = rosande_harsh_control }
 		}
 		add_province_modifier = {
-			name = Z35_orcish_workforce
+			name = Z35_grand_orcish_workforce
 			duration = -1
 		}
 	}
@@ -60,44 +60,5 @@ rosande_beautiful_dream_effect = {
 			name = Z35_a_beautiful_dream_4
 			duration = -1
 		}
-	}
-}
-
-rosande_orc_population_effect = {
-	if = {
-		limit = {
-			has_country_modifier = Z35_low_orc_population 
-			OR = {
-				has_country_modifier = Z35_medium_orc_population
-				has_country_modifier = Z35_large_orc_population
-				has_country_modifier = Z35_massive_orc_population
-			}
-		}
-		remove_country_modifier = Z35_low_orc_population
-	}
-	else_if = {
-		limit = {
-			has_country_modifier = Z35_medium_orc_population 
-			OR = {
-				has_country_modifier = Z35_low_orc_population
-				has_country_modifier = Z35_large_orc_population
-				has_country_modifier = Z35_massive_orc_population
-			}
-		}
-		remove_country_modifier = Z35_medium_orc_population
-	}
-	else_if = {
-		limit = {
-			has_country_modifier = Z35_large_orc_population 
-			OR = {
-				has_country_modifier = Z35_low_orc_population
-				has_country_modifier = Z35_medium_orc_population
-				has_country_modifier = Z35_massive_orc_population
-			}
-		}
-		remove_country_modifier = Z35_large_orc_population
-	}
-	else = {
-		remove_country_modifier = Z35_massive_orc_population
 	}
 }

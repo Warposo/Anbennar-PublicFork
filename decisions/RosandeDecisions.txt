@@ -34,13 +34,13 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = rosande_plantation.tt
 				any_owned_province = {
+					fast_has_pop_of_race = { race = orcish }
 					area_for_scope_province = {
 						NOT = {
 							has_province_modifier = Z35_orcish_workforce
 							has_province_modifier = Z35_grand_orcish_workforce 
 						}
 					}
-					fast_has_pop_of_race = { race = orcish }
 					num_of_units_in_province = {
 						who = ROOT
 						amount = 10
@@ -61,7 +61,7 @@ country_decisions = {
 				limit = {
 					fast_has_pop_of_race = { race = orcish }
 					area_for_scope_province = {
-						OR = {
+						NOT = {
 							has_province_modifier = Z35_orcish_workforce
                             has_province_modifier = Z35_grand_orcish_workforce
 						}

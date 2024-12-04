@@ -924,7 +924,7 @@ rosande_3_missions = {
 					NOT = { owned_by = ROOT }
 				}
 				AND = {
-					OR = { area = blademarch_area }
+					area = blademarch_area }
 					NOT = {
 						AND = {
 							has_production_building_trigger = yes
@@ -976,10 +976,7 @@ rosande_3_missions = {
 				random_owned_province = {
 					limit = {
 						area = blademarch_area
-						OR = {
-							has_building = workshop
-							has_building = counting_house
-						}
+						has_production_building_trigger = yes
 						base_production = 6
 					}
 					change_trade_goods = wine
@@ -1838,10 +1835,10 @@ rosande_4_2_missions = {
 		}
 
 		provinces_to_highlight = {
-			AND = {
-				owned_by = ROOT
-				has_half_orcish_minority_trigger = yes
-				NOT = {
+			owned_by = ROOT
+			has_half_orcish_minority_trigger = yes
+			NOT = {
+				AND = {
 					has_building = barracks
 					development = 10
 				}
