@@ -924,7 +924,7 @@ rosande_3_missions = {
 					NOT = { owned_by = ROOT }
 				}
 				AND = {
-					area = blademarch_area }
+					area = blademarch_area 
 					NOT = {
 						AND = {
 							has_production_building_trigger = yes
