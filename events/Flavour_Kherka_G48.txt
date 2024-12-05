@@ -355,7 +355,7 @@ country_event = { #Extensive Prospecting
                         trade_goods = gems
                         trade_goods = gold
                     }
-                    NOT = { num_of_times_improved_by_owner = 5}
+                    NOT = { num_of_times_improved = 5}
                 }
                 add_province_modifier = {
                     name = G48_new_mines
