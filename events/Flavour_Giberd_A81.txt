@@ -1471,7 +1471,7 @@ country_event = {
 	}
 }
 
-# Technomancers win: Giberd: A Nation Favoured
+# Technomancers win: Giberd: A Nation Favoured, 1st part
 country_event = {
 	id = flavor_giberd.42
 	title = flavor_giberd.42.t
@@ -1480,6 +1480,21 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = flavor_giberd.42.a
+		country_event = {
+			id = flavor_giberd.45
+		}
+	}
+}
+
+# 2nd part of "A Nation Favored"
+country_event = {
+	id = flavor_giberd.45
+	title = flavor_giberd.45.t
+	desc = flavor_giberd.45.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = flavor_giberd.45.a
 		add_estate_loyalty_modifier = {
 			estate = estate_artificers
 			desc = giberd_nation_favoured_tt

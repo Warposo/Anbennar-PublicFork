@@ -1,7 +1,8 @@
 #Original Giberd MT: Aeriic, cormac
-#Rework Designed by: DecipheringDoge, Arieriel
-#Coded by: Tritone, DecipheringDoge, Faeelin
+#Rework Designed by: DefinitiveDoge, Arieriel
+#Coded by: Tritone, DefinitiveDoge, Faeelin
 #Reviewed by: Chronologic, armonistan, Wagentzu, Oxtrooo
+#Loc by Xris, DefinitiveDoge
 giberd_imperial = {
 	slot = 1
 	generic = no
