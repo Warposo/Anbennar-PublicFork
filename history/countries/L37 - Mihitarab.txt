@@ -52,3 +52,4 @@ capital = 6612
 	add_queen_personality = just_personality
 	add_queen_personality = free_thinker_personality
 }
+set_ruler_flag = haigo_is_not_ruler
