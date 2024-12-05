@@ -2824,6 +2824,7 @@ G52_5 = {
 			if = {
 				limit = { has_ruler_modifier = G52_destiny }
 				custom_tooltip = ameion_laskaris_perk
+				add_adm_power = 100
 				nanru_nakar_area = { add_permanent_claim = ROOT }
 			}
 			custom_tooltip = G52_wars_of_heroes_tt
