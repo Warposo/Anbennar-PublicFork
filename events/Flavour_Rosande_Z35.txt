@@ -812,7 +812,7 @@ country_event = { #The Ashen Bloom
 		trigger = {
 			has_dlc = "Lions of the North"
 		}
-		picture = CROSSROAD_eventPicture
+		picture = FORESTS_eventPicture
 	}
 
 
