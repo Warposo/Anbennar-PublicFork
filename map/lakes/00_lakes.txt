@@ -294,6 +294,7 @@ lake = {
 	height = 22
 } 
 
+
 #Lake Kusadza 3
 lake = {
 	triangle_strip = {  
