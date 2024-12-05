@@ -159,9 +159,7 @@ country_event = {
 				modifier = {
 					factor = 1.5
 					NOT = {
-						check_variable = {
-							army_tradition = 30
-						}
+						army_tradition = 30
 					}
 				}
 				country_event = {
