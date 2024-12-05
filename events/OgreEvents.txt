@@ -171,6 +171,9 @@ country_event = {
 			3 = {
 				trigger = {
 					government_rank = 2
+					NOT = {
+						has_country_flag = ogre_flavour_events.8_happened
+					}
 					OR = {
 						num_of_different_cultures_in_court = 2
 						full_idea_group = humanist_ideas
@@ -374,9 +377,7 @@ country_event = {
 		name = ogre_flavour_events.1.g
 		highlight = yes
 		trigger = {
-			any_owned_province = {
-				trade_goods = slaves
-			}
+			slaves = 1
 		}
 	}
 	option = {
@@ -642,16 +643,18 @@ country_event = {
 	picture = FEAST_eventPicture
 	is_triggered_only = yes
 	immediate = {
-		random_owned_province = {
-			limit = {
-				fast_has_pop_of_race = {
-					race = ogre
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					fast_has_pop_of_race = {
+						race = ogre
+					}
+					all_province_in_state = {
+						is_state_core = ROOT
+					}
 				}
-				all_province_in_state = {
-					is_state_core = ROOT
-				}
+				save_event_target_as = ogre_tolerance_target
 			}
-			save_event_target_as = ogre_tolerance_target
 		}
 	}
 	option = {
@@ -1179,7 +1182,6 @@ country_event = {
 	desc = ogre_flavour_events.8.d
 	picture = DIVERSE_COURT_eventPicture
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = {
 		name = ogre_flavour_events.8.a
 		add_stability = 2
@@ -1259,6 +1261,9 @@ country_event = {
 			duration = 18250
 		}
 		increase_monstrous_3 = yes
+	}
+	after = {
+		set_country_flag = ogre_flavour_events.8_happened
 	}
 }
 
@@ -1440,6 +1445,320 @@ country_event = {
 		add_doom = 5
 		capital_scope = {
 			pretender_rebels = 2
+		}
+	}
+}
+
+# Handler for ogre_tolerance_events.12 and ogre_flavour_events.6
+country_event = {
+	id = ogre_flavour_events.100
+	title = ogre_flavour_events.100.t
+	desc = ogre_flavour_events.100.d
+	picture = GOBLIN_GUNNER_event_picture
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		owns = 5037		#Maghargma
+		# hasn't triggered for all giant regions yet
+		NOT = {
+			AND = {
+				has_global_flag = ogre_flavour_giants_northern_pass
+				has_global_flag = ogre_flavour_giants_gerudian_frontier
+				has_global_flag = ogre_flavour_giants_dalr
+				has_global_flag = ogre_flavour_giants_olavlund
+				has_global_flag = ogre_flavour_giants_alenic_reach
+				has_global_flag = ogre_flavour_giants_yyl_moista
+				has_global_flag = ogre_flavour_giants_ogre_valley
+				has_global_flag = ogre_flavour_giants_west_forbidden_plains
+				has_global_flag = ogre_flavour_giants_serpent_gift
+				has_global_flag = ogre_flavour_giants_east_forbidden_plains
+				has_global_flag = ogre_flavour_giants_south_yarikhoi
+				has_global_flag = ogre_flavour_giants_north_yarikhoi
+				has_global_flag = ogre_flavour_giants_nuzurbokh
+				has_global_flag = ogre_flavour_giants_moduk
+				has_global_flag = ogre_flavour_giants_khaashalg
+				has_global_flag = ogre_flavour_giants_nomsyulhan
+				has_global_flag = ogre_flavour_giants_shuvuushudi
+				has_global_flag = ogre_flavour_giants_odheongu
+				has_global_flag = ogre_flavour_giants_north_yanshen
+				has_global_flag = ogre_flavour_giants_lower_yanshen
+				has_global_flag = ogre_flavour_giants_upper_yanshen
+				has_global_flag = ogre_flavour_giants_demon_hills
+				has_global_flag = ogre_flavour_giants_shamakhad
+				has_global_flag = ogre_flavour_giants_dhujat
+				has_global_flag = ogre_flavour_giants_rahen_coast
+				has_global_flag = ogre_flavour_giants_rakhadesh
+			}
+		}
+	}
+	option = {
+		name = ogre_flavour_events.100.a
+		random = {
+			chance = 5
+			random_list = {
+				1 = {
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = northern_pass
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_northern_pass
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = gerudian_frontier
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_gerudian_frontier
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = dalr
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_dalr
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = olavlund
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_olavlund
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = alenic_reach
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_alenic_reach
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = yyl_moista
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_yyl_moista
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = ogre_valley
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_ogre_valley
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = west_forbidden_plains
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_west_forbidden_plains
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = serpent_gift
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_serpent_gift
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = east_forbidden_plains
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_east_forbidden_plains
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = south_yarikhoi
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_south_yarikhoi
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = north_yarikhoi
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_north_yarikhoi
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = nuzurbokh
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_nuzurbokh
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = moduk
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_moduk
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = khaashalg
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_khaashalg
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = nomsyulhan
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_nomsyulhan
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = shuvuushudi
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_shuvuushudi
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = odheongu
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_odheongu
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = north_yanshen
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_north_yanshen
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = lower_yanshen
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_lower_yanshen
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = upper_yanshen
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_upper_yanshen
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = demon_hills
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_demon_hills
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = shamakhad
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_shamakhad
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = dhujat
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_dhujat
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = rahen_coast
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_rahen_coast
+						}
+					}
+				}
+				1 = {
+					ogre_flavour_giants_region = {
+						region = rakhadesh
+					}
+					trigger = {
+						NOT = {
+							has_global_flag = ogre_flavour_giants_rakhadesh
+						}
+					}
+				}
+			}
 		}
 	}
 }

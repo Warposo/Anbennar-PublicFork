@@ -1245,11 +1245,13 @@ country_event = {
 	picture = FAR_AND_WIDE_eventPicture
 	is_triggered_only = yes
 	immediate = {
-		random_owned_province = {
-			limit = {
-				has_ogre_minority_trigger = yes
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_any_ogre_pop_trigger = yes
+				}
+				save_event_target_as = ogre_tolerance_target
 			}
-			save_event_target_as = ogre_tolerance_target
 		}
 	}
 	option = {
@@ -1271,6 +1273,10 @@ country_event = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
 			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
+			}
 		}
 	}
 	option = {
@@ -1287,6 +1293,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 2
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -1314,6 +1324,10 @@ country_event = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
 			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
+			}
 		}
 	}
 	option = {
@@ -1337,6 +1351,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 2
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -1363,6 +1381,10 @@ country_event = {
 			modifier = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -1399,7 +1421,7 @@ country_event = {
 	immediate = {
 		random_owned_province = {
 			limit = {
-				has_ogre_minority_trigger = yes
+				has_any_ogre_pop_trigger = yes
 			}
 			save_event_target_as = ogre_tolerance_target
 		}
@@ -1418,6 +1440,10 @@ country_event = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
 			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
+			}
 		}
 	}
 	option = {
@@ -1429,6 +1455,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 2
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -1455,6 +1485,10 @@ country_event = {
 			modifier = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -1488,6 +1522,10 @@ country_event = {
 				factor = 5
 				wants_to_increase_tolerance_ogre = yes
 			}
+			modifier = {
+				factor = 0.2
+				wants_to_decrease_tolerance_ogre = yes
+			}
 		}
 	}
 }
@@ -1499,30 +1537,21 @@ country_event = {
 	desc = ogre_tolerance_events.11.d
 	picture = DIVERSE_COURT_eventPicture
 	is_triggered_only = yes
-	immediate = {
-		random_owned_province = {
-			limit = {
-				has_ogre_minority_trigger = yes
-			}
-			save_event_target_as = ogre_tolerance_target
-		}
-	}
 	# If you have a ogre culture province, that's the culture of the advisor
 	# If not, use a culture determined by subcontinents
 	immediate = {
 		hidden_effect = {
-			if = {
+			random_owned_province = {
 				limit = {
-					any_owned_province = {
-						culture_group = ogre
-					}
+					culture_group = ogre
 				}
-				random_owned_province = {
-					limit = {
-						culture_group = ogre
-					}
-					save_event_target_as = ogre_advisor_culture_province
+				save_event_target_as = ogre_advisor_culture_province
+			}
+			random_owned_province = {
+				limit = {
+					has_any_ogre_pop_trigger = yes
 				}
+				save_event_target_as = ogre_tolerance_target
 			}
 		}
 	}
@@ -1540,6 +1569,10 @@ country_event = {
 			modifier = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -1570,6 +1603,10 @@ country_event = {
 			modifier = {
 				factor = 5
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 0.2
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -1805,6 +1842,10 @@ country_event = {
 				factor = 5
 				wants_to_increase_tolerance_ogre = yes
 			}
+			modifier = {
+				factor = 0.2
+				wants_to_decrease_tolerance_ogre = yes
+			}
 		}
 	}
 	option = {
@@ -1835,10 +1876,11 @@ country_event = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
 			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
+			}
 		}
-	}
-	after = {
-		clr_country_flag = ogre_advisor_culture_set
 	}
 }
 
@@ -1856,7 +1898,7 @@ province_event = {
 	}
 	option = {
 		name = ogre_tolerance_events.12.a
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = ogre_tolerance_ogre_giant_ruins
 			duration = -1
 		}
@@ -1878,7 +1920,15 @@ province_event = {
 			factor = 50
 			modifier = {
 				factor = 5
-				wants_to_increase_tolerance_ogre = yes
+				owner = {
+					wants_to_increase_tolerance_ogre = yes
+				}
+			}
+			modifier = {
+				factor = 0.2
+				owner = {
+					wants_to_decrease_tolerance_ogre = yes
+				}
 			}
 		}
 	}
@@ -1892,7 +1942,15 @@ province_event = {
 			factor = 50
 			modifier = {
 				factor = 2
-				wants_to_increase_tolerance_ogre = yes
+				owner = {
+					wants_to_increase_tolerance_ogre = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				owner = {
+					wants_to_decrease_tolerance_ogre = yes
+				}
 			}
 		}
 	}
@@ -1916,7 +1974,15 @@ province_event = {
 			factor = 50
 			modifier = {
 				factor = 0.5
-				wants_to_increase_tolerance_ogre = yes
+				owner = {
+					wants_to_increase_tolerance_ogre = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				owner = {
+					wants_to_decrease_tolerance_ogre = yes
+				}
 			}
 		}
 	}
@@ -1932,7 +1998,7 @@ province_event = {
 				}
 			}
 		}
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = ogre_tolerance_state_giant_ruins
 			duration = -1
 		}
@@ -1945,7 +2011,15 @@ province_event = {
 			factor = 100
 			modifier = {
 				factor = 2
-				wants_to_increase_tolerance_ogre = yes
+				owner = {
+					wants_to_increase_tolerance_ogre = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				owner = {
+					wants_to_decrease_tolerance_ogre = yes
+				}
 			}
 		}
 	}
@@ -1959,15 +2033,17 @@ country_event = {
 	picture = GOBLINS_AND_SPIDER_eventPicture
 	is_triggered_only = yes
 	immediate = {
-		random_owned_province = {
-			limit = {
-				has_ogre_minority_trigger = yes
-				OR = {
-					trade_goods = wool
-					trade_goods = livestock
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_ogre_minority_trigger = yes
+					OR = {
+						trade_goods = wool
+						trade_goods = livestock
+					}
 				}
+				save_event_target_as = ogre_tolerance_target
 			}
-			save_event_target_as = ogre_tolerance_target
 		}
 	}
 	option = {
@@ -1985,6 +2061,10 @@ country_event = {
 				factor = 2
 				wants_to_increase_tolerance_ogre = yes
 			}
+			modifier = {
+				factor = 0.5
+				wants_to_decrease_tolerance_ogre = yes
+			}
 		}
 	}
 	option = {
@@ -1995,6 +2075,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				wants_to_increase_tolerance_ogre = yes
+			}
+			modifier = {
+				factor = 2
+				wants_to_decrease_tolerance_ogre = yes
 			}
 		}
 	}
@@ -2045,14 +2129,16 @@ country_event = {
 	picture = GOBLIN_GUNNER_event_picture
 	is_triggered_only = yes
 	immediate = {
-		random_owned_province = {
-			limit = {
-				has_ogre_minority_trigger = yes
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_ogre_minority_trigger = yes
+				}
+				save_event_target_as = ogre_tolerance_target
 			}
-			save_event_target_as = ogre_tolerance_target
-		}
-		prepare_months_of_tax_income = {
-			months = 6
+			prepare_months_of_tax_income = {
+				months = 6
+			}
 		}
 	}
 	option = {
@@ -2125,101 +2211,6 @@ country_event = {
 		add_mil_power = 25
 		ai_chance = {
 			factor = 100
-		}
-	}
-}
-
-# Handler for ogre_tolerance_events.12 and ogre_flavour_events.6
-country_event = {
-	id = ogre_tolerance_events.100
-	title = ogre_tolerance_events.100.t
-	desc = ogre_tolerance_events.100.d
-	picture = GOBLIN_GUNNER_event_picture
-	is_triggered_only = yes
-	hidden = yes
-	trigger = {
-		owns = 5037		#Maghargma
-		ogre_tolerance_has_any_region_available = yes
-	}
-	option = {
-		name = ogre_tolerance_events.100.a
-		ogre_tolerance_giants_region = {
-			region = northern_pass
-		}
-		ogre_tolerance_giants_region = {
-			region = gerudian_frontier
-		}
-		ogre_tolerance_giants_region = {
-			region = dalr
-		}
-		ogre_tolerance_giants_region = {
-			region = olavlund
-		}
-		ogre_tolerance_giants_region = {
-			region = alenic_reach
-		}
-		ogre_tolerance_giants_region = {
-			region = yyl_moista
-		}
-		ogre_tolerance_giants_region = {
-			region = ogre_valley
-		}
-		ogre_tolerance_giants_region = {
-			region = west_forbidden_plains
-		}
-		ogre_tolerance_giants_region = {
-			region = serpent_gift
-		}
-		ogre_tolerance_giants_region = {
-			region = east_forbidden_plains
-		}
-		ogre_tolerance_giants_region = {
-			region = south_yarikhoi
-		}
-		ogre_tolerance_giants_region = {
-			region = north_yarikhoi
-		}
-		ogre_tolerance_giants_region = {
-			region = nuzurbokh
-		}
-		ogre_tolerance_giants_region = {
-			region = moduk
-		}
-		ogre_tolerance_giants_region = {
-			region = khaashalg
-		}
-		ogre_tolerance_giants_region = {
-			region = nomsyulhan
-		}
-		ogre_tolerance_giants_region = {
-			region = shuvuushudi
-		}
-		ogre_tolerance_giants_region = {
-			region = odheongu
-		}
-		ogre_tolerance_giants_region = {
-			region = north_yanshen
-		}
-		ogre_tolerance_giants_region = {
-			region = lower_yanshen
-		}
-		ogre_tolerance_giants_region = {
-			region = upper_yanshen
-		}
-		ogre_tolerance_giants_region = {
-			region = demon_hills
-		}
-		ogre_tolerance_giants_region = {
-			region = shamakhad
-		}
-		ogre_tolerance_giants_region = {
-			region = dhujat
-		}
-		ogre_tolerance_giants_region = {
-			region = rahen_coast
-		}
-		ogre_tolerance_giants_region = {
-			region = rakhadesh
 		}
 	}
 }
