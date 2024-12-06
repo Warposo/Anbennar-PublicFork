@@ -4652,6 +4652,7 @@ deepwoods_portal_area = {
 	6258
 }
 
+
 ###Rahen
 #Rahen Coast
 avhavubhiya_area = {
