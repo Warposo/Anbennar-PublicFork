@@ -682,6 +682,17 @@ h35_branch_3 = {
 			}
 		}
 		effect = {
+			country_event = {
+				id = flavour_corinsfield.91
+			}
+			country_event = {
+				id = flavour_corinsfield.94
+				days = 90
+			}
+			country_event = {
+				id = flavour_corinsfield.95
+				days = 180
+			}
 			every_owned_province = {
 				limit = {
 					OR = {

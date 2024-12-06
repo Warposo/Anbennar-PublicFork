@@ -190,3 +190,7 @@ h35_proper_company = {
     church_loyalty_modifier = 0.05
     church_influence_modifier = 0.05
 }
+h35_dwarf_convert = {
+    local_missionary_maintenance_cost = -0.33
+    local_missionary_strength = 0.01
+}
