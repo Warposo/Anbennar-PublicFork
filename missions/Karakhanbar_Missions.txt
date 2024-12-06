@@ -509,12 +509,12 @@ Z54_2_hardliner = {
                     any_owned_province = {
                         culture = emerald_orc
                     }
-                    all_owned_province = {
-                        culture = emerald_orc
-                        num_of_units_in_province = {
-                            who = ROOT
-                            amount = 2
-                        }
+                }
+                all_owned_province = {
+                    culture = emerald_orc
+                    num_of_units_in_province = {
+                        who = ROOT
+                        amount = 2
                     }
                 }
             }
@@ -2828,7 +2828,7 @@ Z54_4_1 = {
                     has_building = mage_tower
                 }
                 capital_scope = {
-                    has_production_building_trigger = yes
+                    has_production_or_gold_building_trigger = yes
                     has_building = mage_tower
                 }
             }
@@ -2843,7 +2843,7 @@ Z54_4_1 = {
                     has_production_building_trigger = yes
                 }
                 capital_scope = {
-                    has_production_building_trigger = yes
+                    has_production_or_gold_building_trigger = yes
                 }
                 num_artifice_inventions_discovered = {
                     VAL = 5
@@ -2860,7 +2860,7 @@ Z54_4_1 = {
                     has_production_building_trigger = yes
                 }
                 capital_scope = {
-                    has_production_building_trigger = yes
+                    has_production_or_gold_building_trigger = yes
                 }
                 check_variable = {
                     which = centralize_state_counter
