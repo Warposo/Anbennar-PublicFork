@@ -2216,22 +2216,15 @@ country_event = {
 	title = flavour_themarenn.52.t
 	desc = flavour_themarenn.52.d
 	picture = SWEDEN_LEAGUE_WAR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
 	trigger = {
 		OR = {
 			tag = A95
 			was_tag = A95
 		}
-		is_year = 1525
+		is_religion_enabled = corinite
 		religion = regent_court
-		europe = {
-			any_province = {
-				is_reformation_center = yes
-			}
-		}
-	}
-	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 30
 	}
 	option = {
 		name = flavour_themarenn.52.a
@@ -2247,6 +2240,7 @@ country_event = {
 			duration = -1
 		}
 		set_country_flag = a95_casetin
+		set_ruler_flag = a95_casetin_ruler
 	}
 	option = {
 		name = flavour_themarenn.52.b
@@ -2259,6 +2253,7 @@ country_event = { #Emperor Casetin sil Themarenn and the corinite war
 	desc = flavour_themarenn.53.d
 	picture = SWEDEN_LEAGUE_WAR_eventPicture
 	fire_only_once = yes
+	is_triggered_only = yes
 	trigger = {
 		tag = A95
 		hre_leagues_enabled = yes
@@ -2269,7 +2264,6 @@ country_event = { #Emperor Casetin sil Themarenn and the corinite war
 			in_league = corinite
 		}
 	}
-	mean_time_to_happen = { months = 1 }
 	option = {		# to war!
 		name = flavour_themarenn.53.a
 		join_league = regent_court
@@ -2287,10 +2281,11 @@ country_event = { #Emperor Casetin sil Themarenn and the corinite war
 	option = { #nah
 		name = flavour_themarenn.53.b
 		if = {
-			limit = { has_ruler = "Casetin síl Themarenn" }
+			limit = { has_ruler_flag = a95_casetin_ruler }
 			custom_tooltip = A95_casetin_abdicate
 			hidden_effect = {
-			kill_ruler = yes
+				kill_ruler = yes
+				clr_ruler_flag = a95_casetin_ruler
 			}
 		}
 		
@@ -2349,6 +2344,7 @@ country_event = {
 	title = flavour_themarenn.55.t
 	desc = flavour_themarenn.55.d
 	fire_only_once = yes
+	is_triggered_only = yes
 	picture = SWEDEN_LEAGUE_WAR_eventPicture
 
 	trigger = {
@@ -2357,6 +2353,7 @@ country_event = {
 			was_tag = A95
 		}
 		has_country_flag = a95_casetin
+		has_global_flag = league_war_complete
 		is_in_league_war = no
 		hre_leagues_enabled = no
 		NOT = {
@@ -2364,10 +2361,6 @@ country_event = {
 		}
 		has_country_flag = a95_casetin2
 		has_country_flag = a95_casetin
-	}
-
-	mean_time_to_happen = {
-		days = 5
 	}
 	immediate = {
 		add_country_modifier = {
