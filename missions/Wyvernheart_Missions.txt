@@ -346,10 +346,14 @@ wyvernheart_column_1 = {
 				tooltip = wyvernheart_A7_trigger_tt
 				any_hired_mercenary_company = {
 					OR = {
+						template = merc_wyvernheart_burnblood_company_1
 						template = merc_wyvernheart_burnblood_company_2_1
 						template = merc_wyvernheart_burnblood_company_2_2
 						template = merc_wyvernheart_burnblood_company_3_1
 						template = merc_wyvernheart_burnblood_company_3_2
+						template = merc_wyvernheart_burnblood_company_4_1
+						template = merc_wyvernheart_burnblood_company_4_2
+						template = merc_wyvernheart_burnblood_company_4_3
 					}
 					location = {
 						province_id = 227
