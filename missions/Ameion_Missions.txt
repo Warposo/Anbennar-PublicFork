@@ -1395,6 +1395,7 @@ G52_3 = {
 		}
 		
 		effect = {
+			add_adm_power = 100
 			if = {
 				limit = { any_owned_province = { trade_goods = precursor_relics } }
 				ameion_area = {
@@ -2438,6 +2439,12 @@ G52_4 = {
 			every_subject_country = { 
 				limit = { capital_scope = { superregion = taychend_superregion } }
 				change_religion = kheionism
+				hidden_effect = {
+					remove_opinion = {
+						who = ROOT
+						modifier = aggressive_expansion
+					}
+				}
 			}
 		}
 	}

@@ -279,7 +279,7 @@
  ameion_korrimutren_tt: "\nIf §Y[G83.GetName]§! owns §Y[2562.GetName]§! and §Y[2526.GetName]§!, gain §Gcores§! on those two provinces, and they each lose §G10§! §YYears of Seperatism§!.\n"
  ameion_fotistrepei_tt: "The above modifier will be applied to any province which meets the requirements of this mission, and those which meet it in the future."
  ameion_taychendi_subjugation_tt: "Unlock §YDeyodéikakaupos§! flagship.\nGain §YSubjugation§! Casus Belli on all independent Taychendi nations with less than §Y60§! development."
- ameion_strong_duchies_tt: "§YStrong Duchies§! no longer costs §YAbsolutism§!, and provides §G+1§! §YDiplomatic Relations§! and §G+1.00§! §YDiplomatic Reputation§!.\n\nAll subjects in Taychend will convert to §YKheionist§!."
+ ameion_strong_duchies_tt: "§YStrong Duchies§! no longer costs §YAbsolutism§!, and provides §G+1§! §YDiplomatic Relations§! and §G+1.00§! §YDiplomatic Reputation§!.\n\nAll subjects in Taychend will convert to §YKheionist§!, and have their §YAggressive Expansion§! opinion modifier removed."
  ameion_rezankand_subjugation_tt: "Gain §YSubjugation§! Casus Belli on §YRezankand§! or §YJaherian Exemplars§!, should they exist."
  ameion_rezankand_event_tt: "If we or a subject own an §YElven§! province in §YDry Coast§! region, we will have an event concerning them."
  ameion_greatest_ships_tt: "§gThe modifier will display the appropiate forcelimit when Degárikes are unlocked§!\nThis modifier will persist regardless of total owned §YKheionai Shipyards§!.\n"
