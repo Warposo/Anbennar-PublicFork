@@ -787,18 +787,6 @@ giberd_konwell_conquest = {
 				development = 25
 				has_manufactory_trigger = yes
 			}
-			if = {
-				limit = {
-					271 = {
-						NOT = {
-							trade_goods = glass
-						}
-					}
-				}
-				271 = {
-					change_trade_goods = glass
-				}
-			}
 			has_idea = A81_artificer_loading_exoskeleton_v1
 		}
 		effect = {
@@ -834,6 +822,18 @@ giberd_konwell_conquest = {
 				add_province_modifier = {
 					name = giberd_converted_vanbury_glassworks
 					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					271 = {
+						NOT = {
+							trade_goods = glass
+						}
+					}
+				}
+				271 = {
+					change_trade_goods = glass
 				}
 			}
 		}
