@@ -2454,8 +2454,38 @@ Z54_3_1 = {
             Z54_might_makes_right
             Z54_engineer_corps
         }
+        provinces_to_highlight = {
+            OR = {
+                AND = {
+                    OR = {
+                        area = hornwood_area
+                        area = banesfork_area
+                    }
+                    NOT = { owned_by = ROOT }
+                    owner = { army_size = ROOT }
+                }
+                AND = {
+                    OR = {
+                        region = south_castanor_region
+                        region = inner_castanor_region
+                        region = west_castanor_region
+                    }
+                    is_capital = yes
+                    owner = {
+                        culture_group = orcish
+                        NOT = { has_been_insulted_by_root = yes }
+                        NOT = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 100
+                            }
+                        }
+                    }
+                }
+            }
+        }
         trigger = {
-            if ={
+            if = {
                 limit = {
                     any_known_country = {
                         culture_group = orcish
@@ -2469,47 +2499,35 @@ Z54_3_1 = {
                     }
                 }
                 OR = {
-                    all_known_country = {
-                        OR = {
-                            custom_trigger_tooltip = {
-                                tooltip = karakhanbar_a_new_escann_trigger_every_orc_in_escann_tt
-                                NOT = {
-                                    AND = {
-                                        culture_group = orcish
-                                        capital_scope = {
-                                            OR = {
-                                                region = south_castanor_region
-                                                region = inner_castanor_region
-                                                region = west_castanor_region
-                                            }
-                                        }
-                                    }
+                    NOT = {
+                        any_known_country = {
+                            culture_group = orcish
+                            capital_scope = {
+                                OR = {
+                                    region = south_castanor_region
+                                    region = inner_castanor_region
+                                    region = west_castanor_region
                                 }
                             }
-                            has_opinion = {
-                                who = ROOT
-                                value = 100
+                            NOT = {
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 100
+                                }
                             }
                         }
                     }
-                    all_known_country = {
-                        OR = {
-                            custom_trigger_tooltip = {
-					            tooltip = karakhanbar_a_new_escann_trigger_every_orc_in_escann_tt
-                                NOT = {
-                                    AND = {
-                                        culture_group = orcish
-                                        capital_scope = {
-                                            OR = {
-                                                region = south_castanor_region
-                                                region = inner_castanor_region
-                                                region = west_castanor_region
-                                            }
-                                        }
-                                    }
+                    NOT = {
+                        any_known_country = {
+                            culture_group = orcish
+                            capital_scope = {
+                                OR = {
+                                    region = south_castanor_region
+                                    region = inner_castanor_region
+                                    region = west_castanor_region
                                 }
                             }
-                            has_been_insulted_by_root = yes
+                            NOT = { has_been_insulted_by_root = yes }
                         }
                     }
                 }
