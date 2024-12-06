@@ -2420,6 +2420,7 @@ on_siege_won_country = {
 	if = { 
 		limit = {
 			tag = H35
+			FROM = { province_id = 1133 }
 			1133 = {
 				controlled_by = H35
 				NOT = { has_province_flag = h35_1133_sacked }
@@ -2436,6 +2437,7 @@ on_siege_won_country = {
 	if = {
 		limit = {
 			tag = H35
+			FROM = { province_id = 1133 }
 			H35 = {
 				capital_scope = {
 					NOT = {
@@ -2448,6 +2450,8 @@ on_siege_won_country = {
 				NOT = { has_province_flag = h35_1133_sacked }
 			}
 		}
+		country_event = { id = flavour_corinsfield.34 }
+		1133 = { set_province_flag = h35_1133_sacked }
 	}
 }
 
@@ -3090,24 +3094,12 @@ on_monarch_death = {
 		flavour_shalazar.2 #Shalazar - The Question of Succession
 		the_command.2 #The Death of Moguwon Wolfborn
 		naleni.35 # Death of Riva
+		flavour_corinsfield.90 #corinsfield peasants theocracy election
 	}
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1
 	}
-	if = {
-		limit = {
-			OR = {
-				tag = H35
-				was_tag = H35
-			}
-			has_government_reform = peasants_theocracy_reform
-		}
-		country_event = {
-			id = flavour_corinsfield.90
-		}
-	}
-
 	if = {
 		limit = {
 			is_subject_of_type = pronoia_subject_type
@@ -4394,6 +4386,7 @@ on_monthly_pulse = {
 
 	events = {
 		magic_ruler.102
+		flavour_corinsfield.81 #getting the chicken asap
 	}
 
 	if = {
@@ -5849,6 +5842,8 @@ on_yearly_pulse = {
 		yangcheng.11		#Yangcheng Debates
 		flavour_ovdal_tungr.1001 # Has some yearly checks for Ovdal Tûngr.
 		gushuokguan_event.101 #Gushuokguan Condotierri Counter
+		flavour_corinsfield.31 #corinsfield trial of the performer
+		flavour_corinsfield.80 #corinsfield
 	}
 	if = {
 		limit = { tag = R62 }
@@ -6442,6 +6437,9 @@ on_bi_yearly_pulse = {
 		500 = flavor_grombar.23
 		500 = flavor_grombar.24
 		500 = flavor_grombar.25
+
+		#corinsfield
+		100 = flavour_corinsfield.32
 
 		# Jaddari disaster prelim
 
@@ -7556,7 +7554,8 @@ on_thri_yearly_pulse = {
 		300 = harpy_events.117
 		300 = harpy_events.118
 		300 = harpy_events.120
-
+		#corinsfield
+		100 = flavour_corinsfield.86
 		1000 = 0
 	}
 }
@@ -10245,6 +10244,7 @@ on_five_year_pulse_3 = {
 		flavor_arverynn.5 #Predyvens Reform
 		sarhalevents.111 		#Coven's Bargain Event Manager
 		gushuokguan_event.10 	#Gushuokguan MT Migration Events
+		flavour_corinsfield.83 #corinsfield peaceful day
     }
 	# if = {
 		# limit = { ynnic_iosahar = 1 }
@@ -15731,24 +15731,22 @@ on_institution_embracement = {
 			has_institution = manufactories
 			NOT = {
 				has_country_flag = artificery_unlocked
-				tag = H35 #corinsfield
 			}
 			OR = {
 				NOT = { religion = bulwari_sun_cult }
 				is_chosen_country = no
 			}
 		}
-		country_event = {
-			id = anbennar_setup.19
+		if = { #corinsfield special event cause they dont like magick people
+			limit = { tag = H35 }
+			country_event = {
+				id = flavour_corinsfield.70
+			}
 		}
-	}
-	if = { #Artificery start corinsfield
-		limit = {
-			has_institution = manufactories
-			tag = H35
-		}
-		country_event = {
-			id = flavour_corinsfield.79
+		else = {
+			country_event = {
+				id = anbennar_setup.19
+			}
 		}
 	}
 	if = { #Anbennar - isobelin events

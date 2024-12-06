@@ -28,6 +28,7 @@ po_corinsfield_ban_mage = {
 	
 	is_visible = { # Defaults to equivalent of "always = yes"
 		has_country_flag = h35_ban_mages_treaty
+		FROM = { has_estate = estate_mages }
 	}
 	is_allowed = { # Defaults to equivalent of "always = yes"
 		FROM = {
@@ -47,9 +48,12 @@ po_corinsfield_ban_mage = {
 		}
 	}
 	ai_weight = { # Defaults to always evaluate to 0
-		export_to_variable = {
-			variable_name = ai_value # Mandatory to have entry called "ai_value". Its value at the end of the ai_weight scope is what will be used
-			value = 0
+	export_to_variable = {
+		variable_name = ai_value # Mandatory to have entry called "ai_value". Its value at the end of the ai_weight scope is what will be used
+		value = trigger_value:always
+		}
+		set_variable = {
+			ai_value = 0
 		}
 	}
 }

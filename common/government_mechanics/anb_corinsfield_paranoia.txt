@@ -114,7 +114,7 @@ corinsfield_paranoia_mechanic = {
 				trigger = {
 					calc_true_if = {
 						amount = 3
-						any_neighbor_country = {
+						all_neighbor_country = {
 							has_estate = estate_mages
 						}
 					}

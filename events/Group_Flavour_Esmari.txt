@@ -1276,12 +1276,6 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		NOT = {
-			OR ={
-				tag = A95
-				was_tag = A95
-			}
-		}
 		owns = 266
 		NOT = {
 			is_core = 266
@@ -1292,6 +1286,10 @@ country_event = {
 			has_matching_religion = regent_court
 			has_matching_religion = corinite
 			has_matching_religion = ravelian
+		}
+		NOT = {
+			tag = A95
+			was_tag = A95
 		}
 	}
 

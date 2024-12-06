@@ -4965,7 +4965,7 @@ H35_gp_crimson_cathedral = { #cathedral of crimson grace
 					limit = {
 						region = sarda_region
 					}
-					add_permanent_province_modifier = {
+					add_province_modifier = {
 						name = h35_crimson_cathedral_2
 						duration = -1
 						hidden = yes

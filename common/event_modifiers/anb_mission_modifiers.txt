@@ -32992,7 +32992,38 @@ A95_lion_of_esmaria_marines = {
 }
 A95_pro_adean = {
 	reasons_to_elect = 50
-	land_forcelimit = 0.15
+	land_forcelimit_modifier = 0.15
 	global_heretic_missionary_strength = 0.02
-	local_tolerance_of_heretics = -4
+	tolerance_of_heretics = -4
+}
+A95_rebuild_esmaraine = { #temporary
+	local_development_cost = -0.15
+	local_missionary_strength = 0.05
+	local_build_cost = -0.2
+}
+A95_vs_heretics = {
+	global_heretic_missionary_strength = 0.01
+	relation_with_same_religion = 10
+	reverse_relation_with_same_religion = 10
+}
+A95_temp_immo = {
+	monarch_lifespan = 100
+}
+a95_a94_co = {
+	fort_maintenance_modifier = -0.15
+}
+a95_a35_co = {
+	adm_advisor_cost = -0.15
+}
+a95_a73_co = {
+	production_efficiency = 0.05
+}
+a95_a39_co = {
+	land_morale = 0.05
+}
+a95_a92_co = {
+	dip_tech_cost_modifier = -0.05
+}
+a95_a60_co = {
+	dip_advisor_cost = -0.15
 }

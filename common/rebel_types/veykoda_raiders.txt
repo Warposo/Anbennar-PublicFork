@@ -79,18 +79,15 @@ veykoda_raiders = {
 			}
 		}
 		every_owned_province = {
-			if = {
-				limit = { 
-					NOT = { is_capital = yes }
-					has_rebel_faction = veykoda_raiders
-					
-				}
-				add_core = U21
-				change_culture = veykodan
-				change_religion = rune_scribes
-				cede_province = U21
+			limit = { 
+				NOT = { is_capital = yes }
+				has_rebel_faction = veykoda_raiders
+				
 			}
-			else = {}
+			add_core = U21
+			change_culture = veykodan
+			change_religion = rune_scribes
+			cede_province = U21
 		}
 	}
 }

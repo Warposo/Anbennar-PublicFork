@@ -6,7 +6,7 @@ h35_branch_1 = {
 	ai = yes
 	potential = {
 		tag = H35
-		NOT = { map_setup = map_setup_random }
+		
 	}
 	has_country_shield = yes
 	
@@ -19,6 +19,7 @@ h35_branch_1 = {
 		position = 2
 		provinces_to_highlight = {
 			area = corinsfield_area
+			owned_by = ROOT
 			NOT = { base_manpower = 5 }
 		}
 		trigger = {
@@ -29,14 +30,18 @@ h35_branch_1 = {
 				base_manpower = 5
 			}
 			capital_scope = {
-				AND = {
-					has_fort_building_trigger = yes
-					has_manpower_building_trigger = yes
-				}
+				has_fort_building_trigger = yes
+				has_manpower_building_trigger = yes
 			}
 		}
 		effect = {
-			corinsfield_area = { type = all add_random_development = 2 }
+			corinsfield_area = { add_random_development = 2 }
+			if = {
+				limit = { 
+					capital_scope = { has_building = regimental_camp } 
+				}
+				capital_scope = { remove_building = regimental_camp }
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -44,14 +49,6 @@ h35_branch_1 = {
 					}
 				}
 				capital_scope = { add_building = conscription_center }
-			}
-			hidden_effect = {
-				if = {
-					limit = { 
-						capital_scope = { has_building = regimental_camp } 
-					}
-					capital_scope = { remove_building = regimental_camp }
-				}
 			}
 			else = {
 				capital_scope = { add_random_development = 2 }
@@ -90,18 +87,9 @@ h35_branch_1 = {
 			army_professionalism = 0.2
 			army_size_percentage = 0.9
 			AND = {
-				has_government_power = {
-					type = MIL
-					value = 7
-				}
-				has_government_power = {
-					type = ADM
-					value = 7
-				}
-				has_government_power = {
-					type = DIP
-					value = 7
-				}
+				monthly_mil = 7
+				monthly_adm = 7
+				monthly_dip = 7
 			}
 			AND = {
 				has_dip_advisor_2 = yes
@@ -122,8 +110,12 @@ h35_branch_1 = {
 		position = 7
 		provinces_to_highlight = {
 			OR = {
-				region = sarda_region
-				region = veykoda_region
+				area = adbrabohvi_area
+				area = hor_velenynn_area
+				area = ynncytr_area
+				area = arverynn_area
+				area = hradapolere_area
+				area = ynnluka_area
 			}
 			has_terrain = farmlands
 			NOT = { AND = { base_production = 6 has_production_building_trigger = yes } }
@@ -201,19 +193,12 @@ h35_branch_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				has_manufactory_trigger = yes
 			}
-			calc_true_if = {
-				amount = 10
-				custom_trigger_tooltip = {
-					tooltip = h35_ynn_25dev
-					any_owned_province = {
-						superregion = ynn_superregion
-						AND = {
-							trade_goods = grain
-							has_seat_in_parliament = yes
-							development = 25
-						}
-					}
-				}
+			num_of_owned_provinces_with = {
+				value = 10
+				superregion = ynn_superregion
+				trade_goods = grain
+				has_seat_in_parliament = yes
+				development = 25
 			}
 		}
 		effect = {
@@ -232,7 +217,7 @@ h35_branch_2 = {
 	ai = yes
 	potential = {
 		tag = H35
-		NOT = { map_setup = map_setup_random }
+		
 	}
 	has_country_shield = yes
 	
@@ -244,11 +229,11 @@ h35_branch_2 = {
 		}
 		position = 1
 		provinces_to_highlight = {
-			province_id = 2807
+			area = corinsfield_area
 		}
 		trigger = {
 			owns_core_province = 2807
-			corinsfield_area = { type = all country_or_non_sovereign_subject_holds = ROOT is_city = yes }
+			corinsfield_area = { type = all owned_by = ROOT is_city = yes }
 			native_policy = native_policy_hostile
 		}
 		effect = {
@@ -279,10 +264,10 @@ h35_branch_2 = {
 		trigger = {
 			monthly_mil = 7
 			army_size_percentage = 0.9
-			OR = {
-				all_known_country = {
+			NOT = {
+				any_known_country = {
 					capital_scope = { region = veykoda_region }
-					OR = {
+					NOT = {
 						has_opinion = {
 							who = ROOT
 							value = -50
@@ -297,15 +282,7 @@ h35_branch_2 = {
 						}
 					}
 				}
-				NOT = {
-					any_known_country = {
-						capital_scope = {
-							region = veykoda_region
-						}
-					}
-				}
 			}
-			
 		}
 		effect = {
 			veykoda_region = {
@@ -329,16 +306,8 @@ h35_branch_2 = {
 			owned_by = ROOT
 			NOT = {
 				AND = {
-					OR = {
-						has_building = barracks
-						has_building = training_fields
-					}
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
+					has_manpower_building_trigger = yes
+					has_fort_building_trigger = yes
 					OR = {
 						has_building = soldier_households
 						has_building = ramparts
@@ -347,28 +316,22 @@ h35_branch_2 = {
 			}
 		}
 		trigger = {
-			calc_true_if = {
-				amount = 3
-				any_owned_province = {
-					region = veykoda_region
-					has_fort_building_trigger = yes
-					NOT = { is_capital = yes }
-				}
+			num_of_owned_provinces_with = {
+				value = 3
+				region = veykoda_region
+				has_fort_building_trigger = yes
+				NOT = { is_capital = yes }
 			}
 			capital_scope = { has_fort_building_trigger = yes }
-			calc_true_if = {
-				amount = 3
-				any_owned_province = {
-					has_manpower_building_trigger = yes
-				}
+			num_of_owned_provinces_with = {
+				value = 3
+				has_manpower_building_trigger = yes
 			}
-			calc_true_if = {
-				amount = 3
-				any_owned_province = {
-					OR = {
-						has_building = ramparts
-						has_building = soldier_households
-					}
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					has_building = ramparts
+					has_building = soldier_households
 				}
 			}
 		}
@@ -377,33 +340,27 @@ h35_branch_2 = {
 				add_permanent_province_modifier = { name = h35_raising_defenses duration = -1 }
 			}
 			random_owned_province = {
-				if = {
-					limit = {
-						region = veykoda_region
-						has_fort_building_trigger = yes
-					}
-					add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
+				limit = {
+					region = veykoda_region
+					has_fort_building_trigger = yes
 				}
+				add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
 			}
 			random_owned_province = {
-				if = {
-					limit = {
-						region = veykoda_region
-						has_fort_building_trigger = yes 
-						NOT = { has_province_modifier = h35_raising_defense }
-					}
-					add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
+				limit = {
+					region = veykoda_region
+					has_fort_building_trigger = yes 
+					NOT = { has_province_modifier = h35_raising_defense }
 				}
+				add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
 			}
 			random_owned_province = {
-				if = {
-					limit = {
-						region = veykoda_region
-						has_fort_building_trigger = yes 
-						NOT = { has_province_modifier = h35_raising_defense }
-					}
-					add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
+				limit = {
+					region = veykoda_region
+					has_fort_building_trigger = yes 
+					NOT = { has_province_modifier = h35_raising_defense }
 				}
+				add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
 			}
 		}
 	}
@@ -423,10 +380,7 @@ h35_branch_2 = {
 				}
 			}
 			NOT = {
-				OR = {
-					culture = corinsfielder
-					has_owner_accepted_culture = yes
-				}
+				culture = corinsfielder
 			}
 		}
 		trigger = {
@@ -434,7 +388,7 @@ h35_branch_2 = {
 				type = all
 				owned_by = ROOT
 				religion = corinite
-				NOT = { devastation = 0 }
+				NOT = { devastation = 1 }
 				culture = corinsfielder
 			}
 		}
@@ -450,7 +404,7 @@ h35_branch_2 = {
 			}
 			hidden_effect = {
 				country_event = {
-					id = flavour_corisnfield.29
+					id = flavour_corinsfield.29
 					days = 200
 					random = 200
 				}
@@ -474,13 +428,12 @@ h35_branch_2 = {
 			}
 		}
 		trigger = {
-			calc_true_if = {
-				amount = 12
-				veykoda_region = { 
-					owned_by = ROOT
-					has_tax_building_trigger = yes
-					development = 20
-				}
+			num_of_owned_provinces_with = {
+				value = 12
+				region = veykoda_region
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+				development = 20
 			}
 		}
 		effect = {
@@ -531,16 +484,22 @@ h35_branch_2 = {
 		}
 		position = 7
 		provinces_to_highlight = {
-			is_capital = yes
+			province_id = 2807
 		}
 		trigger = {
-			has_global_modifier_value = {
-				which = build_cost
-				value = 0.35
+			custom_trigger_tooltip = {
+				tooltip = h35_build_value
+				has_global_modifier_value = {
+					which = build_cost
+					value = 0.35
+				}
 			}
-			has_global_modifier_value = {
-				which = development_cost
-				value = 0.25
+			custom_trigger_tooltip = {
+				tooltip = h35_dev_value
+				has_global_modifier_value = {
+					which = development_cost
+					value = 0.25
+				}
 			}
 			max_manpower = 150
 		}
@@ -558,7 +517,7 @@ h35_branch_3 = {
 	ai = yes
 	potential = {
 		tag = H35
-		NOT = { map_setup = map_setup_random }
+		
 	}
 	has_country_shield = yes
 	
@@ -570,7 +529,18 @@ h35_branch_3 = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
+			OR = {
+				province_id = 1164
+				province_id = 1165
+				province_id = 2837
+				province_id = 2811
+				province_id = 1140
+				province_id = 1141
+				province_id = 2841
+				is_capital_of = H55
+				is_capital_of = G94
+				is_capital_of = H57
+			}
 		}
 		trigger = {
 			has_discovered = 1164
@@ -583,12 +553,11 @@ h35_branch_3 = {
 			H55 = { OR = { exists = no capital_scope = { has_discovered = ROOT } } }
 			G94 = { OR = { exists = no capital_scope = { has_discovered = ROOT } } }
 			H57 = { OR = { exists = no capital_scope = { has_discovered = ROOT } } }
-			calc_true_if = {
-				amount = 4
-				veykoda_region = {
-					NOT = { area = corinsfield_area }
-					owned_by = ROOT
-				}
+			num_of_owned_provinces_with = {
+				value = 3
+				region = veykoda_region
+				NOT = { area = corinsfield_area }
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -605,62 +574,51 @@ h35_branch_3 = {
 							trade_goods = gold
 						}
 					}
-					change_trade_goods = diamonds 
+					change_trade_goods = dyes
 				}
 			}
 			random_owned_province = {
-				if = {
-					limit = {
-						NOT = {
-							OR = {
-								is_capital = yes
-								trade_goods = iron
-								trade_goods = cloth
-								trade_goods = copper
-								trade_goods = gold
-								trade_goods = tobacco
-								trade_goods = grain
-							} 
-						}
+				limit = {
+					NOT = {
+						OR = {
+							is_capital = yes
+							trade_goods = iron
+							trade_goods = cloth
+							trade_goods = copper
+							trade_goods = gold
+							trade_goods = tobacco
+							trade_goods = grain
+						} 
 					}
-					change_trade_goods = iron
 				}
+				change_trade_goods = iron
 		 	}
 			random_owned_province = {
-				if = {
-					limit = {
-						NOT = {
-							OR = {
-								is_capital = yes
-								trade_goods = iron
-								trade_goods = cloth
-								trade_goods = copper
-								trade_goods = gold
-								trade_goods = tobacco
-								trade_goods = grain
-							} 
-						}
+				limit = {
+					NOT = {
+						OR = {
+							is_capital = yes
+							trade_goods = gold
+						} 
 					}
-					change_trade_goods = grain
 				}
+				change_trade_goods = glass
 		 	}
 			random_owned_province = {
-				if = {
-					limit = {
-						NOT = {
-							OR = {
-								is_capital = yes
-								trade_goods = iron
-								trade_goods = cloth
-								trade_goods = copper
-								trade_goods = gold
-								trade_goods = tobacco
-								trade_goods = grain
-							} 
-						}
+				limit = {
+					NOT = {
+						OR = {
+							is_capital = yes
+							trade_goods = iron
+							trade_goods = cloth
+							trade_goods = copper
+							trade_goods = gold
+							trade_goods = tobacco
+							trade_goods = grain
+						} 
 					}
-					change_trade_goods = grain
 				}
+				change_trade_goods = grain
 		 	}
 		}
 	}
@@ -672,15 +630,23 @@ h35_branch_3 = {
 		}
 		position = 3
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
+			AND = {
+				region = veykoda_region
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					culture = stone_dwarf
+					culture = steel_dwarf
+					culture = redfoot_halfling
+					culture = pipefoot_halfling
+					OR = { culture = havoric culture = new_havoric }
+				}
+			}
 		}
 		trigger = {
 			veykoda_region = {
 				type = all
-				AND = {
-					country_or_non_sovereign_subject_holds = ROOT
-					NOT = { OR = { culture = havoric culture = new_havoric } } 
-				}	
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { OR = { culture = havoric culture = new_havoric } } 
 			}
 			NOT = { accepted_culture = stone_dwarf accepted_culture = steel_dwarf accepted_culture = redfoot_halfling accepted_culture = pipefoot_halfling }
 			custom_trigger_tooltip = {
@@ -705,24 +671,24 @@ h35_branch_3 = {
 			}
 		}
 		effect = {
-			all_owned_province = {
-				if = {
-					limit = {
+			every_owned_province = {
+				limit = {
+					OR = {
 						region = veykoda_region
 						region = sarda_region
-						NOT = { has_human_minority_trigger = yes }
-					}
-					add_human_minority_size_effect = yes
-					small_decrease_of_dwarven_tolerance_effect = yes
-					small_decrease_of_halfling_tolerance_effect = yes
+					}	
+					NOT = { has_human_minority_trigger = yes }
 				}
+				ROOT = { add_human_minority_size_effect = yes }
+				small_decrease_of_dwarven_tolerance_effect = yes
+				small_decrease_of_halfling_tolerance_effect = yes
 			}
-			if = { limit = { devotion = 50 } add_devotion = 50 }
-			else_if = { limit = { devotion = 60 } add_devotion = 40 add_prestige = 10 }
-			else_if = { limit = { devotion = 70 } add_devotion = 30 add_prestige = 20 }
-			else_if = { limit = { devotion = 80 } add_devotion = 20 add_prestige = 30 }
+			if = { limit = { devotion = 100 } add_prestige = 50 }
 			else_if = { limit = { devotion = 90 } add_devotion = 10 add_prestige = 40 }
-			else_if = { limit = { devotion = 100 } add_prestige = 50 }
+			else_if = { limit = { devotion = 80 } add_devotion = 20 add_prestige = 30 }
+			else_if = { limit = { devotion = 70 } add_devotion = 30 add_prestige = 20 }
+			else_if = { limit = { devotion = 60 } add_devotion = 40 add_prestige = 10 }
+			else_if = { limit = { devotion = 50 } add_devotion = 50 }
 		}
 	}
 	
@@ -733,7 +699,10 @@ h35_branch_3 = {
 		}
 		position = 4
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
+			OR = {
+				trade_goods = iron
+				trade_goods = copper
+			}
 		}
 		trigger = {
 			has_mil_advisor_2 = yes
@@ -742,19 +711,17 @@ h35_branch_3 = {
 				artillery_fraction = 0.5 
 				num_of_artillery = 15
 			}
-			calc_true_if = {
-				amount = 8
-				any_owned_province = { has_production_building_trigger = yes }
+			num_of_owned_provinces_with = {
+				value = 8
+				has_production_building_trigger = yes
 			}
-			calc_true_if = {
-				amount = 3
-				any_owned_province = {
-					OR = {
-						trade_goods = iron
-						trade_goods = copper
-					}
-					base_production = 7
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					trade_goods = iron
+					trade_goods = copper
 				}
+				base_production = 7
 			}
 		}
 		effect = {
@@ -763,7 +730,7 @@ h35_branch_3 = {
 			add_country_modifier = { name = h35_magebane duration = -1 }
 			hidden_effect = {
 				country_event = {
-					id = flavour_corisnfield.28
+					id = flavour_corinsfield.28
 					days = 200
 					random = 200
 				}
@@ -778,22 +745,18 @@ h35_branch_3 = {
 		}
 		position = 7
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
+			region = sarda_region
+			culture = sarda
+			NOT = {
+				infantry_in_province = 5
+			}
 		}
 		trigger = {
-			calc_true_if = {
-				amount = 8
-				any_owned_province = {
-					region = sarda_region
-					culture = sarda
-				}
-			}
-			calc_true_if = {
-				amount = 10
-				any_province = {
-					region = sarda_region
-					infantry_in_province = 5
-				}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = sarda_region
+				culture = sarda
+				infantry_in_province = 5
 			}
 			OR = {
 				inquisitor = 3
@@ -842,10 +805,9 @@ h35_branch_3 = {
 					region = sarda_region
 					region = veykoda_region
 				}
-				owned_by = ROOT
 				value = 750
 			}
-			sarda_region = { type = all all_owned_province = { religion = corinite } }
+			sarda_region = { type = all religion = corinite }
 			veykoda_region = { type = all religion = corinite }
 			veykoda_region = { type = all is_prosperous = yes }
 			NOT = { average_unrest = 0 }
@@ -873,8 +835,7 @@ h35_branch_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = H35
-		NOT = { map_setup = map_setup_random }
+		tag = H35	
 	}
 	has_country_shield = yes
 	
@@ -886,7 +847,7 @@ h35_branch_4 = {
 		}
 		position = 1
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
+			area = corinsfield_area
 		}
 		trigger = {
 			if = {
@@ -894,21 +855,21 @@ h35_branch_4 = {
 					ai = no
 				}
 				capital_scope = { has_tax_building_trigger = yes }
-				corinsfield_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+				corinsfield_area = { type = all owned_by = ROOT }
 				stability = 1
 				OR = {
 					custom_trigger_tooltip = {
 						tooltip = h35_godwin.tt
-						AND = {
-							has_ruler = "Godwin"
-							dynasty = "of Escerton"
-						}
+						has_ruler = "Godwin of Escerton"
 					}
 					dip = 3
 				}
 			}
 			else = {
-				always = yes
+				corinsfield_area = {
+					type = all
+					owned_by = ROOT
+				}
 			}
 		}
 		effect = {
@@ -1043,14 +1004,10 @@ h35_branch_4 = {
 				estate = estate_church
 				loyalty = 60
 			}
-			calc_true_if = {
-				amount = 6
-				any_owned_province = {
-					AND = {
-						has_tax_building_trigger = yes
-						has_courthouse_building_trigger = yes
-					}
-				}
+			num_of_owned_provinces_with = {
+				value = 6
+				has_tax_building_trigger = yes
+				has_courthouse_building_trigger = yes
 			}
 		}
 		effect = {
@@ -1076,27 +1033,26 @@ h35_branch_4 = {
 		}
 		position = 8
 		provinces_to_highlight = {
-			
-		}
-		trigger = {
-			calc_true_if = {
-				amount = 6
-				any_owned_province = {
+			NOT = {
+				AND = {
+					has_building = state_house
 					has_building = university
 				}
 			}
-			calc_true_if = {
-				amount = 6
-				any_owned_province = {
-					has_building = state_house
-				}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				has_building = state_house
+				has_building = university
 			}
 			OR = {
-				innovativeness = 20
-				OR = {
-					has_mil_advisor_4 = yes
-					has_adm_advisor_4 = yes
-					has_dip_advisor_4 = yes
+				innovativeness = 70
+				AND = {
+					has_mil_advisor_3 = yes
+					has_adm_advisor_3 = yes
+					has_dip_advisor_3 = yes
+					is_in_deficit = no
 				}
 			}
 			
@@ -1115,7 +1071,7 @@ h35_branch_5 = {
 	ai = yes
 	potential = {
 		tag = H35
-		NOT = { map_setup = map_setup_random }
+		
 	}
 	has_country_shield = yes
 	
@@ -1155,11 +1111,12 @@ h35_branch_5 = {
 		position = 3
 		provinces_to_highlight = {
 			area = corinsfield_area
+			NOT = { has_tax_building_trigger = yes }
 		}
 		trigger = {
 			corinsfield_area = {
 				type = all
-				has_building = temple
+				has_tax_building_trigger = yes
 			}
 			devotion = 80
 			custom_trigger_tooltip = {
@@ -1184,23 +1141,29 @@ h35_branch_5 = {
 		}
 		position = 5
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
 		}
 		trigger = {
 			has_estate_privilege = estate_church_one_faith_one_culture
-			treasury = 200
-			#has_estate_privilege = estate_church_goodmen_raisings
+			has_estate_privilege = estate_church_corinsfield_church_raisings
+			estate_territory = {
+				estate = estate_church
+				territory = 25
+			}
+			treasury = 400
 		}
 		effect = {
-			add_treasury = -200
+			add_treasury = -400
 			if = {
 				limit = { 2807 = { NOT = { has_building = cathedral } } }
 				2807 = { add_building = cathedral }
 			}
-			else = { add_base_tax = 2 }
+			else = { capital_scope = { add_base_tax = 2 } }
 			corinsfield_area = {
-				type = all
 				add_base_tax = 2
+			}
+			add_country_modifier = {
+				name = h35_proper_company
+				duration = -1
 			}
 			hidden_effect = {
 				country_event = {
@@ -1258,20 +1221,27 @@ h35_branch_5 = {
 			##PROVINCESHIGHLIGHTCODE
 		}
 		trigger = {
-			#low paranoia
-			power_projection = 50
-			calc_true_if = {
-				amount = 15
-				any_owned_province = {
-					has_seat_in_parliament = yes
+			NOT = {
+				has_government_power = {
+					mechanic_type = corinsfield_paranoia_mechanic
+					power_type = corinsfield_paranoia_power
+					value = 30
 				}
+			}
+			power_projection = 50
+			num_of_owned_provinces_with = {
+				value = 13
+				has_seat_in_parliament = yes
+				has_courthouse_building_trigger = yes
 			}
 			OR = {
 				inquisitor = 3
-				has_global_modifier_value = {
-					which = global_missionary_strength
-					value = 0.07
-					extra_shortcut = yes
+				custom_trigger_tooltip = {
+					tooltip = h35_missionary_strength
+					has_global_modifier_value = {
+						which = global_missionary_strength
+						value = 0.1
+					}
 				}
 				adm_power = 100
 			}
@@ -1303,7 +1273,7 @@ h35_branch_5 = {
 		}
 		position = 8
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
+			owner = { is_neighbor_of = ROOT has_estate = estate_mages }
 		}
 		trigger = {
 			all_neighbor_country = { 
