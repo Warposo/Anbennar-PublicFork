@@ -4652,11 +4652,6 @@ deepwoods_portal_area = {
 	6258
 }
 
-fae_portal_wasteland_area = {
-	1782 6558
-}
-
-
 ###Rahen
 #Rahen Coast
 avhavubhiya_area = {
