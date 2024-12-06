@@ -5459,6 +5459,7 @@ on_colony_finished_effect = {
 			has_province_modifier = L62_encouraged_harimari_migration
 		}
 		add_core = L62
+		change_religion = high_philosophy
 		if = {
 			limit = {
 				continent = asia
