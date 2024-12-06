@@ -611,6 +611,17 @@ Z54_2_hardliner = {
         }
         provinces_to_highlight = {
             owned_by = Z54
+            OR = {
+                province_group = deepwoods_mountain_grove
+                province_group = deepwoods_lake_grove
+                province_group = deepwoods_bone_grove
+                province_group = deepwoods_thorn_grove
+                province_group = deepwoods_hunter_grove
+                province_group = deepwoods_arrow_grove
+                province_group = deepwoods_flower_grove
+                province_group = deepwoods_river_grove
+                province_group = deepwoods_shadow_grove
+            }
             NOT = {
                 OR = {
                     has_influencing_fort = yes
@@ -998,6 +1009,17 @@ Z54_2_moderate = {
         }
         provinces_to_highlight = {
             owned_by = Z54
+            OR = {
+                province_group = deepwoods_mountain_grove
+                province_group = deepwoods_lake_grove
+                province_group = deepwoods_bone_grove
+                province_group = deepwoods_thorn_grove
+                province_group = deepwoods_hunter_grove
+                province_group = deepwoods_arrow_grove
+                province_group = deepwoods_flower_grove
+                province_group = deepwoods_river_grove
+                province_group = deepwoods_shadow_grove
+            }
             NOT = {
                 OR = {
                     has_influencing_fort = yes
@@ -1861,11 +1883,18 @@ Z54_3_1 = {
             Z54_aftermath_of_the_emeraldtide
         }
         provinces_to_highlight = {
-            OR = {
+            if = {
+                limit = {
+                    owns_core_province = 6258
+                }
                 province_id = 6258
-                province_id = 3058
-                province_id = 3053
-                province_id = 3052
+            }
+            else {
+                OR = {
+                    province_id = 3058
+                    province_id = 3053
+                    province_id = 3052
+                }
             }
         }
         trigger = {
@@ -3512,9 +3541,6 @@ Z54_5_1 = {
             stunad_skomdihr_area = {
                 type = all
                 owned_by = ROOT
-            }
-            stunad_skomdihr_area = {
-                type = all
                 is_city = yes
             }
             4100 = {
