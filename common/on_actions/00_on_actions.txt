@@ -9811,15 +9811,25 @@ on_five_year_pulse = {
 			}
 		}
 	}
-	#goodman selgal
-	random = {
-		chance = 10
-		country_event = { id = flavour_corinsfield.82 }
-	}
-	#father's day (corinsfield)
-	random = {
-		chance = 20
-		country_event = { id = flavour_corinsfield.84 }
+	
+	if = {
+		limit = {
+			OR = {
+				tag = H35
+				was_tag = H35
+			}
+
+		}
+		#goodman selgal
+		random = {
+			chance = 10
+			country_event = { id = flavour_corinsfield.82 }
+		}
+		#father's day (corinsfield)
+		random = {
+			chance = 20
+			country_event = { id = flavour_corinsfield.84 }
+		}
 	}
 }
 

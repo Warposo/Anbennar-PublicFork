@@ -18,12 +18,24 @@ h35_branch_1 = {
 		}
 		position = 2
 		provinces_to_highlight = {
-            region = veykoda_region
-            NOT = {
+            OR = {
                 AND = {
-                    religion = corinite
-                    NOT = { devastation = 1 }
-                    culture = corinsfielder
+                    is_capital_of = ROOT
+                    NOT = {
+                        AND = {
+                            has_fort_building_trigger = yes
+                            has_manpower_building_trigger = yes
+                        }
+                    }
+                }
+                AND = {
+                    area = corinsfield_area
+                    NOT = {
+                        AND = {
+                            owned_by = ROOT
+                            base_manpower = 5
+                        }
+                    }
                 }
             }
         }
@@ -1232,14 +1244,12 @@ h35_branch_5 = {
 		}
 		position = 7
 		provinces_to_highlight = {
-			owned_by = ROOT
-			NOT = {
-				AND = {
-					has_seat_in_parliament = yes
-					has_courthouse_building_trigger = yes
-				}
-			}
-		}
+            owned_by = ROOT
+            has_seat_in_parliament = yes
+            NOT = {
+                has_courthouse_building_trigger = yes
+            }
+        }
 		trigger = {
 			NOT = {
 				has_government_power = {
