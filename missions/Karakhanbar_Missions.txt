@@ -2469,37 +2469,53 @@ Z54_3_1 = {
                     }
                 }
                 OR = {
-                    all_known_country = {
-                        culture_group = orcish
-                        capital_scope = {
+                    custom_trigger_tooltip = {
+					    tooltip = karakhanbar_a_new_escann_trigger_high_opinion_tt
+                        all_known_country = {
                             OR = {
-                                region = south_castanor_region
-                                region = inner_castanor_region
-                                region = west_castanor_region
+                                NOT = {
+                                    AND = {
+                                        culture_group = orcish
+                                        capital_scope = {
+                                            OR = {
+                                                region = south_castanor_region
+                                                region = inner_castanor_region
+                                                region = west_castanor_region
+                                            }
+                                        }
+                                    }
+                                }
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 100
+                                }
                             }
-                        }
-                        has_opinion = {
-                            who = ROOT
-                            value = 100
                         }
                     }
-                    all_known_country = {
-                        culture_group = orcish
-                        capital_scope = {
+                    custom_trigger_tooltip = {
+					    tooltip = karakhanbar_a_new_escann_trigger_insulted_tt
+                        all_known_country = {
                             OR = {
-                                region = south_castanor_region
-                                region = inner_castanor_region
-                                region = west_castanor_region
-                            }
-                        }
-                        OR = {
-                            has_opinion_modifier = {
-                                who = ROOT
-                                modifier = insulted
-                            }
-                            has_opinion_modifier = {
-                                who = ROOT
-                                modifier = scornfully_insulted
+                                NOT = {
+                                    AND = {
+                                        culture_group = orcish
+                                        capital_scope = {
+                                            OR = {
+                                                region = south_castanor_region
+                                                region = inner_castanor_region
+                                                region = west_castanor_region
+                                            }
+                                        }
+                                    }
+                                }
+                                has_opinion_modifier = {
+                                    who = ROOT
+                                    modifier = insulted
+                                }
+                                has_opinion_modifier = {
+                                    who = ROOT
+                                    modifier = scornfully_insulted
+                                }
                             }
                         }
                     }
@@ -2552,19 +2568,25 @@ Z54_3_1 = {
             else_if = {
                 limit = {
                     all_known_country = {
-                        culture_group = orcish
-                        capital_scope = {
                             OR = {
-                                region = south_castanor_region
-                                region = inner_castanor_region
-                                region = west_castanor_region
+                                NOT = {
+                                    AND = {
+                                        culture_group = orcish
+                                        capital_scope = {
+                                            OR = {
+                                                region = south_castanor_region
+                                                region = inner_castanor_region
+                                                region = west_castanor_region
+                                            }
+                                        }
+                                    }
+                                }
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 100
+                                }
                             }
                         }
-                        has_opinion = {
-                            who = ROOT
-                            value = 100
-                        }
-                    }
                 }
                 define_advisor = {
                     type = diplomat
