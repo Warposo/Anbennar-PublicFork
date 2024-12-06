@@ -748,7 +748,7 @@ country_event = { #istranar refugees
     desc = flavour_corinsfield.32.d
     picture = REFUGEES_ESCAPING_eventPicture
     fire_only_once = yes
-    is_triggered_only = yes`
+    is_triggered_only = yes
     
     trigger = {
         tag = H35
@@ -868,14 +868,14 @@ country_event = { #base
     immediate = {
         hidden_effect = {
             set_country_flag = h35_hunt_active
-            
+
+            set_variable = {
+                which = witch_trial_influence
+                value = 0
+            }
             if = {
                 limit = {
                     has_country_flag = h35_unlock_influence
-                }
-                set_variable = {
-                    which = witch_trial_influence
-                    value = 0
                 }
                 set_variable = {
                     which = missionary_strengthx100
@@ -3837,6 +3837,7 @@ country_event = { #goodman selgal
     desc = flavour_corinsfield.82.d
     picture = DESCARTES_eventPicture
     fire_only_once = yes
+    is_triggered_only = yes
 
     trigger = {
         OR = {
@@ -3848,14 +3849,6 @@ country_event = { #goodman selgal
         }
         stability = 1
         mission_completed = H35_piety_of_masses
-    }
-
-    mean_time_to_happen = {
-        modifier = {
-            factor = 2
-            stability = 2
-        }
-        days = 10000
     }
 
     option = { #recruit the goodman
@@ -3909,10 +3902,11 @@ country_event = { #peaceful day
 }
 country_event = { #fathers day
     id = flavour_corinsfield.84
-    title = flavour_corinsfield.83.t
-    desc = flavour_corinsfield.83.d
+    title = flavour_corinsfield.84.t
+    desc = flavour_corinsfield.84.d
     picture = ANGLICAN_SERMON_eventPicture
     fire_only_once = yes
+    is_triggered_only = yes
 
     trigger = {
         OR = {
@@ -3928,9 +3922,6 @@ country_event = { #fathers day
         }
         is_at_war = no
         mission_completed = H35_honoring_father
-    }
-    mean_time_to_happen = {
-        days = 50000
     }
     option = {
         name = flavour_corinsfield.84.a
@@ -3991,6 +3982,7 @@ country_event = { #veykodan war event manage
     desc = flavour_corinsfield.86.d
     picture = beautiful_cave
     hidden = yes
+    is_triggered_only = yes
 
     trigger = {
         OR = {

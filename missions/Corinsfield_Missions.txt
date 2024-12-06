@@ -18,10 +18,15 @@ h35_branch_1 = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			area = corinsfield_area
-			owned_by = ROOT
-			NOT = { base_manpower = 5 }
-		}
+            region = veykoda_region
+            NOT = {
+                AND = {
+                    religion = corinite
+                    NOT = { devastation = 1 }
+                    culture = corinsfielder
+                }
+            }
+        }
 		trigger = {
 			total_development = 50
 			corinsfield_area = {
@@ -431,7 +436,6 @@ h35_branch_2 = {
 			num_of_owned_provinces_with = {
 				value = 12
 				region = veykoda_region
-				owned_by = ROOT
 				has_tax_building_trigger = yes
 				development = 20
 			}
@@ -557,7 +561,6 @@ h35_branch_3 = {
 				value = 3
 				region = veykoda_region
 				NOT = { area = corinsfield_area }
-				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -630,22 +633,20 @@ h35_branch_3 = {
 		}
 		position = 3
 		provinces_to_highlight = {
-			AND = {
-				region = veykoda_region
-				country_or_non_sovereign_subject_holds = ROOT
-				OR = {
-					culture = stone_dwarf
-					culture = steel_dwarf
-					culture = redfoot_halfling
-					culture = pipefoot_halfling
-					OR = { culture = havoric culture = new_havoric }
-				}
+			region = veykoda_region
+			owned_by = ROOT
+			OR = {
+				culture = stone_dwarf
+				culture = steel_dwarf
+				culture = redfoot_halfling
+				culture = pipefoot_halfling
+				OR = { culture = havoric culture = new_havoric }
 			}
 		}
 		trigger = {
 			veykoda_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 				NOT = { OR = { culture = havoric culture = new_havoric } } 
 			}
 			NOT = { accepted_culture = stone_dwarf accepted_culture = steel_dwarf accepted_culture = redfoot_halfling accepted_culture = pipefoot_halfling }
@@ -678,11 +679,12 @@ h35_branch_3 = {
 						region = sarda_region
 					}	
 					NOT = { has_human_minority_trigger = yes }
+					NOT = { culture_is_human = yes }
 				}
-				ROOT = { add_human_minority_size_effect = yes }
-				small_decrease_of_dwarven_tolerance_effect = yes
-				small_decrease_of_halfling_tolerance_effect = yes
+				add_human_minority_size_effect = yes
 			}
+			small_decrease_of_dwarven_tolerance_effect = yes
+			small_decrease_of_halfling_tolerance_effect = yes
 			if = { limit = { devotion = 100 } add_prestige = 50 }
 			else_if = { limit = { devotion = 90 } add_devotion = 10 add_prestige = 40 }
 			else_if = { limit = { devotion = 80 } add_devotion = 20 add_prestige = 30 }
@@ -699,10 +701,12 @@ h35_branch_3 = {
 		}
 		position = 4
 		provinces_to_highlight = {
+			owned_by = ROOT
 			OR = {
 				trade_goods = iron
 				trade_goods = copper
 			}
+			NOT = { base_production = 7 }
 		}
 		trigger = {
 			has_mil_advisor_2 = yes
@@ -747,8 +751,13 @@ h35_branch_3 = {
 		provinces_to_highlight = {
 			region = sarda_region
 			culture = sarda
+			owned_by = ROOT
 			NOT = {
-				infantry_in_province = 5
+				num_of_units_in_province = {
+					amount = 5
+					type = INFANTRY
+					who = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -756,7 +765,11 @@ h35_branch_3 = {
 				value = 8
 				region = sarda_region
 				culture = sarda
-				infantry_in_province = 5
+				num_of_units_in_province = {
+					amount = 5
+					type = INFANTRY
+					who = ROOT
+				}
 			}
 			OR = {
 				inquisitor = 3
@@ -1033,6 +1046,7 @@ h35_branch_4 = {
 		}
 		position = 8
 		provinces_to_highlight = {
+			owned_by = ROOT
 			NOT = {
 				AND = {
 					has_building = state_house
@@ -1218,7 +1232,13 @@ h35_branch_5 = {
 		}
 		position = 7
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
+			owned_by = ROOT
+			NOT = {
+				AND = {
+					has_seat_in_parliament = yes
+					has_courthouse_building_trigger = yes
+				}
+			}
 		}
 		trigger = {
 			NOT = {

@@ -302,7 +302,7 @@ a95_river_reavers = {
 			}
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 12
 				province_group = esmar_river_group
 				NOT = {
