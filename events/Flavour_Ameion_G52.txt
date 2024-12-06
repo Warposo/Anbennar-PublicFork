@@ -370,6 +370,13 @@ country_event = {
 				value = -25
 			}
 		}
+		hidden_effect = {
+			set_government_power = {
+				mechanic_type = ameion_keintagogists_mechanic
+				power_type = ameion_keintagogists_mechanic
+				value = 25
+			}
+		}
 	}
 }
 
@@ -424,6 +431,13 @@ country_event = {
 			mechanic_type = ameion_keintagogists_mechanic
 			power_type = ameion_keintagogists_power
 			value = -25
+		}
+		hidden_effect = {
+			set_government_power = {
+				mechanic_type = ameion_keintagogists_mechanic
+				power_type = ameion_keintagogists_mechanic
+				value = 0
+			}
 		}
 		if = {
 			limit = { has_country_flag = G52_strong_taychendi }
