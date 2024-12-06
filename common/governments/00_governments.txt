@@ -207,7 +207,7 @@ monarchy = {
 				harpy_queendom_reform
 				centaur_settled
 				#aakheta_ahati_reform
-				konolkhatep_reform
+				konolkhatep_gnolls_sorrow_reform
 				haraf_alas_gasidi_hegemony
 				vf_ynnic_feudalism_reform
 				lotus_seat_reform
@@ -222,6 +222,8 @@ monarchy = {
 				plutocratic_reform_cant_convert
 				naleni_thalassocracy_reform
 				winged_menkaunswt_reform
+				vandiphan_thalassocracy
+				ngwenamasonamingo_reform
 			}
 		}
 		hereditary_vs_nobility = { #Tier 2
@@ -307,6 +309,9 @@ monarchy = {
 				empower_magnate_council
 				the_pirate_ways_reform 
 				rakkaz_bringers_of_suffering
+				taychend_warlord_empire
+				rosande_disgraced_nobility_reform
+				rosande_blooming_nobility_reform
 			}
 		}
 		bureaucracy = { #Tier 3
@@ -417,6 +422,11 @@ monarchy = {
 
 				centaur_protection_racketeering_reform
 
+				two_rulers_one_people_rc_reform
+				two_rulers_one_people_cor_reform
+				follower_of_many_gods_reform
+				patronise_the_corinite_orders_reform
+
 				#naleni
 				respect_for_the_sea_reform
 				relgious_freedom_reform
@@ -446,7 +456,8 @@ monarchy = {
 				anbennar_T5_human_harimari
 				anbennar_T5_human_harpy
 				anbennar_T5_human_hobgoblin
-				anbennar_T5_human_human
+				anbennar_T5_human_human_1
+				anbennar_T5_human_human_2
 				anbennar_T5_human_kobold
 				anbennar_T5_human_lizardfolk
 				# anbennar_T5_human_mechanim
@@ -615,6 +626,8 @@ monarchy = {
 				argordstun_exemplary_meritocrats
 				blorc_victors_of_ozarmchadash
 				virtuous_cults_reform
+				taychend_tailatam_system_reform
+				taychend_mudaliar_system_reform
 			}
 		}
 		economical_matters = { #Tier 8
@@ -995,7 +1008,7 @@ republic = {
 				honsai_ghost_council_3
 				jiangdu_war_empire_reform
 				jiangdu_leadership_reform
-				ameion_conquerers_reform
+				ameion_republic
 				orlghelovar_glasslords
 				orlghelovar_science
 				shaz_white_stone_council
@@ -1087,6 +1100,7 @@ republic = {
 				book_of_stone
 				rakkaz_bringers_of_suffering
 				gongmin_lianbang
+				taychend_warlord_empire
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = { #Tier 3
@@ -1174,6 +1188,12 @@ republic = {
 				union_of_magic_and_machine
 				societal_sentience_scholarship
 				khugra_araizary_bond
+				kobildzan_draconic_technopriests
+
+				two_rulers_one_people_rc_reform
+				two_rulers_one_people_cor_reform
+				follower_of_many_gods_reform
+				patronise_the_corinite_orders_reform
 			}
 		}
 		military_doctrines = { #Tier 5
@@ -1200,7 +1220,8 @@ republic = {
 				anbennar_T5_human_harimari
 				anbennar_T5_human_harpy
 				anbennar_T5_human_hobgoblin
-				anbennar_T5_human_human
+				anbennar_T5_human_human_1
+				anbennar_T5_human_human_2
 				anbennar_T5_human_kobold
 				anbennar_T5_human_lizardfolk
 				# anbennar_T5_human_mechanim
@@ -1322,6 +1343,8 @@ republic = {
 				cultural_colonies
 				the_theory_of_gnomeostasis
 				apparatus_system
+				taychend_tailatam_system_reform
+				taychend_mudaliar_system_reform
 			}
 		}
 		economical_matters_republic = { #Tier 8
@@ -1380,6 +1403,8 @@ republic = {
 				dwarovar_cartel_backing
 				goblin_shadow_chancellor
 				F23_uthojdihr_backing
+				kobildzan_draconic_elites
+				kobildzan_draconic_masses
 			}
 		}
 		guiding_principle_of_administration = { #Tier 10
@@ -1587,6 +1612,7 @@ tribal = {
 				traveling_cheqhanate_reform
 				tokhraz_reform
 				book_of_stone
+				kobold_viraxia
 			}
 		}
 		tribal_cultural_values = { #Tier 2
@@ -1666,7 +1692,8 @@ tribal = {
 				anbennar_T5_human_harimari
 				anbennar_T5_human_harpy
 				anbennar_T5_human_hobgoblin
-				anbennar_T5_human_human
+				anbennar_T5_human_human_1
+				anbennar_T5_human_human_2
 				anbennar_T5_human_kobold
 				anbennar_T5_human_lizardfolk
 				# anbennar_T5_human_mechanim
@@ -1943,6 +1970,7 @@ theocracy = {
 				indep_prabhi_reform
 				senapti_reform
 				abyssal_otardom_reform
+				raithtall_twilight_court_reform
 			}
 		}
 		internal_vs_external_mission = { #Tier 2
@@ -1978,6 +2006,7 @@ theocracy = {
 				book_of_stone
 
 				rakkaz_bringers_of_suffering
+				taychend_warlord_empire
 			}
 		}
 		education_of_the_state = { #Tier 3
@@ -2047,6 +2076,9 @@ theocracy = {
 				semayebaka_chapter_houses
 				madakas_markasi
 				khugra_araizary_bond
+
+				follower_of_many_gods_reform
+				patronise_the_corinite_orders_reform
 			}
 		}
 		military_doctrines = { #Tier 5
@@ -2073,7 +2105,8 @@ theocracy = {
 			anbennar_T5_human_harimari
 			anbennar_T5_human_harpy
 			anbennar_T5_human_hobgoblin
-			anbennar_T5_human_human
+			anbennar_T5_human_human_1
+			anbennar_T5_human_human_2
 			anbennar_T5_human_kobold
 			anbennar_T5_human_lizardfolk
 			# anbennar_T5_human_mechanim
@@ -2188,6 +2221,8 @@ theocracy = {
 				balgarsmiths_administration
 				anb_warrior_monks_reform
 				consolidated_raj_reform
+				taychend_tailatam_system_reform
+				taychend_mudaliar_system_reform
 			}
 		}
 		economical_matters = { #Tier 8

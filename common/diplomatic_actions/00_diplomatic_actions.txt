@@ -1347,6 +1347,28 @@ declarewar = {
 				id = flavour_khugra.6
 			}
 		}
+		if = { #Taychendi Empire
+			limit = { 
+				has_country_flag = J84_lizardfolk_expedition_flag
+				FROM = {
+					OR = {
+						culture_group = lizardfolk
+						num_of_owned_provinces_with = {
+							value = 10
+							culture_group = lizardfolk
+						}
+					}
+				}
+			}
+			add_country_modifier = {
+				name = J84_the_lizardfolk_expedition
+				duration = -1
+			}
+		}
+		if = {
+			limit = { has_country_flag = mengi_expand_realm }
+			clr_country_flag = mengi_expand_realm
+		}
 	}
 }
 
@@ -2527,6 +2549,14 @@ annexationaction = {
 					FROM = {
 						primary_culture = sarda
 						capital_scope = { region = sarda_region }
+					}
+				}
+				AND = {
+					tag = U71
+					yrw_has_settled_second_debate_blame_subjects = yes
+					FROM = {
+						primary_culture = rzentur
+						capital_scope = { OR = { region = rzenta_region area = pomvasonn_area } }
 					}
 				}
 				AND = {
