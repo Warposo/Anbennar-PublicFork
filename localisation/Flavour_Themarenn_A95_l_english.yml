@@ -186,6 +186,13 @@
  a95_a60_co:0 "Mediator of The Grand Coalition"
  a95_a92_co:0 "Breadbasket of The Moon Party"
  a95_a35_co:0 "Strategic Planners of The Moon Party"
+ flavour_themarenn.52.t:0 "The Lion of Esmaria"
+ flavour_themarenn.52.d:0 "As he approached the Lake Palace, Casetin was regarded with a sense of destiny he always had been. At fifteen he had bested every instructor his father could afford him, and so he requested to be sent to Arca Aldresia. He never intended to join the Knightly Order, just to fight and train amongst them, to become the man he knew he had to be, even if he never knew why.\n\nDespite the religious tension at the citedal of knights, he remained a fervent follower of Adean, never straying from his oaths. And now as his homeland entered a time of troubles, he returned, to lead Themarenn, and the Empire if need be, against the Corinite Scourge."
+ flavour_themarenn.53.a:0 "He shall be Adean’s spear in the coming wars."
+ flavour_themarenn.52.b:0 "We believe peace will prevail, we have no need of a warrior-[Monarch.GetTitle]."
+ flavour_themarenn.54.t:0 "Casetin the Drowned"
+ flavour_themarenn.54.d:0 "He never thought war would come to Themarenn. On the shores of the frozen lake, he looked out to the other side and saw crimson banners waving in the howling wind. They came here, to his home, and he had the option of battling them on the ice, or letting them take the Lake Palace itself. He steeled himself, readying his blade and musket as the battle began.\n\nAt once the battle came alight in fire and thunder. His army stepped into the fray, preparing to meet the enemy. Casetin formed a spearhead, surrounded by his guard and magisters, battling through the Corinite menace.\n\nBut on the precipice of his victory, a deafening sound rang out across the lake, as the enemy guns began to hammer the ice. “Retreat!” He cried, signalling for his soldiers as he moved back towards the shore. The ice moved faster. As hundreds fell into the freezing water, Casetin was amongst them.\n\nIt has been days, and neither side has located the Lord of Themarenn."
+ flavour_themarenn.54.a:0 "A Lion silenced by another roar."
  #missions
  a95_river_reavers:0 " "
  a95_river_parties:0 " "
