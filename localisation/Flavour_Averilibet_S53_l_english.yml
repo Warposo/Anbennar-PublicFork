@@ -25,7 +25,7 @@
  holy_matrimony_S53_title:0 "Holy Matrimony"
  holy_matrimony_S53_desc:0 "Although we managed to prop up the smaller Tanizu states with our guidance, they are still lacking the power to stand on their own legs. Instead of helping them from afar, how about we invite them into our house as husbands instead of allies? Under our house they will rise to riches and wealth of which they could only dream in the past."
 
- heros_and_husbands_S53_title:0 "Heros And Husbands"
+ heros_and_husbands_S53_title:0 "Heroes And Husbands"
  heros_and_husbands_S53_desc:0 "The success of the Setinda Games has brought not only fighters but also various greater men into our service. The rewards from such games go quite a long way to retaining such heroes; nonetheless, they continue to press that they should be compensated for risking their lives in such tournaments. Perhaps it is time to open up harem marriage rights to these heroes and champions, binding to us the best leaders and fighters for our armed forces."
 
  jumping_beasts_S53_title:0 "Jumping Beasts"
@@ -91,7 +91,7 @@
 #mission triggers
  S53_help_from_friends_tooltip:0 "§Y[L55.GetName]§! @[L55.GetTag] and §Y[S23.GetName]§! @[S23.GetTag] either have §Y50 improved relations§! with you or §Ydo not exist.§!"
  S53_cooking_the_books_tooltip:0 "The Yenaze Mezhi have the privilege §YYenaze Mezhi Right for Diet Call§! and the associated §Ydescision is on cooldown.§!"
- S53_give_them_hope_tooltip:0 "Know one §YTanizu§! or §YCyazizeta Lizardfolk§! nation that is a subject, not your subject, has recived a §Ygift from you§! and you have a §Ylarger army then their overlord.§!Or is 1460 and no Tanizu/Lizardfolk nation are subjects."
+ S53_give_them_hope_tooltip:0 "Know one §YTanizu§! or §YCyazizeta Lizardfolk§! nation that is a subject, not your subject, has received a §Ygift from you§! and you have a §Ylarger army then their overlord.§!Or is 1460 and no Tanizu/Lizardfolk nation are subjects."
  S53_some_progress_tooltip:0 "The Semayebaka have the privilege §YInstitutionalized Semayebaka§! or §YRight of Donations§! and the associated §Ydescision is on cooldown.§!"
  S53_like_a_sister_tooltip:0 "Have 10 units in the capital of §Y[L55.GetName]§! @[L55.GetTag] or §Y[S23.GetName]§! @[S23.GetTag] depending on which is your §Yhistorical friend.§!"
  S53_advice_from_strangers_tooltip:0 "Have a §Yhigher diplomatic technology§! level then the owner of §YArawkelin.§!"
@@ -175,7 +175,7 @@
  flavor_averilibet.2.t:0 "Dieded With Out an Heir"
  flavor_averilibet.2.desc:0 "Hopefully your sister’s have faired better."
  flavor_averilibet.3.t:0 "The Husband Harem"
- flavor_averilibet.3.desc:0 "Through skill, guile and looks many a man has impressed you. To make sure your able to controll the gaggle of various strong men you have decided that the best shall recive the title of First Husband. Now has come the time to choose another best Husband, who will that be?"
+ flavor_averilibet.3.desc:0 "Through skill, guile and looks many a man has impressed you. To make sure your able to controll the gaggle of various strong men you have decided that the best shall receive the title of First Husband. Now has come the time to choose another best Husband, who will that be?"
  flavor_averilibet.3.a:0 "The Strongest."
  flavor_averilibet.3.b:0 "The Best Looking."
  flavor_averilibet.3.c:0 "The Wisest."
@@ -239,6 +239,6 @@
  S53_HIGH_KINGDOM:0 "High Queendom"
  ngwenamasonamingo_reform:0 "Ngwenamasonamingo"
  ngwenamasonamingo_reform_desc:0 "The Leopard Queendom is a monarchal mix of Tanizu and Mengi practices. Ruled by powerful Queens and their faithful harem of Husbands from all corners of East Sarhal."
- S53_leopardqueendom_march:0 "§YPersonal Unions§! recive §YMarch§! bonuses."
- S53_leopardqueendom_forcelimit:0 "Recive §G+5 Land Force Limit§! per §YPersonal Union§!"
+ S53_leopardqueendom_march:0 "§YPersonal Unions§! receive §YMarch§! bonuses."
+ S53_leopardqueendom_forcelimit:0 "Receive §G+5 Land Force Limit§! per §YPersonal Union§!"
  south_denbari:0 "South Denbari"
