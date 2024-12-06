@@ -574,8 +574,7 @@
  karakhanbar_might_makes_right_effect_karakhanbari_grenadiers_yes_tt:0 " £yes£ §YMercenary§! Ideas Reward:\nEnable the '§JKarakhanbari Grenadiers§!' Mercenary Company, whose hiring will cost no §YArmy Professionalism§! and will not count against §YForce Limit§!, which has the following modifiers:\nLand Fire Damage: §G+20.0%§!\n"
  karakhanbar_might_makes_right_effect_karakhanbari_grenadiers_no_tt:0 " £no£ §YMercenary§! Ideas Reward:\nEnable the '§JKarakhanbari Grenadiers§!' Mercenary Company, whose hiring will cost no §YArmy Professionalism§! and will not count against §YForce Limit§!, which has the following modifiers:\nLand Fire Damage: §G+20.0%§!\n"
 
-karakhanbar_a_new_escann_trigger_high_opinion_tt:0 "Every §Orchish§ §Country§ in §Escann§'s opinion of you is at least §100§"
-karakhanbar_a_new_escann_trigger_insulted_tt:0 "Every §Orchish§ §Country§ in §Escann§ is either §Insulted§ or §Viciously Mocked§"
+karakhanbar_a_new_escann_trigger_every_orc_in_escann_tt:0 "§YCountry§! is either not of §YOrchish§! culture or Capital is not in a §YCastanor§! region"
 
  karakhanbar_turn_their_magic_effect_tt:0 "Every §YFey Gladeway§! province:"
  

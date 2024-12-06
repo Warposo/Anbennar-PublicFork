@@ -2469,10 +2469,10 @@ Z54_3_1 = {
                     }
                 }
                 OR = {
-                    custom_trigger_tooltip = {
-					    tooltip = karakhanbar_a_new_escann_trigger_high_opinion_tt
-                        all_known_country = {
-                            OR = {
+                    all_known_country = {
+                        OR = {
+                            custom_trigger_tooltip = {
+                                tooltip = karakhanbar_a_new_escann_trigger_every_orc_in_escann_tt
                                 NOT = {
                                     AND = {
                                         culture_group = orcish
@@ -2485,17 +2485,17 @@ Z54_3_1 = {
                                         }
                                     }
                                 }
-                                has_opinion = {
-                                    who = ROOT
-                                    value = 100
-                                }
+                            }
+                            has_opinion = {
+                                who = ROOT
+                                value = 100
                             }
                         }
                     }
-                    custom_trigger_tooltip = {
-					    tooltip = karakhanbar_a_new_escann_trigger_insulted_tt
-                        all_known_country = {
-                            OR = {
+                    all_known_country = {
+                        OR = {
+                            custom_trigger_tooltip = {
+					            tooltip = karakhanbar_a_new_escann_trigger_every_orc_in_escann_tt
                                 NOT = {
                                     AND = {
                                         culture_group = orcish
@@ -2508,15 +2508,8 @@ Z54_3_1 = {
                                         }
                                     }
                                 }
-                                has_opinion_modifier = {
-                                    who = ROOT
-                                    modifier = insulted
-                                }
-                                has_opinion_modifier = {
-                                    who = ROOT
-                                    modifier = scornfully_insulted
-                                }
                             }
+                            has_been_insulted_by_root = yes
                         }
                     }
                 }
