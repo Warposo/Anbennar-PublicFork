@@ -2067,6 +2067,7 @@ clear_adventurers_organization_effect = {
 		remove_estate_privilege = estate_adventurers_organization_scp_bureau
 		remove_estate_privilege = estate_adventurers_organization_exploration_society
 		remove_estate_privilege = estate_adventurers_suhuskar_palace
+		remove_estate_privilege = estate_adventurers_organization_stone_army
 	}
 }
 
@@ -5188,6 +5189,28 @@ anb_on_development_effect = {
 			add_base_$development$ = 1
 		}
 	}
+
+	if = { #Taychend Vainglory
+		limit = { 
+			owner = {
+				has_country_modifier = J84_taychend_in_bloom
+			}
+		}
+		random = {
+			chance = 25
+			add_base_$development$ = 1
+			add_next_institution_embracement_scaled = 5
+		}
+	}
+
+	if = { #Taychendi Empire
+		limit = { has_province_modifier = J84_urban_boom }
+		random = {
+			chance = 25
+			add_base_$development$ = 1
+			add_next_institution_embracement_scaled = 5
+		}
+	}
 	
 	jaddari_deioderan_dev_counter_update = yes
 	# if = {
@@ -7974,4 +7997,68 @@ anb_changed_ways_effect = {
 			change_primary_culture = westman
 		}
 	}
+}
+
+prepare_months_of_tax_income = {
+	hidden_effect = {
+		export_to_variable = {
+			which = current_tax_income
+			value = monthly_income
+		}
+		export_to_variable = {
+			which = tax_income_share
+			value = trigger_value:tax_income_percentage
+		}
+		multiply_variable = {
+			which = current_tax_income
+			which = tax_income_share
+		}
+		multiply_variable = {
+			which = current_tax_income
+			value = $months$
+		}
+		round_variable = {
+			which = current_tax_income
+			value = 0
+		}
+	}
+}
+
+prepare_months_of_trade_income = {
+	hidden_effect = {
+		export_to_variable = {
+			which = current_trade_income
+			value = monthly_income
+		}
+		export_to_variable = {
+			which = trade_income_share
+			value = trigger_value:trade_income_percentage
+		}
+		multiply_variable = {
+			which = current_trade_income
+			which = trade_income_share
+		}
+		multiply_variable = {
+			which = current_treade_income
+			value = $months$
+		}
+		round_variable = {
+			which = current_trade_income
+			value = 0
+		}
+	}
+}
+
+add_prepared_months_of_tax_income = {
+	hidden_effect = {
+		var_effect = { effect = add_treasury var = current_tax_income sign = $sign$ }
+	}
+	custom_tooltip = add_months_of_tax_income_tt
+}
+
+add_prepared_months_of_trade_income = {
+	hidden_effect = {
+		var_effect = { effect = add_treasury var = current_trade_income sign = $sign$ }
+	}
+	custom_tooltip = remove_months_of_trade_income_tt
 }
