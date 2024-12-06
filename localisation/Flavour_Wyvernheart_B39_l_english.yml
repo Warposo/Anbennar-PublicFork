@@ -378,22 +378,22 @@
  flavour_wyvernheart.310.a:0 "This is now our focus"
  flavour_wyvernheart.310.b:0 "This will be our next endeavour"
 
- flavour_wyvernheart.401.t:0 "A $CULTURE$ Home"
- flavour_wyvernheart.401.d:0 "Even if not $CULTURE$ by birth, the people of $PROVINCE$ are difficult to tell apart from bonafide $culture$ in their manners and methods. They speak like us, behave like us, and most of all, are strong like us.\n\nThe men now harbour fabulous mustachios while flags of the Wyvern fly over their cities proudly. We are now one and the same; they too have found their Home alongside us.\n\nNot a single trace of what they were can be found. And it is better that way."
- flavour_wyvernheart.401.a:0 "They too have become strong, mustachioed $CULTURE$."
+ flavour_wyvernheart.401.t:0 "A [Root.Culture.GetName] Home"
+ flavour_wyvernheart.401.d:0 "Even if not [Root.Culture.GetName] by birth, the people of [Root.GetName] are difficult to tell apart from bonafide $culture$ in their manners and methods. They speak like us, behave like us, and most of all, are strong like us.\n\nThe men now harbour fabulous mustachios while flags of the Wyvern fly over their cities proudly. We are now one and the same; they too have found their Home alongside us.\n\nNot a single trace of what they were can be found. And it is better that way."
+ flavour_wyvernheart.401.a:0 "They too have become strong, mustachioed [Root.Culture.GetName]."
 
  flavour_wyvernheart.402.t:0 "A Dream Realised"
- flavour_wyvernheart.402.d:0 "We once promised our people that we would be united as one, flying a united banner wherever they go, and we have delivered on this promise once again.\n\nIn $PROVINCE$, the people are no longer strangers. They are our kin now, a part of our family and homeland. Those who wished to be told apart from the $CULTURE$ and refused our advances have been "convinced" otherwise.\nTheir homes are now inhabited by proud $CULTURE$."
+ flavour_wyvernheart.402.d:0 "We once promised our people that we would be united as one, flying a united banner wherever they go, and we have delivered on this promise once again.\n\nIn [Root.GetName], the people are no longer strangers. They are our kin now, a part of our family and homeland. Those who wished to be told apart from the [Root.Culture.GetName] and refused our advances have been "convinced" otherwise.\nTheir homes are now inhabited by proud [Root.Culture.GetName]."
  flavour_wyvernheart.402.a:0 "Our people need not dream any longer."
 
  flavour_wyvernheart.403.t:0 "Away With the Old"
- flavour_wyvernheart.403.d:0 "A great pyre rages on the periphery of a town in $PROVINCE$. Many tokens and items foreign to us can be seen slowly melting. Toys and relics, heraldry and keepsakes turning into dust.\nTheir disappearance is a necessary step to make room for our own and make this land a part of our Homeland too.\n\nTruly, all must be removed if we are to do away with the old and welcome in the new."
+ flavour_wyvernheart.403.d:0 "A great pyre rages on the periphery of a town in [Root.GetName]. Many tokens and items foreign to us can be seen slowly melting. Toys and relics, heraldry and keepsakes turning into dust.\nTheir disappearance is a necessary step to make room for our own and make this land a part of our Homeland too.\n\nTruly, all must be removed if we are to do away with the old and welcome in the new."
  flavour_wyvernheart.403.a:0 "In due time, they shall forget."
  wyvernheart_home_in_our_hearts:0 "The home in our Hearts"
  desc_wyvernheart_home_in_our_hearts:0 "This land is considered as a rightful part of the Heartman homeland, eager colonists are easy to find."
 
  flavour_wyvernheart.404.t:0 "A Forceful Assimilation"
- flavour_wyvernheart.404.d:0 "A few households can be seen burning in the distance. The homes of a group of inhabitants in $province$ who refused to change their ways. Our administrators made every effort to convince them; they offered them great deals and opportunities. But they did not relent. They refused to be beside us at the table.\n\nOnly one solution was left: brute force, a terribly efficient tool.\nNow they won’t need to think about who they “belong” to."
+ flavour_wyvernheart.404.d:0 "A few households can be seen burning in the distance. The homes of a group of inhabitants in [Root.GetName] who refused to change their ways. Our administrators made every effort to convince them; they offered them great deals and opportunities. But they did not relent. They refused to be beside us at the table.\n\nOnly one solution was left: brute force, a terribly efficient tool.\nNow they won’t need to think about who they “belong” to."
  flavour_wyvernheart.404.a:0 "They left us no choice."
 
  wyvernheart_D6_effect_tt:0 "The next §YBloodbrand Ability§! will use 30 less §YBloodbrand§!."

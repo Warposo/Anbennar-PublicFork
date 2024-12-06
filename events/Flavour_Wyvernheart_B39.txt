@@ -353,6 +353,17 @@ country_event = {#The New Face of Magic D5
 	trigger = {
 		tag = B39
 	}
+
+	immediate = {
+		hidden_effect = {
+			generic_end_purge = { race = goblin }
+			generic_end_expulsion = { race = goblin }
+			generic_end_purge = { race = orcish  }
+			generic_end_expulsion = { race = orcish }
+			generic_end_purge = { race = half_orcish }
+			generic_end_expulsion = { race = half_orcish }
+		}
+	}
 	
 	#Option A
 	option = {
@@ -1835,6 +1846,12 @@ country_event = {#The Scions of Wyvernheart
 			country_event = {#Prerolls schools for the third button
 				id = flavour_wyvernheart.501
 			}
+			generic_end_purge = { race = goblin }
+			generic_end_expulsion = { race = goblin }
+			generic_end_purge = { race = orcish  }
+			generic_end_expulsion = { race = orcish }
+			generic_end_purge = { race = half_orcish }
+			generic_end_expulsion = { race = half_orcish }
 		}
 	}
 
@@ -2152,7 +2169,14 @@ country_event = {#Event manager for the flavour events
 		ai_chance = { factor = 1 }
 		random_list = {
 			1000 = {
-				trigger = { NOT = { AND = { has_country_flag = wyvernheart_crisis_of_devotion has_global_flag = crimson_deluge_is_over } } }
+				trigger = {
+					AND = {
+						NOT = {
+							has_country_flag = wyvernheart_crisis_of_devotion
+						}
+						has_global_flag = crimson_deluge_is_over
+					}
+				}
 				country_event = {
 					id = flavour_wyvernheart.302
 				}
