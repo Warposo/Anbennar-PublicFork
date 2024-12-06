@@ -2700,5 +2700,4 @@ HP_meditation_on_simrals_mirror = {
 }
 HP_meditation_on_the_kamalkundal = {
 	siege_ability = 0.10
->>>>>>> carnetir/new-master
 }
