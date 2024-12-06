@@ -4885,6 +4885,13 @@ xhazobkult_organized_sacrifices = {
 	benefits = {
 		yearly_patriarch_authority = 0.005
 	}
+	conditional_modifier = {
+		trigger = { mission_completed = F71_a_silent_strike }
+		modifier = { 
+			development_cost = -0.1
+			global_unrest = 1
+		}
+	}
 	ai_will_do = {
 		factor = 5
 	}
