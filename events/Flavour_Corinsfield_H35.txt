@@ -4156,37 +4156,37 @@ country_event = {
     option = { #slow purge
         name = flavour_corinsfield.91.a
         osindain_area = {
-            if = {
-                limit = {
-                    owned_by = ROOT
+            limit = {
+                owned_by = ROOT
+                OR = {
                     culture = new_havoric
                     culture = havoric
                 }
-                add_culture_construction = {
-                    speed = 0.80
-                    cost = 0
-                }
-                add_unrest = 10
             }
+            add_culture_construction = {
+                speed = 0.80
+                cost = 0
+            }
+            add_unrest = 10
         }
     }
     option = { #fast purge
         name = flavour_corinsfield.91.b
         osindain_area = {
-            if = {
-                limit = {
-                    owned_by = ROOT
+            limit = {
+                OR = {
                     culture = new_havoric
                     culture = havoric
                 }
-                add_culture_construction = {
-                    speed = 0.5
-                    cost = 0
-                }
-                change_religion = corinite
-                add_random_development = -2
-                add_unrest = 20
+                owned_by = ROOT
             }
+            add_culture_construction = {
+                speed = 0.5
+                cost = 0
+            }
+            change_religion = corinite
+            add_random_development = -2
+            add_unrest = 20
         }
     }
 }
@@ -4242,8 +4242,11 @@ country_event = {
         name = flavour_corinsfield.94.b
         every_owned_province = {
             limit = {
-                culture = stone_dwarf
-                culture = steel_dwarf
+                OR = {
+                    culture = stone_dwarf
+                    culture = steel_dwarf
+                }
+
             }
             add_province_modifier = {
                 name = h35_dwarf_convert
