@@ -2130,11 +2130,11 @@ estate_church_corinsfield_society = {
 				}
 			}
 			remove_province_modifier = h35_downstanding_society
-			add_province_modifier = h35_upstanding_society
+			add_province_modifier = { name = h35_upstanding_society duration = -1 } 
 		}
 		else = {
 			remove_province_modifier = h35_upstanding_society
-			add_province_modifier = h35_downstanding_society
+			add_province_modifier = { name = h35_downstanding_society duration = -1 } 
 		}
 	}
 	on_revoked = {
