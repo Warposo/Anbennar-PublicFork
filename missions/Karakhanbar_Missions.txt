@@ -3674,6 +3674,9 @@ Z54_5_1 = {
                     cost = 0
                 }
             }
+			bahar_region = {
+				add_permanent_claim = ROOT
+			}
         }
     }
 
