@@ -159,11 +159,16 @@ Z54_2_branching = {
             Z54_branching3
         }
         provinces_to_highlight = {
-            owned_by = Z54
-            NOT = {
-                has_terrain = gladeway
-                has_terrain = fey_gladeway
-                has_terrain = cavern
+            OR = {
+                province_group = deepwoods_mountain_grove
+                province_group = deepwoods_lake_grove
+                province_group = deepwoods_bone_grove
+                province_group = deepwoods_thorn_grove
+                province_group = deepwoods_hunter_grove
+                province_group = deepwoods_arrow_grove
+                province_group = deepwoods_flower_grove
+                province_group = deepwoods_river_grove
+                province_group = deepwoods_shadow_grove
             }
             NOT = {
                 OR = {
