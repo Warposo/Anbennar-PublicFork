@@ -1855,11 +1855,13 @@ Z54_3_1 = {
         required_missions = {
             Z54_aftermath_of_the_emeraldtide
         }
-        provinces_to_highlight = { 
-            province_id = 6258
-            province_id = 3058
-            province_id = 3053
-            province_id = 3052
+        provinces_to_highlight = {
+            OR = {
+                province_id = 6258
+                province_id = 3058
+                province_id = 3053
+                province_id = 3052
+            }
         }
         trigger = {
             if = {
@@ -2098,15 +2100,8 @@ Z54_3_1 = {
             Z54_secure_entrances
         }
         provinces_to_highlight = {
-            province_id = 3054
-            province_id = 3068
-            province_id = 7029
-            province_id = 3048
-            province_id = 3071
-            province_id = 3065
-            province_id = 3064
-            province_id = 3070
-            province_id = 3069
+            province_group = deepwoods_outward_gladeways
+            NOT = { infantry_in_province = 2 }
         }
         trigger = {
             custom_trigger_tooltip = {
@@ -2625,7 +2620,29 @@ Z54_3_1 = {
         required_missions = { 
             Z54_a_new_escann
         }
-        provinces_to_highlight = {}
+        provinces_to_highlight = {
+            OR = {
+                AND = {
+                    OR = {
+                        area = hornwood_area
+                        area = banesfork_area
+                    }
+                    OR = {
+                        NOT = { has_manpower_building_trigger = yes }
+                        NOT = { owned_by = ROOT }
+                    }
+                }
+                AND = {
+                    OR = {
+                        region = south_castanor_region
+                        region = inner_castanor_region
+                        region = west_castanor_region
+                    }
+                    is_capital = yes
+                    owner = { army_size = ROOT }
+                }
+            }
+        }
         trigger = {
             hornwood_area = {
                 type = all
@@ -2680,6 +2697,13 @@ Z54_3_1 = {
         }
         provinces_to_highlight = {
             region = south_castanor_region
+            OR = {
+                NOT = { owned_by = ROOT }
+                AND = {
+                    local_autonomy_above_min = 10
+                    NOT = { has_province_modifier = autonomy_decreased }
+                }
+            }
         }
         trigger = {
             south_castanor_region = {
@@ -3297,6 +3321,7 @@ Z54_5_1 = {
         }
         provinces_to_highlight = {
             province_group = deepwoods_mountain_grove
+            NOT = { owned_by = ROOT }
         }
         trigger = {
 		    if = {
@@ -3592,6 +3617,7 @@ Z54_5_1 = {
                 area = firanyalen_area
                 area = misharallen_area              
             }
+            NOT = { owned_by = ROOT }
         }
         trigger = {
             firanyalen_area = {
@@ -3910,9 +3936,11 @@ Z54_4_endgame = {
             Z54_vanguard_victorious
         }
         provinces_to_highlight = {
-            province_id = 866
-            province_id = 873
-            province_id = 874 
+            area = oldhaven_area
+            OR = {
+                has_fort_building_trigger = yes
+                NOT = { artillery_in_province = 6 }
+            }
         }
         trigger = {
             has_global_modifier_value = {
