@@ -3085,7 +3085,16 @@ on_battle_won_unit_effect = {
 			}
 			is_ruler_commanding_unit = yes
 			location = {
-				province_id = 267
+				OR = {
+					province_id = 267
+					province_id = 333
+					province_id = 900
+					province_id = 269
+					province_id = 575
+					province_id = 917
+					province_id = 266
+					province_id = 268
+				}
 			}
 		}
 		unit_owner = {
@@ -3201,7 +3210,16 @@ on_battle_lost_unit_effect = { #this triggers on every unit present
 			}
 			is_ruler_commanding_unit = yes
 			location = {
-				province_id = 267
+				OR = {
+					province_id = 267
+					province_id = 333
+					province_id = 900
+					province_id = 269
+					province_id = 575
+					province_id = 917
+					province_id = 266
+					province_id = 268
+				}
 			}
 		}
 		unit_owner = {
