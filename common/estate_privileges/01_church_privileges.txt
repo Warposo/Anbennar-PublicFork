@@ -2120,7 +2120,7 @@ estate_church_corinsfield_society = {
 	on_granted = {
 		custom_tooltip = h35_religious_society.tt
 	}
-	on_granted_province = {
+	on_granted_province = {	
 		if = {
 			limit = {
 				religion = ROOT
@@ -2129,32 +2129,12 @@ estate_church_corinsfield_society = {
 					culture_group = ROOT
 				}
 			}
-			add_province_modifier = {
-				name = h35_upstanding_society
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				has_province_modifier = h35_upstanding_society
-			}
-			remove_province_modifier = h35_upstanding_society
-		}
-		if = {
-			limit = {
-				NOT = { culture_group = ROOT }
-				has_owner_accepted_culture = no
-			}
-			add_province_modifier = {
-				name = h35_downstanding_society
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				has_province_modifier = h35_downstanding_society
-			}
 			remove_province_modifier = h35_downstanding_society
+			add_province_modifier = h35_upstanding_society
+		}
+		else = {
+			remove_province_modifier = h35_upstanding_society
+			add_province_modifier = h35_downstanding_society
 		}
 	}
 	on_revoked = {
