@@ -444,6 +444,36 @@ kobold_court_officials = {
 industrious_kobolds = {
 	local_production_efficiency = 0.2
 }
+kobold_mining_trivu = {
+	trade_goods_size_modifier = 0.2
+}
+kobold_divided_administration = {
+	local_autonomy = -0.05
+}
+kobold_tax_trivu = {
+	local_tax_modifier = 0.25
+}
+kobold_production_trivu = {
+	local_production_efficiency = 0.25
+}
+kobold_manpower_trivu = {
+	local_manpower_modifier = 0.25
+}
+suppressing_kobolds = {
+	culture_conversion_cost = -0.25
+}
+kobold_troubadour_trivu = {
+	monthly_splendor = 2
+}
+firefly_farm = {
+	province_trade_power_value = 10
+	local_unrest = -2
+}
+firefly_farm_taxbreak = {
+	province_trade_power_value = 10
+	local_unrest = -2
+	local_tax_modifier = -0.1
+}
 
 # Harpy
 harpy_migration_cooldown = {}
