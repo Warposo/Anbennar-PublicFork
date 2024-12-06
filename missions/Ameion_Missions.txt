@@ -1396,6 +1396,7 @@ G52_3 = {
 		
 		effect = {
 			add_adm_power = 100
+			add_splendor = 200
 			if = {
 				limit = { any_owned_province = { trade_goods = precursor_relics } }
 				ameion_area = {
@@ -2533,6 +2534,7 @@ G52_4 = {
 		}
 		
 		effect = {
+			add_splendor = 200
 			if = {
 				limit = {
 					dry_coast_region = {

@@ -323,7 +323,7 @@ country_event = {
 			add_government_power = {
 				mechanic_type = ameion_keintagogists_mechanic
 				power_type = ameion_keintagogists_power
-				value = 50
+				value = -25
 			}
 			country_event = {
 				id = flavor_ameion.6
@@ -368,13 +368,6 @@ country_event = {
 				mechanic_type = ameion_keintagogists_mechanic
 				power_type = ameion_keintagogists_power
 				value = -25
-			}
-		}
-		hidden_effect = {
-			set_government_power = {
-				mechanic_type = ameion_keintagogists_mechanic
-				power_type = ameion_keintagogists_mechanic
-				value = 25
 			}
 		}
 	}
@@ -431,13 +424,6 @@ country_event = {
 			mechanic_type = ameion_keintagogists_mechanic
 			power_type = ameion_keintagogists_power
 			value = -25
-		}
-		hidden_effect = {
-			set_government_power = {
-				mechanic_type = ameion_keintagogists_mechanic
-				power_type = ameion_keintagogists_mechanic
-				value = 0
-			}
 		}
 		if = {
 			limit = { has_country_flag = G52_strong_taychendi }
@@ -3932,6 +3918,7 @@ country_event = {
 	
 	option = {
 		name = flavor_ameion.89.a
+		add_splendor = 200
 		G64 = {
 			hidden_effect = { 
 				every_war_enemy_country = {
