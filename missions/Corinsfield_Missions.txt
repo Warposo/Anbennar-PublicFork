@@ -388,18 +388,16 @@ h35_branch_2 = {
 			H35_organizing_leadership H35_raising_defenses H35_anti_mage_weaponry
 		}
 		position = 5
-		provinces_to_highlight = {
-			region = veykoda_region
-			NOT = {
-				AND = {
-					religion = corinite
-					NOT = { devastation = 1 }
-				}
-			}
-			NOT = {
-				culture = corinsfielder
-			}
-		}
+        provinces_to_highlight = {
+            region = veykoda_region
+            NOT = {
+                AND = {
+                    religion = corinite
+                    NOT = { devastation = 1 }
+                    culture = corinsfielder
+                }
+            }
+        }
 		trigger = {
 			veykoda_region = {
 				type = all
