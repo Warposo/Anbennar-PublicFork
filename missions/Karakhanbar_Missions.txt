@@ -2647,21 +2647,15 @@ Z54_3_1 = {
             hornwood_area = {
                 type = all
                 owned_by = ROOT
+                has_manpower_building_trigger = yes
             }
             banesfork_area = {
                 type = all
                 owned_by = ROOT
-            }
-            hornwood_area = {
-                type = all
                 has_manpower_building_trigger = yes
             }
             hornwood_area = {
                 has_supply_depot = ROOT
-            }
-            banesfork_area = {
-                type = all
-                has_manpower_building_trigger = yes
             }
             banesfork_area = {
                 has_supply_depot = ROOT
