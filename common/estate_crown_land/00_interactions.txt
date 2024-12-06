@@ -735,7 +735,6 @@ interaction = { # Seize Land
 				}
 			}
 		}
-
 		# Anbennar - removed this factor due to adventurers
 		# modifier = {
 			# factor = 0.5
