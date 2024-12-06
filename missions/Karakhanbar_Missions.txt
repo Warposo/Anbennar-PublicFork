@@ -2523,17 +2523,23 @@ Z54_3_1 = {
             }
             hornwood_area = {
                 type = all
-                NOT = {
-                    owner = {
-                        army_size = ROOT
+                OR = {
+                    owned_by = ROOT
+                    NOT = {
+                        owner = {
+                            army_size = ROOT
+                        }
                     }
                 }
             }
             banesfork_area = {
                 type = all
-                NOT = {
-                    owner = {
-                        army_size = ROOT
+                OR = {
+                    owned_by = ROOT
+                    NOT = {
+                        owner = {
+                            army_size = ROOT
+                        }
                     }
                 }
             }
