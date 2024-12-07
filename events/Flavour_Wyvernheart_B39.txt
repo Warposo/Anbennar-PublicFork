@@ -2656,14 +2656,14 @@ country_event = {#The Council's Challenge
 		trigger = {
 			calc_true_if = {
 				amount = 2
-				has_ruler_flag = divination_3
-				has_ruler_flag = conjuration_3
-				has_ruler_flag = abjuration_3
-				has_ruler_flag = enchantment_3
-				has_ruler_flag = transmutation_3
-				has_ruler_flag = illusion_3
-				has_ruler_flag = necromancy_3
-				has_ruler_flag = conjuration_3
+				is_divination_3 = yes
+				is_conjuration_3 = yes
+				is_abjuration_3 = yes
+				is_enchantment_3 = yes
+				is_transmutation_3 = yes
+				is_illusion_3 = yes
+				is_necromancy_3 = yes
+				is_conjuration_3 = yes
 			}
 		}
 		highlight = yes
