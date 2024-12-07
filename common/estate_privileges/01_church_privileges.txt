@@ -2179,6 +2179,7 @@ estate_church_corinsfield_society = {
 	}
 	benefits = {
 		global_missionary_strength = 0.02
+		monthly_corinsfield_paranoia_power = -0.25
 	}
 	conditional_modifier = {
 		trigger = { has_government_attribute = free_religious_culture }

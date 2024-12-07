@@ -413,6 +413,8 @@
  h35_cathedral_prod:0 "All provinces in the Veykoda and Sarda Regions that we control gain §G1§! §GProduction Development§!, this effect cannot be repeated."
  
  #modifiers
+ h35_downstanding_society:0 "Unfaithful Peasantry"
+ h35_upstanding_society:0 "Upstanding Society"
  H35_melted_the_dome:0 "Corinsfield Melted The Dome!"
  H35_respected_burial:0 "Respected Burials"
  h35_magebane:0 "Magebane Regiments"
