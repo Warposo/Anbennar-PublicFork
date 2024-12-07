@@ -644,10 +644,27 @@ h35_branch_3 = {
 			}
 		}
 		trigger = {
-			veykoda_region = {
-				type = all
-				owned_by = ROOT
-				NOT = { OR = { culture = havoric culture = new_havoric } } 
+			OR = {
+				any_owned_province = {
+					region = veykoda_region
+					OR = {
+						culture = havoric
+						culture = new_havoric
+					}
+					OR = {
+						NOT = { local_autonomy = 10 }
+						has_province_modifier = autonomy_decreased
+					}
+				}
+				any_owned_province = {
+					region = veykoda_region
+					NOT = {
+						OR = {
+							culture = havoric
+							culture = new_havoric
+						}
+					}
+				}
 			}
 			NOT = { accepted_culture = stone_dwarf accepted_culture = steel_dwarf accepted_culture = redfoot_halfling accepted_culture = pipefoot_halfling }
 			custom_trigger_tooltip = {
