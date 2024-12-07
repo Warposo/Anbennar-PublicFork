@@ -500,20 +500,11 @@ h35_branch_2 = {
 			province_id = 2807
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = h35_build_value
-				has_global_modifier_value = {
-					which = build_cost
-					value = 0.35
-				}
+			OR = {
+				cathedral = 10
+				temple = 20
 			}
-			custom_trigger_tooltip = {
-				tooltip = h35_dev_value
-				has_global_modifier_value = {
-					which = development_cost
-					value = 0.25
-				}
-			}
+			is_great_power = yes
 			max_manpower = 150
 		}
 		effect = {
@@ -860,8 +851,10 @@ h35_branch_3 = {
 		}
 		effect = {
 			country_event = { id = flavour_corinsfield.9 days = 180 }
+			remove_estate_privilege = estate_church_one_faith_one_culture
 			set_country_flag = h35_upstanding_society
 			custom_tooltip = h35_upstanding_society.tt
+			hidden_effect = { set_estate_privilege = estate_church_corinsfield_society }
 		}
 	}
 	
@@ -1138,8 +1131,8 @@ h35_branch_5 = {
 					duration = -1
 				}
 			}
-			add_government_reform = peasant_councils_reform
 			set_country_flag = h35_unlock_peasant_councils
+			add_government_reform = peasant_councils_reform
 		}
 	}
 	
@@ -1320,10 +1313,13 @@ h35_branch_5 = {
 			owner = { is_neighbor_of = ROOT has_estate = estate_mages }
 		}
 		trigger = {
-			all_neighbor_country = { 
-				NOT = {
-					has_estate = estate_mages
-				}
+			all_neighbor_country = {
+				OR = {
+					NOT = {
+						has_estate = estate_mages
+					}
+					is_subject = yes
+				} 
 			}
 		}
 		effect = {

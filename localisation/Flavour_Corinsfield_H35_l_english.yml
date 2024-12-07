@@ -410,6 +410,7 @@
  h35_veykoda_autonomy:0 "§YAll owned provinces§! in the Veykoda Region need to have less than §Y10 autonomy§! or have the §Y"Decreased Autonomy"§! modifier."
  gain_access_pollo:0 "Gain access to the §OWitch Detecting Chicken§! that can be utilized during the Witch Trials."
  h35_missionary_strength:0 "Have at least §G+10%§! §YGlobal Missionary Strength§!."
+ h35_cathedral_prod:0 "All provinces in the Veykoda and Sarda Regions that we control gain §G1§! §GProduction Development§!, this effect cannot be repeated."
  
  #modifiers
  H35_melted_the_dome:0 "Corinsfield Melted The Dome!"
@@ -480,5 +481,3 @@
  PEACE_po_corinsfield_ban_mage:0 "Debarment From Magic" 
  CB_ALLOWED_po_corinsfield_ban_mage:0 "§OThis country will be barred from utilizing all magical guilds. for 25 years.§!" 
  po_corinsfield_ban_mage_desc:0 "§OThis country will be barred from utilizing all magical guilds for 25 years.§! We gain §G50§! Administrative, Diplomatic, and Military points."
- h35_dev_value:0 "Have at least §G-25% Development Cost§!"
- h35_build_value:0 "Have at least §G-35% Construction Cost§!"

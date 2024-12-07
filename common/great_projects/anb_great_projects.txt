@@ -4922,9 +4922,15 @@ H35_gp_crimson_cathedral = { #cathedral of crimson grace
 					limit = { NOT = { 2807 = { has_province_flag = ccg_upgradeddev } } }
 					every_owned_province = {
 						limit = {
-							region = sarda_region
+							OR = {
+								region = sarda_region
+								region = veykoda_region
+							}
 						}
-						add_base_production = 1
+						hidden_effect = {
+							add_base_production = 1
+						}
+						custom_tooltip = h35_cathedral_prod
 					}
 					2807 = { set_province_flag = ccg_upgradeddev }
 				}
@@ -4965,9 +4971,15 @@ H35_gp_crimson_cathedral = { #cathedral of crimson grace
 					limit = { NOT = { 2807 = { has_province_flag = ccg_upgradeddev2 } } }
 					every_owned_province = {
 						limit = {
-							region = sarda_region
+							OR = {
+								region = sarda_region
+								region = veykoda_region
+							}
 						}
-						add_base_production = 1
+						hidden_effect = {
+							add_base_production = 1
+						}
+						custom_tooltip = h35_cathedral_prod
 					}
 					2807 = { set_province_flag = ccg_upgradeddev2 }
 				}

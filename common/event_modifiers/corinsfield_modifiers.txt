@@ -39,8 +39,8 @@ h35_sarda_major_unrest = {
 }
 h35_cultural_crackdown_modifier = {
     stability_cost_modifier = 0.25
-    global_missionary_strength = 0.3
-    global_unrest = -5
+    global_missionary_strength = 0.03
+    global_unrest = -2
     culture_conversion_cost = -0.2
 }
 h35_upstanding_society = {
