@@ -316,3 +316,14 @@ lake = {
 	} 
 	height = 22
 } 
+
+#Shvartipa
+lake = {
+	triangle_strip = {  
+		3708 738
+		3695 740
+		3709 745
+		3696 748
+	} 
+	height = 24
+} 
