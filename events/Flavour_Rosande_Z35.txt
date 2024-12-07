@@ -707,6 +707,10 @@ country_event = { #Friends in the Forest
 	option = { 
 		name = flavor_rosande.19.a
 
+		add_country_modifier = {
+			name = Z35_friends_in_forest
+			duration = -1
+		}
 		add_accepted_culture = wood_elf
 		827 = { #Ionntras
 			rosande_beautiful_dream_effect = yes

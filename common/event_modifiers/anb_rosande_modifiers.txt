@@ -171,3 +171,7 @@ Z35_massive_orc_population = {
 	global_trade_goods_size_modifier = 0.1
 	advisor_cost = -0.1
 }
+
+Z35_friends_in_forest = {
+	num_accepted_cultures = 1
+}
