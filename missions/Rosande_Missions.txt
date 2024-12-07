@@ -774,7 +774,10 @@ rosande_2_2_missions = {
 		}
 
 		trigger = {
-			medium_tolerance_elven_race_trigger = yes
+			OR = {
+				medium_tolerance_elven_race_trigger = yes
+				high_tolerance_elven_race_trigger = yes
+			}
 			OR = {
 				num_of_owned_provinces_with = {
 					value = 10
