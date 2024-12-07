@@ -425,7 +425,7 @@ country_event = {
         country_event = { id = flavour_corinsfield.16 }
     }
     option = {
-        name = flavour_corinsfield.15.a
+        name = flavour_corinsfield.15.b
 
         change_variable = { # up to 30 manpower
             which = h35_blessed_book
@@ -434,7 +434,7 @@ country_event = {
         country_event = { id = flavour_corinsfield.16 }
     }
     option = {
-        name = flavour_corinsfield.15.a
+        name = flavour_corinsfield.15.c
 
         change_variable = { #up to 15 recovery
             which = h35_blessed_book

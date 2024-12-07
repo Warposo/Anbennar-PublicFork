@@ -367,6 +367,7 @@
  flavour_corinsfield.35.t:0 "The Cathedral of Crimson Grace"
  flavour_corinsfield.35.d:0 "At the heart of Pilgrim’s Field, a veritable marvel of the Corinite faith rises towards the blue sky, proclaiming to all who behold its many spires the majesty, grace, and benevolence of the maiden Martyr of Escann and her Regent Court.\n\nThanks to the unrelenting efforts of the Corinite faithful, the Cathedral of Crimson Grace proudly stretches skywards where prior to the arrival of Cannorians, only wild animals and Veykodan tribes roamed. It may not be composed of precious gold and marble as the famed Golden Dome of Stanyrhrada was, but its imposing spires, made from the finest timber found in all of Sarda and Veykoda, and intricate woodwork carvings depicting tales out of the Blessed Book for the edification of the faithful are truly a wonder to behold, inspiring pious awe in all who observe the Cathedral."
  flavour_corinsfield.35.a:0 "Bless Us, O' Martyr of Escann."
+ h35_purged_mages:0 "Total Barring of Mages and Magick"
 
  #tooltips
  h35_new_home.tt:0 "This modifier is removed upon completing §Y"Further Fertile Farmlands"§! mission."
