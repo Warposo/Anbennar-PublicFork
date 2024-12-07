@@ -1148,7 +1148,7 @@ issue_help_from_chronicles: "Order of Chronicles helps"
 issue_tea_act: "Tea Act"
 
 follower_of_many_gods_reform:0 "Followers of Many Gods"
-follower_of_many_gods_reform_desc:0 "While many devotees of the Regent Court exalt a single god above all others within the pantheon, our Court understands that each deity holds a unique purpose and role. To govern effectively and meet the needs of the people, rulers must seek wisdom from those most knowledgeable. And who could provide better guidance than a god? By honouring each deity's domain and welcoming their insight, our [Root.Monarch.GetTitle] gains divine mentorship, ensuring their rule aligns with the diverse aspects of life cherished by the faithful."
+follower_of_many_gods_reform_desc:0 "While many devotees of the Regent Court exalt a single god above all others within the pantheon, our Court understands that each deity holds a unique purpose and role. To govern effectively and meet the needs of the people, rulers must seek wisdom from those most knowledgeable. And who could provide better guidance than a god? By honouring each deity's domain and welcoming their insight, our Ruler gains divine mentorship, ensuring their rule aligns with the diverse aspects of life cherished by the faithful."
 mechanic_follower_of_many_gods_yes:0 "Can swap §YPersonal Deities§! every §Y5 years§!.\n\nSwapping §YPersonal Deity§! changes opinion of every country following this deity by §G+25§!."
 
 two_rulers_one_people_rc_reform:0 "Two Rulers, One People"
