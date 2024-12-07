@@ -476,7 +476,8 @@ h35_branch_2 = {
 		}
 		trigger = {
 			AND = {
-				1142 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_precursor_dome_stanyrhrada tier = 1} }
+				treasury = 1000
+				1142 = { country_or_non_sovereign_subject_holds = ROOT }
 				1133 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_dam_adbrabohvi tier = 1} }
 				1138 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_dam_vels_bacar tier = 1} }
 				1165 = { country_or_non_sovereign_subject_holds = ROOT has_great_project = { type = ynnic_dam_bosancovac tier = 1} }
@@ -780,14 +781,20 @@ h35_branch_3 = {
 			}
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				value = 8
-				region = sarda_region
-				culture = sarda
-				num_of_units_in_province = {
-					amount = 5
-					type = INFANTRY
-					who = ROOT
+			OR = {
+				any_owned_province = {
+					region = sarda_region
+					NOT = { culture = sarda }
+				}
+				num_of_owned_provinces_with = {
+					value = 8
+					region = sarda_region
+					culture = sarda
+					num_of_units_in_province = {
+						amount = 5
+						type = INFANTRY
+						who = ROOT
+					}
 				}
 			}
 			OR = {
