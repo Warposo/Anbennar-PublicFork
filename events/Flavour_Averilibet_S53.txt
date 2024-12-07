@@ -936,6 +936,7 @@ country_event = {
 	id = flavor_averilibet.5
 	title = flavor_averilibet.5.t
 	desc = flavor_averilibet.5.desc
+	picture = AMILAK_eventPicture
 
 	is_triggered_only = yes
 
@@ -1050,7 +1051,7 @@ country_event = {
 	id = flavor_averilibet.7
 	title = flavor_averilibet.7.t
 	desc = flavor_averilibet.7.desc
-	picture = NYAU_RITUAL_eventPicture
+	picture = NZINGHA_eventPicture
 
 	is_triggered_only = yes 
 
@@ -1119,7 +1120,7 @@ country_event = {
 	id = flavor_averilibet.9
 	title = flavor_averilibet.9.t
 	desc = flavor_averilibet.9.desc
-	picture = NYAU_RITUAL_eventPicture
+	picture = POPE_PREACHING_eventPicture
 
 	is_triggered_only = yes
 
@@ -1158,7 +1159,7 @@ country_event = {
 	id = flavor_averilibet.10
 	title = flavor_averilibet.10.t
 	desc = flavor_averilibet.10.desc
-	picture = NYAU_RITUAL_eventPicture
+	picture = POPE_PREACHING_eventPicture
 
 	is_triggered_only = yes
 
@@ -1214,7 +1215,7 @@ country_event = {
 	id = flavor_averilibet.12
 	title = flavor_averilibet.12.t
 	desc = flavor_averilibet.12.desc
-	picture = NYAU_RITUAL_eventPicture
+	picture = WAR_ELEPHANT_eventPicture
 
 	is_triggered_only = yes
 
@@ -1263,7 +1264,7 @@ country_event = {
 	id = flavor_averilibet.13
 	title = flavor_averilibet.13.t
 	desc = flavor_averilibet.13.desc
-	picture = NYAU_RITUAL_eventPicture
+	picture = AFRICAN_BATTLE_eventPicture
 
 	is_triggered_only = yes
 
@@ -1354,7 +1355,7 @@ country_event = {
 	id = flavor_averilibet.15
 	title = flavor_averilibet.15.t
 	desc = flavor_averilibet.15.desc
-	picture = NYAU_RITUAL_eventPicture
+	picture = NZINGHA_eventPicture
 
 	is_triggered_only = yes
 
