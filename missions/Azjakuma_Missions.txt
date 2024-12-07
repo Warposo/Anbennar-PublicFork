@@ -2926,10 +2926,9 @@ azjakuma_missiontree_5_pt_2 = {
 			}
 			
 			else = {
-				any_subject_country = { # #change with the jade march tag - I think it would make more sense to have the goblin march own this provinces
-					num_of_owned_provinces_with = {
-						value = 5
-						region = jade_mines_region
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					region = jade_mines_region
 						OR = {
 							trade_goods = copper
 							trade_goods = iron
@@ -2937,7 +2936,7 @@ azjakuma_missiontree_5_pt_2 = {
 							trade_goods = mithril
 						}
 						development = 12
-					}
+					owner = { is_subject_of = ROOT }
 				}
 			}
 		}

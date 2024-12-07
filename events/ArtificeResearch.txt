@@ -2731,7 +2731,7 @@ country_event = {
 		}
 		if = {
 			limit = { has_country_flag = researching_artifice_invention_artifice_powered_magnate_factories }
-			set_country_flag = unlocked_artifice_invention_powered_magnate_factories
+			set_country_flag = unlocked_artifice_invention_artifice_powered_magnate_factories
 			clr_country_flag = researching_artifice_invention_artifice_powered_magnate_factories
 			country_event = {
 				id = artifice_inventions.800
