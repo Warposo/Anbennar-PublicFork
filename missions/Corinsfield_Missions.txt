@@ -281,22 +281,20 @@ h35_branch_2 = {
 		trigger = {
 			monthly_mil = 7
 			army_size_percentage = 0.9
-			NOT = {
-				any_known_country = {
-					capital_scope = { region = veykoda_region }
-					NOT = {
-						has_opinion = {
-							who = ROOT
-							value = -50
-						}
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = insulted
-						}
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = scornfully_insulted
-						}
+			any_known_country = {
+				capital_scope = { region = veykoda_region }
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = -50
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
 					}
 				}
 			}
