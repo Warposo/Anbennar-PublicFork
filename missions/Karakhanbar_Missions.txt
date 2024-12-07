@@ -159,6 +159,7 @@ Z54_2_branching = {
             Z54_branching3
         }
         provinces_to_highlight = {
+            owned_by = Z54
             OR = {
                 province_group = deepwoods_mountain_grove
                 province_group = deepwoods_lake_grove
@@ -1703,6 +1704,18 @@ Z54_2_1 = {
         required_missions = {
             Z54_might_makes_right
         }
+        provinces_to_highlight = {
+            owner = {
+                war_with = ROOT
+                num_of_cities = 20
+            }
+            NOT = {
+                OR = {
+                    has_province_modifier = scorched_earth
+                    devastation = 50
+                }
+            }
+        }
 
         trigger = {
             monthly_mil = 12
@@ -1885,7 +1898,8 @@ Z54_3_1 = {
         provinces_to_highlight = {
             if = {
                 limit = {
-                    owns_core_province = 6258
+                    province_id = 6258
+                    owned_by = ROOT
                 }
                 province_id = 6258
             }
