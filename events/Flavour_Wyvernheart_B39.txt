@@ -1962,6 +1962,15 @@ country_event = {#A Simple Accident
 		tag = B39
 	}
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { has_ruler_modifier = witch_king_modifier }
+				set_country_flag = ruler_was_witchking
+			}
+		}
+	}
+
 	#Option A
 	option = {
 		name = "flavour_wyvernheart.201.a"
@@ -1977,7 +1986,17 @@ country_event = {#A Simple Accident
 			religion = ROOT
 			culture = ROOT
 		}
+		set_ruler_flag = evocation_1
 		add_ruler_personality = mage_personality
+		if = {
+			limit = {
+				has_country_flag = ruler_was_witchking
+			}
+			add_ruler_modifier = {
+				name = witch_king_modifier
+			}
+			clr_country_flag = ruler_was_witchking
+		}
 		custom_tooltip = wyvernheart_201_event_tt
 		hidden_effect = {
 			country_event = {
