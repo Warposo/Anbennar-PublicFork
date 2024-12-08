@@ -2621,7 +2621,16 @@ country_event = {
 		trigger = {
 			has_country_flag = mb_new_reserves_flg
 			NOT = { has_country_flag = hobgoblin_reserve_done_flg }
-			fast_owns_num_pops_of_race = { race = hobgoblin amount = 1 }
+			OR = {
+				fast_owns_num_pops_of_race = { race = hobgoblin amount = 1 }
+				any_known_country = {
+					fast_owns_num_pops_of_race = { race = hobgoblin amount = 1 }
+					has_spy_network_from = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
 			seghdihr_area = {
 				type = all
 				owned_by = ROOT
@@ -2653,7 +2662,16 @@ country_event = {
 		trigger = {
 			has_country_flag = mb_new_reserves_flg
 			NOT = { has_country_flag = harimari_reserve_done_flg }
-			fast_owns_num_pops_of_race = { race = harimari amount = 1 }
+			OR = {
+				fast_owns_num_pops_of_race = { race = harimari amount = 1 }
+				any_known_country = {
+					fast_owns_num_pops_of_race = { race = harimari amount = 1 }
+					has_spy_network_from = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
 			hehos_legacy_area = {
 				type = all
 				owned_by = ROOT
@@ -2687,8 +2705,16 @@ country_event = {
 			NOT = { has_country_flag = ruinborn_reserve_done_flg }
 			OR = {
 				fast_owns_num_pops_of_race = { race = ruinborn amount = 1 }
-				any_subject_country = {
-					fast_owns_num_pops_of_race = { race = ruinborn amount = 1 }
+				any_subject_country = { fast_owns_num_pops_of_race = { race = ruinborn amount = 1 } }
+				any_known_country = {
+					OR = {
+						fast_owns_num_pops_of_race = { race = ruinborn amount = 1 }
+						any_subject_country = { fast_owns_num_pops_of_race = { race = ruinborn amount = 1 } }
+					}
+					has_spy_network_from = {
+						who = ROOT
+						value = 50
+					}
 				}
 			}
 			inner_drolas_area = {
@@ -2786,7 +2812,16 @@ country_event = {
 		trigger = {
 			has_country_flag = mb_new_reserves_flg
 			NOT = { has_country_flag = lizardfolk_reserve_done_flg }
-			fast_owns_num_pops_of_race = { race = lizardfolk amount = 1 }
+			OR = {
+				fast_owns_num_pops_of_race = { race = lizardfolk amount = 1 }
+				any_known_country = {
+					fast_owns_num_pops_of_race = { race = lizardfolk amount = 1 }
+					has_spy_network_from = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
 			arrtukerr_area = {
 				type = all
 				owned_by = ROOT
