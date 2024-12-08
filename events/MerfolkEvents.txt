@@ -572,7 +572,7 @@ country_event = {
 
 country_event = {
 	id = merfolk_events.13 #Curious similarity electric boogaloo
-	title = merfolk_events.12.t
+	title = merfolk_events.13.t
 	desc = merfolk_events.13.d
 	picture = ADVISOR_eventPicture
 
@@ -654,7 +654,7 @@ country_event = {
 	}
 	option = {
 		name = merfolk_events.14.b
-		merfolk_add_opinion_effect_medium = yes
+		merfolk_subtract_opinion_effect_medium = yes
 	}
 
 	after = {
