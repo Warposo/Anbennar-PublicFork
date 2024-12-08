@@ -491,7 +491,7 @@ country_event = { #To Build Something New
 				}
 			}
 			833 = {
-				change_culture = rosanda
+				change_culture = ROOT
 				change_religion = ROOT
 			}
 			random_owned_province = {
@@ -1415,7 +1415,9 @@ country_event = { #The Price of Progress
 				limit = {
 					has_orcish_majority_trigger = yes
 				}
-				change_culture = rosanda
+				change_culture = ROOT
+				remove_orcish_minority_size_effect = yes
+				remove_orcish_minority_size_effect = yes
 				remove_orcish_minority_size_effect = yes
 			}
 			else_if = {

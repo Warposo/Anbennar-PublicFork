@@ -228,7 +228,7 @@
 
  flavor_rosande.34.t:0 "The Price of Progress"
  flavor_rosande.34.d:0 "Building a new realm from the ground up is a daunting task, but one we are more than capable of achieving. With each passing day, new plantations are established, new farmland is tilled, new mines are dug, woodlands are made useful as hunting grounds or logging sites, swamps are drained and the remains of Escanni settlements rebuilt or torn down to provide building materials for our new settlements.\n\nAll these efforts are taking a toll even on the strongest orcish slave, and the slaves currently assigned to [Root.GetName] province cannot keep up with the rising demand for labor. Whatever reinforcements the slave pens can produce is not enough to replenish the losses incurred due to accidents, exhaustion, disciplinary action and disease. For the time being, the reclamation efforts in [province_to_lose_orc_pop.GetName] are somewhat stymied by this shortage."
- flavor_rosande.34.a:0 "Regrettable, but all Progress has its price."
+ flavor_rosande.34.a:0 "Regrettable, but all progress has its price."
 
  flavor_rosande.35.t:0 "Orcish Ambushes" 
  flavor_rosande.35.d:0 " Behind every tangled copse of trees, an ambush, behind every verdant ridge, a trap. Our courageous forces have their work cut out for them. Even those parts of this ancient forest we thought securely in our hands are prone to rise up in rebellion as soon as we turn our backs. \n\nWhile the orcs dwelling in the Deepwoods cannot dream of matching the might of our rose knights, they are certainly determined to make us bleed in their obstinate refusal to accept their destiny beneath our boots. But no matter how many contemptible tricks they attempt to delay our advance, we shall not be deterred!"
