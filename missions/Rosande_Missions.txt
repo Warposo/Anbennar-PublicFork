@@ -167,13 +167,13 @@ rosande_1_missions = {
 			808 = {
 				trade_share = {
 					country = Z35
-					share = 70
+					share = 60
 				}
 			}
 			229 = {
 				trade_share = {
 					country = Z35
-					share = 50
+					share = 40
 				}
 			}
 			num_of_owned_provinces_with = {
@@ -733,11 +733,14 @@ rosande_2_missions = {
 				name = Z35_a_knights_steed
 				duration = -1
 			}
-			if = {
-				limit = { full_idea_group = aristocracy_ideas }
-				add_country_modifier = {
-					name = Z35_knights_rosande
-					duration = -1
+			custom_tooltip = rosande_knights_steed.tt.3
+			hidden_effect = {
+				if = {
+					limit = { full_idea_group = aristocracy_ideas }
+					add_country_modifier = {
+						name = Z35_knights_rosande
+						duration = -1
+					}
 				}
 			}
 		}
@@ -824,7 +827,7 @@ rosande_2_2_missions = {
 						AND = {
 							development = 30
 							num_of_buildings_in_province = 6
-							num_of_times_expanded_infrastructure = 3
+							num_of_times_expanded_infrastructure = 2
 						}
 					}
 				}
@@ -840,7 +843,10 @@ rosande_2_2_missions = {
 				num_of_times_expanded_infrastructure = 3
 			}
 			humacvord_area = { is_prosperous = yes }
-			has_country_flag = rosande_final_touches
+			custom_trigger_tooltip = {
+				tooltip = rosande_city_of_flowers.tt
+			    has_country_flag = rosande_final_touches
+			}
 		}
 
 		effect = {
@@ -1300,7 +1306,7 @@ rosande_3_missions = {
 					development = 25
 					has_manufactory_trigger = yes
 					has_production_building_trigger = yes
-					num_of_times_expanded_infrastructure = 2
+					num_of_times_expanded_infrastructure = 1
 				}
 			}
 			production_leader = { trade_goods = wine }
@@ -1864,7 +1870,10 @@ rosande_4_2_missions = {
 			num_of_owned_provinces_with = {
 				value = 6
 				has_half_orcish_minority_trigger = yes
-				has_building = barracks
+				OR ={
+					has_building = barracks
+					has_building = training_fields
+				}
 				development = 10
 			}
 			NOT = { unrest = -1 }
