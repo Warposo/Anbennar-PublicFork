@@ -2909,7 +2909,7 @@ azjakuma_missiontree_5_pt_2 = {
 				limit = {
 						R81 = { is_subject_of = ROOT }	
 				}
-				R81 = { # #change with the jade march tag - I think it would make more sense to have the goblin march own this provinces
+				R81 = {
 					num_of_owned_provinces_with = {
 						value = 5
 						region = jade_mines_region
@@ -2925,7 +2925,7 @@ azjakuma_missiontree_5_pt_2 = {
 			}
 			
 			else = {
-				any_subject_country = { # #change with the jade march tag - I think it would make more sense to have the goblin march own this provinces
+				any_subject_country = {
 					num_of_owned_provinces_with = {
 						value = 5
 						region = jade_mines_region
