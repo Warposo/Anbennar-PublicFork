@@ -1930,10 +1930,7 @@ country_event = {#The Promised Mage
 			dynasty = ROOT
 			age = 9
 		}
-		add_country_modifier = {
-			name = heir_mage_personality_mod
-			duration = -1
-		}
+		set_heir_mage_effect = yes
 		hidden_effect = {
 			country_event = {
 				id = flavour_wyvernheart.201
