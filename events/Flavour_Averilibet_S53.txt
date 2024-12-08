@@ -1301,6 +1301,11 @@ country_event = {
 			}
 		}
 		else = {
+			hidden_effect = {
+				L55 = {
+					set_country_flag = S53_naleni_union
+				}
+			}
 			add_casus_belli = {
 				type = cb_restore_personal_union
 				target = L55
@@ -1360,6 +1365,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		name = flavor_averilibet.15.a
 		if = {
 			limit = {
 				werikafan_area = {

@@ -46,15 +46,25 @@ cb_restore_personal_union = {
 	}
 
 	prerequisites = {
-		FROM = {
-			OR = {
-				government = monarchy
-				has_reform = ambrosian_republic
-				# has_reform = military_dictatorship_reform
-				has_country_flag = neapolitan_republic
+		OR = {
+			AND = {
+				ROOT = {
+					mission_completed = like_a_sister_S53
+				}
+				FROM = {
+					has_country_flag = S53_naleni_union
+				}
 			}
-			is_subject = no
-			NOT = { ruler_can_revive = yes } # Anbennar
+			FROM = {
+				OR = {
+					government = monarchy
+					has_reform = ambrosian_republic
+					# has_reform = military_dictatorship_reform
+					has_country_flag = neapolitan_republic
+				}
+				is_subject = no
+				NOT = { ruler_can_revive = yes } # Anbennar
+			}
 		}
 	}
 
