@@ -8062,3 +8062,14 @@ add_prepared_months_of_trade_income = {
 	}
 	custom_tooltip = remove_months_of_trade_income_tt
 }
+
+pirate_republic_estate_crownland_setup = {
+	change_estate_land_share = {
+		estate = estate_adventurers
+		share = 40
+	}
+	change_estate_land_share = {
+		estate = estate_mages
+		share = 30
+	}
+}
