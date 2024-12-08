@@ -1416,9 +1416,6 @@ country_event = { #The Price of Progress
 					has_orcish_majority_trigger = yes
 				}
 				change_culture = ROOT
-				remove_orcish_minority_size_effect = yes
-				remove_orcish_minority_size_effect = yes
-				remove_orcish_minority_size_effect = yes
 			}
 			else_if = {
 				limit = {
