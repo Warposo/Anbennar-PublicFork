@@ -245,11 +245,9 @@ artifice_research_ptm = {
 					id = artifice_research.3
 					#days = 10
 				}
-				capital_scope = {
-					remove_province_triggered_modifier = artifice_research_ptm
-				}
 			}
 		}
+		remove_province_triggered_modifier = artifice_research_ptm
 	}
 
 	on_deactivation = {
