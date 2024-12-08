@@ -837,6 +837,7 @@ country_event = { #The Ashen Bloom
 		whistlevale_area = {
 			add_permanent_claim = ROOT
 		}
+		custom_tooltip = rosande_golden_age.tt
 		if = {
 			limit = { has_had_golden_age = yes } 
 			reset_golden_age = yes 
