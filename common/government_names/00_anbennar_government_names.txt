@@ -1068,6 +1068,10 @@ eordand_theocracy = {
 		OR = {
 			has_reform = monastic_order_reform
 			has_reform = leading_clergy_reform
+			AND = {
+				has_reform = raithtall_twilight_court_reform
+				NOT = has_ruler_flag = raithtallTwilightMonarchist
+			}
 		}
 	}
 }
@@ -2487,7 +2491,13 @@ eordand_monarchy = {
 	
 	trigger = {
 		culture_group = eordan_ruinborn_elf
-		government = monarchy
+		OR = {
+			government = monarchy
+			AND = {
+				has_reform = raithtall_twilight_court_reform
+				has_ruler_flag = raithtallTwilightMonarchist
+			}
+		}
 	}
 }
 
