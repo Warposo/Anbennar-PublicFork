@@ -1860,7 +1860,7 @@ rosande_4_2_missions = {
 			has_half_orcish_minority_trigger = yes
 			NOT = {
 				AND = {
-					has_building = barracks
+					has_manpower_building_trigger = yes
 					development = 10
 				}
 			}
@@ -1870,10 +1870,7 @@ rosande_4_2_missions = {
 			num_of_owned_provinces_with = {
 				value = 6
 				has_half_orcish_minority_trigger = yes
-				OR ={
-					has_building = barracks
-					has_building = training_fields
-				}
+				has_manpower_building_trigger = yes
 				development = 10
 			}
 			NOT = { unrest = -1 }
