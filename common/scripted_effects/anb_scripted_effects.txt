@@ -4189,52 +4189,6 @@ calc_tributary_dev_proportion = {
 	}
 }
 
-decrease_ruler_stat = {
-	set_variable = { temp_stat = $amount$ }
-	[[dip]
-	while = {
-		limit = { check_variable = { temp_stat = 1 } }
-		subtract_variable = { temp_stat = 1 }
-		custom_tooltip = low_stats_in_power_tooltip
-		if = {
-			limit = { dip = 1 }
-			change_dip = -1
-		}
-		else = {
-			add_dip_power = -100
-		}
-	}
-	]
-	[[adm]
-	while = {
-		limit = { check_variable = { temp_stat = 1 } }
-		subtract_variable = { temp_stat = 1 }
-		custom_tooltip = low_stats_in_power_tooltip
-		if = {
-			limit = { adm = 1 }
-			change_adm = -1
-		}
-		else = {
-			add_adm_power = -100
-		}
-	}
-	]
-	[[mil]
-	while = {
-		limit = { check_variable = { temp_stat = 1 } }
-		subtract_variable = { temp_stat = 1 }
-		custom_tooltip = low_stats_in_power_tooltip
-		if = {
-			limit = { mil = 1 }
-			change_mil = -1
-		}
-		else = {
-			add_mil_power = -100
-		}
-	}
-	]
-}
-
 save_ruler_stats = {
 	hidden_effect = {
 		export_to_variable = {
