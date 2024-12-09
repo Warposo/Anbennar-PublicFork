@@ -1362,9 +1362,9 @@ kob_2_b = {
 			}
 
 			OR = {
-				faction_influence = { influence = 75 faction = tec_brilliance }
-				faction_influence = { influence = 75 faction = tec_mechanists }
-				faction_influence = { influence = 75 faction = tec_technomancy }
+				adm = 5
+				dip = 5
+				mil = 5
 			}
 
 		}
