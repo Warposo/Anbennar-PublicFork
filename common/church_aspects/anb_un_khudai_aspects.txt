@@ -261,7 +261,7 @@ pathways = {
 	}
 	monarch_power = mil 
 	modifier = {
-		caravan_power = 0.1
+		global_prov_trade_power_modifier = 0.1
 	}
 	ai_will_do = {
 		factor = 15
