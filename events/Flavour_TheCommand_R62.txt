@@ -5802,6 +5802,8 @@ country_event = { #Sir revolt starts
 					subject_type = tributary_state_anb
 					subject = R78
 				}
+			}
+			R78 = {
 				add_country_modifier = {
 					name = R78_revolt_loyalty
 					duration = -1
@@ -6188,11 +6190,9 @@ country_event = { #Truce Offer P2
 			remove_province_modifier = command_shamakhadi_resistance
 		}
 		hidden_effect = {
-			random_known_country = {
-				limit = {
-					has_reform = wulin
-				}
+			R78 = {
 				remove_country_modifier = R78_revolt_loyalty
+				grant_independence = yes
 			}
 		}
 	}
@@ -6363,11 +6363,9 @@ country_event = { #Sir revolt end - Command loss
 					country_event = { id = the_command.125 }
 				}
 				hidden_effect = {
-					random_known_country = {
-						limit = {
-							has_reform = wulin
-						}
+					R78 = {
 						remove_country_modifier = R78_revolt_loyalty
+						grant_independence = yes
 					}
 				}
 			}
@@ -7503,11 +7501,9 @@ country_event = { #Sir Revolt End - Command Victory
 						}
 					}
 				}
-				random_known_country = {
-					limit = {
-						has_reform = wulin
-					}
+				R78 = {
 					remove_country_modifier = R78_revolt_loyalty
+					grant_independence = yes
 				}
 			}
 			add_government_power = {
