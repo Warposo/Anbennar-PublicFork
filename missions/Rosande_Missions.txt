@@ -604,19 +604,19 @@ rosande_2_missions = {
 				}
 			}
 			764 = { #Upcreek
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = Z35_ends_of_green_trade
 					duration = -1
 				}
 			}
 			772 = { #Banwick
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = Z35_ends_of_green_trade
 					duration = -1
 				}
 			}
 			780 = { #Valefort
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = Z35_ends_of_green_trade
 					duration = -1
 				}
@@ -851,7 +851,7 @@ rosande_2_2_missions = {
 
 		effect = {
 			827 = { #Ionntras
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = Z35_city_of_flowers
 					duration = -1
 				}
@@ -869,7 +869,7 @@ rosande_2_2_missions = {
 				}
 			}
 			humacvord_area = {
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 					name = Z35_gardens_heart
 					duration = -1
 				}
