@@ -777,7 +777,7 @@ country_decisions = {
 			any_army = {
 				OR = {
 					is_ruler_commanding_unit = yes
-					is_female = yes
+					ROOT = { is_female = yes }
 					custom_trigger_tooltip = {
 						tooltip = J84_mihaela_is_ruler_tt
 						ROOT = { has_country_flag = J84_is_mihaela_flag }

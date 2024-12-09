@@ -290,13 +290,7 @@ J84_1_missions = {
 					region = mushroom_forest_region
 					trade_goods = fungi
 					NOT = {
-						AND = {
-							has_production_building_trigger = yes
-							num_of_units_in_province = {
-								amount = 5
-								who = ROOT
-							}
-						}
+						has_production_building_trigger = yes
 					}
 				}
 			}
@@ -1691,7 +1685,7 @@ J84_2_missions_part_2 = {
 							}
 							OR = {
 								has_ruler_leader_from = ROOT
-								is_female = yes
+								ROOT = { is_female = yes }
 								ROOT = { has_country_flag = J84_is_mihaela_flag }
 							}
 							has_building = grand_shipyard
@@ -1719,7 +1713,7 @@ J84_2_missions_part_2 = {
 				}
 				OR = {
 					has_ruler_leader_from = ROOT
-					is_female = yes
+					ROOT = { is_female = yes }
 					ROOT = {
 						custom_trigger_tooltip = {
 							tooltip = J84_mihaela_is_ruler_tt
@@ -1891,7 +1885,7 @@ J84_2_missions_part_2 = {
 							}
 							OR = {
 								has_ruler_leader_from = ROOT
-								is_female = yes
+								ROOT = { is_female = yes }
 								ROOT = { has_country_flag = J84_is_mihaela_flag }
 							}
 						}
@@ -1932,7 +1926,7 @@ J84_2_missions_part_2 = {
 				}
 				OR = {
 					has_ruler_leader_from = ROOT
-					is_female = yes
+					ROOT = { is_female = yes }
 					ROOT = {
 						custom_trigger_tooltip = {
 							tooltip = J84_mihaela_is_ruler_tt
@@ -3153,7 +3147,7 @@ J84_4_missions = {
 					}
 					OR = {
 						has_ruler_leader_from = ROOT
-						is_female = yes
+						ROOT = { is_female = yes }
 						ROOT = { has_country_flag = J84_is_mihaela_flag }
 					}
 				}
@@ -3169,7 +3163,7 @@ J84_4_missions = {
 				}
 				OR = {
 					has_ruler_leader_from = ROOT
-					is_female = yes
+					ROOT = { is_female = yes }
 					ROOT = {
 						custom_trigger_tooltip = {
 							tooltip = J84_mihaela_is_ruler_tt

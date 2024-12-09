@@ -1429,7 +1429,7 @@ training_fields = {
 		gronstunad_building_authority_effect = { value = 3 }
 		
 		if = { #Taychendi Empire
-			limit = { FROM =  { has_country_flag = J84_training_fields_buff_flag } }
+			limit = { FROM =  { has_country_flag = J84_training_fields_flag } }
 			add_province_modifier = {
 				name = J84_training_fields_buff
 				duration = -1
@@ -1442,7 +1442,7 @@ training_fields = {
 		}
 		#Anbennar
 		if = { #Taychendi Empire
-			limit = { FROM =  { has_country_flag = J84_training_fields_buff_flag } }
+			limit = { FROM =  { has_country_flag = J84_training_fields_flag } }
 			remove_province_modifier = J84_training_fields_buff
 		}
 		# if = {

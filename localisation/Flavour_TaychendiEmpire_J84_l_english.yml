@@ -607,7 +607,7 @@ l_english:
  J84_sanguosynthesis_4: "Sanguosynthesis, IV"
  desc_J84_sanguosynthesis_4: "§GMax§! Level\nDowngrades at under §R60§! Farm Estates"
  J84_training_fields_buff: "Improved Training Fields"
- desc_J84_training_fields_buff: "This modifier will be lost if the §YSoldier's Households§! in this province is §Rdestroyed§!"
+ desc_J84_training_fields_buff: "This modifier will be lost if the §YTraining Fields§! in this province is §Rdestroyed§!"
  J84_trade_station_buff: "Improved Trade Station"
  J84_free_accepted_orc_culture: "Accepted Orc Culture"
  desc_J84_free_accepted_orc_culture: "This modifier will be removed if §YOzgar Orc§! becomes no longer accepted"
