@@ -844,7 +844,7 @@ rosande_2_2_missions = {
 		icon = imperial_capitals
 		position = 12
 		required_missions = {
-			rosande_harsh_control
+			rosande_unpaid_labour
 		}
 
 		provinces_to_highlight = {
