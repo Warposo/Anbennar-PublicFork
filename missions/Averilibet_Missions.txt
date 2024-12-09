@@ -463,7 +463,10 @@ column_2 = {
 							who = ROOT
 							value = 55
 						}
-						is_subject = no
+						OR = {
+							is_subject = no
+							is_subject_of = ROOT 
+						}
 					}
 					amount = 5
 				}
@@ -473,6 +476,17 @@ column_2 = {
 		effect = {
 			custom_tooltip = S53_holy_matrimony_effect_tooltip
 			hidden_effect = {
+				every_ally = {
+					limit = {	
+						OR = {
+							culture = tanizu
+							culture = cyazizeta_lizardfolk
+						}
+					}
+					ROOT = {
+						add_treasury = 20 
+					}
+				}
 				every_known_country = {
 					limit = {	
 						OR = {
