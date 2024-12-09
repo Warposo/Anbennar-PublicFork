@@ -2,7 +2,10 @@
 country_decisions = {
 	establish_plantation_decision = {
 		potential = {
-			tag = Z35
+			OR = {
+				tag = Z35
+				was_tag = Z35
+			}
 			mission_completed = rosande_knightly_slave_hunters
 		}
 		provinces_to_highlight = {
@@ -30,7 +33,10 @@ country_decisions = {
 		}
 		allow = {
 			hidden_trigger = {
-				tag = Z35
+				OR = {
+					tag  = Z35
+					was_tag = Z35
+				}
 				mission_completed = rosande_knightly_slave_hunters
 			}
 			treasury = 100
