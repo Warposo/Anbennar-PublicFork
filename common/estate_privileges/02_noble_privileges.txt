@@ -24,6 +24,12 @@ estate_nobles_land_rights = {
 			stability_cost_modifier = -0.05
 		}
 	}
+	conditional_modifier = {
+		trigger = { mission_completed = G52_taychendi_brethren }
+		modifier = {
+			max_absolutism = 5
+		}
+	}
 	# conditional_modifier = {
 	# 	trigger = { has_government_attribute = BYZ_buff_dynatoi_land_grants  }
 	# 	modifier = {
@@ -348,6 +354,14 @@ estate_nobles_officer_corp = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
 	}
+	conditional_modifier = {
+		trigger = { has_country_flag = rosande_officer_corp_mod }
+		modifier = {
+			army_tradition_decay = -0.005
+			general_cost = -0.1
+			infantry_power = 0.1
+		}
+	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
 	#	modifier = { monthly_ottoman_decadence = 0.02 }
@@ -392,10 +406,6 @@ estate_nobles_levies = {
 		if = {
 			limit = { has_ruler_modifier = G52_destiny }
 			NOT = { has_ruler_modifier = G52_destiny }
-		}
-		else_if = {
-			limit = { has_country_modifier = G52_laskaris_legacy }
-			NOT = { has_country_modifier = G52_laskaris_legacy }
 		}
 	}
 	modifier_by_land_ownership = {
@@ -717,6 +727,10 @@ estate_nobles_supremacy_over_crown = {
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = rosande_above_the_flames }
+		modifier = { max_absolutism = 5 }
 	}
 	#conditional_modifier = {
 	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
@@ -1167,6 +1181,7 @@ estate_nobles_strong_duchies = {
 	is_valid = {
 		NOT = { has_country_flag = estate_nobles_castanor_upgraded_strong_duchies_unlocked }
 		NOT = { has_estate_privilege = estate_nobles_sunijalla_council_of_lords }
+		NOT = { has_country_flag = L62_mengi_partners }
 		any_subject_country = {
 			OR = {
 				is_subject_of_type = vassal
@@ -1215,6 +1230,14 @@ estate_nobles_strong_duchies = {
 		trigger = { has_government_attribute = buffed_strong_duchies }
 		modifier = {
 			nobles_loyalty_modifier = 0.05
+		}
+	}
+	conditional_modifier = {
+		trigger = { mission_completed = G52_across_hills }
+		modifier = {
+			max_absolutism = 10
+			diplomatic_upkeep = 1
+			diplomatic_reputation = 1
 		}
 	}
 	ai_will_do = {

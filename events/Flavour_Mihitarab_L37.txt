@@ -13,7 +13,10 @@ country_event = {
 	
 	option = {
 		name = flavor_mihitarab.1.a	
-		kill_ruler = yes
+		if = {
+			limit = { NOT = { has_ruler_flag = mihitarab_haingo_rules_flag } }
+			kill_ruler = yes
+		}
 		hidden_effect = {
 			add_country_modifier = { 
 				name = L37_death_exception
@@ -38,7 +41,6 @@ country_event = {
 			days = 60
 			random = 30
 		}
-		set_ruler_flag = mihitarab_haingo_rules_flag
 	}
 }
 
@@ -62,10 +64,10 @@ country_event = {
 			}
 			if = {
 				limit = { has_tax_building_trigger = yes }
-				add_treasury = -50
+				ROOT = { add_treasury = -50 }
 			}
 			else = {
-				add_treasury = -100
+				ROOT = { add_treasury = -100 }
 			}
 		}
 		add_adm_power = -50
@@ -214,6 +216,8 @@ country_event = {
 			days = 180
 			random = 60
 		}
+		add_treasury = -100
+		
 	}
 }
 
