@@ -758,7 +758,7 @@ province_event = {
 	}
 	
 	trigger = {
-		ai = no
+		owner = { ai = no }
 		continent = serpentspine
 		is_colony = yes
 		NOT = { has_construction = siberian }
