@@ -285,6 +285,10 @@ country_event = {
 			}
 			set_capital = 2591 #Samidon
 		}
+		add_country_modifier = {
+			name = J84_chendhya_pacified
+			duration = -1
+		}
 	}
 
 	option = {
@@ -1355,6 +1359,9 @@ country_event = {
 			estate = estate_artificers
 			loyalty = -10
 		}
+		effelai_superregion = {
+			add_permanent_claim = J84
+		}
 	}
 
 	option = {
@@ -1366,6 +1373,9 @@ country_event = {
 		add_country_modifier = {
 			name = J84_artificer_aided_colonisation
 			duration = 18250 #50 years
+		}
+		effelai_superregion = {
+			add_permanent_claim = J84
 		}
 	}
 
@@ -1385,6 +1395,9 @@ country_event = {
 				id = taychendi_empire_events.17 #Against Fire
 				days = 3650 #10 years
 			}
+		}
+		effelai_superregion = {
+			add_permanent_claim = J84
 		}
 	}
 }
@@ -1499,6 +1512,10 @@ country_event = {
 					for = {
 						amount = 80
 						effect = "infantry = G20" #Araya
+					}
+					for = {
+						amount = 40
+						effect = "artillery = G20" #Araya
 					}
 				}
 			}
@@ -2593,7 +2610,15 @@ country_event = {
 	option = {
 		name = taychendi_empire_events.208.a
 		trigger = { NOT = { dynasty = "Mudaliar" } }
-		add_ruler_personality = just_personality
+		if = {
+			limit = {
+				NOT = { ruler_has_max_personalities = yes }
+			}
+			add_ruler_personality = just_personality
+		}
+		else = {
+			add_legitimacy = 20
+		}
 		add_prestige = 20
 		2495 = { #Nakar Kriadvai
 			add_province_modifier = {
@@ -2608,7 +2633,15 @@ country_event = {
 		name = taychendi_empire_events.208.m
 		trigger = { dynasty = "Mudaliar" }
 		highlight = yes
-		add_ruler_personality = just_personality
+		if = {
+			limit = {
+				NOT = { ruler_has_max_personalities = yes }
+			}
+			add_ruler_personality = just_personality
+		}
+		else = {
+			add_legitimacy = 20
+		}
 		add_prestige = 20
 		2495 = { #Nakar Kriadvai
 			add_province_modifier = {

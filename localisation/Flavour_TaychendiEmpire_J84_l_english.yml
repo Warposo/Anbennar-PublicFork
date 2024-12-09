@@ -606,8 +606,8 @@ l_english:
  desc_J84_sanguosynthesis_3: "Upgrades at §G60§! Farm Estates\nDowngrades at under §R45§! Farm Estates"
  J84_sanguosynthesis_4: "Sanguosynthesis, IV"
  desc_J84_sanguosynthesis_4: "§GMax§! Level\nDowngrades at under §R60§! Farm Estates"
- J84_soldiers_households_buff: "Improved Soldier's Households"
- desc_J84_soldiers_households_buff: "This modifier will be lost if the §YSoldier's Households§! in this province is §Rdestroyed§!"
+ J84_training_fields_buff: "Improved Training Fields"
+ desc_J84_training_fields_buff: "This modifier will be lost if the §YSoldier's Households§! in this province is §Rdestroyed§!"
  J84_trade_station_buff: "Improved Trade Station"
  J84_free_accepted_orc_culture: "Accepted Orc Culture"
  desc_J84_free_accepted_orc_culture: "This modifier will be removed if §YOzgar Orc§! becomes no longer accepted"
@@ -746,7 +746,7 @@ l_english:
  use_starshear_desc: "The united Starshear, the powerful Precursor relic once wielded by Ebenanth, the First Emperor, is now under our control. Now, we can wield its power against our enemies, annihilating any fortification that dares to stand in our way."
 
  change_rule_style_title: "Change Ruler Style"
- change_rule_style_desc: "As Mihaela is a vampire, she cannot die – therefore, should we wish to change the gods we patronise, and therefore our style of rule, Mihaela will have to make a concerted effort to do so."
+ change_rule_style_desc: "The unceasing cutting motion of the Empire may require another perspective, occasionally. Has that time come?"
 
  #Province Groups
  J84_cannor_nuke_red: ""
@@ -817,7 +817,7 @@ l_english:
  J84_kheionai_rebel_tt: "\nThe following effect happens in §R15§! owned §YKheionai§! cultured provinces:"
  J84_mteibas_valley_tt: "Up to 8 §YLivestock§! provinces in the §YMteibas Valley§! and §YChendhya§! Regions with §Y5§! Cavalry, a §YWorkshop§!, §YBarracks§!, and are §YTaychendi Hero Worship§! have the following effects happen:"
  J84_neighbors_gain_manpower_tt: "Every neighbor province gains §G2§! Base Manpower"
- J84_rakka_and_kanna_tt: "[2568.GetName] and [2577.GetName]:\n        Has a §YFort§! building.\n        Has a §YBarracks§! or a §YTraining Fields§! building.\n        Has a §YRegimental Camp§! or a §YConscription Center§! building.\n        §Y[Root.GetName]§!: At least 15 regiments of INFANTRY present"
+ J84_rakka_and_kanna_tt: "[2568.GetName] and [2577.GetName]:\n        §Y[Root.GetName]§!: At least 15 regiments of INFANTRY present"
  J84_mihaela_becomes_ruler_warning_tt: "§RWe will lose 3 Stability and certain forces will rise up against this§!"
  J84_burning_the_effelai_tt: "The §YEffelai Bloom§! has Started and we have chosen to §RBurn§! it"
  J84_effelai_bloom_ended_tt: "The §YEffelai Bloom§! has Ended"
@@ -834,7 +834,7 @@ l_english:
  J84_religion_is_ravelian_no_tt: "\n£no£ If religion is §YRavelian§! the following effects happen:"
  J84_religion_is_ravelian_yes_tt: "\n£yes£ If religion is §YRavelian§! the following effects happen:"
  J84_sanguosynthesis_enabled_tt: "Gain the following modifier whose effects scale with the amount of §YFarm Estates§! in the country:"
- J84_soldiers_households_tt: "Soldier's Households now give §G+0.5§! Local Goods Produced"
+ J84_training_fields_tt: "Training Fields now give §G+0.5§! Local Goods Produced"
  J84_precursor_relic_cash_tt: "Gain §G500§! Crowns and §G25§! of each Monarch Power from every §YPrecursor Relics§! producing province with §Y12§! Production and a §YManufactory§!"
  J84_relic_trade_tt: "Every country in Cannor with the Artificer Estate gains §G50§! Opinion of us"
  J84_vainglory_or_production_tt: "Has §Y8§! Production, reduced by §G1§! for every §Y10§! Vainglory"
