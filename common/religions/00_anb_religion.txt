@@ -8856,6 +8856,14 @@ hag_religion = {
 						value = 1
 					}
 				}
+				if = {
+					limit = { has_country_flag = rakkaz_improved_perform_ritual }
+					random_owned_province = {
+						limit = { culture = fieldstalker_gnoll }
+						add_base_manpower = 1
+					}
+					add_yearly_manpower = 0.3
+				}
 				rakkaz_fighting_pit_mazu_makhara_interactions = yes
 			}
 			ai_will_do = { factor = 100 }
@@ -9229,6 +9237,8 @@ east_sarhal_religion = {
 			enforce_amilaks_supremacy
 			naleni_fair_winds_aspect
 			naleni_seek_powerful_egg_aspect
+			S53_children_of_beasts_aspect
+			S53_marriage_of_many_aspect
 		}
 		aspects_name = ANGLICAN_ASPECTS
 
