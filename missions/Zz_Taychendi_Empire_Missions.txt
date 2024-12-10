@@ -748,7 +748,7 @@ J84_1_missions = {
 		trigger = {
 			navy_size = 300
 			OR = {
-				num_of_heavy_ships = 50
+				num_of_heavy_ship = 50
 				num_of_geobukseon = 50 #Degarikes
 			}
 			all_country = {
