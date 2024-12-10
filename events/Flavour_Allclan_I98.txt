@@ -2636,7 +2636,7 @@ province_event = {
 	title = allclan.99.title
 	desc = allclan.99.desc
 	picture = DWARVEN_RAIL_eventPicture
-	goto = root
+	goto = ROOT
 	
 	is_triggered_only = yes
 	
@@ -2647,8 +2647,7 @@ province_event = {
 	option = {
         name = allclan.99.a
         ai_chance = { factor = 100 }
-		goto = ROOT
-		owner = { add_prestige = 2 }
+		tooltip = { owner = { add_prestige = 2 } }
 	}
 }
 
@@ -6623,5 +6622,48 @@ country_event = {
 			add_prosperity = 100
 		}
 		add_pandemonium = { amount = 5 }
+	}
+}
+
+# kinstrife cede province event - moved here from on_province_siege_lost to avoid a rare crash
+province_event = {
+	id = allclan.9999
+	title = allclan.9999.t
+	desc = allclan.9999.d
+	picture = ARTWORK_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		owner = { has_country_flag = kinstrife_funtime_flag }
+		FROM = {
+			OR = {
+				has_country_flag = kinstrife_funtime_flag
+				overlord = { has_country_flag = kinstrife_funtime_flag }
+			}
+		}
+	}
+
+	option = {
+		name = allclan.9999.a
+
+		if = {
+			limit = {
+				FROM = { has_country_flag = kinstrife_funtime_flag }
+			}
+			cede_province = FROM
+			add_core = FROM
+		}
+		else = {
+			FROM = {
+				overlord = {
+					ROOT = {
+						cede_province = PREV
+						add_core = PREV
+					}
+				}
+			}
+		}
 	}
 }

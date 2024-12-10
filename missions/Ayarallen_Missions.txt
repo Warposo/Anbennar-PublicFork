@@ -355,7 +355,6 @@ Ayarallen_Left = {
 					F22 = {
 						is_in_war = {
 							defender_leader = F22
-							attacker_leader = F27
 						}
 						NOT = {
 							is_in_war = {
@@ -386,6 +385,7 @@ Ayarallen_Left = {
 			hidden_effect = {
 				if = {
 					limit = {
+						F27 = { ai = no }
 						F22 = {
 							is_in_war = {
 								defender_leader = ROOT
@@ -397,6 +397,7 @@ Ayarallen_Left = {
 				else_if = {
 					limit = {
 						AND = {
+							F27 = { ai = no }
 							F22 = { guaranteed_by = F27 }
 							F22 = { has_100_opinion_improved_relation = { target = F27 } }
 						}
@@ -842,7 +843,15 @@ Ayarallen_Left = {
 		}
 
 		effect = {
-			682 = { cede_province = F27 change_culture = firanyan_harpy change_religion = owner add_province_triggered_modifier = harpy_roost }
+			682 = {
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT
+				}
+				change_culture = firanyan_harpy
+				change_religion = owner
+				add_province_triggered_modifier = harpy_roost
+			}
 			add_country_modifier = {
 				name = f27_prosperity_after_peace_modifier
 				duration = -1
@@ -1133,7 +1142,7 @@ Ayarallen_Centre = {
 			OR = {
 				NOT = { development = 35 }
 				has_tax_building_trigger = no
-				has_production_building_trigger = no
+				has_production_or_gold_building_trigger = no
 				has_courthouse_building_trigger = no
 				has_trade_building_trigger = no
 				is_prosperous = no
@@ -1149,7 +1158,7 @@ Ayarallen_Centre = {
 						660 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 							is_prosperous = yes
@@ -1157,7 +1166,7 @@ Ayarallen_Centre = {
 						536 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 							is_prosperous = yes
@@ -1165,7 +1174,7 @@ Ayarallen_Centre = {
 						565 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 							is_prosperous = yes
@@ -1173,7 +1182,7 @@ Ayarallen_Centre = {
 						601 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 						}
@@ -1182,28 +1191,28 @@ Ayarallen_Centre = {
 						666 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 						}
 						536 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 						}
 						565 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 						}
 						601 = {
 							development = 35
 							has_tax_building_trigger = yes
-							has_production_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
 							has_courthouse_building_trigger = yes
 							has_trade_building_trigger = yes
 						}
@@ -1387,7 +1396,12 @@ Ayarallen_Right = {
 			kumarkand_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 			traz_buranun_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 			adm_power = 150
-			625 = { owner = { has_spy_network_from = { who = F27 value = 40 } } }
+			625 = {
+				OR = {
+					owner = { has_spy_network_from = { who = F27 value = 40 } }
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
 		} 
 
 		effect = {
@@ -2067,7 +2081,7 @@ Ayarallen_Right_Harpylen = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				OR = {
 					NOT = { development = 20 }
-					has_production_building_trigger = no
+					has_production_or_gold_building_trigger = no
 					has_manufactory_no_custom_tooltip_trigger = no
 				}
 			}
@@ -2078,8 +2092,8 @@ Ayarallen_Right_Harpylen = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				development = 20
-				has_production_building_trigger = yes
 				has_manufactory_trigger = yes
+				has_production_or_gold_building_trigger = yes
 			}
 		} 
 
