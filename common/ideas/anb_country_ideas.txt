@@ -8497,7 +8497,7 @@ R39_ideas = {
     }
     free = yes        #will be added at load.
 
-    R39_the_noble_stripe = { #talks about Vasumtir who ruled antarim since the collapse of the first raj, and built it into being a mighty kingdom through aliance and trade.
+    R39_the_noble_stripes = { #talks about Vasumtir who ruled antarim since the collapse of the first raj, and built it into being a mighty kingdom through aliance and trade.
         diplomatic_reputation = 1
         diplomatic_upkeep = 1
     }
@@ -32518,7 +32518,7 @@ J84_ideas = {
 	}
 	J84_tailatam_system = { #system by which provincial governors are rotated every 5 years, and owe their position to the emperor alone. Local nobility is not inherited, instead when a land owner dies their heir has to personally travel to see the emperor in person in order to become the new lord of an area. Will expand on this in the loca
 		global_autonomy = -0.05
-		max_absolutism_effect = 0.15
+		administrative_efficiency = 0.05
 	}
 	J84_imperial_cult = { #every emperor becomes a god upon death, imperial cult is widespread
 		tolerance_own = 2
