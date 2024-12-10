@@ -1613,3 +1613,10 @@ custom_icon = {
     }
 }
 
+custom_icon = {
+    name = phoenix_estate_bg
+    potential = {
+    	has_government_mechanic = phoenix_estate_mechanic
+    }
+}
+
