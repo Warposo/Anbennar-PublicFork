@@ -2042,11 +2042,11 @@ column_5 = {
 			OR = {
 				AND  ={
 					area = yetmesira_area
-					NOT = { is_core = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				AND = {
 					province_id = 6606 
-					NOT = { is_core = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT  }
 				}
 				AND = {
 					province_id = 4955

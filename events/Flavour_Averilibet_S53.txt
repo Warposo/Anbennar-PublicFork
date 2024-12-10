@@ -1361,11 +1361,11 @@ country_event = {
 		if = {
 			limit = {
 				werikafan_area = {
-					owned_by = ROOT
+					country_or_non_sovereign_subject_holds = ROOT 
 					type = all
 				}
 				fetengaben_area = {
-					owned_by = ROOT
+					country_or_non_sovereign_subject_holds = ROOT 
 					type = all
 				}
 			}
