@@ -5806,7 +5806,7 @@ country_event = { #Sir revolt starts
 			R78 = {
 				add_country_modifier = {
 					name = R78_revolt_loyalty
-					duration = -1
+					duration = 18250
 				}
 			}
 			every_war_enemy_country = {

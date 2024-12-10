@@ -95,7 +95,7 @@ country_event = {
 				which = honsai_lifespan_tooltip 
 				which = honsai_lifespan
 			}
-		#}
+		}
 		if = {
 			limit = {
 				NOT = {
