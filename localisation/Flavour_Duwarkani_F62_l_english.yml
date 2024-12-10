@@ -76,7 +76,7 @@
  flavor_duwarkani.3.a:0 "Here lies Castan II"
 
  flavor_duwarkani.4.t:0 "There Is Another"
- flavor_duwarkani.4.d:0 "Phew, good thing she had a sister."
+ flavor_duwarkani.4.d:0 "As [Root.GetName] mourns the passing of the rightful heir to the throne, the mantle falls upon her sister to lead the nation in the future."
  flavor_duwarkani.4.a:0 "The Menkaunswt dynasty lives on!"
 
  flavor_duwarkani.6.t:0 "We Are Not Your Subjugators"
@@ -171,11 +171,11 @@
  flavor_duwarkani.30.d:0 "The Castanite encampment was empty, its fire burnt out. The only member left was Castan II, standing a long way outside the encampment, next to the smokey river. Beneath the smoke you could see ghostly figures drift slowly downstream. Under them you just about make out the riverbed, with a variety of objects at the bottom. One of them was a Nirakhetist talisman. Castan spotted the band as they approached, nodding to acknowledge their presence, but did not shoot his usual looks towards the non-human members. Instead, he pointed to one of the figures in the river.\n\n"That was a lizardfolk soul. I didn't know who they were until I met your band. I had naturally assumed they were another spawn of Agrados, as they were in here with the gnolls and centaurs and harpies, along with the humans and dwarves I had taken as traitors of their race. Why else would they be in this stream? There must be other streams purely for the chosen of Castellos." Beastbane stepped closer to the stream. "I searched for the stream for us. The noble Castanorian Legion, who defended humanity from the monsters. Yet all streams contained the souls of all sentient beings. Even creatures I do not recognise, like giant walking felines, I have observed in this stream."\n\nHe took another step towards the stream until his foot was almost touching it. "Is your nation of Duwarkani like this? All souls drifting together like equals? I still find that impossible to believe. Such a thing would make us no different from the monsters. It would make me a monster for slaying them. We killed so many. I killed so many..."\n\nBeastbane turned around, and for the first time in their meetings, addressed the harpy bodyguard who stood alongside the interpreter. "Would Nirakhet shed a tear for even someone like me?" Before she could answer, he turned and stepped into the stream. His body faded away, his Castanorian armor dropping to the ground, as the stream flowed on."
  flavor_duwarkani.30.a:0 "Mother Nirakhet weeps for all"
 
- flavor_duwarkani.32.t:0 "A Menkaunswt Ruler"
- flavor_duwarkani.32.d:0 "this is a failsafe in case your ruler aint a menkaunswt"
- flavor_duwarkani.32.a:0 "god damn emergent gameplay ruining my mt"
+ flavor_duwarkani.32.t:0 "Restoring the Menkaunswt Dynasty"
+ flavor_duwarkani.32.d:0 "The requirements for a member of the Menkaunswt dynasty to rule [Root.GetName] have been written into law for as long as the nation has stood. Although there have been grumblings amongst the nobility that such arrangements mean potential fine rulers like [Root.Monarch.GetName] are unceremoniously displaced from the throne, they all recognise that to not allow a Menkaunswt back on the throne would result in civil war.\n\nThankfully such a candidate has appeared. One from the same bloodline as King Kenmu Menkaunswt and Queen Safana Duwaran has been brought forward to fulfill this vital constitutional requirement."
+ flavor_duwarkani.32.a:0 "The blood of the Warrior King returns"
 
- flavor_duwarkani.33.t:0 "Uh oh"
+ flavor_duwarkani.33.t:0 "There Is Another"
  flavor_duwarkani.33.d:0 "If you're seeing this event, ping Scamp on discord as you're not supposed to see this.\n\nAlso the ahati are about to murder your ruler and trigger a disaster. Have fun"
  flavor_duwarkani.33.a:0 "Wait what???"
 
