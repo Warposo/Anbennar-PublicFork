@@ -7501,10 +7501,6 @@ country_event = { #Sir Revolt End - Command Victory
 						}
 					}
 				}
-				R78 = {
-					remove_country_modifier = R78_revolt_loyalty
-					grant_independence = yes
-				}
 			}
 			add_government_power = {
 				mechanic_type = command_korashi_mechanic
