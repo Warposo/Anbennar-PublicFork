@@ -243,7 +243,7 @@ J84_1_missions = {
 							}
 						}
 						add_devastation = 15
-						#change_culture = vaikazelhi WILL BE IMPLEMENTED WITH REZANKAND
+						change_culture = vaikazelhi
 					}
 					add_government_power = {
 						mechanic_type = taychend_vainglory_mechanic
@@ -262,7 +262,7 @@ J84_1_missions = {
 						}
 					}
 					add_devastation = 15
-					#change_culture = vaikazelhi WILL BE IMPLEMENTED WITH REZANKAND
+					change_culture = vaikazelhi
 				}
 				add_government_power = {
 					mechanic_type = taychend_vainglory_mechanic
