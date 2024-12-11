@@ -380,7 +380,7 @@ brambleskinner_3_1 = {
 	potential = { OR = { tag = I35 was_tag = I35 } }
 
 	brambleskinner_punish_the_traitor = {
-		icon = mission_burning_man
+		icon = mission_fire_jugement
 		position = 1
 		provinces_to_highlight = {
 			owned_by = U12
