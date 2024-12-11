@@ -23372,6 +23372,7 @@ Y60_ideas = {
 	}
 	Y60_silver_hills = { #Phungoen has been mined for millenia, and will continue to be mined for millenia
 		inflation_reduction = 0.10
+		monthly_gold_inflation_modifier = -0.2
 	}
 	Y60_xia_refugees = { #After the invasion of the command, many of the xia fled to nearby countries, Lo Ngoen came to host a large amount of them.
 		infantry_cost = -0.1
