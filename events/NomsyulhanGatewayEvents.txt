@@ -69,7 +69,9 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { is_city = no }
+			limit = { 
+				6838 = { is_city = no }
+			}
 			country_event = { id = nomsyulhan_gateway.10 } # Getting to the Gateway
 		}
 		else = {

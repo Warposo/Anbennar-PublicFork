@@ -2801,7 +2801,7 @@ G52_5 = {
 		position = 3
 		
 		provinces_to_highlight = {
-			NOT = { owns_or_non_sovereign_subject_of = ROOT }
+			NOT = { country_or_non_sovereign_subject_of = ROOT }
 			OR = {
 				region = southern_coast_region
 				region = yodhanchend_region
@@ -2812,7 +2812,7 @@ G52_5 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
-			 	OR = {
+				OR = {
 					region = southern_coast_region
 					region = yodhanchend_region
 				}
