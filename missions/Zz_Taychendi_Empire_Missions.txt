@@ -512,7 +512,7 @@ J84_1_missions = {
 	}
 
 	J84_1_9_there_stood_the_grass = {
-		icon = mission_torch_fire
+		icon = mission_burning_man
 		position = 14
 		required_missions = {
 			J84_1_8_bloom_and_bust
