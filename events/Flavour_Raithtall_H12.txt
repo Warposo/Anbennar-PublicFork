@@ -110,7 +110,7 @@ country_event = {
 	
 	option = { 
 		name = flavor_raithtall.4.a
-		custom_tooltip = raithtall_gelcolle_tt1
+		custom_tooltip = raithtall_gelcolle_tt
 		H18 = { country_event = { id = flavor_raithtall.5 } }
 	}
 	option = { 
@@ -160,7 +160,10 @@ country_event = {
 				trust = { who = H12 value = 75 }
 			}
 		}
-		custom_tooltip = raithtall_gelcolle_tt2
+		tooltip = {
+			H12 = { vassalize = ROOT }
+			change_religion = autumn_court
+		}
 		H12 = { country_event = { id = flavor_raithtall.6 } }
 	}
 	option = {
@@ -180,7 +183,16 @@ country_event = {
 				army_strength = { who = H12 value = 1.5 }
 			}
 		}
-		custom_tooltip = raithtall_gelcolle_tt3
+		tooltip = {
+			capital_scope = { add_permanent_claim = H12 }
+			H12 = {
+				add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 96
+				}
+			}
+		}
 		H12 = { country_event = { id = flavor_raithtall.7 } }
 	}
 }
@@ -195,10 +207,7 @@ country_event = {
 	
 	option = { 
 		name = flavor_raithtall.6.a
-		create_subject = {
-			subject_type = vassal
-			subject = H18
-		}
+		vassalize = H18
 		H18 = { change_religion = autumn_court }
 	}
 }
@@ -234,7 +243,16 @@ country_event = {
 	
 	option = {
 		name = flavor_raithtall.8.a
-		custom_tooltip = raithtall_gelcolle_tt3
+		tooltip = {
+			capital_scope = { add_permanent_claim = H12 }
+			H12 = {
+				add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 96
+				}
+			}
+		}
 	}
 }
 
