@@ -43654,7 +43654,7 @@ U76_ideas = {
     
     U76_gold_rush_relic_rush = { #gold and precursor vaults have been found by steadsmen prospectors and academics respectively, such great potential for wealth has resulted in the state to begin efforts to expand into the region, but unlike years before its one great coordinated effort to account for the hundreds of thousands of people moving in hoping to make it rich. To this end a ministry of the interior is made to manage all of this.
         development_cost = -0.05
-        inflation_reduction = 0.5
+        inflation_reduction = 0.2
     }
     
     U76_end_of_lawlessness = { #strengthening of government authority, locking up both roaming bandits and corrupt officials. Centers around a system where each member state is overseen by their best ranger, chosen by local tournaments and expected to adhere to the standards set by the locals. Like the Ranger of Tiru M�ine, who is expected to take great risks to preserve law and order: or the Ranger of Plumstead, who is expected to be knowledgeable and coordinate with the epednar tribes.
