@@ -87,7 +87,7 @@ country_event = {
 		add_government_reform = raithtall_twilight_court_reform
 		hidden_effect = { set_ruler_flag = raithtallTwilightMonarchist }
 		override_country_name = DORCURT
-		change_country_color = { color = { 255 170 0 } }
+		change_country_color = { color = { 255 156 25 } }
 		#Add Gloam Knight as patron (once patron system is in)
 		hidden_effect = { remove_fey_mil_aspect = yes }
 		add_church_aspect = mil_autumn_gloamknight	#Maybe an effect to remove your existing aspect, or a requirement requring you not to already have one?
