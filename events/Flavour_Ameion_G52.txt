@@ -1378,7 +1378,7 @@ country_event = {
 		every_subject_country = {
 			limit = { 
 				is_vassal = yes
-				culture_group = culture_group = taychendi_ruinborn_elf
+				culture_group = taychendi_ruinborn_elf
 			}
 			capital_scope = { area = { add_core = ROOT } }
 		}

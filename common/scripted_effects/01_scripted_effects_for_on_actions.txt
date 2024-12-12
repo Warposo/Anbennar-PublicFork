@@ -2384,7 +2384,7 @@ on_province_religion_changed_effect = {
 				region = mteibas_valley_region
 			}
 		}
-		ameion_kheionization_effect = yes
+		owner = { country_event = flavor_ameion.810 }
 	}
 	# Yinquan
 	if = {
