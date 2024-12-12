@@ -242,6 +242,7 @@ country_event = { #Handler event
 							has_province_modifier = offcoast_merfolk_allied
 							has_province_modifier = offcoast_merfolk_neutral
 							has_province_modifier = offcoast_merfolk_angered
+							has_province_modifier = offcoast_merfolk_isolated
 						}
 						NOT = { has_province_modifier = successful_merfolk_protest }
 					}
@@ -267,11 +268,13 @@ country_event = { #Handler event
 					OR = {
 						has_country_flag = merfolk_opinion_allied
 						has_country_flag = merfolk_opinion_neutral
+						has_country_flag = merfolk_opinion_isolated
 					}
 					any_owned_province = {
 						OR = {
 							has_province_modifier = offcoast_merfolk_allied
 							has_province_modifier = offcoast_merfolk_neutral
+							has_province_modifier = offcoast_merfolk_allied
 						} 
 						NOT = { has_province_modifier = merfolk_youth_stranding } 
 					}
@@ -335,7 +338,11 @@ country_event = { #Handler event
 			}
 			15 = {
 				trigger = {
-					has_country_flag = merfolk_opinion_angered
+					OR = {
+						has_country_flag = merfolk_opinion_neutral
+						has_country_flag = merfolk_opinion_angered
+						has_country_flag = merfolk_opinion_isolated
+					}
 					NOT = { has_country_modifier = merfolk_detente }
 				}
 				country_event = {
@@ -395,6 +402,7 @@ country_event = { #Handler event
 		trigger = {
 			NOT = { has_country_flag = has_merfolk_in_land }
 		}
+		##This is commented out until more events for no merfolk pops in country are made
 		#random_list = {
 			#15 = {
 			#	trigger = {
@@ -458,6 +466,7 @@ country_event = { #Fishy Love Story
 						has_province_modifier = offcoast_merfolk_allied
 						has_province_modifier = offcoast_merfolk_neutral
 						has_province_modifier = offcoast_merfolk_angered
+						has_province_modifier = offcoast_merfolk_isolated
 					}
 				}
 				save_event_target_as = merfolk_settlement
@@ -651,6 +660,7 @@ country_event = {
 						has_province_modifier = offcoast_merfolk_allied
 						has_province_modifier = offcoast_merfolk_neutral
 						has_province_modifier = offcoast_merfolk_angered
+						has_province_modifier = offcoast_merfolk_isolated
 					}
 					NOT = { has_province_modifier = successful_merfolk_protest }
 				}
@@ -772,6 +782,7 @@ country_event = {
 				OR = {
 					has_province_modifier = offcoast_merfolk_allied
 					has_province_modifier = offcoast_merfolk_neutral
+					has_province_modifier = offcoast_merfolk_isolated
 				}	
 			}
 			add_province_modifier = {
