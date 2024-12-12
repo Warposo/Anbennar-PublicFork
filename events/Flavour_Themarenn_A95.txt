@@ -591,11 +591,36 @@ country_event = { #Reign in Esmarine
 
 	option = {
 		name = flavour_themarenn.8.a
+		trigger = {
+			ROOT = {
+				is_emperor = no
+			}
+		}
 		emperor = {
 			country_event = { 
 				id = flavour_themarenn.9
 				days = 7
 			}	
+		}
+		custom_tooltip = a95_emperor_esmaraine
+		tooltip = {
+			add_permanent_province_modifier = {
+				name = seat_of_the_grand_duchy_of_esmaria
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = flavour_themarenn.8.b
+		highlight = yes
+		trigger = {
+			ROOT = {
+				is_emperor = yes
+			}
+		}
+		add_permanent_province_modifier = {
+			name = seat_of_the_grand_duchy_of_esmaria
+			duration = -1
 		}
 	}
 }
@@ -637,7 +662,7 @@ country_event = { #Down the Commons
 	id = flavour_themarenn.10
 	title = flavour_themarenn.10.t
 	desc = flavour_themarenn.10.d
-	picture = high_gardens
+	picture = CITY_VIEW_eventPicture
 	is_triggered_only = yes
 
 	trigger = {
@@ -655,11 +680,11 @@ country_event = { #Down the Commons
 	}
 }
 
-country_event = { #Through the Mountain
+country_event = { #Through the vein of the elfrealm
 	id = flavour_themarenn.11
 	title = flavour_themarenn.11.t
 	desc = flavour_themarenn.11.d
-	picture = GFX_Emperor
+	picture = CROSSROAD_eventPicture
 	is_triggered_only = yes
 
 	trigger = { }
@@ -786,7 +811,7 @@ country_event = { #Restoration of the Cann Esmari Duchy
 	id = flavour_themarenn.15
 	title = flavour_themarenn.15.t
 	desc = flavour_themarenn.15.d
-	picture = old_gate
+	picture = PRINCELY_PALACE_TRANSYLVANIA_eventPicture
 	is_triggered_only = yes
 
 	trigger = { }
@@ -1118,15 +1143,37 @@ country_event = { #planning preparations
 		set_country_flag = resources_prepared_a95
 		if = {
 			limit = { has_country_flag = twins_canal_candidate }
+			add_adm_power = -75
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
 			country_event = { id = flavour_themarenn.25 days = 25 }
+			set_country_flag = a95_ca1_tw
 		}
 		if = {
 			limit = { has_country_flag = gnome_canal_candidate }
+			add_adm_power = -100
+			add_estate_loyalty = {
+				estate = estate_adventurers
+				loyalty = 5
+			}
+			add_estate_loyalty = {
+				estate = estate_mages
+				loyalty = 5
+			}
 			country_event = { id = flavour_themarenn.25 days = 40 }
+			set_country_flag = a95_ca1_gn
 		}
 		if = {
 			limit = { has_country_flag = valen_canal_candidate }
+			add_adm_power = -1
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
 			country_event = { id = flavour_themarenn.25 days = 55 }
+			set_country_flag = a95_ca1_va
 		}
 	}
 
@@ -1138,15 +1185,27 @@ country_event = { #planning preparations
 		set_country_flag = secured_workforce_a95
 		if = {
 			limit = { has_country_flag = twins_canal_candidate }
+			add_dip_power = -50
+			add_yearly_manpower = -2
+			capital_scope = { add_base_manpower = 3 }
 			country_event = { id = flavour_themarenn.25 days = 30 }
+			set_country_flag = a95_ca2_tw
 		}
 		if = {
 			limit = { has_country_flag = gnome_canal_candidate }
+			add_dip_power = -25
+			add_yearly_manpower = -1
+			capital_scope = { add_base_production = 2 }
 			country_event = { id = flavour_themarenn.25 days = 50 }
+			set_country_flag = a95_ca2_gn
 		}
 		if = {
 			limit = { has_country_flag = valen_canal_candidate }
+			add_dip_power = -100
+			add_yearly_manpower = -2
+			capital_scope = { add_base_tax = 2 }
 			country_event = { id = flavour_themarenn.25 days = 70 }
+			set_country_flag = a95_ca2_va
 		}
 	}
 
@@ -1158,15 +1217,29 @@ country_event = { #planning preparations
 		set_country_flag = land_surveydone_a95
 		if = {
 			limit = { has_country_flag = twins_canal_candidate }
+			add_adm_power = 15
+			add_dip_power = -25
+			add_mil_power = -25
+			ryalanar_area = { add_base_manpower = 1 }
 			country_event = { id = flavour_themarenn.25 days = 110 }
+			set_country_flag = a95_ca3_tw
 		}
 		if = {
 			limit = { has_country_flag = gnome_canal_candidate }
+			add_adm_power = -10
+			add_mil_power = -50
+			ryalanar_area = { random_list = { 90 = { add_base_manpower = 1 } 10 = {} } }
 			country_event = { id = flavour_themarenn.25 days = 150 }
+			set_country_flag = a95_ca3_gn
 		}
 		if = {
 			limit = { has_country_flag = valen_canal_candidate }
+			add_adm_power = 15
+			add_dip_power = 15
+			add_mil_power = -25
+			ryalanar_area = { add_base_manpower = 1 }
 			country_event = { id = flavour_themarenn.25 days = 200 }
+			set_country_flag = a95_ca3_va
 		}
 	}
 
@@ -1183,6 +1256,15 @@ country_event = { #planning preparations
 		clr_country_flag = land_surveydone_a95
 		clr_country_flag = secured_workforce_a95
 		clr_country_flag = resources_prepared_a95
+		clr_country_flag = a95_ca1_gn
+		clr_country_flag = a95_ca2_gn
+		clr_country_flag = a95_ca3_gn
+		clr_country_flag = a95_ca1_va
+		clr_country_flag = a95_ca2_va
+		clr_country_flag = a95_ca3_va
+		clr_country_flag = a95_ca1_tw
+		clr_country_flag = a95_ca2_tw
+		clr_country_flag = a95_ca3_tw
 		country_event = { id = flavour_themarenn.26 days = 60 }
 	}
 }
@@ -1198,7 +1280,7 @@ country_event = { #opening ceremony
 		name = flavour_themarenn.26.a
 
 		267 = {
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = canal_provisions_a95
 				duration = -1
 			}
@@ -1234,10 +1316,10 @@ country_event = { #event for mid phase 1 valen
 	option = { #keep pace
 		name = flavour_themarenn.27.b
 
-		add_adm_power = 10
-		add_dip_power = 10
-		add_mil_power = 10
-		country_event = { id = flavour_themarenn.30 days = 912 }
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+		country_event = { id = flavour_themarenn.30 days = 1300 }
 	}
 }
 country_event = { #event for mid phase 1 gnome #invention of the alternoscope
@@ -1252,6 +1334,7 @@ country_event = { #event for mid phase 1 gnome #invention of the alternoscope
 		name = flavour_themarenn.28.a
 
 		themarenn_admin_burden = yes
+		change_innovativeness = 5
 		country_event = { id = flavour_themarenn.30 days = 547 }
 	}
 	
@@ -1272,6 +1355,7 @@ country_event = { #event for mid phase 1 twins #departmentalize the digging proj
 	option = { #use water from lake to transportstuff
 		name = flavour_themarenn.29.a
 
+		add_dip_power = 50
 		add_country_modifier = { name = a95_navy_speed duration = 3650 }
 		country_event = { id = flavour_themarenn.30 days = 1095 }
 	}
@@ -1296,8 +1380,8 @@ country_event = { #phase 1 fin > phase 2 start
 			center_of_trade = 1
 			add_permanent_province_modifier = { name = a95_tier2_sailors duration = -1 }
 		}
-		575 = { add_permanent_province_modifier = { name = canal_provisions_a95 duration = -1 } }
-		917 = { add_permanent_province_modifier = { name = canal_provisions_a95 duration = -1 } }
+		575 = { add_province_modifier = { name = canal_provisions_a95 duration = -1 } }
+		917 = { add_province_modifier = { name = canal_provisions_a95 duration = -1 } }
 		country_event = { id = flavour_themarenn.31 days = 1095 }
 	}
 }
@@ -1344,18 +1428,16 @@ country_event = { #phase 2 challenge valen
 			estate = estate_nobles
 			loyalty = 10
 		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -3
+		}
 		country_event = { id = flavour_themarenn.35 days = 1825 }
 	}
 
 	option = { #fukem
 		name = flavour_themarenn.32.b
 
-		575 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 1
-			}
-		}
 		917 = {
 			spawn_rebels = {
 				type = noble_rebels
@@ -1364,11 +1446,11 @@ country_event = { #phase 2 challenge valen
 		}
 		add_estate_loyalty = {
 			estate = estate_nobles
-			loyalty = -20
+			loyalty = -10
 		}
 		change_estate_land_share = {
 			estate = estate_nobles
-			share = -5
+			share = -3
 		}
 		country_event = { id = flavour_themarenn.35 days = 2372 }
 	}
@@ -1387,7 +1469,7 @@ country_event = { #phase 2 challenge gnome
 			add_devastation = 100
 			add_base_tax = -2
 			add_base_manpower = -3
-			add_base_production = -3
+			add_base_production = -2
 		}
 		themarenn_admin_burden = yes
 		country_event = { id = flavour_themarenn.35 days = 1400 }
@@ -1397,9 +1479,9 @@ country_event = { #phase 2 challenge gnome
 		add_manpower = -10
 		917 = {
 			add_devastation = 50
-			add_base_manpower = -2
-			add_base_tax = -2
-			add_base_production = -2
+			add_base_manpower = -1
+			add_base_tax = -1
+			add_base_production = -1
 		}
 		themarenn_admin_burden = yes
 		country_event = { id = flavour_themarenn.35 days = 1800 }
@@ -1489,7 +1571,7 @@ country_event = { #phase 3 start
 		themarenn_admin_burden = yes
 
 		265 = {
-			add_permanent_province_modifier = { name = canal_provisions_a95 duration = -1 }
+			add_province_modifier = { name = canal_provisions_a95 duration = -1 }
 		}
 		if = {
 			limit = { has_country_flag = valen_canal_candidate }
