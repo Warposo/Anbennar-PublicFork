@@ -165,6 +165,13 @@ country_decisions = {
 			}
 		}
 		allow = {
+			hidden_trigger = {
+				OR = {
+					tag = G52
+					tag = G00
+				}
+				mission_completed = G52_secure_south
+			}
 			is_at_war = no
 			G63 = { is_at_war = no }
 			if = {
