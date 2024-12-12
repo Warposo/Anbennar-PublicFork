@@ -170,6 +170,7 @@ country_event = { #Handler event
 						has_province_modifier = offcoast_merfolk_angered
 						has_province_modifier = offcoast_merfolk_neutral
 						has_province_modifier = offcoast_merfolk_allied
+						has_province_modifier = offcoast_merfolk_isolated
 					}
 				}
 			}
@@ -284,6 +285,7 @@ country_event = { #Handler event
 					OR = {
 						has_country_flag = merfolk_opinion_neutral
 						has_country_flag = merfolk_opinion_angered
+						has_country_flag = merfolk_opinion_isolated
 					}
 				}
 				country_event = {
@@ -295,6 +297,7 @@ country_event = { #Handler event
 					OR = {
 						has_country_flag = merfolk_opinion_neutral
 						has_country_flag = merfolk_opinion_angered
+						has_country_flag = merfolk_opinion_isolated
 					}
 				}
 				country_event = {
@@ -306,6 +309,7 @@ country_event = { #Handler event
 					OR = {
 						has_country_flag = merfolk_opinion_allied
 						has_country_flag = merfolk_opinion_neutral
+						has_country_flag = merfolk_opinion_isolated
 					}
 				}
 				country_event = {
@@ -351,6 +355,7 @@ country_event = { #Handler event
 					OR = {
 						has_country_flag = merfolk_opinion_neutral
 						has_country_flag = merfolk_opinion_angered
+						has_country_flag = merfolk_opinion_isolated
 					}
 					NOT = { has_country_flag = merfolk_ocean_curve }
 				}
@@ -363,6 +368,7 @@ country_event = { #Handler event
 					OR = {
 						has_country_flag = merfolk_opinion_allied
 						has_country_flag = merfolk_opinion_neutral
+						has_country_flag = merfolk_opinion_isolated
 					}
 				}
 				country_event = {
@@ -389,91 +395,46 @@ country_event = { #Handler event
 		trigger = {
 			NOT = { has_country_flag = has_merfolk_in_land }
 		}
-		random_list = {
-			15 = {
-				trigger = {
-					any_owned_province = {
-						trade_goods = fish
-						has_port = yes
-						NOT = { has_province_modifier = merfolk_fishing_unmoved }
-						NOT = { has_province_modifier = merfolk_fishing_little }
-						NOT = { has_province_modifier = merfolk_fishing_accomodate }
-					}
-				}
-				country_event = {
-					id = merfolk_events.11
-				}
-			}
-			5 = {
-				country_event = {
-					id = merfolk_events.17
-				}
-			}
-			15 = {
-				trigger = {
-					has_country_flag = merfolk_opinion_isolated
-				}
-				country_event = {
-					id = merfolk_events.18
-				}
-			}
-			15 = {
-				trigger = {
-					has_country_flag = merfolk_opinion_isolated
-				}
-				country_event = {
-					id = merfolk_events.19
-				}
-			}
-			15 = {
-				trigger = {
-					current_age = age_of_absolutism
-					any_owned_province = {
-						OR = {
-							area = ardimyas_path_area
-							area = new_armanhal_area
-							area = muudeyneen_heartlands_area
-							area = visage_isles_area
-						}
-					}
-					NOT = { has_country_flag = merfolk_witch_king }
-				}
-				country_event = {
-					id = merfolk_events.20
-				}
-			}
-			15 = {
-				trigger = {
-					NOT = { has_country_modifier = merfolk_detente }
-				}
-				country_event = {
-					id = merfolk_events.28
-				}
-			}
-			15 = {
-				country_event = {
-					id = merfolk_events.29
-				}
-			}
-			15 = {
-				trigger = {
-					NOT = { has_country_flag = merfolk_ocean_curve }
-				}
-				country_event = {
-					id = merfolk_events.30
-				}
-			}
-			15 = {
-				trigger = {
-					has_country_flag = merfolk_opinion_isolated
-				}
-				country_event = {
-					id = merfolk_events.35
-				}
-			}
-			135 = {	
-			}
-		}
+		#random_list = {
+			#15 = {
+			#	trigger = {
+			#		any_owned_province = {
+			#			trade_goods = fish
+			#			has_port = yes
+			#			NOT = { has_province_modifier = merfolk_fishing_unmoved }
+			#			NOT = { has_province_modifier = merfolk_fishing_little }
+			#			NOT = { has_province_modifier = merfolk_fishing_accomodate }
+			#		}
+			#	}
+			#	country_event = {
+			#		id = merfolk_events.11
+			#	}
+			#}
+			#5 = {
+			#	country_event = {
+			#		id = merfolk_events.17
+			#	}
+			#}
+			#15 = {
+			#	trigger = {
+			#		current_age = age_of_absolutism
+			#		any_owned_province = {
+			#			OR = {
+			#				area = ardimyas_path_area
+			#				area = new_armanhal_area
+			#				area = muudeyneen_heartlands_area
+			#				area = visage_isles_area
+			#			}
+			#		}
+			#		NOT = { has_country_flag = merfolk_witch_king }
+			#	}
+			#	country_event = {
+			#		id = merfolk_events.20
+			#	}
+			#}
+			#135 = {	
+			#}
+		#}
 	}
 
 	after = { clr_country_flag = has_merfolk_in_land }
@@ -1171,7 +1132,13 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { has_province_modifier = offcoast_merfolk_angered }
+				limit = { 
+					OR = {
+						has_province_modifier = offcoast_merfolk_neutral
+						has_province_modifier = offcoast_merfolk_angered
+						has_province_modifier = offcoast_merfolk_isolated
+					}  
+				}
 				save_event_target_as = merfolk_unfriendly_province
 			}
 		}
@@ -1414,6 +1381,7 @@ country_event = {
 					OR = {
 						has_province_modifier = offcoast_merfolk_neutral
 						has_province_modifier = offcoast_merfolk_angered
+						has_province_modifier = offcoast_merfolk_isolated
 					}
 				}
 				save_event_target_as = merfolk_abduction
