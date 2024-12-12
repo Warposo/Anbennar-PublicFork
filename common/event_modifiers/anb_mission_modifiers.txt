@@ -31219,12 +31219,11 @@ river_reavers_2 = {
 river_reavers_3 = {
 	is_marine_modifier = yes
 	regiment_manpower_usage = -0.10
-	fire_damage = 0.10
+	fire_damage = 0.20
 	land_attrition = -0.15
 	discipline = 0.05
 	shock_damage_received = -0.20
-	fire_damage_received = -0.10
-	military_tactics = 0.25
+	fire_damage_received = -0.20
 }
 themaria_river_reavers = {
 	is_marine_modifier = yes
