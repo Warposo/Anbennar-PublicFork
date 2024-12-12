@@ -1895,8 +1895,8 @@ A79_ideas = {
 		trade_efficiency = 0.15
 	}
 	A79_age_of_the_hierarch = {
-		ship_durability = 0.1
-		heavy_ship_power = 0.05
+		ship_durability = 0.05
+		heavy_ship_power = 0.1
 	}
 }
 
