@@ -52,7 +52,7 @@ country_decisions = {
 				OR = {
 					has_terrain = jungle
 					has_terrain = ancient_forest
-					has_terrain = swamp
+					has_terrain = marsh
 				}
 				region = lupulan_rainforest_region
 				OR = {
