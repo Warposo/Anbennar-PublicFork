@@ -159,7 +159,7 @@
  flavour_themarenn.31.a:0 "We're halfway there!"
  flavour_themarenn.32.t:0 "Old Rivalries Resurface"
  flavour_themarenn.32.d:0 "According to the already agreed-upon plans for the construction project, the Horrenwood area near Loveswood is to be fully ceded to the crown. While at the time no claimants moved to object to the decision, new reports indicate that a local noble has revealed documents that make him entitled to these lands. The Royal Architect has already come up with a scheme to secure the land, utilizing a Drostenian law that allows us to force the noble to sell the land. On the other hand, we can simply ignore the claims and site our initial disclosure as a reason to not recognize these documents, which might in turn cause some upheaval, even if other nobles are generally cooperative."
- flavour_themarenn.32:a:0 "Force him to sell the land"
+ flavour_themarenn.32.a:0 "Force him to sell the land"
  flavour_themarenn.32.b:0 "Ignore him"
  flavour_themarenn.33.t:0 "The Great Fire of Loveswood"
  flavour_themarenn.33.d:0 "Grim news! The extensive usage of experimental technology has led to what could only be described as a catastrophe!\n\nWhat started out as a simple explotion to make way, turned and lit a whole patch of forest into a burning inferno. Despite our best efforts, the fire has already spread far and wide and is threatening to reach large population centers! The Gnome is reportedly too shocked to react, we must take matters in our own hands and handle the situation!"

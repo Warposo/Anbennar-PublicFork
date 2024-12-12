@@ -2354,7 +2354,7 @@ country_event = { #Emperor Casetin sil Themarenn and the corinite war
 			duration = -1
 		}
 		add_ruler_modifier = {
-			name = a95_lion_of_esmaria_marines
+			name = A95_lion_of_esmaria_marines
 			duration = -1
 		}
 		convert_ruler_to_general = yes
