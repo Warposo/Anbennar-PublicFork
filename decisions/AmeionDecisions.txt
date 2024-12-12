@@ -173,6 +173,7 @@ country_decisions = {
 		}
 		allow = {
 			hidden_trigger = {
+				has_country_flag = G52_mteibhar_tributary
 				OR = {
 					tag = G52
 					tag = G00
