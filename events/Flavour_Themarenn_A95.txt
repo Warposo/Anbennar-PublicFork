@@ -29,7 +29,7 @@ country_event = { #autonomy of the sweetcastles
 			adm = 6
 			dip = 6
 			mil = 1
-			birth_date = 1425/11/11
+			age = 23
 		}
 		hidden_effect = {
 			set_consort_religion = infernal_court
@@ -108,23 +108,91 @@ country_event = { #First Council of themarenn
 	id = flavour_themarenn.3
 	title = flavour_themarenn.3.t
 	desc = flavour_themarenn.3.d
-	picture = GFX_ThirdRome
+	picture = COUNCIL_TRENT_eventPicture
 	is_triggered_only = yes
-
-	trigger = { }
 
 	option = {
 		name =  flavour_themarenn.3.a
-		trigger = { NOT = { tag = A95 } } # Is not Themerann
-		add_prestige = 5
+		trigger = { NOT = { has_country_flag = a95_co_gab } }
+		add_adm_power = 15
+		A94 = { add_country_modifier = { name = a95_a94_co duration = 3650 } }
+		set_country_flag = a95_co_gab
+		hidden_effect = { country_event = { id = flavour_themarenn.3 days = 1 } }
 	}
-
 	option = {
 		name = flavour_themarenn.3.b
-		trigger = { OR = { tag = A95 was_tag = A95 } } # Is Themerann
-		917 = { add_permanent_claim = ROOT }
-		265 = { add_permanent_claim = ROOT }
-		333 = { add_permanent_claim = ROOT }
+		trigger = { has_country_flag = a95_co_gab NOT = { has_country_flag = a95_co_ash } }
+		add_adm_power = 15
+		A60 = { add_country_modifier = { name = a95_a60_co duration = 3650 } }
+		set_country_flag = a95_co_ash
+		hidden_effect = { country_event = { id = flavour_themarenn.3 days = 1 } }
+	}
+	option = {
+		name = flavour_themarenn.3.c
+		trigger = { has_country_flag = a95_co_gab NOT = { has_country_flag = a95_co_sf } }
+		add_adm_power = 15
+		A73 = { add_country_modifier = { name = a95_a73_co duration = 3650 } }
+		set_country_flag = a95_co_sf
+		hidden_effect = { country_event = { id = flavour_themarenn.3 days = 1 } }
+	}
+	option = {
+		name = flavour_themarenn.3.e
+		trigger = { AND = { has_country_flag = a95_co_sf has_country_flag = a95_co_ash } NOT = { has_country_flag = a95_co_ko } }
+		add_adm_power = 15
+		A35 = { add_country_modifier = { name = a95_a35_co duration = 3650 } }
+		set_country_flag = a95_co_ko
+		hidden_effect = { country_event = { id = flavour_themarenn.3 days = 1 } }
+	}
+	option = {
+		name = flavour_themarenn.3.f
+		trigger = { AND = { has_country_flag = a95_co_sf has_country_flag = a95_co_ash } NOT = { has_country_flag = a95_co_le } }
+		add_adm_power = 15
+		A92 = { add_country_modifier = { name = a95_a92_co duration = 3650 } }
+		set_country_flag = a95_co_le
+		hidden_effect = { country_event = { id = flavour_themarenn.3 days = 1 } }
+	}
+	option = {
+		name = flavour_themarenn.3.g
+		trigger = { AND = { has_country_flag = a95_co_le has_country_flag = a95_co_ko } NOT = { has_country_flag = a95_co_be } }
+		add_adm_power = 15
+		A39 = { add_country_modifier = { name = a95_a39_co duration = 3650 } }
+		set_country_flag = a95_co_be
+		hidden_effect = { country_event = { id = flavour_themarenn.3 days = 1 } }
+	}
+	option = {
+		name = flavour_themarenn.3.h
+		trigger = { has_country_flag = a95_co_be }
+		add_mil_power = 10
+		add_adm_power = 10
+		add_dip_power = 10
+		every_rival_country = {
+			limit = {
+				has_country_flag = lilac_wars_moon_party
+				capital_scope = {
+					region = esmaria_region
+				}
+			}
+			force_remove_rival = ROOT
+		}
+		A95 = {
+			if = {
+				limit = {
+					all_rival_country = {
+						has_country_flag = lilac_wars_moon_party
+						capital_scope = {
+							region = esmaria_region
+						}
+					}
+				}
+				force_remove_rival = PREV
+			}
+		}
+		clr_country_flag = a95_co_gab
+		clr_country_flag = a95_co_sf
+		clr_country_flag = a95_co_ash
+		clr_country_flag = a95_co_ko
+		clr_country_flag = a95_co_le
+		clr_country_flag = a95_co_be
 	}
 }
 
@@ -162,6 +230,7 @@ country_event = { #Wayward Heir
 				A94 = { country_event = { id = flavour_themarenn.45 days = 1825 random = 7300  } }
 			}
 		}
+		custom_tooltip = flavour_themarenn.4.tt
 	}
 
 	option = { # PU
@@ -200,6 +269,7 @@ country_event = { #Wayward Heir
 				}
 			}
 		}
+		custom_tooltip = flavour_themarenn.4t.tt
 	}
 }
 
@@ -431,6 +501,11 @@ country_event = { #expose esmaraine episode 1
 
 	option = { #form a coalition
 		name = flavour_themarenn.5.a
+		trigger = {
+			A44 = {
+				exists = yes
+			}
+		}
 		every_known_country = {
 			limit = {
 				capital_scope = { region = esmaria_region }
@@ -448,6 +523,9 @@ country_event = { #expose esmaraine episode 1
 		}
 		form_coalition_against = A44
 	}
+	option = {
+		name = flavour_themarenn.5.b
+	}
 }
 
 country_event = { # Palace atop a Lake
@@ -462,6 +540,11 @@ country_event = { # Palace atop a Lake
 	option = {
 		name = flavour_themarenn.6.a
 		267 = {
+			add_great_project = {
+				type = the_lake_palace
+				instant = no 
+			}
+			add_construction_progress = -0.80
 			add_permanent_province_modifier = {
 				name = fast_great_palace_lake
 				duration = 3650
@@ -479,9 +562,14 @@ country_event = { # Palace atop a Lake
 	option = {
 		name = flavour_themarenn.6.b
 		267 = {
+			add_great_project = {
+				type = the_lake_palace
+				instant = no 
+			}
+			add_construction_progress = -0.50
 			add_permanent_province_modifier = {
 				name = slow_great_palace_lake
-				duration = 10950
+				duration = 1825
 			}
 		}
 		define_advisor = {
@@ -489,7 +577,7 @@ country_event = { # Palace atop a Lake
 			name = "Trystan Buel"
 			culture = esmari
 			skill = 3
-			cost_multiplier = 0.5
+			cost_multiplier = 0.2
 		}
 	}
 }
@@ -689,6 +777,8 @@ country_event = { # The Right of Succession
 	option = {
 		name = flavour_themarenn.14.b
 		add_legitimacy = 100
+		add_splendor = 800
+		add_stability = 1
 	}
 }
 
@@ -752,6 +842,10 @@ country_event = { #Corruption of Esmaria!
 
 	option = {
 		name = flavour_themarenn.16.a
+		add_country_modifier = {
+			name = A95_vs_heretics
+			duration = -1
+		}
 		266 = {
 			add_base_production = -3
 			add_base_tax = -3
@@ -761,11 +855,15 @@ country_event = { #Corruption of Esmaria!
 				size = 20
 				type = infernal_court_rebels
 			}
+			add_permanent_province_modifier = {
+				name = A95_rebuild_esmaraine
+				duration = 36500
+			}
 		}
 	}
 }
 
-country_event = { #Demands of Subjugation
+country_event = { #vassalize konwell (or not)
 	id = flavour_themarenn.17
 	title = flavour_themarenn.17.t
 	desc = flavour_themarenn.17.d
@@ -776,7 +874,13 @@ country_event = { #Demands of Subjugation
 
 	option = {
 		name = flavour_themarenn.17.a
-		ai_chance = { factor = 75 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				A95 = { is_rival = A35 }
+			}
+		}
 		A95 = { 
 			add_casus_belli = {
 			type = cb_vassalize_mission
@@ -788,11 +892,7 @@ country_event = { #Demands of Subjugation
 	option = {
 		name = flavour_themarenn.17.b
 		ai_chance = { 
-			factor = 25
-			modifier = {
-				factor = 100
-				A95 = { is_rival = yes }
-			}
+			factor = 99
 		}
 		A95 = { vassalize = ROOT }
 	}
@@ -1338,7 +1438,7 @@ country_event = { #phase 2 challenge twins
 		highlight = yes
 
 		trigger = {
-			ruler_has_personality = embezzler
+			ruler_has_personality = embezzler_personality
 		}
 		add_corruption = 2
 		add_inflation = 3
@@ -1478,6 +1578,7 @@ fire_only_once = yes
 
 	option = {
 		name = flavour_themarenn.47.a
+		play_sound = become_papal_controller
 		265 = {
 			add_permanent_province_modifier = { name = a95_ryal2_estuary duration = -1 }
 			remove_province_modifier = a95_ryal_estuary
@@ -1692,7 +1793,7 @@ country_event = { #esmaryal
 		}
 	}
 }
-country_event = { #ryala
+country_event = { #ryala event chain
 	id = flavour_themarenn.42
 	title = flavour_themarenn.42.t
 	desc = flavour_themarenn.42.d
@@ -1702,9 +1803,20 @@ country_event = { #ryala
 	option = {
 		name = flavour_themarenn.42.a
 
-		custom_tooltip = a95_ryalan_dream.tt
-		add_country_modifier = { name = a95_ryalan_dream duration = -1 }
-		set_country_flag = a95_ryalan_dream
+		change_dip = -3
+		change_adm = -3
+		change_mil = -3
+		hidden_effect = {
+			add_country_modifier = {
+				name = A95_temp_immo
+				duration = -1
+			}
+		}
+		country_event = {
+			id = flavour_themarenn.56
+			days = 90
+			random = 10
+		}
 	}
 }
 country_event = { #esmaryal education event
@@ -2096,6 +2208,297 @@ country_event = {
 		add_country_modifier = {
 			name = a95_gnome_rediscovery
 			duration = -1
+		}
+	}
+}
+country_event = {
+	id = flavour_themarenn.52
+	title = flavour_themarenn.52.t
+	desc = flavour_themarenn.52.d
+	picture = SWEDEN_LEAGUE_WAR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			tag = A95
+			was_tag = A95
+		}
+		is_religion_enabled = corinite
+		religion = regent_court
+	}
+	option = {
+		name = flavour_themarenn.52.a
+		define_ruler = {
+			name = "Casetin"
+			dynasty = "síl Themarenn"
+			adm = 5
+			dip = 4
+			mil = 6
+		}
+		add_ruler_modifier = {
+			name = A95_pro_adean
+			duration = -1
+		}
+		set_country_flag = a95_casetin
+		set_ruler_flag = a95_casetin_ruler
+	}
+	option = {
+		name = flavour_themarenn.52.b
+		add_stability_or_adm_power = yes
+	}
+}
+country_event = { #Emperor Casetin sil Themarenn and the corinite war
+	id = flavour_themarenn.53
+	title = flavour_themarenn.53.t
+	desc = flavour_themarenn.53.d
+	picture = SWEDEN_LEAGUE_WAR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A95
+		hre_leagues_enabled = yes
+		religion = regent_court
+		is_in_league_war = no
+		has_ruler_flag = a95_casetin_ruler
+		NOT = {
+			in_league = corinite
+		}
+	}
+	option = {		# to war!
+		name = flavour_themarenn.53.a
+		join_league = regent_court
+		add_ruler_modifier = {
+			name = a95_lion_of_esmaria
+			duration = -1
+		}
+		add_ruler_modifier = {
+			name = a95_lion_of_esmaria_marines
+			duration = -1
+		}
+		convert_ruler_to_general = yes
+		set_country_flag = a95_casetin2
+	}
+	option = { #nah
+		name = flavour_themarenn.53.b
+		if = {
+			limit = { has_ruler_flag = a95_casetin_ruler }
+			custom_tooltip = A95_casetin_abdicate
+			hidden_effect = {
+				kill_ruler = yes
+				clr_ruler_flag = a95_casetin_ruler
+			}
+		}
+		
+	}
+}
+country_event = {
+	id = flavour_themarenn.54
+	title = flavour_themarenn.54.t
+	desc = flavour_themarenn.54.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = SWEDEN_LEAGUE_WAR_eventPicture
+
+	trigger = {
+		OR = {
+			tag = A95
+			was_tag = A95
+		}
+		is_in_league_war = yes
+		has_country_flag = a95_casetin2
+		has_country_flag = a95_casetin	
+	}
+	immediate = {
+		add_country_modifier = {
+			name = A95_indebtment
+			duration = 3650
+		}
+		set_country_flag = A95_death_of_casetin
+		clr_country_flag = a95_casetin2
+		clr_country_flag = a95_casetin
+	}
+
+	option = {
+		name = flavour_themarenn.54.a
+		kill_ruler = yes
+	}
+}
+
+country_event = {
+	id = flavour_themarenn.55
+	title = flavour_themarenn.55.t
+	desc = flavour_themarenn.55.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = SWEDEN_LEAGUE_WAR_eventPicture
+
+	trigger = {
+		OR = {
+			tag = A95
+			was_tag = A95
+		}
+		has_country_flag = a95_casetin
+		has_global_flag = league_war_complete
+		is_in_league_war = no
+		hre_leagues_enabled = no
+		NOT = {
+			has_country_flag = A95_death_of_casetin
+		}
+		has_country_flag = a95_casetin2
+		has_country_flag = a95_casetin
+	}
+	immediate = {
+		add_country_modifier = {
+			name = A95_war_cost
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = A95_courage
+			duration = 18250
+		}
+		remove_country_modifier = A95_lion_of_esmaria_marines
+		remove_country_modifier = a95_lion_of_esmaria
+		clr_country_flag = a95_casetin2
+		clr_country_flag = a95_casetin
+	}
+
+	option = {
+		name = flavour_themarenn.55.a
+	}
+}
+country_event = { #ryala event chain
+	id = flavour_themarenn.56
+	title = flavour_themarenn.56.t
+	desc = flavour_themarenn.56.d
+	picture = beautiful_cave
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_themarenn.56.a
+		add_stability = -1
+		country_event = {
+			id = flavour_themarenn.57
+			days = 365
+			random = 30
+		}
+	}
+}
+country_event = { #ryala event chain
+	id = flavour_themarenn.57
+	title = flavour_themarenn.57.t
+	desc = flavour_themarenn.57.d
+	picture = beautiful_cave
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_themarenn.57.a
+		change_dip = 3
+		change_adm = 3
+		change_mil = 3
+		add_stability_or_adm_power = yes
+		define_advisor = {
+			type = artist
+			female = yes
+			skill = 3
+			cost_multiplier = 0.1
+			name = "Rinna of Loveswood"
+			age = 21
+		}
+		add_country_modifier = { name = a95_ryalan_dream duration = -1 }
+		custom_tooltip = a95_ryalan_dream.tt
+		set_country_flag = a95_ryalan_dream
+		hidden_effect = {
+			remove_country_modifier = A95_temp_immo
+		}
+	}
+	option = {
+		name = flavour_themarenn.57.b
+		change_dip = 3
+		change_adm = 3
+		change_mil = 3
+		add_stability_or_adm_power = yes
+		define_consort = {
+			name = "Rinna"
+			dynasty = "of Loveswood"
+			culture = esmari
+			religion = regent_court
+			dip = 6
+			mil = 6
+			adm = 6
+			age = 21
+		}
+		add_country_modifier = { name = a95_ryalan_dream duration = -1 }
+		custom_tooltip = a95_ryalan_dream.tt
+		set_country_flag = a95_ryalan_dream
+		hidden_effect = {
+			remove_country_modifier = A95_temp_immo
+		}
+	}
+}
+country_event = {
+	id = flavour_themarenn.58
+	title = flavour_themarenn.58.a
+	desc = flavour_themarenn.58.d
+	picture = beautiful_cave
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = flavour_themarenn.56.a
+		kill_consort = yes
+	}
+}
+country_event = {
+	id = flavour_themarenn.59
+	title = flavour_themarenn.59.a
+	desc = flavour_themarenn.59.d
+	picture = DIPLOMACY_SIGNING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_themarenn.56.a
+		add_prestige = 5
+		if = {
+			limit = {
+				NOT = { tag = A44 }
+			}
+			custom_tooltip = a95_council_bonus
+		}
+		if = {
+			limit = { tag = A94 }
+			tooltip = {
+				add_country_modifier = { name = a95_a94_co duration = 3650 }
+			}
+		}
+		if = {
+			limit = { tag = A35 }
+			tooltip = {
+				add_country_modifier = { name = a95_a35_co duration = 3650 }
+			}
+		}
+		if = {
+			limit = { tag = A73 }
+			tooltip = {
+				add_country_modifier = { name = a95_a73_co duration = 3650 }
+			}
+		}
+		if = {
+			limit = { tag = A39 }
+			tooltip = {
+				add_country_modifier = { name = a95_a39_co duration = 3650 }
+			}
+		}
+		if = {
+			limit = { tag = A92 }
+			tooltip = {
+				add_country_modifier = { name = a95_a92_co duration = 3650 }
+			}
+		}
+		if = {
+			limit = { tag = A60 }
+			tooltip = {
+				add_country_modifier = { name = a95_a60_co duration = 3650 }
+			}
 		}
 	}
 }
