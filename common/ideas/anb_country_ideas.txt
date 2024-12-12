@@ -1878,12 +1878,10 @@ A79_ideas = {
 		development_cost = -0.15
 	}
 	A79_all_small_artillerists = {
-		fire_damage_received = -0.1
-		backrow_artillery_damage = 0.1
+		backrow_artillery_damage = 0.15
 	}
 	A79_damestear_born_damestear_developed = {
 		idea_cost = -0.1
-		production_efficiency = 0.05
 	}
 	A79_gnomeostasis = {
 		global_unrest = -2
@@ -1898,7 +1896,7 @@ A79_ideas = {
 	}
 	A79_age_of_the_hierarch = {
 		ship_durability = 0.1
-		heavy_ship_power = 0.1
+		heavy_ship_power = 0.05
 	}
 }
 
