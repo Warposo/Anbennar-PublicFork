@@ -477,10 +477,10 @@ G52_1 = {
 		}
 		
 		trigger = {
-			navy_size = 120
+			navy_size = 100
 			army_size = 150
 			1713 = { transports_in_province = 30 }
-			1709 = { heavy_ships_in_province = 30 }
+			1709 = { heavy_ships_in_province = 20 }
 			is_at_war = no
 		}
 		
@@ -1220,6 +1220,7 @@ G52_2 = {
 				region = gauraddhi_region
 				region = chendhya_region
 			}
+			NOT = { area = sarihaddu_area }
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -1245,6 +1246,7 @@ G52_2 = {
 					region = gauraddhi_region
 					region = chendhya_region
 				}
+				NOT = { area = sarihaddu_area }
 				culture = astolbhen
 			}
 		}

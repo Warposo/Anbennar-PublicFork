@@ -2594,10 +2594,12 @@ country_event = {
 			set_global_flag = ameion_civil_war_2
 			if = {
 				limit = {
-					has_government_power = { 
-						mechanic_type = ameion_keintagogists_mechanic
-						power_type = ameion_keintagogists_power
-						value = 0
+					NOT = {
+						has_government_power = { 
+							mechanic_type = ameion_keintagogists_mechanic
+							power_type = ameion_keintagogists_power
+							value = 0
+						}
 					}
 				}
 				set_country_flag = G52_keep_coast
