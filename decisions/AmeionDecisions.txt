@@ -177,7 +177,7 @@ country_decisions = {
 					tag = G52
 					tag = G00
 				}
-				mission_completed = G52_secure_south
+				mission_completed = G52_embrace_humble
 			}
 			is_at_war = no
 			G63 = { is_at_war = no }
