@@ -781,7 +781,7 @@ country_event = {
 		trigger = {
 			OR = {
 				ruler_has_personality = well_connected_personality
-				ruler_has_personality = well_adviced_personality
+				ruler_has_personality = well_advised_personality
 				ruler_has_personality = midas_touched_personality
 				ruler_has_personality = entrepreneur_personality
 			}

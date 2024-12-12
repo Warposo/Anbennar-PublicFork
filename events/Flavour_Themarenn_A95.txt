@@ -1338,7 +1338,7 @@ country_event = { #phase 2 challenge twins
 		highlight = yes
 
 		trigger = {
-			ruler_has_personality = embezzler
+			ruler_has_personality = embezzler_personality
 		}
 		add_corruption = 2
 		add_inflation = 3
