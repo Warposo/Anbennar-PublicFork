@@ -19201,3 +19201,43 @@ defined_text = {
         }
 	}
 }
+defined_text = { #council of themarenn (A95)
+	name = GetThemarennCouncilDesc
+	random = no
+	text = {
+		localisation_key = themarenn_council_desc_a
+		trigger = { has_country_flag = a95_co_gab }
+	}
+}
+defined_text = { #council of themarenn (A95)
+	name = GetThemarennCouncil2Desc
+	random = no
+    text = {
+		localisation_key = themarenn_council_desc_b
+		trigger = { has_country_flag = a95_co_ash }
+	}
+}
+defined_text = { #council of themarenn (A95)
+	name = GetThemarennCouncil3Desc
+	random = no
+    text = {
+		localisation_key = themarenn_council_desc_c
+		trigger = { has_country_flag = a95_co_sf }
+	}
+}
+defined_text = { #council of themarenn (A95)
+	name = GetThemarennCouncil4Desc
+	random = no
+    text = {
+		localisation_key = themarenn_council_desc_e
+		trigger = { AND = { has_country_flag = a95_co_ko has_country_flag = a95_co_le } }
+	}
+}
+defined_text = { #council of themarenn (A95)
+	name = GetThemarennCouncil5Desc
+	random = no
+    text = {
+		localisation_key = themarenn_council_desc_f
+		trigger = { has_country_flag = a95_co_be }
+	}
+}
