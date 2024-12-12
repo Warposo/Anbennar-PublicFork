@@ -99,6 +99,13 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			hidden_trigger = {
+				OR = {
+					tag = G52
+					tag = G00
+				}
+				mission_completed = G52_secure_south
+			}
 			navy_size_percentage = 0.90
 			if = {
 				limit = { tag = G00 }
