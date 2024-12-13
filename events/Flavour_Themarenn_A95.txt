@@ -2249,7 +2249,13 @@ country_event = {
 	option = {
 		name = flavour_themarenn.49.a
 
-		267 = { 
+		267 = {
+			if = {
+				limit = {
+					NOT = { has_building = university }
+				}
+				add_building = university
+			}
 			add_permanent_province_modifier = {
 				name = a95_valen_uni
 				duration = -1
