@@ -507,6 +507,10 @@
  a95_gnome_rediscovery:0 "The Alternoscope"
  a95_twins_infrastructure:0 "Advanced Maritime Infrastructure"
  a95_valen_uni:0 "Valen Royal Academy of Arts and Architecture"
+ A95_war_cost:0 "The Costs of War"
+ A95_indebtment:0 "Indebtment of The Crown"
+ A95_courage:0 "Themarennic Courage"
+ a95_lion_of_esmaria:0 "The Lion of Esmaria"
  #misc
  CANN_ESMAR_STRING:0 "Cann Esmar"
  CANN_ESMAR_STRING_ADJ:0 "Cann Esmari"
