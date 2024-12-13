@@ -443,10 +443,7 @@ cb_conquest = {
 
 	prerequisites_self = {
 		# Anbennar
-		OR = {
-			NOT = { has_reform = adventurer_reform }
-			has_reform = found_our_nation
-		}
+		escann_adventurer_cb_restriction_trigger = yes
 		NOT = {
 			has_country_modifier = phoenix_conquest_cb_mod
 			ruler_has_personality = xhazobs_chosen_personality
@@ -497,10 +494,7 @@ cb_core = {
 	prerequisites = {
 		core_claim = FROM
 		# Anbennar
-		OR = {
-			NOT = { has_reform = adventurer_reform }
-			has_reform = found_our_nation
-		}
+		escann_adventurer_cb_restriction_trigger = yes
 		NOT = { OR = { religion = gods_of_the_taychend religion = oren_nayiru } }
 		NOT = { overlord = { OR = { religion = gods_of_the_taychend religion = oren_nayiru } } }
 		NOT = { ruler_has_personality = xhazobs_chosen_personality }
@@ -936,10 +930,7 @@ cb_crusade = {
 		}
 		is_revolutionary = no
 		# Anbennar
-		OR = {
-			NOT = { has_reform = adventurer_reform }
-			has_reform = found_our_nation
-		}
+		escann_adventurer_cb_restriction_trigger = yes
 		NOT = { has_reform = greentide_horde }
 	}
 
