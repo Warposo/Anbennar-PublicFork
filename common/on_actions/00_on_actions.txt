@@ -5867,6 +5867,9 @@ on_yearly_pulse = {
 		flavor_rosande.40 #Orc population check
 		flavor_rosande.41 #Orc population check
 		flavor_rosande.42 #Orc population check
+		flavour_themarenn.52 #themarenn - emperor casetin
+		flavour_themarenn.53 #themarenn, enter religious war
+		flavour_themarenn.55 #themarenn, end of the war
 	}
 	if = {
 		limit = { tag = R62 }
