@@ -2627,7 +2627,7 @@ G52_4 = {
 				has_building = impressment_offices
 				value = 10
 			}
-			naval_forcelimit = 200
+			naval_forcelimit = 150
 		}
 		
 		effect = {

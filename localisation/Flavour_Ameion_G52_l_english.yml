@@ -293,6 +293,7 @@
  
  ameion_colony: "§YLiteibhar§! shall receive any city owned in §YSevered Coast§! region. Should it ever become a subject that is not a colony, it will regain its §Ycolony§! status."
  ameion_liteibhar_convert_all: "§YLiteibhar§! shall convert all owned non-Taychendi provinces in §YSevered Coast§! region to Taychendi."
+ ameion_effelai_subject_tt: "A random Effelai subject shall form §YZoúbyos§! and recieve all owned land in the Effelai sub-continent, excluding the §YDry Coast§!, §YSevered Coast§!, and §YTurtleback Isle§! regions."
  ameion_all_hubs_tt: "All §YEffelai Network Hub§! provinces are owned by us or a subject, and have less than §Y1§! Devastation."
  
  ameion_no_outsider_allies: "Cannot form alliances with non-§YRuinborn§! nations. §RThis is permanent.§!"

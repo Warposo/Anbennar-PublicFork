@@ -4140,6 +4140,7 @@ country_event = {
 			limit = { any_subject_country = { culture_group = effelai_ruinborn_elf } }
 			random_subject_country = {
 				limit = { culture_group = effelai_ruinborn_elf }
+				custom_tooltip = ameion_effelai_subject_tt
 				set_country_flag = effelai_attuned_path
 				clr_country_flag = effelai_burned_path
 				clr_country_flag = effelai_dormancy_path
@@ -4169,6 +4170,19 @@ country_event = {
 						}
 					}
 					add_core = G20
+				}
+				hidden_effect = {
+					effelai_superregion = {
+						limit = {
+							NOT = {
+								region = severed_coast_region
+								region = dry_coast_region
+								region = turtleback_isle_region
+							}
+							owned_by = ROOT
+						}
+						cede_province = G20
+					}
 				}
 			}
 		}
