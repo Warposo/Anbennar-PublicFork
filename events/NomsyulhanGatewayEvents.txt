@@ -290,7 +290,7 @@ country_event = {
 	
 	option = { 
 		name = nomsyulhan_gateway.40.a
-		country_event = { id = nomsyulhan_gateway.100 }
+		# country_event = { id = nomsyulhan_gateway.100 }
 	}
 }
 
@@ -405,6 +405,6 @@ country_event = {
 	
 	option = { 
 		name = nomsyulhan_gateway.70.a
-		country_event = { id = nomsyulhan_gateway.100 }
+		# country_event = { id = nomsyulhan_gateway.100 }
 	}
 }
