@@ -155,7 +155,7 @@ country_event = {
 	option = {
 		name = flavor_kumarkand.5.a
 		trigger = {
-			is_incident_happened = incident_whisper_shadows
+			is_incident_active = incident_whisper_shadows 
 		}
 		hidden_effect = {
 			change_variable = {
@@ -179,7 +179,7 @@ country_event = {
 	option = {
 		name = flavor_kumarkand.6.a
 		trigger = {
-			is_incident_happened = incident_whisper_shadows
+			is_incident_active = incident_whisper_shadows
 		}
 		hidden_effect = {
 			change_variable = {
