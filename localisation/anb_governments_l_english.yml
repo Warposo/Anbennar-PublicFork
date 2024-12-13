@@ -180,7 +180,7 @@
  free_slave_reform:0 "Free Slaves"
  free_slave_reform_desc:0 "A government of slaves and slaves owning slaves, where the most skilled are promoted and the least skilled are reassigned to positions more appropriate for their skillset. They are all owned by the state and the state choses their leader and position."
  praxic_meritocracy_reform:0 "Praxic Meritocracy"
- praxic_meritocracy_reform_desc:0 "Placeholder"
+ praxic_meritocracy_reform_desc:0 "" #Placeholder - blank for now
  harimari_upper_caste:0 "Harimari Upper Caste"
  harimari_upper_caste_desc:0 "Within the Rahen Caste system, harimari form the upper castes of philosophers and administrators. With their generations of experience at the helm, many harimari led ministries function much more efficiently than their less organised and traditional counterparts."
  vanrahar_warrior_caste:0 "Vanrahar Warrior Caste"
@@ -1148,7 +1148,7 @@ issue_help_from_chronicles: "Order of Chronicles helps"
 issue_tea_act: "Tea Act"
 
 follower_of_many_gods_reform:0 "Followers of Many Gods"
-follower_of_many_gods_reform_desc:0 "While many devotees of the Regent Court exalt a single god above all others within the pantheon, our Court understands that each deity holds a unique purpose and role. To govern effectively and meet the needs of the people, rulers must seek wisdom from those most knowledgeable. And who could provide better guidance than a god? By honouring each deity's domain and welcoming their insight, our [Root.Monarch.GetTitle] gains divine mentorship, ensuring their rule aligns with the diverse aspects of life cherished by the faithful."
+follower_of_many_gods_reform_desc:0 "While many devotees of the Regent Court exalt a single god above all others within the pantheon, our Court understands that each deity holds a unique purpose and role. To govern effectively and meet the needs of the people, rulers must seek wisdom from those most knowledgeable. And who could provide better guidance than a god? By honouring each deity's domain and welcoming their insight, our Ruler gains divine mentorship, ensuring their rule aligns with the diverse aspects of life cherished by the faithful."
 mechanic_follower_of_many_gods_yes:0 "Can swap §YPersonal Deities§! every §Y5 years§!.\n\nSwapping §YPersonal Deity§! changes opinion of every country following this deity by §G+25§!."
 
 two_rulers_one_people_rc_reform:0 "Two Rulers, One People"
