@@ -155,6 +155,8 @@ country_event = {
 	trigger = {
 		is_incident_active = incident_whisper_shadows 
 	}
+	option = {
+		name = flavor_kumarkand.5.a
 		hidden_effect = {
 			change_variable = {
 				which = F30_out_of_time_tracker
@@ -176,6 +178,8 @@ country_event = {
 	trigger = {
 		is_incident_active = incident_whisper_shadows
 	}
+	option = {
+		name = flavor_kumarkand.6.a
 		hidden_effect = {
 			change_variable = {
 				which = F30_out_of_time_tracker
