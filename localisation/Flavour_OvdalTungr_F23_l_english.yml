@@ -13,8 +13,8 @@
  F23_the_mountain_smothers_title:0 "The Mountain Smothers"
  F23_the_mountain_smothers_desc:0 "Sea salt burns our beards; well-treaded halls remind us of our glory-haunted past. Depictions of better times decorate the halls, and our songs glorify the victories of our ancestors, for we have none to claim for ourselves. We were mighty once, debtors of Bulwar and an undeniable projection of power within Bahar. It took the most powerful empire in Bulwar to bring us down. Under the command of Jaher, our merchants and power were forcefully pushed out of our posts in surrounding lands and continents. Years later, the tribe of Mountainhugger - goblins from the Serpentspine, those ancient pests which helped destroy the old dwarves - shames us by the vice of their very existence. Memories of dwarven failure surround us.\n\nWe shall commemorate no longer. To start our reclamation, we will march with unabashed purpose in an invincible formation of cold dwarven steel, vetted by fury and confirmed with animosity. With blades to their wheezing, putrid throats, the goblins will not just be driven back, they shall be shattered utterly. Heads mounted on spikes will decorate the land to be mistaken as fields of wheat. Vast wealths of resources linger unspoiled and underappreciated, and will serve our greater purposes as we begin our just and true reexpansion into greater Bahar."
  F23_the_mountain_smothers_tt:0 "We will drive the goblins from the province, but §Rlose§! §Y2§! units of infantry."
- F23_the_mountain_smothers_tall_yes:0 "\n£yes£ If we only own provinces in the §YTûngr Mountains§! area:\nMove §Y4§!£adm£, §Y4§!£dip£, and §Y2§!£mil£ from [525.GetName] to [527.GetName]."
- F23_the_mountain_smothers_tall_no:0 "\n£no£ If we own provinces in the §YTûngr Mountains§! area:\nMove §Y4§!£adm£, §Y4§!£dip£, and §Y2§!£mil£ from [525.GetName] to [527.GetName]."
+ F23_the_mountain_smothers_tall_yes:0 "\n£yes£ If we do not own provinces outside the §YTûngr Mountains§! area:\nMove §Y4§!£adm£, §Y4§!£dip£, and §Y2§!£mil£ from [525.GetName] to [527.GetName]."
+ F23_the_mountain_smothers_tall_no:0 "\n£no£ If we do not own provinces outside the §YTûngr Mountains§! area:\nMove §Y4§!£adm£, §Y4§!£dip£, and §Y2§!£mil£ from [525.GetName] to [527.GetName]."
 
  # 1E
  F23_the_rival_republic_title:0 "The Rival 'Republic'"
@@ -204,7 +204,7 @@
 
  # 12E, important
  F23_our_bulwar_title:0 "Our Bulwar"
- F23_our_bulwar_desc:0 "Bulwar is a land of wonder, og riches, and - for us - og opportunity. As more and more of this land falls under our control, the movers and shakers of Ovdal Tûngr begin to wonder whether it might be possible to achieve what even our ancestors were unable to accomplish: exerting control over not just a region or two, but everywhere in Bulwar worth of ruling.\n\nIt will undoubtedly require a vast investment in raw resources, but if we can prove our worth by bringing prosperity to the lands around the Suran and Buranun... why, we stand to profit greatly. As copper flows down the twin rivers, this shall become our land.\n\nOur Bulwar."
+ F23_our_bulwar_desc:0 "Bulwar is a land of wonder, riches, and - for us - opportunity. As more and more of this land falls under our control, the movers and shakers of Ovdal Tûngr begin to wonder whether it might be possible to achieve what even our ancestors were unable to accomplish: exerting control over not just a region or two, but everywhere in Bulwar worth of ruling.\n\nIt will undoubtedly require a vast investment in raw resources, but if we can prove our worth by bringing prosperity to the lands around the Suran and Buranun... why, we stand to profit greatly. As copper flows down the twin rivers, this shall become our land.\n\nOur Bulwar."
  F23_our_bulwar_trigger_tt_1:0 "Has a neighboring friendly fort."
  F23_our_bulwar_trigger_tt_2:0 "Is surrounded by friendly provinces."
  F23_our_bulwar_area_tt:0 "Fulfill the same conditions as above."
