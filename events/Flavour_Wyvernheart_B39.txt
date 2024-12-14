@@ -2694,15 +2694,25 @@ country_event = {#The Council's Challenge
 	option = {
 		name = "flavour_wyvernheart.306.b"
 		ai_chance = { factor = 1 }
-		capital_scope = {
-			area_for_scope_province = {
-				type = all
-				if = {
-					limit = { owned_by = ROOT }
-					spawn_rebels = {
-						size = 2
-						type = pretender_rebels
-					}
+		if = {
+			limit = {
+				castonath_area = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			castonath_area = {
+				spawn_rebels = {
+					size = 2
+					type = pretender_rebels
+				}
+			}
+		}
+		else = {
+			athfork_area = {
+				spawn_rebels = {
+					size = 2
+					type = pretender_rebels
 				}
 			}
 		}
