@@ -538,8 +538,6 @@ country_event = { #The Never-Ending Ball
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	
-
 	option = {
 		name = flavor_rosande.14.a
 		
@@ -1151,8 +1149,6 @@ country_event = { #The Rósanda Hero
 
 	is_triggered_only = yes
 	fire_only_once = yes
-
-	
 
 	option = { 
 		name = flavor_rosande.30.a
