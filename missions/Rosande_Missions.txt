@@ -280,6 +280,12 @@ rosande_1_missions = {
 				set_global_flag = age_of_wine_happened
 			}
 			else = { add_dip_power = 100 }
+			hidden_effect = {
+				country_event = {
+					id = flavor_rosande.24
+					days = 180
+				}
+			}
 		}
 	}
 }
@@ -1360,6 +1366,12 @@ rosande_3_missions = {
 				}
 			}
 			set_country_flag = castanor_unlock_grand_bazaar_early
+			hidden_effect = {
+				country_event = {
+					id = flavor_rosande.23
+					days = 180
+				}
+			}
 		}
 	}
 
