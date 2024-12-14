@@ -388,8 +388,6 @@ kob_3_a = {
 					tag = Z38
 				}
 			}
-			accepted_culture = bluescale_kobold
-			accepted_culture = redscale_kobold
 
 			OR = {
 				estate_loyalty = {
