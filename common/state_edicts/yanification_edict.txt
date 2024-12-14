@@ -66,7 +66,7 @@ yanification_edict = {
 			limit = {
 				has_country_flag = yanification_upgrade_3
 				}
-				NOT = {
+			NOT = {
 				calc_true_if = {
 					all_states = {
 						has_state_edict = yanification_edict
