@@ -277,6 +277,7 @@ rosande_1_missions = {
 				country_event = {
 					id = anb_price.7
 				}
+				set_global_flag = age_of_wine_happened
 			}
 			else = { add_dip_power = 100 }
 		}
