@@ -193,7 +193,7 @@ rosande_1_missions = {
 			229 = {
 				trade_share = {
 					country = Z35
-					share = 40
+					share = 30
 				}
 			}
 			num_of_owned_provinces_with = {
@@ -274,6 +274,7 @@ rosande_1_missions = {
 						has_global_flag = age_of_wine_happened
 					}
 				}
+				set_country_flag = rosande_age_wine
 				country_event = {
 					id = anb_price.7
 				}
