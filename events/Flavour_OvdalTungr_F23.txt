@@ -1965,7 +1965,13 @@ country_event = {
 
 	trigger = {
 		has_global_flag = F23_bulwar_bankruptcy 
-		capital_scope = { superregion = bulwar_superregion } 
+		OR = {
+			capital_scope = { superregion = bulwar_superregion } 
+			AND = {
+				F23 = { mission_completed = F23_steamers }
+				is_subject_of_type_with_overlord = { type = trade_protectorate who = F23 }
+			}
+		}
 		NOT = { tag = F23 }
 		NOT = { tag = U17 }
 		OR = {
