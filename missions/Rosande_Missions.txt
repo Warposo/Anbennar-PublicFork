@@ -427,6 +427,20 @@ rosande_1_2_missions = {
 			}
 			custom_tooltip = rosande_those_who_escaped.tt.2
 			set_country_flag = rosande_out_of_the_woods	
+			west_deepwoods_region = {
+				limit = { 
+					fast_has_pop_of_race = { race = orcish } 
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_deepwoods_region = {
+				limit = { 
+					fast_has_pop_of_race = { race = orcish } 
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }

@@ -824,9 +824,6 @@ country_event = { #The Ashen Bloom
 		west_castanor_region = {
 			add_permanent_claim = ROOT
 		}
-		south_castanor_region = {
-			add_permanent_claim = ROOT
-		}
 		inner_castanor_region = {
 			add_permanent_claim = ROOT
 		}
