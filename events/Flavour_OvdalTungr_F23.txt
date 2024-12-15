@@ -2185,6 +2185,10 @@ country_event = {
 		}
 
 		custom_tooltip = F23_party_host_tt
+		
+		if = { limit = { mission_completed = F23_steamers }
+			custom_tooltip = F23_party_host_tt_global
+		}
 
 		hidden_effect = { 
 			add_prestige = 100 add_prestige = -100 
@@ -2192,17 +2196,24 @@ country_event = {
 
 			every_known_country = {
 				limit = { 
-					capital_scope = { superregion = bulwar_superregion } 
 					NOT = { tag = F23 }
+					NOT = { tag = U17 } 
 					OR = {
 						AND = {
+							capital_scope = { superregion = bulwar_superregion } 
 							is_subject = no 
 							has_opinion = { who = ROOT value = 100 } 
 						}
 						AND = {
+							capital_scope = { superregion = bulwar_superregion } 
 							is_subject_of = ROOT 
 							NOT = { liberty_desire = 50 } 
-							NOT = { tag = U17 } 
+							NOT = { is_subject_of_type = loyal_trade_protectorate } 
+						}
+						AND = {
+							ROOT = { mission_completed = F23_steamers } 
+							is_subject_of = ROOT 
+							NOT = { liberty_desire = 50 } 
 							NOT = { is_subject_of_type = loyal_trade_protectorate } 
 						}
 					}
@@ -2223,7 +2234,7 @@ country_event = {
 					set_variable = 	{ which = treasury_lost which = party_var_own_prestige }
 					change_variable = { which = treasury_lost value = 100 }
 					multiply_variable = { which = treasury_lost value = -1 }
-					multiply_variable = { which = treasury_lost value = 20 }
+					multiply_variable = { which = treasury_lost value = 25 }
 					var_effect = { effect = add_treasury var = treasury_lost sign = - }
 				}
 			}

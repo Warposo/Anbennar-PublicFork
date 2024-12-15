@@ -122,6 +122,9 @@ country_decisions = {
 				# full_idea_group = trade_ideas
 			}
 			OR = {
+				if = { limit = { tag = F23 }
+					mission_completed = F23_divenhal_dominion
+				}
 				custom_trigger_tooltip = {
 					tooltip = confirm_thalassocracy_rahen_tt
 					AND = {

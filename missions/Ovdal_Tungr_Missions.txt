@@ -981,6 +981,8 @@ uthojdihr_a = {
 					add_country_modifier = { name = "thalassocracy" duration = -1 }
 					unlock_government_reform = { government_reform = thalassocracy_reform }
 				}
+				custom_tooltip = F23_divenhal_dominion_tt_false_2
+
 			}
 			custom_tooltip = F23_divenhal_dominion_tt_tiers
 		} 
@@ -3267,6 +3269,7 @@ strongbellow_d = {
 				remove_province_modifier = F23_heartland_safety
 				add_province_modifier = { name = F23_heartbeat_of_steam duration = -1 }
 			}
+			custom_tooltip = F23_steamers_tt_global
 		}
 	}
 }
