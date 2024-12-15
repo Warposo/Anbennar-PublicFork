@@ -713,7 +713,10 @@ rosande_2_missions = {
 			num_of_owned_provinces_with = {
 				value = 10
 				region = west_castanor_region 
-				has_building = soldier_households
+				OR = {
+					has_building = soldier_households
+					base_manpower = 8
+				}
 			}
 			777 = { #Taranton
 				has_building = state_house
