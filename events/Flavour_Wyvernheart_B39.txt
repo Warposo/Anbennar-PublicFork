@@ -1920,10 +1920,6 @@ country_event = {#The Scions of Wyvernheart
 		name = "flavour_wyvernheart.117.c"
 		ai_chance = { factor = 1 }
 		trigger = {
-			num_of_owned_provinces_with = {
-				value = 20
-				has_building = mage_tower
-			}
 			crown_land_share = 60
 		}
 		if = {
