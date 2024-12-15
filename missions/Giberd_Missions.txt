@@ -1770,6 +1770,7 @@ giberd_ryalanar_conquest = {
 			}
 			custom_tooltip = giberd_sails_on_the_streams_effect_tt
 			hidden_effect = {
+				set_country_flag = a95_disable_bad_party1
 				set_country_flag = a95_disable_bad_party2
 			}
 			country_event = {
