@@ -42,8 +42,8 @@
  bioimproved_mages_title:0 "Bioimproved Mages"
  bioimproved_mages_desc:0 "The representative of the Artificers has come forth with a proposal co-signed by the Head-Arcanist; they suggest applying the methods used to improve the Burnbloods on the Floodborn to improve both their physique and their magical capabilities.\nThis decision will bring the Council and its sovereign closer to perfection, a perfect mind in a perfect body, stronger and more resilient.\nThe methods proposed by the artificers are rather drastic: direct inoculation of damestear coupled with the use of a cocktail of alchemical concoctions aimed to stabilise the body in the process. Some would call this work demented; to resist such a process would require a very high perseverance and tolerance to pain - a mind-shattering experience. But this doesn’t scare the most cowardly of Heartman; we have the Heart of a Wyvern and the mind of a Floodborn - there is nothing to fear."
  wyvernheart_B9_effect_tt:0 "We will lose from 150 to 300 of each Monarch Power depending on our rulers skill in Transmutation"
- wyvernheart_bioimproved_mages_trigger_a:0 "Any Administrative advisor of level 4 or higher is employed."
- wyvernheart_bioimproved_mages_trigger_b:0 "A Court Mage or Phisolopher of level 3 is employed."
+ wyvernheart_bioimproved_mages_trigger_a:0 "Any §YAdministrative§! advisor of level 4 or higher is employed."
+ wyvernheart_bioimproved_mages_trigger_b:0 "A §YCourt Mage§! or §YPhilosopher§! of level 3 is employed."
 
  mightiest_of_us_title:0 "The Mightiest of Us"
  mightiest_of_us_desc:0 "Since we reached Escann, mages of all kinds have distinguished themselves in the fight to establish ourselves beyond our adventurer roots. They are obviously the strongest of our citizenry, having harnessed the transcendent power of magic in a way that neither the average person nor our beastly enemies have managed to do. This deserves the respect of our state.\n\nEffective immediately, there will be a direct connection between service to Wyvernheart as a mage and societal respect and privileges."
