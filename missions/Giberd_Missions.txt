@@ -933,6 +933,9 @@ giberd_konwell_conquest = {
 				}
 				custom_tooltip = giberd_esmari_fashion_happened_yes
 				add_treasury = -5000
+				hidden_effect = {
+					set_country_flag = esmari_fashion_early
+				}
 				country_event = {
 					id = anb_price.43
 				}
