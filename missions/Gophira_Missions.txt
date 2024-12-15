@@ -528,8 +528,11 @@ gophira_1_march = {
 				num_of_owned_provinces_with = {
 					value = 2
 					trade_goods = livestock
-					has_production_or_gold_building_trigger = yes
 					has_building = farm_estate
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
 				}
 			}
 			taychend_superregion = {
