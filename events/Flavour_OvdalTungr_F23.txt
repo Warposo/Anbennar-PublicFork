@@ -674,9 +674,8 @@ country_event = {
 
 		add_historical_friend = A73
 		A73 = { add_historical_friend = ROOT }
-		add_accepted_culture = silver_dwarf
+		anb_add_accepted_culture_or_dip_power = { culture = silver_dwarf free = yes }
 		add_country_modifier = { name = F23_grun_strongbellow duration = -1 }
-		add_country_modifier = { name = free_slot_for_silver_dwarf duration = -1 }
 
 		set_country_flag = F23_mt_unlock_strongbellow_1
 		swap_non_generic_missions = yes
