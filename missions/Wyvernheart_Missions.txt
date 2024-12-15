@@ -466,10 +466,13 @@ wyvernheart_column_2 = {
 						province_id = 751
 						province_id = 753
 					}
-					local_autonomy = 10
-					OR = {
-						NOT = { has_province_modifier = autonomy_decreased }
-						NOT = { infantry_in_province = 3 }
+					NOT = {
+						NOT = { local_autonomy_above_min = 10 }
+						has_province_modifier = autonomy_decreased
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 			}
@@ -495,50 +498,71 @@ wyvernheart_column_2 = {
 				229 = {
 					OR = {
 						has_province_modifier = autonomy_decreased
-						NOT = { local_autonomy = 10 } 
-						infantry_in_province = 3
+						NOT = { local_autonomy_above_min = 10 } 
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 				726 = {
 					OR = {
 						has_province_modifier = autonomy_decreased
-						NOT = { local_autonomy = 10 } 
-						infantry_in_province = 3
+						NOT = { local_autonomy_above_min = 10 } 
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 				725 = {
 					OR = {
 						has_province_modifier = autonomy_decreased
-						NOT = { local_autonomy = 10 } 
-						infantry_in_province = 3
+						NOT = { local_autonomy_above_min = 10 } 
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 				729 = {
 					OR = {
 						has_province_modifier = autonomy_decreased
-						NOT = { local_autonomy = 10 } 
-						infantry_in_province = 3
+						NOT = { local_autonomy_above_min = 10 } 
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 				749 = {
 					OR = {
 						has_province_modifier = autonomy_decreased
-						NOT = { local_autonomy = 10 } 
-						infantry_in_province = 3
+						NOT = { local_autonomy_above_min = 10 } 
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 				751 = {
 					OR = {
 						has_province_modifier = autonomy_decreased
-						NOT = { local_autonomy = 10 } 
-						infantry_in_province = 3
+						NOT = { local_autonomy_above_min = 10 } 
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 				753 = {
 					OR = {
 						has_province_modifier = autonomy_decreased
-						NOT = { local_autonomy = 10 } 
-						infantry_in_province = 3
+						NOT = { local_autonomy_above_min = 10 } 
+						num_of_units_in_province = {
+							who = ROOT
+							amount = 3
+						}
 					}
 				}
 			}
