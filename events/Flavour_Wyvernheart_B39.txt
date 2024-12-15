@@ -2113,6 +2113,7 @@ country_event = {#Tyrant's Fall
 				days = 365
 			}
 		}
+		custom_tooltip = wyvernheart_202_event_tt
 	}
 }
 country_event = {#Victory or Death
