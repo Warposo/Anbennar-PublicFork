@@ -529,10 +529,7 @@ gophira_1_march = {
 					value = 2
 					trade_goods = livestock
 					has_building = farm_estate
-					OR = {
-						has_building = workshop
-						has_building = counting_house
-					}
+					has_production_building_trigger = yes
 				}
 			}
 			taychend_superregion = {
