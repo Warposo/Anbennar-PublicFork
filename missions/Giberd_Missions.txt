@@ -906,7 +906,6 @@ giberd_konwell_conquest = {
 				add_country_modifier = {
 					name = giberd_curtain_call_inventions
 					duration = 7300
-					hidden = yes
 				}
 			}
 			260 = {
