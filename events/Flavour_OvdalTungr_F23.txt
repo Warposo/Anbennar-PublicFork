@@ -2205,16 +2205,16 @@ country_event = {
 							has_opinion = { who = ROOT value = 100 } 
 						}
 						AND = {
-							capital_scope = { superregion = bulwar_superregion } 
 							is_subject_of = ROOT 
 							NOT = { liberty_desire = 50 } 
 							NOT = { is_subject_of_type = loyal_trade_protectorate } 
-						}
-						AND = {
-							ROOT = { mission_completed = F23_steamers } 
-							is_subject_of = ROOT 
-							NOT = { liberty_desire = 50 } 
-							NOT = { is_subject_of_type = loyal_trade_protectorate } 
+							OR = {
+								capital_scope = { superregion = bulwar_superregion } 
+								AND = {
+									ROOT = { mission_completed = F23_steamers } 
+									is_subject_of_type = trade_protectorate 
+								}
+							}
 						}
 					}
 				}
