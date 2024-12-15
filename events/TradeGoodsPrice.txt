@@ -2421,13 +2421,13 @@ country_event = {
 		OR = {
 			AND = {
 				is_year = 1600
+				production_leader = { trade_goods = wine }
 				capital_scope = { superregion = western_cannor_superregion }
 				num_of_owned_provinces_with = {
 					value = 5
 					trade_goods = wine
 					has_manufactory_trigger = yes
 				}
-				production_leader = { trade_goods = wine }
 				has_institution = global_trade
 			}
 			has_country_flag = rosande_age_wine

@@ -712,7 +712,10 @@ rosande_2_missions = {
 					region = west_castanor_region
 					owned_by = ROOT
 					NOT = {
-						has_building = soldier_households
+						OR = {
+							has_building = soldier_households
+							base_manpower = 8
+						}
 					}
 				}
 				AND = {
