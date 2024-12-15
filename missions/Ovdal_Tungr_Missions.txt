@@ -982,7 +982,7 @@ uthojdihr_a = {
 					unlock_government_reform = { government_reform = thalassocracy_reform }
 				}
 				custom_tooltip = F23_divenhal_dominion_tt_false_2
-
+				hidden_effect = { set_country_flag = confirm_thalassocracy_trade_node_req_bypass }
 			}
 			custom_tooltip = F23_divenhal_dominion_tt_tiers
 		} 
