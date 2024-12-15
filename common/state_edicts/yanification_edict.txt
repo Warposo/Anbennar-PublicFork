@@ -20,11 +20,9 @@ yanification_edict = {
 		if = {
 			limit = {
 				NOT = {
-					OR = {
-						has_country_flag = yanification_upgrade_1
-						has_country_flag = yanification_upgrade_2
-						has_country_flag = yanification_upgrade_3
-					}
+					has_country_flag = yanification_upgrade_1
+					has_country_flag = yanification_upgrade_2
+					has_country_flag = yanification_upgrade_3
 				}
 			}
 			NOT = {
@@ -112,11 +110,9 @@ yanification_edict = {
 		if = {
 			limit = {
 				NOT = {
-					OR = {
-						has_country_flag = yanification_upgrade_1
-						has_country_flag = yanification_upgrade_2
-						has_country_flag = yanification_upgrade_3
-					}
+					has_country_flag = yanification_upgrade_1
+					has_country_flag = yanification_upgrade_2
+					has_country_flag = yanification_upgrade_3
 				}
 			}
 			custom_tooltip = yanification_limit_2
