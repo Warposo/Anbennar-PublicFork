@@ -2713,10 +2713,12 @@ G52_4 = {
 						has_building = mage_tower
 					}
 					any_subject_country = {
-						value = 150
-						superregion = effelai_superregion
-						trade_goods = tropical_wood
-						has_building = mage_tower
+						development_in_provinces = {
+							value = 150
+							superregion = effelai_superregion
+							trade_goods = tropical_wood
+							has_building = mage_tower
+						}
 					}
 				}
 			}
