@@ -951,11 +951,12 @@ kumarkand_slot_1 = {
 		position = 5
 
 		provinces_to_highlight = { 
-			AND = {
-				culture = firanyan_harpy
+			country_or_non_sovereign_subject_holds = ROOT
+			culture = firanyan_harpy
+			OR = {
 				NOT = { development = 8 }
 				NOT = { has_tax_building_trigger = yes}
-				NOT = {has_courthouse_building_trigger = yes}
+				NOT = { has_courthouse_building_trigger = yes}
 			}
 		}
 		
@@ -2310,7 +2311,16 @@ kumarkand_slot_5 = {
 		position = 4
 
 		provinces_to_highlight = { 
-		
+			province_group = F30_nsc_major_temples_provinces
+			OR = {
+				has_tax_building_trigger = no
+				NOT = {
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 10
+					}
+				}
+			}
 		}
 		
 		trigger = {
