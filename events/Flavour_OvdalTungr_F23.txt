@@ -495,6 +495,7 @@ country_event = {
 			add_permanent_claim = ROOT
 		}
 		custom_tooltip = F23_tugged_two_ways_tt_1
+		hidden_effect = { unlock_government_reform = { government_reform = F23_the_port_hold } }
 		add_government_reform = F23_the_port_hold
 	}
 
