@@ -610,7 +610,6 @@ uthojdihr_a = {
 		effect = {  
 			country_event = { id = flavour_ovdal_tungr.0 } #Tugged two ways.
 			unlock_government_reform = { government_reform = F23_the_port_hold }
-			change_government_reform_progress = 50
 		} 
 	}
 
