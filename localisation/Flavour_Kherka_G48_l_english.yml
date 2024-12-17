@@ -135,7 +135,7 @@ G48_metal_in_our_blood_tt:0 "We will no longer have events about §YIron Ore Qua
 G48_shimmer_from_the_top_tt:0 "The §YRiches From Below§! event has fired"
 G48_hfaesban_conquer_tt:0 "Conquering The §Y[2666.GetName]§! province will give us the following:"
 G48_institution_bonus_tt:0 "When the §YRenaissance§! is enabled, we will gain §G+50§! Institution Progress in our capital"
-G48_anisikheion_degarikes_tt:0 "\nAnisikheion will receive modifiers that gives §G+25%§! §YAlllowed Degárikes Fraction§! and -§G25%§! §YDegárikes Maintenance§!"
+G48_anisikheion_degarikes_tt:0 "\nAnisikheion will receive modifiers that gives:\n§G+25%§! Allowed Degárikes Fraction\n-§G25%§! Degárikes Maintenance"
 G48_enemies_at_the_gate_tt:0 "\nGain permanent claims on every province owned by @G50 §YOrmam§! and @G49 §YLokemeion§!"
 G48_contenders_no_more_tt:0 "\nGain permanent claims on every province owned by @G47 §YOktikheion§! and @G51 §YArpedifér§!"
 G48_eltikan_claims_tt:0 "\nGain permanent claims on every province owned by @G60 §YEltikan§!"
