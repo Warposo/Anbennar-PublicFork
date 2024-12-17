@@ -14,6 +14,7 @@ country_event = { #Starting Event
 
     option  = {
         name = flavour_kherka.1.a
+        custom_tooltip = G58_introduction_tt
         custom_tooltip = G48_enemies_at_the_gate_tt
         hidden_effect = {
             G50 = {
