@@ -934,7 +934,7 @@ kob_1_b = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					region = dalaire_region
+					region = dolindha_region
 					is_city = yes
 					OR = {
 						NOT = { owned_by_subject_of = ROOT }
