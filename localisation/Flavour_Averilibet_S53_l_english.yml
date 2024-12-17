@@ -100,6 +100,7 @@
  S53_more_the_marryier_tooltip:0 "Have a §YHusband of level 2§! or greater. Have an §YAlliance§! and §Y70 Trust§! with a §YBiologically Compatible Monarchy.§! with §Y350§! or less §YDevelopment.§!"
  S53_up_the_ante_tooltip:0 "Win §Y5 battles§! against §Y[S70.GetName]§! @[S70.GetTag], or §Y[S70.GetName]§! @[S70.GetTag] does not exist."
  S53_heros_and_husbands_tooltip:0 "Have a §YHusband of level 2§! or greater. §YMarriage of Many§! religious action is on cooldown."
+ S53_middling_migration_trigger_tooltip:0 "Owned by §Ysubjects.§!"
  S53_experts_at_this_tooltip:0 "§Y[Y72.GetName]§! @[Y72.GetTag] or the current owner of §YKeoden§! has §Y90 improved relations§! with you."
  S53_shedding_pains_tooltip:0 "Have §Y10 provinces§! with at least a §GCoexisting§! §YLizardfolk§! minority or larger and §Y9 development.§!"
 

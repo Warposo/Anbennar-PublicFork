@@ -1107,6 +1107,9 @@ column_3 = {
 					}
 					development_in_provinces = {
 						value = 50
+						custom_trigger_tooltip = {
+							tooltip = S53_middling_migration_trigger_tooltip
+						}
 					}
 				}
 			}
