@@ -2140,7 +2140,15 @@ kumarkand_slot_4 = {
 		position = 7
 
 		provinces_to_highlight = { 
-			
+			has_province_modifier = F30_farming_level_one
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+			}
+			OR = {
+				has_production_building_trigger = no
+				NOT = { base_production = 7 }
+			}
 		}
 		
 		trigger = {
