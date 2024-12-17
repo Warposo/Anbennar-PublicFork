@@ -3012,7 +3012,7 @@ country_event = { #Auto-Wuhyunification pulse
 				command_not_yet_wuhyunized = yes
 			}
 			if = {
-				limit = { owner = { overlord = { has_estate_privilege = estate_tiger_command_proselytizers_to_the_wuhyun } } }
+				limit = { ROOT = { overlord = { has_estate_privilege = estate_tiger_command_proselytizers_to_the_wuhyun } } }
 				random_list = {
 					9 = {
 						modifier = {
