@@ -279,20 +279,17 @@ country_decisions = {
 		major = yes
 		potential = {
 			OR = {
-				has_country_flag = owns_hold_province
+				AND = {
+					has_country_flag = owns_hold_province
+					any_owned_province = {
+						province_group = hold_province
+						has_province_modifier = infested_hold
+						is_city = yes
+					}
+				}
 				AND = {
 					ai = no
 					any_subject_country = { has_country_flag = owns_hold_province }
-				}
-			}
-			OR = {
-				any_owned_province = {
-				province_group = hold_province
-				has_province_modifier = infested_hold
-				is_city = yes
-				}
-				AND = {
-					ai = no
 					any_subject_country = {
 						any_owned_province = {
 							province_group = hold_province
