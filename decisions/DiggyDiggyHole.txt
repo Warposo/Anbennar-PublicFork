@@ -289,8 +289,8 @@ country_decisions = {
 				}
 				AND = {
 					ai = no
-					any_subject_country = { has_country_flag = owns_hold_province }
 					any_subject_country = {
+						has_country_flag = owns_hold_province
 						any_owned_province = {
 							province_group = hold_province
 							has_province_modifier = infested_hold
