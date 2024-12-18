@@ -4089,6 +4089,17 @@ on_annexed = {
 			limit = { has_country_flag = current_aakhet_host }
 			aakhet_reset = yes
 		}
+
+		# Stop Crathanor from being an Ilatani March if Ovdal Tûngr is annexed.
+		if = { limit = { tag = F23 }
+			U17 = {
+				if = { limit = { is_subject_of_type = loyal_crathanor_subject }
+					overlord = {
+						vassalize = U17
+					}
+				}
+			}
+		}
 	}
 }
 
