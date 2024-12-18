@@ -554,8 +554,8 @@ country_event = {
 
 		custom_tooltip = F23_reform_progress_mod_augmentation
 		hidden_effect = {
-			remove_country_modifier = F23_reform_progress_mod_1
-			add_country_modifier = { name = F23_reform_progress_mod_2 duration = -1 }
+			remove_country_modifier = F23_reform_progress_mod_2
+			add_country_modifier = { name = F23_reform_progress_mod_3 duration = -1 }
 		}
 		#if = { limit = { mission_completed = F23_steamers }
 		#	custom_tooltip = F23_upstream_trade_unlock_tt
