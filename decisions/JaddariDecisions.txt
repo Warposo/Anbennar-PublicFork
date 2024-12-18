@@ -396,6 +396,12 @@ country_decisions = {
 		}
 		
 		allow = {
+			hidden_trigger = {
+				OR = {
+					tag = F99
+					tag = F51
+				}
+			}
 			if = {
 				limit = { tag = F51 }
 				F99 = {
