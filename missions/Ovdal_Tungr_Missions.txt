@@ -2070,6 +2070,7 @@ bulwar_e = { # Copper Offer missions could probably do with custom tooltips. Cas
 				is_subject = no
 				NOT = { has_country_modifier = monstrous_nation }
 				NOT = { tag = U17 }
+				NOT = { tag = ROOT}
 				NOT = { has_opinion_modifier = { who = ROOT modifier = sent_gift value = 25 } }
 			}
 		} 
@@ -2089,6 +2090,7 @@ bulwar_e = { # Copper Offer missions could probably do with custom tooltips. Cas
 						any_known_country = {
 							capital_scope = { superregion = bulwar_superregion }
 							is_subject = no
+							NOT = { tag = ROOT }
 							NOT = { has_country_modifier = monstrous_nation }
 							NOT = { has_opinion_modifier = { who = ROOT modifier = sent_gift value = 25 } }
 						}
