@@ -587,7 +587,7 @@ giberd_konwell_conquest = {
 						AND = {
 							has_manpower_building_trigger = yes
 							has_building = farm_estate
-							base_production = 12
+							development = 25
 						}
 					}
 				}
@@ -600,7 +600,7 @@ giberd_konwell_conquest = {
 								has_building = farm_estate
 								has_building = soldier_households
 							}
-							base_manpower = 12
+							development = 25
 						}
 					}
 				}
@@ -622,7 +622,7 @@ giberd_konwell_conquest = {
 							trade_goods = grain
 							has_manpower_building_trigger = yes
 							has_building = farm_estate
-							base_production = 12
+							development = 25
 						}
 					}
 				}
@@ -645,7 +645,7 @@ giberd_konwell_conquest = {
 								has_building = farm_estate
 								has_building = soldier_households
 							}
-							base_manpower = 12
+							development = 25
 						}
 					}
 				}
@@ -787,7 +787,10 @@ giberd_konwell_conquest = {
 				development = 25
 				has_manufactory_trigger = yes
 			}
-			has_idea = A81_artificer_loading_exoskeleton_v1
+			custom_trigger_tooltip = {
+				tooltip = giberd_paned_paper_idea_tt
+				has_idea = A81_artificer_loading_exoskeleton_v1
+			}
 		}
 		effect = {
 			add_estate_loyalty_modifier = {
@@ -1789,7 +1792,7 @@ giberd_ryalanar_conquest = {
 		position = 11
 		provinces_to_highlight = {
 			region = esmaria_region
-			OR = {
+			AND = {
 				owned_by = ROOT
 				NOT = {
 					AND = {
