@@ -311,7 +311,10 @@ country_decisions = {
 			hidden_trigger = {
 				OR = {
 					has_country_flag = owns_hold_province
-					any_subject_country = { has_country_flag = owns_hold_province }
+					AND = {
+						ai = no
+						any_subject_country = { has_country_flag = owns_hold_province }
+					}
 				}
 			}
 			is_at_war = no
