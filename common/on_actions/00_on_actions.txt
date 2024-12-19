@@ -4089,17 +4089,6 @@ on_annexed = {
 			limit = { has_country_flag = current_aakhet_host }
 			aakhet_reset = yes
 		}
-
-		# Stop Crathanor from being an Ilatani March if Ovdal Tûngr is annexed.
-		if = { limit = { tag = F23 }
-			U17 = {
-				if = { limit = { is_subject_of_type = loyal_crathanor_subject }
-					overlord = {
-						vassalize = U17
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -13554,6 +13543,12 @@ on_dependency_gained = {
 			limit = { mission_completed = Z38_aelantir_as_one }
 			FROM = { subject_ascension_effect = yes }
 		}
+	}
+
+	#Turning Ilatani March into vassal if another tag annexes Ovdal Tûngr.
+	if = { limit = { NOT = { tag = F23 } FROM = { is_subject_of_type = loyal_crathanor_subject } }
+		# Apparently can crash if done immediately, so moved to an event for a small delay?
+		FROM = { country_event = { id = verkalozovar_events.9999 } }
 	}
 }
 # ROOT = Overlord, FROM = Minor
