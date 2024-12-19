@@ -146,9 +146,17 @@ giberd_imperial = {
 					owned_by = ROOT
 					ROOT = {
 						AND = {
-							reverse_has_opinion = {
-								who = A73
-								value = 200
+							OR = {
+								reverse_has_opinion = {
+									who = A73
+									value = 200
+								}
+								A73 = {
+									trust = {
+										who = ROOT
+										value = 95
+									}
+								}
 							}
 							has_25_opinion_sent_gift = {
 								target = A73
@@ -165,9 +173,17 @@ giberd_imperial = {
 					owns = 912
 				}
 				AND = {
-					reverse_has_opinion = {
-						who = A73
-						value = 200
+					OR = {
+						reverse_has_opinion = {
+							who = A73
+							value = 200
+						}
+						A73 = {
+							trust = {
+								who = ROOT
+								value = 95
+							}
+						}
 					}
 					A73 = {
 						has_25_opinion_sent_gift = {
@@ -179,6 +195,9 @@ giberd_imperial = {
 			if = {
 				limit = {
 					A73 = {
+						is_elector = yes
+					}
+					ROOT = {
 						is_elector = yes
 					}
 				}
@@ -1792,13 +1811,11 @@ giberd_ryalanar_conquest = {
 		position = 11
 		provinces_to_highlight = {
 			region = esmaria_region
-			AND = {
-				owned_by = ROOT
-				NOT = {
-					AND = {
-						is_prosperous = yes
-						has_state_edict = edict_protect_trade
-					}
+			owned_by = ROOT
+			NOT = {
+				AND = {
+					is_prosperous = yes
+					has_state_edict = edict_protect_trade
 				}
 			}
 		}
