@@ -974,7 +974,12 @@ giberd_konwell_conquest = {
 			NOT = {
 				AND = {
 					development = 50
-					num_of_times_expanded_infrastructure = 3
+					OR = {
+						num_of_times_expanded_infrastructure = 3
+						NOT = {
+							has_dlc = "Leviathan"
+						}
+					}
 					has_state_edict = edict_encourage_development
 					has_courthouse_building_trigger = yes
 					has_building = university
@@ -987,7 +992,17 @@ giberd_konwell_conquest = {
 		trigger = {
 			271 = {
 				development = 50
-				num_of_times_expanded_infrastructure = 3				# TODO: dlc check or 200 admin
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					num_of_times_expanded_infrastructure = 3
+				}
+				else = {
+					owner = {
+						adm_power = 200
+					}
+				}
 				has_courthouse_building_trigger = yes
 				has_building = university
 			}
@@ -1009,6 +1024,14 @@ giberd_konwell_conquest = {
 				}
 				remove_building = workshop
 				add_building = counting_house
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Leviathan"
+					}
+				}
+				add_adm_power = -200
 			}
 		}
 	}
@@ -1930,9 +1953,17 @@ giberd_mercantile_shipping = {
 				development = 25
 			}
 			NOT = {
-				num_of_times_expanded_infrastructure = 1
+				AND = {
+					num_of_times_expanded_infrastructure = 1
+					has_dlc = "Leviathan"
+				}
+				AND = {
+					has_trade_building_trigger = yes
+					NOT = {
+						has_dlc = "Leviathan"
+					}
+				}
 			}
-			# TODO: dlc check, alternative: marketplace
 		}
 		trigger = {
 			is_not_researching_invention = yes
@@ -1948,7 +1979,15 @@ giberd_mercantile_shipping = {
 							ai = no
 						}
 					}
-					num_of_times_expanded_infrastructure = 1
+					if = {
+						limit = {
+							has_dlc = "Leviathan"
+						}
+						num_of_times_expanded_infrastructure = 1
+					}
+					else = {
+						has_trade_building_trigger = yes
+					}
 				}
 			}
 		}
@@ -2019,7 +2058,6 @@ giberd_mercantile_shipping = {
 				}
 			}
 			custom_trigger_tooltip = {
-				# TODO: dlc check or decrease autonomy/scorch earth
 				tooltip = giberd_unbound_undertakings_tt
 				check_variable = {
 					which = giberd_bennonhill_exploited
@@ -2101,7 +2139,12 @@ giberd_mercantile_shipping = {
 			NOT = {
 				AND = {
 					development = 35
-					num_of_times_expanded_infrastructure = 2
+					OR = {
+						num_of_times_expanded_infrastructure = 2
+						NOT = {
+							has_dlc = "Leviathan"
+						}
+					}
 					has_state_edict = edict_advancement_effort
 				}
 			}
@@ -2109,7 +2152,12 @@ giberd_mercantile_shipping = {
 		trigger = {
 			capital_scope = {
 				development = 35
-				num_of_times_expanded_infrastructure = 2
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					num_of_times_expanded_infrastructure = 2
+				}
 				NOT = {
 					has_construction = any
 				}
