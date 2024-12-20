@@ -823,7 +823,7 @@
  loyal_trade_protectorate_title:0 "Indebted State"
  loyal_trade_protectorate_title_plural:0 "Indebted States"
  loyal_trade_protectorate_is_our:0 "§Y$NAME$§! is our Indebted State."
- loyal_trade_protectorate_long_desc:0 "Through a series of truly, truly unfortunate circumstances, $NAME$ has been forced to cede not only trade rights to our merchants, but also agree to put their foreign diplomacy under our control, placing them firmly under our thumb."
+ loyal_trade_protectorate_long_desc:0 "Through a series of truly, truly unfortunate circumstances, this nation has been forced to cede not only trade rights to our merchants, but also agree to put their foreign diplomacy under our control, placing them firmly under our thumb."
  loyal_trade_protectorate_overlord_bonus:0 "Probably should not show up? If it does, please ping @Magnive on the Discord server."
  
  # Trade Protectorate diplo
