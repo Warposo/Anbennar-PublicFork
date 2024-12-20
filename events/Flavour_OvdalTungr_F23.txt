@@ -2057,6 +2057,7 @@ country_event = {
 		custom_tooltip = bankruptcy_bailout
 
 		create_subject = { subject_type = trade_protectorate subject = FROM }
+		add_truce_with = FROM
 		FROM = {
 			remove_country_modifier = bankruptcy
 		}
@@ -2100,6 +2101,7 @@ country_event = {
 		custom_tooltip = bankruptcy_bailout
 
 		create_subject = { subject_type = loyal_trade_protectorate subject = FROM }
+		add_truce_with = FROM
 		FROM = {
 			remove_country_modifier = bankruptcy
 			hidden_effect = { every_ally = { break_alliance = FROM } }
