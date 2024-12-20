@@ -6806,15 +6806,15 @@ country_event = {
 				akasi = {
 					subtract_variable = {
 						which = gnollish_race_tolerance_ai
-						value = 15
+						value = 50
 					}
 					change_variable = {
 						which = harpy_race_tolerance_ai
-						value = 20
+						value = 30
 					}
 					change_variable = {
 						which = ogre_race_tolerance_ai
-						value = 10
+						value = 30
 					}
 				}
 				upper_raheni = {
