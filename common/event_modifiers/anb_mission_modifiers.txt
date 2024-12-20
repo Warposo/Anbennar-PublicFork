@@ -30010,7 +30010,7 @@ silver_touched_province = {
 }
 
 ekha_coastal_krahway_cleared = {
-	local_global_colonial_growth = 25
+	local_colonial_growth = 25
 	local_colonist_placement_chance = 0.1
 }
 

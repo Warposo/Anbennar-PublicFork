@@ -6803,6 +6803,19 @@ country_event = {
 						value = 20
 					}
 				}
+				akasi = {
+					subtract_variable = {
+						which = gnollish_race_tolerance_ai
+						value = 15
+					}
+					change_variable = {
+						which = harpy_race_tolerance_ai
+						value = 20
+					}
+					change_variable = {
+						which = ogre_race_tolerance_ai
+						value = 10
+					}
 				upper_raheni = {
 					change_variable = {
 						which = elven_race_tolerance_ai
