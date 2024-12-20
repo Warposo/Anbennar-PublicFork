@@ -1563,23 +1563,25 @@ J84_2_missions_part_2 = {
 			culture_group = orcish
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = {
-					AND = {
-						has_forcelimit_building_trigger = yes
-						has_building = training_fields
-						has_tax_building_trigger = yes
+				AND = {
+					NOT = {
+						AND = {
+							has_forcelimit_building_trigger = yes
+							has_building = training_fields
+							has_tax_building_trigger = yes
+						}
 					}
-				}
-			}
-			ROOT = {
-				NOT = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 10
-						culture_group = orcish
-						continent = south_america
-						has_forcelimit_building_trigger = yes
-						has_building = training_fields
-						has_tax_building_trigger = yes
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 10
+								culture_group = orcish
+								continent = south_america
+								has_forcelimit_building_trigger = yes
+								has_building = training_fields
+								has_tax_building_trigger = yes
+							}
+						}
 					}
 				}
 			}
