@@ -638,8 +638,7 @@
  flavour_ovdal_tungr.61.d:0 "[From.GetName] has declared bankruptcy, as debts upon debts pile up. However, they have come to us, asking us to take on their debts in exchange for becoming our Trade Protectorate.\n\nWhat is our response?"
  flavour_ovdal_tungr.61.a:0 "Yes, it will be worth our while."
  flavour_ovdal_tungr.61.e:0 "No, they are not worth the expenditure."
- bankruptcy_bailout:0 "Lose §Y[Root.cash_cost.GetValue]§! Crowns."
- bankruptcy_bailout_double:0 "Lose §Y[Root.cash_cost.GetValue]§! Crowns."
+ bankruptcy_bailout:0 "This will cost §Y[From.cash_cost.GetValue]§! Crowns."
 
  flavour_ovdal_tungr.62.t:0 "A request from [From.GetName]"
  flavour_ovdal_tungr.62.d:0 "Despite our oh so benevolent economic guidance, [From.GetName] has found itself forced to declare bankruptcy, but not before sending an envoy to [Root.Capital.GetCapitalName] to beg for us monetary aid.\n\nSince we have already extracted extensive trade concessions from them, they have little to offer in that regard, and so we are able to drive a hard bargain: in return for covering their debts, they agree to cede control of their foreign affairs, essentially turning them into an extension of our own state, all without any of the hassle of actually ruling them directly."

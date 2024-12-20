@@ -1994,6 +1994,19 @@ country_event = {
 			is_subject_of = F23
 		}
 	}
+
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = cash_cost
+				value = monthly_income
+			}
+			multiply_variable = {
+				which = cash_cost
+				value = 300 # 25 years of income.
+			}
+		}
+	}
 	
 	option = { # Yes (independent or non-trade protectorate subject)
 		trigger = { NOT = { OR = { 
@@ -2007,20 +2020,20 @@ country_event = {
 
 	option = { # Yes (trade protectorate)
 		trigger = { is_subject_of_type_with_overlord = { who = F23 type = trade_protectorate } }
-		name = flavour_ovdal_tungr.60.b
+		name = flavour_ovdal_tungr.60.a
 		ai_chance = { factor = 100 }
 		F23 = { country_event = { id = flavour_ovdal_tungr.62 } }
 	}
 
 	option = { # Yes (loyal trade protectorate)
 		trigger = { is_subject_of_type_with_overlord = { who = F23 type = loyal_trade_protectorate } }
-		name = flavour_ovdal_tungr.60.c
+		name = flavour_ovdal_tungr.60.a
 		ai_chance = { factor = 100 }
 		F23 = { country_event = { id = flavour_ovdal_tungr.63 } }
 	}
 
 	option = { # No
-		name = flavour_ovdal_tungr.60.e
+		name = flavour_ovdal_tungr.60.b
 		ai_chance = { factor = 0 }
 	}
 }
@@ -2034,26 +2047,12 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			export_to_variable = {
-				which = cash_cost
-				value = monthly_income
-				who = FROM
-			}
-			multiply_variable = {
-				which = cash_cost
-				value = 300 # 25 years of income.
-			}
-		}
-	}
-
 	option = { # Become trade protectorate.
 		name = flavour_ovdal_tungr.61.a
 		ai_chance = { factor = 0 }
 
+		hidden_effect = { set_variable = { which = cash_cost which = FROM } }
 		currency_effect = { currency = treasury takeFrom = ROOT which = cash_cost }
-
 		custom_tooltip = bankruptcy_bailout
 
 		create_subject = { subject_type = trade_protectorate subject = FROM }
@@ -2078,26 +2077,12 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			export_to_variable = {
-				which = cash_cost
-				value = monthly_income
-				who = FROM
-			}
-			multiply_variable = {
-				which = cash_cost
-				value = 300 # 25 years of income.
-			}
-		}
-	}
-
 	option = { # Become loyal trade protectorate.
 		name = flavour_ovdal_tungr.62.a
 		ai_chance = { factor = 0 }
 
+		hidden_effect = { set_variable = { which = cash_cost which = FROM } }
 		currency_effect = { currency = treasury takeFrom = ROOT which = cash_cost }
-
 		custom_tooltip = bankruptcy_bailout
 
 		create_subject = { subject_type = loyal_trade_protectorate subject = FROM }
@@ -2123,26 +2108,12 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			export_to_variable = {
-				which = cash_cost
-				value = monthly_income
-				who = FROM
-			}
-			multiply_variable = {
-				which = cash_cost
-				value = 300 # 25 years of income.
-			}
-		}
-	}
-
 	option = { # Already indebted
 		name = flavour_ovdal_tungr.63.a
 		ai_chance = { factor = 0 }
 
+		hidden_effect = { set_variable = { which = cash_cost which = FROM } }
 		currency_effect = { currency = treasury takeFrom = ROOT which = cash_cost }
-
 		custom_tooltip = bankruptcy_bailout
 
 		FROM = {
