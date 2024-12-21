@@ -2062,8 +2062,14 @@ crathanor_missions_slot_3 = {
 				area = awaashesh_area
 				area = masusopot_area
 			}
-			NOT = { 
-				country_or_non_sovereign_subject_holds = ROOT 
+			if = { limit = { ROOT = { OR = { is_subject_of = F23 alliance_with = F23 } } }
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = F23
+				}
+			}
+			else = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
@@ -2209,8 +2215,8 @@ crathanor_missions_slot_3 = {
 			if = {
 				limit = {
 					elizna_area = {
-						NOT = {
-							owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
 						}
 					}
 				}
@@ -2225,21 +2231,39 @@ crathanor_missions_slot_3 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						exists = L28
+						L28 = {
+							exists = yes
+							is_subject_of = ROOT
+						}
 					}
 					ohitsopot_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L28
 					}
 					coast_of_tears_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L28
 					}
 					mothers_delta_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L28
 					}
 					lower_sorrow_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L28
 					}
 					hitputtiushesh_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L28
 					}
 					L28 = {
@@ -2249,15 +2273,27 @@ crathanor_missions_slot_3 = {
 				}
 				if = {
 					limit = {
-						exists = L27
+						L27 = {
+							exists = yes
+							is_subject_of = ROOT
+						}
 					}	
 					ibtat_axast_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L27
 					}
 					awaashesh_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L27
 					}
 					masusopot_area = {
+						limit = {
+							country_or_subject_holds = ROOT
+						}
 						cede_province = L27
 					}
 					L27 = {
