@@ -349,14 +349,18 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = flavor_giberd.19.a
-		remove_government_reform = imperial_technocracy_republic_reform
+		hidden_effect = {
+			remove_government_reform = imperial_technocracy_republic_reform
+			remove_estate_privilege = estate_artificers_organization_giberd_magisterium_oversight
+		}
 		add_government_reform = technocracy_republic_reform
-		remove_estate_privilege = estate_artificers_organization_giberd_magisterium_oversight
 		set_estate_privilege = estate_artificers_organization_giberd_ravelian_guilds
 	}
 	option = {
 		name = flavor_giberd.19.b
-		remove_estate_privilege = estate_artificers_organization_giberd_magisterium_oversight
+		hidden_effect = {
+			remove_estate_privilege = estate_artificers_organization_giberd_magisterium_oversight
+		}
 		set_estate_privilege = estate_artificers_organization_giberd_beacon_of_harmony
 		set_estate_privilege = estate_mages_organization_giberd_beacon_of_harmony
 	}
