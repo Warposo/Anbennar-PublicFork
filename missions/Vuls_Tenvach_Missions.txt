@@ -1388,24 +1388,30 @@ G79_taychendi_5 = {
 					limit = {
 						has_personal_deity = taychend_glory_5
 					}
-					for = {
-						amount = 3
-						effect = "every_subject_country = { capital_scope = { add_random_development = -1 } overlord = { capital_scope = { add_random_development = 1 } } }"
+					every_subject_country = {
+						capital_scope = { add_random_development = -3 }
+						overlord = { 
+							capital_scope = { add_random_development = 3 }
+						}
 					}
 				}
 				else_if = {
 					limit = {
 						has_personal_deity = taychend_glory_3
 					}
-					for = {
-						amount = 2
-						effect = "every_subject_country = { capital_scope = { add_random_development = -1 } overlord = { capital_scope = { add_random_development = 1 } } }"
+					every_subject_country = {
+						capital_scope = { add_random_development = -2 }
+						overlord = { 
+							capital_scope = { add_random_development = 2 }
+						}
 					}
 				}
 				else = {
-					for = {
-						amount = 1
-						effect = "every_subject_country = { capital_scope = { add_random_development = -1 } overlord = { capital_scope = { add_random_development = 1 } } }"
+					every_subject_country = {
+						capital_scope = { add_random_development = -1 }
+						overlord = { 
+							capital_scope = { add_random_development = 1 }
+						}
 					}
 				}
 			}
