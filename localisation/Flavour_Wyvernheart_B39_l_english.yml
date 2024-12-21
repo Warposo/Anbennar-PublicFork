@@ -267,7 +267,6 @@
  flavour_wyvernheart.114.d:0 "The viscous liquid of the spawning pool bubbles, the sickly liquid seemingly boiling with rage.\nA vicious sound resounds as the newly branded Burnbloods come out of the pool, their eyes filled with anger.\nIn this state, they are at their most potent, and if unleashed upon an area, they could easily "pacify" the locals.\nWhat shall be done, my Sovereign?"
  flavour_wyvernheart.114.a:0 "Let them run free."
  flavour_wyvernheart.114.b:0 "Stop them!"
- wyvernheart_no_separatism_tt:0 "This will remove all separatism from [Root.GetName]"
 
  flavour_wyvernheart.115.t:0 "A region to Oversee ..."
  flavour_wyvernheart.115.d:0 "A map of the realm is sprawled out in front of the Sovereign, the representatives from the cliques awaiting the choice of the Sovereign.\n\nWhich region will be bestowed upon the new Overseer?"
