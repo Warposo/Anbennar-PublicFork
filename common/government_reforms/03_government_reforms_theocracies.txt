@@ -1217,6 +1217,7 @@ aakheta_ahati_reform = {
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
 	heir = no
+	republican_name = yes
 	rulers_can_be_generals = yes
 	
 	modifiers = {
