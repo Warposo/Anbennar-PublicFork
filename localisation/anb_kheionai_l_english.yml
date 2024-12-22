@@ -381,6 +381,9 @@
  kheionai_extra_gunpowder:0 "Advanced Gunpowder Warfare"
  kheionai_angered_elites:0 "Angered Elites"
  kheionai_renovation:0 "Warded City Renovation"
+ talented_ormabhen_class:0 "Talented Ormabhen Class"
+ tolerating_the_taychendi:0 "Tolerating the Taychendi"
+ detesting_the_taychendi:0 "Detesting the Taychendi"
  
  # tooltips
  kf_tt_kimanis_war: "One of our rivals will likely attempt to aid the rebellion."
