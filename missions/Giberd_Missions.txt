@@ -1883,8 +1883,9 @@ giberd_ryalanar_conquest = {
 				name = giberd_statesmen_occupied
 				duration = 180
 			}
-			country_event = {
+			country_event_with_insight = {
 				id = flavor_giberd.41
+				insight_tooltip = giberd_a_faire_to_remember_event_insight
 			}
 		}
 	}
