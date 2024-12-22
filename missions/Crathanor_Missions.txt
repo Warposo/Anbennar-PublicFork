@@ -2222,11 +2222,10 @@ crathanor_missions_slot_3 = {
 				add_adm_power = 50
 			}
 			else = {
-				elizna_area = {
-					if = { limit = { owner = { is_subject_of = ROOT } } 
-						cede_province = ROOT
-					}
-				}
+                elizna_area = {
+                    limit = { owner = { is_subject_of = ROOT } } 
+                    cede_province = ROOT
+                }
 			}
 			custom_tooltip = crathanor_north_kheterata_vassals.tt
 			hidden_effect = {
