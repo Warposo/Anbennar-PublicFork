@@ -290,7 +290,7 @@ J84_1_missions = {
 					region = mushroom_forest_region
 					trade_goods = fungi
 					NOT = {
-						has_production_building_trigger = yes
+						has_production_or_gold_building_trigger = yes
 					}
 				}
 			}
@@ -304,7 +304,7 @@ J84_1_missions = {
 			all_owned_province = {
 				OR = {
 					NOT = { has_terrain = mushroom_forest_terrain }
-					has_production_building_trigger = yes
+					has_production_or_gold_building_trigger = yes
 				}
 			}
 			accepted_culture = duguihi
