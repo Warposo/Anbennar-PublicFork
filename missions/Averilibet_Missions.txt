@@ -458,13 +458,15 @@ column_2 = {
 							culture = tanizu
 							culture = cyazizeta_lizardfolk
 						}
-						guaranteed_by = ROOT
 						trust = {
 							who = ROOT
 							value = 55
 						}
 						OR = {
-							is_subject = no
+							AND = {
+								guaranteed_by = ROOT
+								is_subject = no
+							}
 							is_subject_of = ROOT 
 						}
 					}
@@ -493,8 +495,13 @@ column_2 = {
 							culture = tanizu
 							culture = cyazizeta_lizardfolk
 						}
-						is_subject = no
-						guaranteed_by = ROOT
+						OR = {
+							AND = {
+								guaranteed_by = ROOT
+								is_subject = no
+							}
+							is_subject_of = ROOT 
+						}
 						trust = {
 							who = ROOT
 							value = 55
