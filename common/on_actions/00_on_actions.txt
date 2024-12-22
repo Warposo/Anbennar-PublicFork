@@ -6891,12 +6891,12 @@ on_bi_yearly_pulse_3 = {
 	if = { #Bulwar Age 1 Ability
 		limit = {
 			has_age_ability = ab_monstrous_rule
-			development_in_provinces = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
 				OR = {
 					culture_is_human = yes
 					culture_is_elven = yes
 				}
-				value = 100
 			}
 			OR = {
 				had_country_flag = { flag = age_ability_monstrous_rule_cooldown_flag days = 1825 }
