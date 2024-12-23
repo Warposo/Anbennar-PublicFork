@@ -2608,7 +2608,7 @@ country_event = {
 	}
 }
 
-# Event turning Crathanor into regular vassal if Ovdal Tûngr is annexed by someone else.
+# Event turning Crathanor into regular vassal if Ovdal Tungr is annexed by someone else.
 country_event = {
 	id = flavour_ovdal_tungr.9999
 	title = flavour_ovdal_tungr.9999.t
