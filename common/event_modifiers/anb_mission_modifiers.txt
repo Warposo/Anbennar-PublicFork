@@ -29983,7 +29983,7 @@ U08_sisterhood_entrenched = {
 }
 
 U08_vows_of_silver = {
-	liberty_desire = 15
+	reduced_liberty_desire_on_same_continent = 15
 	diplomatic_annexation_cost = -0.15
 }
 
@@ -30007,8 +30007,8 @@ silver_touched_province = {
 }
 
 ekha_coastal_krahway_cleared = {
-	global_colonial_growth = 25
-	colonist_placement_chance = 0.1
+	local_colonial_growth = 25
+	local_colonist_placement_chance = 0.1
 }
 
 U08_revitalized_vineyards = {
