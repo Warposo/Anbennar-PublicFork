@@ -11232,6 +11232,13 @@ on_province_culture_changed = {
             change_culture = metobesebi
         }
     }
+	if = {
+        limit = {
+            owner = { tag = G57 }
+            culture= mteibhar
+        }
+        owner = { remove_country_modifier = apikhoxi_good_enighbor }
+    }
 }
 
 
@@ -11877,6 +11884,41 @@ on_province_owner_change = {
 	if = {
 		limit = { owner = { has_country_flag = ameion_fotistrepei_flag } }
 		ameion_fotistrepei_effect_prov = yes
+	}
+	if = {
+		limit = { owner = { tag = G57 } }
+	
+		if = {
+			limit = {
+				owner = { has_country_modifier = apikhoxi_good_enighbor }
+				culture = mteibhar
+			}
+			owner = { remove_country_modifier = apikhoxi_good_enighbor }
+		}
+		if = {
+			limit = {
+				owner = { has_estate_privilege = estate_nobles_G57_land_golden_ears }
+				OR = {
+					trade_goods = livestock
+					trade_goods = grain
+				}
+			}
+			add_province_modifier = { name = estate_nobles_G57_land_golden_ears_modifier duration = -1 }
+		}
+		if = {
+			limit = {
+				owner = { has_estate_privilege = estate_nobles_G57_emerald_waters }
+				OR = {
+					has_port = yes
+					province_id = 2695
+					province_id = 2696
+					province_id = 2699
+					province_id = 2702
+					province_id = 2707
+				}
+			}
+			add_province_modifier = { name = estate_nobles_G57_emerald_waters_modifier duration = -1 }
+		}
 	}
 }
 
@@ -14319,6 +14361,23 @@ on_trade_good_changed = {
 		else = { add_province_modifier = { name = skewered_drake_crop_other duration = -1 hidden = yes } }
 	}
 
+	if = {
+		limit = {
+			owner = { has_estate_privilege = estate_nobles_G57_land_golden_ears }
+		}
+		if = {
+			limit = {
+				NOT = {
+					trade_goods = livestock
+					trade_goods = grain
+				}
+			}
+			remove_province_modifier = estate_nobles_G57_land_golden_ears_modifier
+		}
+		else = {
+			add_province_modifier = { name = estate_nobles_G57_land_golden_ears_modifier duration = -1  }
+		}
+	}
 
 	if = {
 		limit = {
