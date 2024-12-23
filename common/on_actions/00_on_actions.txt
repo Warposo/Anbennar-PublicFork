@@ -13544,6 +13544,12 @@ on_dependency_gained = {
 			FROM = { subject_ascension_effect = yes }
 		}
 	}
+
+	#Turning Ilatani March into vassal if another tag annexes Ovdal Tûngr.
+	if = { limit = { NOT = { tag = F23 } FROM = { is_subject_of_type = loyal_crathanor_subject } }
+		# Apparently can crash if done immediately, so moved to an event for a small delay?
+		FROM = { country_event = { id = flavour_ovdal_tungr.9999 } }
+	}
 }
 # ROOT = Overlord, FROM = Minor
 on_dependency_lost = {
