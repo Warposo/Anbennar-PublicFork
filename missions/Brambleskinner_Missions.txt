@@ -599,13 +599,20 @@ brambleskinner_3_1 = {
 				I37 = { is_subject_of = ROOT }
 				NOT = { exists = I37 }
 			}
-			custom_trigger_tooltip = { tooltip = brambleskinner_fort_or_money_tt }
 			if = {
 				limit = {
-					OR = {
+					NOT = {
 						capital_scope = { has_fort_building_trigger = yes }
 						I36 = { capital_scope = { has_fort_building_trigger = yes } }
 					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = brambleskinner_fort_or_money_200_tt
+					treasury = 200
+				}
+			}
+			else_if = {
+				limit = {
 					NOT = {
 						AND = {
 							capital_scope = { has_fort_building_trigger = yes }
@@ -613,16 +620,13 @@ brambleskinner_3_1 = {
 						}
 					}
 				}
-				treasury = 100
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						capital_scope = { has_fort_building_trigger = yes }
-						I36 = { capital_scope = { has_fort_building_trigger = yes } }
-					}
+				custom_trigger_tooltip = {
+					tooltip = brambleskinner_fort_or_money_100_tt
+					treasury = 100
 				}
-				treasury = 200
+			}
+			else = {
+				custom_trigger_tooltip = { tooltip = brambleskinner_fort_or_money_0_tt }
 			}
 		}
 
@@ -662,17 +666,22 @@ brambleskinner_3_1 = {
 				type = all
 				owned_by = B82
 			}
-			custom_trigger_tooltip = { 
-				tooltip = brambleskinner_workshop_or_money_tt
-				7016 = { base_production = 6 }
-				3030 = { base_production = 6 }
-			}
 			if = {
 				limit = {
-					OR = {
+					NOT = {
 						7016 = { has_production_building_trigger = yes }
 						3030 = { has_production_building_trigger = yes }
 					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = brambleskinner_workshop_or_money_200_tt
+					treasury = 200
+					7016 = { base_production = 6 }
+					3030 = { base_production = 6 }
+				}
+			}
+			else_if = {
+				limit = {
 					NOT = {
 						AND = {
 							7016 = { has_production_building_trigger = yes }
@@ -680,16 +689,19 @@ brambleskinner_3_1 = {
 						}
 					}
 				}
-				treasury = 150
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						7016 = { has_production_building_trigger = yes }
-						3030 = { has_production_building_trigger = yes }
-					}
+				custom_trigger_tooltip = {
+					tooltip = brambleskinner_workshop_or_money_100_tt
+					treasury = 100
+					7016 = { base_production = 6 }
+					3030 = { base_production = 6 }
 				}
-				treasury = 300
+			}
+			else = {
+				custom_trigger_tooltip = { 
+					tooltip = brambleskinner_workshop_or_money_0_tt
+					7016 = { base_production = 6 }
+					3030 = { base_production = 6 }
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = brambleskinner_advisor_adm_tt
@@ -708,10 +720,15 @@ brambleskinner_3_1 = {
 		effect = {
 			if = {
 				limit = {
-					OR = {
+					NOT = {
 						7016 = { has_production_building_trigger = yes }
 						3030 = { has_production_building_trigger = yes }
 					}
+				}
+				add_treasury = -200
+			}
+			else_if = {
+				limit = {
 					NOT = {
 						AND = {
 							7016 = { has_production_building_trigger = yes }
@@ -719,16 +736,7 @@ brambleskinner_3_1 = {
 						}
 					}
 				}
-				add_treasury = -150
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						7016 = { has_production_building_trigger = yes }
-						3030 = { has_production_building_trigger = yes }
-					}
-				}
-				add_treasury = -300
+				add_treasury = -100
 			}
 			if = {
 				limit = { 7016 = { NOT = { has_production_building_trigger = yes } } }
@@ -1344,52 +1352,41 @@ brambleskinner_5_1 = {
 			1303 = { #Dostanesck trade node
 				has_merchant = ROOT
 			}
-			custom_trigger_tooltip = { tooltip = brambleskinner_coastal_defence_or_money_tt }
 			if = {
 				limit = {
 					U11 = {
-						OR = {
+						NOT = {
 							coastal_defence = 1
 							naval_battery = 1
 						}
+					}
+				}
+				custom_trigger_tooltip = { 
+					tooltip = brambleskinner_coastal_defence_or_money_200_tt
+					treasury = 200
+				}
+			}
+			else_if = {
+				limit = {
+					U11 = {
 						NOT = {
 							coastal_defence = 2
 							naval_battery = 2
 						}
 					}
 				}
-				treasury = 100
-			}
-			else_if = {
-				limit = {
-					U11 = {
-						NOT = {
-							coastal_defence = 1
-							naval_battery = 1
-						}
-					}
+				custom_trigger_tooltip = { 
+					tooltip = brambleskinner_coastal_defence_or_money_100_tt
+					treasury = 100
 				}
-				treasury = 200
+			}
+			else = {
+				custom_trigger_tooltip = { tooltip = brambleskinner_coastal_defence_or_money_0_tt }
 			}
 		}
 
 		effect = {
 			if = {
-				limit = {
-					U11 = {
-						OR = {
-							coastal_defence = 1
-							naval_battery = 1
-						}
-						NOT = {
-							coastal_defence = 2
-							naval_battery = 2
-						}
-					}
-				}
-				add_treasury = -100
-			}
-			else_if = {
 				limit = {
 					U11 = {
 						NOT = {
@@ -1400,44 +1397,29 @@ brambleskinner_5_1 = {
 				}
 				add_treasury = -200
 			}
+			else_if = {
+				limit = {
+					U11 = {
+						NOT = {
+							coastal_defence = 2
+							naval_battery = 2
+						}
+					}
+				}
+				add_treasury = -100
+			}
 			if = {
-				limit = { 
+				limit = {
 					U11 = {
-						OR = {
-							coastal_defence = 1
-							naval_battery = 1
-						}
 						NOT = {
 							coastal_defence = 2
 							naval_battery = 2
 						}
 					}
-					510 = { NOT = { has_coast_defense_building_trigger = yes } }
 				}
-				510 = { 
-					add_building_construction = {
-						building = coastal_defence
-						speed = 1
-						cost = 0
-					}
-				}
-			}
-			else_if = {
-				limit = { 
-					U11 = {
-						OR = {
-							coastal_defence = 1
-							naval_battery = 1
-						}
-						NOT = {
-							coastal_defence = 2
-							naval_battery = 2
-						}
-						capital_scope = { NOT = { has_coast_defense_building_trigger = yes } }
-					}
-				}
-				U11 = {
-					capital_scope = { 
+				if = { 
+					limit = { 510 = { NOT = { has_coast_defense_building_trigger = yes } } }
+						510 = { 
 						add_building_construction = {
 							building = coastal_defence
 							speed = 1
@@ -1445,29 +1427,26 @@ brambleskinner_5_1 = {
 						}
 					}
 				}
-			}
-			else_if = {
-				limit = { 
-					U11 = {
-						NOT = {
-							coastal_defence = 1
-							naval_battery = 1
+				if = {
+					limit = {
+						U11 = { capital_scope = { NOT = { has_coast_defense_building_trigger = yes } } }
+						OR = {
+							510 = { has_coast_defense_building_trigger = yes }
+							U11 = {
+								NOT = {
+									coastal_defence = 1
+									naval_battery = 1
+								}
+							}
 						}
 					}
-				}
-				510 = { 
-					add_building_construction = {
-						building = coastal_defence
-						speed = 1
-						cost = 0
-					}
-				}
-				U11 = {
-					capital_scope = { 
-						add_building_construction = {
-							building = coastal_defence
-							speed = 1
-							cost = 0
+					U11 = {
+						capital_scope = { 
+							add_building_construction = {
+								building = coastal_defence
+								speed = 1
+								cost = 0
+							}
 						}
 					}
 				}
