@@ -7260,6 +7260,12 @@ country_event = {
 						value = 50
 					}
 				}
+				B02 = { #Corintar
+					change_variable = {
+						which = half_orcish_race_tolerance_ai
+						value = 35
+					}
+				}
 				F33 = { #Akalses
 					change_variable = {
 						which = centaur_race_tolerance_ai
