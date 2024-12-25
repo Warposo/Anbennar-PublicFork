@@ -1183,9 +1183,11 @@ newhavoral_4 = {
 				province_id = 1153
 				area = osindain_area
 			}
-			AND = {
-				has_production_or_gold_building_trigger = no
-				has_tax_building_trigger = no
+			NOT = {
+				AND = {
+					has_production_or_gold_building_trigger = yes
+					has_tax_building_trigger = yes
+				}
 			}
 		}
 		
