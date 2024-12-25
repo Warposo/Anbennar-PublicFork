@@ -492,6 +492,7 @@ country_event = { # #Poaching Station Raided
 		}
 		any_owned_province = {
 			has_province_modifier = H57_poaching_stations_modifier
+			NOT = {	has_province_modifier = H57_veykodan_attacks_modifier }
 		}
 	}
 	
