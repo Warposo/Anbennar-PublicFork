@@ -98,6 +98,7 @@ column_1 = {
 		provinces_to_highlight = { 
 			area = saposon_area 
 			NOT = {
+				owned_by_subject_of = ROOT
 				AND = {
 					owned_by = ROOT
 					OR = {
@@ -1497,7 +1498,10 @@ column_4 = {
                         area = werikafan_area 
                         area = fetengaben_area
                     }
-                    NOT = { is_core = ROOT }
+					NOT = { 
+						is_core = ROOT 
+						owned_by_subject_of = ROOT
+					}
                 }
                 AND = {
                     OR = {
