@@ -38,3 +38,9 @@ Z64 = {
 	culture_group = yanglam
 	is_core = Z64
 }
+
+#Cyranvar
+I45 = {
+	culture = wood_elf
+	is_core = I45
+}
