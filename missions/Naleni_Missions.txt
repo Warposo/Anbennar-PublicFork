@@ -148,7 +148,7 @@ Naleni_branch_two = {
 					owned_by = ROOT
 					OR = {
 						NOT = { has_tax_building_trigger = yes } 
-						unrest = 0.1
+						unrest = 0.01
 					}
 				}
 			}
@@ -169,7 +169,7 @@ Naleni_branch_two = {
 					AND = {
 						culture = ofehibi
 						has_tax_building_trigger = yes
-						NOT = { unrest = 0 } 
+						NOT = { unrest = 0.01 } 
 					}
 				}
 			}
