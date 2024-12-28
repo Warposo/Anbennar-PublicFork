@@ -1308,7 +1308,7 @@ federation_decrease_cohesion_all = { #works for not-president
 			clr_global_flag = lake_cohesion_2
 			#country_event = { id = splintering.1 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				NOT = {
 					has_global_flag = lake_cohesion_5
