@@ -374,7 +374,7 @@ country_event = { # cult of vherenar ambushes caravan
 		
 		add_estate_influence_modifier = {
 			estate = estate_burghers
-			desc = tf_taychend_ambushed_caravans
+			desc = EST_VAL_TF_AMBUSHED_CARAVAN
 			influence = 10
 			duration = 3650
 		}
