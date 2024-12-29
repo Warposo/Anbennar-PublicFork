@@ -534,7 +534,10 @@ vandipha_2 = {
 					}
 				}
 				AND = {
-					region = far_salahad_region
+					OR = {
+						area = zallirkor_area
+						area = dasmatus_area
+					}
 					owned_by_country_subject_or_trade_league = no
 				}
 			}
@@ -546,7 +549,12 @@ vandipha_2 = {
 				has_dock_building_trigger = yes
 				has_shipyard_building_trigger = yes
 			}
-			far_salahad_region = {
+			zallirkor_area = {
+				type = all
+				owned_by_country_subject_or_trade_league = yes
+			}
+			dasmatus_area = {
+				type = all
 				owned_by_country_subject_or_trade_league = yes
 			}
 			treasury = 1000
@@ -741,29 +749,19 @@ vandipha_3 = {
 				area = bedaphire_area
 				area = irkan_eparta_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {
 			bedaphire_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-				if = {
-					limit = {
-						owned_by = ROOT	
-					}
-					NOT = { has_construction = core }
-				}
+				NOT = { owned_by = L55 }
 			}
 			irkan_eparta_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-				if = {
-					limit = {
-						owned_by = ROOT	
-					}
-					NOT = { has_construction = core }
-				}
+				NOT = { owned_by = L55 }
 			}
 		}
 

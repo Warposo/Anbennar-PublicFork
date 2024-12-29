@@ -6,8 +6,10 @@ country_event = { #Choosing Heir
 	desc = flavour_suryavar.1.d
 	picture = 3_SONS_eventPicture
 	
+	is_triggered_only = yes
+
 	trigger = {
-		ruler_age = 30
+		ruler_age = 25
 		has_heir = no
 		has_government_attribute = suryavar_heirs
 		has_government_attribute = heir
