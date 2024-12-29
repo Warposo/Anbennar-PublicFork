@@ -4959,7 +4959,7 @@ taychendi_ruinborn_elf = {
 		}
 	}
 	thekvrystana = {
-		primary = G78 #Thekvrystan
+		primary = G78 #Ethanamara
 		dynasty_names = {
 			#From their leader names
 			Tenvachna
