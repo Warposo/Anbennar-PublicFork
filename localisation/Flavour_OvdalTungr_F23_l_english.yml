@@ -141,7 +141,6 @@
  F23_safe_sarhali_seas_tt:0 "Nations in Sarhal (other than Bulwar) will have an additional §G10§! reasons to accept the §YOffer Trade Protectorates§! diplomatic interaction, unlocked via the '§YThalassocracy§! government reform.\n"
  F23_safe_sarhali_seas_tt_institution_spread:0 "Institutions embraced by §Y[Root.GetName]§! will be spread to Sarhali provinces (including Bular) bordering an §YUthojdihr Trading Post§!, as well as centers of trades in trade nodes where §Y[Root.GetName]§! has a merchant.\n"
  F23_safe_sarhali_seas_tt_minority_spread:0 "Minorities will spread throughout our owned centers of trade in Sarhal and the Isle of Tef, with Human, Elven, Gnollish, Lizardfolk, and Halflings minorities increasing in size in World Ports, while these minority has a §Y50%§! chance of being added in Entrepots, and a §Y25%§! change of being added in Natural Harbors."
- F23_upstream_trade_unlock_tt:0 "New provinces will be unlocked for the §GUpstream Trade§! decision."
  F23_trade_node_requirements_trigger_tt_1:0 "One owned province in this trade node must have a level 3 center of trade (or any center of trade, without the Dharma DLC) and have had its infrastructure expanded at least twice (or have 30 development, without the Leviathan DLC)."
  F23_trade_node_requirements_trigger_tt_2:0 "One owned province in this trade node must have a level 3 center of trade (or any center of trade, without the Dharma DLC) and have had its infrastructure expanded at least twice (or have 30 development, without the Leviathan DLC)."
  
@@ -237,7 +236,7 @@
  # 10D
  F23_ironclads_title:0 "Ironclad, Steampowered"
  F23_ironclads_desc:0 "Since the advent of the steamship, their potential military application has been a conundrum that plagued our engineers. While all agree that we must harness the terrible power of steam to power our warships, every detail other than the method of propulsion has been under heavy debate for years.\n\nAfter a considerable amount of bickering, the engineering teams have finally settled on a coherent design. It is a ship clad entirely in metal, armored so that even cannonballs will simply bounce off of its mighty hull. Alas, for all its marvels, it was quickly determined that copper is simply unsuitable for such a purpose, and so we must turn to iron. To forge our new navy we must acquire a steady supply of iron, for only then may we begin to build what the engineers have dubbed 'Ironclads'."
- F23_ironclads_tt:0 "The base cost to take this decision is §Y50000.0§!¤, discounted by §Y10000.0§!¤ for every condition fulfilled after the first two."
+ F23_ironclads_tt:0 "The base cost to complete this is §Y50000.0§!¤, discounted by §Y10000.0§!¤ for every condition fulfilled after the first two."
 
  # 11E
  F23_the_sea_hold_title:0 "The Sea Hold"
@@ -253,7 +252,7 @@
  F23_center_of_the_world_trigger_tt:0 "No Great Power may have a larger navy or more monthly income than §Y[Root.GetName]§!, except for §Y[U17.GetName]§!."
 
  F23_coop_owned:0 "Must be owned by §Y[Root.GetName]§!, [U17.GetName] (if allied), or a subject of either." 
- F23_cannot_dig_why:0 "The §YFlooded Depths§! have prevented further digging in §Y[Root.GetName]§! for millennia. Maybe we can find some way to clear them..."
+ F23_cannot_dig_why:0 "The §YFlooded Depths§! have prevented further digging in §Y[Root.GetName]§! for millennia. Maybe we can find some way to clear them eventually..."
  F23_gift_maxed:0 "Has §G+25§! opinion from §YSent Gift§!."
  F23_subsidies_maxed:0 "Has §G+15§! opinion from §YReceiving Subsidies§!."
  F23_increased_sea_hold_capacity:0 "We will be able to fit an extra module onto the Sea Hold, though it can still only contain a total of 3 modifications."
@@ -747,15 +746,9 @@
  F23_copper_offer_effect_sell_subject_province_will_refuse_tt:0 "£no£ The overlord of the province owner has §Y125§! opinion of §Y[Root.GetName]§!.\n\nIf we improve relations, the following can happen:\n"
 
  # Decisions
- F23_fix_flooded_depths_title:0 "Clear the Flooded Depths"
- F23_fix_flooded_depths_desc:0 "For millennia, the depths of Ovdal Tûngr has been flooded. Thanks to recent advances in technology, we possess the means to clear these depths, though it will be expensive."
- 
  F23_encouraging_excess_decision_title:0 "Plan Bulwari Party"
  F23_encouraging_excess_decision_desc:0 "High fashion, fine arts, and fanciful promenades. Expensive endeavours, one and all: endeavors which we can weaponize against the rulers of Bulwar.\n\nBy spending - by Bulwari standards - significant sums of money on parties to display our wealth and prestige, we can put pressure on attending Bulwari rulers to follow suit... even if it means taking out a few loans.\n\nAfter all, most rulers would rather beggar themselves than look like papuers in front of their peers and subjects."
- 
- F23_get_out_of_hoardcurse_reform_title:0 "Change Economical Priorities"
- F23_get_out_of_hoardcurse_reform_desc:0 "In the aftermath of the Hoardcurse, concessions were made to our laborers, and we eventually amended our entire economic policy to alleviate the downsides. However, it is now time to abandon those prior reforms, so that we may focus on what truly matters: controlling the seas."
- 
+  
  F23_make_the_copper_offer_title:0 "Make the Copper Offer"
  F23_make_the_copper_offer_desc:0 "If there is one thing the Sun Elves and the humans of Bulwar have in common, it's the ability to squabble among each other and wage endless war of expansion. Such conflicts are expensive, however, and so the Bulwari nations may be willing to release important trading settlements into our sphere of influence: at least, if the price is right."
  F23_make_the_copper_offer_target_560:0 "Current target for the decision: [560.GetName]"
@@ -785,17 +778,9 @@
  F23_copper_offer_recipient_is_player:0 "The recipient or their overlord is a player."
  F23_copper_offer_recipient_becomes_trade_protectorate:0 "The province is owned by the tag is it named for, which must be independent, while having 150 opinion of and transferring trade power to §Y[Root.GetName]§!."
  F23_copper_offer_recipient_has_capital_here:0 "The target province is the capital of "
- 
- F23_upstream_trade_title:0 "Upstream Trade"
- F23_upstream_trade_desc:0 "Descriptive text here."
- F23_upstream_trade_tt:0 "We will lose the required light ships in any province where we have enough light ships in return for gaining trade power in trade nodes upstream from the province in question."
- 
+  
  F23_sea_hold_menu_trigger_tt:0 "Does not already have the Sea Hold Menu open."
- 
- F23_improved_trading_post_non_dlc_title:0 "Apply Uthojdihr Trading Posts"
- F23_improved_trading_post_non_dlc_desc:0 "Apply or update §YUthojdihr Trading Posts§! in all owned provinces."
- F23_improved_trading_post_non_dlc_tt:0 "This will also happen in all other owned centers of trade and estuaries with at least 15 development."
- 
+  
  # Misc
  F23_trade_concessions:0 "Trade Concessions"
  F23_silver_dwarf_no_slot_taken:0 "Accepting §YSilver Dwaef§! culture will not take up a §YAccepted Culture Slot§!."
@@ -833,7 +818,8 @@
  F23_the_port_hold:0 "The Port Hold"
  F23_the_port_hold_desc:0 "By rewriting our laws to better suit the needs of the Utjohdihr and promise protections and rights for their trading outposts, we will lay the foundations for the Uthojdihr to prosper and further their ability to wield their mercantile influence in centers of trade brought under their control."
  F23_the_port_hold_tt_1:0 "§YSpecial Government Mechanic:§!"
- F23_the_port_hold_tt_2:0 "This modifier will also be applied to all current and future owned centers of trade and estuaries with at least one level of expanded infrastructure. Furthermore, such provinces will have a dwarven minority added when expanding infrastructure, if not already present.\n"
+ F23_the_port_hold_tt_dlc:0 "This modifier will also be applied to all current and future owned centers of trade and estuaries with at least one level of expanded infrastructure. Furthermore, such provinces will have a dwarven minority added when expanding infrastructure, if not already present.\n"
+ F23_the_port_hold_tt_no_dlc:0 "This modifier will also be applied to all current owned centers of trade and estuaries with at least 15 development, as well as future provinces when their §Ybase production§! is increased while the overall development of the province is at or above §Y15§!. Furthermore, such provinces will have a dwarven minority added, if not already present.\n"
  F23_trading_post_oversight:0 "Trading Post Oversight"
  F23_trading_post_oversight_desc:0 "The Uthojdihr have traditionally enjoyed a high level of autonomy, and this is especially true in their overseas trading posts, which frequently operate like small, independent merchant republics. By introducing more oversight to these trading posts, we will not only be able to extract more resources directly from them, but the increased cooperation between trading posts will reduce competition between them and ultimately enrich us even further."
  F23_uthojdihr_backing:0 "Consolidation of Shipping Lanes"
