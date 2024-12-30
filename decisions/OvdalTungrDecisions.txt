@@ -2,6 +2,7 @@ country_decisions = {
 	F23_sea_hold_menu = {
 		major = yes
 		potential = {
+			ai = no
 			tag = F23
 			mission_completed = F23_the_sea_hold
 		}
@@ -64,7 +65,6 @@ country_decisions = {
 		}
 		
 		allow = {
-			hidden_trigger = { tag = F23 ai = no }
 			always = yes
 		}
 		
@@ -80,8 +80,8 @@ country_decisions = {
 	F23_encouraging_excess_decision = {
 		major = yes
 		potential = {
-			tag = F23
 			ai = no
+			tag = F23
 			mission_completed = F23_encouraging_excess
 		}
 		
@@ -102,7 +102,7 @@ country_decisions = {
 		}
 		
 		allow = {
-			hidden_trigger = { tag = F23 ai = no }
+			hidden_trigger = { ai = no }
 			F23_encouraging_excess_trigger = yes
 			if = { limit = { has_country_flag = F23_encouraging_excess_cooldown }
 				custom_trigger_tooltip = {
