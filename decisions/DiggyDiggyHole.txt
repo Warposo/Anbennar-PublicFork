@@ -1181,7 +1181,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			capital_scope = { continent = serpentspine }
-			ai = no # Unrealistic for the AI to do this.
 			NOT = { has_global_flag = reforged_dwarovkron }
 			NOT = { has_country_flag = no_more_dwarovkron }
 		}
@@ -1421,11 +1420,11 @@ country_decisions = {
 		}
 		
 		allow = {
-			dwarovar_orc_culture_ruler = yes
 			hold_province = {
 				owned_by = ROOT
 				has_province_modifier = infested_hold
 			}
+			dwarovar_orc_culture_ruler = yes
 			OR = {
 				government = monarchy
 				government = tribal
