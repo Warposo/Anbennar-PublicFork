@@ -5,9 +5,9 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
+			ai = yes
 			capital_scope = { province_group = hold_province }
 			NOT = { dwarovar_orc_culture_primary = yes } 
-			ai = yes
 		}
 		
 		provinces_to_highlight = {
@@ -51,10 +51,14 @@ country_decisions = {
 					limit = { has_province_modifier = incomplete_hold }
 					NOT = { has_province_modifier = incomplete_hold }
 				}
-				if = { limit = { has_province_modifier = F23_flooded_depths }
-					custom_trigger_tooltip = {
-						tooltip = F23_cannot_dig_why
-						always = no
+				if = {
+					limit = { has_province_flag = cannot_dig } # Generalized inability to dig.
+					if = {
+						limit = { ROOT = { tag = F23 } }
+						custom_trigger_tooltip = {
+							tooltip = F23_cannot_dig_why
+							always = no
+						}
 					}
 				}
 				hidden_trigger = { NOT = { has_province_modifier = incomplete_hold_0 } }
@@ -134,11 +138,11 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
-			has_country_flag = owns_hold_province
+			ai = yes
 			NOT = {
 				has_country_modifier = diggy_cooldown
 			}
-			ai = yes
+			has_country_flag = owns_hold_province
 			any_owned_province = {
 				province_group = hold_province
 				OR = {
@@ -443,10 +447,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			adm_tech = 12
-			OR = {
-				ai = no
-				capital_scope = { continent = serpentspine }
-			}
 			any_owned_province = {
 				has_terrain = dwarven_road
 				has_province_modifier = dwarovar_rail
@@ -509,10 +509,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			adm_tech = 18
-			OR = {
-				ai = no
-				capital_scope = { continent = serpentspine }
-			}
 			any_owned_province = {
 				has_terrain = dwarven_road
 				has_province_modifier = restored_rail
@@ -832,18 +828,18 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
-			amldihr_area = {
-				type = all
-				owned_by = ROOT
-			}
-			NOT = { has_global_flag = serpent_vale_irrigation }
-			NOT = { has_country_flag = repairing_irrigation }
 			NOT = {
 				OR = {
 					tag = J32
 					tag = J48
 				}
 			}
+			NOT = { has_global_flag = serpent_vale_irrigation }
+			amldihr_area = {
+				type = all
+				owned_by = ROOT
+			}
+			NOT = { has_country_flag = repairing_irrigation }
 			NOT = {
 				AND = {
 					has_global_flag = irrigation_east_done
@@ -900,10 +896,6 @@ country_decisions = {
 		potential = {
 			capital_scope = { continent = serpentspine }
 			adm_tech = 10
-			OR = {
-				ai = no
-				owns = 2963 # Hul-Jorkad
-			}
 			OR = {
 				has_country_modifier = dwarven_administration
 				has_country_modifier = goblin_administration
@@ -1168,9 +1160,8 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
-			capital_scope = { continent = serpentspine }
-			ai = no # Unrealistic for the AI to do this.
 			NOT = { has_global_flag = reforged_dwarovkron }
+			capital_scope = { continent = serpentspine }
 			NOT = { has_country_flag = no_more_dwarovkron }
 		}
 		
@@ -1300,8 +1291,8 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
-			capital_scope = { continent = serpentspine }
 			NOT = { has_global_flag = dwarovkron_agate_found }
+			capital_scope = { continent = serpentspine }
 		}
 		
 		provinces_to_highlight = {
@@ -1309,8 +1300,8 @@ country_decisions = {
 		}
 		
 		allow = {
-			2863 = { country_or_subject_holds = ROOT }
 			hidden_trigger = { NOT = { has_global_flag = dwarovkron_agate_found } }
+			2863 = { country_or_subject_holds = ROOT }
 			is_subject = no
 			has_discovered = 8
 			if = {
