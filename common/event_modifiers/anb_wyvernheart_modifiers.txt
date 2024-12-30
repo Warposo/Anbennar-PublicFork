@@ -191,7 +191,7 @@ wyvernheart_castonath_first_neg = {
 	development_cost = 0.10
 }
 wyvernheart_castonath_first_pos = {
-	development_cost = -0.25
+	local_development_cost = -0.25
 }
 wyvernheart_floodborn_academy = {
 	yearly_innovativeness = 0.25
