@@ -5,6 +5,7 @@ wyvernheart_iron_fist_rule = {
 wyvernheart_a_dream_in_out_hearts = {
 	num_accepted_cultures = -99
 	years_of_nationalism = -10
+	may_recruit_female_generals = yes
 }
 wyvernheart_home_in_our_hearts = {
 	local_culture_conversion_time = -0.20
