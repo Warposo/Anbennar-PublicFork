@@ -167,13 +167,13 @@ country_decisions = {
 		}
 		
 		allow = {
-			ai = yes
-			NOT = {
-				has_country_modifier = diggy_cooldown
-			}
 			hidden_trigger = {
 				has_country_flag = owns_hold_province
 			}
+			NOT = {
+				has_country_modifier = diggy_cooldown
+			}
+			ai = yes
 			if = {
 				limit = { ROOT = { dwarovar_orc_culture_primary = yes } }
 				capital_scope = {
@@ -479,6 +479,12 @@ country_decisions = {
 		}
 		
 		allow = {
+			hidden_trigger = {
+				OR = {
+					ai = no
+					capital_scope = { continent = serpentspine }
+				}
+			}
 			adm_tech = 16
 			treasury = 30
 			rail_can_construct = {
@@ -544,6 +550,12 @@ country_decisions = {
 		}
 		
 		allow = {
+			hidden_trigger = {
+				OR = {
+					ai = no
+					capital_scope = { continent = serpentspine }
+				}				
+			}
 			adm_tech = 21
 			treasury = 60
 			rail_can_construct = {
@@ -1409,21 +1421,21 @@ country_decisions = {
 		}
 		
 		allow = {
+			dwarovar_orc_culture_ruler = yes
+			hold_province = {
+				owned_by = ROOT
+				has_province_modifier = infested_hold
+			}
 			OR = {
 				government = monarchy
 				government = tribal
 			}
-			dwarovar_orc_culture_ruler = yes
 			has_regency = no
 			has_consort_regency = no
 			stability = 0
 			mil_power = 50
 			is_at_war = no
 			NOT = { has_ruler_modifier = blorc_recovering_from_ozarm }
-			hold_province = {
-				owned_by = ROOT
-				has_province_modifier = infested_hold
-			}
 		}
 		
 		effect = {
@@ -1449,8 +1461,8 @@ country_decisions = {
 		}
 		
 		allow = {
-			capital_scope = { province_group = hold_province }
 			hidden_trigger = { dwarovar_orc_culture_primary = yes }
+			capital_scope = { province_group = hold_province }
 			any_owned_province = { blorc_can_be_plundered = yes }
 			adm_power = 50
 			if = {
