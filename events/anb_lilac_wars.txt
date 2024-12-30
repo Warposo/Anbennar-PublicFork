@@ -33,97 +33,96 @@ country_event = { #Startup event handler
 				A20 = { country_event = { id = lilac_wars.47 days = 365 } } #Rubyhold
 				A12 = { country_event = { id = lilac_wars.48 days = 365 } } #Beepeck
 			}
-			if = {
-				limit = { culture_group = lencori }
-				if = {
-					limit = {
-						NOT = {
-							tag = B04 #Order of the Ashen Rose
-							tag = B11 #Company of the Thorn
-							tag = A10 #Minaran Temple
-							tag = A16 #Wineport
+			
+			trigger_switch = {
+				on_trigger = culture
+				lencori = {
+					if = {
+						limit = {
+							NOT = {
+								tag = B04 #Order of the Ashen Rose
+								tag = B11 #Company of the Thorn
+								tag = A10 #Minaran Temple
+								tag = A16 #Wineport
+							} 	
 						}
+						country_event = { id = lilac_wars.41 days = 365 }
 					}
 				}
-				country_event = { id = lilac_wars.41 days = 365 }
-			}
-			else = {
-				trigger_switch = {
-					on_trigger = culture
-					esmari = {
-						if = {
-							limit = {
-								NOT = {
-									tag = A43 #Ryalan Temple
-									tag = B08 #Gallant Friends
-								}
+				esmari = {
+					if = {
+						limit = {
+							NOT = {
+								tag = A43 #Ryalan Temple
+								tag = B08 #Gallant Friends
 							}
-							country_event = { id = lilac_wars.42 days = 365 }
 						}
+						country_event = { id = lilac_wars.42 days = 365 }
 					}
-					west_damerian = {
-						if = {
-							limit = {
-								NOT = {
-									tag = B06 #Warriors of Ancard
-									tag = A88 #Woodwell
-								}
+				}
+				west_damerian = {
+					if = {
+						limit = {
+							NOT = {
+								tag = B06 #Warriors of Ancard
+								tag = A88 #Woodwell
 							}
-							country_event = { id = lilac_wars.43 days = 365 }
 						}
+						country_event = { id = lilac_wars.43 days = 365 }
 					}
-					east_damerian = {
-						if = {
-							limit = {
-								NOT = {
-									tag = B07 #Sons of Dameria
-									tag = B05 #Pioneer's Guild
-									tag = A85 #Magisterium
-									tag = A41 #Damish Temple
-								}
+				}
+				east_damerian = {
+					if = {
+						limit = {
+							NOT = {
+								tag = B07 #Sons of Dameria
+								tag = B05 #Pioneer's Guild
+								tag = A85 #Magisterium
+								tag = A41 #Damish Temple
 							}
-							country_event = { id = lilac_wars.43 days = 365 }
 						}
+						country_event = { id = lilac_wars.43 days = 365 }
 					}
-					anbenncoster = {
-						if = {
-							limit = {
-								NOT = {
-									tag = B16 #Anbencost Expedition
-								}
+				}
+				anbenncoster = {
+					if = {
+						limit = {
+							NOT = {
+								tag = B16 #Anbencost Expedition
 							}
-							country_event = { id = lilac_wars.43 days = 365 }
 						}
+						country_event = { id = lilac_wars.43 days = 365 }
 					}
-					arbarani = {
+				}
+				arbarani = {
+					country_event = { id = lilac_wars.44 days = 365 }
+				}
+				crownsman = {
+					if = {
+						limit = {
+							NOT = {
+								tag = B09 #House of Riches
+							}
+						}
 						country_event = { id = lilac_wars.44 days = 365 }
 					}
-					crownsman = {
-						if = {
-							limit = {
-								NOT = {
-									tag = B09 #House of Riches
-								}
+				}
+				wexonard = {
+					country_event = { id = lilac_wars.45 days = 365 }
+				}
+				moon_elf = {
+					if = {
+						limit = {
+							NOT = {
+								tag = A83 #Silent Repose
+								tag = Z22 #Celmador
 							}
-							country_event = { id = lilac_wars.44 days = 365 }
 						}
-					}
-					wexonard = {
-						country_event = { id = lilac_wars.45 days = 365 }
-					}
-					moon_elf = {
-						if = {
-							limit = {
-								NOT = {
-									tag = A83 #Silent Repose
-									tag = Z22 #Celmador
-								}
-							}
-							country_event = { id = lilac_wars.46 days = 365 }
-						}
+						country_event = { id = lilac_wars.46 days = 365 }
 					}
 				}
 			}
+
 			if = {
 				limit = { tag = A95 }
 				hidden_effect = {
