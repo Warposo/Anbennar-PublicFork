@@ -688,12 +688,10 @@ wyvernheart_column_2 = {
 						value = 60
 					}
 					AND = {
-						else = {
-							advisor = spymaster
-							has_spy_network_in = {
-								who = A13
-								value = 30
-							}
+						advisor = spymaster
+						has_spy_network_in = {
+							who = A13
+							value = 30
 						}
 					}
 				}
