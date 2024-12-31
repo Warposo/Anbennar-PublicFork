@@ -1373,6 +1373,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			ai = no
+			culture_group = orcish
 			dwarovar_orc_culture_primary = yes
 		}
 		
@@ -1405,6 +1406,8 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
+			has_country_flag = owns_hold_province
+			culture_group = orcish
 			dwarovar_orc_culture_primary = yes
 			NOT = { has_reform = roadwarrior_great_convoy }
 			hold_province = {
@@ -1420,6 +1423,7 @@ country_decisions = {
 		}
 		
 		allow = {
+			hidden_trigger = { has_country_flag = owns_hold_province }
 			hold_province = {
 				owned_by = ROOT
 				has_province_modifier = infested_hold
@@ -1450,6 +1454,7 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
+			culture_group = orcish
 			dwarovar_orc_culture_primary = yes
 			NOT = { has_reform = roadwarrior_great_convoy }
 			NOT = { has_country_flag = open_hold_plunder_menu }
@@ -1460,9 +1465,13 @@ country_decisions = {
 		}
 		
 		allow = {
-			hidden_trigger = { dwarovar_orc_culture_primary = yes }
+			hidden_trigger = { 
+				culture_group = orcish 
+				has_country_flag = owns_hold_province 
+			}
 			capital_scope = { province_group = hold_province }
 			any_owned_province = { blorc_can_be_plundered = yes }
+			hidden_trigger = { dwarovar_orc_culture_primary = yes }
 			adm_power = 50
 			if = {
 				limit = { NOT = { has_country_flag = blorc_plunder_capital_set } }
@@ -1491,8 +1500,9 @@ country_decisions = {
 		color = { 33 64 96 }
 		major = yes
 		potential = {
-			dwarovar_orc_culture_primary = yes
 			has_country_flag = blorc_plunder_capital_set
+			culture_group = orcish
+			dwarovar_orc_culture_primary = yes
 			NOT = { has_reform = roadwarrior_great_convoy }
 			NOT = { has_country_flag = open_plunder_fort_menu }
 		}
@@ -1508,7 +1518,7 @@ country_decisions = {
 		}
 		
 		allow = {
-			hidden_trigger = { dwarovar_orc_culture_primary = yes }
+			hidden_trigger = { culture_group = orcish dwarovar_orc_culture_primary = yes }
 			if = {
 				limit = { ai = yes }
 				treasury = 200

@@ -296,7 +296,6 @@ runelink_upkeep_maintained = {
 }
 
 dwarovar_goblin_culture = {
-	culture_group = goblin
 	OR = {
 		culture = cave_goblin
 		culture = undergrowth_goblin
@@ -312,7 +311,6 @@ dwarovar_goblin_culture = {
 }
 
 dwarovar_goblin_culture_primary = {
-	culture_group = goblin
 	OR = {
 		primary_culture = cave_goblin
 		primary_culture = undergrowth_goblin
@@ -328,7 +326,6 @@ dwarovar_goblin_culture_primary = {
 }
 
 dwarovar_goblin_culture_ruler = {
-	has_ruler_flag = goblin_ruler
 	OR = {
 		ruler_culture = cave_goblin
 		ruler_culture = undergrowth_goblin
@@ -344,7 +341,6 @@ dwarovar_goblin_culture_ruler = {
 }
 
 dwarovar_goblin_culture_heir = {
-	has_heir_flag = goblin_heir
 	OR = {
 		heir_culture = cave_goblin
 		heir_culture = undergrowth_goblin
@@ -360,7 +356,6 @@ dwarovar_goblin_culture_heir = {
 }
 
 dwarovar_goblin_culture_consort = {
-	has_consort_flag = goblin_consort
 	OR = {
 		consort_culture = cave_goblin
 		consort_culture = undergrowth_goblin
@@ -422,7 +417,6 @@ dwarovar_goblin_culture_advisor_of_category = {
 
 
 dwarovar_orc_culture = {
-	culture_group = orcish
 	OR = {
 		culture = black_orc
 		culture = moltenbrand_orc
@@ -437,7 +431,6 @@ dwarovar_orc_culture = {
 }
 
 dwarovar_orc_culture_primary = {
-	culture_group = orcish
 	OR = {
 		primary_culture = black_orc
 		primary_culture = moltenbrand_orc
@@ -452,7 +445,6 @@ dwarovar_orc_culture_primary = {
 }
 
 dwarovar_orc_culture_ruler = {
-	has_ruler_flag = orcish_ruler
 	custom_trigger_tooltip = {
 		tooltip = dwarovar_orc_culture_ruler_tooltip
 		OR = {
@@ -470,7 +462,6 @@ dwarovar_orc_culture_ruler = {
 }
 
 dwarovar_orc_culture_heir = {
-	has_heir_flag = orcish_heir
 	OR = {
 		heir_culture = black_orc
 		heir_culture = moltenbrand_orc
@@ -485,7 +476,6 @@ dwarovar_orc_culture_heir = {
 }
 
 dwarovar_orc_culture_consort = {
-	has_consort_flag = orcish_consort
 	OR = {
 		consort_culture = black_orc
 		consort_culture = moltenbrand_orc
