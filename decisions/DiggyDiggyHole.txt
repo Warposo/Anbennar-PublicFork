@@ -646,7 +646,10 @@ country_decisions = {
 			OR = {
 				culture_group = dwarven
 				culture_group = orcish
-				dwarovar_goblin_culture_primary = yes
+				AND = {
+					culture_group = goblin
+					dwarovar_goblin_culture_primary = yes
+				}
 				culture_group = kobold
 			}
 		}
