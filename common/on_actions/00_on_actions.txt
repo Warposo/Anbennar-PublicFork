@@ -3471,7 +3471,8 @@ on_diplomatic_annex = {
 # country
 on_heir_death = {
 	events = {
-		flavor_duwarkani.4 #Duwarkani failsafe
+	#	flavor_duwarkani.4 #Duwarkani failsafe
+		harpy_events.301
 	}
 	if = { #Delayed because elective heirs doesn't show up immediatly
 		limit = { has_reform = magisterium_reform }
@@ -3541,6 +3542,14 @@ on_heir_death = {
 		clr_country_flag = oni_heir_ajgriijarul
 		clr_country_flag = oni_heir_kabiurgarko
 		clr_country_flag = oni_heir_khelorvalshi
+	}
+	if = {
+		limit = {
+			has_country_flag = male_harpy_begone
+		}
+		country_event = {
+			id = harpy_events.301
+		}
 	}
 	clr_country_flag = theo_local_noble_flag #Anbennar - Fix for bugged devotion events due to being incompatible/ineligible with the same heir selection event
 	clr_country_flag = theo_foreign_noble_flag
@@ -3695,27 +3704,8 @@ on_new_heir = {
 	}
 	if = { limit = { heir_is_harpy = yes }
 		if = { limit = { has_female_heir = no }
-			if = { limit = { culture_group = harpy }
-				define_heir = {
-					dynasty = original_dynasty
-					culture = ROOT
-					female = yes
-				}
-			}
-			else_if = { limit = { tag = F62 } #Duwarkani
-				define_heir = {
-					dynasty = "Menkaunswt"
-					culture = nzeri_harpy
-					female = yes
-				}
-			}
-			else = {
-				define_heir = {
-					dynasty = original_dynasty
-					culture = firanyan_harpy
-					female = yes
-				}
-			}
+			set_country_flag = male_harpy_begone
+			kill_heir = { allow_new_heir = no }	
 		}
 		else = {
 			country_event = { id = harpy_events.102 }
