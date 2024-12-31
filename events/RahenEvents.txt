@@ -1027,7 +1027,7 @@ country_event = { #tiger ziggurat
 
 	option = {
 		name = rahen.22.b
-		add_years_of_income = 1
+		add_years_of_income = 0.5
 		add_prestige = -15
 	}
 }
@@ -1062,7 +1062,7 @@ country_event = { #elephant ziggurat
 
 	option = {
 		name = rahen.23.b
-		add_years_of_income = 1
+		add_years_of_income = 0.5
 		add_prestige = -15
 	}
 }
@@ -1092,7 +1092,7 @@ country_event = { #grand pilgrimage
 	option = {
 		name = rahen.24.a
 		add_prestige = 15
-		add_years_of_income = 2
+		add_years_of_income = 1
 	}
 
 	option = {
@@ -1103,7 +1103,7 @@ country_event = { #grand pilgrimage
 			}
 		}
 		add_prestige = 15
-		add_years_of_income = 4
+		add_years_of_income = 2
 		add_country_modifier = {
 			name = pilgrim_piety
 			duration = 1825
