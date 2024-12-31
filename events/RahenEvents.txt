@@ -1099,7 +1099,10 @@ country_event = { #grand pilgrimage
 		name = rahen.24.b
 		trigger = {
 			pilgrims_road_area = {
-				has_province_modifier = R51_pilgrims_road
+				OR = {
+					has_province_modifier = R51_pilgrims_road
+					has_province_modifier = pasiragha_mod_though_highway
+				}
 			}
 		}
 		add_prestige = 15
