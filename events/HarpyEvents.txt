@@ -2452,7 +2452,8 @@ country_event = {
 	}
 }
 
-country_event = {
+#MALE HARPY REPLACEMENT EVENT - see on_heir_death
+country_event = { 
 	id = harpy_events.301
 	title = harpy_events.202.t
 	desc = harpy_events.202.d
