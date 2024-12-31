@@ -3703,7 +3703,7 @@ on_new_heir = {
 	}
 	if = { limit = { heir_is_harpy = yes }	
 		if = { limit = { has_female_heir = no } #male harpy replacement
-			set_country_flag = male_harpy_begone #this triggers an if clause in on_heir_death
+			set_country_flag = male_harpy_begone #this triggers an if clause in on_heir_death - RNG is fixed in this on_action so to generate randomly statted heirs they need to be made elsewhere.
 			kill_heir = { allow_new_heir = no }	
 		}
 		else = {
