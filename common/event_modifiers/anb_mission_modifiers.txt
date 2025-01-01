@@ -7445,7 +7445,7 @@ giberd_leader_brillites = {
 	artificers_loyalty_modifier = -0.10
 	artificers_capacity = 3
 	yearly_corruption = 0.20
-	monthly_reform_progress_modifier -0.50 # TODO: broken?
+	monthly_reform_progress_modifier = -0.50
 	advisor_cost = 0.25
 	expand_administration_cost = -0.20
 	governing_cost = -0.10
@@ -24289,7 +24289,7 @@ Y26_nobles_defeated_local = {
 }
 
 Y26_land_redistribution = {
-	min_local_autonomy = 0.2
+	min_local_autonomy = 20
 }
 
 Y26_fading_is_the_harvest_moon_mod = {
@@ -27005,9 +27005,6 @@ F23_steam_powered_navy = {
 	global_naval_engagement_modifier = -0.15
 	global_ship_trade_power = 0.2
 	transport_attrition	= -0.5
-}
-free_slot_for_silver_dwarf = {
-	num_accepted_cultures = 1
 }
 F23_reform_progress_mod_1 = { monthly_reform_progress = 0.1 }
 F23_reform_progress_mod_2 = { monthly_reform_progress = 0.2 }
@@ -29986,7 +29983,7 @@ U08_sisterhood_entrenched = {
 }
 
 U08_vows_of_silver = {
-	liberty_desire = 15
+	reduced_liberty_desire_on_same_continent = 15
 	diplomatic_annexation_cost = -0.15
 }
 
@@ -30010,8 +30007,8 @@ silver_touched_province = {
 }
 
 ekha_coastal_krahway_cleared = {
-	global_colonial_growth = 25
-	colonist_placement_chance = 0.1
+	local_colonial_growth = 25
+	local_colonist_placement_chance = 0.1
 }
 
 U08_revitalized_vineyards = {
@@ -31483,6 +31480,8 @@ I90_goblin_kelaktar = {
 	local_development_cost = -0.2
 	local_defensiveness = 0.15
 	local_manpower_modifier = 0.25
+	local_religious_unity_contribution = -1
+	local_tolerance_of_heathens = 3
 }
 
 I90_goblin_auxilliaries = {
@@ -32864,6 +32863,7 @@ L62_raheni_slave_trade = {
 L62_baashidi_alliance = {
 	has_voc_indiamen = yes
 	allowed_voc_indiamen_fraction = 0.1
+	artillery_fire = 0.2
 }
 
 L62_coffee_for_mages = {
@@ -32877,6 +32877,23 @@ L62_the_true_mezhi_mezhi = {
 
 L62_liberator_of_humans = {
 	diplomatic_reputation = 2
+}
+
+L62_major_slave_entrepot = {
+	province_trade_power_value = 5
+	trade_goods_size = 0.5
+}
+
+L62_campaigns_of_enlightenment = {
+	land_morale = 0.1
+	ae_impact = -0.1
+	reduced_liberty_desire_on_same_continent = 25
+}
+
+L62_masters_of_the_civilized_horizon = {
+	land_morale = 0.1
+	ae_impact = -0.2
+	monthly_piety_accelerator = 0.001
 }
 
 L62_receeding_gnoll_population = {
@@ -32923,6 +32940,11 @@ L62_sailors_from_subjects = {
 	naval_forcelimit = 2
 }
 
+L62_mengi_prabhi = {
+	global_tax_modifier = 0.2
+	global_trade_goods_size_modifier = 0.1
+}
+
 L62_minor_slave_shortage = {
 	trade_efficiency = -0.1
 }
@@ -32953,6 +32975,11 @@ L62_good_ally = {
 L62_great_power_partner = {
 	prestige_decay = -0.01
 }
+
+L62_hp_loyalists = {
+	liberty_desire = -25
+}
+
 raithtall_peitar_rebuilders = {
 	local_build_cost = -0.25
 	local_build_time = -0.25
@@ -33220,7 +33247,7 @@ S53_diplomatic_husband_lvl2 = {
 
 S53_diplomatic_husband_lvl3 = {
 	dip_advisor_cost = -0.3
-	improve_relation_modifier = -0.2
+	improve_relation_modifier = 0.2
 	monthly_favor_modifier = 0.2
 	ae_impact = -0.1
 }
