@@ -2481,7 +2481,6 @@ country_event = {
 		else_if = {
 			limit = { 
 				tag = F62 #Duwarkani
-				has_country_flag = male_harpy_begone 
 			}
 				define_heir = {
 					dynasty = "Menkaunswt"
