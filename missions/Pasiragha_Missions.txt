@@ -1319,6 +1319,7 @@ pasiragha_missions_middle_3 = {
 					dip_power = 100
 					OR = {
 						overlord = {
+							religion_group = raheni
 							NOT = { has_matching_religion = ROOT }
 							has_opinion = {
 								who = ROOT
@@ -1330,6 +1331,7 @@ pasiragha_missions_middle_3 = {
 							}
 						}
 						any_ally = {
+							religion_group = raheni
 							NOT = { has_matching_religion = ROOT }
 							has_opinion = {
 								who = ROOT
@@ -1342,11 +1344,20 @@ pasiragha_missions_middle_3 = {
 						}
 					}
 				}
-				#just in case you are the last of your kind
+				#just in case you are the last of your kind or no heretic country left
 				hidden_trigger = {
-					NOT ={
-						any_country = {
-							religion_group = raheni		
+					OR = {
+						NOT ={
+							any_country = {
+								religion_group = raheni		
+							}
+						}
+						calc_true_if = {
+							any_country = {
+								religion_group = raheni
+								NOT = { has_matching_religion = ROOT }
+							}
+							amount = 0
 						}
 					}
 				}
