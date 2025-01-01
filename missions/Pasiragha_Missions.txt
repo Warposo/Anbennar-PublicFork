@@ -1319,6 +1319,7 @@ pasiragha_missions_middle_3 = {
 					dip_power = 100
 					OR = {
 						overlord = {
+							NOT = { has_matching_religion = ROOT }
 							has_opinion = {
 								who = ROOT
 								value = 95
@@ -1329,6 +1330,7 @@ pasiragha_missions_middle_3 = {
 							}
 						}
 						any_ally = {
+							NOT = { has_matching_religion = ROOT }
 							has_opinion = {
 								who = ROOT
 								value = 95
@@ -1358,6 +1360,17 @@ pasiragha_missions_middle_3 = {
 				if = {
 					limit = {
 						is_subject = yes
+						overlord = {
+							NOT = { has_matching_religion = ROOT }
+							has_opinion = {
+								who = ROOT
+								value = 95
+							}
+							owes_favors = {
+								who = ROOT
+								value = 40
+							}
+						}
 					}
 					overlord = {
 						country_event = { 
@@ -1370,6 +1383,7 @@ pasiragha_missions_middle_3 = {
 				else = {
 					random_ally = {
 						limit = {
+							NOT = { has_matching_religion = ROOT }
 							has_opinion = {
 								who = ROOT
 								value = 95
