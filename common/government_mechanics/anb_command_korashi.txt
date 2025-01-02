@@ -50,47 +50,47 @@ command_korashi_mechanic = {
 					}
 				}
 				else = {
-					legitimacy = 10
+					legitimacy = 50
 					if = {
 						limit = { has_estate = estate_boar_command }
 						estate_loyalty = {
 							estate = estate_boar_command
-							loyalty = 10
+							loyalty = 30
 						}
 					}
 					if = {
 						limit = { has_estate = estate_lion_command }
 						estate_loyalty = {
 							estate = estate_lion_command
-							loyalty = 10
+							loyalty = 30
 						}
 					}
 					if = {
 						limit = { has_estate = estate_wolf_command }
 						estate_loyalty = {
 							estate = estate_wolf_command
-							loyalty = 10
+							loyalty = 30
 						}
 					}
 					if = {
 						limit = { has_estate = estate_dragon_command }
 						estate_loyalty = {
 							estate = estate_dragon_command
-							loyalty = 10
+							loyalty = 30
 						}
 					}
 					if = {
 						limit = { has_estate = estate_elephant_command }
 						estate_loyalty = {
 							estate = estate_elephant_command
-							loyalty = 10
+							loyalty = 30
 						}
 					}
 					if = {
 						limit = { has_estate = estate_tiger_command }
 						estate_loyalty = {
 							estate = estate_tiger_command
-							loyalty = 10
+							loyalty = 30
 						}
 					}
 				}
