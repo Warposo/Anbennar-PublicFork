@@ -1522,6 +1522,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			capital_scope = { continent = serpentspine }
+			NOT = { religion = runefather_worship }
 			if = {
 				limit = { ai = no }
 				has_country_modifier = accepted_runefather_2
