@@ -16434,7 +16434,7 @@ F23_sea_hold_permadock_effect = {
 		if = { limit = { owner = { has_country_flag = F23_sea_hold_artisan_enabled } } set_province_flag = F23_sea_hold_artisan } 
 		if = { limit = { owner = { has_country_flag = F23_sea_hold_settlement_enabled } } set_province_flag = F23_sea_hold_settlement }
 	}
-	clr_province_flag = F23_sea_hold_docked_country
+	clr_country_flag = F23_sea_hold_docked_country
 	clr_country_flag = F23_sea_hold_active
 	
 	clr_country_flag = F23_sea_hold_ramparts_enabled
