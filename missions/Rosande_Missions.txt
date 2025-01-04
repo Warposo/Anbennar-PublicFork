@@ -678,21 +678,26 @@ rosande_2_missions = {
 					duration = -1
 				}
 			}
-			729 = {
-				owner = {
-					reverse_add_casus_belli = {
-						target = ROOT
-						type = cb_trade_conflict
-						months = 240
+			custom_tooltip = rosande_balmire_athfork.tt
+			hidden_effect = {
+				729 = { #Athfork
+					owner = {
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_trade_conflict
+							months = 240
+						}
 					}
 				}
 			}
-			229 = { #Bal Mire
-				owner = {
-					reverse_add_casus_belli = {
-						target = ROOT
-						type = cb_trade_conflict
-						months = 240
+			hidden_effect = {
+				229 = { #Bal Mire
+					owner = {
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_trade_conflict
+							months = 240
+						}
 					}
 				}
 			}
