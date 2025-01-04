@@ -1106,7 +1106,7 @@ province_event = {
 					claim = 95
 					female = no
 				}
-
+				set_ruler_flag = h35_godwin_alive
 				country_event = { id = anb_miscevents.22 } # new country setup
 			}
 
@@ -1143,7 +1143,7 @@ province_event = {
 					claim = 95
 					female = no
 				}
-
+				set_ruler_flag = h35_godwin_alive
 				country_event = { id = anb_miscevents.22 } # new country setup
 			}
 

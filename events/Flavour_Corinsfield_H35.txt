@@ -87,7 +87,11 @@ country_event = { #dams and domes
             }
         }
         1142 = { destroy_great_project = { type = ynnic_precursor_dome_stanyrhrada } }
-        #paranoia increase
+        add_government_power = {
+            mechanic_type = corinsfield_paranoia_mechanic
+            power_type = corinsfield_paranoia_power
+            value = 8
+        }
     }
 }
 country_event = { #magical dome
@@ -101,7 +105,11 @@ country_event = { #magical dome
     option = {
         name = flavour_corinsfield.5.a
         destroy_great_project = { type = ynnic_precursor_dome_stanyrhrada }
-        #large paranoia increase
+        add_government_power = {
+            mechanic_type = corinsfield_paranoia_mechanic
+            power_type = corinsfield_paranoia_power
+            value = 12
+        }
         every_known_country = {
             if = {
                 limit = {
@@ -470,17 +478,19 @@ country_event = { #veykodan raids / war . random events
     desc = flavour_corinsfield.17.d
     picture = COSSACK_ESTATE_RAIDERS_eventPicture
     is_triggered_only = yes
-
-    option = {
-        name = flavour_corinsfield.17.a
+    immediate = {
         random_owned_province = {
             limit = {
-                OR = {
-                    has_ruinborn_minority_trigger = yes
-                    culture = veykodan
-                }
                 region = veykoda_region
+                has_ruinborn_minority_trigger = yes
+                culture = veykodan
             }
+            save_event_target_as = veykoda_raid_target
+        }
+    }
+    option = {
+        name = flavour_corinsfield.17.a
+        event_target:veykoda_raid_target = {
             spawn_rebels = {
                 size = 2
                 type = veykoda_raiders
@@ -488,6 +498,7 @@ country_event = { #veykodan raids / war . random events
             remove_ruinborn_minority_size_effect = yes
         }
         custom_tooltip = h35_minority_join_veykodans
+        set_country_flag = h35_sentries_raid
     }
 }
 country_event = { #veykodan raids / war . random events
@@ -496,14 +507,18 @@ country_event = { #veykodan raids / war . random events
     desc = flavour_corinsfield.18.d
     picture = MARCHING_PEASANTS_eventPicture
     is_triggered_only = yes
-
-    option = {
-        name = flavour_corinsfield.18.a
+    immediate = {
         random_owned_province = {
             limit = {
                 is_capital = no
                 region = veykoda_region
             }
+        }
+        save_event_target_as = veykoda_raid_target2
+    }
+    option = {
+        name = flavour_corinsfield.18.a
+        event_target:veykoda_raid_target2 = {
             spawn_rebels = {
                 size = 1
                 type = leadered_peasant_rebels
@@ -513,6 +528,7 @@ country_event = { #veykodan raids / war . random events
                 type = veykoda_raiders
             }
         }
+        set_country_flag = h35_sentries_raid
     }
 }
 country_event = { #freedom for mages
@@ -528,6 +544,7 @@ country_event = { #freedom for mages
             name = h35_veykoda_freed_mages
             duration = 3650
         }
+        set_country_flag = h35_sentries_raid
     }
 }
 country_event = { #valley of death
@@ -549,6 +566,7 @@ country_event = { #valley of death
                 type = veykoda_raiders
             }
         }
+        set_country_flag = h35_sentries_raid
     }
 }
 country_event = { #scouring the settlement
@@ -593,6 +611,7 @@ country_event = { #scouring the settlement
             }
             add_devastation = 50
         }
+        set_country_flag = h35_sentries_raid
     }
 }
 country_event = { #info leak
@@ -603,9 +622,6 @@ country_event = { #info leak
     is_triggered_only = yes
 
     trigger = {
-        any_owned_province = {
-            has_ruinborn_minority_trigger = yes
-        }
         OR = {
             has_mil_advisor = yes
             has_adm_advisor = yes
@@ -627,6 +643,7 @@ country_event = { #info leak
                 type = veykoda_raiders
             }
         }
+        set_country_flag = h35_sentries_raid
     }
 }
 
@@ -2658,6 +2675,13 @@ country_event = { #settler trial - negative 2
     picture = PLAGUE_eventPicture
     is_triggered_only = yes
 
+    immediate = {
+        random_owned_province = {
+            limit = { culture_group = ynnsman }
+            save_event_target_as = h35_settler_trial_target
+        }
+    }
+
     option = {
         name = flavour_corinsfield.47.a
         random_list = {
@@ -3539,7 +3563,7 @@ country_event = { #wendigo attack
     is_triggered_only = yes
 
     option = { #couter is innocent
-        name = flavour_corinsifled.72.a
+        name = flavour_corinsfield.72.a
         add_country_modifier = {
             name = h35_power_increase2
             duration = 1825
@@ -3548,7 +3572,7 @@ country_event = { #wendigo attack
         add_stability_or_adm_power = yes
     }
     option = { #couter is innocent
-        name = flavour_corinsifled.72.b
+        name = flavour_corinsfield.72.b
         add_country_modifier = {
             name = h35_power_increase3
             duration = 1825
@@ -3775,6 +3799,7 @@ country_event = { #artificer offers service
             power_type = corinsfield_paranoia_power
             value = -15
         }
+        set_country_flag = h35_ban_all_artifice
     }
 }
 country_event = {
@@ -4076,7 +4101,7 @@ country_event = {
         }
         has_reform = peasants_theocracy_reform
         NOT = {
-            has_ruler = "Godwin of Escerton"
+            has_ruler_flag = h35_godwin_alive
         }
 	}
 	option = {

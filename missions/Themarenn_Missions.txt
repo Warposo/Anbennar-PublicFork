@@ -81,6 +81,7 @@ a95_river_reavers = {
 			267 = {
 				has_tax_building_trigger = yes
 				num_of_times_expanded_infrastructure = 1
+				NOT = { has_construction = building }
 			}
 			treasury = 150
 			estate_influence = {
@@ -620,15 +621,15 @@ a95_river_parties = {
 					grown_by_development = 8
 				}
 			} #268 270 253 356 353 352 351 261 350
-			custom_trigger_tooltip = { tooltip = hh268.tt 268 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh270.tt 270 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh263.tt 263 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh356.tt 356 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh353.tt 353 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh352.tt 352 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh351.tt 351 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh261.tt 261 = { grown_by_development = 8 NOT = { devastation = 1 } } }
-			custom_trigger_tooltip = { tooltip = hh350.tt 350 = { grown_by_development = 8 NOT = { devastation = 1 } } }
+			custom_trigger_tooltip = { tooltip = hh268.tt 268 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh270.tt 270 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh263.tt 263 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh356.tt 356 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh353.tt 353 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh352.tt 352 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh351.tt 351 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh261.tt 261 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
+			custom_trigger_tooltip = { tooltip = hh350.tt 350 = { grown_by_development = 8 NOT = { devastation = 1 } owned_by = ROOT } }
 			
 			stability = 3
 			high_tolerance_elven_race_trigger = yes
@@ -660,17 +661,17 @@ a95_river_parties = {
 
 		trigger = {
 			234 = { 
-				owned_by = ROOT
+				is_core = ROOT
 				NOT = { has_province_modifier = unlawful_territory } 
 			} 
 			heartland_borders_area = {
 				type = all
-				owned_by = ROOT
+				is_core = ROOT
 				NOT = { has_province_modifier = unlawful_territory }
 			}
 			origin_province_group = {
-				owned_by = ROOT
-				type = all 
+				type = all
+				is_core = ROOT 
 				NOT = { has_province_modifier = unlawful_territory }
 			}
 		}
@@ -915,7 +916,6 @@ esmaryal_branching = {
 			has_global_modifier_value = {
 				which = improve_relation_modifier
 				value = 0.70
-				extra_shortcut = yes
 			}
 			has_heir = yes
 			has_consort = yes
