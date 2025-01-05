@@ -27,7 +27,17 @@ CENTAUR_1 = {
 			OR = {
 				AND = {
 					treasury = 100
-					church_power = 50
+					custom_trigger_tooltip = {
+						tooltip = centaur_churchpower_50_tt
+						OR = {
+							AND = {
+								religion = irdaeos_worship
+								church_power = 50
+							}
+							religion = the_jadd
+							religion = yudunyovi
+						}
+					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = geoglyph_celebration_tooltip
@@ -113,14 +123,18 @@ CENTAUR_2 = {
 		
 		trigger = {
 			#irdaeos worship+75 church power, jadd, or yudunyovi
-			OR = {
-				AND = {
-					religion = irdaeos_worship
-					church_power = 75
+			custom_trigger_tooltip = {
+				tooltip = centaur_churchpower_75_tt
+				OR = {
+					AND = {
+						religion = irdaeos_worship
+						church_power = 75
+					}
+						religion = the_jadd
+						religion = yudunyovi
 				}
-				religion = jadd
-				religion = yudunyovi
 			}
+			
 			#if youre a horde you need 90 horde unity. if youve reformed, you dont need anything
 			if = {
 				limit = {
