@@ -1531,7 +1531,11 @@ grombar_main_branch = {
 				limit = { ai = no }
 				crown_land_share = 35
 			}
-			legitimacy = 100
+			OR = {
+				legitimacy = 100
+				republican_tradition = 100
+				devotion = 100
+			}
 			OR = {
 				NOT = { exists = Z23 }
 				Z23 = {
