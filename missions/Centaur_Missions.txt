@@ -142,44 +142,24 @@ CENTAUR_2 = {
 				}
 				horde_unity = 90
 			}
-			else = {
-
-			}
 
 			#AI only needs any two advisors
 			if = {
 				limit = {
 					ai = yes
 				}
-				OR = {
-					#adm+dip
-					AND = {
-						employed_advisor = {
-							category = ADM
-						}
-						employed_advisor = {
-							category = DIP
-						}
-					}
-					#adm+mil
-					AND = {
-						employed_advisor = {
-							category = ADM
-						}
-						employed_advisor = {
-							category = MIL
-						}
-					}
-					#dip+mil
-					AND = {
-						employed_advisor = {
-							category = DIP
-						}
-						employed_advisor = {
-							category = MIL
-						}
-					}
-				}
+            	calc_true_if = {
+               		amount = 2
+                	employed_advisor = {
+                    	category = ADM
+                	}
+               		 employed_advisor = {
+                    	category = DIP
+                	}
+                	employed_advisor = {
+                    	category = MIL
+                	}
+            	}
 			}
 			#player needs all 3
 			else = {
