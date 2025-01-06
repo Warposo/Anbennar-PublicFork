@@ -3296,7 +3296,7 @@ feiten_missions_4_established = {
 		trigger = {
 			if = {
 				limit = { has_dlc = "Rule Britannia" }
-				innovativeness = 33
+				innovativeness = 25
 			}
 			if = {
 				limit = { Y24 = { is_subject_of = event_target:feiten_or_was_feiten_target } }
