@@ -1924,6 +1924,7 @@ country_event = { #taric return home receive
 	option = { #say yes and release
 		name = gerudia.31.c
 		custom_tooltip = taric_option_c_tt
+		trigger = { NOT = { exists = Z91 } }
 		hidden_effect = {
 			set_country_flag = taric_option_c
 			every_owned_province = {
@@ -1942,6 +1943,7 @@ country_event = { #taric return home receive
 	option = { #say yes and play as
 		name = gerudia.31.1
 		custom_tooltip = taric_option_d_tt
+		trigger = { NOT = { exists = Z91 } }
 		hidden_effect = {
 			set_country_flag = taric_option_d
 			every_owned_province = {
@@ -2034,6 +2036,7 @@ country_event = { #cagodic return home receive
 	option = { #say yes and release
 		name = gerudia.33.c
 		custom_tooltip = cagodic_option_c_tt
+		trigger = { NOT = {exists = Z92 }}
 		hidden_effect = {
 			set_country_flag = cagodic_option_c
 			every_owned_province = {
@@ -2049,6 +2052,7 @@ country_event = { #cagodic return home receive
 	option = { #say yes and play as
 		name = gerudia.33.1
 		custom_tooltip = cagodic_option_d_tt
+		trigger = { NOT = {exists = Z92} }
 		hidden_effect = {
 			set_country_flag = cagodic_option_d
 			every_owned_province = {
