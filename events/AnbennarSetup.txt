@@ -1478,7 +1478,6 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = h35_ban_all_artifice }
 	}
 	
 	immediate = {

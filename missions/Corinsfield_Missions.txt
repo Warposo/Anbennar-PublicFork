@@ -795,9 +795,11 @@ h35_branch_3 = {
 		}
 		trigger = {
 			OR = {
-				any_owned_province = {
-					region = sarda_region
-					NOT = { culture = sarda }
+				NOT = {
+					any_owned_province = {
+						region = sarda_region
+						culture = sarda
+					}
 				}
 				num_of_owned_provinces_with = {
 					value = 8
@@ -852,9 +854,11 @@ h35_branch_3 = {
 			OR = {
 				owner = {
 					is_neighbor_of = H35
-					is_subject = no
-					army_size = ROOT
-					has_estate = estate_mages
+                    is_subject = no
+                    OR = {
+                        army_size = ROOT
+                        has_estate = estate_mages
+                    }
 				}
 				AND = {
 					OR = {
@@ -882,9 +886,15 @@ h35_branch_3 = {
 			veykoda_region = { type = all is_prosperous = yes }
 			NOT = { average_unrest = 0 }
 			all_neighbor_country = {
-				AND = {
-					NOT = { army_size = ROOT }
-					NOT = { has_estate = estate_mages }
+				custom_trigger_tooltip = {
+					tooltip = h35_safety_from_sin.tt
+					OR = {
+						AND = {
+							NOT = { army_size = ROOT }
+							NOT = { has_estate = estate_mages }
+						}
+						is_subject = yes
+					}
 				}
 			}
 			has_estate_privilege = estate_church_one_faith_one_culture
@@ -1343,7 +1353,13 @@ h35_branch_5 = {
 		}
 		position = 8
 		provinces_to_highlight = {
-			owner = { is_neighbor_of = ROOT has_estate = estate_mages }
+			provinces_to_highlight = {
+				owner = {
+					is_neighbor_of = ROOT
+					has_estate = estate_mages
+					is_subject = no
+				}
+			}
 		}
 		trigger = {
 			all_neighbor_country = {

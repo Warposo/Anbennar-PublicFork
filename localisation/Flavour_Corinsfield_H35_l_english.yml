@@ -413,6 +413,7 @@
  h35_cathedral_prod:0 "All provinces in the Veykoda and Sarda Regions that we control gain §G1§! §GProduction Development§!, this effect cannot be repeated."
  h35_veykodan_raids_happened:0 "At least one Veykodan Raid event has happened."
  h35_godwin_dead.tt:0 "Father Godwin has passed away."
+ h35_safety_from_sin.tt:0 "All §Yindependent neighboring countries§! must have a §Ysmaller army size§! and §Yno mages estate.§!"
  
  #modifiers
  h35_downstanding_society:0 "Unfaithful Peasantry"

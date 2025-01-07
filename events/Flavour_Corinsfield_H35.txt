@@ -479,13 +479,15 @@ country_event = { #veykodan raids / war . random events
     picture = COSSACK_ESTATE_RAIDERS_eventPicture
     is_triggered_only = yes
     immediate = {
-        random_owned_province = {
-            limit = {
-                region = veykoda_region
-                has_ruinborn_minority_trigger = yes
-                culture = veykodan
-            }
-            save_event_target_as = veykoda_raid_target
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    region = veykoda_region
+                    has_ruinborn_minority_trigger = yes
+                    culture = veykodan
+                }
+                save_event_target_as = veykoda_raid_target
+            }           
         }
     }
     option = {
@@ -508,13 +510,15 @@ country_event = { #veykodan raids / war . random events
     picture = MARCHING_PEASANTS_eventPicture
     is_triggered_only = yes
     immediate = {
-        random_owned_province = {
-            limit = {
-                is_capital = no
-                region = veykoda_region
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_capital = no
+                    region = veykoda_region
+                }
             }
-        }
-        save_event_target_as = veykoda_raid_target2
+            save_event_target_as = veykoda_raid_target2
+        } 
     }
     option = {
         name = flavour_corinsfield.18.a
@@ -1028,9 +1032,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 30
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 40
+                    }
                 }
             }
             custom_tooltip = h35_30
@@ -1087,9 +1093,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 40
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 50
+                    }
                 }
             }
             custom_tooltip = h35_40
@@ -1146,9 +1154,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 50
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 65
+                    }
                 }
             }
             custom_tooltip = h35_50
@@ -1205,9 +1215,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 65
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 80
+                    }
                 }
             }
             custom_tooltip = h35_65
@@ -1386,7 +1398,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 30 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 40
+                    }
+                }
             }
             custom_tooltip = h35_30
             random_list = {
@@ -1442,7 +1459,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 40 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 50
+                    }
+                }
             }
             custom_tooltip = h35_40
             random_list = {
@@ -1498,7 +1520,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 50 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 65
+                    }
+                }
             }
             custom_tooltip = h35_50
             random_list = {
@@ -1554,7 +1581,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 65 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 80
+                    }
+                }
             }
             custom_tooltip = h35_65
             random_list = {
@@ -1730,7 +1762,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 30 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 40
+                    }
+                }
             }
             custom_tooltip = h35_30
             random_list = {
@@ -1786,7 +1823,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 40 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 50
+                    }
+                }
             }
             custom_tooltip = h35_40
             random_list = {
@@ -1842,7 +1884,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 50 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 65
+                    }
+                }
             }
             custom_tooltip = h35_50
             random_list = {
@@ -1898,7 +1945,12 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = { which = witch_trial_influence value = 65 }
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 80
+                    }
+                }
             }
             custom_tooltip = h35_65
             random_list = {
@@ -2067,9 +2119,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 30
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 40
+                    }
                 }
             }
             custom_tooltip = h35_30
@@ -2114,9 +2168,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 40
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 50
+                    }
                 }
             }
             custom_tooltip = h35_40
@@ -2161,9 +2217,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 50
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 65
+                    }
                 }
             }
             custom_tooltip = h35_50
@@ -2208,9 +2266,11 @@ country_event = { #base
         }
         else_if = {
             limit = {
-                check_variable = {
-                    which = witch_trial_influence
-                    value = 65
+                NOT = {
+                    check_variable = {
+                        which = witch_trial_influence
+                        value = 80
+                    }
                 }
             }
             custom_tooltip = h35_65
@@ -2676,9 +2736,11 @@ country_event = { #settler trial - negative 2
     is_triggered_only = yes
 
     immediate = {
-        random_owned_province = {
-            limit = { culture_group = ynnsman }
-            save_event_target_as = h35_settler_trial_target
+        hidden_effect = {
+            random_owned_province = {
+                limit = { OR = { culture_group = ynnsman culture = havoric culture = castellyrian } }
+                save_event_target_as = h35_settler_trial_target
+            }
         }
     }
 
@@ -3799,7 +3861,6 @@ country_event = { #artificer offers service
             power_type = corinsfield_paranoia_power
             value = -15
         }
-        set_country_flag = h35_ban_all_artifice
     }
 }
 country_event = {
