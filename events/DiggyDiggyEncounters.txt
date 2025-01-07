@@ -6891,7 +6891,7 @@ province_event = {
 		highlight = yes
 		trigger = {
 			owner = { 
-				NOT = {
+				OR = {
 					tag = I98 #Allclan
 					has_country_flag = unlocked_artifice_invention_stimulant #Snotfinger mission
 				}
