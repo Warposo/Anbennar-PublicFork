@@ -929,7 +929,10 @@ esmaryal_branching = {
 		}
 	
 		effect = {
-			add_country_modifier = { name = a95_way_of_esmaryal duration = -1 }
+			add_country_modifier = { 
+				name = a95_way_of_esmaryal 
+				duration = -1
+			}
 		}
 	}
 
