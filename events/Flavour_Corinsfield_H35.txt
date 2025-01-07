@@ -516,8 +516,8 @@ country_event = { #veykodan raids / war . random events
                     is_capital = no
                     region = veykoda_region
                 }
+                save_event_target_as = veykoda_raid_target2                
             }
-            save_event_target_as = veykoda_raid_target2
         } 
     }
     option = {

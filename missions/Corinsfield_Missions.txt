@@ -649,18 +649,6 @@ h35_branch_3 = {
 			}
 		}
 		trigger = {
-			OR = {
-				any_owned_province = {
-					region = veykoda_region
-					OR = {
-						culture = havoric
-						culture = new_havoric
-					}
-					OR = {
-						NOT = { local_autonomy = 10 }
-						has_province_modifier = autonomy_decreased
-					}
-				}
 				any_owned_province = {
 					region = veykoda_region
 					NOT = {
@@ -1353,12 +1341,10 @@ h35_branch_5 = {
 		}
 		position = 8
 		provinces_to_highlight = {
-			provinces_to_highlight = {
-				owner = {
-					is_neighbor_of = ROOT
-					has_estate = estate_mages
-					is_subject = no
-				}
+			owner = {
+				is_neighbor_of = ROOT
+				has_estate = estate_mages
+				is_subject = no
 			}
 		}
 		trigger = {
