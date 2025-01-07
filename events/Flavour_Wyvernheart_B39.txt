@@ -2096,6 +2096,10 @@ country_event = {#A Simple Accident
 				id = flavour_wyvernheart.202
 				days = 365
 			}
+			country_event = {#roll schools
+				id = flavour_wyvernheart.501
+				days = 2
+			}
 		}
 	}
 }
@@ -2178,6 +2182,10 @@ country_event = {#Tyrant's Fall
 			country_event = {
 				id = flavour_wyvernheart.203
 				days = 365
+			}
+			country_event = {#roll schools
+				id = flavour_wyvernheart.501
+				days = 2
 			}
 		}
 		custom_tooltip = wyvernheart_202_event_tt
