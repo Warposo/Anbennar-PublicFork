@@ -709,7 +709,12 @@ floodborn_council_mechanic = {
 			cost_type = bloodbrand_power
 			cost = 90
 			cooldown_years = 0
-			trigger = {}
+			trigger = {
+				OR = {
+					NOT = { has_ruler_modifier = heir_mage_personality_mod }
+					ruler_has_mage_personality = yes
+				}
+			}
 			effect = { #MAGICREWORK
 				if = {
 					limit = { NOT = { has_heir = yes } government = monarchy }

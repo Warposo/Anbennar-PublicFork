@@ -981,9 +981,9 @@ wyvernheart_column_3 = {
 			set_estate_privilege = estate_mages_organization_state
 			define_general = {
 				shock = 7
-				fire = 1
+				fire = 2
 				manuever = 3
-				siege = 1
+				siege = 3
 				trait = war_wizard_personality #MAGICREWORK
 			}
 		} 
