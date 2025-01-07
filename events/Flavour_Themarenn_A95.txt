@@ -111,20 +111,6 @@ country_event = { #First Council of themarenn
 	picture = COUNCIL_TRENT_eventPicture
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			every_rival_country = {
-				limit = {
-					has_country_flag = lilac_wars_moon_party
-					capital_scope = {
-						region = esmaria_region
-					}
-				}
-				save_event_target_as = a95_council_rival	
-			}
-		}
-	}
-
 	option = {
 		name =  flavour_themarenn.3.a
 		trigger = { NOT = { has_country_flag = a95_co_gab } }
@@ -189,7 +175,15 @@ country_event = { #First Council of themarenn
 			force_remove_rival = ROOT
 		}
 		A95 = {
-			force_remove_rival = event_target:a95_council_rival
+			custom_tooltip = a95_removed_moon_party_rivals
+			hidden_effect = {
+				force_remove_rival = A94
+				force_remove_rival = A39
+				force_remove_rival = A92
+				force_remove_rival = A35
+				force_remove_rival = A73
+				force_remove_rival = A60
+			}
 		}
 		clr_country_flag = a95_co_gab
 		clr_country_flag = a95_co_sf
