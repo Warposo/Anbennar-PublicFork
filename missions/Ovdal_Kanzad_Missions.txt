@@ -814,13 +814,13 @@ ovdalkanzad_development = {
 		provinces_to_highlight = {
 			owned_by = ROOT
 			trade_goods = mithril
-			NOT = { development = 20 }
+			NOT = { base_production = 20 }
 		}
 		
 		trigger = {
 			any_owned_province = {
 				trade_goods = mithril
-				development = 20
+				base_production = 20
 			}
 		}
 		
