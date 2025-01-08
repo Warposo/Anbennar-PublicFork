@@ -4152,11 +4152,15 @@ country_event = {
             tag = H35
             was_tag = H35
         }
+        NOT = { has_country_flag = corinsfield_ongoing_election }
         has_reform = peasants_theocracy_reform
-        NOT = {
-            has_ruler_flag = h35_godwin_alive
-        }
+        NOT = { has_ruler_flag = h35_godwin_alive }
 	}
+    immediate = {
+        hidden_effect = {
+            set_country_flag = corinsfield_ongoing_election
+        }
+    }
 	option = {
 		name = flavour_corinsfield.90.a
 		ai_chance = {
@@ -4178,6 +4182,7 @@ country_event = {
 				hide_skills = yes
 			}
 		}
+        hidden_effect = { clr_country_flag = corinsfield_ongoing_election }
 	}
 	option = {
 		name = flavour_corinsfield.90.b
@@ -4200,6 +4205,7 @@ country_event = {
 				hide_skills = yes
 			}
 		}
+        hidden_effect = { clr_country_flag = corinsfield_ongoing_election }
 	}
 	option = {
 		name = flavour_corinsfield.90.c
@@ -4222,6 +4228,7 @@ country_event = {
 				hide_skills = yes
 			}
 		}
+        hidden_effect = { clr_country_flag = corinsfield_ongoing_election }
 	}
 }
 country_event = {

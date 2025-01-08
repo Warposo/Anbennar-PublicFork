@@ -137,9 +137,8 @@ h35_branch_1 = {
 				area = hradapolere_area
 				area = ynnluka_area
 			}
-			country_or_non_sovereign_subject_holds = ROOT
 			has_terrain = farmlands
-			NOT = { AND = { base_production = 6 has_production_building_trigger = yes } }
+			NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } }
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -653,21 +652,6 @@ h35_branch_3 = {
 			}
 		}
 		trigger = {
-			OR = {
-				any_owned_province = {
-					region = veykoda_region
-					OR = {
-						culture = havoric
-						culture = new_havoric
-					}
-					OR = {
-						NOT = {
-							local_autonomy = 10
-						}
-						has_province_modifier = autonomy_decreased
-					}
-				}
-			}
 			NOT = { accepted_culture = stone_dwarf accepted_culture = steel_dwarf accepted_culture = redfoot_halfling accepted_culture = pipefoot_halfling }
 			custom_trigger_tooltip = {
 				tooltip = h35_veykoda_autonomy

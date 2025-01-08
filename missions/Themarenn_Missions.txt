@@ -605,11 +605,11 @@ a95_river_parties = {
 		position = 7
 		provinces_to_highlight = {
 			province_group = hehaine_river_group
-			OR = {
-				devastation = 1
-				NOT = { grown_by_development = 8 }
-			}
-			owned_by = ROOT
+            OR = {
+                devastation = 1
+                NOT = { grown_by_development = 8 }
+                NOT = { owned_by = ROOT }
+            }
 		}
 
 		trigger = {

@@ -381,7 +381,7 @@
  estate_goodmen_desc:0 "This estate represents the good servants of Corin, those blessed men and woman working tirelessly to keep the peasantry safe from sin, evil, and magic. From performing ceremons, preaching The Blessed Book, and organizing prayers to exorscisms or hunting the wicked Witches, these Goodmen are a foundational pillar of Corinsfielder society."
  h35_goodmen.tt:0 "The §YClergy§! estate becomes known as §YGoodmen§!.\n\nGain access to §YTemple Charity Raisings§! estate privilege for the Goodmen, giving:\n\nNational Tax Modifier §G+10%§!\nConstruction Time §R+10%§!\nTax development from Temples and Cathedrals §G+1§!"
  h35_tax_from_temple.tt:0 "Tax development from Temples and Cathedrals §G+1§!"
- h35_farmlands_dev:0 "All §Yfarmland§! provinces in the following areas have §Y6 production development§! and a §Yworkshop§! or §Ycounting house§!"
+ h35_farmlands_dev:0 "All §Yfarmland§! provinces in the following areas are owned by §Y[Root.GetName]§! or a non-tributary subject and have §Y6 production development§! and a §Yworkshop§! or §Ycounting house§!"
  h35_adbrabohvi_area:0 "§YAdbrabohvi Area§!"
  h35_hor_velenynn_area:0 "§YHor Valenynn Area§!"
  h35_ynncytr_area:0 "§YYnncytr Area§!"
