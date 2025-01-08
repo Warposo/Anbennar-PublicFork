@@ -533,19 +533,22 @@ country_event = { # Palace atop a Lake
 	picture = LARGE_SHIPYARD_eventPicture
 	is_triggered_only = yes
 
-	trigger = { }
-
 	option = {
 		name = flavour_themarenn.6.a
-		267 = {
-			add_great_project = {
-				type = the_lake_palace
-				instant = no 
+		trigger = {
+			NOT = {
+				267 = {
+					has_great_project = {
+						type = the_lake_palace
+						tier = 2
+					}
+				}
 			}
-			add_construction_progress = -0.80
-			add_permanent_province_modifier = {
-				name = fast_great_palace_lake
-				duration = 3650
+		}
+		267 = {
+			add_great_project_tier = {
+				type = the_lake_palace
+				tier = 1
 			}
 		}
 		define_advisor = {
@@ -555,19 +558,15 @@ country_event = { # Palace atop a Lake
 			skill = 3
 			cost_multiplier = 0.5
 		}
+		add_prestige = 10
 	}
 
 	option = {
 		name = flavour_themarenn.6.b
 		267 = {
-			add_great_project = {
-				type = the_lake_palace
-				instant = no 
-			}
-			add_construction_progress = -0.50
 			add_permanent_province_modifier = {
 				name = slow_great_palace_lake
-				duration = 1825
+				duration = 18250
 			}
 		}
 		define_advisor = {
@@ -575,8 +574,9 @@ country_event = { # Palace atop a Lake
 			name = "Trystan Buel"
 			culture = esmari
 			skill = 3
-			cost_multiplier = 0.2
+			cost_multiplier = 0.5
 		}
+		add_prestige = 10
 	}
 }
 
@@ -2326,7 +2326,7 @@ country_event = {
 		name = flavour_themarenn.52.a
 		define_ruler = {
 			name = "Casetin"
-			dynasty = "sï¿½l Themarenn"
+			dynasty = "síl Themarenn"
 			adm = 5
 			dip = 4
 			mil = 6

@@ -609,6 +609,7 @@ a95_river_parties = {
 				devastation = 1
 				NOT = { grown_by_development = 8 }
 			}
+			owned_by = ROOT
 		}
 
 		trigger = {

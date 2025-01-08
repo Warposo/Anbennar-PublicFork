@@ -32,8 +32,8 @@ corinsfield_paranoia_mechanic = {
 			}
 			range_modifier = {
 				trigger = {
-					NOT = { stability = 0 }
 					stability = 1
+					NOT = { stability = 2 }
 				}
 				modifier = { 
 					monthly_corinsfield_paranoia_power = -0.05
@@ -43,8 +43,8 @@ corinsfield_paranoia_mechanic = {
 			}
 			range_modifier = {
 				trigger = {
-					NOT = { stability = 1 }
 					stability = 2
+					NOT = { stability = 3 }
 				}
 				modifier = { 
 					monthly_corinsfield_paranoia_power = -0.1
@@ -54,7 +54,6 @@ corinsfield_paranoia_mechanic = {
 			}
 			range_modifier = {
 				trigger = {
-					NOT = { stability = 2 }
 					stability = 3
 				}
 				modifier = { 

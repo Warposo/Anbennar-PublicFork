@@ -31254,10 +31254,7 @@ cleansing_infernal_cultists = {
 	global_missionary_strength = 0.02
 }
 slow_great_palace_lake = {
-	local_great_project_upgrade_cost = 0.2
-}
-fast_great_palace_lake = {
-	local_great_project_upgrade_cost = 0.5
+	local_great_project_upgrade_cost = -0.25
 }
 stewards_of_the_rivers = {
 	prestige_decay = -0.01

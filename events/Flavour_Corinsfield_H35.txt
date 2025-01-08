@@ -104,21 +104,19 @@ country_event = { #magical dome
 
     option = {
         name = flavour_corinsfield.5.a
-        destroy_great_project = { type = ynnic_precursor_dome_stanyrhrada }
+        1142 = { destroy_great_project = { type = ynnic_precursor_dome_stanyrhrada } }
         add_government_power = {
             mechanic_type = corinsfield_paranoia_mechanic
             power_type = corinsfield_paranoia_power
             value = 12
         }
         every_known_country = {
-            if = {
-                limit = {
-                    religion = ynn_river_worship
-                }
-                add_trust = {
-                    who = ROOT
-                    value = -50
-                }
+            limit = {
+                religion = ynn_river_worship
+            }
+            add_trust = {
+                who = ROOT
+                value = -50
             }
         }
     }
@@ -147,20 +145,18 @@ country_event = { #magical dome
         else = {
             add_treasury = 500
         }
-        destroy_great_project = { type = ynnic_precursor_dome_stanyrhrada }
+        1142 = { destroy_great_project = { type = ynnic_precursor_dome_stanyrhrada } }
         every_known_country = {
-            if = {
-                limit = {
-                    religion = ynn_river_worship
-                }
-                add_opinion = {
-                    who = ROOT
-                    modifier = H35_melted_the_dome
-                }
-                add_trust = {
-                    who = ROOT
-                    value = -80
-                }
+            limit = {
+                religion = ynn_river_worship
+            }
+            add_opinion = {
+                who = ROOT
+                modifier = H35_melted_the_dome
+            }
+            add_trust = {
+                who = ROOT
+                value = -80
             }
         }
         add_country_modifier = { name = H35_magic_dome duration = 3650 }
@@ -177,13 +173,11 @@ country_event = { #crimson week 1
     option = {
         name = flavour_corinsfield.6.a
         every_owned_province = {
-            if = {
-                limit = {
-                    culture = sarda
-                }
-                add_province_modifier = { name = h35_sarda_minor_unrest duration = 3650 }
-                add_devastation = 25
+            limit = {
+                culture = sarda
             }
+            add_province_modifier = { name = h35_sarda_minor_unrest duration = 3650 }
+            add_devastation = 25
         }
         random_owned_province = {
             limit = { OR = { culture = sarda region = sarda_region } }
@@ -204,11 +198,9 @@ country_event = { #crimson week 1
     option = {
         name = flavour_corinsfield.6.b
         every_owned_province = {
-            if = {
-                limit = { OR = { culture = sarda region = sarda_region } }
-                add_province_modifier = { name = h35_sarda_major_unrest duration = 3650 }
-                add_devastation = 50
-            }
+            limit = { OR = { culture = sarda region = sarda_region } }
+            add_province_modifier = { name = h35_sarda_major_unrest duration = 3650 }
+            add_devastation = 50
         }
         random_owned_province = {
             limit = { OR = { culture = sarda region = sarda_region } }

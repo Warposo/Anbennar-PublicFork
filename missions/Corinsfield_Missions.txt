@@ -137,18 +137,19 @@ h35_branch_1 = {
 				area = hradapolere_area
 				area = ynnluka_area
 			}
+			country_or_non_sovereign_subject_holds = ROOT
 			has_terrain = farmlands
 			NOT = { AND = { base_production = 6 has_production_building_trigger = yes } }
 		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = h35_farmlands_dev
-				adbrabohvi_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
-				hor_velenynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
-				ynncytr_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
-				arverynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
-				hradapolere_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
-				ynnluka_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } }
+				NOT = { adbrabohvi_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
+				NOT = { hor_velenynn_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
+				NOT = { ynncytr_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
+				NOT = { arverynn_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
+				NOT = { hradapolere_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
+				NOT = { ynnluka_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
 			}
 			custom_trigger_tooltip = { tooltip = h35_adbrabohvi_area adbrabohvi_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
 			custom_trigger_tooltip = { tooltip = h35_hor_velenynn_area hor_velenynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
@@ -184,23 +185,25 @@ h35_branch_1 = {
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				AND = {
-					superregion = ynn_superregion
-					country_or_non_sovereign_subject_holds = ROOT
-					trade_goods = grain
-					NOT = { has_seat_in_parliament = yes }
-				}
-				AND = {
-					region = sarda_region
-					country_or_non_sovereign_subject_holds = ROOT
-					NOT = { has_manufactory_trigger = yes }
-				}
-				AND = {
-					region = veykoda_region
-					country_or_non_sovereign_subject_holds = ROOT
-					NOT = { has_manufactory_trigger = yes }
-				}
-			}
+                AND = {
+                    superregion = ynn_superregion
+                    country_or_non_sovereign_subject_holds = ROOT
+                    trade_goods = grain
+                    NOT = { has_seat_in_parliament = yes }
+                }
+                AND = {
+                    OR = {
+                        region = sarda_region
+                        region = veykoda_region
+                    }    
+                    NOT = {
+                        AND = {
+                            has_manufactory_trigger = yes
+                            country_or_non_sovereign_subject_holds = ROOT
+                        }
+                    }
+                }
+            }
 		}
 		trigger = {
 			veykoda_region = {
@@ -213,7 +216,7 @@ h35_branch_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				has_manufactory_trigger = yes
 			}
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				superregion = ynn_superregion
 				trade_goods = grain
@@ -396,6 +399,7 @@ h35_branch_2 = {
                     religion = corinite
                     NOT = { devastation = 1 }
                     culture = corinsfielder
+					owned_by = ROOT
                 }
             }
         }
@@ -649,13 +653,18 @@ h35_branch_3 = {
 			}
 		}
 		trigger = {
+			OR = {
 				any_owned_province = {
 					region = veykoda_region
-					NOT = {
-						OR = {
-							culture = havoric
-							culture = new_havoric
+					OR = {
+						culture = havoric
+						culture = new_havoric
+					}
+					OR = {
+						NOT = {
+							local_autonomy = 10
 						}
+						has_province_modifier = autonomy_decreased
 					}
 				}
 			}
@@ -1147,10 +1156,9 @@ h35_branch_5 = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
 		}
 		trigger = {
-			capital_scope = { AND = { development = 18 has_production_building_trigger = yes has_courthouse_building_trigger = yes } }
+			capital_scope = { development = 18 has_production_building_trigger = yes has_courthouse_building_trigger = yes }
 			stability = 2
 			has_adm_advisor_2 = yes
 		}
@@ -1247,7 +1255,6 @@ h35_branch_5 = {
 		}
 		position = 6
 		provinces_to_highlight = {
-			##PROVINCESHIGHLIGHTCODE
 		}
 		trigger = {
 			has_institution = printing_press
@@ -1322,7 +1329,7 @@ h35_branch_5 = {
 							inquisitor = 3
 							has_global_modifier_value = {
 								which = global_missionary_strength
-								value = 0.07
+								value = 0.1
 							}
 						}
 					}
