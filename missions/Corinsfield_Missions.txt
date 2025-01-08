@@ -150,12 +150,12 @@ h35_branch_1 = {
 				NOT = { hradapolere_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
 				NOT = { ynnluka_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } }
 			}
-			custom_trigger_tooltip = { tooltip = h35_adbrabohvi_area adbrabohvi_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
-			custom_trigger_tooltip = { tooltip = h35_hor_velenynn_area hor_velenynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
-			custom_trigger_tooltip = { tooltip = h35_ynncytr_area ynncytr_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
-			custom_trigger_tooltip = { tooltip = h35_arverynn_area arverynn_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
-			custom_trigger_tooltip = { tooltip = h35_hradapolere_area hradapolere_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
-			custom_trigger_tooltip = { tooltip = h35_ynnluka_area ynnluka_area = { country_or_non_sovereign_subject_holds = ROOT AND = { has_terrain = farmlands base_production = 6 has_production_building_trigger = yes } } }
+			custom_trigger_tooltip = { tooltip = h35_adbrabohvi_area NOT = { adbrabohvi_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } } }
+			custom_trigger_tooltip = { tooltip = h35_hor_velenynn_area NOT = { hor_velenynn_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } } }
+			custom_trigger_tooltip = { tooltip = h35_ynncytr_area NOT = { ynncytr_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } } }
+			custom_trigger_tooltip = { tooltip = h35_arverynn_area NOT = { arverynn_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } } }
+			custom_trigger_tooltip = { tooltip = h35_hradapolere_area NOT = { hradapolere_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } } }
+			custom_trigger_tooltip = { tooltip = h35_ynnluka_area NOT = { ynnluka_area = { has_terrain = farmlands NOT = { AND = { country_or_non_sovereign_subject_holds = ROOT base_production = 6 has_production_building_trigger = yes } } } } }
 			
 		}
 		effect = {
