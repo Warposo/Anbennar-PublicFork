@@ -813,27 +813,18 @@ ovdalkanzad_development = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			trade_goods = damestear
+			trade_goods = mithril
 			NOT = { development = 20 }
 		}
 		
 		trigger = {
-			treasury = 2000
-			OR = {
-				any_owned_province = {
-					trade_goods = damestear
-					development = 20
-				}
-				any_ally = {
-					any_owned_province = {
-                        trade_goods = damestear
-                    }
-				}
+			any_owned_province = {
+				trade_goods = mithril
+				development = 20
 			}
 		}
 		
 		effect = {
-			add_treasury = -2000
 			remove_country_modifier = ovdalkanzad_amber_cannons_4
 			add_country_modifier = {
 				name = ovdalkanzad_amber_cannons_5
