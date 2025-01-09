@@ -72,6 +72,7 @@ country_decisions = {
 			kheterata_region = { owned_by = ROOT }
 			NOT = { has_global_flag = khet_dead }
 			NOT = { tag = F66 }
+			ai = no
 		}
 		allow = {
 			hidden_trigger = {
