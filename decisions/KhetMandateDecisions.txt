@@ -67,15 +67,16 @@ country_decisions = {
 	#xhaz can kill the khet
 	khet_mandate_xhaz_kill_khet = {
 		potential = {
+			ai = no
 			has_dlc = "Mandate of Heaven"
 			religion = xhazobkult
 			kheterata_region = { owned_by = ROOT }
 			NOT = { has_global_flag = khet_dead }
 			NOT = { tag = F66 }
-			ai = no
 		}
 		allow = {
 			hidden_trigger = {
+				ai = no
 				has_dlc = "Mandate of Heaven"
 				religion = xhazobkult
 			}
