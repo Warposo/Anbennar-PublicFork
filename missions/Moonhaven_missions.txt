@@ -1863,7 +1863,7 @@ moonhaven_colonial_missions = {
 				}
 				add_country_modifier = {
 					name = "A31_empire_colonial_office"
-					duration = 10950
+					duration = -1
 				}
 				custom_tooltip = A31_lose_colo_bonus.tt
 			}
@@ -1952,7 +1952,7 @@ moonhaven_colonial_missions = {
 				} 
 				add_country_modifier = {
 					name = "A31_traders_invest_economy"
-					duration = 18250
+					duration = -1
 				}
 				custom_tooltip = A31_lose_colo_bonus.tt
 			}
