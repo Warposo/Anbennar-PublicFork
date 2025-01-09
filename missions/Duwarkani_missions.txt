@@ -354,7 +354,7 @@ duwarkani_2_missions = {
 			}
 			else_if = {
 				limit = {
-					f60 = {
+					F60 = {
 						is_subject_of = F62
 					}
 				}
@@ -447,13 +447,11 @@ duwarkani_2_missions = {
 		}
 
 		trigger = {
-			calc_true_if = {
-				all_owned_province = {
-					province_group = mothers_sorrow_group
-					culture_is_human = yes
-					has_manpower_building_trigger = yes
-				}
-				amount = 10
+			num_of_owned_provinces_with = {
+				value = 10
+				province_group = mothers_sorrow_group
+				culture_is_human = yes
+				has_manpower_building_trigger = yes
 			}
 			estate_loyalty = {
 				estate = estate_nobles
