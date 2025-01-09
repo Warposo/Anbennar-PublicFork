@@ -2042,7 +2042,7 @@ country_event = { #cagodic return home receive
 	option = { #say yes and release
 		name = gerudia.33.c
 		custom_tooltip = cagodic_option_c_tt
-		ai_chance = { factor = 15}
+		ai_chance = { factor = 15 }
 		trigger = { NOT = { exists = Z92 } }
 		hidden_effect = {
 			set_country_flag = cagodic_option_c
