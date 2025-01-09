@@ -357,7 +357,7 @@ h35_branch_2 = {
 		}
 		effect = {
 			2807 = {
-				add_permanent_province_modifier = { name = h35_raising_defenses duration = -1 }
+				add_permanent_province_modifier = { name = h35_raising_defense duration = -1 }
 			}
 			random_owned_province = {
 				limit = {
@@ -413,7 +413,7 @@ h35_branch_2 = {
 		}
 		effect = {
 			country_event = { id = flavour_corinsfield.2 }
-			add_country_modifier = { name = h35_new_home duration = -1 }
+			add_country_modifier = { name = H35_new_home duration = -1 }
 			hidden_effect = {
 				country_event = {
 					id = flavour_corinsfield.26
