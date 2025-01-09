@@ -2043,7 +2043,7 @@ country_event = { #cagodic return home receive
 		name = gerudia.33.c
 		custom_tooltip = cagodic_option_c_tt
 		ai_chance = { factor = 15}
-		trigger = { NOT = {exists = Z92 }}
+		trigger = { NOT = { exists = Z92 } }
 		hidden_effect = {
 			set_country_flag = cagodic_option_c
 			every_owned_province = {
@@ -2060,7 +2060,7 @@ country_event = { #cagodic return home receive
 		name = gerudia.33.1
 		custom_tooltip = cagodic_option_d_tt
 		ai_chance = { factor = 0 }
-		trigger = { NOT = {exists = Z92} }
+		trigger = { NOT = { exists = Z92 } }
 		hidden_effect = {
 			set_country_flag = cagodic_option_d
 			every_owned_province = {
