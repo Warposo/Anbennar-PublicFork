@@ -3372,7 +3372,7 @@ feiten_missions_4_established = {
 						change_innovativeness = 1
 					"
 					third_custom_tooltip = feiten_house_of_fire_and_water_innovativeness_tt_3
-					third_limit = "innotativeness = 10"
+					third_limit = "innovativeness = 10"
 					third_effect = "add_adm_power = -200
 						add_dip_power = -200
 						add_mil_power = -200
