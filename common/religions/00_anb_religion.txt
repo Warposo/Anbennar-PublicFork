@@ -6234,7 +6234,6 @@ raheni = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
-			}
 			if = {
 				limit = {
 					NOT = {
