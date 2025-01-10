@@ -8615,6 +8615,7 @@ country_event = {
 		capital_scope = { continent = serpentspine }
 		any_owned_province = { 
 			has_province_modifier = expedition_target
+			is_city = yes
 			NOT = { has_province_flag = sent_expedition_@owner }
 			NOT = { has_province_modifier = dwarovar_unwanted_guests }
 		}
@@ -8630,6 +8631,7 @@ country_event = {
 			random_owned_province = {
 				limit = { 
 					has_province_modifier = expedition_target
+					is_city = yes
 					NOT = { has_province_flag = sent_expedition_@owner }
 					NOT = { has_province_modifier = dwarovar_unwanted_guests }
 				}
@@ -12241,6 +12243,10 @@ country_event = { #Hidden event to make the squatters start colonizing
 		4106 = { #West Greatcavern
             create_colony = 50
         }
+		add_country_modifier = {
+			name = squatter_cheap_colonies
+			duration = 9125 #25 years
+		}
 	}
 
 	option = { #Dursikari
@@ -12252,6 +12258,24 @@ country_event = { #Hidden event to make the squatters start colonizing
 		4288 = { #Greatbeard Cavern
             create_colony = 50
         }
+		add_country_modifier = {
+			name = squatter_cheap_colonies
+			duration = 9125 #25 years
+		}
+	}
+	option = { #Skewered Drake
+		name = diggy.200.b
+        ai_chance = { factor = 100 }
+		trigger = {
+			tag = H73
+		}
+		2886 = { #Dwarovrod |27|
+            create_colony = 50
+        }
+		add_country_modifier = {
+			name = squatter_cheap_colonies
+			duration = 9125 #25 years
+		}
 	}
 }
 
