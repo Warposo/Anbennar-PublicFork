@@ -996,9 +996,11 @@ moonhaven_sarhal_missions = {
 						has_global_flag = crimson_deluge_over
 					}
 					religion = corinite
-					has_opinion = {
-						who = A45
-						value = 200
+					A45 = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
 					}
 					calc_true_if = {
 						all_ally = {
