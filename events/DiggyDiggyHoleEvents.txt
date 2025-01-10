@@ -12302,9 +12302,9 @@ country_event = { #Event manager for autorails
 				duration = 1825 
 				hidden = yes 
 			}
-			construct_every_rail_road = {
-				rail = dwarovar_rail
-				repair = yes
+			rail_construct_every_rail_road = {
+				current_rail = dwarovar_rail
+				upgraded_rail = repair
 				speed = 1
 				cost = 1
 			}
@@ -12318,9 +12318,9 @@ country_event = { #Event manager for autorails
 		custom_tooltip = rebuild_road_tooltip
 		hidden_effect = {
 			set_country_flag = auto_build_rail
-			construct_every_rail_road = {
-				rail = dwarovar_rail
-				repair = yes
+			rail_construct_every_rail_road = {
+				current_rail = dwarovar_rail
+				upgraded_rail = repair
 				speed = 1
 				cost = 1
 			}
