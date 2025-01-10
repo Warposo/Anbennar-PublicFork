@@ -601,7 +601,7 @@ country_event = {#The Castanbane Meteor
 	}
 	
 	#Option A
-	option = {
+	option = {#MAGICREWORK
 		name = "flavour_wyvernheart.110.a"
 		ai_chance = { factor = 1 }
 		set_country_flag = destroyed_the_trialmount
@@ -1204,6 +1204,7 @@ country_event = {#Select clique for Overseer
 			name = "Hardliner Overseer"
 		}
 		wyvernheart_define_war_wizard = yes
+		custom_tooltip = wyvernheart_not_warwizard
 		hidden_effect = {
 			country_event = {
 				id = flavour_wyvernheart.500
@@ -1286,6 +1287,7 @@ country_event = {#Select clique for Overseer
 			name = "Technocrat Overseer"
 		}
 		wyvernheart_define_war_wizard = yes
+		custom_tooltip = wyvernheart_not_warwizard
 		hidden_effect = {
 			country_event = {
 				id = flavour_wyvernheart.500
@@ -1458,6 +1460,7 @@ country_event = {#Select clique for Overseer
 			name = "Heartmage Overseer"
 		}
 		wyvernheart_define_war_wizard = yes
+		custom_tooltip = wyvernheart_not_warwizard
 		hidden_effect = {
 			country_event = {
 				id = flavour_wyvernheart.500
@@ -1558,6 +1561,7 @@ country_event = {#Select clique for Overseer
 			name = "Devout Overseer"
 		}
 		wyvernheart_define_war_wizard = yes
+		custom_tooltip = wyvernheart_not_warwizard
 		hidden_effect = {
 			country_event = {
 				id = flavour_wyvernheart.500
@@ -1603,6 +1607,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { NOT = { has_building = mage_tower } owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt
 					add_building_construction = {
 						building = mage_tower
 						cost = 0
@@ -1615,6 +1620,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt
 					add_base_production = 3
 				}
 			}
@@ -1637,6 +1643,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { NOT = { has_building = mage_tower } owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt					
 					add_building_construction = {
 						building = mage_tower
 						cost = 0
@@ -1649,6 +1656,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt					
 					add_base_production = 3
 				}
 			}
@@ -1671,6 +1679,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { NOT = { has_building = mage_tower } owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_building_construction = {
 						building = mage_tower
 						cost = 0
@@ -1683,6 +1692,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_base_production = 3
 				}
 			}
@@ -1705,6 +1715,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { NOT = { has_building = mage_tower } owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_building_construction = {
 						building = mage_tower
 						cost = 0
@@ -1717,6 +1728,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_base_production = 3
 				}
 			}
@@ -1739,6 +1751,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { NOT = { has_building = mage_tower } owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_building_construction = {
 						building = mage_tower
 						cost = 0
@@ -1751,6 +1764,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_base_production = 3
 				}
 			}
@@ -1773,6 +1787,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { NOT = { has_building = mage_tower } owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_building_construction = {
 						building = mage_tower
 						cost = 0
@@ -1785,6 +1800,7 @@ country_event = {#Select clique for Overseer
 					type = random
 					amount = 1
 					limit = { owned_by = ROOT }
+					custom_tooltip = wyvernheart_appoint_scion_effect_tt	
 					add_base_production = 3
 				}
 			}
@@ -1796,6 +1812,7 @@ country_event = {#Select clique for Overseer
 			name = "Wealthy Overseer"
 		}
 		wyvernheart_define_war_wizard = yes
+		custom_tooltip = wyvernheart_not_warwizard
 		hidden_effect = {
 			country_event = {
 				id = flavour_wyvernheart.500
@@ -1879,6 +1896,7 @@ country_event = {#Select clique for Overseer
 			name = "Ambitious Overseer"
 		}
 		wyvernheart_define_war_wizard = yes
+		custom_tooltip = wyvernheart_not_warwizard
 		hidden_effect = {
 			country_event = {
 				id = flavour_wyvernheart.500
@@ -2317,6 +2335,7 @@ country_event = {#Event manager for the flavour events
 			}
 			1 = {
 				trigger = {
+					NOT = { has_country_flag = had_wyvernheart_304_last }
 					OR = {
 						has_active_estate_agenda = estate_mages_wyvernheart_invest_in_critical_materials
 						has_active_estate_agenda = estate_mages_wyvernheart_research_new_spells
@@ -2331,24 +2350,58 @@ country_event = {#Event manager for the flavour events
 				country_event = {
 					id = flavour_wyvernheart.304
 				}
-			}
-			1 = {
-				country_event = {
-					id = flavour_wyvernheart.305
-				}
-			}
-			1 = {
-				country_event = {
-					id = flavour_wyvernheart.306
-				}
-			}
-			1 = {
-				country_event = {
-					id = flavour_wyvernheart.307
-				}
+				clr_country_flag = had_wyvernheart_309_last
+				clr_country_flag = had_wyvernheart_308_last
+				clr_country_flag = had_wyvernheart_307_last
+				clr_country_flag = had_wyvernheart_306_last
+				clr_country_flag = had_wyvernheart_305_last
+				set_country_flag = had_wyvernheart_304_last
 			}
 			1 = {
 				trigger = {
+					NOT = { has_country_flag = had_wyvernheart_305_last }
+				}
+				country_event = {
+					id = flavour_wyvernheart.305
+				}
+				clr_country_flag = had_wyvernheart_309_last
+				clr_country_flag = had_wyvernheart_308_last
+				clr_country_flag = had_wyvernheart_307_last
+				clr_country_flag = had_wyvernheart_306_last
+				set_country_flag = had_wyvernheart_305_last
+				clr_country_flag = had_wyvernheart_304_last
+			}
+			1 = {
+				trigger = {
+					NOT = { has_country_flag = had_wyvernheart_306_last }
+				}
+				country_event = {
+					id = flavour_wyvernheart.306
+				}
+				clr_country_flag = had_wyvernheart_309_last
+				clr_country_flag = had_wyvernheart_308_last
+				clr_country_flag = had_wyvernheart_307_last
+				set_country_flag = had_wyvernheart_306_last
+				clr_country_flag = had_wyvernheart_305_last
+				clr_country_flag = had_wyvernheart_304_last
+			}
+			1 = {
+				trigger = {
+					NOT = { has_country_flag = had_wyvernheart_307_last }
+				}
+				country_event = {
+					id = flavour_wyvernheart.307
+				}
+				clr_country_flag = had_wyvernheart_309_last
+				clr_country_flag = had_wyvernheart_308_last
+				set_country_flag = had_wyvernheart_307_last
+				clr_country_flag = had_wyvernheart_306_last
+				clr_country_flag = had_wyvernheart_305_last
+				clr_country_flag = had_wyvernheart_304_last
+			}
+			1 = {
+				trigger = {
+					NOT = { has_country_flag = had_wynverheart_308_last }
 					OR = {
 						AND = {#Hardliner vs Technocrat
 							OR = {
@@ -2481,11 +2534,26 @@ country_event = {#Event manager for the flavour events
 				country_event = {
 					id = flavour_wyvernheart.308
 				}
+				clr_country_flag = had_wyvernheart_309_last
+				set_country_flag = had_wyvernheart_308_last
+				clr_country_flag = had_wyvernheart_307_last
+				clr_country_flag = had_wyvernheart_306_last
+				clr_country_flag = had_wyvernheart_305_last
+				clr_country_flag = had_wyvernheart_304_last
 			}
 			1 = {
+				trigger = {
+					NOT = { has_country_flag = had_wyvernheart_309_last }
+				}
 				country_event = {
 					id = flavour_wyvernheart.309
 				}
+				set_country_flag = had_wyvernheart_309_last
+				clr_country_flag = had_wyvernheart_308_last
+				clr_country_flag = had_wyvernheart_307_last
+				clr_country_flag = had_wyvernheart_306_last
+				clr_country_flag = had_wyvernheart_305_last
+				clr_country_flag = had_wyvernheart_304_last
 			}
 		}
 	}
@@ -2661,7 +2729,7 @@ country_event = {#The New Face of the Council
 			duration = 9125
 		}
 		custom_tooltip = add_magic_study_modifier_25_tt
-		update_magic_study_experience_modifier = { value = 25 }
+		update_magic_study_experience_modifier = { value = 25 } #MAGICREWORK
 	}
 }
 
@@ -2798,7 +2866,7 @@ country_event = {#The Council's Challenge
 		name = "flavour_wyvernheart.306.c"
 		ai_chance = { factor = 1 }
 		trigger = {
-			calc_true_if = {
+			calc_true_if = {#MAGICREWORK
 				amount = 2
 				is_divination_3 = yes
 				is_conjuration_3 = yes
@@ -3738,7 +3806,7 @@ country_event = {#Rolls magic schools for the manifest the flood gov power
 
 	immediate = {
 		if = {
-			limit = {
+			limit = {#MAGICREWORK
 				OR = {
 					NOT = {
 						has_country_flag = wyvernheart_manifest_the_flood_divination
@@ -3792,7 +3860,7 @@ country_event = {#Rolls magic schools for the manifest the flood gov power
 			clr_country_flag = wyvernheart_manifest_the_flood_transmutation
 			clr_country_flag = wyvernheart_manifest_the_flood_evocation
 			clr_country_flag = wyvernheart_manifest_the_flood_illusion
-			random_list = {
+			random_list = {#MAGICREWORK
 				1 = {
 					trigger = {
 						NOT = { is_divination_3 = yes }

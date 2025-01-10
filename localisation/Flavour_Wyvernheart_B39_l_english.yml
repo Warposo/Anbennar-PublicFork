@@ -15,7 +15,7 @@
  the_dust_settles_desc:0 "The civil war ravaged our land, and as the dust settles only one rises to the top. The nation has suffered greatly, our Heart torn apart, Heartman killing Heartman - truly a dramatic circumstance.\nThe time has come to rebuild, to restore, to mend; the council will have to come back in a new form - the royal family has been violently trimmed, but its rightful legacy lingers. The most powerful Floodborn known to Wyvernheart will have to rule now, atop a council in [Root.Monarch.GetHerHis] image.\nThe tyrants might have been opposed by many, but if one falls, another takes its place - in Escann, tyranny is benevolence, the only way to shield your own people from the horrors they would inflict upon themselves."
  wyvernheart_A9_trigger_tt:0 "The Civil War has ended, with the Regent's victory or fall"
  wyvernheart_A9_effect_tt:0 "If this mission is completed while the Regent is still alive and in less than §Y5§! years after the final uprising [Root.GetName] gets §Y'Tyrant's Rise'§! until the end of the game giving the following effects:\nMaximum Absolutism: §G+20.00§!\nYearly Absolutism: §G+1.00§!\nUnjustified Demands: §G-33.0%§!"
- wyvernheart_A9_effect_tt2:0 "Efforts will be made to restore the Floodborn Council."
+ wyvernheart_A9_effect_tt2:0 "Efforts will be made to restore the Floodborn Council within a year."
  wyvernheart_A9_event_tt:0 "The §YCourt and Country§! disaster cannot happen."
  wyvernheart_tyrants_rise:0 "Tyrant's Rise"
 
@@ -39,6 +39,7 @@
 
  the_hearter_homeland_title:0 "The Heartman Homeland"
  the_hearter_homeland_desc:0 "The hearth of homes from the Reach to the Nath are ablaze with conviction and pride. We have fulfilled our promise; we have built a homeland for our people; we have waved the Heart over cities and towns and built the foundation for our people to prosper. We will defend this peace with all we have, and our people will defend it to the last man.\nIt is time for us to bring this even further; the Heartman Homeland isn’t static; it is ever-growing. More people shall join us in strength and feel safe in our embrace; some will not be willing to accommodate our way of life, but we must open our Hearts and carry out our “duty” of the Strong, we shall teach them accordingly, and in time they will learn the errors of their ways."
+ wyvenheart_B6_effect_tt:0 "\nDeveloping a province of §Y[Root.Culture.GetName]§! culture building a §YMage Tower§! will reduce the remaining construction time by §G10%.§!"
 
  bioimproved_mages_title:0 "Bioimproved Mages"
  bioimproved_mages_desc:0 "The representative of the Artificers has come forth with a proposal co-signed by the Head-Arcanist; they suggest applying the methods used to improve the Burnbloods on the Floodborn to improve both their physique and their magical capabilities.\nThis decision will bring the Council and its sovereign closer to perfection, a perfect mind in a perfect body, stronger and more resilient.\nThe methods proposed by the artificers are rather drastic: direct inoculation of damestear coupled with the use of a cocktail of alchemical concoctions aimed to stabilise the body in the process. Some would call this work demented; to resist such a process would require a very high perseverance and tolerance to pain - a mind-shattering experience. But this doesn’t scare the most cowardly of Heartman; we have the Heart of a Wyvern and the mind of a Floodborn - there is nothing to fear."
@@ -282,6 +283,7 @@
  wyvernheart_appoint_hardliner_nationalism_tt:0 "All owned provinces will get the following effect:\nIf §YLocal Autonomy§! is above §Y15.0%§! they lose §G30.0%§! Local Autonomy.\nElse they lose §G5§! Separatism."
  wyvernheart_appoint_heartmage_effect_tt:0 "All owned provinces will get the following effect:\nIf §YDevastation§! is above §Y5.0%§! they lose §G5.0%§! Devastation.\nElse they gain §G5%§! Prosperity.\nIf the State if already §YProsperous§! each province has 17% chance to gain §Y1 random development§!."
  wyvernheart_appoint_devout_effect_tt:0 "All owned provinces will get the following effect:\n§G+5.0%§! Prosperity."
+ wyvernheart_appoint_scion_effect_tt:0 "One random provinces will get:"
 
  flavour_wyvernheart.116.t:0 "... A Councillor to Empower"
  flavour_wyvernheart.116.d:0 "The whole of the Council is in attendance as the Sovereign steps into the council room, all here on the off chance they might be chosen to be the new Overseer.\nThe Sovereign sits as [Root.Monarch.GetSheHe] ponders [Root.Monarch.GetHerHis] decision.\nWhich clique will the new Overseer belong to?"
@@ -291,6 +293,7 @@
  flavour_wyvernheart.116.e:0 "The Devouts of the Flood"
  flavour_wyvernheart.116.f:0 "The Wealthy Scions"
  flavour_wyvernheart.116.g:0 "The Ambitious Floodborn"
+ wyvernheart_not_warwizard:0 "This general will not have the War-wizard trait."
 
  flavour_wyvernheart.117.t:0 "The Scions of Wyvernheart"
  flavour_wyvernheart.117.d:0 "During the civil war, the Regent enacted a plan to cement his and his heir's rule on Wyvernheart. He, with the help of the Technocrats and artificers, developed a process to imbue floodborn with some of his exceptional powers. This became the focus for the past few years and has now come to fruition; the Floodborn Council will now be reestablished.\n\nThe first members of the new council approach the Sovereign, crimson robes adorning their figures. The soft velvet of their robes touches the floor as they bow before [Root.Monarch.GetName]. An indiscernible bond between them exists, as the councillors look up to the Sovereign; a sort of kinship can be felt. None of them are of the same blood; they are not family. And yet all have the same blood flowing in their veins - the blood and magic of The Regent, the most powerful floodborn Wyvernheart has ever witnessed.\nAs the bowing councillors rise up, a flash of crimson in their eyes. They are the Scions, the "heirs" of The Regent, magically empowered and biologically upgraded, but also perfectly loyal and incapable of repeating the mistakes of the Council of old.\n\nNow a new era dawns upon the council, the era of the Scions, an era where the Council is the extended arm of the Sovereign, and their rule is uncontested."
@@ -402,8 +405,6 @@
  flavour_wyvernheart.404.t:0 "A Forceful Assimilation"
  flavour_wyvernheart.404.d:0 "A few households can be seen burning in the distance. The homes of a group of inhabitants in [Root.GetName] who refused to change their ways. Our administrators made every effort to convince them; they offered them great deals and opportunities. But they did not relent. They refused to be beside us at the table.\n\nOnly one solution was left: brute force, a terribly efficient tool.\nNow they won’t need to think about who they “belong” to."
  flavour_wyvernheart.404.a:0 "They left us no choice."
-
- wyvernheart_D6_effect_tt:0 "The next §YBloodbrand Ability§! will use 30 less §YBloodbrand§!."
 
  wyvernheart_brand_burnbloods:0 "Brand New Burnbloods"
  wyvernheart_brand_burnbloods_desc:0 "Infuse the spawning pools with Bloodbrand, increasing their output and creating more violent burnbloods whose rage must be sated."
