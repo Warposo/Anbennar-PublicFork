@@ -45,7 +45,7 @@ country_decisions = {
 		potential = {
 			tag = I98
 			mission_completed = I98_gobliteration
-			rail_potential_trigger = { adm_tech_req = 3 rail_to_replace = advanced_rail }
+			rail_potential_trigger = { rail_to_replace = advanced_rail }
 		}
 		
 		provinces_to_highlight = {

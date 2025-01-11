@@ -1312,7 +1312,9 @@ has_old_dookan_omen = {
 ##############
 # This trigger is used to determine when a country can see a decision to upgrade rail.
 rail_potential_trigger = {
-	adm_tech = $adm_tech_req$
+	[[adm_tech_req]
+		adm_tech = $adm_tech_req$
+	]
 	OR = {
 		ai = no
 		capital_scope = { continent = serpentspine }
@@ -1365,8 +1367,8 @@ rail_province_eligibility_trigger = {
 # This trigger checks whether any owned province can have its rail upgraded.
 rail_can_construct = {
 	any_owned_province = {
+		rail_province_eligibility_trigger = { rail_to_replace = $current_rail$ $upgraded_rail$ = yes }
 		NOT = { has_construction = any }
 		NOT = { has_colonist = yes }
-		rail_province_eligibility_trigger = { rail_to_replace = $current_rail$ $upgraded_rail$ = yes }
 	}
 }
