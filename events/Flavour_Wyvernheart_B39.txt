@@ -2555,6 +2555,7 @@ country_event = {#Event manager for the flavour events
 				clr_country_flag = had_wyvernheart_305_last
 				clr_country_flag = had_wyvernheart_304_last
 			}
+			5 = {}
 		}
 	}
 }
