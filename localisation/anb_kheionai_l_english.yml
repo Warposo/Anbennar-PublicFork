@@ -112,11 +112,11 @@
  nekheis_lose_subject_modifier_tt: "We have grown too weak and will lose our colonizing bonuses"
  has_a_nekhei_tt: "Has a Nékhei"
 
- kheionist_keep_all_ho_tt: "Our §YHoly Orders§! will stay as is"
- kheionist_keep_deity_ho_tt: "We will keep the §YHoly Orders§! that are the same as our new §YPersonal Deity§!"
- kheionist_replace_deity_ho_tt: "We will put the §YHoly Orders§! that are the same as our new §YPersonal Deity§! in §OEvery Eligible Province§!"
- kheionist_replace_all_ho_tt: "We will remove all §YHoly Orders§!"
- kheionist_deity_changes_tt: "\nOur §YPersonal Deity§! changes to a §RRandom§! one that's the same type as your ruler's highest §YMonarch Point§!\n§g§TAdministrative§!: Maederitic Rule, Schaal Ónítheia, Teachings of Varamelas\n§TDiplomatic§!: Dictats of Isparokaeus, Archatiradist Doctrine, Anagbheism\n§TMilitary§!: Axierophonic Mandate, Drivos Rochos, Laskaris’ Creed§!"
+ kheionist_keep_all_ho_tt: "Our §YLocal Organisations§! will stay as is"
+ kheionist_keep_deity_ho_tt: "We will keep the §YLocal Organisations§! that are the same as our new §YPersonal Deity§!"
+ kheionist_replace_deity_ho_tt: "We will put the §YLocal Organisations§! that are the same as our new §YPersonal Deity§! in §OEvery Eligible Province§!"
+ kheionist_replace_all_ho_tt: "We will remove all §YLocal Organisations§!"
+ kheionist_deity_changes_tt: "\nOur §YPersonal Deity§! changes to a §RRandom§! one that's the same type as our ruler's highest §YMonarch Point§!\n§g§TAdministrative§!: Maederitic Rule, Schaal Ónítheia, Teachings of Varamelas\n§TDiplomatic§!: Dictats of Isparokaeus, Archatiradist Doctrine, Anagbheism\n§TMilitary§!: Axierophonic Mandate, Drivos Rochos, Laskaris’ Creed§!"
 
  #Diplomacy
  NEKHEIS_MUST_FORM_KHEIOS: "Must form Kheiós"
