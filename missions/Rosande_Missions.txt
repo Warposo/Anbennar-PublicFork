@@ -1426,7 +1426,16 @@ rosande_3_missions = {
 						cost = 0
 					}
 				}
+				if = {
+					limit = { NOT = { has_building = weapons } }
+					add_building_construction = {
+						building = weapons
+						speed = 1
+						cost = 0
+					}
+				}
 			}
+			add_treasury = -500
 			custom_tooltip = rosande_grandest_winery.tt
 			set_country_flag = castanor_unlock_grand_bazaar_early
 			hidden_effect = {
@@ -2108,8 +2117,17 @@ rosande_5_missions = {
 					limit = { NOT = { trade_goods = iron } }
 					change_trade_goods = iron
 				}
+				if = {
+					limit = { NOT = { has_building = weapons } }
+					add_building_construction = {
+						building = weapons
+						speed = 1
+						cost = 0
+					}
+				}
 				rosande_add_workforce_effect = yes
 			}
+			add_treasury = -500
 			custom_tooltip = rosande_crimson_forge.tt
 			if = {
 				limit = {
