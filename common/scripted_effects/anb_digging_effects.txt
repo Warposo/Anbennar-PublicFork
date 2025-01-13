@@ -8509,9 +8509,9 @@ update_runefather_allegiance_scripted_effect = {
 rail_construct_every_rail_road = { #Used in country scope
 	every_owned_province = {
 		limit = {
+			rail_province_eligibility_trigger = { rail_to_replace = $current_rail$ $upgraded_rail$ = yes }
 			NOT = { has_construction = any }
 			NOT = { has_colonist = yes }
-			rail_province_eligibility_trigger = { rail_to_replace = $current_rail$ $upgraded_rail$ = yes }
 		}
 		add_building_construction = {
 			building = railway_work

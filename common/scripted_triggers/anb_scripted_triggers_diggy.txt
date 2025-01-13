@@ -1330,6 +1330,7 @@ rail_province_eligibility_trigger = {
 	# NOT = { has_colonist = yes }
 	has_province_modifier = $rail_to_replace$
 	is_core = ROOT
+	is_city = yes
 	owned_by = ROOT
 	any_neighbor_province = {
 		is_core = ROOT
