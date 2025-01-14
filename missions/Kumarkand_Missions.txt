@@ -3037,7 +3037,10 @@ kumarkand_karqaslu_slot_4 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				has_global_flag = khet_dead
+				custom_trigger_tooltip = {
+					tooltip = F30_kumarkand_end_mandate_tt
+					has_global_flag = khet_dead
+				}
 			}
 		}
 		

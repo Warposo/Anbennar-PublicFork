@@ -1743,6 +1743,7 @@ country_event = {
 	
 	option = {
 		name = flavor_kumarkand.54.a
+		custom_tooltip = F30_something_wrong_here_tt
 		hidden_effect = {
 			country_event = { id = flavor_kumarkand.55 days = 1825 }
 		}
