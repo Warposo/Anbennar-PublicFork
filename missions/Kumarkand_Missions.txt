@@ -3017,6 +3017,7 @@ kumarkand_karqaslu_slot_4 = {
 			kheterata_region = {
 				add_permanent_claim = ROOT
 			}
+			custom_tooltip = F30_alusir_mandate_tt
 		}	
 	}
 	
@@ -3031,9 +3032,12 @@ kumarkand_karqaslu_slot_4 = {
 		}
 		
 		trigger = {
-			kheterata_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			AND = {
+				kheterata_region = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				has_global_flag = empire_of_china_dismantled
 			}
 		}
 		
