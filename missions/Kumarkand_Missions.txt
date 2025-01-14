@@ -2418,7 +2418,7 @@ kumarkand_slot_5 = {
 				limit = {
 					religion = old_bulwari_sun_cult
 				}
-				army_tradition = 60
+				army_tradition = 40
 				num_of_owned_provinces_with = {
 					value = 30
 					religion = old_bulwari_sun_cult
