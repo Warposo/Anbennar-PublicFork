@@ -3037,7 +3037,7 @@ kumarkand_karqaslu_slot_4 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				has_global_flag = empire_of_china_dismantled
+				has_global_flag = khet_dead
 			}
 		}
 		
